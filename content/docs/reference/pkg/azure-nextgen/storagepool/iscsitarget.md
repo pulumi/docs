@@ -2,7 +2,7 @@
 ---
 title: "IscsiTarget"
 title_tag: "azure-nextgen.storagepool.IscsiTarget"
-meta_desc: "Explore the IscsiTarget resource of the storagepool module, including examples, input properties, output properties, lookup functions, and supporting types. Payload for iSCSI Target Create or Update requests."
+meta_desc: "Documentation for the azure-nextgen.storagepool.IscsiTarget resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -200,7 +200,7 @@ const iscsiTarget = new azure_nextgen.storagepool.v20200315preview.IscsiTarget("
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IscsiTarget</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">IscsiTargetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IscsiTarget</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">IscsiTargetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -208,11 +208,11 @@ const iscsiTarget = new azure_nextgen.storagepool.v20200315preview.IscsiTarget("
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIscsiTarget</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">IscsiTargetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IscsiTarget</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIscsiTarget</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">IscsiTargetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IscsiTarget</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IscsiTarget</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">IscsiTargetArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IscsiTarget</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">IscsiTargetArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -223,7 +223,7 @@ const iscsiTarget = new azure_nextgen.storagepool.v20200315preview.IscsiTarget("
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -292,7 +292,7 @@ const iscsiTarget = new azure_nextgen.storagepool.v20200315preview.IscsiTarget("
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -331,7 +331,7 @@ const iscsiTarget = new azure_nextgen.storagepool.v20200315preview.IscsiTarget("
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -372,7 +372,6 @@ The IscsiTarget resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -380,55 +379,49 @@ The IscsiTarget resource accepts the following [input]({{< relref "/docs/intro/c
             title="Required">
         <span id="diskpoolname_csharp">
 <a href="#diskpoolname_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Pool<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Disk Pool.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="iscsitargetname_csharp">
 <a href="#iscsitargetname_csharp" style="color: inherit; text-decoration: inherit;">Iscsi<wbr>Target<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the iSCSI target.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="targetiqn_csharp">
 <a href="#targetiqn_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Iqn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}iSCSI target iqn (iSCSI Qualified Name); example: iqn.2005-03.org.iscsi:server{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="tpgs_csharp">
 <a href="#tpgs_csharp" style="color: inherit; text-decoration: inherit;">Tpgs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetportalgroup">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Pool.<wbr>Inputs.<wbr>Target<wbr>Portal<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}list of iSCSI target portal groups{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -437,55 +430,49 @@ The IscsiTarget resource accepts the following [input]({{< relref "/docs/intro/c
             title="Required">
         <span id="diskpoolname_go">
 <a href="#diskpoolname_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Pool<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Disk Pool.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="iscsitargetname_go">
 <a href="#iscsitargetname_go" style="color: inherit; text-decoration: inherit;">Iscsi<wbr>Target<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the iSCSI target.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="targetiqn_go">
 <a href="#targetiqn_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Iqn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}iSCSI target iqn (iSCSI Qualified Name); example: iqn.2005-03.org.iscsi:server{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="tpgs_go">
 <a href="#tpgs_go" style="color: inherit; text-decoration: inherit;">Tpgs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetportalgroup">[]Target<wbr>Portal<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}list of iSCSI target portal groups{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -494,55 +481,49 @@ The IscsiTarget resource accepts the following [input]({{< relref "/docs/intro/c
             title="Required">
         <span id="diskpoolname_nodejs">
 <a href="#diskpoolname_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Pool<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Disk Pool.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="iscsitargetname_nodejs">
 <a href="#iscsitargetname_nodejs" style="color: inherit; text-decoration: inherit;">iscsi<wbr>Target<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the iSCSI target.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="targetiqn_nodejs">
 <a href="#targetiqn_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Iqn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}iSCSI target iqn (iSCSI Qualified Name); example: iqn.2005-03.org.iscsi:server{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="tpgs_nodejs">
 <a href="#tpgs_nodejs" style="color: inherit; text-decoration: inherit;">tpgs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetportalgroup">Target<wbr>Portal<wbr>Group[]</a></span>
     </dt>
     <dd>{{% md %}}list of iSCSI target portal groups{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -551,64 +532,54 @@ The IscsiTarget resource accepts the following [input]({{< relref "/docs/intro/c
             title="Required">
         <span id="disk_pool_name_python">
 <a href="#disk_pool_name_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>pool_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Disk Pool.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="iscsi_target_name_python">
 <a href="#iscsi_target_name_python" style="color: inherit; text-decoration: inherit;">iscsi_<wbr>target_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the iSCSI target.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="target_iqn_python">
 <a href="#target_iqn_python" style="color: inherit; text-decoration: inherit;">target_<wbr>iqn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}iSCSI target iqn (iSCSI Qualified Name); example: iqn.2005-03.org.iscsi:server{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="tpgs_python">
 <a href="#tpgs_python" style="color: inherit; text-decoration: inherit;">tpgs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetportalgroup">Sequence[Target<wbr>Portal<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}list of iSCSI target portal groups{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the IscsiTarget resource produces the following output properties:
-
 
 
 
@@ -619,55 +590,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}State of the operation on the resource{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operational status of the Disk pool{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -676,55 +641,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}State of the operation on the resource{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operational status of the Disk pool{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -733,55 +692,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}State of the operation on the resource{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operational status of the Disk pool{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -790,58 +743,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}State of the operation on the resource{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Operational status of the Disk pool{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -852,13 +796,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
 <h4 id="acl">Acl</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -867,45 +806,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="initiatoriqn_csharp">
 <a href="#initiatoriqn_csharp" style="color: inherit; text-decoration: inherit;">Initiator<wbr>Iqn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}iSCSI initiator iqn (iSCSI Qualified Name); example: iqn.2005-03.org.iscsi:client{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="mappedluns_csharp">
 <a href="#mappedluns_csharp" style="color: inherit; text-decoration: inherit;">Mapped<wbr>Luns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Array of lun names mapped to the ACL{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for Challenge Handshake Authentication Protocol (CHAP) authentication{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for Challenge Handshake Authentication Protocol (CHAP) authentication{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -914,45 +848,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="initiatoriqn_go">
 <a href="#initiatoriqn_go" style="color: inherit; text-decoration: inherit;">Initiator<wbr>Iqn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}iSCSI initiator iqn (iSCSI Qualified Name); example: iqn.2005-03.org.iscsi:client{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="mappedluns_go">
 <a href="#mappedluns_go" style="color: inherit; text-decoration: inherit;">Mapped<wbr>Luns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Array of lun names mapped to the ACL{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for Challenge Handshake Authentication Protocol (CHAP) authentication{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for Challenge Handshake Authentication Protocol (CHAP) authentication{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -961,45 +890,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="initiatoriqn_nodejs">
 <a href="#initiatoriqn_nodejs" style="color: inherit; text-decoration: inherit;">initiator<wbr>Iqn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}iSCSI initiator iqn (iSCSI Qualified Name); example: iqn.2005-03.org.iscsi:client{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="mappedluns_nodejs">
 <a href="#mappedluns_nodejs" style="color: inherit; text-decoration: inherit;">mapped<wbr>Luns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Array of lun names mapped to the ACL{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for Challenge Handshake Authentication Protocol (CHAP) authentication{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for Challenge Handshake Authentication Protocol (CHAP) authentication{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1008,57 +932,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="initiator_iqn_python">
 <a href="#initiator_iqn_python" style="color: inherit; text-decoration: inherit;">initiator_<wbr>iqn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}iSCSI initiator iqn (iSCSI Qualified Name); example: iqn.2005-03.org.iscsi:client{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="mapped_luns_python">
 <a href="#mapped_luns_python" style="color: inherit; text-decoration: inherit;">mapped_<wbr>luns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Array of lun names mapped to the ACL{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password for Challenge Handshake Authentication Protocol (CHAP) authentication{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username for Challenge Handshake Authentication Protocol (CHAP) authentication{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="aclresponse">Acl<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1066,45 +976,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="initiatoriqn_csharp">
 <a href="#initiatoriqn_csharp" style="color: inherit; text-decoration: inherit;">Initiator<wbr>Iqn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}iSCSI initiator iqn (iSCSI Qualified Name); example: iqn.2005-03.org.iscsi:client{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="mappedluns_csharp">
 <a href="#mappedluns_csharp" style="color: inherit; text-decoration: inherit;">Mapped<wbr>Luns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Array of lun names mapped to the ACL{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for Challenge Handshake Authentication Protocol (CHAP) authentication{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for Challenge Handshake Authentication Protocol (CHAP) authentication{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1113,45 +1018,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="initiatoriqn_go">
 <a href="#initiatoriqn_go" style="color: inherit; text-decoration: inherit;">Initiator<wbr>Iqn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}iSCSI initiator iqn (iSCSI Qualified Name); example: iqn.2005-03.org.iscsi:client{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="mappedluns_go">
 <a href="#mappedluns_go" style="color: inherit; text-decoration: inherit;">Mapped<wbr>Luns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Array of lun names mapped to the ACL{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for Challenge Handshake Authentication Protocol (CHAP) authentication{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for Challenge Handshake Authentication Protocol (CHAP) authentication{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1160,45 +1060,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="initiatoriqn_nodejs">
 <a href="#initiatoriqn_nodejs" style="color: inherit; text-decoration: inherit;">initiator<wbr>Iqn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}iSCSI initiator iqn (iSCSI Qualified Name); example: iqn.2005-03.org.iscsi:client{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="mappedluns_nodejs">
 <a href="#mappedluns_nodejs" style="color: inherit; text-decoration: inherit;">mapped<wbr>Luns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Array of lun names mapped to the ACL{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for Challenge Handshake Authentication Protocol (CHAP) authentication{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for Challenge Handshake Authentication Protocol (CHAP) authentication{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1207,57 +1102,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="initiator_iqn_python">
 <a href="#initiator_iqn_python" style="color: inherit; text-decoration: inherit;">initiator_<wbr>iqn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}iSCSI initiator iqn (iSCSI Qualified Name); example: iqn.2005-03.org.iscsi:client{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="mapped_luns_python">
 <a href="#mapped_luns_python" style="color: inherit; text-decoration: inherit;">mapped_<wbr>luns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Array of lun names mapped to the ACL{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password for Challenge Handshake Authentication Protocol (CHAP) authentication{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username for Challenge Handshake Authentication Protocol (CHAP) authentication{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="attributes">Attributes</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1265,25 +1146,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="authentication_csharp">
 <a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not authentication is enabled on the ACL.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="prodmodewriteprotect_csharp">
 <a href="#prodmodewriteprotect_csharp" style="color: inherit; text-decoration: inherit;">Prod<wbr>Mode<wbr>Write<wbr>Protect</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not write protect is enabled on the luns.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1292,25 +1170,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="authentication_go">
 <a href="#authentication_go" style="color: inherit; text-decoration: inherit;">Authentication</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not authentication is enabled on the ACL.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="prodmodewriteprotect_go">
 <a href="#prodmodewriteprotect_go" style="color: inherit; text-decoration: inherit;">Prod<wbr>Mode<wbr>Write<wbr>Protect</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not write protect is enabled on the luns.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1319,25 +1194,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="authentication_nodejs">
 <a href="#authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not authentication is enabled on the ACL.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="prodmodewriteprotect_nodejs">
 <a href="#prodmodewriteprotect_nodejs" style="color: inherit; text-decoration: inherit;">prod<wbr>Mode<wbr>Write<wbr>Protect</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not write protect is enabled on the luns.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1346,37 +1218,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="authentication_python">
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not authentication is enabled on the ACL.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="prod_mode_write_protect_python">
 <a href="#prod_mode_write_protect_python" style="color: inherit; text-decoration: inherit;">prod_<wbr>mode_<wbr>write_<wbr>protect</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not write protect is enabled on the luns.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="attributesresponse">Attributes<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1384,25 +1244,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="authentication_csharp">
 <a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not authentication is enabled on the ACL.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="prodmodewriteprotect_csharp">
 <a href="#prodmodewriteprotect_csharp" style="color: inherit; text-decoration: inherit;">Prod<wbr>Mode<wbr>Write<wbr>Protect</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not write protect is enabled on the luns.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1411,25 +1268,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="authentication_go">
 <a href="#authentication_go" style="color: inherit; text-decoration: inherit;">Authentication</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not authentication is enabled on the ACL.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="prodmodewriteprotect_go">
 <a href="#prodmodewriteprotect_go" style="color: inherit; text-decoration: inherit;">Prod<wbr>Mode<wbr>Write<wbr>Protect</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not write protect is enabled on the luns.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1438,25 +1292,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="authentication_nodejs">
 <a href="#authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not authentication is enabled on the ACL.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="prodmodewriteprotect_nodejs">
 <a href="#prodmodewriteprotect_nodejs" style="color: inherit; text-decoration: inherit;">prod<wbr>Mode<wbr>Write<wbr>Protect</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not write protect is enabled on the luns.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1465,37 +1316,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="authentication_python">
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not authentication is enabled on the ACL.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="prod_mode_write_protect_python">
 <a href="#prod_mode_write_protect_python" style="color: inherit; text-decoration: inherit;">prod_<wbr>mode_<wbr>write_<wbr>protect</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether or not write protect is enabled on the luns.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="iscsilun">Iscsi<wbr>Lun</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1503,25 +1342,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="manageddiskazureresourceid_csharp">
 <a href="#manageddiskazureresourceid_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk<wbr>Azure<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique Azure resource id of the managed disk. Required.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Lun name.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1530,25 +1366,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="manageddiskazureresourceid_go">
 <a href="#manageddiskazureresourceid_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk<wbr>Azure<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique Azure resource id of the managed disk. Required.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Lun name.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1557,25 +1390,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="manageddiskazureresourceid_nodejs">
 <a href="#manageddiskazureresourceid_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Disk<wbr>Azure<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique Azure resource id of the managed disk. Required.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Lun name.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1584,37 +1414,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="managed_disk_azure_resource_id_python">
 <a href="#managed_disk_azure_resource_id_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk_<wbr>azure_<wbr>resource_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique Azure resource id of the managed disk. Required.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Lun name.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="iscsilunresponse">Iscsi<wbr>Lun<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1622,25 +1440,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="manageddiskazureresourceid_csharp">
 <a href="#manageddiskazureresourceid_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk<wbr>Azure<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique Azure resource id of the managed disk. Required.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Lun name.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1649,25 +1464,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="manageddiskazureresourceid_go">
 <a href="#manageddiskazureresourceid_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk<wbr>Azure<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique Azure resource id of the managed disk. Required.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Lun name.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1676,25 +1488,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="manageddiskazureresourceid_nodejs">
 <a href="#manageddiskazureresourceid_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Disk<wbr>Azure<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique Azure resource id of the managed disk. Required.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Lun name.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1703,36 +1512,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="managed_disk_azure_resource_id_python">
 <a href="#managed_disk_azure_resource_id_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk_<wbr>azure_<wbr>resource_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique Azure resource id of the managed disk. Required.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Lun name.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="targetportalgroup">Target<wbr>Portal<wbr>Group</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1741,35 +1538,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="acls_csharp">
 <a href="#acls_csharp" style="color: inherit; text-decoration: inherit;">Acls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#acl">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Pool.<wbr>Inputs.<wbr>Acl<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Access Control List (ACL) for an iSCSI target lun{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="attributes_csharp">
 <a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attributes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Pool.<wbr>Inputs.<wbr>Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Attributes of an iSCSI target{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="luns_csharp">
 <a href="#luns_csharp" style="color: inherit; text-decoration: inherit;">Luns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iscsilun">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Pool.<wbr>Inputs.<wbr>Iscsi<wbr>Lun<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Lun list to be exposed through the iSCSI target. Required{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1778,35 +1571,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="acls_go">
 <a href="#acls_go" style="color: inherit; text-decoration: inherit;">Acls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#acl">[]Acl</a></span>
     </dt>
     <dd>{{% md %}}Access Control List (ACL) for an iSCSI target lun{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="attributes_go">
 <a href="#attributes_go" style="color: inherit; text-decoration: inherit;">Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attributes">Attributes</a></span>
     </dt>
     <dd>{{% md %}}Attributes of an iSCSI target{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="luns_go">
 <a href="#luns_go" style="color: inherit; text-decoration: inherit;">Luns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iscsilun">[]Iscsi<wbr>Lun</a></span>
     </dt>
     <dd>{{% md %}}Lun list to be exposed through the iSCSI target. Required{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1815,35 +1604,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="acls_nodejs">
 <a href="#acls_nodejs" style="color: inherit; text-decoration: inherit;">acls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#acl">Acl[]</a></span>
     </dt>
     <dd>{{% md %}}Access Control List (ACL) for an iSCSI target lun{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="attributes_nodejs">
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attributes">Attributes</a></span>
     </dt>
     <dd>{{% md %}}Attributes of an iSCSI target{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="luns_nodejs">
 <a href="#luns_nodejs" style="color: inherit; text-decoration: inherit;">luns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iscsilun">Iscsi<wbr>Lun[]</a></span>
     </dt>
     <dd>{{% md %}}Lun list to be exposed through the iSCSI target. Required{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1852,46 +1637,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="acls_python">
 <a href="#acls_python" style="color: inherit; text-decoration: inherit;">acls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#acl">Sequence[Acl<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Access Control List (ACL) for an iSCSI target lun{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="attributes_python">
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attributes">Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Attributes of an iSCSI target{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="luns_python">
 <a href="#luns_python" style="color: inherit; text-decoration: inherit;">luns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iscsilun">Sequence[Iscsi<wbr>Lun<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Lun list to be exposed through the iSCSI target. Required{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="targetportalgroupresponse">Target<wbr>Portal<wbr>Group<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1900,65 +1672,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="acls_csharp">
 <a href="#acls_csharp" style="color: inherit; text-decoration: inherit;">Acls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aclresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Pool.<wbr>Inputs.<wbr>Acl<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Access Control List (ACL) for an iSCSI target lun{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="attributes_csharp">
 <a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attributesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Pool.<wbr>Inputs.<wbr>Attributes<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Attributes of an iSCSI target{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="endpoints_csharp">
 <a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}list of public ip addresses to connect to the iSCSI target{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="luns_csharp">
 <a href="#luns_csharp" style="color: inherit; text-decoration: inherit;">Luns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iscsilunresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Pool.<wbr>Inputs.<wbr>Iscsi<wbr>Lun<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Lun list to be exposed through the iSCSI target. Required{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port at which the iSCSI target is available{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="tag_csharp">
 <a href="#tag_csharp" style="color: inherit; text-decoration: inherit;">Tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The tag associated with the iSCSI target portal group{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1967,65 +1732,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="acls_go">
 <a href="#acls_go" style="color: inherit; text-decoration: inherit;">Acls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aclresponse">[]Acl<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Access Control List (ACL) for an iSCSI target lun{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="attributes_go">
 <a href="#attributes_go" style="color: inherit; text-decoration: inherit;">Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attributesresponse">Attributes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Attributes of an iSCSI target{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="endpoints_go">
 <a href="#endpoints_go" style="color: inherit; text-decoration: inherit;">Endpoints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}list of public ip addresses to connect to the iSCSI target{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="luns_go">
 <a href="#luns_go" style="color: inherit; text-decoration: inherit;">Luns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iscsilunresponse">[]Iscsi<wbr>Lun<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Lun list to be exposed through the iSCSI target. Required{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port at which the iSCSI target is available{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="tag_go">
 <a href="#tag_go" style="color: inherit; text-decoration: inherit;">Tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The tag associated with the iSCSI target portal group{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2034,65 +1792,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="acls_nodejs">
 <a href="#acls_nodejs" style="color: inherit; text-decoration: inherit;">acls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aclresponse">Acl<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Access Control List (ACL) for an iSCSI target lun{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="attributes_nodejs">
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attributesresponse">Attributes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Attributes of an iSCSI target{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="endpoints_nodejs">
 <a href="#endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}list of public ip addresses to connect to the iSCSI target{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="luns_nodejs">
 <a href="#luns_nodejs" style="color: inherit; text-decoration: inherit;">luns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iscsilunresponse">Iscsi<wbr>Lun<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Lun list to be exposed through the iSCSI target. Required{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port at which the iSCSI target is available{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="tag_nodejs">
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The tag associated with the iSCSI target portal group{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2101,73 +1852,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="acls_python">
 <a href="#acls_python" style="color: inherit; text-decoration: inherit;">acls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aclresponse">Sequence[Acl<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Access Control List (ACL) for an iSCSI target lun{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="attributes_python">
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attributesresponse">Attributes<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Attributes of an iSCSI target{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="endpoints_python">
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}list of public ip addresses to connect to the iSCSI target{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="luns_python">
 <a href="#luns_python" style="color: inherit; text-decoration: inherit;">luns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iscsilunresponse">Sequence[Iscsi<wbr>Lun<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Lun list to be exposed through the iSCSI target. Required{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port at which the iSCSI target is available{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="tag_python">
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The tag associated with the iSCSI target portal group{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 
 
 <h2 id="package-details">Package Details</h2>

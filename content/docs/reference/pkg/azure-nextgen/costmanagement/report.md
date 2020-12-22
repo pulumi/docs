@@ -2,7 +2,7 @@
 ---
 title: "Report"
 title_tag: "azure-nextgen.costmanagement.Report"
-meta_desc: "Explore the Report resource of the costmanagement module, including examples, input properties, output properties, lookup functions, and supporting types. A report resource."
+meta_desc: "Documentation for the azure-nextgen.costmanagement.Report resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -20,7 +20,7 @@ A report resource.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Report</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ReportArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Report</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ReportArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -28,11 +28,11 @@ A report resource.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReport</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ReportArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Report</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReport</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ReportArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Report</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Report</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ReportArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Report</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ReportArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -43,7 +43,7 @@ A report resource.
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -112,7 +112,7 @@ A report resource.
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -151,7 +151,7 @@ A report resource.
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -192,7 +192,6 @@ The Report resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -200,55 +199,49 @@ The Report resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Required">
         <span id="definition_csharp">
 <a href="#definition_csharp" style="color: inherit; text-decoration: inherit;">Definition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportdefinition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has definition for the report.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="deliveryinfo_csharp">
 <a href="#deliveryinfo_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportdeliveryinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Delivery<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has delivery information for the report.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="reportname_csharp">
 <a href="#reportname_csharp" style="color: inherit; text-decoration: inherit;">Report<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Report Name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="format_csharp">
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Format<wbr>Type</span>
+        <span class="property-type">string | <a href="#formattype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Format<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The format of the report being delivered.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schedule_csharp">
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportschedule">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has schedule information for the report.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -257,55 +250,49 @@ The Report resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Required">
         <span id="definition_go">
 <a href="#definition_go" style="color: inherit; text-decoration: inherit;">Definition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportdefinition">Report<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}Has definition for the report.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="deliveryinfo_go">
 <a href="#deliveryinfo_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportdeliveryinfo">Report<wbr>Delivery<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Has delivery information for the report.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="reportname_go">
 <a href="#reportname_go" style="color: inherit; text-decoration: inherit;">Report<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Report Name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="format_go">
 <a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#formattype">Format<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The format of the report being delivered.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schedule_go">
 <a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportschedule">Report<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Has schedule information for the report.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -314,55 +301,49 @@ The Report resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Required">
         <span id="definition_nodejs">
 <a href="#definition_nodejs" style="color: inherit; text-decoration: inherit;">definition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportdefinition">Report<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}Has definition for the report.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="deliveryinfo_nodejs">
 <a href="#deliveryinfo_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportdeliveryinfo">Report<wbr>Delivery<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Has delivery information for the report.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="reportname_nodejs">
 <a href="#reportname_nodejs" style="color: inherit; text-decoration: inherit;">report<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Report Name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="format_nodejs">
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Format<wbr>Type</span>
+        <span class="property-type">string | <a href="#formattype">Format<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The format of the report being delivered.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schedule_nodejs">
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportschedule">Report<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Has schedule information for the report.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -371,64 +352,54 @@ The Report resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Required">
         <span id="definition_python">
 <a href="#definition_python" style="color: inherit; text-decoration: inherit;">definition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportdefinition">Report<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has definition for the report.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="delivery_info_python">
 <a href="#delivery_info_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportdeliveryinfo">Report<wbr>Delivery<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has delivery information for the report.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="report_name_python">
 <a href="#report_name_python" style="color: inherit; text-decoration: inherit;">report_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Report Name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="format_python">
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Format<wbr>Type</span>
+        <span class="property-type">str | <a href="#formattype">Format<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The format of the report being delivered.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schedule_python">
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportschedule">Report<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has schedule information for the report.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Report resource produces the following output properties:
-
 
 
 
@@ -439,45 +410,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -486,45 +452,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -533,45 +494,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -580,48 +536,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -632,13 +580,190 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="formattype">Format<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Csv</dt>
+    <dd>Csv</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Format<wbr>Type<wbr>Csv</dt>
+    <dd>Csv</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Csv</dt>
+    <dd>Csv</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>CSV</dt>
+    <dd>Csv</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="functiontype">Function<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Sum</dt>
+    <dd>Sum</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Function<wbr>Type<wbr>Sum</dt>
+    <dd>Sum</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Sum</dt>
+    <dd>Sum</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>SUM</dt>
+    <dd>Sum</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="granularitytype">Granularity<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Daily</dt>
+    <dd>Daily</dd>
+    <dt>Hourly</dt>
+    <dd>Hourly</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Granularity<wbr>Type<wbr>Daily</dt>
+    <dd>Daily</dd>
+    <dt>Granularity<wbr>Type<wbr>Hourly</dt>
+    <dd>Hourly</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Daily</dt>
+    <dd>Daily</dd>
+    <dt>Hourly</dt>
+    <dd>Hourly</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>DAILY</dt>
+    <dd>Daily</dd>
+    <dt>HOURLY</dt>
+    <dd>Hourly</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="operatortype">Operator<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>In</dt>
+    <dd>In</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Operator<wbr>Type<wbr>In</dt>
+    <dd>In</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>In</dt>
+    <dd>In</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>IN_</dt>
+    <dd>In</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="recurrencetype">Recurrence<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Daily</dt>
+    <dd>Daily</dd>
+    <dt>Weekly</dt>
+    <dd>Weekly</dd>
+    <dt>Monthly</dt>
+    <dd>Monthly</dd>
+    <dt>Annually</dt>
+    <dd>Annually</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Recurrence<wbr>Type<wbr>Daily</dt>
+    <dd>Daily</dd>
+    <dt>Recurrence<wbr>Type<wbr>Weekly</dt>
+    <dd>Weekly</dd>
+    <dt>Recurrence<wbr>Type<wbr>Monthly</dt>
+    <dd>Monthly</dd>
+    <dt>Recurrence<wbr>Type<wbr>Annually</dt>
+    <dd>Annually</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Daily</dt>
+    <dd>Daily</dd>
+    <dt>Weekly</dt>
+    <dd>Weekly</dd>
+    <dt>Monthly</dt>
+    <dd>Monthly</dd>
+    <dt>Annually</dt>
+    <dd>Annually</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>DAILY</dt>
+    <dd>Daily</dd>
+    <dt>WEEKLY</dt>
+    <dd>Weekly</dd>
+    <dt>MONTHLY</dt>
+    <dd>Monthly</dd>
+    <dt>ANNUALLY</dt>
+    <dd>Annually</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="reportaggregation">Report<wbr>Aggregation</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -647,25 +772,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="function_csharp">
 <a href="#function_csharp" style="color: inherit; text-decoration: inherit;">Function</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Function<wbr>Type</span>
+        <span class="property-type">string | <a href="#functiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Function<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The name of the aggregation function to use.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the column to aggregate.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -674,25 +796,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="function_go">
 <a href="#function_go" style="color: inherit; text-decoration: inherit;">Function</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#functiontype">Function<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The name of the aggregation function to use.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the column to aggregate.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -701,25 +820,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="function_nodejs">
 <a href="#function_nodejs" style="color: inherit; text-decoration: inherit;">function</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Function<wbr>Type</span>
+        <span class="property-type">string | <a href="#functiontype">Function<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The name of the aggregation function to use.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the column to aggregate.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -728,37 +844,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="function_python">
 <a href="#function_python" style="color: inherit; text-decoration: inherit;">function</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Function<wbr>Type</span>
+        <span class="property-type">str | <a href="#functiontype">Function<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The name of the aggregation function to use.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the column to aggregate.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="reportaggregationresponse">Report<wbr>Aggregation<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -766,25 +870,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="function_csharp">
 <a href="#function_csharp" style="color: inherit; text-decoration: inherit;">Function</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the aggregation function to use.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the column to aggregate.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -793,25 +894,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="function_go">
 <a href="#function_go" style="color: inherit; text-decoration: inherit;">Function</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the aggregation function to use.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the column to aggregate.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -820,25 +918,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="function_nodejs">
 <a href="#function_nodejs" style="color: inherit; text-decoration: inherit;">function</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the aggregation function to use.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the column to aggregate.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -847,37 +942,63 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="function_python">
 <a href="#function_python" style="color: inherit; text-decoration: inherit;">function</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the aggregation function to use.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the column to aggregate.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="reportcolumntype">Report<wbr>Column<wbr>Type</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Tag</dt>
+    <dd>Tag</dd>
+    <dt>Dimension</dt>
+    <dd>Dimension</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Report<wbr>Column<wbr>Type<wbr>Tag</dt>
+    <dd>Tag</dd>
+    <dt>Report<wbr>Column<wbr>Type<wbr>Dimension</dt>
+    <dd>Dimension</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Tag</dt>
+    <dd>Tag</dd>
+    <dt>Dimension</dt>
+    <dd>Dimension</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>TAG</dt>
+    <dd>Tag</dd>
+    <dt>DIMENSION</dt>
+    <dd>Dimension</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="reportcomparisonexpression">Report<wbr>Comparison<wbr>Expression</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -885,35 +1006,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the column to use in comparison.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Operator<wbr>Type</span>
+        <span class="property-type">string | <a href="#operatortype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Operator<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The operator to use for comparison.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Array of values to use for comparison{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -922,35 +1039,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the column to use in comparison.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#operatortype">Operator<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The operator to use for comparison.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Array of values to use for comparison{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -959,35 +1072,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the column to use in comparison.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Operator<wbr>Type</span>
+        <span class="property-type">string | <a href="#operatortype">Operator<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The operator to use for comparison.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Array of values to use for comparison{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -996,47 +1105,34 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the column to use in comparison.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Operator<wbr>Type</span>
+        <span class="property-type">str | <a href="#operatortype">Operator<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The operator to use for comparison.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Array of values to use for comparison{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="reportcomparisonexpressionresponse">Report<wbr>Comparison<wbr>Expression<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1044,35 +1140,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the column to use in comparison.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operator to use for comparison.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Array of values to use for comparison{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1081,35 +1173,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the column to use in comparison.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operator to use for comparison.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Array of values to use for comparison{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1118,35 +1206,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the column to use in comparison.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operator to use for comparison.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Array of values to use for comparison{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1155,46 +1239,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the column to use in comparison.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The operator to use for comparison.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Array of values to use for comparison{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="reportdataset">Report<wbr>Dataset</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1203,55 +1274,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="aggregation_csharp">
 <a href="#aggregation_csharp" style="color: inherit; text-decoration: inherit;">Aggregation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Aggregation<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="configuration_csharp">
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportdatasetconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Dataset<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportfilter">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has filter expression to use in the report.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="granularity_csharp">
 <a href="#granularity_csharp" style="color: inherit; text-decoration: inherit;">Granularity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Granularity<wbr>Type</span>
+        <span class="property-type">string | <a href="#granularitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Granularity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The granularity of rows in the report.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="grouping_csharp">
 <a href="#grouping_csharp" style="color: inherit; text-decoration: inherit;">Grouping</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportgrouping">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Grouping<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of group by expression to use in the report. Report can have up to 2 group by clauses.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1260,55 +1325,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="aggregation_go">
 <a href="#aggregation_go" style="color: inherit; text-decoration: inherit;">Aggregation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]Report<wbr>Aggregation</span>
     </dt>
     <dd>{{% md %}}Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="configuration_go">
 <a href="#configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportdatasetconfiguration">Report<wbr>Dataset<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportfilter">Report<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}Has filter expression to use in the report.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="granularity_go">
 <a href="#granularity_go" style="color: inherit; text-decoration: inherit;">Granularity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#granularitytype">Granularity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The granularity of rows in the report.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="grouping_go">
 <a href="#grouping_go" style="color: inherit; text-decoration: inherit;">Grouping</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportgrouping">[]Report<wbr>Grouping</a></span>
     </dt>
     <dd>{{% md %}}Array of group by expression to use in the report. Report can have up to 2 group by clauses.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1317,55 +1376,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="aggregation_nodejs">
 <a href="#aggregation_nodejs" style="color: inherit; text-decoration: inherit;">aggregation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: Report<wbr>Aggregation}</span>
     </dt>
     <dd>{{% md %}}Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="configuration_nodejs">
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportdatasetconfiguration">Report<wbr>Dataset<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportfilter">Report<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}Has filter expression to use in the report.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="granularity_nodejs">
 <a href="#granularity_nodejs" style="color: inherit; text-decoration: inherit;">granularity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Granularity<wbr>Type</span>
+        <span class="property-type">string | <a href="#granularitytype">Granularity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The granularity of rows in the report.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="grouping_nodejs">
 <a href="#grouping_nodejs" style="color: inherit; text-decoration: inherit;">grouping</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportgrouping">Report<wbr>Grouping[]</a></span>
     </dt>
     <dd>{{% md %}}Array of group by expression to use in the report. Report can have up to 2 group by clauses.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1374,67 +1427,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="aggregation_python">
 <a href="#aggregation_python" style="color: inherit; text-decoration: inherit;">aggregation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Report<wbr>Aggregation<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="configuration_python">
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportdatasetconfiguration">Report<wbr>Dataset<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportfilter">Report<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has filter expression to use in the report.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="granularity_python">
 <a href="#granularity_python" style="color: inherit; text-decoration: inherit;">granularity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Granularity<wbr>Type</span>
+        <span class="property-type">str | <a href="#granularitytype">Granularity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The granularity of rows in the report.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="grouping_python">
 <a href="#grouping_python" style="color: inherit; text-decoration: inherit;">grouping</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportgrouping">Sequence[Report<wbr>Grouping<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of group by expression to use in the report. Report can have up to 2 group by clauses.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="reportdatasetconfiguration">Report<wbr>Dataset<wbr>Configuration</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1442,15 +1480,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="columns_csharp">
 <a href="#columns_csharp" style="color: inherit; text-decoration: inherit;">Columns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Array of column names to be included in the report. Any valid report column name is allowed. If not provided, then report includes all columns.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1459,15 +1495,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="columns_go">
 <a href="#columns_go" style="color: inherit; text-decoration: inherit;">Columns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Array of column names to be included in the report. Any valid report column name is allowed. If not provided, then report includes all columns.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1476,15 +1510,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="columns_nodejs">
 <a href="#columns_nodejs" style="color: inherit; text-decoration: inherit;">columns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Array of column names to be included in the report. Any valid report column name is allowed. If not provided, then report includes all columns.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1493,27 +1525,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="columns_python">
 <a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Array of column names to be included in the report. Any valid report column name is allowed. If not provided, then report includes all columns.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="reportdatasetconfigurationresponse">Report<wbr>Dataset<wbr>Configuration<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1521,15 +1542,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="columns_csharp">
 <a href="#columns_csharp" style="color: inherit; text-decoration: inherit;">Columns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Array of column names to be included in the report. Any valid report column name is allowed. If not provided, then report includes all columns.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1538,15 +1557,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="columns_go">
 <a href="#columns_go" style="color: inherit; text-decoration: inherit;">Columns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Array of column names to be included in the report. Any valid report column name is allowed. If not provided, then report includes all columns.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1555,15 +1572,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="columns_nodejs">
 <a href="#columns_nodejs" style="color: inherit; text-decoration: inherit;">columns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Array of column names to be included in the report. Any valid report column name is allowed. If not provided, then report includes all columns.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1572,26 +1587,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="columns_python">
 <a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Array of column names to be included in the report. Any valid report column name is allowed. If not provided, then report includes all columns.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="reportdatasetresponse">Report<wbr>Dataset<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1600,55 +1604,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="aggregation_csharp">
 <a href="#aggregation_csharp" style="color: inherit; text-decoration: inherit;">Aggregation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Aggregation<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="configuration_csharp">
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportdatasetconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Dataset<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportfilterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has filter expression to use in the report.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="granularity_csharp">
 <a href="#granularity_csharp" style="color: inherit; text-decoration: inherit;">Granularity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The granularity of rows in the report.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="grouping_csharp">
 <a href="#grouping_csharp" style="color: inherit; text-decoration: inherit;">Grouping</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportgroupingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Grouping<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of group by expression to use in the report. Report can have up to 2 group by clauses.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1657,55 +1655,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="aggregation_go">
 <a href="#aggregation_go" style="color: inherit; text-decoration: inherit;">Aggregation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]Report<wbr>Aggregation<wbr>Response</span>
     </dt>
     <dd>{{% md %}}Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="configuration_go">
 <a href="#configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportdatasetconfigurationresponse">Report<wbr>Dataset<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportfilterresponse">Report<wbr>Filter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has filter expression to use in the report.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="granularity_go">
 <a href="#granularity_go" style="color: inherit; text-decoration: inherit;">Granularity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The granularity of rows in the report.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="grouping_go">
 <a href="#grouping_go" style="color: inherit; text-decoration: inherit;">Grouping</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportgroupingresponse">[]Report<wbr>Grouping<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Array of group by expression to use in the report. Report can have up to 2 group by clauses.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1714,55 +1706,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="aggregation_nodejs">
 <a href="#aggregation_nodejs" style="color: inherit; text-decoration: inherit;">aggregation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: Report<wbr>Aggregation<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="configuration_nodejs">
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportdatasetconfigurationresponse">Report<wbr>Dataset<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportfilterresponse">Report<wbr>Filter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has filter expression to use in the report.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="granularity_nodejs">
 <a href="#granularity_nodejs" style="color: inherit; text-decoration: inherit;">granularity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The granularity of rows in the report.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="grouping_nodejs">
 <a href="#grouping_nodejs" style="color: inherit; text-decoration: inherit;">grouping</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportgroupingresponse">Report<wbr>Grouping<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Array of group by expression to use in the report. Report can have up to 2 group by clauses.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1771,66 +1757,51 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="aggregation_python">
 <a href="#aggregation_python" style="color: inherit; text-decoration: inherit;">aggregation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Report<wbr>Aggregation<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="configuration_python">
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportdatasetconfigurationresponse">Report<wbr>Dataset<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportfilterresponse">Report<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has filter expression to use in the report.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="granularity_python">
 <a href="#granularity_python" style="color: inherit; text-decoration: inherit;">granularity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The granularity of rows in the report.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="grouping_python">
 <a href="#grouping_python" style="color: inherit; text-decoration: inherit;">grouping</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportgroupingresponse">Sequence[Report<wbr>Grouping<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of group by expression to use in the report. Report can have up to 2 group by clauses.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="reportdefinition">Report<wbr>Definition</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1839,45 +1810,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="timeframe_csharp">
 <a href="#timeframe_csharp" style="color: inherit; text-decoration: inherit;">Timeframe</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Timeframe<wbr>Type</span>
+        <span class="property-type">string | <a href="#timeframetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Timeframe<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The time frame for pulling data for the report. If custom, then a specific time period must be provided.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Report<wbr>Type</span>
+        <span class="property-type">string | <a href="#reporttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Report<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the report.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dataset_csharp">
 <a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportdataset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Dataset<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has definition for data in this report.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeperiod_csharp">
 <a href="#timeperiod_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reporttimeperiod">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Time<wbr>Period<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has time period for pulling data for the report.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1886,45 +1852,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="timeframe_go">
 <a href="#timeframe_go" style="color: inherit; text-decoration: inherit;">Timeframe</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#timeframetype">Timeframe<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The time frame for pulling data for the report. If custom, then a specific time period must be provided.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#reporttype">Report<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the report.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dataset_go">
 <a href="#dataset_go" style="color: inherit; text-decoration: inherit;">Dataset</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportdataset">Report<wbr>Dataset</a></span>
     </dt>
     <dd>{{% md %}}Has definition for data in this report.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeperiod_go">
 <a href="#timeperiod_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reporttimeperiod">Report<wbr>Time<wbr>Period</a></span>
     </dt>
     <dd>{{% md %}}Has time period for pulling data for the report.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1933,45 +1894,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="timeframe_nodejs">
 <a href="#timeframe_nodejs" style="color: inherit; text-decoration: inherit;">timeframe</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Timeframe<wbr>Type</span>
+        <span class="property-type">string | <a href="#timeframetype">Timeframe<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The time frame for pulling data for the report. If custom, then a specific time period must be provided.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Report<wbr>Type</span>
+        <span class="property-type">string | <a href="#reporttype">Report<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the report.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dataset_nodejs">
 <a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportdataset">Report<wbr>Dataset</a></span>
     </dt>
     <dd>{{% md %}}Has definition for data in this report.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeperiod_nodejs">
 <a href="#timeperiod_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reporttimeperiod">Report<wbr>Time<wbr>Period</a></span>
     </dt>
     <dd>{{% md %}}Has time period for pulling data for the report.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1980,56 +1936,42 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="timeframe_python">
 <a href="#timeframe_python" style="color: inherit; text-decoration: inherit;">timeframe</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Timeframe<wbr>Type</span>
+        <span class="property-type">str | <a href="#timeframetype">Timeframe<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The time frame for pulling data for the report. If custom, then a specific time period must be provided.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Report<wbr>Type</span>
+        <span class="property-type">str | <a href="#reporttype">Report<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the report.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dataset_python">
 <a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportdataset">Report<wbr>Dataset<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has definition for data in this report.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="time_period_python">
 <a href="#time_period_python" style="color: inherit; text-decoration: inherit;">time_<wbr>period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reporttimeperiod">Report<wbr>Time<wbr>Period<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has time period for pulling data for the report.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="reportdefinitionresponse">Report<wbr>Definition<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2038,45 +1980,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="timeframe_csharp">
 <a href="#timeframe_csharp" style="color: inherit; text-decoration: inherit;">Timeframe</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time frame for pulling data for the report. If custom, then a specific time period must be provided.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the report.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dataset_csharp">
 <a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportdatasetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Dataset<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has definition for data in this report.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeperiod_csharp">
 <a href="#timeperiod_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reporttimeperiodresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Time<wbr>Period<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has time period for pulling data for the report.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2085,45 +2022,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="timeframe_go">
 <a href="#timeframe_go" style="color: inherit; text-decoration: inherit;">Timeframe</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time frame for pulling data for the report. If custom, then a specific time period must be provided.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the report.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dataset_go">
 <a href="#dataset_go" style="color: inherit; text-decoration: inherit;">Dataset</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportdatasetresponse">Report<wbr>Dataset<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has definition for data in this report.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeperiod_go">
 <a href="#timeperiod_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reporttimeperiodresponse">Report<wbr>Time<wbr>Period<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has time period for pulling data for the report.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2132,45 +2064,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="timeframe_nodejs">
 <a href="#timeframe_nodejs" style="color: inherit; text-decoration: inherit;">timeframe</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time frame for pulling data for the report. If custom, then a specific time period must be provided.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the report.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dataset_nodejs">
 <a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportdatasetresponse">Report<wbr>Dataset<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has definition for data in this report.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeperiod_nodejs">
 <a href="#timeperiod_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reporttimeperiodresponse">Report<wbr>Time<wbr>Period<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has time period for pulling data for the report.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2179,57 +2106,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="timeframe_python">
 <a href="#timeframe_python" style="color: inherit; text-decoration: inherit;">timeframe</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time frame for pulling data for the report. If custom, then a specific time period must be provided.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the report.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dataset_python">
 <a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportdatasetresponse">Report<wbr>Dataset<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has definition for data in this report.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="time_period_python">
 <a href="#time_period_python" style="color: inherit; text-decoration: inherit;">time_<wbr>period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reporttimeperiodresponse">Report<wbr>Time<wbr>Period<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has time period for pulling data for the report.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="reportdeliverydestination">Report<wbr>Delivery<wbr>Destination</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2237,35 +2150,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="container_csharp">
 <a href="#container_csharp" style="color: inherit; text-decoration: inherit;">Container</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the container where reports will be uploaded.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource id of the storage account where reports will be delivered.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rootfolderpath_csharp">
 <a href="#rootfolderpath_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Folder<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the directory where reports will be uploaded.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2274,35 +2183,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="container_go">
 <a href="#container_go" style="color: inherit; text-decoration: inherit;">Container</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the container where reports will be uploaded.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource id of the storage account where reports will be delivered.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rootfolderpath_go">
 <a href="#rootfolderpath_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Folder<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the directory where reports will be uploaded.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2311,35 +2216,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="container_nodejs">
 <a href="#container_nodejs" style="color: inherit; text-decoration: inherit;">container</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the container where reports will be uploaded.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource id of the storage account where reports will be delivered.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rootfolderpath_nodejs">
 <a href="#rootfolderpath_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Folder<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the directory where reports will be uploaded.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2348,47 +2249,34 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="container_python">
 <a href="#container_python" style="color: inherit; text-decoration: inherit;">container</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the container where reports will be uploaded.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource id of the storage account where reports will be delivered.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="root_folder_path_python">
 <a href="#root_folder_path_python" style="color: inherit; text-decoration: inherit;">root_<wbr>folder_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the directory where reports will be uploaded.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="reportdeliverydestinationresponse">Report<wbr>Delivery<wbr>Destination<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2396,35 +2284,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="container_csharp">
 <a href="#container_csharp" style="color: inherit; text-decoration: inherit;">Container</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the container where reports will be uploaded.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource id of the storage account where reports will be delivered.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rootfolderpath_csharp">
 <a href="#rootfolderpath_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Folder<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the directory where reports will be uploaded.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2433,35 +2317,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="container_go">
 <a href="#container_go" style="color: inherit; text-decoration: inherit;">Container</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the container where reports will be uploaded.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource id of the storage account where reports will be delivered.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rootfolderpath_go">
 <a href="#rootfolderpath_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Folder<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the directory where reports will be uploaded.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2470,35 +2350,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="container_nodejs">
 <a href="#container_nodejs" style="color: inherit; text-decoration: inherit;">container</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the container where reports will be uploaded.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource id of the storage account where reports will be delivered.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rootfolderpath_nodejs">
 <a href="#rootfolderpath_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Folder<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the directory where reports will be uploaded.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2507,46 +2383,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="container_python">
 <a href="#container_python" style="color: inherit; text-decoration: inherit;">container</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the container where reports will be uploaded.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource id of the storage account where reports will be delivered.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="root_folder_path_python">
 <a href="#root_folder_path_python" style="color: inherit; text-decoration: inherit;">root_<wbr>folder_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the directory where reports will be uploaded.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="reportdeliveryinfo">Report<wbr>Delivery<wbr>Info</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2555,15 +2418,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="destination_csharp">
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportdeliverydestination">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Delivery<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has destination for the report being delivered.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2572,15 +2433,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="destination_go">
 <a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportdeliverydestination">Report<wbr>Delivery<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}Has destination for the report being delivered.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2589,15 +2448,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="destination_nodejs">
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportdeliverydestination">Report<wbr>Delivery<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}Has destination for the report being delivered.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2606,26 +2463,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="destination_python">
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportdeliverydestination">Report<wbr>Delivery<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has destination for the report being delivered.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="reportdeliveryinforesponse">Report<wbr>Delivery<wbr>Info<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2634,15 +2480,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="destination_csharp">
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportdeliverydestinationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Delivery<wbr>Destination<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has destination for the report being delivered.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2651,15 +2495,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="destination_go">
 <a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportdeliverydestinationresponse">Report<wbr>Delivery<wbr>Destination<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has destination for the report being delivered.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2668,15 +2510,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="destination_nodejs">
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportdeliverydestinationresponse">Report<wbr>Delivery<wbr>Destination<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has destination for the report being delivered.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2685,26 +2525,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="destination_python">
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportdeliverydestinationresponse">Report<wbr>Delivery<wbr>Destination<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has destination for the report being delivered.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="reportfilter">Report<wbr>Filter</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2713,55 +2542,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="and_csharp">
 <a href="#and_csharp" style="color: inherit; text-decoration: inherit;">And</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportfilter">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dimension_csharp">
 <a href="#dimension_csharp" style="color: inherit; text-decoration: inherit;">Dimension</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportcomparisonexpression">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Comparison<wbr>Expression<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="not_csharp">
 <a href="#not_csharp" style="color: inherit; text-decoration: inherit;">Not</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportfilter">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The logical "NOT" expression.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="or_csharp">
 <a href="#or_csharp" style="color: inherit; text-decoration: inherit;">Or</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportfilter">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The logical "OR" expression. Must have at least 2 items.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tag_csharp">
 <a href="#tag_csharp" style="color: inherit; text-decoration: inherit;">Tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportcomparisonexpression">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Comparison<wbr>Expression<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2770,55 +2593,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="and_go">
 <a href="#and_go" style="color: inherit; text-decoration: inherit;">And</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportfilter">[]Report<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dimension_go">
 <a href="#dimension_go" style="color: inherit; text-decoration: inherit;">Dimension</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportcomparisonexpression">Report<wbr>Comparison<wbr>Expression</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="not_go">
 <a href="#not_go" style="color: inherit; text-decoration: inherit;">Not</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportfilter">Report<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}The logical "NOT" expression.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="or_go">
 <a href="#or_go" style="color: inherit; text-decoration: inherit;">Or</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportfilter">[]Report<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}The logical "OR" expression. Must have at least 2 items.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tag_go">
 <a href="#tag_go" style="color: inherit; text-decoration: inherit;">Tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportcomparisonexpression">Report<wbr>Comparison<wbr>Expression</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2827,55 +2644,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="and_nodejs">
 <a href="#and_nodejs" style="color: inherit; text-decoration: inherit;">and</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportfilter">Report<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dimension_nodejs">
 <a href="#dimension_nodejs" style="color: inherit; text-decoration: inherit;">dimension</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportcomparisonexpression">Report<wbr>Comparison<wbr>Expression</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="not_nodejs">
 <a href="#not_nodejs" style="color: inherit; text-decoration: inherit;">not</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportfilter">Report<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}The logical "NOT" expression.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="or_nodejs">
 <a href="#or_nodejs" style="color: inherit; text-decoration: inherit;">or</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportfilter">Report<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}The logical "OR" expression. Must have at least 2 items.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tag_nodejs">
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportcomparisonexpression">Report<wbr>Comparison<wbr>Expression</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2884,66 +2695,51 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="and__python">
 <a href="#and__python" style="color: inherit; text-decoration: inherit;">and_</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportfilter">Sequence[Report<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dimension_python">
 <a href="#dimension_python" style="color: inherit; text-decoration: inherit;">dimension</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportcomparisonexpression">Report<wbr>Comparison<wbr>Expression<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="not__python">
 <a href="#not__python" style="color: inherit; text-decoration: inherit;">not_</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportfilter">Report<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The logical "NOT" expression.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="or__python">
 <a href="#or__python" style="color: inherit; text-decoration: inherit;">or_</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportfilter">Sequence[Report<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The logical "OR" expression. Must have at least 2 items.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tag_python">
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportcomparisonexpression">Report<wbr>Comparison<wbr>Expression<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="reportfilterresponse">Report<wbr>Filter<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2952,55 +2748,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="and_csharp">
 <a href="#and_csharp" style="color: inherit; text-decoration: inherit;">And</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportfilterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Filter<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dimension_csharp">
 <a href="#dimension_csharp" style="color: inherit; text-decoration: inherit;">Dimension</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportcomparisonexpressionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="not_csharp">
 <a href="#not_csharp" style="color: inherit; text-decoration: inherit;">Not</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportfilterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The logical "NOT" expression.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="or_csharp">
 <a href="#or_csharp" style="color: inherit; text-decoration: inherit;">Or</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportfilterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Filter<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The logical "OR" expression. Must have at least 2 items.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tag_csharp">
 <a href="#tag_csharp" style="color: inherit; text-decoration: inherit;">Tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportcomparisonexpressionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3009,55 +2799,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="and_go">
 <a href="#and_go" style="color: inherit; text-decoration: inherit;">And</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportfilterresponse">[]Report<wbr>Filter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dimension_go">
 <a href="#dimension_go" style="color: inherit; text-decoration: inherit;">Dimension</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportcomparisonexpressionresponse">Report<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="not_go">
 <a href="#not_go" style="color: inherit; text-decoration: inherit;">Not</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportfilterresponse">Report<wbr>Filter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The logical "NOT" expression.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="or_go">
 <a href="#or_go" style="color: inherit; text-decoration: inherit;">Or</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportfilterresponse">[]Report<wbr>Filter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The logical "OR" expression. Must have at least 2 items.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tag_go">
 <a href="#tag_go" style="color: inherit; text-decoration: inherit;">Tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportcomparisonexpressionresponse">Report<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3066,55 +2850,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="and_nodejs">
 <a href="#and_nodejs" style="color: inherit; text-decoration: inherit;">and</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportfilterresponse">Report<wbr>Filter<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dimension_nodejs">
 <a href="#dimension_nodejs" style="color: inherit; text-decoration: inherit;">dimension</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportcomparisonexpressionresponse">Report<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="not_nodejs">
 <a href="#not_nodejs" style="color: inherit; text-decoration: inherit;">not</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportfilterresponse">Report<wbr>Filter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The logical "NOT" expression.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="or_nodejs">
 <a href="#or_nodejs" style="color: inherit; text-decoration: inherit;">or</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportfilterresponse">Report<wbr>Filter<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The logical "OR" expression. Must have at least 2 items.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tag_nodejs">
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportcomparisonexpressionresponse">Report<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3123,67 +2901,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="and__python">
 <a href="#and__python" style="color: inherit; text-decoration: inherit;">and_</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportfilterresponse">Sequence[Report<wbr>Filter<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dimension_python">
 <a href="#dimension_python" style="color: inherit; text-decoration: inherit;">dimension</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportcomparisonexpressionresponse">Report<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="not__python">
 <a href="#not__python" style="color: inherit; text-decoration: inherit;">not_</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportfilterresponse">Report<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The logical "NOT" expression.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="or__python">
 <a href="#or__python" style="color: inherit; text-decoration: inherit;">or_</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportfilterresponse">Sequence[Report<wbr>Filter<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The logical "OR" expression. Must have at least 2 items.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tag_python">
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportcomparisonexpressionresponse">Report<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="reportgrouping">Report<wbr>Grouping</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3191,25 +2954,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the column to group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Report<wbr>Column<wbr>Type</span>
+        <span class="property-type">string | <a href="#reportcolumntype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Report<wbr>Column<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Has type of the column to group.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3218,25 +2978,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the column to group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#reportcolumntype">Report<wbr>Column<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Has type of the column to group.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3245,25 +3002,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the column to group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Report<wbr>Column<wbr>Type</span>
+        <span class="property-type">string | <a href="#reportcolumntype">Report<wbr>Column<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Has type of the column to group.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3272,37 +3026,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the column to group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Report<wbr>Column<wbr>Type</span>
+        <span class="property-type">str | <a href="#reportcolumntype">Report<wbr>Column<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Has type of the column to group.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="reportgroupingresponse">Report<wbr>Grouping<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3310,25 +3052,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the column to group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Has type of the column to group.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3337,25 +3076,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the column to group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Has type of the column to group.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3364,25 +3100,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the column to group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Has type of the column to group.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3391,37 +3124,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the column to group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Has type of the column to group.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="reportrecurrenceperiod">Report<wbr>Recurrence<wbr>Period</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3429,25 +3150,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="from_csharp">
 <a href="#from_csharp" style="color: inherit; text-decoration: inherit;">From</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start date of recurrence.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="to_csharp">
 <a href="#to_csharp" style="color: inherit; text-decoration: inherit;">To</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end date of recurrence.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3456,25 +3174,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="from_go">
 <a href="#from_go" style="color: inherit; text-decoration: inherit;">From</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start date of recurrence.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="to_go">
 <a href="#to_go" style="color: inherit; text-decoration: inherit;">To</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end date of recurrence.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3483,25 +3198,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="from_nodejs">
 <a href="#from_nodejs" style="color: inherit; text-decoration: inherit;">from</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start date of recurrence.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="to_nodejs">
 <a href="#to_nodejs" style="color: inherit; text-decoration: inherit;">to</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end date of recurrence.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3510,37 +3222,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="from__python">
 <a href="#from__python" style="color: inherit; text-decoration: inherit;">from_</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The start date of recurrence.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="to_python">
 <a href="#to_python" style="color: inherit; text-decoration: inherit;">to</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The end date of recurrence.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="reportrecurrenceperiodresponse">Report<wbr>Recurrence<wbr>Period<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3548,25 +3248,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="from_csharp">
 <a href="#from_csharp" style="color: inherit; text-decoration: inherit;">From</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start date of recurrence.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="to_csharp">
 <a href="#to_csharp" style="color: inherit; text-decoration: inherit;">To</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end date of recurrence.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3575,25 +3272,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="from_go">
 <a href="#from_go" style="color: inherit; text-decoration: inherit;">From</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start date of recurrence.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="to_go">
 <a href="#to_go" style="color: inherit; text-decoration: inherit;">To</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end date of recurrence.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3602,25 +3296,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="from_nodejs">
 <a href="#from_nodejs" style="color: inherit; text-decoration: inherit;">from</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start date of recurrence.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="to_nodejs">
 <a href="#to_nodejs" style="color: inherit; text-decoration: inherit;">to</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end date of recurrence.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3629,36 +3320,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="from__python">
 <a href="#from__python" style="color: inherit; text-decoration: inherit;">from_</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The start date of recurrence.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="to_python">
 <a href="#to_python" style="color: inherit; text-decoration: inherit;">to</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The end date of recurrence.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="reportschedule">Report<wbr>Schedule</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3667,35 +3346,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="recurrence_csharp">
 <a href="#recurrence_csharp" style="color: inherit; text-decoration: inherit;">Recurrence</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Recurrence<wbr>Type</span>
+        <span class="property-type">string | <a href="#recurrencetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Recurrence<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The schedule recurrence.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recurrenceperiod_csharp">
 <a href="#recurrenceperiod_csharp" style="color: inherit; text-decoration: inherit;">Recurrence<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportrecurrenceperiod">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Recurrence<wbr>Period<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Status<wbr>Type</span>
+        <span class="property-type">string | <a href="#statustype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Status<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The status of the schedule. Whether active or not. If inactive, the report's scheduled execution is paused.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3704,35 +3379,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="recurrence_go">
 <a href="#recurrence_go" style="color: inherit; text-decoration: inherit;">Recurrence</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#recurrencetype">Recurrence<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The schedule recurrence.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recurrenceperiod_go">
 <a href="#recurrenceperiod_go" style="color: inherit; text-decoration: inherit;">Recurrence<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportrecurrenceperiod">Report<wbr>Recurrence<wbr>Period</a></span>
     </dt>
     <dd>{{% md %}}Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#statustype">Status<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The status of the schedule. Whether active or not. If inactive, the report's scheduled execution is paused.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3741,35 +3412,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="recurrence_nodejs">
 <a href="#recurrence_nodejs" style="color: inherit; text-decoration: inherit;">recurrence</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Recurrence<wbr>Type</span>
+        <span class="property-type">string | <a href="#recurrencetype">Recurrence<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The schedule recurrence.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recurrenceperiod_nodejs">
 <a href="#recurrenceperiod_nodejs" style="color: inherit; text-decoration: inherit;">recurrence<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportrecurrenceperiod">Report<wbr>Recurrence<wbr>Period</a></span>
     </dt>
     <dd>{{% md %}}Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Status<wbr>Type</span>
+        <span class="property-type">string | <a href="#statustype">Status<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The status of the schedule. Whether active or not. If inactive, the report's scheduled execution is paused.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3778,46 +3445,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="recurrence_python">
 <a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Recurrence<wbr>Type</span>
+        <span class="property-type">str | <a href="#recurrencetype">Recurrence<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The schedule recurrence.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recurrence_period_python">
 <a href="#recurrence_period_python" style="color: inherit; text-decoration: inherit;">recurrence_<wbr>period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportrecurrenceperiod">Report<wbr>Recurrence<wbr>Period<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Status<wbr>Type</span>
+        <span class="property-type">str | <a href="#statustype">Status<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The status of the schedule. Whether active or not. If inactive, the report's scheduled execution is paused.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="reportscheduleresponse">Report<wbr>Schedule<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3826,35 +3480,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="recurrence_csharp">
 <a href="#recurrence_csharp" style="color: inherit; text-decoration: inherit;">Recurrence</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The schedule recurrence.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recurrenceperiod_csharp">
 <a href="#recurrenceperiod_csharp" style="color: inherit; text-decoration: inherit;">Recurrence<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportrecurrenceperiodresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Recurrence<wbr>Period<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the schedule. Whether active or not. If inactive, the report's scheduled execution is paused.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3863,35 +3513,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="recurrence_go">
 <a href="#recurrence_go" style="color: inherit; text-decoration: inherit;">Recurrence</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The schedule recurrence.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recurrenceperiod_go">
 <a href="#recurrenceperiod_go" style="color: inherit; text-decoration: inherit;">Recurrence<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportrecurrenceperiodresponse">Report<wbr>Recurrence<wbr>Period<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the schedule. Whether active or not. If inactive, the report's scheduled execution is paused.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3900,35 +3546,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="recurrence_nodejs">
 <a href="#recurrence_nodejs" style="color: inherit; text-decoration: inherit;">recurrence</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The schedule recurrence.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recurrenceperiod_nodejs">
 <a href="#recurrenceperiod_nodejs" style="color: inherit; text-decoration: inherit;">recurrence<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportrecurrenceperiodresponse">Report<wbr>Recurrence<wbr>Period<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the schedule. Whether active or not. If inactive, the report's scheduled execution is paused.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3937,47 +3579,34 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="recurrence_python">
 <a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The schedule recurrence.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recurrence_period_python">
 <a href="#recurrence_period_python" style="color: inherit; text-decoration: inherit;">recurrence_<wbr>period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportrecurrenceperiodresponse">Report<wbr>Recurrence<wbr>Period<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Has start and end date of the recurrence. The start date must be in future. If present, the end date must be greater than start date.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the schedule. Whether active or not. If inactive, the report's scheduled execution is paused.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="reporttimeperiod">Report<wbr>Time<wbr>Period</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3985,25 +3614,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="from_csharp">
 <a href="#from_csharp" style="color: inherit; text-decoration: inherit;">From</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start date to pull data from.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="to_csharp">
 <a href="#to_csharp" style="color: inherit; text-decoration: inherit;">To</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end date to pull data to.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4012,25 +3638,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="from_go">
 <a href="#from_go" style="color: inherit; text-decoration: inherit;">From</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start date to pull data from.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="to_go">
 <a href="#to_go" style="color: inherit; text-decoration: inherit;">To</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end date to pull data to.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4039,25 +3662,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="from_nodejs">
 <a href="#from_nodejs" style="color: inherit; text-decoration: inherit;">from</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start date to pull data from.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="to_nodejs">
 <a href="#to_nodejs" style="color: inherit; text-decoration: inherit;">to</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end date to pull data to.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4066,37 +3686,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="from__python">
 <a href="#from__python" style="color: inherit; text-decoration: inherit;">from_</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The start date to pull data from.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="to_python">
 <a href="#to_python" style="color: inherit; text-decoration: inherit;">to</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The end date to pull data to.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="reporttimeperiodresponse">Report<wbr>Time<wbr>Period<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4104,25 +3712,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="from_csharp">
 <a href="#from_csharp" style="color: inherit; text-decoration: inherit;">From</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start date to pull data from.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="to_csharp">
 <a href="#to_csharp" style="color: inherit; text-decoration: inherit;">To</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end date to pull data to.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4131,25 +3736,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="from_go">
 <a href="#from_go" style="color: inherit; text-decoration: inherit;">From</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start date to pull data from.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="to_go">
 <a href="#to_go" style="color: inherit; text-decoration: inherit;">To</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end date to pull data to.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4158,25 +3760,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="from_nodejs">
 <a href="#from_nodejs" style="color: inherit; text-decoration: inherit;">from</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start date to pull data from.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="to_nodejs">
 <a href="#to_nodejs" style="color: inherit; text-decoration: inherit;">to</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end date to pull data to.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4185,33 +3784,136 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="from__python">
 <a href="#from__python" style="color: inherit; text-decoration: inherit;">from_</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The start date to pull data from.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="to_python">
 <a href="#to_python" style="color: inherit; text-decoration: inherit;">to</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The end date to pull data to.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="reporttype">Report<wbr>Type</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Usage</dt>
+    <dd>Usage</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Report<wbr>Type<wbr>Usage</dt>
+    <dd>Usage</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Usage</dt>
+    <dd>Usage</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>USAGE</dt>
+    <dd>Usage</dd>
+</dl>
+{{% /choosable %}}
 
+<h4 id="statustype">Status<wbr>Type</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Active</dt>
+    <dd>Active</dd>
+    <dt>Inactive</dt>
+    <dd>Inactive</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Status<wbr>Type<wbr>Active</dt>
+    <dd>Active</dd>
+    <dt>Status<wbr>Type<wbr>Inactive</dt>
+    <dd>Inactive</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Active</dt>
+    <dd>Active</dd>
+    <dt>Inactive</dt>
+    <dd>Inactive</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>ACTIVE</dt>
+    <dd>Active</dd>
+    <dt>INACTIVE</dt>
+    <dd>Inactive</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="timeframetype">Timeframe<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Week<wbr>To<wbr>Date</dt>
+    <dd>WeekToDate</dd>
+    <dt>Month<wbr>To<wbr>Date</dt>
+    <dd>MonthToDate</dd>
+    <dt>Custom</dt>
+    <dd>Custom</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Timeframe<wbr>Type<wbr>Week<wbr>To<wbr>Date</dt>
+    <dd>WeekToDate</dd>
+    <dt>Timeframe<wbr>Type<wbr>Month<wbr>To<wbr>Date</dt>
+    <dd>MonthToDate</dd>
+    <dt>Timeframe<wbr>Type<wbr>Custom</dt>
+    <dd>Custom</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Week<wbr>To<wbr>Date</dt>
+    <dd>WeekToDate</dd>
+    <dt>Month<wbr>To<wbr>Date</dt>
+    <dd>MonthToDate</dd>
+    <dt>Custom</dt>
+    <dd>Custom</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>WEEK_TO_DATE</dt>
+    <dd>WeekToDate</dd>
+    <dt>MONTH_TO_DATE</dt>
+    <dd>MonthToDate</dd>
+    <dt>CUSTOM</dt>
+    <dd>Custom</dd>
+</dl>
+{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>

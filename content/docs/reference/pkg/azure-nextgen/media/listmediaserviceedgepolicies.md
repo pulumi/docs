@@ -45,7 +45,6 @@ meta_desc: "Explore the ListMediaServiceEdgePolicies function of the media modul
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -53,35 +52,31 @@ The following arguments are supported:
             title="Required">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deviceid_csharp">
 <a href="#deviceid_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the edge device.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -90,35 +85,31 @@ The following arguments are supported:
             title="Required">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deviceid_go">
 <a href="#deviceid_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the edge device.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -127,35 +118,31 @@ The following arguments are supported:
             title="Required">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deviceid_nodejs">
 <a href="#deviceid_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the edge device.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -164,38 +151,31 @@ The following arguments are supported:
             title="Required">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="device_id_python">
 <a href="#device_id_python" style="color: inherit; text-decoration: inherit;">device_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the edge device.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -206,7 +186,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -214,15 +193,13 @@ The following output properties are available:
             title="">
         <span id="usagedatacollectionpolicy_csharp">
 <a href="#usagedatacollectionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Usage<wbr>Data<wbr>Collection<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edgeusagedatacollectionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Outputs.<wbr>Edge<wbr>Usage<wbr>Data<wbr>Collection<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -231,15 +208,13 @@ The following output properties are available:
             title="">
         <span id="usagedatacollectionpolicy_go">
 <a href="#usagedatacollectionpolicy_go" style="color: inherit; text-decoration: inherit;">Usage<wbr>Data<wbr>Collection<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edgeusagedatacollectionpolicyresponse">Edge<wbr>Usage<wbr>Data<wbr>Collection<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -248,15 +223,13 @@ The following output properties are available:
             title="">
         <span id="usagedatacollectionpolicy_nodejs">
 <a href="#usagedatacollectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">usage<wbr>Data<wbr>Collection<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edgeusagedatacollectionpolicyresponse">Edge<wbr>Usage<wbr>Data<wbr>Collection<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -265,18 +238,13 @@ The following output properties are available:
             title="">
         <span id="usage_data_collection_policy_python">
 <a href="#usage_data_collection_policy_python" style="color: inherit; text-decoration: inherit;">usage_<wbr>data_<wbr>collection_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edgeusagedatacollectionpolicyresponse">Edge<wbr>Usage<wbr>Data<wbr>Collection<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -291,7 +259,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -299,45 +266,40 @@ The following output properties are available:
             title="Optional">
         <span id="datacollectionfrequency_csharp">
 <a href="#datacollectionfrequency_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Collection<wbr>Frequency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Usage data collection frequency in ISO 8601 duration format e.g. PT10M , PT5H.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datareportingfrequency_csharp">
 <a href="#datareportingfrequency_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Reporting<wbr>Frequency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Usage data reporting frequency in ISO 8601 duration format e.g. PT10M , PT5H.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="eventhubdetails_csharp">
 <a href="#eventhubdetails_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Hub<wbr>Details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edgeusagedataeventhubresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Edge<wbr>Usage<wbr>Data<wbr>Event<wbr>Hub<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of Event Hub where the usage will be reported.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxallowedunreportedusageduration_csharp">
 <a href="#maxallowedunreportedusageduration_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Allowed<wbr>Unreported<wbr>Usage<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum time for which the functionality of the device will not be hampered for not reporting the usage data.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -346,45 +308,40 @@ The following output properties are available:
             title="Optional">
         <span id="datacollectionfrequency_go">
 <a href="#datacollectionfrequency_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Collection<wbr>Frequency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Usage data collection frequency in ISO 8601 duration format e.g. PT10M , PT5H.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datareportingfrequency_go">
 <a href="#datareportingfrequency_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Reporting<wbr>Frequency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Usage data reporting frequency in ISO 8601 duration format e.g. PT10M , PT5H.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="eventhubdetails_go">
 <a href="#eventhubdetails_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Hub<wbr>Details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edgeusagedataeventhubresponse">Edge<wbr>Usage<wbr>Data<wbr>Event<wbr>Hub<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Details of Event Hub where the usage will be reported.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxallowedunreportedusageduration_go">
 <a href="#maxallowedunreportedusageduration_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Allowed<wbr>Unreported<wbr>Usage<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum time for which the functionality of the device will not be hampered for not reporting the usage data.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -393,45 +350,40 @@ The following output properties are available:
             title="Optional">
         <span id="datacollectionfrequency_nodejs">
 <a href="#datacollectionfrequency_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Collection<wbr>Frequency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Usage data collection frequency in ISO 8601 duration format e.g. PT10M , PT5H.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datareportingfrequency_nodejs">
 <a href="#datareportingfrequency_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Reporting<wbr>Frequency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Usage data reporting frequency in ISO 8601 duration format e.g. PT10M , PT5H.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="eventhubdetails_nodejs">
 <a href="#eventhubdetails_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Hub<wbr>Details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edgeusagedataeventhubresponse">Edge<wbr>Usage<wbr>Data<wbr>Event<wbr>Hub<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Details of Event Hub where the usage will be reported.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxallowedunreportedusageduration_nodejs">
 <a href="#maxallowedunreportedusageduration_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Allowed<wbr>Unreported<wbr>Usage<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum time for which the functionality of the device will not be hampered for not reporting the usage data.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -440,51 +392,42 @@ The following output properties are available:
             title="Optional">
         <span id="data_collection_frequency_python">
 <a href="#data_collection_frequency_python" style="color: inherit; text-decoration: inherit;">data_<wbr>collection_<wbr>frequency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Usage data collection frequency in ISO 8601 duration format e.g. PT10M , PT5H.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="data_reporting_frequency_python">
 <a href="#data_reporting_frequency_python" style="color: inherit; text-decoration: inherit;">data_<wbr>reporting_<wbr>frequency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Usage data reporting frequency in ISO 8601 duration format e.g. PT10M , PT5H.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="event_hub_details_python">
 <a href="#event_hub_details_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hub_<wbr>details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#edgeusagedataeventhubresponse">Edge<wbr>Usage<wbr>Data<wbr>Event<wbr>Hub<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of Event Hub where the usage will be reported.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_allowed_unreported_usage_duration_python">
 <a href="#max_allowed_unreported_usage_duration_python" style="color: inherit; text-decoration: inherit;">max_<wbr>allowed_<wbr>unreported_<wbr>usage_<wbr>duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Maximum time for which the functionality of the device will not be hampered for not reporting the usage data.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="edgeusagedataeventhubresponse">Edge<wbr>Usage<wbr>Data<wbr>Event<wbr>Hub<wbr>Response</h4>
-
 
 
 
@@ -498,35 +441,31 @@ The following output properties are available:
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Event Hub where usage will be reported.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Namespace of the Event Hub where usage will be reported.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="token_csharp">
 <a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SAS token needed to interact with Event Hub.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -535,35 +474,31 @@ The following output properties are available:
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Event Hub where usage will be reported.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Namespace of the Event Hub where usage will be reported.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="token_go">
 <a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SAS token needed to interact with Event Hub.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -572,35 +507,31 @@ The following output properties are available:
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Event Hub where usage will be reported.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Namespace of the Event Hub where usage will be reported.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="token_nodejs">
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SAS token needed to interact with Event Hub.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -609,38 +540,31 @@ The following output properties are available:
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Event Hub where usage will be reported.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Namespace of the Event Hub where usage will be reported.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="token_python">
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SAS token needed to interact with Event Hub.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

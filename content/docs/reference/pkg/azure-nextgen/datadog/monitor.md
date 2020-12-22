@@ -2,7 +2,7 @@
 ---
 title: "Monitor"
 title_tag: "azure-nextgen.datadog.Monitor"
-meta_desc: "Explore the Monitor resource of the datadog module, including examples, input properties, output properties, lookup functions, and supporting types. "
+meta_desc: "Documentation for the azure-nextgen.datadog.Monitor resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -103,7 +103,7 @@ const monitor = new azure_nextgen.datadog.v20200201preview.Monitor("monitor", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Monitor</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">MonitorArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Monitor</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">MonitorArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -111,11 +111,11 @@ const monitor = new azure_nextgen.datadog.v20200201preview.Monitor("monitor", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMonitor</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">MonitorArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Monitor</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewMonitor</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">MonitorArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Monitor</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Monitor</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">MonitorArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Monitor</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">MonitorArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -126,7 +126,7 @@ const monitor = new azure_nextgen.datadog.v20200201preview.Monitor("monitor", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -195,7 +195,7 @@ const monitor = new azure_nextgen.datadog.v20200201preview.Monitor("monitor", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -234,7 +234,7 @@ const monitor = new azure_nextgen.datadog.v20200201preview.Monitor("monitor", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -275,7 +275,6 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -283,75 +282,67 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
             title="Required">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="monitorname_csharp">
 <a href="#monitorname_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Monitor resource name{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group to which the Datadog resource belongs.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="identity_csharp">
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identityproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Datadog.<wbr>Inputs.<wbr>Identity<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Datadog.<wbr>Inputs.<wbr>Monitor<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties specific to the monitor resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Datadog.<wbr>Inputs.<wbr>Resource<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -360,75 +351,67 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
             title="Required">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="monitorname_go">
 <a href="#monitorname_go" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Monitor resource name{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group to which the Datadog resource belongs.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="identity_go">
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identityproperties">Identity<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorproperties">Monitor<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Properties specific to the monitor resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesku">Resource<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -437,75 +420,67 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
             title="Required">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="monitorname_nodejs">
 <a href="#monitorname_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Monitor resource name{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group to which the Datadog resource belongs.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="identity_nodejs">
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identityproperties">Identity<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorproperties">Monitor<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Properties specific to the monitor resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesku">Resource<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -514,84 +489,72 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
             title="Required">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="monitor_name_python">
 <a href="#monitor_name_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Monitor resource name{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group to which the Datadog resource belongs.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="identity_python">
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identityproperties">Identity<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorproperties">Monitor<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties specific to the monitor resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesku">Resource<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Monitor resource produces the following output properties:
-
 
 
 
@@ -602,35 +565,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the monitor resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the monitor resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -639,35 +598,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the monitor resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the monitor resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -676,35 +631,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the monitor resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the monitor resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -713,38 +664,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the monitor resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the monitor resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -755,13 +699,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
 <h4 id="datadogorganizationproperties">Datadog<wbr>Organization<wbr>Properties</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -770,35 +709,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="enterpriseappid_csharp">
 <a href="#enterpriseappid_csharp" style="color: inherit; text-decoration: inherit;">Enterprise<wbr>App<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of the Enterprise App used for Single sign on.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="linkingauthcode_csharp">
 <a href="#linkingauthcode_csharp" style="color: inherit; text-decoration: inherit;">Linking<wbr>Auth<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The auth code used to linking to an existing datadog organization.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="linkingclientid_csharp">
 <a href="#linkingclientid_csharp" style="color: inherit; text-decoration: inherit;">Linking<wbr>Client<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client_id from an existing in exchange for an auth token to link organization.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -807,35 +742,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="enterpriseappid_go">
 <a href="#enterpriseappid_go" style="color: inherit; text-decoration: inherit;">Enterprise<wbr>App<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of the Enterprise App used for Single sign on.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="linkingauthcode_go">
 <a href="#linkingauthcode_go" style="color: inherit; text-decoration: inherit;">Linking<wbr>Auth<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The auth code used to linking to an existing datadog organization.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="linkingclientid_go">
 <a href="#linkingclientid_go" style="color: inherit; text-decoration: inherit;">Linking<wbr>Client<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client_id from an existing in exchange for an auth token to link organization.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -844,35 +775,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="enterpriseappid_nodejs">
 <a href="#enterpriseappid_nodejs" style="color: inherit; text-decoration: inherit;">enterprise<wbr>App<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of the Enterprise App used for Single sign on.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="linkingauthcode_nodejs">
 <a href="#linkingauthcode_nodejs" style="color: inherit; text-decoration: inherit;">linking<wbr>Auth<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The auth code used to linking to an existing datadog organization.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="linkingclientid_nodejs">
 <a href="#linkingclientid_nodejs" style="color: inherit; text-decoration: inherit;">linking<wbr>Client<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client_id from an existing in exchange for an auth token to link organization.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -881,46 +808,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="enterprise_app_id_python">
 <a href="#enterprise_app_id_python" style="color: inherit; text-decoration: inherit;">enterprise_<wbr>app_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Id of the Enterprise App used for Single sign on.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="linking_auth_code_python">
 <a href="#linking_auth_code_python" style="color: inherit; text-decoration: inherit;">linking_<wbr>auth_<wbr>code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The auth code used to linking to an existing datadog organization.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="linking_client_id_python">
 <a href="#linking_client_id_python" style="color: inherit; text-decoration: inherit;">linking_<wbr>client_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client_id from an existing in exchange for an auth token to link organization.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="datadogorganizationpropertiesresponse">Datadog<wbr>Organization<wbr>Properties<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -929,55 +843,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the Datadog organization.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Datadog organization.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enterpriseappid_csharp">
 <a href="#enterpriseappid_csharp" style="color: inherit; text-decoration: inherit;">Enterprise<wbr>App<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of the Enterprise App used for Single sign on.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="linkingauthcode_csharp">
 <a href="#linkingauthcode_csharp" style="color: inherit; text-decoration: inherit;">Linking<wbr>Auth<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The auth code used to linking to an existing datadog organization.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="linkingclientid_csharp">
 <a href="#linkingclientid_csharp" style="color: inherit; text-decoration: inherit;">Linking<wbr>Client<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client_id from an existing in exchange for an auth token to link organization.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -986,55 +894,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the Datadog organization.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Datadog organization.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enterpriseappid_go">
 <a href="#enterpriseappid_go" style="color: inherit; text-decoration: inherit;">Enterprise<wbr>App<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of the Enterprise App used for Single sign on.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="linkingauthcode_go">
 <a href="#linkingauthcode_go" style="color: inherit; text-decoration: inherit;">Linking<wbr>Auth<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The auth code used to linking to an existing datadog organization.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="linkingclientid_go">
 <a href="#linkingclientid_go" style="color: inherit; text-decoration: inherit;">Linking<wbr>Client<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client_id from an existing in exchange for an auth token to link organization.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1043,55 +945,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the Datadog organization.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Datadog organization.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enterpriseappid_nodejs">
 <a href="#enterpriseappid_nodejs" style="color: inherit; text-decoration: inherit;">enterprise<wbr>App<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of the Enterprise App used for Single sign on.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="linkingauthcode_nodejs">
 <a href="#linkingauthcode_nodejs" style="color: inherit; text-decoration: inherit;">linking<wbr>Auth<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The auth code used to linking to an existing datadog organization.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="linkingclientid_nodejs">
 <a href="#linkingclientid_nodejs" style="color: inherit; text-decoration: inherit;">linking<wbr>Client<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client_id from an existing in exchange for an auth token to link organization.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1100,66 +996,51 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Id of the Datadog organization.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Datadog organization.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enterprise_app_id_python">
 <a href="#enterprise_app_id_python" style="color: inherit; text-decoration: inherit;">enterprise_<wbr>app_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Id of the Enterprise App used for Single sign on.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="linking_auth_code_python">
 <a href="#linking_auth_code_python" style="color: inherit; text-decoration: inherit;">linking_<wbr>auth_<wbr>code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The auth code used to linking to an existing datadog organization.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="linking_client_id_python">
 <a href="#linking_client_id_python" style="color: inherit; text-decoration: inherit;">linking_<wbr>client_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client_id from an existing in exchange for an auth token to link organization.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="identityproperties">Identity<wbr>Properties</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1168,15 +1049,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Datadog.<wbr>Managed<wbr>Identity<wbr>Types</span>
+        <span class="property-type">string | <a href="#managedidentitytypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Datadog.<wbr>Managed<wbr>Identity<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Identity type{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1185,15 +1064,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#managedidentitytypes">Managed<wbr>Identity<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Identity type{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1202,15 +1079,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Managed<wbr>Identity<wbr>Types</span>
+        <span class="property-type">string | <a href="#managedidentitytypes">Managed<wbr>Identity<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Identity type{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1219,26 +1094,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Managed<wbr>Identity<wbr>Types</span>
+        <span class="property-type">str | <a href="#managedidentitytypes">Managed<wbr>Identity<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Identity type{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="identitypropertiesresponse">Identity<wbr>Properties<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1247,35 +1111,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity ID.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identity type{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1284,35 +1144,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity ID.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identity type{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1321,35 +1177,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity ID.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identity type{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1358,46 +1210,71 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identity ID.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identity type{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="managedidentitytypes">Managed<wbr>Identity<wbr>Types</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>System<wbr>Assigned</dt>
+    <dd>SystemAssigned</dd>
+    <dt>User<wbr>Assigned</dt>
+    <dd>UserAssigned</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Managed<wbr>Identity<wbr>Types<wbr>System<wbr>Assigned</dt>
+    <dd>SystemAssigned</dd>
+    <dt>Managed<wbr>Identity<wbr>Types<wbr>User<wbr>Assigned</dt>
+    <dd>UserAssigned</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>System<wbr>Assigned</dt>
+    <dd>SystemAssigned</dd>
+    <dt>User<wbr>Assigned</dt>
+    <dd>UserAssigned</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>SYSTEM_ASSIGNED</dt>
+    <dd>SystemAssigned</dd>
+    <dt>USER_ASSIGNED</dt>
+    <dd>UserAssigned</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="monitorproperties">Monitor<wbr>Properties</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1406,35 +1283,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="datadogorganizationproperties_csharp">
 <a href="#datadogorganizationproperties_csharp" style="color: inherit; text-decoration: inherit;">Datadog<wbr>Organization<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadogorganizationproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Datadog.<wbr>Inputs.<wbr>Datadog<wbr>Organization<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Datadog organization properties{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Datadog.<wbr>Provisioning<wbr>State</span>
+        <span class="property-type">string | <a href="#provisioningstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Datadog.<wbr>Provisioning<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userinfo_csharp">
 <a href="#userinfo_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Datadog.<wbr>Inputs.<wbr>User<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}User info{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1443,35 +1316,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="datadogorganizationproperties_go">
 <a href="#datadogorganizationproperties_go" style="color: inherit; text-decoration: inherit;">Datadog<wbr>Organization<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadogorganizationproperties">Datadog<wbr>Organization<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Datadog organization properties{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#provisioningstate">Provisioning<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userinfo_go">
 <a href="#userinfo_go" style="color: inherit; text-decoration: inherit;">User<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinfo">User<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}User info{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1480,35 +1349,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="datadogorganizationproperties_nodejs">
 <a href="#datadogorganizationproperties_nodejs" style="color: inherit; text-decoration: inherit;">datadog<wbr>Organization<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadogorganizationproperties">Datadog<wbr>Organization<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Datadog organization properties{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Provisioning<wbr>State</span>
+        <span class="property-type">string | <a href="#provisioningstate">Provisioning<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userinfo_nodejs">
 <a href="#userinfo_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinfo">User<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}User info{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1517,46 +1382,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="datadog_organization_properties_python">
 <a href="#datadog_organization_properties_python" style="color: inherit; text-decoration: inherit;">datadog_<wbr>organization_<wbr>properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadogorganizationproperties">Datadog<wbr>Organization<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Datadog organization properties{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Provisioning<wbr>State</span>
+        <span class="property-type">str | <a href="#provisioningstate">Provisioning<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="user_info_python">
 <a href="#user_info_python" style="color: inherit; text-decoration: inherit;">user_<wbr>info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinfo">User<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}User info{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="monitorpropertiesresponse">Monitor<wbr>Properties<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1565,75 +1417,67 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="liftrresourcecategory_csharp">
 <a href="#liftrresourcecategory_csharp" style="color: inherit; text-decoration: inherit;">Liftr<wbr>Resource<wbr>Category</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="liftrresourcepreference_csharp">
 <a href="#liftrresourcepreference_csharp" style="color: inherit; text-decoration: inherit;">Liftr<wbr>Resource<wbr>Preference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of the resource.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="marketplacesubscriptionstatus_csharp">
 <a href="#marketplacesubscriptionstatus_csharp" style="color: inherit; text-decoration: inherit;">Marketplace<wbr>Subscription<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="monitoringstatus_csharp">
 <a href="#monitoringstatus_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flag specifying if the resource monitoring is enabled or disabled.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datadogorganizationproperties_csharp">
 <a href="#datadogorganizationproperties_csharp" style="color: inherit; text-decoration: inherit;">Datadog<wbr>Organization<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadogorganizationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Datadog.<wbr>Inputs.<wbr>Datadog<wbr>Organization<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Datadog organization properties{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userinfo_csharp">
 <a href="#userinfo_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Datadog.<wbr>Inputs.<wbr>User<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}User info{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1642,75 +1486,67 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="liftrresourcecategory_go">
 <a href="#liftrresourcecategory_go" style="color: inherit; text-decoration: inherit;">Liftr<wbr>Resource<wbr>Category</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="liftrresourcepreference_go">
 <a href="#liftrresourcepreference_go" style="color: inherit; text-decoration: inherit;">Liftr<wbr>Resource<wbr>Preference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of the resource.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="marketplacesubscriptionstatus_go">
 <a href="#marketplacesubscriptionstatus_go" style="color: inherit; text-decoration: inherit;">Marketplace<wbr>Subscription<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="monitoringstatus_go">
 <a href="#monitoringstatus_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flag specifying if the resource monitoring is enabled or disabled.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datadogorganizationproperties_go">
 <a href="#datadogorganizationproperties_go" style="color: inherit; text-decoration: inherit;">Datadog<wbr>Organization<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadogorganizationpropertiesresponse">Datadog<wbr>Organization<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Datadog organization properties{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userinfo_go">
 <a href="#userinfo_go" style="color: inherit; text-decoration: inherit;">User<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}User info{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1719,75 +1555,67 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="liftrresourcecategory_nodejs">
 <a href="#liftrresourcecategory_nodejs" style="color: inherit; text-decoration: inherit;">liftr<wbr>Resource<wbr>Category</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="liftrresourcepreference_nodejs">
 <a href="#liftrresourcepreference_nodejs" style="color: inherit; text-decoration: inherit;">liftr<wbr>Resource<wbr>Preference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The priority of the resource.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="marketplacesubscriptionstatus_nodejs">
 <a href="#marketplacesubscriptionstatus_nodejs" style="color: inherit; text-decoration: inherit;">marketplace<wbr>Subscription<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="monitoringstatus_nodejs">
 <a href="#monitoringstatus_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Flag specifying if the resource monitoring is enabled or disabled.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datadogorganizationproperties_nodejs">
 <a href="#datadogorganizationproperties_nodejs" style="color: inherit; text-decoration: inherit;">datadog<wbr>Organization<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadogorganizationpropertiesresponse">Datadog<wbr>Organization<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Datadog organization properties{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userinfo_nodejs">
 <a href="#userinfo_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}User info{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1796,87 +1624,164 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="liftr_resource_category_python">
 <a href="#liftr_resource_category_python" style="color: inherit; text-decoration: inherit;">liftr_<wbr>resource_<wbr>category</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="liftr_resource_preference_python">
 <a href="#liftr_resource_preference_python" style="color: inherit; text-decoration: inherit;">liftr_<wbr>resource_<wbr>preference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of the resource.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="marketplace_subscription_status_python">
 <a href="#marketplace_subscription_status_python" style="color: inherit; text-decoration: inherit;">marketplace_<wbr>subscription_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="monitoring_status_python">
 <a href="#monitoring_status_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Flag specifying if the resource monitoring is enabled or disabled.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datadog_organization_properties_python">
 <a href="#datadog_organization_properties_python" style="color: inherit; text-decoration: inherit;">datadog_<wbr>organization_<wbr>properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadogorganizationpropertiesresponse">Datadog<wbr>Organization<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Datadog organization properties{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="user_info_python">
 <a href="#user_info_python" style="color: inherit; text-decoration: inherit;">user_<wbr>info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}User info{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="provisioningstate">Provisioning<wbr>State</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Accepted</dt>
+    <dd>Accepted</dd>
+    <dt>Creating</dt>
+    <dd>Creating</dd>
+    <dt>Updating</dt>
+    <dd>Updating</dd>
+    <dt>Deleting</dt>
+    <dd>Deleting</dd>
+    <dt>Succeeded</dt>
+    <dd>Succeeded</dd>
+    <dt>Failed</dt>
+    <dd>Failed</dd>
+    <dt>Canceled</dt>
+    <dd>Canceled</dd>
+    <dt>Deleted</dt>
+    <dd>Deleted</dd>
+    <dt>Not<wbr>Specified</dt>
+    <dd>NotSpecified</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Provisioning<wbr>State<wbr>Accepted</dt>
+    <dd>Accepted</dd>
+    <dt>Provisioning<wbr>State<wbr>Creating</dt>
+    <dd>Creating</dd>
+    <dt>Provisioning<wbr>State<wbr>Updating</dt>
+    <dd>Updating</dd>
+    <dt>Provisioning<wbr>State<wbr>Deleting</dt>
+    <dd>Deleting</dd>
+    <dt>Provisioning<wbr>State<wbr>Succeeded</dt>
+    <dd>Succeeded</dd>
+    <dt>Provisioning<wbr>State<wbr>Failed</dt>
+    <dd>Failed</dd>
+    <dt>Provisioning<wbr>State<wbr>Canceled</dt>
+    <dd>Canceled</dd>
+    <dt>Provisioning<wbr>State<wbr>Deleted</dt>
+    <dd>Deleted</dd>
+    <dt>Provisioning<wbr>State<wbr>Not<wbr>Specified</dt>
+    <dd>NotSpecified</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Accepted</dt>
+    <dd>Accepted</dd>
+    <dt>Creating</dt>
+    <dd>Creating</dd>
+    <dt>Updating</dt>
+    <dd>Updating</dd>
+    <dt>Deleting</dt>
+    <dd>Deleting</dd>
+    <dt>Succeeded</dt>
+    <dd>Succeeded</dd>
+    <dt>Failed</dt>
+    <dd>Failed</dd>
+    <dt>Canceled</dt>
+    <dd>Canceled</dd>
+    <dt>Deleted</dt>
+    <dd>Deleted</dd>
+    <dt>Not<wbr>Specified</dt>
+    <dd>NotSpecified</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>ACCEPTED</dt>
+    <dd>Accepted</dd>
+    <dt>CREATING</dt>
+    <dd>Creating</dd>
+    <dt>UPDATING</dt>
+    <dd>Updating</dd>
+    <dt>DELETING</dt>
+    <dd>Deleting</dd>
+    <dt>SUCCEEDED</dt>
+    <dd>Succeeded</dd>
+    <dt>FAILED</dt>
+    <dd>Failed</dd>
+    <dt>CANCELED</dt>
+    <dd>Canceled</dd>
+    <dt>DELETED</dt>
+    <dd>Deleted</dd>
+    <dt>NOT_SPECIFIED</dt>
+    <dd>NotSpecified</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="resourcesku">Resource<wbr>Sku</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1884,15 +1789,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SKU.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1901,15 +1804,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SKU.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1918,15 +1819,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SKU.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1935,27 +1834,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the SKU.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="resourceskuresponse">Resource<wbr>Sku<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1963,15 +1851,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SKU.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1980,15 +1866,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SKU.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1997,15 +1881,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SKU.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2014,27 +1896,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the SKU.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="userinfo">User<wbr>Info</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2042,35 +1913,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="emailaddress_csharp">
 <a href="#emailaddress_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email of the user used by Datadog for contacting them if needed{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the user{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="phonenumber_csharp">
 <a href="#phonenumber_csharp" style="color: inherit; text-decoration: inherit;">Phone<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Phone number of the user used by Datadog for contacting them if needed{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2079,35 +1946,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="emailaddress_go">
 <a href="#emailaddress_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email of the user used by Datadog for contacting them if needed{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the user{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="phonenumber_go">
 <a href="#phonenumber_go" style="color: inherit; text-decoration: inherit;">Phone<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Phone number of the user used by Datadog for contacting them if needed{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2116,35 +1979,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="emailaddress_nodejs">
 <a href="#emailaddress_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email of the user used by Datadog for contacting them if needed{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the user{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="phonenumber_nodejs">
 <a href="#phonenumber_nodejs" style="color: inherit; text-decoration: inherit;">phone<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Phone number of the user used by Datadog for contacting them if needed{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2153,47 +2012,34 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="email_address_python">
 <a href="#email_address_python" style="color: inherit; text-decoration: inherit;">email_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Email of the user used by Datadog for contacting them if needed{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the user{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="phone_number_python">
 <a href="#phone_number_python" style="color: inherit; text-decoration: inherit;">phone_<wbr>number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Phone number of the user used by Datadog for contacting them if needed{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="userinforesponse">User<wbr>Info<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2201,35 +2047,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="emailaddress_csharp">
 <a href="#emailaddress_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email of the user used by Datadog for contacting them if needed{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the user{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="phonenumber_csharp">
 <a href="#phonenumber_csharp" style="color: inherit; text-decoration: inherit;">Phone<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Phone number of the user used by Datadog for contacting them if needed{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2238,35 +2080,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="emailaddress_go">
 <a href="#emailaddress_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email of the user used by Datadog for contacting them if needed{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the user{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="phonenumber_go">
 <a href="#phonenumber_go" style="color: inherit; text-decoration: inherit;">Phone<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Phone number of the user used by Datadog for contacting them if needed{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2275,35 +2113,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="emailaddress_nodejs">
 <a href="#emailaddress_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email of the user used by Datadog for contacting them if needed{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the user{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="phonenumber_nodejs">
 <a href="#phonenumber_nodejs" style="color: inherit; text-decoration: inherit;">phone<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Phone number of the user used by Datadog for contacting them if needed{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2312,43 +2146,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="email_address_python">
 <a href="#email_address_python" style="color: inherit; text-decoration: inherit;">email_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Email of the user used by Datadog for contacting them if needed{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the user{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="phone_number_python">
 <a href="#phone_number_python" style="color: inherit; text-decoration: inherit;">phone_<wbr>number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Phone number of the user used by Datadog for contacting them if needed{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 
 
 <h2 id="package-details">Package Details</h2>

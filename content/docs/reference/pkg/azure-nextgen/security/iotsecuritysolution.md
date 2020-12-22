@@ -2,7 +2,7 @@
 ---
 title: "IotSecuritySolution"
 title_tag: "azure-nextgen.security.IotSecuritySolution"
-meta_desc: "Explore the IotSecuritySolution resource of the security module, including examples, input properties, output properties, lookup functions, and supporting types. IoT Security solution configuration and resource information."
+meta_desc: "Documentation for the azure-nextgen.security.IotSecuritySolution resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -11,6 +11,7 @@ meta_desc: "Explore the IotSecuritySolution resource of the security module, inc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 IoT Security solution configuration and resource information.
+Latest API Version: 2019-08-01.
 
 
 {{% examples %}}
@@ -210,7 +211,7 @@ const iotSecuritySolution = new azure_nextgen.security.latest.IotSecuritySolutio
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IotSecuritySolution</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">IotSecuritySolutionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IotSecuritySolution</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">IotSecuritySolutionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -218,11 +219,11 @@ const iotSecuritySolution = new azure_nextgen.security.latest.IotSecuritySolutio
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIotSecuritySolution</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">IotSecuritySolutionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IotSecuritySolution</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIotSecuritySolution</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">IotSecuritySolutionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IotSecuritySolution</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IotSecuritySolution</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">IotSecuritySolutionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IotSecuritySolution</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">IotSecuritySolutionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -233,7 +234,7 @@ const iotSecuritySolution = new azure_nextgen.security.latest.IotSecuritySolutio
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -302,7 +303,7 @@ const iotSecuritySolution = new azure_nextgen.security.latest.IotSecuritySolutio
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -341,7 +342,7 @@ const iotSecuritySolution = new azure_nextgen.security.latest.IotSecuritySolutio
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -382,7 +383,6 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -390,135 +390,121 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource display name.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="iothubs_csharp">
 <a href="#iothubs_csharp" style="color: inherit; text-decoration: inherit;">Iot<wbr>Hubs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}IoT Hub resource IDs{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="solutionname_csharp">
 <a href="#solutionname_csharp" style="color: inherit; text-decoration: inherit;">Solution<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the IoT Security solution.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disableddatasources_csharp">
 <a href="#disableddatasources_csharp" style="color: inherit; text-decoration: inherit;">Disabled<wbr>Data<wbr>Sources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Data<wbr>Source&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Disabled data sources. Disabling these data sources compromises the system.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="export_csharp">
 <a href="#export_csharp" style="color: inherit; text-decoration: inherit;">Export</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Export<wbr>Data&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}List of additional options for exporting to workspace data.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource location.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recommendationsconfiguration_csharp">
 <a href="#recommendationsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Recommendations<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recommendationconfigurationproperties">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Recommendation<wbr>Configuration<wbr>Properties<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of the configuration status for each recommendation type.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Security<wbr>Solution<wbr>Status</span>
+        <span class="property-type">string | <a href="#securitysolutionstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Security<wbr>Solution<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Status of the IoT Security solution.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unmaskediploggingstatus_csharp">
 <a href="#unmaskediploggingstatus_csharp" style="color: inherit; text-decoration: inherit;">Unmasked<wbr>Ip<wbr>Logging<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Unmasked<wbr>Ip<wbr>Logging<wbr>Status</span>
+        <span class="property-type">string | <a href="#unmaskediploggingstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Unmasked<wbr>Ip<wbr>Logging<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Unmasked IP address logging status{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userdefinedresources_csharp">
 <a href="#userdefinedresources_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Defined<wbr>Resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userdefinedresourcesproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>User<wbr>Defined<wbr>Resources<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the IoT Security solution's user defined resources.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workspace_csharp">
 <a href="#workspace_csharp" style="color: inherit; text-decoration: inherit;">Workspace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Workspace resource ID{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -527,135 +513,121 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource display name.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="iothubs_go">
 <a href="#iothubs_go" style="color: inherit; text-decoration: inherit;">Iot<wbr>Hubs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}IoT Hub resource IDs{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="solutionname_go">
 <a href="#solutionname_go" style="color: inherit; text-decoration: inherit;">Solution<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the IoT Security solution.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disableddatasources_go">
 <a href="#disableddatasources_go" style="color: inherit; text-decoration: inherit;">Disabled<wbr>Data<wbr>Sources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Disabled data sources. Disabling these data sources compromises the system.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="export_go">
 <a href="#export_go" style="color: inherit; text-decoration: inherit;">Export</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of additional options for exporting to workspace data.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource location.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recommendationsconfiguration_go">
 <a href="#recommendationsconfiguration_go" style="color: inherit; text-decoration: inherit;">Recommendations<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recommendationconfigurationproperties">[]Recommendation<wbr>Configuration<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}List of the configuration status for each recommendation type.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#securitysolutionstatus">Security<wbr>Solution<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Status of the IoT Security solution.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unmaskediploggingstatus_go">
 <a href="#unmaskediploggingstatus_go" style="color: inherit; text-decoration: inherit;">Unmasked<wbr>Ip<wbr>Logging<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#unmaskediploggingstatus">Unmasked<wbr>Ip<wbr>Logging<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Unmasked IP address logging status{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userdefinedresources_go">
 <a href="#userdefinedresources_go" style="color: inherit; text-decoration: inherit;">User<wbr>Defined<wbr>Resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userdefinedresourcesproperties">User<wbr>Defined<wbr>Resources<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Properties of the IoT Security solution's user defined resources.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workspace_go">
 <a href="#workspace_go" style="color: inherit; text-decoration: inherit;">Workspace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Workspace resource ID{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -664,135 +636,121 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource display name.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="iothubs_nodejs">
 <a href="#iothubs_nodejs" style="color: inherit; text-decoration: inherit;">iot<wbr>Hubs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}IoT Hub resource IDs{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="solutionname_nodejs">
 <a href="#solutionname_nodejs" style="color: inherit; text-decoration: inherit;">solution<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the IoT Security solution.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disableddatasources_nodejs">
 <a href="#disableddatasources_nodejs" style="color: inherit; text-decoration: inherit;">disabled<wbr>Data<wbr>Sources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | enums.<wbr>Data<wbr>Source[]</span>
+        <span class="property-type">string | Data<wbr>Source[]</span>
     </dt>
     <dd>{{% md %}}Disabled data sources. Disabling these data sources compromises the system.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="export_nodejs">
 <a href="#export_nodejs" style="color: inherit; text-decoration: inherit;">export</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | enums.<wbr>Export<wbr>Data[]</span>
+        <span class="property-type">string | Export<wbr>Data[]</span>
     </dt>
     <dd>{{% md %}}List of additional options for exporting to workspace data.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource location.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recommendationsconfiguration_nodejs">
 <a href="#recommendationsconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">recommendations<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recommendationconfigurationproperties">Recommendation<wbr>Configuration<wbr>Properties[]</a></span>
     </dt>
     <dd>{{% md %}}List of the configuration status for each recommendation type.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Security<wbr>Solution<wbr>Status</span>
+        <span class="property-type">string | <a href="#securitysolutionstatus">Security<wbr>Solution<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Status of the IoT Security solution.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unmaskediploggingstatus_nodejs">
 <a href="#unmaskediploggingstatus_nodejs" style="color: inherit; text-decoration: inherit;">unmasked<wbr>Ip<wbr>Logging<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Unmasked<wbr>Ip<wbr>Logging<wbr>Status</span>
+        <span class="property-type">string | <a href="#unmaskediploggingstatus">Unmasked<wbr>Ip<wbr>Logging<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Unmasked IP address logging status{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userdefinedresources_nodejs">
 <a href="#userdefinedresources_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Defined<wbr>Resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userdefinedresourcesproperties">User<wbr>Defined<wbr>Resources<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Properties of the IoT Security solution's user defined resources.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workspace_nodejs">
 <a href="#workspace_nodejs" style="color: inherit; text-decoration: inherit;">workspace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Workspace resource ID{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -801,144 +759,126 @@ The IotSecuritySolution resource accepts the following [input]({{< relref "/docs
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource display name.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="iot_hubs_python">
 <a href="#iot_hubs_python" style="color: inherit; text-decoration: inherit;">iot_<wbr>hubs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}IoT Hub resource IDs{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="solution_name_python">
 <a href="#solution_name_python" style="color: inherit; text-decoration: inherit;">solution_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the IoT Security solution.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disabled_data_sources_python">
 <a href="#disabled_data_sources_python" style="color: inherit; text-decoration: inherit;">disabled_<wbr>data_<wbr>sources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[str, Data<wbr>Source]]</span>
     </dt>
     <dd>{{% md %}}Disabled data sources. Disabling these data sources compromises the system.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="export_python">
 <a href="#export_python" style="color: inherit; text-decoration: inherit;">export</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[str, Export<wbr>Data]]</span>
     </dt>
     <dd>{{% md %}}List of additional options for exporting to workspace data.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource location.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recommendations_configuration_python">
 <a href="#recommendations_configuration_python" style="color: inherit; text-decoration: inherit;">recommendations_<wbr>configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#recommendationconfigurationproperties">Sequence[Recommendation<wbr>Configuration<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of the configuration status for each recommendation type.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Security<wbr>Solution<wbr>Status</span>
+        <span class="property-type">str | <a href="#securitysolutionstatus">Security<wbr>Solution<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Status of the IoT Security solution.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unmasked_ip_logging_status_python">
 <a href="#unmasked_ip_logging_status_python" style="color: inherit; text-decoration: inherit;">unmasked_<wbr>ip_<wbr>logging_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Unmasked<wbr>Ip<wbr>Logging<wbr>Status</span>
+        <span class="property-type">str | <a href="#unmaskediploggingstatus">Unmasked<wbr>Ip<wbr>Logging<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Unmasked IP address logging status{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="user_defined_resources_python">
 <a href="#user_defined_resources_python" style="color: inherit; text-decoration: inherit;">user_<wbr>defined_<wbr>resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userdefinedresourcesproperties">User<wbr>Defined<wbr>Resources<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the IoT Security solution's user defined resources.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workspace_python">
 <a href="#workspace_python" style="color: inherit; text-decoration: inherit;">workspace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Workspace resource ID{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the IotSecuritySolution resource produces the following output properties:
-
 
 
 
@@ -949,45 +889,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="autodiscoveredresources_csharp">
 <a href="#autodiscoveredresources_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Discovered<wbr>Resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of resources that were automatically discovered as relevant to the security solution.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -996,45 +931,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="autodiscoveredresources_go">
 <a href="#autodiscoveredresources_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Discovered<wbr>Resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of resources that were automatically discovered as relevant to the security solution.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1043,45 +973,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="autodiscoveredresources_nodejs">
 <a href="#autodiscoveredresources_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Discovered<wbr>Resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of resources that were automatically discovered as relevant to the security solution.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1090,48 +1015,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="auto_discovered_resources_python">
 <a href="#auto_discovered_resources_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>discovered_<wbr>resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of resources that were automatically discovered as relevant to the security solution.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1142,13 +1059,106 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="datasource">Data<wbr>Source</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Twin<wbr>Data</dt>
+    <dd>TwinData{{% md %}}Devices twin data{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Data<wbr>Source<wbr>Twin<wbr>Data</dt>
+    <dd>TwinData{{% md %}}Devices twin data{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Twin<wbr>Data</dt>
+    <dd>TwinData{{% md %}}Devices twin data{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>TWIN_DATA</dt>
+    <dd>TwinData{{% md %}}Devices twin data{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="exportdata">Export<wbr>Data</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Raw<wbr>Events</dt>
+    <dd>RawEvents{{% md %}}Agent raw events{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Export<wbr>Data<wbr>Raw<wbr>Events</dt>
+    <dd>RawEvents{{% md %}}Agent raw events{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Raw<wbr>Events</dt>
+    <dd>RawEvents{{% md %}}Agent raw events{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>RAW_EVENTS</dt>
+    <dd>RawEvents{{% md %}}Agent raw events{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="recommendationconfigstatus">Recommendation<wbr>Config<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Disabled</dt>
+    <dd>Disabled</dd>
+    <dt>Enabled</dt>
+    <dd>Enabled</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Recommendation<wbr>Config<wbr>Status<wbr>Disabled</dt>
+    <dd>Disabled</dd>
+    <dt>Recommendation<wbr>Config<wbr>Status<wbr>Enabled</dt>
+    <dd>Enabled</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Disabled</dt>
+    <dd>Disabled</dd>
+    <dt>Enabled</dt>
+    <dd>Enabled</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>DISABLED</dt>
+    <dd>Disabled</dd>
+    <dt>ENABLED</dt>
+    <dd>Enabled</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="recommendationconfigurationproperties">Recommendation<wbr>Configuration<wbr>Properties</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1157,25 +1167,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="recommendationtype_csharp">
 <a href="#recommendationtype_csharp" style="color: inherit; text-decoration: inherit;">Recommendation<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Recommendation<wbr>Type</span>
+        <span class="property-type">string | <a href="#recommendationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Recommendation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of IoT Security recommendation.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Recommendation<wbr>Config<wbr>Status</span>
+        <span class="property-type">string | <a href="#recommendationconfigstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Recommendation<wbr>Config<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Recommendation status. When the recommendation status is disabled recommendations are not generated.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1184,25 +1191,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="recommendationtype_go">
 <a href="#recommendationtype_go" style="color: inherit; text-decoration: inherit;">Recommendation<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#recommendationtype">Recommendation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of IoT Security recommendation.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#recommendationconfigstatus">Recommendation<wbr>Config<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Recommendation status. When the recommendation status is disabled recommendations are not generated.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1211,25 +1215,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="recommendationtype_nodejs">
 <a href="#recommendationtype_nodejs" style="color: inherit; text-decoration: inherit;">recommendation<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Recommendation<wbr>Type</span>
+        <span class="property-type">string | <a href="#recommendationtype">Recommendation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of IoT Security recommendation.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Recommendation<wbr>Config<wbr>Status</span>
+        <span class="property-type">string | <a href="#recommendationconfigstatus">Recommendation<wbr>Config<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Recommendation status. When the recommendation status is disabled recommendations are not generated.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1238,36 +1239,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="recommendation_type_python">
 <a href="#recommendation_type_python" style="color: inherit; text-decoration: inherit;">recommendation_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Recommendation<wbr>Type</span>
+        <span class="property-type">str | <a href="#recommendationtype">Recommendation<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of IoT Security recommendation.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Recommendation<wbr>Config<wbr>Status</span>
+        <span class="property-type">str | <a href="#recommendationconfigstatus">Recommendation<wbr>Config<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Recommendation status. When the recommendation status is disabled recommendations are not generated.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="recommendationconfigurationpropertiesresponse">Recommendation<wbr>Configuration<wbr>Properties<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1276,35 +1265,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="recommendationtype_csharp">
 <a href="#recommendationtype_csharp" style="color: inherit; text-decoration: inherit;">Recommendation<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of IoT Security recommendation.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Recommendation status. When the recommendation status is disabled recommendations are not generated.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1313,35 +1298,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="recommendationtype_go">
 <a href="#recommendationtype_go" style="color: inherit; text-decoration: inherit;">Recommendation<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of IoT Security recommendation.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Recommendation status. When the recommendation status is disabled recommendations are not generated.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1350,35 +1331,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="recommendationtype_nodejs">
 <a href="#recommendationtype_nodejs" style="color: inherit; text-decoration: inherit;">recommendation<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of IoT Security recommendation.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Recommendation status. When the recommendation status is disabled recommendations are not generated.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1387,47 +1364,260 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="recommendation_type_python">
 <a href="#recommendation_type_python" style="color: inherit; text-decoration: inherit;">recommendation_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of IoT Security recommendation.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Recommendation status. When the recommendation status is disabled recommendations are not generated.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="recommendationtype">Recommendation<wbr>Type</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Io<wbr>T_ACRAuthentication</dt>
+    <dd>IoT_ACRAuthentication{{% md %}}Authentication schema used for pull an edge module from an ACR repository does not use Service Principal Authentication.{{% /md %}}</dd>
+    <dt>Io<wbr>T_Agent<wbr>Sends<wbr>Unutilized<wbr>Messages</dt>
+    <dd>IoT_AgentSendsUnutilizedMessages{{% md %}}IoT agent message size capacity is currently underutilized, causing an increase in the number of sent messages. Adjust message intervals for better utilization.{{% /md %}}</dd>
+    <dt>Io<wbr>T_Baseline</dt>
+    <dd>IoT_Baseline{{% md %}}Identified security related system configuration issues.{{% /md %}}</dd>
+    <dt>Io<wbr>T_Edge<wbr>Hub<wbr>Mem<wbr>Optimize</dt>
+    <dd>IoT_EdgeHubMemOptimize{{% md %}}You can optimize Edge Hub memory usage by turning off protocol heads for any protocols not used by Edge modules in your solution.{{% /md %}}</dd>
+    <dt>Io<wbr>T_Edge<wbr>Logging<wbr>Options</dt>
+    <dd>IoT_EdgeLoggingOptions{{% md %}}Logging is disabled for this edge module.{{% /md %}}</dd>
+    <dt>Io<wbr>T_Inconsistent<wbr>Module<wbr>Settings</dt>
+    <dd>IoT_InconsistentModuleSettings{{% md %}}A minority within a device security group has inconsistent Edge Module settings with the rest of their group.{{% /md %}}</dd>
+    <dt>Io<wbr>T_Install<wbr>Agent</dt>
+    <dd>IoT_InstallAgent{{% md %}}Install the Azure Security of Things Agent.{{% /md %}}</dd>
+    <dt>Io<wbr>T_IPFilter_Deny<wbr>All</dt>
+    <dd>IoT_IPFilter_DenyAll{{% md %}}IP Filter Configuration should have rules defined for allowed traffic and should deny all other traffic by default.{{% /md %}}</dd>
+    <dt>Io<wbr>T_IPFilter_Permissive<wbr>Rule</dt>
+    <dd>IoT_IPFilter_PermissiveRule{{% md %}}An Allow IP Filter rules source IP range is too large. Overly permissive rules might expose your IoT hub to malicious intenders.{{% /md %}}</dd>
+    <dt>Io<wbr>T_Open<wbr>Ports</dt>
+    <dd>IoT_OpenPorts{{% md %}}A listening endpoint was found on the device.{{% /md %}}</dd>
+    <dt>Io<wbr>T_Permissive<wbr>Firewall<wbr>Policy</dt>
+    <dd>IoT_PermissiveFirewallPolicy{{% md %}}An Allowed firewall policy was found (INPUT/OUTPUT). The policy should Deny all traffic by default and define rules to allow necessary communication to/from the device.{{% /md %}}</dd>
+    <dt>Io<wbr>T_Permissive<wbr>Input<wbr>Firewall<wbr>Rules</dt>
+    <dd>IoT_PermissiveInputFirewallRules{{% md %}}A rule in the firewall has been found that contains a permissive pattern for a wide range of IP addresses or Ports.{{% /md %}}</dd>
+    <dt>Io<wbr>T_Permissive<wbr>Output<wbr>Firewall<wbr>Rules</dt>
+    <dd>IoT_PermissiveOutputFirewallRules{{% md %}}A rule in the firewall has been found that contains a permissive pattern for a wide range of IP addresses or Ports.{{% /md %}}</dd>
+    <dt>Io<wbr>T_Privileged<wbr>Docker<wbr>Options</dt>
+    <dd>IoT_PrivilegedDockerOptions{{% md %}}Edge module is configured to run in privileged mode, with extensive Linux capabilities or with host-level network access (send/receive data to host machine).{{% /md %}}</dd>
+    <dt>Io<wbr>T_Shared<wbr>Credentials</dt>
+    <dd>IoT_SharedCredentials{{% md %}}Same authentication credentials to the IoT Hub used by multiple devices. This could indicate an illegitimate device impersonating a legitimate device. It also exposes the risk of device impersonation by an attacker.{{% /md %}}</dd>
+    <dt>Io<wbr>T_Vulnerable<wbr>TLSCipher<wbr>Suite</dt>
+    <dd>IoT_VulnerableTLSCipherSuite{{% md %}}Insecure TLS configurations detected. Immediate upgrade recommended.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Recommendation<wbr>Type_Io<wbr>T_ACRAuthentication</dt>
+    <dd>IoT_ACRAuthentication{{% md %}}Authentication schema used for pull an edge module from an ACR repository does not use Service Principal Authentication.{{% /md %}}</dd>
+    <dt>Recommendation<wbr>Type_Io<wbr>T_Agent<wbr>Sends<wbr>Unutilized<wbr>Messages</dt>
+    <dd>IoT_AgentSendsUnutilizedMessages{{% md %}}IoT agent message size capacity is currently underutilized, causing an increase in the number of sent messages. Adjust message intervals for better utilization.{{% /md %}}</dd>
+    <dt>Recommendation<wbr>Type_Io<wbr>T_Baseline</dt>
+    <dd>IoT_Baseline{{% md %}}Identified security related system configuration issues.{{% /md %}}</dd>
+    <dt>Recommendation<wbr>Type_Io<wbr>T_Edge<wbr>Hub<wbr>Mem<wbr>Optimize</dt>
+    <dd>IoT_EdgeHubMemOptimize{{% md %}}You can optimize Edge Hub memory usage by turning off protocol heads for any protocols not used by Edge modules in your solution.{{% /md %}}</dd>
+    <dt>Recommendation<wbr>Type_Io<wbr>T_Edge<wbr>Logging<wbr>Options</dt>
+    <dd>IoT_EdgeLoggingOptions{{% md %}}Logging is disabled for this edge module.{{% /md %}}</dd>
+    <dt>Recommendation<wbr>Type_Io<wbr>T_Inconsistent<wbr>Module<wbr>Settings</dt>
+    <dd>IoT_InconsistentModuleSettings{{% md %}}A minority within a device security group has inconsistent Edge Module settings with the rest of their group.{{% /md %}}</dd>
+    <dt>Recommendation<wbr>Type_Io<wbr>T_Install<wbr>Agent</dt>
+    <dd>IoT_InstallAgent{{% md %}}Install the Azure Security of Things Agent.{{% /md %}}</dd>
+    <dt>Recommendation<wbr>Type_Io<wbr>T_IPFilter_Deny<wbr>All</dt>
+    <dd>IoT_IPFilter_DenyAll{{% md %}}IP Filter Configuration should have rules defined for allowed traffic and should deny all other traffic by default.{{% /md %}}</dd>
+    <dt>Recommendation<wbr>Type_Io<wbr>T_IPFilter_Permissive<wbr>Rule</dt>
+    <dd>IoT_IPFilter_PermissiveRule{{% md %}}An Allow IP Filter rules source IP range is too large. Overly permissive rules might expose your IoT hub to malicious intenders.{{% /md %}}</dd>
+    <dt>Recommendation<wbr>Type_Io<wbr>T_Open<wbr>Ports</dt>
+    <dd>IoT_OpenPorts{{% md %}}A listening endpoint was found on the device.{{% /md %}}</dd>
+    <dt>Recommendation<wbr>Type_Io<wbr>T_Permissive<wbr>Firewall<wbr>Policy</dt>
+    <dd>IoT_PermissiveFirewallPolicy{{% md %}}An Allowed firewall policy was found (INPUT/OUTPUT). The policy should Deny all traffic by default and define rules to allow necessary communication to/from the device.{{% /md %}}</dd>
+    <dt>Recommendation<wbr>Type_Io<wbr>T_Permissive<wbr>Input<wbr>Firewall<wbr>Rules</dt>
+    <dd>IoT_PermissiveInputFirewallRules{{% md %}}A rule in the firewall has been found that contains a permissive pattern for a wide range of IP addresses or Ports.{{% /md %}}</dd>
+    <dt>Recommendation<wbr>Type_Io<wbr>T_Permissive<wbr>Output<wbr>Firewall<wbr>Rules</dt>
+    <dd>IoT_PermissiveOutputFirewallRules{{% md %}}A rule in the firewall has been found that contains a permissive pattern for a wide range of IP addresses or Ports.{{% /md %}}</dd>
+    <dt>Recommendation<wbr>Type_Io<wbr>T_Privileged<wbr>Docker<wbr>Options</dt>
+    <dd>IoT_PrivilegedDockerOptions{{% md %}}Edge module is configured to run in privileged mode, with extensive Linux capabilities or with host-level network access (send/receive data to host machine).{{% /md %}}</dd>
+    <dt>Recommendation<wbr>Type_Io<wbr>T_Shared<wbr>Credentials</dt>
+    <dd>IoT_SharedCredentials{{% md %}}Same authentication credentials to the IoT Hub used by multiple devices. This could indicate an illegitimate device impersonating a legitimate device. It also exposes the risk of device impersonation by an attacker.{{% /md %}}</dd>
+    <dt>Recommendation<wbr>Type_Io<wbr>T_Vulnerable<wbr>TLSCipher<wbr>Suite</dt>
+    <dd>IoT_VulnerableTLSCipherSuite{{% md %}}Insecure TLS configurations detected. Immediate upgrade recommended.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Io<wbr>T_ACRAuthentication</dt>
+    <dd>IoT_ACRAuthentication{{% md %}}Authentication schema used for pull an edge module from an ACR repository does not use Service Principal Authentication.{{% /md %}}</dd>
+    <dt>Io<wbr>T_Agent<wbr>Sends<wbr>Unutilized<wbr>Messages</dt>
+    <dd>IoT_AgentSendsUnutilizedMessages{{% md %}}IoT agent message size capacity is currently underutilized, causing an increase in the number of sent messages. Adjust message intervals for better utilization.{{% /md %}}</dd>
+    <dt>Io<wbr>T_Baseline</dt>
+    <dd>IoT_Baseline{{% md %}}Identified security related system configuration issues.{{% /md %}}</dd>
+    <dt>Io<wbr>T_Edge<wbr>Hub<wbr>Mem<wbr>Optimize</dt>
+    <dd>IoT_EdgeHubMemOptimize{{% md %}}You can optimize Edge Hub memory usage by turning off protocol heads for any protocols not used by Edge modules in your solution.{{% /md %}}</dd>
+    <dt>Io<wbr>T_Edge<wbr>Logging<wbr>Options</dt>
+    <dd>IoT_EdgeLoggingOptions{{% md %}}Logging is disabled for this edge module.{{% /md %}}</dd>
+    <dt>Io<wbr>T_Inconsistent<wbr>Module<wbr>Settings</dt>
+    <dd>IoT_InconsistentModuleSettings{{% md %}}A minority within a device security group has inconsistent Edge Module settings with the rest of their group.{{% /md %}}</dd>
+    <dt>Io<wbr>T_Install<wbr>Agent</dt>
+    <dd>IoT_InstallAgent{{% md %}}Install the Azure Security of Things Agent.{{% /md %}}</dd>
+    <dt>Io<wbr>T_IPFilter_Deny<wbr>All</dt>
+    <dd>IoT_IPFilter_DenyAll{{% md %}}IP Filter Configuration should have rules defined for allowed traffic and should deny all other traffic by default.{{% /md %}}</dd>
+    <dt>Io<wbr>T_IPFilter_Permissive<wbr>Rule</dt>
+    <dd>IoT_IPFilter_PermissiveRule{{% md %}}An Allow IP Filter rules source IP range is too large. Overly permissive rules might expose your IoT hub to malicious intenders.{{% /md %}}</dd>
+    <dt>Io<wbr>T_Open<wbr>Ports</dt>
+    <dd>IoT_OpenPorts{{% md %}}A listening endpoint was found on the device.{{% /md %}}</dd>
+    <dt>Io<wbr>T_Permissive<wbr>Firewall<wbr>Policy</dt>
+    <dd>IoT_PermissiveFirewallPolicy{{% md %}}An Allowed firewall policy was found (INPUT/OUTPUT). The policy should Deny all traffic by default and define rules to allow necessary communication to/from the device.{{% /md %}}</dd>
+    <dt>Io<wbr>T_Permissive<wbr>Input<wbr>Firewall<wbr>Rules</dt>
+    <dd>IoT_PermissiveInputFirewallRules{{% md %}}A rule in the firewall has been found that contains a permissive pattern for a wide range of IP addresses or Ports.{{% /md %}}</dd>
+    <dt>Io<wbr>T_Permissive<wbr>Output<wbr>Firewall<wbr>Rules</dt>
+    <dd>IoT_PermissiveOutputFirewallRules{{% md %}}A rule in the firewall has been found that contains a permissive pattern for a wide range of IP addresses or Ports.{{% /md %}}</dd>
+    <dt>Io<wbr>T_Privileged<wbr>Docker<wbr>Options</dt>
+    <dd>IoT_PrivilegedDockerOptions{{% md %}}Edge module is configured to run in privileged mode, with extensive Linux capabilities or with host-level network access (send/receive data to host machine).{{% /md %}}</dd>
+    <dt>Io<wbr>T_Shared<wbr>Credentials</dt>
+    <dd>IoT_SharedCredentials{{% md %}}Same authentication credentials to the IoT Hub used by multiple devices. This could indicate an illegitimate device impersonating a legitimate device. It also exposes the risk of device impersonation by an attacker.{{% /md %}}</dd>
+    <dt>Io<wbr>T_Vulnerable<wbr>TLSCipher<wbr>Suite</dt>
+    <dd>IoT_VulnerableTLSCipherSuite{{% md %}}Insecure TLS configurations detected. Immediate upgrade recommended.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>IO_T_ACR_AUTHENTICATION</dt>
+    <dd>IoT_ACRAuthentication{{% md %}}Authentication schema used for pull an edge module from an ACR repository does not use Service Principal Authentication.{{% /md %}}</dd>
+    <dt>IO_T_AGENT_SENDS_UNUTILIZED_MESSAGES</dt>
+    <dd>IoT_AgentSendsUnutilizedMessages{{% md %}}IoT agent message size capacity is currently underutilized, causing an increase in the number of sent messages. Adjust message intervals for better utilization.{{% /md %}}</dd>
+    <dt>IO_T_BASELINE</dt>
+    <dd>IoT_Baseline{{% md %}}Identified security related system configuration issues.{{% /md %}}</dd>
+    <dt>IO_T_EDGE_HUB_MEM_OPTIMIZE</dt>
+    <dd>IoT_EdgeHubMemOptimize{{% md %}}You can optimize Edge Hub memory usage by turning off protocol heads for any protocols not used by Edge modules in your solution.{{% /md %}}</dd>
+    <dt>IO_T_EDGE_LOGGING_OPTIONS</dt>
+    <dd>IoT_EdgeLoggingOptions{{% md %}}Logging is disabled for this edge module.{{% /md %}}</dd>
+    <dt>IO_T_INCONSISTENT_MODULE_SETTINGS</dt>
+    <dd>IoT_InconsistentModuleSettings{{% md %}}A minority within a device security group has inconsistent Edge Module settings with the rest of their group.{{% /md %}}</dd>
+    <dt>IO_T_INSTALL_AGENT</dt>
+    <dd>IoT_InstallAgent{{% md %}}Install the Azure Security of Things Agent.{{% /md %}}</dd>
+    <dt>IO_T_IP_FILTER_DENY_ALL</dt>
+    <dd>IoT_IPFilter_DenyAll{{% md %}}IP Filter Configuration should have rules defined for allowed traffic and should deny all other traffic by default.{{% /md %}}</dd>
+    <dt>IO_T_IP_FILTER_PERMISSIVE_RULE</dt>
+    <dd>IoT_IPFilter_PermissiveRule{{% md %}}An Allow IP Filter rules source IP range is too large. Overly permissive rules might expose your IoT hub to malicious intenders.{{% /md %}}</dd>
+    <dt>IO_T_OPEN_PORTS</dt>
+    <dd>IoT_OpenPorts{{% md %}}A listening endpoint was found on the device.{{% /md %}}</dd>
+    <dt>IO_T_PERMISSIVE_FIREWALL_POLICY</dt>
+    <dd>IoT_PermissiveFirewallPolicy{{% md %}}An Allowed firewall policy was found (INPUT/OUTPUT). The policy should Deny all traffic by default and define rules to allow necessary communication to/from the device.{{% /md %}}</dd>
+    <dt>IO_T_PERMISSIVE_INPUT_FIREWALL_RULES</dt>
+    <dd>IoT_PermissiveInputFirewallRules{{% md %}}A rule in the firewall has been found that contains a permissive pattern for a wide range of IP addresses or Ports.{{% /md %}}</dd>
+    <dt>IO_T_PERMISSIVE_OUTPUT_FIREWALL_RULES</dt>
+    <dd>IoT_PermissiveOutputFirewallRules{{% md %}}A rule in the firewall has been found that contains a permissive pattern for a wide range of IP addresses or Ports.{{% /md %}}</dd>
+    <dt>IO_T_PRIVILEGED_DOCKER_OPTIONS</dt>
+    <dd>IoT_PrivilegedDockerOptions{{% md %}}Edge module is configured to run in privileged mode, with extensive Linux capabilities or with host-level network access (send/receive data to host machine).{{% /md %}}</dd>
+    <dt>IO_T_SHARED_CREDENTIALS</dt>
+    <dd>IoT_SharedCredentials{{% md %}}Same authentication credentials to the IoT Hub used by multiple devices. This could indicate an illegitimate device impersonating a legitimate device. It also exposes the risk of device impersonation by an attacker.{{% /md %}}</dd>
+    <dt>IO_T_VULNERABLE_TLS_CIPHER_SUITE</dt>
+    <dd>IoT_VulnerableTLSCipherSuite{{% md %}}Insecure TLS configurations detected. Immediate upgrade recommended.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="securitysolutionstatus">Security<wbr>Solution<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Enabled</dt>
+    <dd>Enabled</dd>
+    <dt>Disabled</dt>
+    <dd>Disabled</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Security<wbr>Solution<wbr>Status<wbr>Enabled</dt>
+    <dd>Enabled</dd>
+    <dt>Security<wbr>Solution<wbr>Status<wbr>Disabled</dt>
+    <dd>Disabled</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Enabled</dt>
+    <dd>Enabled</dd>
+    <dt>Disabled</dt>
+    <dd>Disabled</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>ENABLED</dt>
+    <dd>Enabled</dd>
+    <dt>DISABLED</dt>
+    <dd>Disabled</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="unmaskediploggingstatus">Unmasked<wbr>Ip<wbr>Logging<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Disabled</dt>
+    <dd>Disabled{{% md %}}Unmasked IP logging is disabled{{% /md %}}</dd>
+    <dt>Enabled</dt>
+    <dd>Enabled{{% md %}}Unmasked IP logging is enabled{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Unmasked<wbr>Ip<wbr>Logging<wbr>Status<wbr>Disabled</dt>
+    <dd>Disabled{{% md %}}Unmasked IP logging is disabled{{% /md %}}</dd>
+    <dt>Unmasked<wbr>Ip<wbr>Logging<wbr>Status<wbr>Enabled</dt>
+    <dd>Enabled{{% md %}}Unmasked IP logging is enabled{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Disabled</dt>
+    <dd>Disabled{{% md %}}Unmasked IP logging is disabled{{% /md %}}</dd>
+    <dt>Enabled</dt>
+    <dd>Enabled{{% md %}}Unmasked IP logging is enabled{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>DISABLED</dt>
+    <dd>Disabled{{% md %}}Unmasked IP logging is disabled{{% /md %}}</dd>
+    <dt>ENABLED</dt>
+    <dd>Enabled{{% md %}}Unmasked IP logging is enabled{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="userdefinedresourcesproperties">User<wbr>Defined<wbr>Resources<wbr>Properties</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1435,25 +1625,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="query_csharp">
 <a href="#query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure Resource Graph query which represents the security solution's user defined resources. Required to start with "where type != "Microsoft.Devices/IotHubs""{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="querysubscriptions_csharp">
 <a href="#querysubscriptions_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Subscriptions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of Azure subscription ids on which the user defined resources query should be executed.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1462,25 +1649,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="query_go">
 <a href="#query_go" style="color: inherit; text-decoration: inherit;">Query</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure Resource Graph query which represents the security solution's user defined resources. Required to start with "where type != "Microsoft.Devices/IotHubs""{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="querysubscriptions_go">
 <a href="#querysubscriptions_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Subscriptions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of Azure subscription ids on which the user defined resources query should be executed.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1489,25 +1673,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="query_nodejs">
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure Resource Graph query which represents the security solution's user defined resources. Required to start with "where type != "Microsoft.Devices/IotHubs""{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="querysubscriptions_nodejs">
 <a href="#querysubscriptions_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Subscriptions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Azure subscription ids on which the user defined resources query should be executed.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1516,37 +1697,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="query_python">
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure Resource Graph query which represents the security solution's user defined resources. Required to start with "where type != "Microsoft.Devices/IotHubs""{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="query_subscriptions_python">
 <a href="#query_subscriptions_python" style="color: inherit; text-decoration: inherit;">query_<wbr>subscriptions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of Azure subscription ids on which the user defined resources query should be executed.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="userdefinedresourcespropertiesresponse">User<wbr>Defined<wbr>Resources<wbr>Properties<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1554,25 +1723,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="query_csharp">
 <a href="#query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure Resource Graph query which represents the security solution's user defined resources. Required to start with "where type != "Microsoft.Devices/IotHubs""{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="querysubscriptions_csharp">
 <a href="#querysubscriptions_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Subscriptions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of Azure subscription ids on which the user defined resources query should be executed.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1581,25 +1747,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="query_go">
 <a href="#query_go" style="color: inherit; text-decoration: inherit;">Query</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure Resource Graph query which represents the security solution's user defined resources. Required to start with "where type != "Microsoft.Devices/IotHubs""{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="querysubscriptions_go">
 <a href="#querysubscriptions_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Subscriptions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of Azure subscription ids on which the user defined resources query should be executed.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1608,25 +1771,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="query_nodejs">
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure Resource Graph query which represents the security solution's user defined resources. Required to start with "where type != "Microsoft.Devices/IotHubs""{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="querysubscriptions_nodejs">
 <a href="#querysubscriptions_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Subscriptions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Azure subscription ids on which the user defined resources query should be executed.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1635,33 +1795,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="query_python">
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure Resource Graph query which represents the security solution's user defined resources. Required to start with "where type != "Microsoft.Devices/IotHubs""{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="query_subscriptions_python">
 <a href="#query_subscriptions_python" style="color: inherit; text-decoration: inherit;">query_<wbr>subscriptions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of Azure subscription ids on which the user defined resources query should be executed.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 
 
 <h2 id="package-details">Package Details</h2>

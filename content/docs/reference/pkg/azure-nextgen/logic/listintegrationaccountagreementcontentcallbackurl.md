@@ -45,7 +45,6 @@ meta_desc: "Explore the ListIntegrationAccountAgreementContentCallbackUrl functi
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -53,55 +52,49 @@ The following arguments are supported:
             title="Required">
         <span id="agreementname_csharp">
 <a href="#agreementname_csharp" style="color: inherit; text-decoration: inherit;">Agreement<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration account agreement name.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="integrationaccountname_csharp">
 <a href="#integrationaccountname_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Account<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration account name.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keytype_csharp">
 <a href="#keytype_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Key<wbr>Type</span>
+        <span class="property-type">string | <a href="#keytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Key<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The key type.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notafter_csharp">
 <a href="#notafter_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>After</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiry time.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -110,55 +103,49 @@ The following arguments are supported:
             title="Required">
         <span id="agreementname_go">
 <a href="#agreementname_go" style="color: inherit; text-decoration: inherit;">Agreement<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration account agreement name.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="integrationaccountname_go">
 <a href="#integrationaccountname_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Account<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration account name.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keytype_go">
 <a href="#keytype_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#keytype">Key<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The key type.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notafter_go">
 <a href="#notafter_go" style="color: inherit; text-decoration: inherit;">Not<wbr>After</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiry time.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -167,55 +154,49 @@ The following arguments are supported:
             title="Required">
         <span id="agreementname_nodejs">
 <a href="#agreementname_nodejs" style="color: inherit; text-decoration: inherit;">agreement<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration account agreement name.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="integrationaccountname_nodejs">
 <a href="#integrationaccountname_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Account<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration account name.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keytype_nodejs">
 <a href="#keytype_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Key<wbr>Type</span>
+        <span class="property-type">string | <a href="#keytype">Key<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The key type.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notafter_nodejs">
 <a href="#notafter_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>After</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiry time.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -224,58 +205,49 @@ The following arguments are supported:
             title="Required">
         <span id="agreement_name_python">
 <a href="#agreement_name_python" style="color: inherit; text-decoration: inherit;">agreement_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The integration account agreement name.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="integration_account_name_python">
 <a href="#integration_account_name_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>account_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The integration account name.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="key_type_python">
 <a href="#key_type_python" style="color: inherit; text-decoration: inherit;">key_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Key<wbr>Type</span>
+        <span class="property-type">str | <a href="#keytype">Key<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The key type.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="not_after_python">
 <a href="#not_after_python" style="color: inherit; text-decoration: inherit;">not_<wbr>after</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The expiry time.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -286,7 +258,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -294,65 +265,58 @@ The following output properties are available:
             title="">
         <span id="basepath_csharp">
 <a href="#basepath_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the workflow trigger callback URL base path.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="method_csharp">
 <a href="#method_csharp" style="color: inherit; text-decoration: inherit;">Method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the workflow trigger callback URL HTTP method.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="relativepath_csharp">
 <a href="#relativepath_csharp" style="color: inherit; text-decoration: inherit;">Relative<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the workflow trigger callback URL relative path.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the workflow trigger callback URL.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="queries_csharp">
 <a href="#queries_csharp" style="color: inherit; text-decoration: inherit;">Queries</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workflowtriggerlistcallbackurlqueriesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Logic.<wbr>Outputs.<wbr>Workflow<wbr>Trigger<wbr>List<wbr>Callback<wbr>Url<wbr>Queries<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the workflow trigger callback URL query parameters.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="relativepathparameters_csharp">
 <a href="#relativepathparameters_csharp" style="color: inherit; text-decoration: inherit;">Relative<wbr>Path<wbr>Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Gets the workflow trigger callback URL relative path parameters.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -361,65 +325,58 @@ The following output properties are available:
             title="">
         <span id="basepath_go">
 <a href="#basepath_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the workflow trigger callback URL base path.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="method_go">
 <a href="#method_go" style="color: inherit; text-decoration: inherit;">Method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the workflow trigger callback URL HTTP method.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="relativepath_go">
 <a href="#relativepath_go" style="color: inherit; text-decoration: inherit;">Relative<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the workflow trigger callback URL relative path.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the workflow trigger callback URL.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="queries_go">
 <a href="#queries_go" style="color: inherit; text-decoration: inherit;">Queries</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workflowtriggerlistcallbackurlqueriesresponse">Workflow<wbr>Trigger<wbr>List<wbr>Callback<wbr>Url<wbr>Queries<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the workflow trigger callback URL query parameters.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="relativepathparameters_go">
 <a href="#relativepathparameters_go" style="color: inherit; text-decoration: inherit;">Relative<wbr>Path<wbr>Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Gets the workflow trigger callback URL relative path parameters.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -428,65 +385,58 @@ The following output properties are available:
             title="">
         <span id="basepath_nodejs">
 <a href="#basepath_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the workflow trigger callback URL base path.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="method_nodejs">
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the workflow trigger callback URL HTTP method.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="relativepath_nodejs">
 <a href="#relativepath_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the workflow trigger callback URL relative path.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the workflow trigger callback URL.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="queries_nodejs">
 <a href="#queries_nodejs" style="color: inherit; text-decoration: inherit;">queries</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workflowtriggerlistcallbackurlqueriesresponse">Workflow<wbr>Trigger<wbr>List<wbr>Callback<wbr>Url<wbr>Queries<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the workflow trigger callback URL query parameters.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="relativepathparameters_nodejs">
 <a href="#relativepathparameters_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Path<wbr>Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Gets the workflow trigger callback URL relative path parameters.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -495,68 +445,58 @@ The following output properties are available:
             title="">
         <span id="base_path_python">
 <a href="#base_path_python" style="color: inherit; text-decoration: inherit;">base_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets the workflow trigger callback URL base path.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="method_python">
 <a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets the workflow trigger callback URL HTTP method.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="relative_path_python">
 <a href="#relative_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets the workflow trigger callback URL relative path.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets the workflow trigger callback URL.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="queries_python">
 <a href="#queries_python" style="color: inherit; text-decoration: inherit;">queries</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workflowtriggerlistcallbackurlqueriesresponse">Workflow<wbr>Trigger<wbr>List<wbr>Callback<wbr>Url<wbr>Queries<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the workflow trigger callback URL query parameters.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="relative_path_parameters_python">
 <a href="#relative_path_parameters_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>path_<wbr>parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Gets the workflow trigger callback URL relative path parameters.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -564,8 +504,14 @@ The following output properties are available:
 ## Supporting Types
 
 
-<h4 id="workflowtriggerlistcallbackurlqueriesresponse">Workflow<wbr>Trigger<wbr>List<wbr>Callback<wbr>Url<wbr>Queries<wbr>Response</h4>
+<h4 id="keytype">Key<wbr>Type</h4>
 
+
+
+
+
+
+<h4 id="workflowtriggerlistcallbackurlqueriesresponse">Workflow<wbr>Trigger<wbr>List<wbr>Callback<wbr>Url<wbr>Queries<wbr>Response</h4>
 
 
 
@@ -579,55 +525,49 @@ The following output properties are available:
             title="Optional">
         <span id="apiversion_csharp">
 <a href="#apiversion_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The api version.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="se_csharp">
 <a href="#se_csharp" style="color: inherit; text-decoration: inherit;">Se</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SAS timestamp.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sig_csharp">
 <a href="#sig_csharp" style="color: inherit; text-decoration: inherit;">Sig</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SAS signature.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sp_csharp">
 <a href="#sp_csharp" style="color: inherit; text-decoration: inherit;">Sp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SAS permissions.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sv_csharp">
 <a href="#sv_csharp" style="color: inherit; text-decoration: inherit;">Sv</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SAS version.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -636,55 +576,49 @@ The following output properties are available:
             title="Optional">
         <span id="apiversion_go">
 <a href="#apiversion_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The api version.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="se_go">
 <a href="#se_go" style="color: inherit; text-decoration: inherit;">Se</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SAS timestamp.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sig_go">
 <a href="#sig_go" style="color: inherit; text-decoration: inherit;">Sig</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SAS signature.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sp_go">
 <a href="#sp_go" style="color: inherit; text-decoration: inherit;">Sp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SAS permissions.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sv_go">
 <a href="#sv_go" style="color: inherit; text-decoration: inherit;">Sv</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SAS version.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -693,55 +627,49 @@ The following output properties are available:
             title="Optional">
         <span id="apiversion_nodejs">
 <a href="#apiversion_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The api version.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="se_nodejs">
 <a href="#se_nodejs" style="color: inherit; text-decoration: inherit;">se</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SAS timestamp.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sig_nodejs">
 <a href="#sig_nodejs" style="color: inherit; text-decoration: inherit;">sig</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SAS signature.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sp_nodejs">
 <a href="#sp_nodejs" style="color: inherit; text-decoration: inherit;">sp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SAS permissions.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sv_nodejs">
 <a href="#sv_nodejs" style="color: inherit; text-decoration: inherit;">sv</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SAS version.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -750,58 +678,49 @@ The following output properties are available:
             title="Optional">
         <span id="api_version_python">
 <a href="#api_version_python" style="color: inherit; text-decoration: inherit;">api_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The api version.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="se_python">
 <a href="#se_python" style="color: inherit; text-decoration: inherit;">se</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SAS timestamp.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sig_python">
 <a href="#sig_python" style="color: inherit; text-decoration: inherit;">sig</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SAS signature.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sp_python">
 <a href="#sp_python" style="color: inherit; text-decoration: inherit;">sp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SAS permissions.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sv_python">
 <a href="#sv_python" style="color: inherit; text-decoration: inherit;">sv</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SAS version.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

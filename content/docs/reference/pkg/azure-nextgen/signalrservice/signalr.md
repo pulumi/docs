@@ -2,7 +2,7 @@
 ---
 title: "SignalR"
 title_tag: "azure-nextgen.signalrservice.SignalR"
-meta_desc: "Explore the SignalR resource of the signalrservice module, including examples, input properties, output properties, lookup functions, and supporting types. A class represent a SignalR service resource."
+meta_desc: "Documentation for the azure-nextgen.signalrservice.SignalR resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -11,6 +11,7 @@ meta_desc: "Explore the SignalR resource of the signalrservice module, including
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A class represent a SignalR service resource.
+Latest API Version: 2020-05-01.
 
 
 {{% examples %}}
@@ -341,7 +342,7 @@ const signalR = new azure_nextgen.signalrservice.latest.SignalR("signalR", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SignalR</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">SignalRArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SignalR</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">SignalRArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -349,11 +350,11 @@ const signalR = new azure_nextgen.signalrservice.latest.SignalR("signalR", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSignalR</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">SignalRArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SignalR</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSignalR</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">SignalRArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SignalR</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SignalR</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">SignalRArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SignalR</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">SignalRArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -364,7 +365,7 @@ const signalR = new azure_nextgen.signalrservice.latest.SignalR("signalR", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -433,7 +434,7 @@ const signalR = new azure_nextgen.signalrservice.latest.SignalR("signalR", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -472,7 +473,7 @@ const signalR = new azure_nextgen.signalrservice.latest.SignalR("signalR", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -513,7 +514,6 @@ The SignalR resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -521,37 +521,34 @@ The SignalR resource accepts the following [input]({{< relref "/docs/intro/conce
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcename_csharp">
 <a href="#resourcename_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SignalR resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cors_csharp">
 <a href="#cors_csharp" style="color: inherit; text-decoration: inherit;">Cors</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#signalrcorssettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Signal<wbr>RCors<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cross-Origin Resource Sharing (CORS) settings.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="features_csharp">
 <a href="#features_csharp" style="color: inherit; text-decoration: inherit;">Features</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#signalrfeature">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Signal<wbr>RFeature<wbr>Args&gt;</a></span>
     </dt>
@@ -561,81 +558,72 @@ FeatureFlags that are not included in the parameters for the update operation wi
 And the response will only include featureFlags that are explicitly set. 
 When a featureFlag is not explicitly set, SignalR service will use its globally default value. 
 But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hostnameprefix_csharp">
 <a href="#hostnameprefix_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Name<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Prefix for the hostName of the SignalR service. Retained for future use.
 The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Service<wbr>Kind</span>
+        <span class="property-type">string | <a href="#servicekind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Service<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The kind of the service - e.g. "SignalR", or "RawWebSockets" for "Microsoft.SignalRService/SignalR"{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GEO location of the SignalR service. e.g. West US | East US | North Central US | South Central US.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkacls_csharp">
 <a href="#networkacls_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>ACLs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#signalrnetworkacls">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Signal<wbr>RNetwork<wbr>ACLs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network ACLs{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Resource<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The billing information of the resource.(e.g. Free, Standard){{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Tags of the service which is a list of key value pairs that describe the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="upstream_csharp">
 <a href="#upstream_csharp" style="color: inherit; text-decoration: inherit;">Upstream</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverlessupstreamsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Serverless<wbr>Upstream<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Upstream settings when the Azure SignalR is in server-less mode.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -644,37 +632,34 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcename_go">
 <a href="#resourcename_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SignalR resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cors_go">
 <a href="#cors_go" style="color: inherit; text-decoration: inherit;">Cors</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#signalrcorssettings">Signal<wbr>RCors<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Cross-Origin Resource Sharing (CORS) settings.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="features_go">
 <a href="#features_go" style="color: inherit; text-decoration: inherit;">Features</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#signalrfeature">[]Signal<wbr>RFeature</a></span>
     </dt>
@@ -684,81 +669,72 @@ FeatureFlags that are not included in the parameters for the update operation wi
 And the response will only include featureFlags that are explicitly set. 
 When a featureFlag is not explicitly set, SignalR service will use its globally default value. 
 But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hostnameprefix_go">
 <a href="#hostnameprefix_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Name<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Prefix for the hostName of the SignalR service. Retained for future use.
 The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#servicekind">Service<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The kind of the service - e.g. "SignalR", or "RawWebSockets" for "Microsoft.SignalRService/SignalR"{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GEO location of the SignalR service. e.g. West US | East US | North Central US | South Central US.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkacls_go">
 <a href="#networkacls_go" style="color: inherit; text-decoration: inherit;">Network<wbr>ACLs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#signalrnetworkacls">Signal<wbr>RNetwork<wbr>ACLs</a></span>
     </dt>
     <dd>{{% md %}}Network ACLs{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesku">Resource<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}The billing information of the resource.(e.g. Free, Standard){{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Tags of the service which is a list of key value pairs that describe the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="upstream_go">
 <a href="#upstream_go" style="color: inherit; text-decoration: inherit;">Upstream</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverlessupstreamsettings">Serverless<wbr>Upstream<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Upstream settings when the Azure SignalR is in server-less mode.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -767,37 +743,34 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcename_nodejs">
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SignalR resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cors_nodejs">
 <a href="#cors_nodejs" style="color: inherit; text-decoration: inherit;">cors</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#signalrcorssettings">Signal<wbr>RCors<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Cross-Origin Resource Sharing (CORS) settings.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="features_nodejs">
 <a href="#features_nodejs" style="color: inherit; text-decoration: inherit;">features</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#signalrfeature">Signal<wbr>RFeature[]</a></span>
     </dt>
@@ -807,81 +780,72 @@ FeatureFlags that are not included in the parameters for the update operation wi
 And the response will only include featureFlags that are explicitly set. 
 When a featureFlag is not explicitly set, SignalR service will use its globally default value. 
 But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hostnameprefix_nodejs">
 <a href="#hostnameprefix_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Prefix for the hostName of the SignalR service. Retained for future use.
 The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Service<wbr>Kind</span>
+        <span class="property-type">string | <a href="#servicekind">Service<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The kind of the service - e.g. "SignalR", or "RawWebSockets" for "Microsoft.SignalRService/SignalR"{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GEO location of the SignalR service. e.g. West US | East US | North Central US | South Central US.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkacls_nodejs">
 <a href="#networkacls_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>ACLs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#signalrnetworkacls">Signal<wbr>RNetwork<wbr>ACLs</a></span>
     </dt>
     <dd>{{% md %}}Network ACLs{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesku">Resource<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}The billing information of the resource.(e.g. Free, Standard){{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Tags of the service which is a list of key value pairs that describe the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="upstream_nodejs">
 <a href="#upstream_nodejs" style="color: inherit; text-decoration: inherit;">upstream</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverlessupstreamsettings">Serverless<wbr>Upstream<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Upstream settings when the Azure SignalR is in server-less mode.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -890,37 +854,34 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_name_python">
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the SignalR resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cors_python">
 <a href="#cors_python" style="color: inherit; text-decoration: inherit;">cors</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#signalrcorssettings">Signal<wbr>RCors<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cross-Origin Resource Sharing (CORS) settings.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="features_python">
 <a href="#features_python" style="color: inherit; text-decoration: inherit;">features</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#signalrfeature">Sequence[Signal<wbr>RFeature<wbr>Args]</a></span>
     </dt>
@@ -930,90 +891,77 @@ FeatureFlags that are not included in the parameters for the update operation wi
 And the response will only include featureFlags that are explicitly set. 
 When a featureFlag is not explicitly set, SignalR service will use its globally default value. 
 But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="host_name_prefix_python">
 <a href="#host_name_prefix_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name_<wbr>prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Prefix for the hostName of the SignalR service. Retained for future use.
 The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Service<wbr>Kind</span>
+        <span class="property-type">str | <a href="#servicekind">Service<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The kind of the service - e.g. "SignalR", or "RawWebSockets" for "Microsoft.SignalRService/SignalR"{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GEO location of the SignalR service. e.g. West US | East US | North Central US | South Central US.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="network_acls_python">
 <a href="#network_acls_python" style="color: inherit; text-decoration: inherit;">network_<wbr>acls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#signalrnetworkacls">Signal<wbr>RNetwork<wbr>ACLs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network ACLs{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesku">Resource<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The billing information of the resource.(e.g. Free, Standard){{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Tags of the service which is a list of key value pairs that describe the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="upstream_python">
 <a href="#upstream_python" style="color: inherit; text-decoration: inherit;">upstream</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serverlessupstreamsettings">Serverless<wbr>Upstream<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Upstream settings when the Azure SignalR is in server-less mode.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the SignalR resource produces the following output properties:
-
 
 
 
@@ -1024,105 +972,94 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="externalip_csharp">
 <a href="#externalip_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>IP</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The publicly accessible IP of the SignalR service.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}FQDN of the SignalR service instance. Format: xxx.service.signalr.net{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="privateendpointconnections_csharp">
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connections to the SignalR resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="publicport_csharp">
 <a href="#publicport_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The publicly accessible port of the SignalR service which is designed for browser/client side usage.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="serverport_csharp">
 <a href="#serverport_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The publicly accessible port of the SignalR service which is designed for customer server side usage.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource - e.g. "Microsoft.SignalRService/SignalR"{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the SignalR resource. Probably you need the same or higher version of client SDKs.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1131,105 +1068,94 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="externalip_go">
 <a href="#externalip_go" style="color: inherit; text-decoration: inherit;">External<wbr>IP</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The publicly accessible IP of the SignalR service.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}FQDN of the SignalR service instance. Format: xxx.service.signalr.net{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="privateendpointconnections_go">
 <a href="#privateendpointconnections_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionresponse">[]Private<wbr>Endpoint<wbr>Connection<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connections to the SignalR resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="publicport_go">
 <a href="#publicport_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The publicly accessible port of the SignalR service which is designed for browser/client side usage.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="serverport_go">
 <a href="#serverport_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The publicly accessible port of the SignalR service which is designed for customer server side usage.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource - e.g. "Microsoft.SignalRService/SignalR"{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the SignalR resource. Probably you need the same or higher version of client SDKs.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1238,105 +1164,94 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="externalip_nodejs">
 <a href="#externalip_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>IP</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The publicly accessible IP of the SignalR service.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}FQDN of the SignalR service instance. Format: xxx.service.signalr.net{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="privateendpointconnections_nodejs">
 <a href="#privateendpointconnections_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Connections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connections to the SignalR resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="publicport_nodejs">
 <a href="#publicport_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The publicly accessible port of the SignalR service which is designed for browser/client side usage.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="serverport_nodejs">
 <a href="#serverport_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The publicly accessible port of the SignalR service which is designed for customer server side usage.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource - e.g. "Microsoft.SignalRService/SignalR"{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the SignalR resource. Probably you need the same or higher version of client SDKs.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1345,108 +1260,94 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="external_ip_python">
 <a href="#external_ip_python" style="color: inherit; text-decoration: inherit;">external_<wbr>ip</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The publicly accessible IP of the SignalR service.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="host_name_python">
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}FQDN of the SignalR service instance. Format: xxx.service.signalr.net{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="private_endpoint_connections_python">
 <a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionresponse">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint connections to the SignalR resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="public_port_python">
 <a href="#public_port_python" style="color: inherit; text-decoration: inherit;">public_<wbr>port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The publicly accessible port of the SignalR service which is designed for browser/client side usage.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="server_port_python">
 <a href="#server_port_python" style="color: inherit; text-decoration: inherit;">server_<wbr>port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The publicly accessible port of the SignalR service which is designed for customer server side usage.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the resource - e.g. "Microsoft.SignalRService/SignalR"{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Version of the SignalR resource. Probably you need the same or higher version of client SDKs.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1457,13 +1358,92 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="aclaction">ACLAction</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Allow</dt>
+    <dd>Allow</dd>
+    <dt>Deny</dt>
+    <dd>Deny</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>ACLAction<wbr>Allow</dt>
+    <dd>Allow</dd>
+    <dt>ACLAction<wbr>Deny</dt>
+    <dd>Deny</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Allow</dt>
+    <dd>Allow</dd>
+    <dt>Deny</dt>
+    <dd>Deny</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>ALLOW</dt>
+    <dd>Allow</dd>
+    <dt>DENY</dt>
+    <dd>Deny</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="featureflags">Feature<wbr>Flags</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Service<wbr>Mode</dt>
+    <dd>ServiceMode</dd>
+    <dt>Enable<wbr>Connectivity<wbr>Logs</dt>
+    <dd>EnableConnectivityLogs</dd>
+    <dt>Enable<wbr>Messaging<wbr>Logs</dt>
+    <dd>EnableMessagingLogs</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Feature<wbr>Flags<wbr>Service<wbr>Mode</dt>
+    <dd>ServiceMode</dd>
+    <dt>Feature<wbr>Flags<wbr>Enable<wbr>Connectivity<wbr>Logs</dt>
+    <dd>EnableConnectivityLogs</dd>
+    <dt>Feature<wbr>Flags<wbr>Enable<wbr>Messaging<wbr>Logs</dt>
+    <dd>EnableMessagingLogs</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Service<wbr>Mode</dt>
+    <dd>ServiceMode</dd>
+    <dt>Enable<wbr>Connectivity<wbr>Logs</dt>
+    <dd>EnableConnectivityLogs</dd>
+    <dt>Enable<wbr>Messaging<wbr>Logs</dt>
+    <dd>EnableMessagingLogs</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>SERVICE_MODE</dt>
+    <dd>ServiceMode</dd>
+    <dt>ENABLE_CONNECTIVITY_LOGS</dt>
+    <dd>EnableConnectivityLogs</dd>
+    <dt>ENABLE_MESSAGING_LOGS</dt>
+    <dd>EnableMessagingLogs</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="networkacl">Network<wbr>ACL</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1472,25 +1452,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="allow_csharp">
 <a href="#allow_csharp" style="color: inherit; text-decoration: inherit;">Allow</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Signal<wbr>RRequest<wbr>Type&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deny_csharp">
 <a href="#deny_csharp" style="color: inherit; text-decoration: inherit;">Deny</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Signal<wbr>RRequest<wbr>Type&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1499,25 +1476,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="allow_go">
 <a href="#allow_go" style="color: inherit; text-decoration: inherit;">Allow</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deny_go">
 <a href="#deny_go" style="color: inherit; text-decoration: inherit;">Deny</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1526,25 +1500,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="allow_nodejs">
 <a href="#allow_nodejs" style="color: inherit; text-decoration: inherit;">allow</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | enums.<wbr>Signal<wbr>RRequest<wbr>Type[]</span>
+        <span class="property-type">string | Signal<wbr>RRequest<wbr>Type[]</span>
     </dt>
     <dd>{{% md %}}Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deny_nodejs">
 <a href="#deny_nodejs" style="color: inherit; text-decoration: inherit;">deny</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | enums.<wbr>Signal<wbr>RRequest<wbr>Type[]</span>
+        <span class="property-type">string | Signal<wbr>RRequest<wbr>Type[]</span>
     </dt>
     <dd>{{% md %}}Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1553,37 +1524,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="allow_python">
 <a href="#allow_python" style="color: inherit; text-decoration: inherit;">allow</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[str, Signal<wbr>RRequest<wbr>Type]]</span>
     </dt>
     <dd>{{% md %}}Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deny_python">
 <a href="#deny_python" style="color: inherit; text-decoration: inherit;">deny</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[str, Signal<wbr>RRequest<wbr>Type]]</span>
     </dt>
     <dd>{{% md %}}Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="networkaclresponse">Network<wbr>ACLResponse</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1591,25 +1550,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="allow_csharp">
 <a href="#allow_csharp" style="color: inherit; text-decoration: inherit;">Allow</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deny_csharp">
 <a href="#deny_csharp" style="color: inherit; text-decoration: inherit;">Deny</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1618,25 +1574,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="allow_go">
 <a href="#allow_go" style="color: inherit; text-decoration: inherit;">Allow</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deny_go">
 <a href="#deny_go" style="color: inherit; text-decoration: inherit;">Deny</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1645,25 +1598,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="allow_nodejs">
 <a href="#allow_nodejs" style="color: inherit; text-decoration: inherit;">allow</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deny_nodejs">
 <a href="#deny_nodejs" style="color: inherit; text-decoration: inherit;">deny</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1672,37 +1622,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="allow_python">
 <a href="#allow_python" style="color: inherit; text-decoration: inherit;">allow</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deny_python">
 <a href="#deny_python" style="color: inherit; text-decoration: inherit;">deny</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="privateendpointacl">Private<wbr>Endpoint<wbr>ACL</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1710,35 +1648,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the private endpoint connection{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allow_csharp">
 <a href="#allow_csharp" style="color: inherit; text-decoration: inherit;">Allow</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Signal<wbr>RRequest<wbr>Type&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deny_csharp">
 <a href="#deny_csharp" style="color: inherit; text-decoration: inherit;">Deny</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Signal<wbr>RRequest<wbr>Type&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1747,35 +1681,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the private endpoint connection{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allow_go">
 <a href="#allow_go" style="color: inherit; text-decoration: inherit;">Allow</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deny_go">
 <a href="#deny_go" style="color: inherit; text-decoration: inherit;">Deny</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1784,35 +1714,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the private endpoint connection{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allow_nodejs">
 <a href="#allow_nodejs" style="color: inherit; text-decoration: inherit;">allow</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | enums.<wbr>Signal<wbr>RRequest<wbr>Type[]</span>
+        <span class="property-type">string | Signal<wbr>RRequest<wbr>Type[]</span>
     </dt>
     <dd>{{% md %}}Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deny_nodejs">
 <a href="#deny_nodejs" style="color: inherit; text-decoration: inherit;">deny</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | enums.<wbr>Signal<wbr>RRequest<wbr>Type[]</span>
+        <span class="property-type">string | Signal<wbr>RRequest<wbr>Type[]</span>
     </dt>
     <dd>{{% md %}}Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1821,47 +1747,34 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the private endpoint connection{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allow_python">
 <a href="#allow_python" style="color: inherit; text-decoration: inherit;">allow</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[str, Signal<wbr>RRequest<wbr>Type]]</span>
     </dt>
     <dd>{{% md %}}Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deny_python">
 <a href="#deny_python" style="color: inherit; text-decoration: inherit;">deny</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[str, Signal<wbr>RRequest<wbr>Type]]</span>
     </dt>
     <dd>{{% md %}}Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="privateendpointaclresponse">Private<wbr>Endpoint<wbr>ACLResponse</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1869,35 +1782,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the private endpoint connection{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allow_csharp">
 <a href="#allow_csharp" style="color: inherit; text-decoration: inherit;">Allow</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deny_csharp">
 <a href="#deny_csharp" style="color: inherit; text-decoration: inherit;">Deny</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1906,35 +1815,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the private endpoint connection{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allow_go">
 <a href="#allow_go" style="color: inherit; text-decoration: inherit;">Allow</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deny_go">
 <a href="#deny_go" style="color: inherit; text-decoration: inherit;">Deny</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1943,35 +1848,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the private endpoint connection{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allow_nodejs">
 <a href="#allow_nodejs" style="color: inherit; text-decoration: inherit;">allow</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deny_nodejs">
 <a href="#deny_nodejs" style="color: inherit; text-decoration: inherit;">deny</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1980,46 +1881,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the private endpoint connection{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allow_python">
 <a href="#allow_python" style="color: inherit; text-decoration: inherit;">allow</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deny_python">
 <a href="#deny_python" style="color: inherit; text-decoration: inherit;">deny</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2028,65 +1916,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fully qualified resource Id for the resource.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the private endpoint connection{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource - e.g. "Microsoft.SignalRService/SignalR"{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="privateendpoint_csharp">
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint associated with the private endpoint connection{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="privatelinkserviceconnectionstate_csharp">
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection state{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2095,65 +1976,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fully qualified resource Id for the resource.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the private endpoint connection{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource - e.g. "Microsoft.SignalRService/SignalR"{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="privateendpoint_go">
 <a href="#privateendpoint_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint associated with the private endpoint connection{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="privatelinkserviceconnectionstate_go">
 <a href="#privatelinkserviceconnectionstate_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection state{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2162,65 +2036,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fully qualified resource Id for the resource.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the private endpoint connection{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource - e.g. "Microsoft.SignalRService/SignalR"{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="privateendpoint_nodejs">
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint associated with the private endpoint connection{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="privatelinkserviceconnectionstate_nodejs">
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Connection state{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2229,76 +2096,60 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fully qualified resource Id for the resource.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the private endpoint connection{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the resource - e.g. "Microsoft.SignalRService/SignalR"{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="private_endpoint_python">
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Private endpoint associated with the private endpoint connection{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="private_link_service_connection_state_python">
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection state{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="privateendpointresponse">Private<wbr>Endpoint<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2307,15 +2158,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full qualified Id of the private endpoint{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2324,15 +2173,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full qualified Id of the private endpoint{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2341,15 +2188,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full qualified Id of the private endpoint{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2358,26 +2203,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full qualified Id of the private endpoint{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2386,35 +2220,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="actionsrequired_csharp">
 <a href="#actionsrequired_csharp" style="color: inherit; text-decoration: inherit;">Actions<wbr>Required</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2423,35 +2253,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="actionsrequired_go">
 <a href="#actionsrequired_go" style="color: inherit; text-decoration: inherit;">Actions<wbr>Required</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2460,35 +2286,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="actionsrequired_nodejs">
 <a href="#actionsrequired_nodejs" style="color: inherit; text-decoration: inherit;">actions<wbr>Required</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2497,47 +2319,34 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="actions_required_python">
 <a href="#actions_required_python" style="color: inherit; text-decoration: inherit;">actions_<wbr>required</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="resourcesku">Resource<wbr>Sku</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2545,63 +2354,57 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SKU. Required.
 
 Allowed values: Standard_S1, Free_F1{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="capacity_csharp">
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional, integer. The unit count of SignalR resource. 1 by default.
 
 If present, following values are allowed:
     Free: 1
     Standard: 1,2,5,10,20,50,100{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="family_csharp">
 <a href="#family_csharp" style="color: inherit; text-decoration: inherit;">Family</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional string. For future use.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="size_csharp">
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional string. For future use.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Signal<wbr>RSku<wbr>Tier</span>
+        <span class="property-type">string | <a href="#signalrskutier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Signal<wbr>RSku<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}Optional tier of this particular SKU. 'Standard' or 'Free'. 
 
 `Basic` is deprecated, use `Standard` instead.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2610,63 +2413,57 @@ If present, following values are allowed:
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SKU. Required.
 
 Allowed values: Standard_S1, Free_F1{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="capacity_go">
 <a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional, integer. The unit count of SignalR resource. 1 by default.
 
 If present, following values are allowed:
     Free: 1
     Standard: 1,2,5,10,20,50,100{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="family_go">
 <a href="#family_go" style="color: inherit; text-decoration: inherit;">Family</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional string. For future use.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="size_go">
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional string. For future use.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#signalrskutier">Signal<wbr>RSku<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}Optional tier of this particular SKU. 'Standard' or 'Free'. 
 
 `Basic` is deprecated, use `Standard` instead.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2675,63 +2472,57 @@ If present, following values are allowed:
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SKU. Required.
 
 Allowed values: Standard_S1, Free_F1{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="capacity_nodejs">
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional, integer. The unit count of SignalR resource. 1 by default.
 
 If present, following values are allowed:
     Free: 1
     Standard: 1,2,5,10,20,50,100{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="family_nodejs">
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional string. For future use.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="size_nodejs">
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional string. For future use.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Signal<wbr>RSku<wbr>Tier</span>
+        <span class="property-type">string | <a href="#signalrskutier">Signal<wbr>RSku<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}Optional tier of this particular SKU. 'Standard' or 'Free'. 
 
 `Basic` is deprecated, use `Standard` instead.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2740,75 +2531,60 @@ If present, following values are allowed:
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the SKU. Required.
 
 Allowed values: Standard_S1, Free_F1{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="capacity_python">
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional, integer. The unit count of SignalR resource. 1 by default.
 
 If present, following values are allowed:
     Free: 1
     Standard: 1,2,5,10,20,50,100{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="family_python">
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional string. For future use.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="size_python">
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional string. For future use.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Signal<wbr>RSku<wbr>Tier</span>
+        <span class="property-type">str | <a href="#signalrskutier">Signal<wbr>RSku<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}Optional tier of this particular SKU. 'Standard' or 'Free'. 
 
 `Basic` is deprecated, use `Standard` instead.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="resourceskuresponse">Resource<wbr>Sku<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2816,63 +2592,57 @@ If present, following values are allowed:
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SKU. Required.
 
 Allowed values: Standard_S1, Free_F1{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="capacity_csharp">
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional, integer. The unit count of SignalR resource. 1 by default.
 
 If present, following values are allowed:
     Free: 1
     Standard: 1,2,5,10,20,50,100{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="family_csharp">
 <a href="#family_csharp" style="color: inherit; text-decoration: inherit;">Family</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional string. For future use.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="size_csharp">
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional string. For future use.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional tier of this particular SKU. 'Standard' or 'Free'. 
 
 `Basic` is deprecated, use `Standard` instead.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2881,63 +2651,57 @@ If present, following values are allowed:
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SKU. Required.
 
 Allowed values: Standard_S1, Free_F1{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="capacity_go">
 <a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional, integer. The unit count of SignalR resource. 1 by default.
 
 If present, following values are allowed:
     Free: 1
     Standard: 1,2,5,10,20,50,100{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="family_go">
 <a href="#family_go" style="color: inherit; text-decoration: inherit;">Family</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional string. For future use.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="size_go">
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional string. For future use.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional tier of this particular SKU. 'Standard' or 'Free'. 
 
 `Basic` is deprecated, use `Standard` instead.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2946,63 +2710,57 @@ If present, following values are allowed:
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SKU. Required.
 
 Allowed values: Standard_S1, Free_F1{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="capacity_nodejs">
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optional, integer. The unit count of SignalR resource. 1 by default.
 
 If present, following values are allowed:
     Free: 1
     Standard: 1,2,5,10,20,50,100{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="family_nodejs">
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional string. For future use.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="size_nodejs">
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional string. For future use.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional tier of this particular SKU. 'Standard' or 'Free'. 
 
 `Basic` is deprecated, use `Standard` instead.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3011,74 +2769,59 @@ If present, following values are allowed:
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the SKU. Required.
 
 Allowed values: Standard_S1, Free_F1{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="capacity_python">
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optional, integer. The unit count of SignalR resource. 1 by default.
 
 If present, following values are allowed:
     Free: 1
     Standard: 1,2,5,10,20,50,100{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="family_python">
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional string. For future use.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="size_python">
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional string. For future use.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional tier of this particular SKU. 'Standard' or 'Free'. 
 
 `Basic` is deprecated, use `Standard` instead.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="serverlessupstreamsettings">Serverless<wbr>Upstream<wbr>Settings</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3087,15 +2830,13 @@ If present, following values are allowed:
             title="Optional">
         <span id="templates_csharp">
 <a href="#templates_csharp" style="color: inherit; text-decoration: inherit;">Templates</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#upstreamtemplate">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Upstream<wbr>Template<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of Upstream URL templates. Order matters, and the first matching template takes effects.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3104,15 +2845,13 @@ If present, following values are allowed:
             title="Optional">
         <span id="templates_go">
 <a href="#templates_go" style="color: inherit; text-decoration: inherit;">Templates</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#upstreamtemplate">[]Upstream<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of Upstream URL templates. Order matters, and the first matching template takes effects.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3121,15 +2860,13 @@ If present, following values are allowed:
             title="Optional">
         <span id="templates_nodejs">
 <a href="#templates_nodejs" style="color: inherit; text-decoration: inherit;">templates</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#upstreamtemplate">Upstream<wbr>Template[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of Upstream URL templates. Order matters, and the first matching template takes effects.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3138,26 +2875,15 @@ If present, following values are allowed:
             title="Optional">
         <span id="templates_python">
 <a href="#templates_python" style="color: inherit; text-decoration: inherit;">templates</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#upstreamtemplate">Sequence[Upstream<wbr>Template<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of Upstream URL templates. Order matters, and the first matching template takes effects.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="serverlessupstreamsettingsresponse">Serverless<wbr>Upstream<wbr>Settings<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3166,15 +2892,13 @@ If present, following values are allowed:
             title="Optional">
         <span id="templates_csharp">
 <a href="#templates_csharp" style="color: inherit; text-decoration: inherit;">Templates</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#upstreamtemplateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Upstream<wbr>Template<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of Upstream URL templates. Order matters, and the first matching template takes effects.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3183,15 +2907,13 @@ If present, following values are allowed:
             title="Optional">
         <span id="templates_go">
 <a href="#templates_go" style="color: inherit; text-decoration: inherit;">Templates</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#upstreamtemplateresponse">[]Upstream<wbr>Template<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of Upstream URL templates. Order matters, and the first matching template takes effects.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3200,15 +2922,13 @@ If present, following values are allowed:
             title="Optional">
         <span id="templates_nodejs">
 <a href="#templates_nodejs" style="color: inherit; text-decoration: inherit;">templates</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#upstreamtemplateresponse">Upstream<wbr>Template<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of Upstream URL templates. Order matters, and the first matching template takes effects.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3217,27 +2937,54 @@ If present, following values are allowed:
             title="Optional">
         <span id="templates_python">
 <a href="#templates_python" style="color: inherit; text-decoration: inherit;">templates</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#upstreamtemplateresponse">Sequence[Upstream<wbr>Template<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of Upstream URL templates. Order matters, and the first matching template takes effects.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="servicekind">Service<wbr>Kind</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Signal<wbr>R</dt>
+    <dd>SignalR</dd>
+    <dt>Raw<wbr>Web<wbr>Sockets</dt>
+    <dd>RawWebSockets</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Service<wbr>Kind<wbr>Signal<wbr>R</dt>
+    <dd>SignalR</dd>
+    <dt>Service<wbr>Kind<wbr>Raw<wbr>Web<wbr>Sockets</dt>
+    <dd>RawWebSockets</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Signal<wbr>R</dt>
+    <dd>SignalR</dd>
+    <dt>Raw<wbr>Web<wbr>Sockets</dt>
+    <dd>RawWebSockets</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>SIGNAL_R</dt>
+    <dd>SignalR</dd>
+    <dt>RAW_WEB_SOCKETS</dt>
+    <dd>RawWebSockets</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="signalrcorssettings">Signal<wbr>RCors<wbr>Settings</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3245,15 +2992,13 @@ If present, following values are allowed:
             title="Optional">
         <span id="allowedorigins_csharp">
 <a href="#allowedorigins_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Origins</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of origins that should be allowed to make cross-origin calls (for example: http://example.com:12345). Use "*" to allow all. If omitted, allow all by default.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3262,15 +3007,13 @@ If present, following values are allowed:
             title="Optional">
         <span id="allowedorigins_go">
 <a href="#allowedorigins_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Origins</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of origins that should be allowed to make cross-origin calls (for example: http://example.com:12345). Use "*" to allow all. If omitted, allow all by default.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3279,15 +3022,13 @@ If present, following values are allowed:
             title="Optional">
         <span id="allowedorigins_nodejs">
 <a href="#allowedorigins_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of origins that should be allowed to make cross-origin calls (for example: http://example.com:12345). Use "*" to allow all. If omitted, allow all by default.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3296,27 +3037,16 @@ If present, following values are allowed:
             title="Optional">
         <span id="allowed_origins_python">
 <a href="#allowed_origins_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>origins</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of origins that should be allowed to make cross-origin calls (for example: http://example.com:12345). Use "*" to allow all. If omitted, allow all by default.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="signalrcorssettingsresponse">Signal<wbr>RCors<wbr>Settings<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3324,15 +3054,13 @@ If present, following values are allowed:
             title="Optional">
         <span id="allowedorigins_csharp">
 <a href="#allowedorigins_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Origins</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of origins that should be allowed to make cross-origin calls (for example: http://example.com:12345). Use "*" to allow all. If omitted, allow all by default.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3341,15 +3069,13 @@ If present, following values are allowed:
             title="Optional">
         <span id="allowedorigins_go">
 <a href="#allowedorigins_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Origins</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of origins that should be allowed to make cross-origin calls (for example: http://example.com:12345). Use "*" to allow all. If omitted, allow all by default.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3358,15 +3084,13 @@ If present, following values are allowed:
             title="Optional">
         <span id="allowedorigins_nodejs">
 <a href="#allowedorigins_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of origins that should be allowed to make cross-origin calls (for example: http://example.com:12345). Use "*" to allow all. If omitted, allow all by default.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3375,27 +3099,16 @@ If present, following values are allowed:
             title="Optional">
         <span id="allowed_origins_python">
 <a href="#allowed_origins_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>origins</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Gets or sets the list of origins that should be allowed to make cross-origin calls (for example: http://example.com:12345). Use "*" to allow all. If omitted, allow all by default.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="signalrfeature">Signal<wbr>RFeature</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3403,37 +3116,33 @@ If present, following values are allowed:
             title="Required">
         <span id="flag_csharp">
 <a href="#flag_csharp" style="color: inherit; text-decoration: inherit;">Flag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Feature<wbr>Flags</span>
+        <span class="property-type">string | <a href="#featureflags">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Feature<wbr>Flags</a></span>
     </dt>
     <dd>{{% md %}}FeatureFlags is the supported features of Azure SignalR service.
 - ServiceMode: Flag for backend server for SignalR service. Values allowed: "Default": have your own backend server; "Serverless": your application doesn't have a backend server; "Classic": for backward compatibility. Support both Default and Serverless mode but not recommended; "PredefinedOnly": for future use.
 - EnableConnectivityLogs: "true"/"false", to enable/disable the connectivity log category respectively.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the feature flag. See Azure SignalR service document https://docs.microsoft.com/azure/azure-signalr/ for allowed values.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Optional properties related to this feature.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3442,37 +3151,33 @@ If present, following values are allowed:
             title="Required">
         <span id="flag_go">
 <a href="#flag_go" style="color: inherit; text-decoration: inherit;">Flag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#featureflags">Feature<wbr>Flags</a></span>
     </dt>
     <dd>{{% md %}}FeatureFlags is the supported features of Azure SignalR service.
 - ServiceMode: Flag for backend server for SignalR service. Values allowed: "Default": have your own backend server; "Serverless": your application doesn't have a backend server; "Classic": for backward compatibility. Support both Default and Serverless mode but not recommended; "PredefinedOnly": for future use.
 - EnableConnectivityLogs: "true"/"false", to enable/disable the connectivity log category respectively.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the feature flag. See Azure SignalR service document https://docs.microsoft.com/azure/azure-signalr/ for allowed values.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Optional properties related to this feature.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3481,37 +3186,33 @@ If present, following values are allowed:
             title="Required">
         <span id="flag_nodejs">
 <a href="#flag_nodejs" style="color: inherit; text-decoration: inherit;">flag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Feature<wbr>Flags</span>
+        <span class="property-type">string | <a href="#featureflags">Feature<wbr>Flags</a></span>
     </dt>
     <dd>{{% md %}}FeatureFlags is the supported features of Azure SignalR service.
 - ServiceMode: Flag for backend server for SignalR service. Values allowed: "Default": have your own backend server; "Serverless": your application doesn't have a backend server; "Classic": for backward compatibility. Support both Default and Serverless mode but not recommended; "PredefinedOnly": for future use.
 - EnableConnectivityLogs: "true"/"false", to enable/disable the connectivity log category respectively.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the feature flag. See Azure SignalR service document https://docs.microsoft.com/azure/azure-signalr/ for allowed values.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional properties related to this feature.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3520,49 +3221,36 @@ If present, following values are allowed:
             title="Required">
         <span id="flag_python">
 <a href="#flag_python" style="color: inherit; text-decoration: inherit;">flag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Feature<wbr>Flags</span>
+        <span class="property-type">str | <a href="#featureflags">Feature<wbr>Flags</a></span>
     </dt>
     <dd>{{% md %}}FeatureFlags is the supported features of Azure SignalR service.
 - ServiceMode: Flag for backend server for SignalR service. Values allowed: "Default": have your own backend server; "Serverless": your application doesn't have a backend server; "Classic": for backward compatibility. Support both Default and Serverless mode but not recommended; "PredefinedOnly": for future use.
 - EnableConnectivityLogs: "true"/"false", to enable/disable the connectivity log category respectively.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value of the feature flag. See Azure SignalR service document https://docs.microsoft.com/azure/azure-signalr/ for allowed values.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional properties related to this feature.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="signalrfeatureresponse">Signal<wbr>RFeature<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3570,37 +3258,33 @@ If present, following values are allowed:
             title="Required">
         <span id="flag_csharp">
 <a href="#flag_csharp" style="color: inherit; text-decoration: inherit;">Flag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}FeatureFlags is the supported features of Azure SignalR service.
 - ServiceMode: Flag for backend server for SignalR service. Values allowed: "Default": have your own backend server; "Serverless": your application doesn't have a backend server; "Classic": for backward compatibility. Support both Default and Serverless mode but not recommended; "PredefinedOnly": for future use.
 - EnableConnectivityLogs: "true"/"false", to enable/disable the connectivity log category respectively.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the feature flag. See Azure SignalR service document https://docs.microsoft.com/azure/azure-signalr/ for allowed values.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Optional properties related to this feature.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3609,37 +3293,33 @@ If present, following values are allowed:
             title="Required">
         <span id="flag_go">
 <a href="#flag_go" style="color: inherit; text-decoration: inherit;">Flag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}FeatureFlags is the supported features of Azure SignalR service.
 - ServiceMode: Flag for backend server for SignalR service. Values allowed: "Default": have your own backend server; "Serverless": your application doesn't have a backend server; "Classic": for backward compatibility. Support both Default and Serverless mode but not recommended; "PredefinedOnly": for future use.
 - EnableConnectivityLogs: "true"/"false", to enable/disable the connectivity log category respectively.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the feature flag. See Azure SignalR service document https://docs.microsoft.com/azure/azure-signalr/ for allowed values.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Optional properties related to this feature.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3648,37 +3328,33 @@ If present, following values are allowed:
             title="Required">
         <span id="flag_nodejs">
 <a href="#flag_nodejs" style="color: inherit; text-decoration: inherit;">flag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}FeatureFlags is the supported features of Azure SignalR service.
 - ServiceMode: Flag for backend server for SignalR service. Values allowed: "Default": have your own backend server; "Serverless": your application doesn't have a backend server; "Classic": for backward compatibility. Support both Default and Serverless mode but not recommended; "PredefinedOnly": for future use.
 - EnableConnectivityLogs: "true"/"false", to enable/disable the connectivity log category respectively.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the feature flag. See Azure SignalR service document https://docs.microsoft.com/azure/azure-signalr/ for allowed values.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Optional properties related to this feature.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3687,48 +3363,35 @@ If present, following values are allowed:
             title="Required">
         <span id="flag_python">
 <a href="#flag_python" style="color: inherit; text-decoration: inherit;">flag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}FeatureFlags is the supported features of Azure SignalR service.
 - ServiceMode: Flag for backend server for SignalR service. Values allowed: "Default": have your own backend server; "Serverless": your application doesn't have a backend server; "Classic": for backward compatibility. Support both Default and Serverless mode but not recommended; "PredefinedOnly": for future use.
 - EnableConnectivityLogs: "true"/"false", to enable/disable the connectivity log category respectively.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value of the feature flag. See Azure SignalR service document https://docs.microsoft.com/azure/azure-signalr/ for allowed values.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Optional properties related to this feature.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="signalrnetworkacls">Signal<wbr>RNetwork<wbr>ACLs</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3737,35 +3400,31 @@ If present, following values are allowed:
             title="Optional">
         <span id="defaultaction_csharp">
 <a href="#defaultaction_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>ACLAction</span>
+        <span class="property-type">string | <a href="#aclaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>ACLAction</a></span>
     </dt>
     <dd>{{% md %}}Default action when no other rule matches{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="privateendpoints_csharp">
 <a href="#privateendpoints_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointacl">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>ACLArgs&gt;</a></span>
     </dt>
     <dd>{{% md %}}ACLs for requests from private endpoints{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publicnetwork_csharp">
 <a href="#publicnetwork_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkacl">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Network<wbr>ACLArgs</a></span>
     </dt>
     <dd>{{% md %}}ACL for requests from public network{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3774,35 +3433,31 @@ If present, following values are allowed:
             title="Optional">
         <span id="defaultaction_go">
 <a href="#defaultaction_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#aclaction">ACLAction</a></span>
     </dt>
     <dd>{{% md %}}Default action when no other rule matches{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="privateendpoints_go">
 <a href="#privateendpoints_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointacl">[]Private<wbr>Endpoint<wbr>ACL</a></span>
     </dt>
     <dd>{{% md %}}ACLs for requests from private endpoints{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publicnetwork_go">
 <a href="#publicnetwork_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkacl">Network<wbr>ACL</a></span>
     </dt>
     <dd>{{% md %}}ACL for requests from public network{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3811,35 +3466,31 @@ If present, following values are allowed:
             title="Optional">
         <span id="defaultaction_nodejs">
 <a href="#defaultaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>ACLAction</span>
+        <span class="property-type">string | <a href="#aclaction">ACLAction</a></span>
     </dt>
     <dd>{{% md %}}Default action when no other rule matches{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="privateendpoints_nodejs">
 <a href="#privateendpoints_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointacl">Private<wbr>Endpoint<wbr>ACL[]</a></span>
     </dt>
     <dd>{{% md %}}ACLs for requests from private endpoints{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publicnetwork_nodejs">
 <a href="#publicnetwork_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkacl">Network<wbr>ACL</a></span>
     </dt>
     <dd>{{% md %}}ACL for requests from public network{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3848,46 +3499,33 @@ If present, following values are allowed:
             title="Optional">
         <span id="default_action_python">
 <a href="#default_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">ACLAction</span>
+        <span class="property-type">str | <a href="#aclaction">ACLAction</a></span>
     </dt>
     <dd>{{% md %}}Default action when no other rule matches{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="private_endpoints_python">
 <a href="#private_endpoints_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointacl">Sequence[Private<wbr>Endpoint<wbr>ACLArgs]</a></span>
     </dt>
     <dd>{{% md %}}ACLs for requests from private endpoints{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="public_network_python">
 <a href="#public_network_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkacl">Network<wbr>ACLArgs</a></span>
     </dt>
     <dd>{{% md %}}ACL for requests from public network{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="signalrnetworkaclsresponse">Signal<wbr>RNetwork<wbr>ACLs<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3896,35 +3534,31 @@ If present, following values are allowed:
             title="Optional">
         <span id="defaultaction_csharp">
 <a href="#defaultaction_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default action when no other rule matches{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="privateendpoints_csharp">
 <a href="#privateendpoints_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointaclresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>ACLResponse<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}ACLs for requests from private endpoints{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publicnetwork_csharp">
 <a href="#publicnetwork_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkaclresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Signal<wbr>RService.<wbr>Inputs.<wbr>Network<wbr>ACLResponse<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ACL for requests from public network{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3933,35 +3567,31 @@ If present, following values are allowed:
             title="Optional">
         <span id="defaultaction_go">
 <a href="#defaultaction_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default action when no other rule matches{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="privateendpoints_go">
 <a href="#privateendpoints_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointaclresponse">[]Private<wbr>Endpoint<wbr>ACLResponse</a></span>
     </dt>
     <dd>{{% md %}}ACLs for requests from private endpoints{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publicnetwork_go">
 <a href="#publicnetwork_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkaclresponse">Network<wbr>ACLResponse</a></span>
     </dt>
     <dd>{{% md %}}ACL for requests from public network{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3970,35 +3600,31 @@ If present, following values are allowed:
             title="Optional">
         <span id="defaultaction_nodejs">
 <a href="#defaultaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default action when no other rule matches{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="privateendpoints_nodejs">
 <a href="#privateendpoints_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointaclresponse">Private<wbr>Endpoint<wbr>ACLResponse[]</a></span>
     </dt>
     <dd>{{% md %}}ACLs for requests from private endpoints{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publicnetwork_nodejs">
 <a href="#publicnetwork_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkaclresponse">Network<wbr>ACLResponse</a></span>
     </dt>
     <dd>{{% md %}}ACL for requests from public network{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4007,47 +3633,134 @@ If present, following values are allowed:
             title="Optional">
         <span id="default_action_python">
 <a href="#default_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Default action when no other rule matches{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="private_endpoints_python">
 <a href="#private_endpoints_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointaclresponse">Sequence[Private<wbr>Endpoint<wbr>ACLResponse<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}ACLs for requests from private endpoints{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="public_network_python">
 <a href="#public_network_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkaclresponse">Network<wbr>ACLResponse<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ACL for requests from public network{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="signalrrequesttype">Signal<wbr>RRequest<wbr>Type</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Client<wbr>Connection</dt>
+    <dd>ClientConnection</dd>
+    <dt>Server<wbr>Connection</dt>
+    <dd>ServerConnection</dd>
+    <dt>RESTAPI</dt>
+    <dd>RESTAPI</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Signal<wbr>RRequest<wbr>Type<wbr>Client<wbr>Connection</dt>
+    <dd>ClientConnection</dd>
+    <dt>Signal<wbr>RRequest<wbr>Type<wbr>Server<wbr>Connection</dt>
+    <dd>ServerConnection</dd>
+    <dt>Signal<wbr>RRequest<wbr>Type<wbr>RESTAPI</dt>
+    <dd>RESTAPI</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Client<wbr>Connection</dt>
+    <dd>ClientConnection</dd>
+    <dt>Server<wbr>Connection</dt>
+    <dd>ServerConnection</dd>
+    <dt>RESTAPI</dt>
+    <dd>RESTAPI</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>CLIENT_CONNECTION</dt>
+    <dd>ClientConnection</dd>
+    <dt>SERVER_CONNECTION</dt>
+    <dd>ServerConnection</dd>
+    <dt>RESTAPI</dt>
+    <dd>RESTAPI</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="signalrskutier">Signal<wbr>RSku<wbr>Tier</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Free</dt>
+    <dd>Free</dd>
+    <dt>Basic</dt>
+    <dd>Basic</dd>
+    <dt>Standard</dt>
+    <dd>Standard</dd>
+    <dt>Premium</dt>
+    <dd>Premium</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Signal<wbr>RSku<wbr>Tier<wbr>Free</dt>
+    <dd>Free</dd>
+    <dt>Signal<wbr>RSku<wbr>Tier<wbr>Basic</dt>
+    <dd>Basic</dd>
+    <dt>Signal<wbr>RSku<wbr>Tier<wbr>Standard</dt>
+    <dd>Standard</dd>
+    <dt>Signal<wbr>RSku<wbr>Tier<wbr>Premium</dt>
+    <dd>Premium</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Free</dt>
+    <dd>Free</dd>
+    <dt>Basic</dt>
+    <dd>Basic</dd>
+    <dt>Standard</dt>
+    <dd>Standard</dd>
+    <dt>Premium</dt>
+    <dd>Premium</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>FREE</dt>
+    <dd>Free</dd>
+    <dt>BASIC</dt>
+    <dd>Basic</dd>
+    <dt>STANDARD</dt>
+    <dd>Standard</dd>
+    <dt>PREMIUM</dt>
+    <dd>Premium</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="upstreamtemplate">Upstream<wbr>Template</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4055,58 +3768,53 @@ If present, following values are allowed:
             title="Required">
         <span id="urltemplate_csharp">
 <a href="#urltemplate_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the Upstream URL template. You can use 3 predefined parameters {hub}, {category} {event} inside the template, the value of the Upstream URL is dynamically calculated when the client request comes in.
 For example, if the urlTemplate is `http://example.com/{hub}/api/{event}`, with a client request from hub `chat` connects, it will first POST to this URL: `http://example.com/chat/api/connect`.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="categorypattern_csharp">
 <a href="#categorypattern_csharp" style="color: inherit; text-decoration: inherit;">Category<wbr>Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the matching pattern for category names. If not set, it matches any category.
 There are 3 kind of patterns supported:
     1. "*", it to matches any category name
     2. Combine multiple categories with ",", for example "connections,messages", it matches category "connections" and "messages"
     3. The single category name, for example, "connections", it matches the category "connections"{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="eventpattern_csharp">
 <a href="#eventpattern_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the matching pattern for event names. If not set, it matches any event.
 There are 3 kind of patterns supported:
     1. "*", it to matches any event name
     2. Combine multiple events with ",", for example "connect,disconnect", it matches event "connect" and "disconnect"
     3. The single event name, for example, "connect", it matches "connect"{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hubpattern_csharp">
 <a href="#hubpattern_csharp" style="color: inherit; text-decoration: inherit;">Hub<wbr>Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the matching pattern for hub names. If not set, it matches any hub.
 There are 3 kind of patterns supported:
     1. "*", it to matches any hub name
     2. Combine multiple hubs with ",", for example "hub1,hub2", it matches "hub1" and "hub2"
     3. The single hub name, for example, "hub1", it matches "hub1"{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4115,58 +3823,53 @@ There are 3 kind of patterns supported:
             title="Required">
         <span id="urltemplate_go">
 <a href="#urltemplate_go" style="color: inherit; text-decoration: inherit;">Url<wbr>Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the Upstream URL template. You can use 3 predefined parameters {hub}, {category} {event} inside the template, the value of the Upstream URL is dynamically calculated when the client request comes in.
 For example, if the urlTemplate is `http://example.com/{hub}/api/{event}`, with a client request from hub `chat` connects, it will first POST to this URL: `http://example.com/chat/api/connect`.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="categorypattern_go">
 <a href="#categorypattern_go" style="color: inherit; text-decoration: inherit;">Category<wbr>Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the matching pattern for category names. If not set, it matches any category.
 There are 3 kind of patterns supported:
     1. "*", it to matches any category name
     2. Combine multiple categories with ",", for example "connections,messages", it matches category "connections" and "messages"
     3. The single category name, for example, "connections", it matches the category "connections"{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="eventpattern_go">
 <a href="#eventpattern_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the matching pattern for event names. If not set, it matches any event.
 There are 3 kind of patterns supported:
     1. "*", it to matches any event name
     2. Combine multiple events with ",", for example "connect,disconnect", it matches event "connect" and "disconnect"
     3. The single event name, for example, "connect", it matches "connect"{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hubpattern_go">
 <a href="#hubpattern_go" style="color: inherit; text-decoration: inherit;">Hub<wbr>Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the matching pattern for hub names. If not set, it matches any hub.
 There are 3 kind of patterns supported:
     1. "*", it to matches any hub name
     2. Combine multiple hubs with ",", for example "hub1,hub2", it matches "hub1" and "hub2"
     3. The single hub name, for example, "hub1", it matches "hub1"{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4175,58 +3878,53 @@ There are 3 kind of patterns supported:
             title="Required">
         <span id="urltemplate_nodejs">
 <a href="#urltemplate_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the Upstream URL template. You can use 3 predefined parameters {hub}, {category} {event} inside the template, the value of the Upstream URL is dynamically calculated when the client request comes in.
 For example, if the urlTemplate is `http://example.com/{hub}/api/{event}`, with a client request from hub `chat` connects, it will first POST to this URL: `http://example.com/chat/api/connect`.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="categorypattern_nodejs">
 <a href="#categorypattern_nodejs" style="color: inherit; text-decoration: inherit;">category<wbr>Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the matching pattern for category names. If not set, it matches any category.
 There are 3 kind of patterns supported:
     1. "*", it to matches any category name
     2. Combine multiple categories with ",", for example "connections,messages", it matches category "connections" and "messages"
     3. The single category name, for example, "connections", it matches the category "connections"{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="eventpattern_nodejs">
 <a href="#eventpattern_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the matching pattern for event names. If not set, it matches any event.
 There are 3 kind of patterns supported:
     1. "*", it to matches any event name
     2. Combine multiple events with ",", for example "connect,disconnect", it matches event "connect" and "disconnect"
     3. The single event name, for example, "connect", it matches "connect"{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hubpattern_nodejs">
 <a href="#hubpattern_nodejs" style="color: inherit; text-decoration: inherit;">hub<wbr>Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the matching pattern for hub names. If not set, it matches any hub.
 There are 3 kind of patterns supported:
     1. "*", it to matches any hub name
     2. Combine multiple hubs with ",", for example "hub1,hub2", it matches "hub1" and "hub2"
     3. The single hub name, for example, "hub1", it matches "hub1"{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4235,70 +3933,56 @@ There are 3 kind of patterns supported:
             title="Required">
         <span id="url_template_python">
 <a href="#url_template_python" style="color: inherit; text-decoration: inherit;">url_<wbr>template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the Upstream URL template. You can use 3 predefined parameters {hub}, {category} {event} inside the template, the value of the Upstream URL is dynamically calculated when the client request comes in.
 For example, if the urlTemplate is `http://example.com/{hub}/api/{event}`, with a client request from hub `chat` connects, it will first POST to this URL: `http://example.com/chat/api/connect`.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="category_pattern_python">
 <a href="#category_pattern_python" style="color: inherit; text-decoration: inherit;">category_<wbr>pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the matching pattern for category names. If not set, it matches any category.
 There are 3 kind of patterns supported:
     1. "*", it to matches any category name
     2. Combine multiple categories with ",", for example "connections,messages", it matches category "connections" and "messages"
     3. The single category name, for example, "connections", it matches the category "connections"{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="event_pattern_python">
 <a href="#event_pattern_python" style="color: inherit; text-decoration: inherit;">event_<wbr>pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the matching pattern for event names. If not set, it matches any event.
 There are 3 kind of patterns supported:
     1. "*", it to matches any event name
     2. Combine multiple events with ",", for example "connect,disconnect", it matches event "connect" and "disconnect"
     3. The single event name, for example, "connect", it matches "connect"{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hub_pattern_python">
 <a href="#hub_pattern_python" style="color: inherit; text-decoration: inherit;">hub_<wbr>pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the matching pattern for hub names. If not set, it matches any hub.
 There are 3 kind of patterns supported:
     1. "*", it to matches any hub name
     2. Combine multiple hubs with ",", for example "hub1,hub2", it matches "hub1" and "hub2"
     3. The single hub name, for example, "hub1", it matches "hub1"{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="upstreamtemplateresponse">Upstream<wbr>Template<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4306,58 +3990,53 @@ There are 3 kind of patterns supported:
             title="Required">
         <span id="urltemplate_csharp">
 <a href="#urltemplate_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the Upstream URL template. You can use 3 predefined parameters {hub}, {category} {event} inside the template, the value of the Upstream URL is dynamically calculated when the client request comes in.
 For example, if the urlTemplate is `http://example.com/{hub}/api/{event}`, with a client request from hub `chat` connects, it will first POST to this URL: `http://example.com/chat/api/connect`.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="categorypattern_csharp">
 <a href="#categorypattern_csharp" style="color: inherit; text-decoration: inherit;">Category<wbr>Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the matching pattern for category names. If not set, it matches any category.
 There are 3 kind of patterns supported:
     1. "*", it to matches any category name
     2. Combine multiple categories with ",", for example "connections,messages", it matches category "connections" and "messages"
     3. The single category name, for example, "connections", it matches the category "connections"{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="eventpattern_csharp">
 <a href="#eventpattern_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the matching pattern for event names. If not set, it matches any event.
 There are 3 kind of patterns supported:
     1. "*", it to matches any event name
     2. Combine multiple events with ",", for example "connect,disconnect", it matches event "connect" and "disconnect"
     3. The single event name, for example, "connect", it matches "connect"{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hubpattern_csharp">
 <a href="#hubpattern_csharp" style="color: inherit; text-decoration: inherit;">Hub<wbr>Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the matching pattern for hub names. If not set, it matches any hub.
 There are 3 kind of patterns supported:
     1. "*", it to matches any hub name
     2. Combine multiple hubs with ",", for example "hub1,hub2", it matches "hub1" and "hub2"
     3. The single hub name, for example, "hub1", it matches "hub1"{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4366,58 +4045,53 @@ There are 3 kind of patterns supported:
             title="Required">
         <span id="urltemplate_go">
 <a href="#urltemplate_go" style="color: inherit; text-decoration: inherit;">Url<wbr>Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the Upstream URL template. You can use 3 predefined parameters {hub}, {category} {event} inside the template, the value of the Upstream URL is dynamically calculated when the client request comes in.
 For example, if the urlTemplate is `http://example.com/{hub}/api/{event}`, with a client request from hub `chat` connects, it will first POST to this URL: `http://example.com/chat/api/connect`.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="categorypattern_go">
 <a href="#categorypattern_go" style="color: inherit; text-decoration: inherit;">Category<wbr>Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the matching pattern for category names. If not set, it matches any category.
 There are 3 kind of patterns supported:
     1. "*", it to matches any category name
     2. Combine multiple categories with ",", for example "connections,messages", it matches category "connections" and "messages"
     3. The single category name, for example, "connections", it matches the category "connections"{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="eventpattern_go">
 <a href="#eventpattern_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the matching pattern for event names. If not set, it matches any event.
 There are 3 kind of patterns supported:
     1. "*", it to matches any event name
     2. Combine multiple events with ",", for example "connect,disconnect", it matches event "connect" and "disconnect"
     3. The single event name, for example, "connect", it matches "connect"{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hubpattern_go">
 <a href="#hubpattern_go" style="color: inherit; text-decoration: inherit;">Hub<wbr>Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the matching pattern for hub names. If not set, it matches any hub.
 There are 3 kind of patterns supported:
     1. "*", it to matches any hub name
     2. Combine multiple hubs with ",", for example "hub1,hub2", it matches "hub1" and "hub2"
     3. The single hub name, for example, "hub1", it matches "hub1"{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4426,58 +4100,53 @@ There are 3 kind of patterns supported:
             title="Required">
         <span id="urltemplate_nodejs">
 <a href="#urltemplate_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the Upstream URL template. You can use 3 predefined parameters {hub}, {category} {event} inside the template, the value of the Upstream URL is dynamically calculated when the client request comes in.
 For example, if the urlTemplate is `http://example.com/{hub}/api/{event}`, with a client request from hub `chat` connects, it will first POST to this URL: `http://example.com/chat/api/connect`.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="categorypattern_nodejs">
 <a href="#categorypattern_nodejs" style="color: inherit; text-decoration: inherit;">category<wbr>Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the matching pattern for category names. If not set, it matches any category.
 There are 3 kind of patterns supported:
     1. "*", it to matches any category name
     2. Combine multiple categories with ",", for example "connections,messages", it matches category "connections" and "messages"
     3. The single category name, for example, "connections", it matches the category "connections"{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="eventpattern_nodejs">
 <a href="#eventpattern_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the matching pattern for event names. If not set, it matches any event.
 There are 3 kind of patterns supported:
     1. "*", it to matches any event name
     2. Combine multiple events with ",", for example "connect,disconnect", it matches event "connect" and "disconnect"
     3. The single event name, for example, "connect", it matches "connect"{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hubpattern_nodejs">
 <a href="#hubpattern_nodejs" style="color: inherit; text-decoration: inherit;">hub<wbr>Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the matching pattern for hub names. If not set, it matches any hub.
 There are 3 kind of patterns supported:
     1. "*", it to matches any hub name
     2. Combine multiple hubs with ",", for example "hub1,hub2", it matches "hub1" and "hub2"
     3. The single hub name, for example, "hub1", it matches "hub1"{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4486,66 +4155,53 @@ There are 3 kind of patterns supported:
             title="Required">
         <span id="url_template_python">
 <a href="#url_template_python" style="color: inherit; text-decoration: inherit;">url_<wbr>template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the Upstream URL template. You can use 3 predefined parameters {hub}, {category} {event} inside the template, the value of the Upstream URL is dynamically calculated when the client request comes in.
 For example, if the urlTemplate is `http://example.com/{hub}/api/{event}`, with a client request from hub `chat` connects, it will first POST to this URL: `http://example.com/chat/api/connect`.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="category_pattern_python">
 <a href="#category_pattern_python" style="color: inherit; text-decoration: inherit;">category_<wbr>pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the matching pattern for category names. If not set, it matches any category.
 There are 3 kind of patterns supported:
     1. "*", it to matches any category name
     2. Combine multiple categories with ",", for example "connections,messages", it matches category "connections" and "messages"
     3. The single category name, for example, "connections", it matches the category "connections"{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="event_pattern_python">
 <a href="#event_pattern_python" style="color: inherit; text-decoration: inherit;">event_<wbr>pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the matching pattern for event names. If not set, it matches any event.
 There are 3 kind of patterns supported:
     1. "*", it to matches any event name
     2. Combine multiple events with ",", for example "connect,disconnect", it matches event "connect" and "disconnect"
     3. The single event name, for example, "connect", it matches "connect"{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hub_pattern_python">
 <a href="#hub_pattern_python" style="color: inherit; text-decoration: inherit;">hub_<wbr>pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the matching pattern for hub names. If not set, it matches any hub.
 There are 3 kind of patterns supported:
     1. "*", it to matches any hub name
     2. Combine multiple hubs with ",", for example "hub1,hub2", it matches "hub1" and "hub2"
     3. The single hub name, for example, "hub1", it matches "hub1"{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 
 
 <h2 id="package-details">Package Details</h2>

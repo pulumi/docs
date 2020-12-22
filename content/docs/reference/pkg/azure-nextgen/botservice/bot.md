@@ -2,7 +2,7 @@
 ---
 title: "Bot"
 title_tag: "azure-nextgen.botservice.Bot"
-meta_desc: "Explore the Bot resource of the botservice module, including examples, input properties, output properties, lookup functions, and supporting types. Bot resource definition"
+meta_desc: "Documentation for the azure-nextgen.botservice.Bot resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -11,6 +11,7 @@ meta_desc: "Explore the Bot resource of the botservice module, including example
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Bot resource definition
+Latest API Version: 2020-06-02.
 
 
 {{% examples %}}
@@ -34,6 +35,7 @@ class MyStack : Stack
             Location = "West US",
             Properties = new AzureNextGen.BotService.Latest.Inputs.BotPropertiesArgs
             {
+                CmekKeyVaultUrl = "https://myCmekKey",
                 Description = "The description of the bot",
                 DeveloperAppInsightKey = "appinsightskey",
                 DeveloperAppInsightsApiKey = "appinsightsapikey",
@@ -41,6 +43,7 @@ class MyStack : Stack
                 DisplayName = "The Name of the bot",
                 Endpoint = "http://mybot.coffee",
                 IconUrl = "http://myicon",
+                IsCmekEnabled = true,
                 LuisAppIds = 
                 {
                     "luisappid1",
@@ -86,6 +89,7 @@ func main() {
 			Kind:     pulumi.String("sdk"),
 			Location: pulumi.String("West US"),
 			Properties: &botservice.BotPropertiesArgs{
+				CmekKeyVaultUrl:                   pulumi.String("https://myCmekKey"),
 				Description:                       pulumi.String("The description of the bot"),
 				DeveloperAppInsightKey:            pulumi.String("appinsightskey"),
 				DeveloperAppInsightsApiKey:        pulumi.String("appinsightsapikey"),
@@ -93,6 +97,7 @@ func main() {
 				DisplayName:                       pulumi.String("The Name of the bot"),
 				Endpoint:                          pulumi.String("http://mybot.coffee"),
 				IconUrl:                           pulumi.String("http://myicon"),
+				IsCmekEnabled:                     pulumi.Bool(true),
 				LuisAppIds: pulumi.StringArray{
 					pulumi.String("luisappid1"),
 					pulumi.String("luisappid2"),
@@ -132,6 +137,7 @@ bot = azure_nextgen.botservice.latest.Bot("bot",
     kind="sdk",
     location="West US",
     properties=azure_nextgen.botservice.latest.BotPropertiesArgs(
+        cmek_key_vault_url="https://myCmekKey",
         description="The description of the bot",
         developer_app_insight_key="appinsightskey",
         developer_app_insights_api_key="appinsightsapikey",
@@ -139,6 +145,7 @@ bot = azure_nextgen.botservice.latest.Bot("bot",
         display_name="The Name of the bot",
         endpoint="http://mybot.coffee",
         icon_url="http://myicon",
+        is_cmek_enabled=True,
         luis_app_ids=[
             "luisappid1",
             "luisappid2",
@@ -171,6 +178,7 @@ const bot = new azure_nextgen.botservice.latest.Bot("bot", {
     kind: "sdk",
     location: "West US",
     properties: {
+        cmekKeyVaultUrl: "https://myCmekKey",
         description: "The description of the bot",
         developerAppInsightKey: "appinsightskey",
         developerAppInsightsApiKey: "appinsightsapikey",
@@ -178,6 +186,7 @@ const bot = new azure_nextgen.botservice.latest.Bot("bot", {
         displayName: "The Name of the bot",
         endpoint: "http://mybot.coffee",
         iconUrl: "http://myicon",
+        isCmekEnabled: true,
         luisAppIds: [
             "luisappid1",
             "luisappid2",
@@ -208,7 +217,7 @@ const bot = new azure_nextgen.botservice.latest.Bot("bot", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Bot</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">BotArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Bot</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">BotArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -216,11 +225,11 @@ const bot = new azure_nextgen.botservice.latest.Bot("bot", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBot</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">BotArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Bot</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBot</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">BotArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Bot</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Bot</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">BotArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Bot</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">BotArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -231,7 +240,7 @@ const bot = new azure_nextgen.botservice.latest.Bot("bot", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -300,7 +309,7 @@ const bot = new azure_nextgen.botservice.latest.Bot("bot", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -339,7 +348,7 @@ const bot = new azure_nextgen.botservice.latest.Bot("bot", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -380,7 +389,6 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -388,85 +396,76 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Bot resource group in the user subscription.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcename_csharp">
 <a href="#resourcename_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Bot resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Entity Tag{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Kind</span>
+        <span class="property-type">string | <a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Required. Gets or sets the Kind of the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#botproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Bot<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to bot resource{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -475,85 +474,76 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Bot resource group in the user subscription.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcename_go">
 <a href="#resourcename_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Bot resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Entity Tag{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#kind">Kind</a></span>
     </dt>
     <dd>{{% md %}}Required. Gets or sets the Kind of the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#botproperties">Bot<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to bot resource{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sku">Sku</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -562,85 +552,76 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Bot resource group in the user subscription.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcename_nodejs">
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Bot resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Entity Tag{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Kind</span>
+        <span class="property-type">string | <a href="#kind">Kind</a></span>
     </dt>
     <dd>{{% md %}}Required. Gets or sets the Kind of the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#botproperties">Bot<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to bot resource{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sku">Sku</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -649,94 +630,81 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Bot resource group in the user subscription.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_name_python">
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Bot resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Entity Tag{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Kind</span>
+        <span class="property-type">str | <a href="#kind">Kind</a></span>
     </dt>
     <dd>{{% md %}}Required. Gets or sets the Kind of the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#botproperties">Bot<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of properties specific to bot resource{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the SKU of the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Bot resource produces the following output properties:
-
 
 
 
@@ -747,35 +715,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -784,35 +748,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -821,35 +781,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -858,38 +814,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -900,13 +849,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
 <h4 id="botproperties">Bot<wbr>Properties</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -915,105 +859,112 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the bot{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="endpoint_csharp">
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bot's endpoint{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="msaappid_csharp">
 <a href="#msaappid_csharp" style="color: inherit; text-decoration: inherit;">Msa<wbr>App<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Microsoft App Id for the bot{{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cmekkeyvaulturl_csharp">
+<a href="#cmekkeyvaulturl_csharp" style="color: inherit; text-decoration: inherit;">Cmek<wbr>Key<wbr>Vault<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The CMK Url{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the bot{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="developerappinsightkey_csharp">
 <a href="#developerappinsightkey_csharp" style="color: inherit; text-decoration: inherit;">Developer<wbr>App<wbr>Insight<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application Insights key{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="developerappinsightsapikey_csharp">
 <a href="#developerappinsightsapikey_csharp" style="color: inherit; text-decoration: inherit;">Developer<wbr>App<wbr>Insights<wbr>Api<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application Insights Api Key{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="developerappinsightsapplicationid_csharp">
 <a href="#developerappinsightsapplicationid_csharp" style="color: inherit; text-decoration: inherit;">Developer<wbr>App<wbr>Insights<wbr>Application<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application Insights App Id{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iconurl_csharp">
 <a href="#iconurl_csharp" style="color: inherit; text-decoration: inherit;">Icon<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Icon Url of the bot{{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="iscmekenabled_csharp">
+<a href="#iscmekenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Cmek<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="luisappids_csharp">
 <a href="#luisappids_csharp" style="color: inherit; text-decoration: inherit;">Luis<wbr>App<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Collection of LUIS App Ids{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="luiskey_csharp">
 <a href="#luiskey_csharp" style="color: inherit; text-decoration: inherit;">Luis<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The LUIS Key{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1022,105 +973,112 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the bot{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="endpoint_go">
 <a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bot's endpoint{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="msaappid_go">
 <a href="#msaappid_go" style="color: inherit; text-decoration: inherit;">Msa<wbr>App<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Microsoft App Id for the bot{{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cmekkeyvaulturl_go">
+<a href="#cmekkeyvaulturl_go" style="color: inherit; text-decoration: inherit;">Cmek<wbr>Key<wbr>Vault<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The CMK Url{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the bot{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="developerappinsightkey_go">
 <a href="#developerappinsightkey_go" style="color: inherit; text-decoration: inherit;">Developer<wbr>App<wbr>Insight<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application Insights key{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="developerappinsightsapikey_go">
 <a href="#developerappinsightsapikey_go" style="color: inherit; text-decoration: inherit;">Developer<wbr>App<wbr>Insights<wbr>Api<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application Insights Api Key{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="developerappinsightsapplicationid_go">
 <a href="#developerappinsightsapplicationid_go" style="color: inherit; text-decoration: inherit;">Developer<wbr>App<wbr>Insights<wbr>Application<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application Insights App Id{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iconurl_go">
 <a href="#iconurl_go" style="color: inherit; text-decoration: inherit;">Icon<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Icon Url of the bot{{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="iscmekenabled_go">
+<a href="#iscmekenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Cmek<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="luisappids_go">
 <a href="#luisappids_go" style="color: inherit; text-decoration: inherit;">Luis<wbr>App<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Collection of LUIS App Ids{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="luiskey_go">
 <a href="#luiskey_go" style="color: inherit; text-decoration: inherit;">Luis<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The LUIS Key{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1129,105 +1087,112 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the bot{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="endpoint_nodejs">
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bot's endpoint{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="msaappid_nodejs">
 <a href="#msaappid_nodejs" style="color: inherit; text-decoration: inherit;">msa<wbr>App<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Microsoft App Id for the bot{{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cmekkeyvaulturl_nodejs">
+<a href="#cmekkeyvaulturl_nodejs" style="color: inherit; text-decoration: inherit;">cmek<wbr>Key<wbr>Vault<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The CMK Url{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the bot{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="developerappinsightkey_nodejs">
 <a href="#developerappinsightkey_nodejs" style="color: inherit; text-decoration: inherit;">developer<wbr>App<wbr>Insight<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application Insights key{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="developerappinsightsapikey_nodejs">
 <a href="#developerappinsightsapikey_nodejs" style="color: inherit; text-decoration: inherit;">developer<wbr>App<wbr>Insights<wbr>Api<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application Insights Api Key{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="developerappinsightsapplicationid_nodejs">
 <a href="#developerappinsightsapplicationid_nodejs" style="color: inherit; text-decoration: inherit;">developer<wbr>App<wbr>Insights<wbr>Application<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application Insights App Id{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iconurl_nodejs">
 <a href="#iconurl_nodejs" style="color: inherit; text-decoration: inherit;">icon<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Icon Url of the bot{{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="iscmekenabled_nodejs">
+<a href="#iscmekenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Cmek<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="luisappids_nodejs">
 <a href="#luisappids_nodejs" style="color: inherit; text-decoration: inherit;">luis<wbr>App<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Collection of LUIS App Ids{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="luiskey_nodejs">
 <a href="#luiskey_nodejs" style="color: inherit; text-decoration: inherit;">luis<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The LUIS Key{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1236,116 +1201,114 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name of the bot{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="endpoint_python">
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The bot's endpoint{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="msa_app_id_python">
 <a href="#msa_app_id_python" style="color: inherit; text-decoration: inherit;">msa_<wbr>app_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Microsoft App Id for the bot{{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cmek_key_vault_url_python">
+<a href="#cmek_key_vault_url_python" style="color: inherit; text-decoration: inherit;">cmek_<wbr>key_<wbr>vault_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The CMK Url{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the bot{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="developer_app_insight_key_python">
 <a href="#developer_app_insight_key_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>app_<wbr>insight_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Application Insights key{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="developer_app_insights_api_key_python">
 <a href="#developer_app_insights_api_key_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>app_<wbr>insights_<wbr>api_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Application Insights Api Key{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="developer_app_insights_application_id_python">
 <a href="#developer_app_insights_application_id_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>app_<wbr>insights_<wbr>application_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Application Insights App Id{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="icon_url_python">
 <a href="#icon_url_python" style="color: inherit; text-decoration: inherit;">icon_<wbr>url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Icon Url of the bot{{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="is_cmek_enabled_python">
+<a href="#is_cmek_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>cmek_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="luis_app_ids_python">
 <a href="#luis_app_ids_python" style="color: inherit; text-decoration: inherit;">luis_<wbr>app_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Collection of LUIS App Ids{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="luis_key_python">
 <a href="#luis_key_python" style="color: inherit; text-decoration: inherit;">luis_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The LUIS Key{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="botpropertiesresponse">Bot<wbr>Properties<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1354,135 +1317,139 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="configuredchannels_csharp">
 <a href="#configuredchannels_csharp" style="color: inherit; text-decoration: inherit;">Configured<wbr>Channels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Collection of channels for which the bot is configured{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the bot{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="enabledchannels_csharp">
 <a href="#enabledchannels_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Channels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Collection of channels for which the bot is enabled{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="endpoint_csharp">
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bot's endpoint{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="endpointversion_csharp">
 <a href="#endpointversion_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bot's endpoint version{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="msaappid_csharp">
 <a href="#msaappid_csharp" style="color: inherit; text-decoration: inherit;">Msa<wbr>App<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Microsoft App Id for the bot{{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cmekkeyvaulturl_csharp">
+<a href="#cmekkeyvaulturl_csharp" style="color: inherit; text-decoration: inherit;">Cmek<wbr>Key<wbr>Vault<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The CMK Url{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the bot{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="developerappinsightkey_csharp">
 <a href="#developerappinsightkey_csharp" style="color: inherit; text-decoration: inherit;">Developer<wbr>App<wbr>Insight<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application Insights key{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="developerappinsightsapikey_csharp">
 <a href="#developerappinsightsapikey_csharp" style="color: inherit; text-decoration: inherit;">Developer<wbr>App<wbr>Insights<wbr>Api<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application Insights Api Key{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="developerappinsightsapplicationid_csharp">
 <a href="#developerappinsightsapplicationid_csharp" style="color: inherit; text-decoration: inherit;">Developer<wbr>App<wbr>Insights<wbr>Application<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application Insights App Id{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iconurl_csharp">
 <a href="#iconurl_csharp" style="color: inherit; text-decoration: inherit;">Icon<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Icon Url of the bot{{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="iscmekenabled_csharp">
+<a href="#iscmekenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Cmek<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="luisappids_csharp">
 <a href="#luisappids_csharp" style="color: inherit; text-decoration: inherit;">Luis<wbr>App<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Collection of LUIS App Ids{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="luiskey_csharp">
 <a href="#luiskey_csharp" style="color: inherit; text-decoration: inherit;">Luis<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The LUIS Key{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1491,135 +1458,139 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="configuredchannels_go">
 <a href="#configuredchannels_go" style="color: inherit; text-decoration: inherit;">Configured<wbr>Channels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Collection of channels for which the bot is configured{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the bot{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="enabledchannels_go">
 <a href="#enabledchannels_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Channels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Collection of channels for which the bot is enabled{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="endpoint_go">
 <a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bot's endpoint{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="endpointversion_go">
 <a href="#endpointversion_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bot's endpoint version{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="msaappid_go">
 <a href="#msaappid_go" style="color: inherit; text-decoration: inherit;">Msa<wbr>App<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Microsoft App Id for the bot{{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cmekkeyvaulturl_go">
+<a href="#cmekkeyvaulturl_go" style="color: inherit; text-decoration: inherit;">Cmek<wbr>Key<wbr>Vault<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The CMK Url{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the bot{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="developerappinsightkey_go">
 <a href="#developerappinsightkey_go" style="color: inherit; text-decoration: inherit;">Developer<wbr>App<wbr>Insight<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application Insights key{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="developerappinsightsapikey_go">
 <a href="#developerappinsightsapikey_go" style="color: inherit; text-decoration: inherit;">Developer<wbr>App<wbr>Insights<wbr>Api<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application Insights Api Key{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="developerappinsightsapplicationid_go">
 <a href="#developerappinsightsapplicationid_go" style="color: inherit; text-decoration: inherit;">Developer<wbr>App<wbr>Insights<wbr>Application<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application Insights App Id{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iconurl_go">
 <a href="#iconurl_go" style="color: inherit; text-decoration: inherit;">Icon<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Icon Url of the bot{{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="iscmekenabled_go">
+<a href="#iscmekenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Cmek<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="luisappids_go">
 <a href="#luisappids_go" style="color: inherit; text-decoration: inherit;">Luis<wbr>App<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Collection of LUIS App Ids{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="luiskey_go">
 <a href="#luiskey_go" style="color: inherit; text-decoration: inherit;">Luis<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The LUIS Key{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1628,135 +1599,139 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="configuredchannels_nodejs">
 <a href="#configuredchannels_nodejs" style="color: inherit; text-decoration: inherit;">configured<wbr>Channels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Collection of channels for which the bot is configured{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name of the bot{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="enabledchannels_nodejs">
 <a href="#enabledchannels_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Channels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Collection of channels for which the bot is enabled{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="endpoint_nodejs">
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bot's endpoint{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="endpointversion_nodejs">
 <a href="#endpointversion_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The bot's endpoint version{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="msaappid_nodejs">
 <a href="#msaappid_nodejs" style="color: inherit; text-decoration: inherit;">msa<wbr>App<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Microsoft App Id for the bot{{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cmekkeyvaulturl_nodejs">
+<a href="#cmekkeyvaulturl_nodejs" style="color: inherit; text-decoration: inherit;">cmek<wbr>Key<wbr>Vault<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The CMK Url{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the bot{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="developerappinsightkey_nodejs">
 <a href="#developerappinsightkey_nodejs" style="color: inherit; text-decoration: inherit;">developer<wbr>App<wbr>Insight<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application Insights key{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="developerappinsightsapikey_nodejs">
 <a href="#developerappinsightsapikey_nodejs" style="color: inherit; text-decoration: inherit;">developer<wbr>App<wbr>Insights<wbr>Api<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application Insights Api Key{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="developerappinsightsapplicationid_nodejs">
 <a href="#developerappinsightsapplicationid_nodejs" style="color: inherit; text-decoration: inherit;">developer<wbr>App<wbr>Insights<wbr>Application<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application Insights App Id{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iconurl_nodejs">
 <a href="#iconurl_nodejs" style="color: inherit; text-decoration: inherit;">icon<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Icon Url of the bot{{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="iscmekenabled_nodejs">
+<a href="#iscmekenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Cmek<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="luisappids_nodejs">
 <a href="#luisappids_nodejs" style="color: inherit; text-decoration: inherit;">luis<wbr>App<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Collection of LUIS App Ids{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="luiskey_nodejs">
 <a href="#luiskey_nodejs" style="color: inherit; text-decoration: inherit;">luis<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The LUIS Key{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1765,146 +1740,195 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="configured_channels_python">
 <a href="#configured_channels_python" style="color: inherit; text-decoration: inherit;">configured_<wbr>channels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Collection of channels for which the bot is configured{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name of the bot{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_channels_python">
 <a href="#enabled_channels_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>channels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Collection of channels for which the bot is enabled{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="endpoint_python">
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The bot's endpoint{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="endpoint_version_python">
 <a href="#endpoint_version_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The bot's endpoint version{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="msa_app_id_python">
 <a href="#msa_app_id_python" style="color: inherit; text-decoration: inherit;">msa_<wbr>app_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Microsoft App Id for the bot{{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cmek_key_vault_url_python">
+<a href="#cmek_key_vault_url_python" style="color: inherit; text-decoration: inherit;">cmek_<wbr>key_<wbr>vault_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The CMK Url{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the bot{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="developer_app_insight_key_python">
 <a href="#developer_app_insight_key_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>app_<wbr>insight_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Application Insights key{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="developer_app_insights_api_key_python">
 <a href="#developer_app_insights_api_key_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>app_<wbr>insights_<wbr>api_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Application Insights Api Key{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="developer_app_insights_application_id_python">
 <a href="#developer_app_insights_application_id_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>app_<wbr>insights_<wbr>application_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Application Insights App Id{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="icon_url_python">
 <a href="#icon_url_python" style="color: inherit; text-decoration: inherit;">icon_<wbr>url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Icon Url of the bot{{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="is_cmek_enabled_python">
+<a href="#is_cmek_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>cmek_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether Cmek is enabled{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="luis_app_ids_python">
 <a href="#luis_app_ids_python" style="color: inherit; text-decoration: inherit;">luis_<wbr>app_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Collection of LUIS App Ids{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="luis_key_python">
 <a href="#luis_key_python" style="color: inherit; text-decoration: inherit;">luis_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The LUIS Key{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="kind">Kind</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Sdk</dt>
+    <dd>sdk</dd>
+    <dt>Designer</dt>
+    <dd>designer</dd>
+    <dt>Bot</dt>
+    <dd>bot</dd>
+    <dt>Function</dt>
+    <dd>function</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Kind<wbr>Sdk</dt>
+    <dd>sdk</dd>
+    <dt>Kind<wbr>Designer</dt>
+    <dd>designer</dd>
+    <dt>Kind<wbr>Bot</dt>
+    <dd>bot</dd>
+    <dt>Kind<wbr>Function</dt>
+    <dd>function</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Sdk</dt>
+    <dd>sdk</dd>
+    <dt>Designer</dt>
+    <dd>designer</dd>
+    <dt>Bot</dt>
+    <dd>bot</dd>
+    <dt>Function</dt>
+    <dd>function</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>SDK</dt>
+    <dd>sdk</dd>
+    <dt>DESIGNER</dt>
+    <dd>designer</dd>
+    <dt>BOT</dt>
+    <dd>bot</dd>
+    <dt>FUNCTION</dt>
+    <dd>function</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="sku">Sku</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1913,15 +1937,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Sku<wbr>Name</span>
+        <span class="property-type">string | <a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Bot<wbr>Service.<wbr>Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The sku name{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1930,15 +1952,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#skuname">Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The sku name{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1947,15 +1967,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Sku<wbr>Name</span>
+        <span class="property-type">string | <a href="#skuname">Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The sku name{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1964,26 +1982,53 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Sku<wbr>Name</span>
+        <span class="property-type">str | <a href="#skuname">Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The sku name{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="skuname">Sku<wbr>Name</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>F0</dt>
+    <dd>F0</dd>
+    <dt>S1</dt>
+    <dd>S1</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Sku<wbr>Name<wbr>F0</dt>
+    <dd>F0</dd>
+    <dt>Sku<wbr>Name<wbr>S1</dt>
+    <dd>S1</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>F0</dt>
+    <dd>F0</dd>
+    <dt>S1</dt>
+    <dd>S1</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>F0</dt>
+    <dd>F0</dd>
+    <dt>S1</dt>
+    <dd>S1</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="skuresponse">Sku<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1992,25 +2037,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sku name{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the sku tier. This is based on the SKU name.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2019,25 +2061,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sku name{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the sku tier. This is based on the SKU name.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2046,25 +2085,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sku name{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets the sku tier. This is based on the SKU name.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2073,33 +2109,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The sku name{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets the sku tier. This is based on the SKU name.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 
 
 <h2 id="package-details">Package Details</h2>

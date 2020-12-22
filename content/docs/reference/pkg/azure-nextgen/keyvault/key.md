@@ -2,7 +2,7 @@
 ---
 title: "Key"
 title_tag: "azure-nextgen.keyvault.Key"
-meta_desc: "Explore the Key resource of the keyvault module, including examples, input properties, output properties, lookup functions, and supporting types. The key resource."
+meta_desc: "Documentation for the azure-nextgen.keyvault.Key resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -11,6 +11,7 @@ meta_desc: "Explore the Key resource of the keyvault module, including examples,
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The key resource.
+Latest API Version: 2019-09-01.
 
 
 {{% examples %}}
@@ -121,7 +122,7 @@ const key = new azure_nextgen.keyvault.latest.Key("key", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Key</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">KeyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Key</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">KeyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -129,11 +130,11 @@ const key = new azure_nextgen.keyvault.latest.Key("key", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewKey</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">KeyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Key</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewKey</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">KeyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Key</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Key</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">KeyArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Key</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">KeyArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -144,7 +145,7 @@ const key = new azure_nextgen.keyvault.latest.Key("key", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -213,7 +214,7 @@ const key = new azure_nextgen.keyvault.latest.Key("key", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -252,7 +253,7 @@ const key = new azure_nextgen.keyvault.latest.Key("key", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -293,7 +294,6 @@ The Key resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -301,55 +301,49 @@ The Key resource accepts the following [input]({{< relref "/docs/intro/concepts/
             title="Required">
         <span id="keyname_csharp">
 <a href="#keyname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the key to be created.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Key<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of the key to be created.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group which contains the specified key vault.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vaultname_csharp">
 <a href="#vaultname_csharp" style="color: inherit; text-decoration: inherit;">Vault<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the key vault which contains the key to be created.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The tags that will be assigned to the key.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -358,55 +352,49 @@ The Key resource accepts the following [input]({{< relref "/docs/intro/concepts/
             title="Required">
         <span id="keyname_go">
 <a href="#keyname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the key to be created.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyproperties">Key<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The properties of the key to be created.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group which contains the specified key vault.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vaultname_go">
 <a href="#vaultname_go" style="color: inherit; text-decoration: inherit;">Vault<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the key vault which contains the key to be created.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The tags that will be assigned to the key.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -415,55 +403,49 @@ The Key resource accepts the following [input]({{< relref "/docs/intro/concepts/
             title="Required">
         <span id="keyname_nodejs">
 <a href="#keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the key to be created.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyproperties">Key<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The properties of the key to be created.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group which contains the specified key vault.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vaultname_nodejs">
 <a href="#vaultname_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the key vault which contains the key to be created.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The tags that will be assigned to the key.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -472,64 +454,54 @@ The Key resource accepts the following [input]({{< relref "/docs/intro/concepts/
             title="Required">
         <span id="key_name_python">
 <a href="#key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the key to be created.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyproperties">Key<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties of the key to be created.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group which contains the specified key vault.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vault_name_python">
 <a href="#vault_name_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the key vault which contains the key to be created.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags that will be assigned to the key.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Key resource produces the following output properties:
-
 
 
 
@@ -540,115 +512,103 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="keyuri_csharp">
 <a href="#keyuri_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI to retrieve the current version of the key.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="keyuriwithversion_csharp">
 <a href="#keyuriwithversion_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Uri<wbr>With<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI to retrieve the specific version of the key.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure location of the key vault resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the key vault resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type of the key vault resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="attributes_csharp">
 <a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyattributesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Outputs.<wbr>Key<wbr>Attributes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The attributes of the key.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="curvename_csharp">
 <a href="#curvename_csharp" style="color: inherit; text-decoration: inherit;">Curve<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The elliptic curve name. For valid values, see JsonWebKeyCurveName.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="keyops_csharp">
 <a href="#keyops_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Ops</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="keysize_csharp">
 <a href="#keysize_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The key size in bits. For example: 2048, 3072, or 4096 for RSA.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="kty_csharp">
 <a href="#kty_csharp" style="color: inherit; text-decoration: inherit;">Kty</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the key. For valid values, see JsonWebKeyType.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -657,115 +617,103 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="keyuri_go">
 <a href="#keyuri_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI to retrieve the current version of the key.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="keyuriwithversion_go">
 <a href="#keyuriwithversion_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Uri<wbr>With<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI to retrieve the specific version of the key.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure location of the key vault resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the key vault resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type of the key vault resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="attributes_go">
 <a href="#attributes_go" style="color: inherit; text-decoration: inherit;">Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyattributesresponse">Key<wbr>Attributes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The attributes of the key.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="curvename_go">
 <a href="#curvename_go" style="color: inherit; text-decoration: inherit;">Curve<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The elliptic curve name. For valid values, see JsonWebKeyCurveName.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="keyops_go">
 <a href="#keyops_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Ops</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="keysize_go">
 <a href="#keysize_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The key size in bits. For example: 2048, 3072, or 4096 for RSA.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="kty_go">
 <a href="#kty_go" style="color: inherit; text-decoration: inherit;">Kty</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the key. For valid values, see JsonWebKeyType.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -774,115 +722,103 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="keyuri_nodejs">
 <a href="#keyuri_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI to retrieve the current version of the key.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="keyuriwithversion_nodejs">
 <a href="#keyuriwithversion_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Uri<wbr>With<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI to retrieve the specific version of the key.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure location of the key vault resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the key vault resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type of the key vault resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="attributes_nodejs">
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyattributesresponse">Key<wbr>Attributes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The attributes of the key.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="curvename_nodejs">
 <a href="#curvename_nodejs" style="color: inherit; text-decoration: inherit;">curve<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The elliptic curve name. For valid values, see JsonWebKeyCurveName.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="keyops_nodejs">
 <a href="#keyops_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Ops</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="keysize_nodejs">
 <a href="#keysize_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The key size in bits. For example: 2048, 3072, or 4096 for RSA.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="kty_nodejs">
 <a href="#kty_nodejs" style="color: inherit; text-decoration: inherit;">kty</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the key. For valid values, see JsonWebKeyType.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -891,118 +827,103 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="key_uri_python">
 <a href="#key_uri_python" style="color: inherit; text-decoration: inherit;">key_<wbr>uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI to retrieve the current version of the key.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="key_uri_with_version_python">
 <a href="#key_uri_with_version_python" style="color: inherit; text-decoration: inherit;">key_<wbr>uri_<wbr>with_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI to retrieve the specific version of the key.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure location of the key vault resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the key vault resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource type of the key vault resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="attributes_python">
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyattributesresponse">Key<wbr>Attributes<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The attributes of the key.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="curve_name_python">
 <a href="#curve_name_python" style="color: inherit; text-decoration: inherit;">curve_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The elliptic curve name. For valid values, see JsonWebKeyCurveName.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="key_ops_python">
 <a href="#key_ops_python" style="color: inherit; text-decoration: inherit;">key_<wbr>ops</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="key_size_python">
 <a href="#key_size_python" style="color: inherit; text-decoration: inherit;">key_<wbr>size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The key size in bits. For example: 2048, 3072, or 4096 for RSA.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="kty_python">
 <a href="#kty_python" style="color: inherit; text-decoration: inherit;">kty</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the key. For valid values, see JsonWebKeyType.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1013,13 +934,194 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="jsonwebkeycurvename">Json<wbr>Web<wbr>Key<wbr>Curve<wbr>Name</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>P_256</dt>
+    <dd>P-256</dd>
+    <dt>P_384</dt>
+    <dd>P-384</dd>
+    <dt>P_521</dt>
+    <dd>P-521</dd>
+    <dt>P_256K</dt>
+    <dd>P-256K</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Json<wbr>Web<wbr>Key<wbr>Curve<wbr>Name_P_256</dt>
+    <dd>P-256</dd>
+    <dt>Json<wbr>Web<wbr>Key<wbr>Curve<wbr>Name_P_384</dt>
+    <dd>P-384</dd>
+    <dt>Json<wbr>Web<wbr>Key<wbr>Curve<wbr>Name_P_521</dt>
+    <dd>P-521</dd>
+    <dt>Json<wbr>Web<wbr>Key<wbr>Curve<wbr>Name_P_256K</dt>
+    <dd>P-256K</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>P_256</dt>
+    <dd>P-256</dd>
+    <dt>P_384</dt>
+    <dd>P-384</dd>
+    <dt>P_521</dt>
+    <dd>P-521</dd>
+    <dt>P_256K</dt>
+    <dd>P-256K</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>P_256</dt>
+    <dd>P-256</dd>
+    <dt>P_384</dt>
+    <dd>P-384</dd>
+    <dt>P_521</dt>
+    <dd>P-521</dd>
+    <dt>P_256_K</dt>
+    <dd>P-256K</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="jsonwebkeyoperation">Json<wbr>Web<wbr>Key<wbr>Operation</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Encrypt</dt>
+    <dd>encrypt</dd>
+    <dt>Decrypt</dt>
+    <dd>decrypt</dd>
+    <dt>Sign</dt>
+    <dd>sign</dd>
+    <dt>Verify</dt>
+    <dd>verify</dd>
+    <dt>Wrap<wbr>Key</dt>
+    <dd>wrapKey</dd>
+    <dt>Unwrap<wbr>Key</dt>
+    <dd>unwrapKey</dd>
+    <dt>Import</dt>
+    <dd>import</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Json<wbr>Web<wbr>Key<wbr>Operation<wbr>Encrypt</dt>
+    <dd>encrypt</dd>
+    <dt>Json<wbr>Web<wbr>Key<wbr>Operation<wbr>Decrypt</dt>
+    <dd>decrypt</dd>
+    <dt>Json<wbr>Web<wbr>Key<wbr>Operation<wbr>Sign</dt>
+    <dd>sign</dd>
+    <dt>Json<wbr>Web<wbr>Key<wbr>Operation<wbr>Verify</dt>
+    <dd>verify</dd>
+    <dt>Json<wbr>Web<wbr>Key<wbr>Operation<wbr>Wrap<wbr>Key</dt>
+    <dd>wrapKey</dd>
+    <dt>Json<wbr>Web<wbr>Key<wbr>Operation<wbr>Unwrap<wbr>Key</dt>
+    <dd>unwrapKey</dd>
+    <dt>Json<wbr>Web<wbr>Key<wbr>Operation<wbr>Import</dt>
+    <dd>import</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Encrypt</dt>
+    <dd>encrypt</dd>
+    <dt>Decrypt</dt>
+    <dd>decrypt</dd>
+    <dt>Sign</dt>
+    <dd>sign</dd>
+    <dt>Verify</dt>
+    <dd>verify</dd>
+    <dt>Wrap<wbr>Key</dt>
+    <dd>wrapKey</dd>
+    <dt>Unwrap<wbr>Key</dt>
+    <dd>unwrapKey</dd>
+    <dt>Import</dt>
+    <dd>import</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>ENCRYPT</dt>
+    <dd>encrypt</dd>
+    <dt>DECRYPT</dt>
+    <dd>decrypt</dd>
+    <dt>SIGN</dt>
+    <dd>sign</dd>
+    <dt>VERIFY</dt>
+    <dd>verify</dd>
+    <dt>WRAP_KEY</dt>
+    <dd>wrapKey</dd>
+    <dt>UNWRAP_KEY</dt>
+    <dd>unwrapKey</dd>
+    <dt>IMPORT_</dt>
+    <dd>import</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="jsonwebkeytype">Json<wbr>Web<wbr>Key<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>EC</dt>
+    <dd>EC</dd>
+    <dt>EC_HSM</dt>
+    <dd>EC-HSM</dd>
+    <dt>RSA</dt>
+    <dd>RSA</dd>
+    <dt>RSA_HSM</dt>
+    <dd>RSA-HSM</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Json<wbr>Web<wbr>Key<wbr>Type<wbr>EC</dt>
+    <dd>EC</dd>
+    <dt>Json<wbr>Web<wbr>Key<wbr>Type_EC_HSM</dt>
+    <dd>EC-HSM</dd>
+    <dt>Json<wbr>Web<wbr>Key<wbr>Type<wbr>RSA</dt>
+    <dd>RSA</dd>
+    <dt>Json<wbr>Web<wbr>Key<wbr>Type_RSA_HSM</dt>
+    <dd>RSA-HSM</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>EC</dt>
+    <dd>EC</dd>
+    <dt>EC_HSM</dt>
+    <dd>EC-HSM</dd>
+    <dt>RSA</dt>
+    <dd>RSA</dd>
+    <dt>RSA_HSM</dt>
+    <dd>RSA-HSM</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>EC</dt>
+    <dd>EC</dd>
+    <dt>E_C_HSM</dt>
+    <dd>EC-HSM</dd>
+    <dt>RSA</dt>
+    <dd>RSA</dd>
+    <dt>RS_A_HSM</dt>
+    <dd>RSA-HSM</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="keyattributes">Key<wbr>Attributes</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1028,35 +1130,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether or not the object is enabled.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="expires_csharp">
 <a href="#expires_csharp" style="color: inherit; text-decoration: inherit;">Expires</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Expiry date in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notbefore_csharp">
 <a href="#notbefore_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Before</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Not before date in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1065,35 +1163,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether or not the object is enabled.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="expires_go">
 <a href="#expires_go" style="color: inherit; text-decoration: inherit;">Expires</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Expiry date in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notbefore_go">
 <a href="#notbefore_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Before</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Not before date in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1102,35 +1196,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines whether or not the object is enabled.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="expires_nodejs">
 <a href="#expires_nodejs" style="color: inherit; text-decoration: inherit;">expires</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Expiry date in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notbefore_nodejs">
 <a href="#notbefore_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Before</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Not before date in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1139,46 +1229,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether or not the object is enabled.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="expires_python">
 <a href="#expires_python" style="color: inherit; text-decoration: inherit;">expires</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Expiry date in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="not_before_python">
 <a href="#not_before_python" style="color: inherit; text-decoration: inherit;">not_<wbr>before</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Not before date in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="keyattributesresponse">Key<wbr>Attributes<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1187,65 +1264,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="created_csharp">
 <a href="#created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Creation time in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="recoverylevel_csharp">
 <a href="#recoverylevel_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deletion recovery level currently in effect for the object. If it contains 'Purgeable', then the object can be permanently deleted by a privileged user; otherwise, only the system can purge the object at the end of the retention interval.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="updated_csharp">
 <a href="#updated_csharp" style="color: inherit; text-decoration: inherit;">Updated</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Last updated time in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether or not the object is enabled.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="expires_csharp">
 <a href="#expires_csharp" style="color: inherit; text-decoration: inherit;">Expires</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Expiry date in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notbefore_csharp">
 <a href="#notbefore_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Before</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Not before date in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1254,65 +1324,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="created_go">
 <a href="#created_go" style="color: inherit; text-decoration: inherit;">Created</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Creation time in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="recoverylevel_go">
 <a href="#recoverylevel_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deletion recovery level currently in effect for the object. If it contains 'Purgeable', then the object can be permanently deleted by a privileged user; otherwise, only the system can purge the object at the end of the retention interval.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="updated_go">
 <a href="#updated_go" style="color: inherit; text-decoration: inherit;">Updated</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Last updated time in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether or not the object is enabled.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="expires_go">
 <a href="#expires_go" style="color: inherit; text-decoration: inherit;">Expires</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Expiry date in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notbefore_go">
 <a href="#notbefore_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Before</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Not before date in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1321,65 +1384,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="created_nodejs">
 <a href="#created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Creation time in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="recoverylevel_nodejs">
 <a href="#recoverylevel_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deletion recovery level currently in effect for the object. If it contains 'Purgeable', then the object can be permanently deleted by a privileged user; otherwise, only the system can purge the object at the end of the retention interval.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="updated_nodejs">
 <a href="#updated_nodejs" style="color: inherit; text-decoration: inherit;">updated</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Last updated time in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines whether or not the object is enabled.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="expires_nodejs">
 <a href="#expires_nodejs" style="color: inherit; text-decoration: inherit;">expires</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Expiry date in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notbefore_nodejs">
 <a href="#notbefore_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Before</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Not before date in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1388,76 +1444,60 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="created_python">
 <a href="#created_python" style="color: inherit; text-decoration: inherit;">created</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Creation time in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="recovery_level_python">
 <a href="#recovery_level_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>level</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The deletion recovery level currently in effect for the object. If it contains 'Purgeable', then the object can be permanently deleted by a privileged user; otherwise, only the system can purge the object at the end of the retention interval.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="updated_python">
 <a href="#updated_python" style="color: inherit; text-decoration: inherit;">updated</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Last updated time in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether or not the object is enabled.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="expires_python">
 <a href="#expires_python" style="color: inherit; text-decoration: inherit;">expires</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Expiry date in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="not_before_python">
 <a href="#not_before_python" style="color: inherit; text-decoration: inherit;">not_<wbr>before</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Not before date in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="keyproperties">Key<wbr>Properties</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1466,55 +1506,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="attributes_csharp">
 <a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyattributes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Inputs.<wbr>Key<wbr>Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The attributes of the key.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="curvename_csharp">
 <a href="#curvename_csharp" style="color: inherit; text-decoration: inherit;">Curve<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Json<wbr>Web<wbr>Key<wbr>Curve<wbr>Name</span>
+        <span class="property-type">string | <a href="#jsonwebkeycurvename">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Json<wbr>Web<wbr>Key<wbr>Curve<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The elliptic curve name. For valid values, see JsonWebKeyCurveName.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keyops_csharp">
 <a href="#keyops_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Ops</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Json<wbr>Web<wbr>Key<wbr>Operation&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keysize_csharp">
 <a href="#keysize_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The key size in bits. For example: 2048, 3072, or 4096 for RSA.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kty_csharp">
 <a href="#kty_csharp" style="color: inherit; text-decoration: inherit;">Kty</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Json<wbr>Web<wbr>Key<wbr>Type</span>
+        <span class="property-type">string | <a href="#jsonwebkeytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Key<wbr>Vault.<wbr>Json<wbr>Web<wbr>Key<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the key. For valid values, see JsonWebKeyType.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1523,55 +1557,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="attributes_go">
 <a href="#attributes_go" style="color: inherit; text-decoration: inherit;">Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyattributes">Key<wbr>Attributes</a></span>
     </dt>
     <dd>{{% md %}}The attributes of the key.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="curvename_go">
 <a href="#curvename_go" style="color: inherit; text-decoration: inherit;">Curve<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#jsonwebkeycurvename">Json<wbr>Web<wbr>Key<wbr>Curve<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The elliptic curve name. For valid values, see JsonWebKeyCurveName.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keyops_go">
 <a href="#keyops_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Ops</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keysize_go">
 <a href="#keysize_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The key size in bits. For example: 2048, 3072, or 4096 for RSA.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kty_go">
 <a href="#kty_go" style="color: inherit; text-decoration: inherit;">Kty</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#jsonwebkeytype">Json<wbr>Web<wbr>Key<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the key. For valid values, see JsonWebKeyType.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1580,55 +1608,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="attributes_nodejs">
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyattributes">Key<wbr>Attributes</a></span>
     </dt>
     <dd>{{% md %}}The attributes of the key.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="curvename_nodejs">
 <a href="#curvename_nodejs" style="color: inherit; text-decoration: inherit;">curve<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Json<wbr>Web<wbr>Key<wbr>Curve<wbr>Name</span>
+        <span class="property-type">string | <a href="#jsonwebkeycurvename">Json<wbr>Web<wbr>Key<wbr>Curve<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The elliptic curve name. For valid values, see JsonWebKeyCurveName.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keyops_nodejs">
 <a href="#keyops_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Ops</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | enums.<wbr>Json<wbr>Web<wbr>Key<wbr>Operation[]</span>
+        <span class="property-type">string | Json<wbr>Web<wbr>Key<wbr>Operation[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keysize_nodejs">
 <a href="#keysize_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The key size in bits. For example: 2048, 3072, or 4096 for RSA.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kty_nodejs">
 <a href="#kty_nodejs" style="color: inherit; text-decoration: inherit;">kty</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Json<wbr>Web<wbr>Key<wbr>Type</span>
+        <span class="property-type">string | <a href="#jsonwebkeytype">Json<wbr>Web<wbr>Key<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the key. For valid values, see JsonWebKeyType.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1637,63 +1659,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="attributes_python">
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyattributes">Key<wbr>Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The attributes of the key.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="curve_name_python">
 <a href="#curve_name_python" style="color: inherit; text-decoration: inherit;">curve_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Json<wbr>Web<wbr>Key<wbr>Curve<wbr>Name</span>
+        <span class="property-type">str | <a href="#jsonwebkeycurvename">Json<wbr>Web<wbr>Key<wbr>Curve<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The elliptic curve name. For valid values, see JsonWebKeyCurveName.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="key_ops_python">
 <a href="#key_ops_python" style="color: inherit; text-decoration: inherit;">key_<wbr>ops</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[str, Json<wbr>Web<wbr>Key<wbr>Operation]]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="key_size_python">
 <a href="#key_size_python" style="color: inherit; text-decoration: inherit;">key_<wbr>size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The key size in bits. For example: 2048, 3072, or 4096 for RSA.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kty_python">
 <a href="#kty_python" style="color: inherit; text-decoration: inherit;">kty</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Json<wbr>Web<wbr>Key<wbr>Type</span>
+        <span class="property-type">str | <a href="#jsonwebkeytype">Json<wbr>Web<wbr>Key<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the key. For valid values, see JsonWebKeyType.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 
 
 <h2 id="package-details">Package Details</h2>

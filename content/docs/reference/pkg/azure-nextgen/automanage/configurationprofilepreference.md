@@ -2,7 +2,7 @@
 ---
 title: "ConfigurationProfilePreference"
 title_tag: "azure-nextgen.automanage.ConfigurationProfilePreference"
-meta_desc: "Explore the ConfigurationProfilePreference resource of the automanage module, including examples, input properties, output properties, lookup functions, and supporting types. Definition of the configuration profile preference."
+meta_desc: "Documentation for the azure-nextgen.automanage.ConfigurationProfilePreference resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -156,7 +156,7 @@ const configurationProfilePreference = new azure_nextgen.automanage.v20200630pre
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ConfigurationProfilePreference</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ConfigurationProfilePreferenceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ConfigurationProfilePreference</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ConfigurationProfilePreferenceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -164,11 +164,11 @@ const configurationProfilePreference = new azure_nextgen.automanage.v20200630pre
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConfigurationProfilePreference</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ConfigurationProfilePreferenceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ConfigurationProfilePreference</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewConfigurationProfilePreference</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ConfigurationProfilePreferenceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ConfigurationProfilePreference</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ConfigurationProfilePreference</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ConfigurationProfilePreferenceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ConfigurationProfilePreference</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ConfigurationProfilePreferenceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -179,7 +179,7 @@ const configurationProfilePreference = new azure_nextgen.automanage.v20200630pre
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -248,7 +248,7 @@ const configurationProfilePreference = new azure_nextgen.automanage.v20200630pre
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -287,7 +287,7 @@ const configurationProfilePreference = new azure_nextgen.automanage.v20200630pre
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -328,7 +328,6 @@ The ConfigurationProfilePreference resource accepts the following [input]({{< re
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -336,55 +335,49 @@ The ConfigurationProfilePreference resource accepts the following [input]({{< re
             title="Required">
         <span id="configurationprofilepreferencename_csharp">
 <a href="#configurationprofilepreferencename_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Profile<wbr>Preference<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the configuration profile preference.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationprofilepreferenceproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automanage.<wbr>Inputs.<wbr>Configuration<wbr>Profile<wbr>Preference<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the configuration profile preference.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -393,55 +386,49 @@ The ConfigurationProfilePreference resource accepts the following [input]({{< re
             title="Required">
         <span id="configurationprofilepreferencename_go">
 <a href="#configurationprofilepreferencename_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Profile<wbr>Preference<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the configuration profile preference.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationprofilepreferenceproperties">Configuration<wbr>Profile<wbr>Preference<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Properties of the configuration profile preference.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -450,55 +437,49 @@ The ConfigurationProfilePreference resource accepts the following [input]({{< re
             title="Required">
         <span id="configurationprofilepreferencename_nodejs">
 <a href="#configurationprofilepreferencename_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Profile<wbr>Preference<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the configuration profile preference.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationprofilepreferenceproperties">Configuration<wbr>Profile<wbr>Preference<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Properties of the configuration profile preference.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -507,64 +488,54 @@ The ConfigurationProfilePreference resource accepts the following [input]({{< re
             title="Required">
         <span id="configuration_profile_preference_name_python">
 <a href="#configuration_profile_preference_name_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>profile_<wbr>preference_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the configuration profile preference.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationprofilepreferenceproperties">Configuration<wbr>Profile<wbr>Preference<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the configuration profile preference.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the ConfigurationProfilePreference resource produces the following output properties:
-
 
 
 
@@ -575,35 +546,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -612,35 +579,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -649,35 +612,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -686,38 +645,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -728,13 +680,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
 <h4 id="configurationprofilepreferenceantimalware">Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -743,65 +690,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="enablerealtimeprotection_csharp">
 <a href="#enablerealtimeprotection_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Real<wbr>Time<wbr>Protection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automanage.<wbr>Enable<wbr>Real<wbr>Time<wbr>Protection</span>
+        <span class="property-type">string | <a href="#enablerealtimeprotection">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automanage.<wbr>Enable<wbr>Real<wbr>Time<wbr>Protection</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables Real Time Protection{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exclusions_csharp">
 <a href="#exclusions_csharp" style="color: inherit; text-decoration: inherit;">Exclusions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
+        <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}Extensions, Paths and Processes that must be excluded from scan{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runscheduledscan_csharp">
 <a href="#runscheduledscan_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Scheduled<wbr>Scan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automanage.<wbr>Run<wbr>Scheduled<wbr>Scan</span>
+        <span class="property-type">string | <a href="#runscheduledscan">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automanage.<wbr>Run<wbr>Scheduled<wbr>Scan</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables a periodic scan for antimalware{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scanday_csharp">
 <a href="#scanday_csharp" style="color: inherit; text-decoration: inherit;">Scan<wbr>Day</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Schedule scan settings day{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scantimeinminutes_csharp">
 <a href="#scantimeinminutes_csharp" style="color: inherit; text-decoration: inherit;">Scan<wbr>Time<wbr>In<wbr>Minutes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Schedule scan settings time{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scantype_csharp">
 <a href="#scantype_csharp" style="color: inherit; text-decoration: inherit;">Scan<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automanage.<wbr>Scan<wbr>Type</span>
+        <span class="property-type">string | <a href="#scantype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automanage.<wbr>Scan<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of scheduled scan{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -810,65 +750,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="enablerealtimeprotection_go">
 <a href="#enablerealtimeprotection_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Real<wbr>Time<wbr>Protection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#enablerealtimeprotection">Enable<wbr>Real<wbr>Time<wbr>Protection</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables Real Time Protection{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exclusions_go">
 <a href="#exclusions_go" style="color: inherit; text-decoration: inherit;">Exclusions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}Extensions, Paths and Processes that must be excluded from scan{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runscheduledscan_go">
 <a href="#runscheduledscan_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Scheduled<wbr>Scan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#runscheduledscan">Run<wbr>Scheduled<wbr>Scan</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables a periodic scan for antimalware{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scanday_go">
 <a href="#scanday_go" style="color: inherit; text-decoration: inherit;">Scan<wbr>Day</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Schedule scan settings day{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scantimeinminutes_go">
 <a href="#scantimeinminutes_go" style="color: inherit; text-decoration: inherit;">Scan<wbr>Time<wbr>In<wbr>Minutes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Schedule scan settings time{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scantype_go">
 <a href="#scantype_go" style="color: inherit; text-decoration: inherit;">Scan<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#scantype">Scan<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of scheduled scan{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -877,65 +810,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="enablerealtimeprotection_nodejs">
 <a href="#enablerealtimeprotection_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Real<wbr>Time<wbr>Protection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Enable<wbr>Real<wbr>Time<wbr>Protection</span>
+        <span class="property-type">string | <a href="#enablerealtimeprotection">Enable<wbr>Real<wbr>Time<wbr>Protection</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables Real Time Protection{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exclusions_nodejs">
 <a href="#exclusions_nodejs" style="color: inherit; text-decoration: inherit;">exclusions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
+        <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}Extensions, Paths and Processes that must be excluded from scan{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runscheduledscan_nodejs">
 <a href="#runscheduledscan_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Scheduled<wbr>Scan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Run<wbr>Scheduled<wbr>Scan</span>
+        <span class="property-type">string | <a href="#runscheduledscan">Run<wbr>Scheduled<wbr>Scan</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables a periodic scan for antimalware{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scanday_nodejs">
 <a href="#scanday_nodejs" style="color: inherit; text-decoration: inherit;">scan<wbr>Day</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Schedule scan settings day{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scantimeinminutes_nodejs">
 <a href="#scantimeinminutes_nodejs" style="color: inherit; text-decoration: inherit;">scan<wbr>Time<wbr>In<wbr>Minutes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Schedule scan settings time{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scantype_nodejs">
 <a href="#scantype_nodejs" style="color: inherit; text-decoration: inherit;">scan<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Scan<wbr>Type</span>
+        <span class="property-type">string | <a href="#scantype">Scan<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of scheduled scan{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -944,77 +870,61 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="enable_real_time_protection_python">
 <a href="#enable_real_time_protection_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>real_<wbr>time_<wbr>protection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Enable<wbr>Real<wbr>Time<wbr>Protection</span>
+        <span class="property-type">str | <a href="#enablerealtimeprotection">Enable<wbr>Real<wbr>Time<wbr>Protection</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables Real Time Protection{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exclusions_python">
 <a href="#exclusions_python" style="color: inherit; text-decoration: inherit;">exclusions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}Extensions, Paths and Processes that must be excluded from scan{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="run_scheduled_scan_python">
 <a href="#run_scheduled_scan_python" style="color: inherit; text-decoration: inherit;">run_<wbr>scheduled_<wbr>scan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Run<wbr>Scheduled<wbr>Scan</span>
+        <span class="property-type">str | <a href="#runscheduledscan">Run<wbr>Scheduled<wbr>Scan</a></span>
     </dt>
     <dd>{{% md %}}Enables or disables a periodic scan for antimalware{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scan_day_python">
 <a href="#scan_day_python" style="color: inherit; text-decoration: inherit;">scan_<wbr>day</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Schedule scan settings day{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scan_time_in_minutes_python">
 <a href="#scan_time_in_minutes_python" style="color: inherit; text-decoration: inherit;">scan_<wbr>time_<wbr>in_<wbr>minutes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Schedule scan settings time{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scan_type_python">
 <a href="#scan_type_python" style="color: inherit; text-decoration: inherit;">scan_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Scan<wbr>Type</span>
+        <span class="property-type">str | <a href="#scantype">Scan<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of scheduled scan{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="configurationprofilepreferenceantimalwareresponse">Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1022,65 +932,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="enablerealtimeprotection_csharp">
 <a href="#enablerealtimeprotection_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Real<wbr>Time<wbr>Protection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables or disables Real Time Protection{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exclusions_csharp">
 <a href="#exclusions_csharp" style="color: inherit; text-decoration: inherit;">Exclusions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
+        <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}Extensions, Paths and Processes that must be excluded from scan{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runscheduledscan_csharp">
 <a href="#runscheduledscan_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Scheduled<wbr>Scan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables or disables a periodic scan for antimalware{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scanday_csharp">
 <a href="#scanday_csharp" style="color: inherit; text-decoration: inherit;">Scan<wbr>Day</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Schedule scan settings day{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scantimeinminutes_csharp">
 <a href="#scantimeinminutes_csharp" style="color: inherit; text-decoration: inherit;">Scan<wbr>Time<wbr>In<wbr>Minutes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Schedule scan settings time{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scantype_csharp">
 <a href="#scantype_csharp" style="color: inherit; text-decoration: inherit;">Scan<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of scheduled scan{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1089,65 +992,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="enablerealtimeprotection_go">
 <a href="#enablerealtimeprotection_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Real<wbr>Time<wbr>Protection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables or disables Real Time Protection{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exclusions_go">
 <a href="#exclusions_go" style="color: inherit; text-decoration: inherit;">Exclusions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
+        <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}Extensions, Paths and Processes that must be excluded from scan{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runscheduledscan_go">
 <a href="#runscheduledscan_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Scheduled<wbr>Scan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables or disables a periodic scan for antimalware{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scanday_go">
 <a href="#scanday_go" style="color: inherit; text-decoration: inherit;">Scan<wbr>Day</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Schedule scan settings day{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scantimeinminutes_go">
 <a href="#scantimeinminutes_go" style="color: inherit; text-decoration: inherit;">Scan<wbr>Time<wbr>In<wbr>Minutes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Schedule scan settings time{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scantype_go">
 <a href="#scantype_go" style="color: inherit; text-decoration: inherit;">Scan<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of scheduled scan{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1156,65 +1052,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="enablerealtimeprotection_nodejs">
 <a href="#enablerealtimeprotection_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Real<wbr>Time<wbr>Protection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables or disables Real Time Protection{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exclusions_nodejs">
 <a href="#exclusions_nodejs" style="color: inherit; text-decoration: inherit;">exclusions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
+        <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}Extensions, Paths and Processes that must be excluded from scan{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="runscheduledscan_nodejs">
 <a href="#runscheduledscan_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Scheduled<wbr>Scan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables or disables a periodic scan for antimalware{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scanday_nodejs">
 <a href="#scanday_nodejs" style="color: inherit; text-decoration: inherit;">scan<wbr>Day</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Schedule scan settings day{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scantimeinminutes_nodejs">
 <a href="#scantimeinminutes_nodejs" style="color: inherit; text-decoration: inherit;">scan<wbr>Time<wbr>In<wbr>Minutes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Schedule scan settings time{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scantype_nodejs">
 <a href="#scantype_nodejs" style="color: inherit; text-decoration: inherit;">scan<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of scheduled scan{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1223,76 +1112,60 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="enable_real_time_protection_python">
 <a href="#enable_real_time_protection_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>real_<wbr>time_<wbr>protection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enables or disables Real Time Protection{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exclusions_python">
 <a href="#exclusions_python" style="color: inherit; text-decoration: inherit;">exclusions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Any</a></span>
+        <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}Extensions, Paths and Processes that must be excluded from scan{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="run_scheduled_scan_python">
 <a href="#run_scheduled_scan_python" style="color: inherit; text-decoration: inherit;">run_<wbr>scheduled_<wbr>scan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enables or disables a periodic scan for antimalware{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scan_day_python">
 <a href="#scan_day_python" style="color: inherit; text-decoration: inherit;">scan_<wbr>day</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Schedule scan settings day{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scan_time_in_minutes_python">
 <a href="#scan_time_in_minutes_python" style="color: inherit; text-decoration: inherit;">scan_<wbr>time_<wbr>in_<wbr>minutes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Schedule scan settings time{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scan_type_python">
 <a href="#scan_type_python" style="color: inherit; text-decoration: inherit;">scan_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of scheduled scan{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="configurationprofilepreferenceproperties">Configuration<wbr>Profile<wbr>Preference<wbr>Properties</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1301,25 +1174,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="antimalware_csharp">
 <a href="#antimalware_csharp" style="color: inherit; text-decoration: inherit;">Anti<wbr>Malware</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationprofilepreferenceantimalware">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automanage.<wbr>Inputs.<wbr>Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure Antimalware.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vmbackup_csharp">
 <a href="#vmbackup_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Backup</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationprofilepreferencevmbackup">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automanage.<wbr>Inputs.<wbr>Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure VM Backup.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1328,25 +1198,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="antimalware_go">
 <a href="#antimalware_go" style="color: inherit; text-decoration: inherit;">Anti<wbr>Malware</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationprofilepreferenceantimalware">Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware</a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure Antimalware.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vmbackup_go">
 <a href="#vmbackup_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Backup</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationprofilepreferencevmbackup">Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup</a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure VM Backup.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1355,25 +1222,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="antimalware_nodejs">
 <a href="#antimalware_nodejs" style="color: inherit; text-decoration: inherit;">anti<wbr>Malware</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationprofilepreferenceantimalware">Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware</a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure Antimalware.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vmbackup_nodejs">
 <a href="#vmbackup_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Backup</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationprofilepreferencevmbackup">Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup</a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure VM Backup.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1382,36 +1246,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="anti_malware_python">
 <a href="#anti_malware_python" style="color: inherit; text-decoration: inherit;">anti_<wbr>malware</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationprofilepreferenceantimalware">Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure Antimalware.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vm_backup_python">
 <a href="#vm_backup_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>backup</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationprofilepreferencevmbackup">Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure VM Backup.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="configurationprofilepreferencepropertiesresponse">Configuration<wbr>Profile<wbr>Preference<wbr>Properties<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1420,25 +1272,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="antimalware_csharp">
 <a href="#antimalware_csharp" style="color: inherit; text-decoration: inherit;">Anti<wbr>Malware</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationprofilepreferenceantimalwareresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automanage.<wbr>Inputs.<wbr>Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure Antimalware.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vmbackup_csharp">
 <a href="#vmbackup_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Backup</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationprofilepreferencevmbackupresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automanage.<wbr>Inputs.<wbr>Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure VM Backup.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1447,25 +1296,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="antimalware_go">
 <a href="#antimalware_go" style="color: inherit; text-decoration: inherit;">Anti<wbr>Malware</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationprofilepreferenceantimalwareresponse">Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure Antimalware.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vmbackup_go">
 <a href="#vmbackup_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Backup</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationprofilepreferencevmbackupresponse">Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure VM Backup.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1474,25 +1320,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="antimalware_nodejs">
 <a href="#antimalware_nodejs" style="color: inherit; text-decoration: inherit;">anti<wbr>Malware</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationprofilepreferenceantimalwareresponse">Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure Antimalware.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vmbackup_nodejs">
 <a href="#vmbackup_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Backup</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationprofilepreferencevmbackupresponse">Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure VM Backup.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1501,37 +1344,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="anti_malware_python">
 <a href="#anti_malware_python" style="color: inherit; text-decoration: inherit;">anti_<wbr>malware</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationprofilepreferenceantimalwareresponse">Configuration<wbr>Profile<wbr>Preference<wbr>Anti<wbr>Malware<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure Antimalware.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vm_backup_python">
 <a href="#vm_backup_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>backup</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configurationprofilepreferencevmbackupresponse">Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The custom preferences for Azure VM Backup.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="configurationprofilepreferencevmbackup">Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1539,45 +1370,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="instantrpretentionrangeindays_csharp">
 <a href="#instantrpretentionrangeindays_csharp" style="color: inherit; text-decoration: inherit;">Instant<wbr>Rp<wbr>Retention<wbr>Range<wbr>In<wbr>Days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instant RP retention policy range in days{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_csharp">
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schedulepolicy_csharp">
 <a href="#schedulepolicy_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timezone_csharp">
 <a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TimeZone optional input as string. For example: Pacific Standard Time{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1586,45 +1412,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="instantrpretentionrangeindays_go">
 <a href="#instantrpretentionrangeindays_go" style="color: inherit; text-decoration: inherit;">Instant<wbr>Rp<wbr>Retention<wbr>Range<wbr>In<wbr>Days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instant RP retention policy range in days{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_go">
 <a href="#retentionpolicy_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schedulepolicy_go">
 <a href="#schedulepolicy_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timezone_go">
 <a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TimeZone optional input as string. For example: Pacific Standard Time{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1633,45 +1454,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="instantrpretentionrangeindays_nodejs">
 <a href="#instantrpretentionrangeindays_nodejs" style="color: inherit; text-decoration: inherit;">instant<wbr>Rp<wbr>Retention<wbr>Range<wbr>In<wbr>Days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Instant RP retention policy range in days{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_nodejs">
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schedulepolicy_nodejs">
 <a href="#schedulepolicy_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timezone_nodejs">
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TimeZone optional input as string. For example: Pacific Standard Time{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1680,57 +1496,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="instant_rp_retention_range_in_days_python">
 <a href="#instant_rp_retention_range_in_days_python" style="color: inherit; text-decoration: inherit;">instant_<wbr>rp_<wbr>retention_<wbr>range_<wbr>in_<wbr>days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instant RP retention policy range in days{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retention_policy_python">
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schedule_policy_python">
 <a href="#schedule_policy_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="time_zone_python">
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}TimeZone optional input as string. For example: Pacific Standard Time{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="configurationprofilepreferencevmbackupresponse">Configuration<wbr>Profile<wbr>Preference<wbr>Vm<wbr>Backup<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1738,45 +1540,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="instantrpretentionrangeindays_csharp">
 <a href="#instantrpretentionrangeindays_csharp" style="color: inherit; text-decoration: inherit;">Instant<wbr>Rp<wbr>Retention<wbr>Range<wbr>In<wbr>Days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instant RP retention policy range in days{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_csharp">
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schedulepolicy_csharp">
 <a href="#schedulepolicy_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timezone_csharp">
 <a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TimeZone optional input as string. For example: Pacific Standard Time{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1785,45 +1582,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="instantrpretentionrangeindays_go">
 <a href="#instantrpretentionrangeindays_go" style="color: inherit; text-decoration: inherit;">Instant<wbr>Rp<wbr>Retention<wbr>Range<wbr>In<wbr>Days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instant RP retention policy range in days{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_go">
 <a href="#retentionpolicy_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schedulepolicy_go">
 <a href="#schedulepolicy_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timezone_go">
 <a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TimeZone optional input as string. For example: Pacific Standard Time{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1832,45 +1624,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="instantrpretentionrangeindays_nodejs">
 <a href="#instantrpretentionrangeindays_nodejs" style="color: inherit; text-decoration: inherit;">instant<wbr>Rp<wbr>Retention<wbr>Range<wbr>In<wbr>Days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Instant RP retention policy range in days{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_nodejs">
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schedulepolicy_nodejs">
 <a href="#schedulepolicy_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timezone_nodejs">
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TimeZone optional input as string. For example: Pacific Standard Time{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1879,53 +1666,154 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="instant_rp_retention_range_in_days_python">
 <a href="#instant_rp_retention_range_in_days_python" style="color: inherit; text-decoration: inherit;">instant_<wbr>rp_<wbr>retention_<wbr>range_<wbr>in_<wbr>days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instant RP retention policy range in days{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retention_policy_python">
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schedule_policy_python">
 <a href="#schedule_policy_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="time_zone_python">
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}TimeZone optional input as string. For example: Pacific Standard Time{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="enablerealtimeprotection">Enable<wbr>Real<wbr>Time<wbr>Protection</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>True</dt>
+    <dd>True</dd>
+    <dt>False</dt>
+    <dd>False</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Enable<wbr>Real<wbr>Time<wbr>Protection<wbr>True</dt>
+    <dd>True</dd>
+    <dt>Enable<wbr>Real<wbr>Time<wbr>Protection<wbr>False</dt>
+    <dd>False</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>True</dt>
+    <dd>True</dd>
+    <dt>False</dt>
+    <dd>False</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>TRUE</dt>
+    <dd>True</dd>
+    <dt>FALSE</dt>
+    <dd>False</dd>
+</dl>
+{{% /choosable %}}
 
+<h4 id="runscheduledscan">Run<wbr>Scheduled<wbr>Scan</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>True</dt>
+    <dd>True</dd>
+    <dt>False</dt>
+    <dd>False</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Run<wbr>Scheduled<wbr>Scan<wbr>True</dt>
+    <dd>True</dd>
+    <dt>Run<wbr>Scheduled<wbr>Scan<wbr>False</dt>
+    <dd>False</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>True</dt>
+    <dd>True</dd>
+    <dt>False</dt>
+    <dd>False</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>TRUE</dt>
+    <dd>True</dd>
+    <dt>FALSE</dt>
+    <dd>False</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="scantype">Scan<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Quick</dt>
+    <dd>Quick</dd>
+    <dt>Full</dt>
+    <dd>Full</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Scan<wbr>Type<wbr>Quick</dt>
+    <dd>Quick</dd>
+    <dt>Scan<wbr>Type<wbr>Full</dt>
+    <dd>Full</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Quick</dt>
+    <dd>Quick</dd>
+    <dt>Full</dt>
+    <dd>Full</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>QUICK</dt>
+    <dd>Quick</dd>
+    <dt>FULL</dt>
+    <dd>Full</dd>
+</dl>
+{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>

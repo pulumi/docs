@@ -2,7 +2,7 @@
 ---
 title: "ServerDetails"
 title_tag: "azure-nextgen.analysisservices.ServerDetails"
-meta_desc: "Explore the ServerDetails resource of the analysisservices module, including examples, input properties, output properties, lookup functions, and supporting types. Represents an instance of an Analysis Services resource."
+meta_desc: "Documentation for the azure-nextgen.analysisservices.ServerDetails resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -11,6 +11,7 @@ meta_desc: "Explore the ServerDetails resource of the analysisservices module, i
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents an instance of an Analysis Services resource.
+Latest API Version: 2017-08-01.
 
 
 {{% examples %}}
@@ -168,7 +169,7 @@ const serverDetails = new azure_nextgen.analysisservices.latest.ServerDetails("s
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ServerDetails</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ServerDetailsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ServerDetails</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ServerDetailsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -176,11 +177,11 @@ const serverDetails = new azure_nextgen.analysisservices.latest.ServerDetails("s
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServerDetails</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ServerDetailsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServerDetails</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServerDetails</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ServerDetailsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServerDetails</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ServerDetails</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ServerDetailsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ServerDetails</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ServerDetailsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -191,7 +192,7 @@ const serverDetails = new azure_nextgen.analysisservices.latest.ServerDetails("s
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -260,7 +261,7 @@ const serverDetails = new azure_nextgen.analysisservices.latest.ServerDetails("s
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -299,7 +300,7 @@ const serverDetails = new azure_nextgen.analysisservices.latest.ServerDetails("s
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -340,7 +341,6 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -348,105 +348,94 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
             title="Required">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the Analysis Services resource.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Resource group of which a given Analysis Services server is part. This name must be at least 1 character in length, and no more than 90.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="servername_csharp">
 <a href="#servername_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Analysis Services server. It must be a minimum of 3 characters, and a maximum of 63.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Analysis<wbr>Services.<wbr>Inputs.<wbr>Resource<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the Analysis Services resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="asadministrators_csharp">
 <a href="#asadministrators_csharp" style="color: inherit; text-decoration: inherit;">As<wbr>Administrators</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serveradministrators">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Analysis<wbr>Services.<wbr>Inputs.<wbr>Server<wbr>Administrators<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of AS server administrators{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupblobcontaineruri_csharp">
 <a href="#backupblobcontaineruri_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Blob<wbr>Container<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SAS container URI to the backup container.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gatewaydetails_csharp">
 <a href="#gatewaydetails_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gatewaydetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Analysis<wbr>Services.<wbr>Inputs.<wbr>Gateway<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gateway details configured for the AS server.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipv4firewallsettings_csharp">
 <a href="#ipv4firewallsettings_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>V4Firewall<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipv4firewallsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Analysis<wbr>Services.<wbr>Inputs.<wbr>IPv4Firewall<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The firewall settings for the AS server.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="querypoolconnectionmode_csharp">
 <a href="#querypoolconnectionmode_csharp" style="color: inherit; text-decoration: inherit;">Querypool<wbr>Connection<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Analysis<wbr>Services.<wbr>Connection<wbr>Mode</span>
+        <span class="property-type"><a href="#connectionmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Analysis<wbr>Services.<wbr>Connection<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}How the read-write server's participation in the query pool is controlled.<br/>It can have the following values: <ul><li>readOnly - indicates that the read-write server is intended not to participate in query operations</li><li>all - indicates that the read-write server can participate in query operations</li></ul>Specifying readOnly when capacity is 1 results in error.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value pairs of additional resource provisioning properties.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -455,105 +444,94 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
             title="Required">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the Analysis Services resource.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Resource group of which a given Analysis Services server is part. This name must be at least 1 character in length, and no more than 90.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="servername_go">
 <a href="#servername_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Analysis Services server. It must be a minimum of 3 characters, and a maximum of 63.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesku">Resource<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the Analysis Services resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="asadministrators_go">
 <a href="#asadministrators_go" style="color: inherit; text-decoration: inherit;">As<wbr>Administrators</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serveradministrators">Server<wbr>Administrators</a></span>
     </dt>
     <dd>{{% md %}}A collection of AS server administrators{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupblobcontaineruri_go">
 <a href="#backupblobcontaineruri_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Blob<wbr>Container<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SAS container URI to the backup container.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gatewaydetails_go">
 <a href="#gatewaydetails_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gatewaydetails">Gateway<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}The gateway details configured for the AS server.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipv4firewallsettings_go">
 <a href="#ipv4firewallsettings_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>V4Firewall<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipv4firewallsettings">IPv4Firewall<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The firewall settings for the AS server.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="querypoolconnectionmode_go">
 <a href="#querypoolconnectionmode_go" style="color: inherit; text-decoration: inherit;">Querypool<wbr>Connection<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#connectionmode">Connection<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}How the read-write server's participation in the query pool is controlled.<br/>It can have the following values: <ul><li>readOnly - indicates that the read-write server is intended not to participate in query operations</li><li>all - indicates that the read-write server can participate in query operations</li></ul>Specifying readOnly when capacity is 1 results in error.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value pairs of additional resource provisioning properties.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -562,105 +540,94 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
             title="Required">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the Analysis Services resource.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Resource group of which a given Analysis Services server is part. This name must be at least 1 character in length, and no more than 90.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="servername_nodejs">
 <a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Analysis Services server. It must be a minimum of 3 characters, and a maximum of 63.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesku">Resource<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the Analysis Services resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="asadministrators_nodejs">
 <a href="#asadministrators_nodejs" style="color: inherit; text-decoration: inherit;">as<wbr>Administrators</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serveradministrators">Server<wbr>Administrators</a></span>
     </dt>
     <dd>{{% md %}}A collection of AS server administrators{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupblobcontaineruri_nodejs">
 <a href="#backupblobcontaineruri_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Blob<wbr>Container<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SAS container URI to the backup container.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gatewaydetails_nodejs">
 <a href="#gatewaydetails_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gatewaydetails">Gateway<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}The gateway details configured for the AS server.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipv4firewallsettings_nodejs">
 <a href="#ipv4firewallsettings_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>V4Firewall<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipv4firewallsettings">IPv4Firewall<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The firewall settings for the AS server.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="querypoolconnectionmode_nodejs">
 <a href="#querypoolconnectionmode_nodejs" style="color: inherit; text-decoration: inherit;">querypool<wbr>Connection<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">enums.<wbr>Connection<wbr>Mode</span>
+        <span class="property-type"><a href="#connectionmode">Connection<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}How the read-write server's participation in the query pool is controlled.<br/>It can have the following values: <ul><li>readOnly - indicates that the read-write server is intended not to participate in query operations</li><li>all - indicates that the read-write server can participate in query operations</li></ul>Specifying readOnly when capacity is 1 results in error.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value pairs of additional resource provisioning properties.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -669,114 +636,99 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
             title="Required">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Location of the Analysis Services resource.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Resource group of which a given Analysis Services server is part. This name must be at least 1 character in length, and no more than 90.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="server_name_python">
 <a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Analysis Services server. It must be a minimum of 3 characters, and a maximum of 63.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesku">Resource<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The SKU of the Analysis Services resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="as_administrators_python">
 <a href="#as_administrators_python" style="color: inherit; text-decoration: inherit;">as_<wbr>administrators</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serveradministrators">Server<wbr>Administrators<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A collection of AS server administrators{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backup_blob_container_uri_python">
 <a href="#backup_blob_container_uri_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>blob_<wbr>container_<wbr>uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SAS container URI to the backup container.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gateway_details_python">
 <a href="#gateway_details_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gatewaydetails">Gateway<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The gateway details configured for the AS server.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ip_v4_firewall_settings_python">
 <a href="#ip_v4_firewall_settings_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>v4_<wbr>firewall_<wbr>settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipv4firewallsettings">IPv4Firewall<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The firewall settings for the AS server.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="querypool_connection_mode_python">
 <a href="#querypool_connection_mode_python" style="color: inherit; text-decoration: inherit;">querypool_<wbr>connection_<wbr>mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Connection<wbr>Mode</span>
+        <span class="property-type"><a href="#connectionmode">Connection<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}How the read-write server's participation in the query pool is controlled.<br/>It can have the following values: <ul><li>readOnly - indicates that the read-write server is intended not to participate in query operations</li><li>all - indicates that the read-write server can participate in query operations</li></ul>Specifying readOnly when capacity is 1 results in error.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value pairs of additional resource provisioning properties.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the ServerDetails resource produces the following output properties:
-
 
 
 
@@ -787,65 +739,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Analysis Services resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current deployment state of Analysis Services resource. The provisioningState is to indicate states for resource provisioning.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="serverfullname_csharp">
 <a href="#serverfullname_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Full<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full name of the Analysis Services resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of Analysis Services resource. The state is to indicate more states outside of resource provisioning.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the Analysis Services resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -854,65 +799,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Analysis Services resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current deployment state of Analysis Services resource. The provisioningState is to indicate states for resource provisioning.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="serverfullname_go">
 <a href="#serverfullname_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Full<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full name of the Analysis Services resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of Analysis Services resource. The state is to indicate more states outside of resource provisioning.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the Analysis Services resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -921,65 +859,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Analysis Services resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current deployment state of Analysis Services resource. The provisioningState is to indicate states for resource provisioning.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="serverfullname_nodejs">
 <a href="#serverfullname_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Full<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full name of the Analysis Services resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of Analysis Services resource. The state is to indicate more states outside of resource provisioning.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the Analysis Services resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -988,68 +919,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Analysis Services resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current deployment state of Analysis Services resource. The provisioningState is to indicate states for resource provisioning.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="server_full_name_python">
 <a href="#server_full_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>full_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full name of the Analysis Services resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current state of Analysis Services resource. The state is to indicate more states outside of resource provisioning.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the Analysis Services resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1060,13 +981,46 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="connectionmode">Connection<wbr>Mode</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>All</dt>
+    <dd>All</dd>
+    <dt>Read<wbr>Only</dt>
+    <dd>ReadOnly</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Connection<wbr>Mode<wbr>All</dt>
+    <dd>All</dd>
+    <dt>Connection<wbr>Mode<wbr>Read<wbr>Only</dt>
+    <dd>ReadOnly</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>All</dt>
+    <dd>All</dd>
+    <dt>Read<wbr>Only</dt>
+    <dd>ReadOnly</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>ALL</dt>
+    <dd>All</dd>
+    <dt>READ_ONLY</dt>
+    <dd>ReadOnly</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="gatewaydetails">Gateway<wbr>Details</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1075,15 +1029,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="gatewayresourceid_csharp">
 <a href="#gatewayresourceid_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gateway resource to be associated with the server.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1092,15 +1044,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="gatewayresourceid_go">
 <a href="#gatewayresourceid_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gateway resource to be associated with the server.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1109,15 +1059,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="gatewayresourceid_nodejs">
 <a href="#gatewayresourceid_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gateway resource to be associated with the server.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1126,26 +1074,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="gateway_resource_id_python">
 <a href="#gateway_resource_id_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>resource_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gateway resource to be associated with the server.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="gatewaydetailsresponse">Gateway<wbr>Details<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1154,35 +1091,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="dmtsclusteruri_csharp">
 <a href="#dmtsclusteruri_csharp" style="color: inherit; text-decoration: inherit;">Dmts<wbr>Cluster<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Uri of the DMTS cluster.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="gatewayobjectid_csharp">
 <a href="#gatewayobjectid_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Object<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gateway object id from in the DMTS cluster for the gateway resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gatewayresourceid_csharp">
 <a href="#gatewayresourceid_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gateway resource to be associated with the server.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1191,35 +1124,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="dmtsclusteruri_go">
 <a href="#dmtsclusteruri_go" style="color: inherit; text-decoration: inherit;">Dmts<wbr>Cluster<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Uri of the DMTS cluster.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="gatewayobjectid_go">
 <a href="#gatewayobjectid_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Object<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gateway object id from in the DMTS cluster for the gateway resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gatewayresourceid_go">
 <a href="#gatewayresourceid_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gateway resource to be associated with the server.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1228,35 +1157,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="dmtsclusteruri_nodejs">
 <a href="#dmtsclusteruri_nodejs" style="color: inherit; text-decoration: inherit;">dmts<wbr>Cluster<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Uri of the DMTS cluster.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="gatewayobjectid_nodejs">
 <a href="#gatewayobjectid_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Object<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gateway object id from in the DMTS cluster for the gateway resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gatewayresourceid_nodejs">
 <a href="#gatewayresourceid_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gateway resource to be associated with the server.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1265,47 +1190,34 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="dmts_cluster_uri_python">
 <a href="#dmts_cluster_uri_python" style="color: inherit; text-decoration: inherit;">dmts_<wbr>cluster_<wbr>uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Uri of the DMTS cluster.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="gateway_object_id_python">
 <a href="#gateway_object_id_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>object_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gateway object id from in the DMTS cluster for the gateway resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gateway_resource_id_python">
 <a href="#gateway_resource_id_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>resource_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gateway resource to be associated with the server.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="ipv4firewallrule">IPv4Firewall<wbr>Rule</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1313,35 +1225,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="firewallrulename_csharp">
 <a href="#firewallrulename_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Rule<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The rule name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rangeend_csharp">
 <a href="#rangeend_csharp" style="color: inherit; text-decoration: inherit;">Range<wbr>End</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end range of IPv4.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rangestart_csharp">
 <a href="#rangestart_csharp" style="color: inherit; text-decoration: inherit;">Range<wbr>Start</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start range of IPv4.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1350,35 +1258,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="firewallrulename_go">
 <a href="#firewallrulename_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Rule<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The rule name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rangeend_go">
 <a href="#rangeend_go" style="color: inherit; text-decoration: inherit;">Range<wbr>End</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end range of IPv4.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rangestart_go">
 <a href="#rangestart_go" style="color: inherit; text-decoration: inherit;">Range<wbr>Start</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start range of IPv4.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1387,35 +1291,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="firewallrulename_nodejs">
 <a href="#firewallrulename_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Rule<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The rule name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rangeend_nodejs">
 <a href="#rangeend_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>End</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end range of IPv4.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rangestart_nodejs">
 <a href="#rangestart_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>Start</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start range of IPv4.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1424,47 +1324,34 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="firewall_rule_name_python">
 <a href="#firewall_rule_name_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>rule_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The rule name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="range_end_python">
 <a href="#range_end_python" style="color: inherit; text-decoration: inherit;">range_<wbr>end</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The end range of IPv4.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="range_start_python">
 <a href="#range_start_python" style="color: inherit; text-decoration: inherit;">range_<wbr>start</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The start range of IPv4.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="ipv4firewallruleresponse">IPv4Firewall<wbr>Rule<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1472,35 +1359,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="firewallrulename_csharp">
 <a href="#firewallrulename_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Rule<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The rule name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rangeend_csharp">
 <a href="#rangeend_csharp" style="color: inherit; text-decoration: inherit;">Range<wbr>End</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end range of IPv4.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rangestart_csharp">
 <a href="#rangestart_csharp" style="color: inherit; text-decoration: inherit;">Range<wbr>Start</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start range of IPv4.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1509,35 +1392,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="firewallrulename_go">
 <a href="#firewallrulename_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Rule<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The rule name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rangeend_go">
 <a href="#rangeend_go" style="color: inherit; text-decoration: inherit;">Range<wbr>End</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end range of IPv4.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rangestart_go">
 <a href="#rangestart_go" style="color: inherit; text-decoration: inherit;">Range<wbr>Start</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start range of IPv4.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1546,35 +1425,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="firewallrulename_nodejs">
 <a href="#firewallrulename_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Rule<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The rule name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rangeend_nodejs">
 <a href="#rangeend_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>End</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end range of IPv4.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rangestart_nodejs">
 <a href="#rangestart_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>Start</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start range of IPv4.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1583,46 +1458,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="firewall_rule_name_python">
 <a href="#firewall_rule_name_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>rule_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The rule name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="range_end_python">
 <a href="#range_end_python" style="color: inherit; text-decoration: inherit;">range_<wbr>end</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The end range of IPv4.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="range_start_python">
 <a href="#range_start_python" style="color: inherit; text-decoration: inherit;">range_<wbr>start</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The start range of IPv4.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="ipv4firewallsettings">IPv4Firewall<wbr>Settings</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1631,25 +1493,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="enablepowerbiservice_csharp">
 <a href="#enablepowerbiservice_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Power<wbr>BIService</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The indicator of enabling PBI service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="firewallrules_csharp">
 <a href="#firewallrules_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipv4firewallrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Analysis<wbr>Services.<wbr>Inputs.<wbr>IPv4Firewall<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of firewall rules.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1658,25 +1517,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="enablepowerbiservice_go">
 <a href="#enablepowerbiservice_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Power<wbr>BIService</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The indicator of enabling PBI service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="firewallrules_go">
 <a href="#firewallrules_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipv4firewallrule">[]IPv4Firewall<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}An array of firewall rules.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1685,25 +1541,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="enablepowerbiservice_nodejs">
 <a href="#enablepowerbiservice_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Power<wbr>BIService</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The indicator of enabling PBI service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="firewallrules_nodejs">
 <a href="#firewallrules_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipv4firewallrule">IPv4Firewall<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}An array of firewall rules.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1712,36 +1565,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="enable_power_bi_service_python">
 <a href="#enable_power_bi_service_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>power_<wbr>bi_<wbr>service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The indicator of enabling PBI service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="firewall_rules_python">
 <a href="#firewall_rules_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipv4firewallrule">Sequence[IPv4Firewall<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of firewall rules.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="ipv4firewallsettingsresponse">IPv4Firewall<wbr>Settings<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1750,25 +1591,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="enablepowerbiservice_csharp">
 <a href="#enablepowerbiservice_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Power<wbr>BIService</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The indicator of enabling PBI service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="firewallrules_csharp">
 <a href="#firewallrules_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipv4firewallruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Analysis<wbr>Services.<wbr>Inputs.<wbr>IPv4Firewall<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of firewall rules.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1777,25 +1615,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="enablepowerbiservice_go">
 <a href="#enablepowerbiservice_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Power<wbr>BIService</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The indicator of enabling PBI service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="firewallrules_go">
 <a href="#firewallrules_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipv4firewallruleresponse">[]IPv4Firewall<wbr>Rule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An array of firewall rules.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1804,25 +1639,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="enablepowerbiservice_nodejs">
 <a href="#enablepowerbiservice_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Power<wbr>BIService</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The indicator of enabling PBI service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="firewallrules_nodejs">
 <a href="#firewallrules_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipv4firewallruleresponse">IPv4Firewall<wbr>Rule<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}An array of firewall rules.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1831,37 +1663,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="enable_power_bi_service_python">
 <a href="#enable_power_bi_service_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>power_<wbr>bi_<wbr>service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The indicator of enabling PBI service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="firewall_rules_python">
 <a href="#firewall_rules_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipv4firewallruleresponse">Sequence[IPv4Firewall<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of firewall rules.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="resourcesku">Resource<wbr>Sku</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1869,35 +1689,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SKU level.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="capacity_csharp">
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of instances in the read only query pool.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Analysis<wbr>Services.<wbr>Sku<wbr>Tier</span>
+        <span class="property-type">string | <a href="#skutier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Analysis<wbr>Services.<wbr>Sku<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}The name of the Azure pricing tier to which the SKU applies.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1906,35 +1722,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SKU level.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="capacity_go">
 <a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of instances in the read only query pool.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#skutier">Sku<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}The name of the Azure pricing tier to which the SKU applies.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1943,35 +1755,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SKU level.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="capacity_nodejs">
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of instances in the read only query pool.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Sku<wbr>Tier</span>
+        <span class="property-type">string | <a href="#skutier">Sku<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}The name of the Azure pricing tier to which the SKU applies.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1980,47 +1788,34 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the SKU level.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="capacity_python">
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of instances in the read only query pool.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Sku<wbr>Tier</span>
+        <span class="property-type">str | <a href="#skutier">Sku<wbr>Tier</a></span>
     </dt>
     <dd>{{% md %}}The name of the Azure pricing tier to which the SKU applies.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="resourceskuresponse">Resource<wbr>Sku<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2028,35 +1823,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SKU level.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="capacity_csharp">
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of instances in the read only query pool.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure pricing tier to which the SKU applies.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2065,35 +1856,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SKU level.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="capacity_go">
 <a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of instances in the read only query pool.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure pricing tier to which the SKU applies.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2102,35 +1889,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SKU level.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="capacity_nodejs">
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of instances in the read only query pool.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure pricing tier to which the SKU applies.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2139,47 +1922,34 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the SKU level.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="capacity_python">
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of instances in the read only query pool.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Azure pricing tier to which the SKU applies.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="serveradministrators">Server<wbr>Administrators</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2187,15 +1957,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="members_csharp">
 <a href="#members_csharp" style="color: inherit; text-decoration: inherit;">Members</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An array of administrator user identities.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2204,15 +1972,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="members_go">
 <a href="#members_go" style="color: inherit; text-decoration: inherit;">Members</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An array of administrator user identities.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2221,15 +1987,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="members_nodejs">
 <a href="#members_nodejs" style="color: inherit; text-decoration: inherit;">members</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of administrator user identities.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2238,27 +2002,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="members_python">
 <a href="#members_python" style="color: inherit; text-decoration: inherit;">members</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of administrator user identities.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="serveradministratorsresponse">Server<wbr>Administrators<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2266,15 +2019,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="members_csharp">
 <a href="#members_csharp" style="color: inherit; text-decoration: inherit;">Members</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An array of administrator user identities.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2283,15 +2034,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="members_go">
 <a href="#members_go" style="color: inherit; text-decoration: inherit;">Members</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An array of administrator user identities.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2300,15 +2049,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="members_nodejs">
 <a href="#members_nodejs" style="color: inherit; text-decoration: inherit;">members</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of administrator user identities.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2317,23 +2064,59 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="members_python">
 <a href="#members_python" style="color: inherit; text-decoration: inherit;">members</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of administrator user identities.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="skutier">Sku<wbr>Tier</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Development</dt>
+    <dd>Development</dd>
+    <dt>Basic</dt>
+    <dd>Basic</dd>
+    <dt>Standard</dt>
+    <dd>Standard</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Sku<wbr>Tier<wbr>Development</dt>
+    <dd>Development</dd>
+    <dt>Sku<wbr>Tier<wbr>Basic</dt>
+    <dd>Basic</dd>
+    <dt>Sku<wbr>Tier<wbr>Standard</dt>
+    <dd>Standard</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Development</dt>
+    <dd>Development</dd>
+    <dt>Basic</dt>
+    <dd>Basic</dd>
+    <dt>Standard</dt>
+    <dd>Standard</dd>
+</dl>
+{{% /choosable %}}
 
-
-
-
-
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>DEVELOPMENT</dt>
+    <dd>Development</dd>
+    <dt>BASIC</dt>
+    <dd>Basic</dd>
+    <dt>STANDARD</dt>
+    <dd>Standard</dd>
+</dl>
+{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>

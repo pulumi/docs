@@ -2,7 +2,7 @@
 ---
 title: "ComponentCurrentBillingFeature"
 title_tag: "azure-nextgen.insights.ComponentCurrentBillingFeature"
-meta_desc: "Explore the ComponentCurrentBillingFeature resource of the insights module, including examples, input properties, output properties, lookup functions, and supporting types. An Application Insights component billing features"
+meta_desc: "Documentation for the azure-nextgen.insights.ComponentCurrentBillingFeature resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -11,6 +11,7 @@ meta_desc: "Explore the ComponentCurrentBillingFeature resource of the insights 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Application Insights component billing features
+Latest API Version: 2015-05-01.
 
 
 {{% examples %}}
@@ -138,7 +139,7 @@ const componentCurrentBillingFeature = new azure_nextgen.insights.latest.Compone
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ComponentCurrentBillingFeature</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ComponentCurrentBillingFeatureArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ComponentCurrentBillingFeature</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ComponentCurrentBillingFeatureArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -146,11 +147,11 @@ const componentCurrentBillingFeature = new azure_nextgen.insights.latest.Compone
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewComponentCurrentBillingFeature</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ComponentCurrentBillingFeatureArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ComponentCurrentBillingFeature</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewComponentCurrentBillingFeature</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ComponentCurrentBillingFeatureArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ComponentCurrentBillingFeature</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ComponentCurrentBillingFeature</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ComponentCurrentBillingFeatureArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ComponentCurrentBillingFeature</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ComponentCurrentBillingFeatureArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -161,7 +162,7 @@ const componentCurrentBillingFeature = new azure_nextgen.insights.latest.Compone
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -230,7 +231,7 @@ const componentCurrentBillingFeature = new azure_nextgen.insights.latest.Compone
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -269,7 +270,7 @@ const componentCurrentBillingFeature = new azure_nextgen.insights.latest.Compone
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -310,7 +311,6 @@ The ComponentCurrentBillingFeature resource accepts the following [input]({{< re
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -318,45 +318,40 @@ The ComponentCurrentBillingFeature resource accepts the following [input]({{< re
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcename_csharp">
 <a href="#resourcename_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="currentbillingfeatures_csharp">
 <a href="#currentbillingfeatures_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Billing<wbr>Features</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Current enabled pricing plan. When the component is in the Enterprise plan, this will list both 'Basic' and 'Application Insights Enterprise'.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datavolumecap_csharp">
 <a href="#datavolumecap_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Volume<wbr>Cap</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationinsightscomponentdatavolumecap">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Application<wbr>Insights<wbr>Component<wbr>Data<wbr>Volume<wbr>Cap<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An Application Insights component daily data volume cap{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -365,45 +360,40 @@ The ComponentCurrentBillingFeature resource accepts the following [input]({{< re
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcename_go">
 <a href="#resourcename_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="currentbillingfeatures_go">
 <a href="#currentbillingfeatures_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Billing<wbr>Features</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Current enabled pricing plan. When the component is in the Enterprise plan, this will list both 'Basic' and 'Application Insights Enterprise'.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datavolumecap_go">
 <a href="#datavolumecap_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Volume<wbr>Cap</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationinsightscomponentdatavolumecap">Application<wbr>Insights<wbr>Component<wbr>Data<wbr>Volume<wbr>Cap</a></span>
     </dt>
     <dd>{{% md %}}An Application Insights component daily data volume cap{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -412,45 +402,40 @@ The ComponentCurrentBillingFeature resource accepts the following [input]({{< re
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcename_nodejs">
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="currentbillingfeatures_nodejs">
 <a href="#currentbillingfeatures_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Billing<wbr>Features</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Current enabled pricing plan. When the component is in the Enterprise plan, this will list both 'Basic' and 'Application Insights Enterprise'.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datavolumecap_nodejs">
 <a href="#datavolumecap_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Volume<wbr>Cap</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationinsightscomponentdatavolumecap">Application<wbr>Insights<wbr>Component<wbr>Data<wbr>Volume<wbr>Cap</a></span>
     </dt>
     <dd>{{% md %}}An Application Insights component daily data volume cap{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -459,54 +444,45 @@ The ComponentCurrentBillingFeature resource accepts the following [input]({{< re
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_name_python">
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="current_billing_features_python">
 <a href="#current_billing_features_python" style="color: inherit; text-decoration: inherit;">current_<wbr>billing_<wbr>features</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Current enabled pricing plan. When the component is in the Enterprise plan, this will list both 'Basic' and 'Application Insights Enterprise'.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="data_volume_cap_python">
 <a href="#data_volume_cap_python" style="color: inherit; text-decoration: inherit;">data_<wbr>volume_<wbr>cap</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationinsightscomponentdatavolumecap">Application<wbr>Insights<wbr>Component<wbr>Data<wbr>Volume<wbr>Cap<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An Application Insights component daily data volume cap{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the ComponentCurrentBillingFeature resource produces the following output properties:
-
 
 
 
@@ -517,15 +493,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -534,15 +508,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -551,15 +523,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -568,18 +538,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -590,13 +555,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
 <h4 id="applicationinsightscomponentdatavolumecap">Application<wbr>Insights<wbr>Component<wbr>Data<wbr>Volume<wbr>Cap</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -605,45 +565,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="cap_csharp">
 <a href="#cap_csharp" style="color: inherit; text-decoration: inherit;">Cap</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Daily data volume cap in GB.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="stopsendnotificationwhenhitcap_csharp">
 <a href="#stopsendnotificationwhenhitcap_csharp" style="color: inherit; text-decoration: inherit;">Stop<wbr>Send<wbr>Notification<wbr>When<wbr>Hit<wbr>Cap</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not send a notification email when the daily data volume cap is met.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="stopsendnotificationwhenhitthreshold_csharp">
 <a href="#stopsendnotificationwhenhitthreshold_csharp" style="color: inherit; text-decoration: inherit;">Stop<wbr>Send<wbr>Notification<wbr>When<wbr>Hit<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="warningthreshold_csharp">
 <a href="#warningthreshold_csharp" style="color: inherit; text-decoration: inherit;">Warning<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -652,45 +607,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="cap_go">
 <a href="#cap_go" style="color: inherit; text-decoration: inherit;">Cap</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Daily data volume cap in GB.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="stopsendnotificationwhenhitcap_go">
 <a href="#stopsendnotificationwhenhitcap_go" style="color: inherit; text-decoration: inherit;">Stop<wbr>Send<wbr>Notification<wbr>When<wbr>Hit<wbr>Cap</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not send a notification email when the daily data volume cap is met.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="stopsendnotificationwhenhitthreshold_go">
 <a href="#stopsendnotificationwhenhitthreshold_go" style="color: inherit; text-decoration: inherit;">Stop<wbr>Send<wbr>Notification<wbr>When<wbr>Hit<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="warningthreshold_go">
 <a href="#warningthreshold_go" style="color: inherit; text-decoration: inherit;">Warning<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -699,45 +649,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="cap_nodejs">
 <a href="#cap_nodejs" style="color: inherit; text-decoration: inherit;">cap</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Daily data volume cap in GB.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="stopsendnotificationwhenhitcap_nodejs">
 <a href="#stopsendnotificationwhenhitcap_nodejs" style="color: inherit; text-decoration: inherit;">stop<wbr>Send<wbr>Notification<wbr>When<wbr>Hit<wbr>Cap</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Do not send a notification email when the daily data volume cap is met.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="stopsendnotificationwhenhitthreshold_nodejs">
 <a href="#stopsendnotificationwhenhitthreshold_nodejs" style="color: inherit; text-decoration: inherit;">stop<wbr>Send<wbr>Notification<wbr>When<wbr>Hit<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="warningthreshold_nodejs">
 <a href="#warningthreshold_nodejs" style="color: inherit; text-decoration: inherit;">warning<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -746,56 +691,42 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="cap_python">
 <a href="#cap_python" style="color: inherit; text-decoration: inherit;">cap</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Daily data volume cap in GB.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="stop_send_notification_when_hit_cap_python">
 <a href="#stop_send_notification_when_hit_cap_python" style="color: inherit; text-decoration: inherit;">stop_<wbr>send_<wbr>notification_<wbr>when_<wbr>hit_<wbr>cap</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not send a notification email when the daily data volume cap is met.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="stop_send_notification_when_hit_threshold_python">
 <a href="#stop_send_notification_when_hit_threshold_python" style="color: inherit; text-decoration: inherit;">stop_<wbr>send_<wbr>notification_<wbr>when_<wbr>hit_<wbr>threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="warning_threshold_python">
 <a href="#warning_threshold_python" style="color: inherit; text-decoration: inherit;">warning_<wbr>threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="applicationinsightscomponentdatavolumecapresponse">Application<wbr>Insights<wbr>Component<wbr>Data<wbr>Volume<wbr>Cap<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -804,65 +735,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="maxhistorycap_csharp">
 <a href="#maxhistorycap_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>History<wbr>Cap</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Maximum daily data volume cap that the user can set for this component.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resettime_csharp">
 <a href="#resettime_csharp" style="color: inherit; text-decoration: inherit;">Reset<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Daily data volume cap UTC reset hour.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cap_csharp">
 <a href="#cap_csharp" style="color: inherit; text-decoration: inherit;">Cap</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Daily data volume cap in GB.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="stopsendnotificationwhenhitcap_csharp">
 <a href="#stopsendnotificationwhenhitcap_csharp" style="color: inherit; text-decoration: inherit;">Stop<wbr>Send<wbr>Notification<wbr>When<wbr>Hit<wbr>Cap</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not send a notification email when the daily data volume cap is met.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="stopsendnotificationwhenhitthreshold_csharp">
 <a href="#stopsendnotificationwhenhitthreshold_csharp" style="color: inherit; text-decoration: inherit;">Stop<wbr>Send<wbr>Notification<wbr>When<wbr>Hit<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="warningthreshold_csharp">
 <a href="#warningthreshold_csharp" style="color: inherit; text-decoration: inherit;">Warning<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -871,65 +795,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="maxhistorycap_go">
 <a href="#maxhistorycap_go" style="color: inherit; text-decoration: inherit;">Max<wbr>History<wbr>Cap</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Maximum daily data volume cap that the user can set for this component.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resettime_go">
 <a href="#resettime_go" style="color: inherit; text-decoration: inherit;">Reset<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Daily data volume cap UTC reset hour.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cap_go">
 <a href="#cap_go" style="color: inherit; text-decoration: inherit;">Cap</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Daily data volume cap in GB.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="stopsendnotificationwhenhitcap_go">
 <a href="#stopsendnotificationwhenhitcap_go" style="color: inherit; text-decoration: inherit;">Stop<wbr>Send<wbr>Notification<wbr>When<wbr>Hit<wbr>Cap</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not send a notification email when the daily data volume cap is met.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="stopsendnotificationwhenhitthreshold_go">
 <a href="#stopsendnotificationwhenhitthreshold_go" style="color: inherit; text-decoration: inherit;">Stop<wbr>Send<wbr>Notification<wbr>When<wbr>Hit<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="warningthreshold_go">
 <a href="#warningthreshold_go" style="color: inherit; text-decoration: inherit;">Warning<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -938,65 +855,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="maxhistorycap_nodejs">
 <a href="#maxhistorycap_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>History<wbr>Cap</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum daily data volume cap that the user can set for this component.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resettime_nodejs">
 <a href="#resettime_nodejs" style="color: inherit; text-decoration: inherit;">reset<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Daily data volume cap UTC reset hour.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cap_nodejs">
 <a href="#cap_nodejs" style="color: inherit; text-decoration: inherit;">cap</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Daily data volume cap in GB.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="stopsendnotificationwhenhitcap_nodejs">
 <a href="#stopsendnotificationwhenhitcap_nodejs" style="color: inherit; text-decoration: inherit;">stop<wbr>Send<wbr>Notification<wbr>When<wbr>Hit<wbr>Cap</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Do not send a notification email when the daily data volume cap is met.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="stopsendnotificationwhenhitthreshold_nodejs">
 <a href="#stopsendnotificationwhenhitthreshold_nodejs" style="color: inherit; text-decoration: inherit;">stop<wbr>Send<wbr>Notification<wbr>When<wbr>Hit<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="warningthreshold_nodejs">
 <a href="#warningthreshold_nodejs" style="color: inherit; text-decoration: inherit;">warning<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1005,73 +915,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="max_history_cap_python">
 <a href="#max_history_cap_python" style="color: inherit; text-decoration: inherit;">max_<wbr>history_<wbr>cap</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Maximum daily data volume cap that the user can set for this component.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="reset_time_python">
 <a href="#reset_time_python" style="color: inherit; text-decoration: inherit;">reset_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Daily data volume cap UTC reset hour.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cap_python">
 <a href="#cap_python" style="color: inherit; text-decoration: inherit;">cap</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Daily data volume cap in GB.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="stop_send_notification_when_hit_cap_python">
 <a href="#stop_send_notification_when_hit_cap_python" style="color: inherit; text-decoration: inherit;">stop_<wbr>send_<wbr>notification_<wbr>when_<wbr>hit_<wbr>cap</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not send a notification email when the daily data volume cap is met.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="stop_send_notification_when_hit_threshold_python">
 <a href="#stop_send_notification_when_hit_threshold_python" style="color: inherit; text-decoration: inherit;">stop_<wbr>send_<wbr>notification_<wbr>when_<wbr>hit_<wbr>threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="warning_threshold_python">
 <a href="#warning_threshold_python" style="color: inherit; text-decoration: inherit;">warning_<wbr>threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Reserved, not used for now.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 
 
 <h2 id="package-details">Package Details</h2>

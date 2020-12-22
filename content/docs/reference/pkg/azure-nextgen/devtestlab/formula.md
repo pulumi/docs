@@ -2,7 +2,7 @@
 ---
 title: "Formula"
 title_tag: "azure-nextgen.devtestlab.Formula"
-meta_desc: "Explore the Formula resource of the devtestlab module, including examples, input properties, output properties, lookup functions, and supporting types. A formula for creating a VM, specifying an image base and other parameters"
+meta_desc: "Documentation for the azure-nextgen.devtestlab.Formula resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -11,6 +11,7 @@ meta_desc: "Explore the Formula resource of the devtestlab module, including exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A formula for creating a VM, specifying an image base and other parameters
+Latest API Version: 2018-09-15.
 
 
 
@@ -20,7 +21,7 @@ A formula for creating a VM, specifying an image base and other parameters
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Formula</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">FormulaArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Formula</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">FormulaArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -28,11 +29,11 @@ A formula for creating a VM, specifying an image base and other parameters
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFormula</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">FormulaArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Formula</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFormula</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">FormulaArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Formula</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Formula</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">FormulaArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Formula</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">FormulaArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -43,7 +44,7 @@ A formula for creating a VM, specifying an image base and other parameters
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -112,7 +113,7 @@ A formula for creating a VM, specifying an image base and other parameters
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -151,7 +152,7 @@ A formula for creating a VM, specifying an image base and other parameters
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -192,7 +193,6 @@ The Formula resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -200,105 +200,94 @@ The Formula resource accepts the following [input]({{< relref "/docs/intro/conce
             title="Required">
         <span id="labname_csharp">
 <a href="#labname_csharp" style="color: inherit; text-decoration: inherit;">Lab<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the lab.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the formula.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="author_csharp">
 <a href="#author_csharp" style="color: inherit; text-decoration: inherit;">Author</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The author of the formula.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the formula.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="formulacontent_csharp">
 <a href="#formulacontent_csharp" style="color: inherit; text-decoration: inherit;">Formula<wbr>Content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labvirtualmachinecreationparameter">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Lab<wbr>Virtual<wbr>Machine<wbr>Creation<wbr>Parameter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The content of the formula.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ostype_csharp">
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OS type of the formula.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vm_csharp">
 <a href="#vm_csharp" style="color: inherit; text-decoration: inherit;">Vm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#formulapropertiesfromvm">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Formula<wbr>Properties<wbr>From<wbr>Vm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about a VM from which a formula is to be created.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -307,105 +296,94 @@ The Formula resource accepts the following [input]({{< relref "/docs/intro/conce
             title="Required">
         <span id="labname_go">
 <a href="#labname_go" style="color: inherit; text-decoration: inherit;">Lab<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the lab.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the formula.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="author_go">
 <a href="#author_go" style="color: inherit; text-decoration: inherit;">Author</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The author of the formula.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the formula.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="formulacontent_go">
 <a href="#formulacontent_go" style="color: inherit; text-decoration: inherit;">Formula<wbr>Content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labvirtualmachinecreationparameter">Lab<wbr>Virtual<wbr>Machine<wbr>Creation<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}The content of the formula.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ostype_go">
 <a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OS type of the formula.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vm_go">
 <a href="#vm_go" style="color: inherit; text-decoration: inherit;">Vm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#formulapropertiesfromvm">Formula<wbr>Properties<wbr>From<wbr>Vm</a></span>
     </dt>
     <dd>{{% md %}}Information about a VM from which a formula is to be created.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -414,105 +392,94 @@ The Formula resource accepts the following [input]({{< relref "/docs/intro/conce
             title="Required">
         <span id="labname_nodejs">
 <a href="#labname_nodejs" style="color: inherit; text-decoration: inherit;">lab<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the lab.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the formula.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="author_nodejs">
 <a href="#author_nodejs" style="color: inherit; text-decoration: inherit;">author</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The author of the formula.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the formula.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="formulacontent_nodejs">
 <a href="#formulacontent_nodejs" style="color: inherit; text-decoration: inherit;">formula<wbr>Content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labvirtualmachinecreationparameter">Lab<wbr>Virtual<wbr>Machine<wbr>Creation<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}The content of the formula.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ostype_nodejs">
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OS type of the formula.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vm_nodejs">
 <a href="#vm_nodejs" style="color: inherit; text-decoration: inherit;">vm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#formulapropertiesfromvm">Formula<wbr>Properties<wbr>From<wbr>Vm</a></span>
     </dt>
     <dd>{{% md %}}Information about a VM from which a formula is to be created.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -521,114 +488,99 @@ The Formula resource accepts the following [input]({{< relref "/docs/intro/conce
             title="Required">
         <span id="lab_name_python">
 <a href="#lab_name_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the lab.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the formula.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="author_python">
 <a href="#author_python" style="color: inherit; text-decoration: inherit;">author</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The author of the formula.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the formula.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="formula_content_python">
 <a href="#formula_content_python" style="color: inherit; text-decoration: inherit;">formula_<wbr>content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labvirtualmachinecreationparameter">Lab<wbr>Virtual<wbr>Machine<wbr>Creation<wbr>Parameter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The content of the formula.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="os_type_python">
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The OS type of the formula.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vm_python">
 <a href="#vm_python" style="color: inherit; text-decoration: inherit;">vm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#formulapropertiesfromvm">Formula<wbr>Properties<wbr>From<wbr>Vm<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about a VM from which a formula is to be created.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Formula resource produces the following output properties:
-
 
 
 
@@ -639,55 +591,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="creationdate_csharp">
 <a href="#creationdate_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the formula.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="uniqueidentifier_csharp">
 <a href="#uniqueidentifier_csharp" style="color: inherit; text-decoration: inherit;">Unique<wbr>Identifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -696,55 +642,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="creationdate_go">
 <a href="#creationdate_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the formula.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="uniqueidentifier_go">
 <a href="#uniqueidentifier_go" style="color: inherit; text-decoration: inherit;">Unique<wbr>Identifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -753,55 +693,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="creationdate_nodejs">
 <a href="#creationdate_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the formula.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="uniqueidentifier_nodejs">
 <a href="#uniqueidentifier_nodejs" style="color: inherit; text-decoration: inherit;">unique<wbr>Identifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -810,58 +744,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="creation_date_python">
 <a href="#creation_date_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The creation date of the formula.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="unique_identifier_python">
 <a href="#unique_identifier_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>identifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -872,13 +797,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
 <h4 id="artifactdeploymentstatusproperties">Artifact<wbr>Deployment<wbr>Status<wbr>Properties</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -887,35 +807,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="artifactsapplied_csharp">
 <a href="#artifactsapplied_csharp" style="color: inherit; text-decoration: inherit;">Artifacts<wbr>Applied</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total count of the artifacts that were successfully applied.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deploymentstatus_csharp">
 <a href="#deploymentstatus_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deployment status of the artifact.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="totalartifacts_csharp">
 <a href="#totalartifacts_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Artifacts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total count of the artifacts that were tentatively applied.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -924,35 +840,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="artifactsapplied_go">
 <a href="#artifactsapplied_go" style="color: inherit; text-decoration: inherit;">Artifacts<wbr>Applied</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total count of the artifacts that were successfully applied.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deploymentstatus_go">
 <a href="#deploymentstatus_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deployment status of the artifact.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="totalartifacts_go">
 <a href="#totalartifacts_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Artifacts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total count of the artifacts that were tentatively applied.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -961,35 +873,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="artifactsapplied_nodejs">
 <a href="#artifactsapplied_nodejs" style="color: inherit; text-decoration: inherit;">artifacts<wbr>Applied</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The total count of the artifacts that were successfully applied.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deploymentstatus_nodejs">
 <a href="#deploymentstatus_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deployment status of the artifact.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="totalartifacts_nodejs">
 <a href="#totalartifacts_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Artifacts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The total count of the artifacts that were tentatively applied.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -998,47 +906,34 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="artifacts_applied_python">
 <a href="#artifacts_applied_python" style="color: inherit; text-decoration: inherit;">artifacts_<wbr>applied</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total count of the artifacts that were successfully applied.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deployment_status_python">
 <a href="#deployment_status_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The deployment status of the artifact.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="total_artifacts_python">
 <a href="#total_artifacts_python" style="color: inherit; text-decoration: inherit;">total_<wbr>artifacts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total count of the artifacts that were tentatively applied.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="artifactdeploymentstatuspropertiesresponse">Artifact<wbr>Deployment<wbr>Status<wbr>Properties<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1046,35 +941,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="artifactsapplied_csharp">
 <a href="#artifactsapplied_csharp" style="color: inherit; text-decoration: inherit;">Artifacts<wbr>Applied</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total count of the artifacts that were successfully applied.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deploymentstatus_csharp">
 <a href="#deploymentstatus_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deployment status of the artifact.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="totalartifacts_csharp">
 <a href="#totalartifacts_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Artifacts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total count of the artifacts that were tentatively applied.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1083,35 +974,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="artifactsapplied_go">
 <a href="#artifactsapplied_go" style="color: inherit; text-decoration: inherit;">Artifacts<wbr>Applied</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total count of the artifacts that were successfully applied.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deploymentstatus_go">
 <a href="#deploymentstatus_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deployment status of the artifact.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="totalartifacts_go">
 <a href="#totalartifacts_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Artifacts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total count of the artifacts that were tentatively applied.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1120,35 +1007,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="artifactsapplied_nodejs">
 <a href="#artifactsapplied_nodejs" style="color: inherit; text-decoration: inherit;">artifacts<wbr>Applied</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The total count of the artifacts that were successfully applied.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deploymentstatus_nodejs">
 <a href="#deploymentstatus_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deployment status of the artifact.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="totalartifacts_nodejs">
 <a href="#totalartifacts_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Artifacts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The total count of the artifacts that were tentatively applied.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1157,46 +1040,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="artifacts_applied_python">
 <a href="#artifacts_applied_python" style="color: inherit; text-decoration: inherit;">artifacts_<wbr>applied</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total count of the artifacts that were successfully applied.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deployment_status_python">
 <a href="#deployment_status_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The deployment status of the artifact.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="total_artifacts_python">
 <a href="#total_artifacts_python" style="color: inherit; text-decoration: inherit;">total_<wbr>artifacts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The total count of the artifacts that were tentatively applied.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="artifactinstallproperties">Artifact<wbr>Install<wbr>Properties</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1205,75 +1075,67 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="artifactid_csharp">
 <a href="#artifactid_csharp" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The artifact's identifier.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="artifacttitle_csharp">
 <a href="#artifacttitle_csharp" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Title</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The artifact's title.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deploymentstatusmessage_csharp">
 <a href="#deploymentstatusmessage_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Status<wbr>Message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status message from the deployment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="installtime_csharp">
 <a href="#installtime_csharp" style="color: inherit; text-decoration: inherit;">Install<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time that the artifact starts to install on the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#artifactparameterproperties">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Artifact<wbr>Parameter<wbr>Properties<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The parameters of the artifact.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the artifact.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vmextensionstatusmessage_csharp">
 <a href="#vmextensionstatusmessage_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Extension<wbr>Status<wbr>Message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status message from the virtual machine extension.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1282,75 +1144,67 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="artifactid_go">
 <a href="#artifactid_go" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The artifact's identifier.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="artifacttitle_go">
 <a href="#artifacttitle_go" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Title</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The artifact's title.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deploymentstatusmessage_go">
 <a href="#deploymentstatusmessage_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Status<wbr>Message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status message from the deployment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="installtime_go">
 <a href="#installtime_go" style="color: inherit; text-decoration: inherit;">Install<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time that the artifact starts to install on the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parameters_go">
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#artifactparameterproperties">[]Artifact<wbr>Parameter<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The parameters of the artifact.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the artifact.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vmextensionstatusmessage_go">
 <a href="#vmextensionstatusmessage_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Extension<wbr>Status<wbr>Message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status message from the virtual machine extension.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1359,75 +1213,67 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="artifactid_nodejs">
 <a href="#artifactid_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The artifact's identifier.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="artifacttitle_nodejs">
 <a href="#artifacttitle_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Title</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The artifact's title.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deploymentstatusmessage_nodejs">
 <a href="#deploymentstatusmessage_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Status<wbr>Message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status message from the deployment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="installtime_nodejs">
 <a href="#installtime_nodejs" style="color: inherit; text-decoration: inherit;">install<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time that the artifact starts to install on the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#artifactparameterproperties">Artifact<wbr>Parameter<wbr>Properties[]</a></span>
     </dt>
     <dd>{{% md %}}The parameters of the artifact.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the artifact.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vmextensionstatusmessage_nodejs">
 <a href="#vmextensionstatusmessage_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Extension<wbr>Status<wbr>Message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status message from the virtual machine extension.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1436,86 +1282,69 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="artifact_id_python">
 <a href="#artifact_id_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The artifact's identifier.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="artifact_title_python">
 <a href="#artifact_title_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>title</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The artifact's title.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deployment_status_message_python">
 <a href="#deployment_status_message_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>status_<wbr>message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status message from the deployment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="install_time_python">
 <a href="#install_time_python" style="color: inherit; text-decoration: inherit;">install_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time that the artifact starts to install on the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parameters_python">
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#artifactparameterproperties">Sequence[Artifact<wbr>Parameter<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The parameters of the artifact.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the artifact.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vm_extension_status_message_python">
 <a href="#vm_extension_status_message_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>extension_<wbr>status_<wbr>message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status message from the virtual machine extension.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="artifactinstallpropertiesresponse">Artifact<wbr>Install<wbr>Properties<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1524,75 +1353,67 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="artifactid_csharp">
 <a href="#artifactid_csharp" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The artifact's identifier.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="artifacttitle_csharp">
 <a href="#artifacttitle_csharp" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Title</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The artifact's title.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deploymentstatusmessage_csharp">
 <a href="#deploymentstatusmessage_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Status<wbr>Message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status message from the deployment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="installtime_csharp">
 <a href="#installtime_csharp" style="color: inherit; text-decoration: inherit;">Install<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time that the artifact starts to install on the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#artifactparameterpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Artifact<wbr>Parameter<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The parameters of the artifact.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the artifact.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vmextensionstatusmessage_csharp">
 <a href="#vmextensionstatusmessage_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Extension<wbr>Status<wbr>Message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status message from the virtual machine extension.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1601,75 +1422,67 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="artifactid_go">
 <a href="#artifactid_go" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The artifact's identifier.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="artifacttitle_go">
 <a href="#artifacttitle_go" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Title</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The artifact's title.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deploymentstatusmessage_go">
 <a href="#deploymentstatusmessage_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Status<wbr>Message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status message from the deployment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="installtime_go">
 <a href="#installtime_go" style="color: inherit; text-decoration: inherit;">Install<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time that the artifact starts to install on the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parameters_go">
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#artifactparameterpropertiesresponse">[]Artifact<wbr>Parameter<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The parameters of the artifact.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the artifact.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vmextensionstatusmessage_go">
 <a href="#vmextensionstatusmessage_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Extension<wbr>Status<wbr>Message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status message from the virtual machine extension.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1678,75 +1491,67 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="artifactid_nodejs">
 <a href="#artifactid_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The artifact's identifier.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="artifacttitle_nodejs">
 <a href="#artifacttitle_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Title</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The artifact's title.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deploymentstatusmessage_nodejs">
 <a href="#deploymentstatusmessage_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Status<wbr>Message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status message from the deployment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="installtime_nodejs">
 <a href="#installtime_nodejs" style="color: inherit; text-decoration: inherit;">install<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time that the artifact starts to install on the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#artifactparameterpropertiesresponse">Artifact<wbr>Parameter<wbr>Properties<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The parameters of the artifact.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the artifact.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vmextensionstatusmessage_nodejs">
 <a href="#vmextensionstatusmessage_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Extension<wbr>Status<wbr>Message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status message from the virtual machine extension.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1755,87 +1560,70 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="artifact_id_python">
 <a href="#artifact_id_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The artifact's identifier.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="artifact_title_python">
 <a href="#artifact_title_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>title</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The artifact's title.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deployment_status_message_python">
 <a href="#deployment_status_message_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>status_<wbr>message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status message from the deployment.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="install_time_python">
 <a href="#install_time_python" style="color: inherit; text-decoration: inherit;">install_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time that the artifact starts to install on the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parameters_python">
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#artifactparameterpropertiesresponse">Sequence[Artifact<wbr>Parameter<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The parameters of the artifact.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the artifact.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vm_extension_status_message_python">
 <a href="#vm_extension_status_message_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>extension_<wbr>status_<wbr>message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status message from the virtual machine extension.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="artifactparameterproperties">Artifact<wbr>Parameter<wbr>Properties</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1843,25 +1631,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the artifact parameter.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the artifact parameter.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1870,25 +1655,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the artifact parameter.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the artifact parameter.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1897,25 +1679,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the artifact parameter.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the artifact parameter.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1924,37 +1703,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the artifact parameter.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the artifact parameter.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="artifactparameterpropertiesresponse">Artifact<wbr>Parameter<wbr>Properties<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1962,25 +1729,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the artifact parameter.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the artifact parameter.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1989,25 +1753,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the artifact parameter.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the artifact parameter.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2016,25 +1777,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the artifact parameter.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the artifact parameter.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2043,37 +1801,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the artifact parameter.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the artifact parameter.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="attachnewdatadiskoptions">Attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2081,35 +1827,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="diskname_csharp">
 <a href="#diskname_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the disk to be attached.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disksizegib_csharp">
 <a href="#disksizegib_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gi<wbr>B</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the disk to be attached in GibiBytes.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disktype_csharp">
 <a href="#disktype_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Storage<wbr>Type</span>
+        <span class="property-type">string | <a href="#storagetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Storage<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The storage type for the disk (i.e. Standard, Premium).{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2118,35 +1860,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="diskname_go">
 <a href="#diskname_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the disk to be attached.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disksizegib_go">
 <a href="#disksizegib_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gi<wbr>B</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the disk to be attached in GibiBytes.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disktype_go">
 <a href="#disktype_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#storagetype">Storage<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The storage type for the disk (i.e. Standard, Premium).{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2155,35 +1893,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="diskname_nodejs">
 <a href="#diskname_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the disk to be attached.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disksizegib_nodejs">
 <a href="#disksizegib_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gi<wbr>B</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Size of the disk to be attached in GibiBytes.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disktype_nodejs">
 <a href="#disktype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Storage<wbr>Type</span>
+        <span class="property-type">string | <a href="#storagetype">Storage<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The storage type for the disk (i.e. Standard, Premium).{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2192,47 +1926,34 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="disk_name_python">
 <a href="#disk_name_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the disk to be attached.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disk_size_gi_b_python">
 <a href="#disk_size_gi_b_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gi_<wbr>b</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the disk to be attached in GibiBytes.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disk_type_python">
 <a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Storage<wbr>Type</span>
+        <span class="property-type">str | <a href="#storagetype">Storage<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The storage type for the disk (i.e. Standard, Premium).{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="attachnewdatadiskoptionsresponse">Attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2240,35 +1961,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="diskname_csharp">
 <a href="#diskname_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the disk to be attached.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disksizegib_csharp">
 <a href="#disksizegib_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gi<wbr>B</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the disk to be attached in GibiBytes.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disktype_csharp">
 <a href="#disktype_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The storage type for the disk (i.e. Standard, Premium).{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2277,35 +1994,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="diskname_go">
 <a href="#diskname_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the disk to be attached.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disksizegib_go">
 <a href="#disksizegib_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gi<wbr>B</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the disk to be attached in GibiBytes.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disktype_go">
 <a href="#disktype_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The storage type for the disk (i.e. Standard, Premium).{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2314,35 +2027,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="diskname_nodejs">
 <a href="#diskname_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the disk to be attached.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disksizegib_nodejs">
 <a href="#disksizegib_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gi<wbr>B</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Size of the disk to be attached in GibiBytes.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disktype_nodejs">
 <a href="#disktype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The storage type for the disk (i.e. Standard, Premium).{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2351,47 +2060,34 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="disk_name_python">
 <a href="#disk_name_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the disk to be attached.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disk_size_gi_b_python">
 <a href="#disk_size_gi_b_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gi_<wbr>b</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the disk to be attached in GibiBytes.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disk_type_python">
 <a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The storage type for the disk (i.e. Standard, Premium).{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="bulkcreationparameters">Bulk<wbr>Creation<wbr>Parameters</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2399,15 +2095,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="instancecount_csharp">
 <a href="#instancecount_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of virtual machine instances to create.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2416,15 +2110,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="instancecount_go">
 <a href="#instancecount_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of virtual machine instances to create.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2433,15 +2125,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="instancecount_nodejs">
 <a href="#instancecount_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of virtual machine instances to create.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2450,27 +2140,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="instance_count_python">
 <a href="#instance_count_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of virtual machine instances to create.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="bulkcreationparametersresponse">Bulk<wbr>Creation<wbr>Parameters<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2478,15 +2157,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="instancecount_csharp">
 <a href="#instancecount_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of virtual machine instances to create.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2495,15 +2172,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="instancecount_go">
 <a href="#instancecount_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of virtual machine instances to create.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2512,15 +2187,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="instancecount_nodejs">
 <a href="#instancecount_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of virtual machine instances to create.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2529,26 +2202,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="instance_count_python">
 <a href="#instance_count_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of virtual machine instances to create.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="datadiskproperties">Data<wbr>Disk<wbr>Properties</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2557,35 +2219,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="attachnewdatadiskoptions_csharp">
 <a href="#attachnewdatadiskoptions_csharp" style="color: inherit; text-decoration: inherit;">Attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attachnewdatadiskoptions">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies options to attach a new disk to the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="existinglabdiskid_csharp">
 <a href="#existinglabdiskid_csharp" style="color: inherit; text-decoration: inherit;">Existing<wbr>Lab<wbr>Disk<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the existing lab disk id to attach to virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hostcaching_csharp">
 <a href="#hostcaching_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Caching</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Host<wbr>Caching<wbr>Options</span>
+        <span class="property-type">string | <a href="#hostcachingoptions">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Host<wbr>Caching<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Caching option for a data disk (i.e. None, ReadOnly, ReadWrite).{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2594,35 +2252,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="attachnewdatadiskoptions_go">
 <a href="#attachnewdatadiskoptions_go" style="color: inherit; text-decoration: inherit;">Attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attachnewdatadiskoptions">Attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Specifies options to attach a new disk to the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="existinglabdiskid_go">
 <a href="#existinglabdiskid_go" style="color: inherit; text-decoration: inherit;">Existing<wbr>Lab<wbr>Disk<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the existing lab disk id to attach to virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hostcaching_go">
 <a href="#hostcaching_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Caching</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#hostcachingoptions">Host<wbr>Caching<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Caching option for a data disk (i.e. None, ReadOnly, ReadWrite).{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2631,35 +2285,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="attachnewdatadiskoptions_nodejs">
 <a href="#attachnewdatadiskoptions_nodejs" style="color: inherit; text-decoration: inherit;">attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attachnewdatadiskoptions">Attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Specifies options to attach a new disk to the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="existinglabdiskid_nodejs">
 <a href="#existinglabdiskid_nodejs" style="color: inherit; text-decoration: inherit;">existing<wbr>Lab<wbr>Disk<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the existing lab disk id to attach to virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hostcaching_nodejs">
 <a href="#hostcaching_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Caching</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Host<wbr>Caching<wbr>Options</span>
+        <span class="property-type">string | <a href="#hostcachingoptions">Host<wbr>Caching<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Caching option for a data disk (i.e. None, ReadOnly, ReadWrite).{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2668,46 +2318,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="attach_new_data_disk_options_python">
 <a href="#attach_new_data_disk_options_python" style="color: inherit; text-decoration: inherit;">attach_<wbr>new_<wbr>data_<wbr>disk_<wbr>options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attachnewdatadiskoptions">Attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies options to attach a new disk to the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="existing_lab_disk_id_python">
 <a href="#existing_lab_disk_id_python" style="color: inherit; text-decoration: inherit;">existing_<wbr>lab_<wbr>disk_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the existing lab disk id to attach to virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="host_caching_python">
 <a href="#host_caching_python" style="color: inherit; text-decoration: inherit;">host_<wbr>caching</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Host<wbr>Caching<wbr>Options</span>
+        <span class="property-type">str | <a href="#hostcachingoptions">Host<wbr>Caching<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Caching option for a data disk (i.e. None, ReadOnly, ReadWrite).{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="datadiskpropertiesresponse">Data<wbr>Disk<wbr>Properties<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2716,35 +2353,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="attachnewdatadiskoptions_csharp">
 <a href="#attachnewdatadiskoptions_csharp" style="color: inherit; text-decoration: inherit;">Attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attachnewdatadiskoptionsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies options to attach a new disk to the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="existinglabdiskid_csharp">
 <a href="#existinglabdiskid_csharp" style="color: inherit; text-decoration: inherit;">Existing<wbr>Lab<wbr>Disk<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the existing lab disk id to attach to virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hostcaching_csharp">
 <a href="#hostcaching_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Caching</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Caching option for a data disk (i.e. None, ReadOnly, ReadWrite).{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2753,35 +2386,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="attachnewdatadiskoptions_go">
 <a href="#attachnewdatadiskoptions_go" style="color: inherit; text-decoration: inherit;">Attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attachnewdatadiskoptionsresponse">Attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies options to attach a new disk to the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="existinglabdiskid_go">
 <a href="#existinglabdiskid_go" style="color: inherit; text-decoration: inherit;">Existing<wbr>Lab<wbr>Disk<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the existing lab disk id to attach to virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hostcaching_go">
 <a href="#hostcaching_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Caching</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Caching option for a data disk (i.e. None, ReadOnly, ReadWrite).{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2790,35 +2419,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="attachnewdatadiskoptions_nodejs">
 <a href="#attachnewdatadiskoptions_nodejs" style="color: inherit; text-decoration: inherit;">attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attachnewdatadiskoptionsresponse">Attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies options to attach a new disk to the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="existinglabdiskid_nodejs">
 <a href="#existinglabdiskid_nodejs" style="color: inherit; text-decoration: inherit;">existing<wbr>Lab<wbr>Disk<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the existing lab disk id to attach to virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hostcaching_nodejs">
 <a href="#hostcaching_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Caching</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Caching option for a data disk (i.e. None, ReadOnly, ReadWrite).{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2827,47 +2452,34 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="attach_new_data_disk_options_python">
 <a href="#attach_new_data_disk_options_python" style="color: inherit; text-decoration: inherit;">attach_<wbr>new_<wbr>data_<wbr>disk_<wbr>options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attachnewdatadiskoptionsresponse">Attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies options to attach a new disk to the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="existing_lab_disk_id_python">
 <a href="#existing_lab_disk_id_python" style="color: inherit; text-decoration: inherit;">existing_<wbr>lab_<wbr>disk_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the existing lab disk id to attach to virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="host_caching_python">
 <a href="#host_caching_python" style="color: inherit; text-decoration: inherit;">host_<wbr>caching</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Caching option for a data disk (i.e. None, ReadOnly, ReadWrite).{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="daydetails">Day<wbr>Details</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2875,15 +2487,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="time_csharp">
 <a href="#time_csharp" style="color: inherit; text-decoration: inherit;">Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time of day the schedule will occur.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2892,15 +2502,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="time_go">
 <a href="#time_go" style="color: inherit; text-decoration: inherit;">Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time of day the schedule will occur.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2909,15 +2517,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="time_nodejs">
 <a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time of day the schedule will occur.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2926,27 +2532,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="time_python">
 <a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time of day the schedule will occur.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="daydetailsresponse">Day<wbr>Details<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2954,15 +2549,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="time_csharp">
 <a href="#time_csharp" style="color: inherit; text-decoration: inherit;">Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time of day the schedule will occur.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2971,15 +2564,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="time_go">
 <a href="#time_go" style="color: inherit; text-decoration: inherit;">Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time of day the schedule will occur.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2988,15 +2579,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="time_nodejs">
 <a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time of day the schedule will occur.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3005,27 +2594,54 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="time_python">
 <a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time of day the schedule will occur.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="enablestatus">Enable<wbr>Status</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Enabled</dt>
+    <dd>Enabled</dd>
+    <dt>Disabled</dt>
+    <dd>Disabled</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Enable<wbr>Status<wbr>Enabled</dt>
+    <dd>Enabled</dd>
+    <dt>Enable<wbr>Status<wbr>Disabled</dt>
+    <dd>Disabled</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Enabled</dt>
+    <dd>Enabled</dd>
+    <dt>Disabled</dt>
+    <dd>Disabled</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>ENABLED</dt>
+    <dd>Enabled</dd>
+    <dt>DISABLED</dt>
+    <dd>Disabled</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="formulapropertiesfromvm">Formula<wbr>Properties<wbr>From<wbr>Vm</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3033,15 +2649,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="labvmid_csharp">
 <a href="#labvmid_csharp" style="color: inherit; text-decoration: inherit;">Lab<wbr>Vm<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the VM from which a formula is to be created.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3050,15 +2664,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="labvmid_go">
 <a href="#labvmid_go" style="color: inherit; text-decoration: inherit;">Lab<wbr>Vm<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the VM from which a formula is to be created.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3067,15 +2679,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="labvmid_nodejs">
 <a href="#labvmid_nodejs" style="color: inherit; text-decoration: inherit;">lab<wbr>Vm<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the VM from which a formula is to be created.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3084,27 +2694,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="lab_vm_id_python">
 <a href="#lab_vm_id_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>vm_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier of the VM from which a formula is to be created.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="formulapropertiesfromvmresponse">Formula<wbr>Properties<wbr>From<wbr>Vm<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3112,15 +2711,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="labvmid_csharp">
 <a href="#labvmid_csharp" style="color: inherit; text-decoration: inherit;">Lab<wbr>Vm<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the VM from which a formula is to be created.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3129,15 +2726,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="labvmid_go">
 <a href="#labvmid_go" style="color: inherit; text-decoration: inherit;">Lab<wbr>Vm<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the VM from which a formula is to be created.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3146,15 +2741,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="labvmid_nodejs">
 <a href="#labvmid_nodejs" style="color: inherit; text-decoration: inherit;">lab<wbr>Vm<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the VM from which a formula is to be created.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3163,27 +2756,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="lab_vm_id_python">
 <a href="#lab_vm_id_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>vm_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier of the VM from which a formula is to be created.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="galleryimagereference">Gallery<wbr>Image<wbr>Reference</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3191,55 +2773,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="offer_csharp">
 <a href="#offer_csharp" style="color: inherit; text-decoration: inherit;">Offer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The offer of the gallery image.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ostype_csharp">
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OS type of the gallery image.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publisher_csharp">
 <a href="#publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The publisher of the gallery image.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU of the gallery image.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the gallery image.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3248,55 +2824,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="offer_go">
 <a href="#offer_go" style="color: inherit; text-decoration: inherit;">Offer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The offer of the gallery image.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ostype_go">
 <a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OS type of the gallery image.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publisher_go">
 <a href="#publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The publisher of the gallery image.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU of the gallery image.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the gallery image.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3305,55 +2875,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="offer_nodejs">
 <a href="#offer_nodejs" style="color: inherit; text-decoration: inherit;">offer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The offer of the gallery image.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ostype_nodejs">
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OS type of the gallery image.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publisher_nodejs">
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The publisher of the gallery image.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU of the gallery image.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the gallery image.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3362,67 +2926,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="offer_python">
 <a href="#offer_python" style="color: inherit; text-decoration: inherit;">offer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The offer of the gallery image.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="os_type_python">
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The OS type of the gallery image.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publisher_python">
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The publisher of the gallery image.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SKU of the gallery image.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the gallery image.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="galleryimagereferenceresponse">Gallery<wbr>Image<wbr>Reference<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3430,55 +2979,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="offer_csharp">
 <a href="#offer_csharp" style="color: inherit; text-decoration: inherit;">Offer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The offer of the gallery image.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ostype_csharp">
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OS type of the gallery image.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publisher_csharp">
 <a href="#publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The publisher of the gallery image.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU of the gallery image.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the gallery image.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3487,55 +3030,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="offer_go">
 <a href="#offer_go" style="color: inherit; text-decoration: inherit;">Offer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The offer of the gallery image.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ostype_go">
 <a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OS type of the gallery image.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publisher_go">
 <a href="#publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The publisher of the gallery image.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU of the gallery image.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the gallery image.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3544,55 +3081,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="offer_nodejs">
 <a href="#offer_nodejs" style="color: inherit; text-decoration: inherit;">offer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The offer of the gallery image.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ostype_nodejs">
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OS type of the gallery image.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publisher_nodejs">
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The publisher of the gallery image.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SKU of the gallery image.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the gallery image.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3601,67 +3132,98 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="offer_python">
 <a href="#offer_python" style="color: inherit; text-decoration: inherit;">offer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The offer of the gallery image.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="os_type_python">
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The OS type of the gallery image.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publisher_python">
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The publisher of the gallery image.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SKU of the gallery image.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the gallery image.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="hostcachingoptions">Host<wbr>Caching<wbr>Options</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>None</dt>
+    <dd>None</dd>
+    <dt>Read<wbr>Only</dt>
+    <dd>ReadOnly</dd>
+    <dt>Read<wbr>Write</dt>
+    <dd>ReadWrite</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Host<wbr>Caching<wbr>Options<wbr>None</dt>
+    <dd>None</dd>
+    <dt>Host<wbr>Caching<wbr>Options<wbr>Read<wbr>Only</dt>
+    <dd>ReadOnly</dd>
+    <dt>Host<wbr>Caching<wbr>Options<wbr>Read<wbr>Write</dt>
+    <dd>ReadWrite</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>None</dt>
+    <dd>None</dd>
+    <dt>Read<wbr>Only</dt>
+    <dd>ReadOnly</dd>
+    <dt>Read<wbr>Write</dt>
+    <dd>ReadWrite</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>NONE</dt>
+    <dd>None</dd>
+    <dt>READ_ONLY</dt>
+    <dd>ReadOnly</dd>
+    <dt>READ_WRITE</dt>
+    <dd>ReadWrite</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="hourdetails">Hour<wbr>Details</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3669,15 +3231,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="minute_csharp">
 <a href="#minute_csharp" style="color: inherit; text-decoration: inherit;">Minute</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minutes of the hour the schedule will run.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3686,15 +3246,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="minute_go">
 <a href="#minute_go" style="color: inherit; text-decoration: inherit;">Minute</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minutes of the hour the schedule will run.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3703,15 +3261,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="minute_nodejs">
 <a href="#minute_nodejs" style="color: inherit; text-decoration: inherit;">minute</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minutes of the hour the schedule will run.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3720,27 +3276,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="minute_python">
 <a href="#minute_python" style="color: inherit; text-decoration: inherit;">minute</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minutes of the hour the schedule will run.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="hourdetailsresponse">Hour<wbr>Details<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3748,15 +3293,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="minute_csharp">
 <a href="#minute_csharp" style="color: inherit; text-decoration: inherit;">Minute</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minutes of the hour the schedule will run.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3765,15 +3308,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="minute_go">
 <a href="#minute_go" style="color: inherit; text-decoration: inherit;">Minute</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minutes of the hour the schedule will run.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3782,15 +3323,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="minute_nodejs">
 <a href="#minute_nodejs" style="color: inherit; text-decoration: inherit;">minute</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minutes of the hour the schedule will run.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3799,27 +3338,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="minute_python">
 <a href="#minute_python" style="color: inherit; text-decoration: inherit;">minute</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minutes of the hour the schedule will run.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="inboundnatrule">Inbound<wbr>Nat<wbr>Rule</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3827,35 +3355,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backendport_csharp">
 <a href="#backendport_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port to which the external traffic will be redirected.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="frontendport_csharp">
 <a href="#frontendport_csharp" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The external endpoint port of the inbound connection. Possible values range between 1 and 65535, inclusive. If unspecified, a value will be allocated automatically.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="transportprotocol_csharp">
 <a href="#transportprotocol_csharp" style="color: inherit; text-decoration: inherit;">Transport<wbr>Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Transport<wbr>Protocol</span>
+        <span class="property-type">string | <a href="#transportprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Transport<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}The transport protocol for the endpoint.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3864,35 +3388,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backendport_go">
 <a href="#backendport_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port to which the external traffic will be redirected.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="frontendport_go">
 <a href="#frontendport_go" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The external endpoint port of the inbound connection. Possible values range between 1 and 65535, inclusive. If unspecified, a value will be allocated automatically.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="transportprotocol_go">
 <a href="#transportprotocol_go" style="color: inherit; text-decoration: inherit;">Transport<wbr>Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#transportprotocol">Transport<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}The transport protocol for the endpoint.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3901,35 +3421,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backendport_nodejs">
 <a href="#backendport_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port to which the external traffic will be redirected.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="frontendport_nodejs">
 <a href="#frontendport_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The external endpoint port of the inbound connection. Possible values range between 1 and 65535, inclusive. If unspecified, a value will be allocated automatically.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="transportprotocol_nodejs">
 <a href="#transportprotocol_nodejs" style="color: inherit; text-decoration: inherit;">transport<wbr>Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Transport<wbr>Protocol</span>
+        <span class="property-type">string | <a href="#transportprotocol">Transport<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}The transport protocol for the endpoint.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3938,47 +3454,34 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backend_port_python">
 <a href="#backend_port_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port to which the external traffic will be redirected.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="frontend_port_python">
 <a href="#frontend_port_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The external endpoint port of the inbound connection. Possible values range between 1 and 65535, inclusive. If unspecified, a value will be allocated automatically.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="transport_protocol_python">
 <a href="#transport_protocol_python" style="color: inherit; text-decoration: inherit;">transport_<wbr>protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Transport<wbr>Protocol</span>
+        <span class="property-type">str | <a href="#transportprotocol">Transport<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}The transport protocol for the endpoint.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="inboundnatruleresponse">Inbound<wbr>Nat<wbr>Rule<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3986,35 +3489,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backendport_csharp">
 <a href="#backendport_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port to which the external traffic will be redirected.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="frontendport_csharp">
 <a href="#frontendport_csharp" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The external endpoint port of the inbound connection. Possible values range between 1 and 65535, inclusive. If unspecified, a value will be allocated automatically.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="transportprotocol_csharp">
 <a href="#transportprotocol_csharp" style="color: inherit; text-decoration: inherit;">Transport<wbr>Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The transport protocol for the endpoint.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4023,35 +3522,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backendport_go">
 <a href="#backendport_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port to which the external traffic will be redirected.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="frontendport_go">
 <a href="#frontendport_go" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The external endpoint port of the inbound connection. Possible values range between 1 and 65535, inclusive. If unspecified, a value will be allocated automatically.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="transportprotocol_go">
 <a href="#transportprotocol_go" style="color: inherit; text-decoration: inherit;">Transport<wbr>Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The transport protocol for the endpoint.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4060,35 +3555,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backendport_nodejs">
 <a href="#backendport_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port to which the external traffic will be redirected.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="frontendport_nodejs">
 <a href="#frontendport_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The external endpoint port of the inbound connection. Possible values range between 1 and 65535, inclusive. If unspecified, a value will be allocated automatically.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="transportprotocol_nodejs">
 <a href="#transportprotocol_nodejs" style="color: inherit; text-decoration: inherit;">transport<wbr>Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The transport protocol for the endpoint.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4097,46 +3588,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backend_port_python">
 <a href="#backend_port_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port to which the external traffic will be redirected.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="frontend_port_python">
 <a href="#frontend_port_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The external endpoint port of the inbound connection. Possible values range between 1 and 65535, inclusive. If unspecified, a value will be allocated automatically.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="transport_protocol_python">
 <a href="#transport_protocol_python" style="color: inherit; text-decoration: inherit;">transport_<wbr>protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The transport protocol for the endpoint.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="labvirtualmachinecreationparameter">Lab<wbr>Virtual<wbr>Machine<wbr>Creation<wbr>Parameter</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4145,355 +3623,319 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="allowclaim_csharp">
 <a href="#allowclaim_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Claim</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether another user can take ownership of the virtual machine{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="artifactdeploymentstatus_csharp">
 <a href="#artifactdeploymentstatus_csharp" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Deployment<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#artifactdeploymentstatusproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Artifact<wbr>Deployment<wbr>Status<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The artifact deployment status for the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="artifacts_csharp">
 <a href="#artifacts_csharp" style="color: inherit; text-decoration: inherit;">Artifacts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#artifactinstallproperties">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Artifact<wbr>Install<wbr>Properties<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The artifacts to be installed on the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bulkcreationparameters_csharp">
 <a href="#bulkcreationparameters_csharp" style="color: inherit; text-decoration: inherit;">Bulk<wbr>Creation<wbr>Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bulkcreationparameters">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Bulk<wbr>Creation<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The number of virtual machine instances to create.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="computeid_csharp">
 <a href="#computeid_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource identifier (Microsoft.Compute) of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createdbyuser_csharp">
 <a href="#createdbyuser_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>User</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address of creator of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createdbyuserid_csharp">
 <a href="#createdbyuserid_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>User<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object identifier of the creator of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createddate_csharp">
 <a href="#createddate_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customimageid_csharp">
 <a href="#customimageid_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Image<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The custom image identifier of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datadiskparameters_csharp">
 <a href="#datadiskparameters_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadiskproperties">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Properties<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}New or existing data disks to attach to the virtual machine after creation{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disallowpublicipaddress_csharp">
 <a href="#disallowpublicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Disallow<wbr>Public<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the virtual machine is to be created without a public IP address.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="environmentid_csharp">
 <a href="#environmentid_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the environment that contains this virtual machine, if any.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="expirationdate_csharp">
 <a href="#expirationdate_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiration date for VM.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fqdn_csharp">
 <a href="#fqdn_csharp" style="color: inherit; text-decoration: inherit;">Fqdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully-qualified domain name of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="galleryimagereference_csharp">
 <a href="#galleryimagereference_csharp" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Image<wbr>Reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryimagereference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Gallery<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Microsoft Azure Marketplace image reference of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isauthenticationwithsshkey_csharp">
 <a href="#isauthenticationwithsshkey_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Authentication<wbr>With<wbr>Ssh<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this virtual machine uses an SSH key for authentication.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labsubnetname_csharp">
 <a href="#labsubnetname_csharp" style="color: inherit; text-decoration: inherit;">Lab<wbr>Subnet<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The lab subnet name of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labvirtualnetworkid_csharp">
 <a href="#labvirtualnetworkid_csharp" style="color: inherit; text-decoration: inherit;">Lab<wbr>Virtual<wbr>Network<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The lab virtual network identifier of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastknownpowerstate_csharp">
 <a href="#lastknownpowerstate_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Known<wbr>Power<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last known compute power state captured in DTL{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the new virtual machine or environment{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the virtual machine or environment{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkinterface_csharp">
 <a href="#networkinterface_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkinterfaceproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network interface properties.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notes_csharp">
 <a href="#notes_csharp" style="color: inherit; text-decoration: inherit;">Notes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The notes of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ostype_csharp">
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OS type of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ownerobjectid_csharp">
 <a href="#ownerobjectid_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>Object<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object identifier of the owner of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="owneruserprincipalname_csharp">
 <a href="#owneruserprincipalname_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>User<wbr>Principal<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user principal name of the virtual machine owner.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the virtual machine administrator.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="planid_csharp">
 <a href="#planid_csharp" style="color: inherit; text-decoration: inherit;">Plan<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the plan associated with the virtual machine image{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scheduleparameters_csharp">
 <a href="#scheduleparameters_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#schedulecreationparameter">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Schedule<wbr>Creation<wbr>Parameter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Virtual Machine schedules to be created{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="size_csharp">
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sshkey_csharp">
 <a href="#sshkey_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSH key of the virtual machine administrator.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storagetype_csharp">
 <a href="#storagetype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Storage type to use for virtual machine (i.e. Standard, Premium).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="virtualmachinecreationsource_csharp">
 <a href="#virtualmachinecreationsource_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Creation<wbr>Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Virtual<wbr>Machine<wbr>Creation<wbr>Source</span>
+        <span class="property-type">string | <a href="#virtualmachinecreationsource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Virtual<wbr>Machine<wbr>Creation<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Tells source of creation of lab virtual machine. Output property only.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4502,355 +3944,319 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="allowclaim_go">
 <a href="#allowclaim_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Claim</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether another user can take ownership of the virtual machine{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="artifactdeploymentstatus_go">
 <a href="#artifactdeploymentstatus_go" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Deployment<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#artifactdeploymentstatusproperties">Artifact<wbr>Deployment<wbr>Status<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The artifact deployment status for the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="artifacts_go">
 <a href="#artifacts_go" style="color: inherit; text-decoration: inherit;">Artifacts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#artifactinstallproperties">[]Artifact<wbr>Install<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The artifacts to be installed on the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bulkcreationparameters_go">
 <a href="#bulkcreationparameters_go" style="color: inherit; text-decoration: inherit;">Bulk<wbr>Creation<wbr>Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bulkcreationparameters">Bulk<wbr>Creation<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The number of virtual machine instances to create.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="computeid_go">
 <a href="#computeid_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource identifier (Microsoft.Compute) of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createdbyuser_go">
 <a href="#createdbyuser_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>User</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address of creator of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createdbyuserid_go">
 <a href="#createdbyuserid_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>User<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object identifier of the creator of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createddate_go">
 <a href="#createddate_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customimageid_go">
 <a href="#customimageid_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Image<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The custom image identifier of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datadiskparameters_go">
 <a href="#datadiskparameters_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadiskproperties">[]Data<wbr>Disk<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}New or existing data disks to attach to the virtual machine after creation{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disallowpublicipaddress_go">
 <a href="#disallowpublicipaddress_go" style="color: inherit; text-decoration: inherit;">Disallow<wbr>Public<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the virtual machine is to be created without a public IP address.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="environmentid_go">
 <a href="#environmentid_go" style="color: inherit; text-decoration: inherit;">Environment<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the environment that contains this virtual machine, if any.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="expirationdate_go">
 <a href="#expirationdate_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiration date for VM.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fqdn_go">
 <a href="#fqdn_go" style="color: inherit; text-decoration: inherit;">Fqdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully-qualified domain name of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="galleryimagereference_go">
 <a href="#galleryimagereference_go" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Image<wbr>Reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryimagereference">Gallery<wbr>Image<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The Microsoft Azure Marketplace image reference of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isauthenticationwithsshkey_go">
 <a href="#isauthenticationwithsshkey_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Authentication<wbr>With<wbr>Ssh<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this virtual machine uses an SSH key for authentication.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labsubnetname_go">
 <a href="#labsubnetname_go" style="color: inherit; text-decoration: inherit;">Lab<wbr>Subnet<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The lab subnet name of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labvirtualnetworkid_go">
 <a href="#labvirtualnetworkid_go" style="color: inherit; text-decoration: inherit;">Lab<wbr>Virtual<wbr>Network<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The lab virtual network identifier of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastknownpowerstate_go">
 <a href="#lastknownpowerstate_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Known<wbr>Power<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last known compute power state captured in DTL{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the new virtual machine or environment{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the virtual machine or environment{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkinterface_go">
 <a href="#networkinterface_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkinterfaceproperties">Network<wbr>Interface<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The network interface properties.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notes_go">
 <a href="#notes_go" style="color: inherit; text-decoration: inherit;">Notes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The notes of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ostype_go">
 <a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OS type of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ownerobjectid_go">
 <a href="#ownerobjectid_go" style="color: inherit; text-decoration: inherit;">Owner<wbr>Object<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object identifier of the owner of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="owneruserprincipalname_go">
 <a href="#owneruserprincipalname_go" style="color: inherit; text-decoration: inherit;">Owner<wbr>User<wbr>Principal<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user principal name of the virtual machine owner.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the virtual machine administrator.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="planid_go">
 <a href="#planid_go" style="color: inherit; text-decoration: inherit;">Plan<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the plan associated with the virtual machine image{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scheduleparameters_go">
 <a href="#scheduleparameters_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#schedulecreationparameter">[]Schedule<wbr>Creation<wbr>Parameter</a></span>
     </dt>
     <dd>{{% md %}}Virtual Machine schedules to be created{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="size_go">
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sshkey_go">
 <a href="#sshkey_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSH key of the virtual machine administrator.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storagetype_go">
 <a href="#storagetype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Storage type to use for virtual machine (i.e. Standard, Premium).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="virtualmachinecreationsource_go">
 <a href="#virtualmachinecreationsource_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Creation<wbr>Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#virtualmachinecreationsource">Virtual<wbr>Machine<wbr>Creation<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Tells source of creation of lab virtual machine. Output property only.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4859,355 +4265,319 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="allowclaim_nodejs">
 <a href="#allowclaim_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Claim</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether another user can take ownership of the virtual machine{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="artifactdeploymentstatus_nodejs">
 <a href="#artifactdeploymentstatus_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Deployment<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#artifactdeploymentstatusproperties">Artifact<wbr>Deployment<wbr>Status<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The artifact deployment status for the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="artifacts_nodejs">
 <a href="#artifacts_nodejs" style="color: inherit; text-decoration: inherit;">artifacts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#artifactinstallproperties">Artifact<wbr>Install<wbr>Properties[]</a></span>
     </dt>
     <dd>{{% md %}}The artifacts to be installed on the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bulkcreationparameters_nodejs">
 <a href="#bulkcreationparameters_nodejs" style="color: inherit; text-decoration: inherit;">bulk<wbr>Creation<wbr>Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bulkcreationparameters">Bulk<wbr>Creation<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The number of virtual machine instances to create.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="computeid_nodejs">
 <a href="#computeid_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource identifier (Microsoft.Compute) of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createdbyuser_nodejs">
 <a href="#createdbyuser_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>User</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address of creator of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createdbyuserid_nodejs">
 <a href="#createdbyuserid_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>User<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object identifier of the creator of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createddate_nodejs">
 <a href="#createddate_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customimageid_nodejs">
 <a href="#customimageid_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Image<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The custom image identifier of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datadiskparameters_nodejs">
 <a href="#datadiskparameters_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disk<wbr>Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadiskproperties">Data<wbr>Disk<wbr>Properties[]</a></span>
     </dt>
     <dd>{{% md %}}New or existing data disks to attach to the virtual machine after creation{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disallowpublicipaddress_nodejs">
 <a href="#disallowpublicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">disallow<wbr>Public<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the virtual machine is to be created without a public IP address.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="environmentid_nodejs">
 <a href="#environmentid_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the environment that contains this virtual machine, if any.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="expirationdate_nodejs">
 <a href="#expirationdate_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiration date for VM.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fqdn_nodejs">
 <a href="#fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully-qualified domain name of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="galleryimagereference_nodejs">
 <a href="#galleryimagereference_nodejs" style="color: inherit; text-decoration: inherit;">gallery<wbr>Image<wbr>Reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryimagereference">Gallery<wbr>Image<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The Microsoft Azure Marketplace image reference of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isauthenticationwithsshkey_nodejs">
 <a href="#isauthenticationwithsshkey_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Authentication<wbr>With<wbr>Ssh<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether this virtual machine uses an SSH key for authentication.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labsubnetname_nodejs">
 <a href="#labsubnetname_nodejs" style="color: inherit; text-decoration: inherit;">lab<wbr>Subnet<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The lab subnet name of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labvirtualnetworkid_nodejs">
 <a href="#labvirtualnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">lab<wbr>Virtual<wbr>Network<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The lab virtual network identifier of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastknownpowerstate_nodejs">
 <a href="#lastknownpowerstate_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Known<wbr>Power<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last known compute power state captured in DTL{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the new virtual machine or environment{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the virtual machine or environment{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkinterface_nodejs">
 <a href="#networkinterface_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interface</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkinterfaceproperties">Network<wbr>Interface<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The network interface properties.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notes_nodejs">
 <a href="#notes_nodejs" style="color: inherit; text-decoration: inherit;">notes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The notes of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ostype_nodejs">
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OS type of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ownerobjectid_nodejs">
 <a href="#ownerobjectid_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>Object<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object identifier of the owner of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="owneruserprincipalname_nodejs">
 <a href="#owneruserprincipalname_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>User<wbr>Principal<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user principal name of the virtual machine owner.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the virtual machine administrator.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="planid_nodejs">
 <a href="#planid_nodejs" style="color: inherit; text-decoration: inherit;">plan<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the plan associated with the virtual machine image{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scheduleparameters_nodejs">
 <a href="#scheduleparameters_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#schedulecreationparameter">Schedule<wbr>Creation<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}Virtual Machine schedules to be created{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="size_nodejs">
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sshkey_nodejs">
 <a href="#sshkey_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSH key of the virtual machine administrator.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storagetype_nodejs">
 <a href="#storagetype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Storage type to use for virtual machine (i.e. Standard, Premium).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="virtualmachinecreationsource_nodejs">
 <a href="#virtualmachinecreationsource_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Creation<wbr>Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Virtual<wbr>Machine<wbr>Creation<wbr>Source</span>
+        <span class="property-type">string | <a href="#virtualmachinecreationsource">Virtual<wbr>Machine<wbr>Creation<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Tells source of creation of lab virtual machine. Output property only.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5216,366 +4586,321 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="allow_claim_python">
 <a href="#allow_claim_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>claim</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether another user can take ownership of the virtual machine{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="artifact_deployment_status_python">
 <a href="#artifact_deployment_status_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>deployment_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#artifactdeploymentstatusproperties">Artifact<wbr>Deployment<wbr>Status<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The artifact deployment status for the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="artifacts_python">
 <a href="#artifacts_python" style="color: inherit; text-decoration: inherit;">artifacts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#artifactinstallproperties">Sequence[Artifact<wbr>Install<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The artifacts to be installed on the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bulk_creation_parameters_python">
 <a href="#bulk_creation_parameters_python" style="color: inherit; text-decoration: inherit;">bulk_<wbr>creation_<wbr>parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bulkcreationparameters">Bulk<wbr>Creation<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The number of virtual machine instances to create.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="compute_id_python">
 <a href="#compute_id_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource identifier (Microsoft.Compute) of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="created_by_user_python">
 <a href="#created_by_user_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>user</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email address of creator of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="created_by_user_id_python">
 <a href="#created_by_user_id_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>user_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The object identifier of the creator of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="created_date_python">
 <a href="#created_date_python" style="color: inherit; text-decoration: inherit;">created_<wbr>date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The creation date of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="custom_image_id_python">
 <a href="#custom_image_id_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>image_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The custom image identifier of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="data_disk_parameters_python">
 <a href="#data_disk_parameters_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadiskproperties">Sequence[Data<wbr>Disk<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}New or existing data disks to attach to the virtual machine after creation{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disallow_public_ip_address_python">
 <a href="#disallow_public_ip_address_python" style="color: inherit; text-decoration: inherit;">disallow_<wbr>public_<wbr>ip_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the virtual machine is to be created without a public IP address.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="environment_id_python">
 <a href="#environment_id_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource ID of the environment that contains this virtual machine, if any.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="expiration_date_python">
 <a href="#expiration_date_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The expiration date for VM.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fqdn_python">
 <a href="#fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully-qualified domain name of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gallery_image_reference_python">
 <a href="#gallery_image_reference_python" style="color: inherit; text-decoration: inherit;">gallery_<wbr>image_<wbr>reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryimagereference">Gallery<wbr>Image<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Microsoft Azure Marketplace image reference of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_authentication_with_ssh_key_python">
 <a href="#is_authentication_with_ssh_key_python" style="color: inherit; text-decoration: inherit;">is_<wbr>authentication_<wbr>with_<wbr>ssh_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this virtual machine uses an SSH key for authentication.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lab_subnet_name_python">
 <a href="#lab_subnet_name_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>subnet_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The lab subnet name of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lab_virtual_network_id_python">
 <a href="#lab_virtual_network_id_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>virtual_<wbr>network_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The lab virtual network identifier of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="last_known_power_state_python">
 <a href="#last_known_power_state_python" style="color: inherit; text-decoration: inherit;">last_<wbr>known_<wbr>power_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last known compute power state captured in DTL{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the new virtual machine or environment{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the virtual machine or environment{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="network_interface_python">
 <a href="#network_interface_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interface</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkinterfaceproperties">Network<wbr>Interface<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network interface properties.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notes_python">
 <a href="#notes_python" style="color: inherit; text-decoration: inherit;">notes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The notes of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="os_type_python">
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The OS type of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="owner_object_id_python">
 <a href="#owner_object_id_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>object_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The object identifier of the owner of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="owner_user_principal_name_python">
 <a href="#owner_user_principal_name_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>user_<wbr>principal_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user principal name of the virtual machine owner.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password of the virtual machine administrator.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="plan_id_python">
 <a href="#plan_id_python" style="color: inherit; text-decoration: inherit;">plan_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the plan associated with the virtual machine image{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schedule_parameters_python">
 <a href="#schedule_parameters_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#schedulecreationparameter">Sequence[Schedule<wbr>Creation<wbr>Parameter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Virtual Machine schedules to be created{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="size_python">
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The size of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ssh_key_python">
 <a href="#ssh_key_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SSH key of the virtual machine administrator.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storage_type_python">
 <a href="#storage_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Storage type to use for virtual machine (i.e. Standard, Premium).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="user_name_python">
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user name of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="virtual_machine_creation_source_python">
 <a href="#virtual_machine_creation_source_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>creation_<wbr>source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Virtual<wbr>Machine<wbr>Creation<wbr>Source</span>
+        <span class="property-type">str | <a href="#virtualmachinecreationsource">Virtual<wbr>Machine<wbr>Creation<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Tells source of creation of lab virtual machine. Output property only.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="labvirtualmachinecreationparameterresponse">Lab<wbr>Virtual<wbr>Machine<wbr>Creation<wbr>Parameter<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5584,355 +4909,319 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="allowclaim_csharp">
 <a href="#allowclaim_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Claim</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether another user can take ownership of the virtual machine{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="artifactdeploymentstatus_csharp">
 <a href="#artifactdeploymentstatus_csharp" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Deployment<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#artifactdeploymentstatuspropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Artifact<wbr>Deployment<wbr>Status<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The artifact deployment status for the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="artifacts_csharp">
 <a href="#artifacts_csharp" style="color: inherit; text-decoration: inherit;">Artifacts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#artifactinstallpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Artifact<wbr>Install<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The artifacts to be installed on the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bulkcreationparameters_csharp">
 <a href="#bulkcreationparameters_csharp" style="color: inherit; text-decoration: inherit;">Bulk<wbr>Creation<wbr>Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bulkcreationparametersresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Bulk<wbr>Creation<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The number of virtual machine instances to create.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="computeid_csharp">
 <a href="#computeid_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource identifier (Microsoft.Compute) of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createdbyuser_csharp">
 <a href="#createdbyuser_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>User</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address of creator of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createdbyuserid_csharp">
 <a href="#createdbyuserid_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>User<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object identifier of the creator of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createddate_csharp">
 <a href="#createddate_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customimageid_csharp">
 <a href="#customimageid_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Image<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The custom image identifier of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datadiskparameters_csharp">
 <a href="#datadiskparameters_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadiskpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Data<wbr>Disk<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}New or existing data disks to attach to the virtual machine after creation{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disallowpublicipaddress_csharp">
 <a href="#disallowpublicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Disallow<wbr>Public<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the virtual machine is to be created without a public IP address.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="environmentid_csharp">
 <a href="#environmentid_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the environment that contains this virtual machine, if any.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="expirationdate_csharp">
 <a href="#expirationdate_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiration date for VM.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fqdn_csharp">
 <a href="#fqdn_csharp" style="color: inherit; text-decoration: inherit;">Fqdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully-qualified domain name of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="galleryimagereference_csharp">
 <a href="#galleryimagereference_csharp" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Image<wbr>Reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryimagereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Gallery<wbr>Image<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Microsoft Azure Marketplace image reference of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isauthenticationwithsshkey_csharp">
 <a href="#isauthenticationwithsshkey_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Authentication<wbr>With<wbr>Ssh<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this virtual machine uses an SSH key for authentication.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labsubnetname_csharp">
 <a href="#labsubnetname_csharp" style="color: inherit; text-decoration: inherit;">Lab<wbr>Subnet<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The lab subnet name of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labvirtualnetworkid_csharp">
 <a href="#labvirtualnetworkid_csharp" style="color: inherit; text-decoration: inherit;">Lab<wbr>Virtual<wbr>Network<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The lab virtual network identifier of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastknownpowerstate_csharp">
 <a href="#lastknownpowerstate_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Known<wbr>Power<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last known compute power state captured in DTL{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the new virtual machine or environment{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the virtual machine or environment{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkinterface_csharp">
 <a href="#networkinterface_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkinterfacepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network interface properties.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notes_csharp">
 <a href="#notes_csharp" style="color: inherit; text-decoration: inherit;">Notes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The notes of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ostype_csharp">
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OS type of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ownerobjectid_csharp">
 <a href="#ownerobjectid_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>Object<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object identifier of the owner of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="owneruserprincipalname_csharp">
 <a href="#owneruserprincipalname_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>User<wbr>Principal<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user principal name of the virtual machine owner.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the virtual machine administrator.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="planid_csharp">
 <a href="#planid_csharp" style="color: inherit; text-decoration: inherit;">Plan<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the plan associated with the virtual machine image{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scheduleparameters_csharp">
 <a href="#scheduleparameters_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#schedulecreationparameterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Schedule<wbr>Creation<wbr>Parameter<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Virtual Machine schedules to be created{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="size_csharp">
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sshkey_csharp">
 <a href="#sshkey_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSH key of the virtual machine administrator.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storagetype_csharp">
 <a href="#storagetype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Storage type to use for virtual machine (i.e. Standard, Premium).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="virtualmachinecreationsource_csharp">
 <a href="#virtualmachinecreationsource_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Creation<wbr>Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tells source of creation of lab virtual machine. Output property only.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5941,355 +5230,319 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="allowclaim_go">
 <a href="#allowclaim_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Claim</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether another user can take ownership of the virtual machine{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="artifactdeploymentstatus_go">
 <a href="#artifactdeploymentstatus_go" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Deployment<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#artifactdeploymentstatuspropertiesresponse">Artifact<wbr>Deployment<wbr>Status<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The artifact deployment status for the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="artifacts_go">
 <a href="#artifacts_go" style="color: inherit; text-decoration: inherit;">Artifacts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#artifactinstallpropertiesresponse">[]Artifact<wbr>Install<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The artifacts to be installed on the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bulkcreationparameters_go">
 <a href="#bulkcreationparameters_go" style="color: inherit; text-decoration: inherit;">Bulk<wbr>Creation<wbr>Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bulkcreationparametersresponse">Bulk<wbr>Creation<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The number of virtual machine instances to create.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="computeid_go">
 <a href="#computeid_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource identifier (Microsoft.Compute) of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createdbyuser_go">
 <a href="#createdbyuser_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>User</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address of creator of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createdbyuserid_go">
 <a href="#createdbyuserid_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>User<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object identifier of the creator of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createddate_go">
 <a href="#createddate_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customimageid_go">
 <a href="#customimageid_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Image<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The custom image identifier of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datadiskparameters_go">
 <a href="#datadiskparameters_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadiskpropertiesresponse">[]Data<wbr>Disk<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}New or existing data disks to attach to the virtual machine after creation{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disallowpublicipaddress_go">
 <a href="#disallowpublicipaddress_go" style="color: inherit; text-decoration: inherit;">Disallow<wbr>Public<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the virtual machine is to be created without a public IP address.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="environmentid_go">
 <a href="#environmentid_go" style="color: inherit; text-decoration: inherit;">Environment<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the environment that contains this virtual machine, if any.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="expirationdate_go">
 <a href="#expirationdate_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiration date for VM.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fqdn_go">
 <a href="#fqdn_go" style="color: inherit; text-decoration: inherit;">Fqdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully-qualified domain name of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="galleryimagereference_go">
 <a href="#galleryimagereference_go" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Image<wbr>Reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryimagereferenceresponse">Gallery<wbr>Image<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Microsoft Azure Marketplace image reference of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isauthenticationwithsshkey_go">
 <a href="#isauthenticationwithsshkey_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Authentication<wbr>With<wbr>Ssh<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this virtual machine uses an SSH key for authentication.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labsubnetname_go">
 <a href="#labsubnetname_go" style="color: inherit; text-decoration: inherit;">Lab<wbr>Subnet<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The lab subnet name of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labvirtualnetworkid_go">
 <a href="#labvirtualnetworkid_go" style="color: inherit; text-decoration: inherit;">Lab<wbr>Virtual<wbr>Network<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The lab virtual network identifier of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastknownpowerstate_go">
 <a href="#lastknownpowerstate_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Known<wbr>Power<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last known compute power state captured in DTL{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the new virtual machine or environment{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the virtual machine or environment{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkinterface_go">
 <a href="#networkinterface_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interface</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkinterfacepropertiesresponse">Network<wbr>Interface<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The network interface properties.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notes_go">
 <a href="#notes_go" style="color: inherit; text-decoration: inherit;">Notes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The notes of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ostype_go">
 <a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OS type of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ownerobjectid_go">
 <a href="#ownerobjectid_go" style="color: inherit; text-decoration: inherit;">Owner<wbr>Object<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object identifier of the owner of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="owneruserprincipalname_go">
 <a href="#owneruserprincipalname_go" style="color: inherit; text-decoration: inherit;">Owner<wbr>User<wbr>Principal<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user principal name of the virtual machine owner.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the virtual machine administrator.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="planid_go">
 <a href="#planid_go" style="color: inherit; text-decoration: inherit;">Plan<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the plan associated with the virtual machine image{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scheduleparameters_go">
 <a href="#scheduleparameters_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#schedulecreationparameterresponse">[]Schedule<wbr>Creation<wbr>Parameter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Virtual Machine schedules to be created{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="size_go">
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sshkey_go">
 <a href="#sshkey_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSH key of the virtual machine administrator.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storagetype_go">
 <a href="#storagetype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Storage type to use for virtual machine (i.e. Standard, Premium).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="virtualmachinecreationsource_go">
 <a href="#virtualmachinecreationsource_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Creation<wbr>Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tells source of creation of lab virtual machine. Output property only.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6298,355 +5551,319 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="allowclaim_nodejs">
 <a href="#allowclaim_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Claim</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether another user can take ownership of the virtual machine{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="artifactdeploymentstatus_nodejs">
 <a href="#artifactdeploymentstatus_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Deployment<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#artifactdeploymentstatuspropertiesresponse">Artifact<wbr>Deployment<wbr>Status<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The artifact deployment status for the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="artifacts_nodejs">
 <a href="#artifacts_nodejs" style="color: inherit; text-decoration: inherit;">artifacts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#artifactinstallpropertiesresponse">Artifact<wbr>Install<wbr>Properties<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The artifacts to be installed on the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bulkcreationparameters_nodejs">
 <a href="#bulkcreationparameters_nodejs" style="color: inherit; text-decoration: inherit;">bulk<wbr>Creation<wbr>Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bulkcreationparametersresponse">Bulk<wbr>Creation<wbr>Parameters<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The number of virtual machine instances to create.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="computeid_nodejs">
 <a href="#computeid_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource identifier (Microsoft.Compute) of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createdbyuser_nodejs">
 <a href="#createdbyuser_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>User</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address of creator of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createdbyuserid_nodejs">
 <a href="#createdbyuserid_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>User<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object identifier of the creator of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createddate_nodejs">
 <a href="#createddate_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customimageid_nodejs">
 <a href="#customimageid_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Image<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The custom image identifier of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datadiskparameters_nodejs">
 <a href="#datadiskparameters_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disk<wbr>Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadiskpropertiesresponse">Data<wbr>Disk<wbr>Properties<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}New or existing data disks to attach to the virtual machine after creation{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disallowpublicipaddress_nodejs">
 <a href="#disallowpublicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">disallow<wbr>Public<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the virtual machine is to be created without a public IP address.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="environmentid_nodejs">
 <a href="#environmentid_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the environment that contains this virtual machine, if any.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="expirationdate_nodejs">
 <a href="#expirationdate_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiration date for VM.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fqdn_nodejs">
 <a href="#fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully-qualified domain name of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="galleryimagereference_nodejs">
 <a href="#galleryimagereference_nodejs" style="color: inherit; text-decoration: inherit;">gallery<wbr>Image<wbr>Reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryimagereferenceresponse">Gallery<wbr>Image<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Microsoft Azure Marketplace image reference of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isauthenticationwithsshkey_nodejs">
 <a href="#isauthenticationwithsshkey_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Authentication<wbr>With<wbr>Ssh<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether this virtual machine uses an SSH key for authentication.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labsubnetname_nodejs">
 <a href="#labsubnetname_nodejs" style="color: inherit; text-decoration: inherit;">lab<wbr>Subnet<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The lab subnet name of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labvirtualnetworkid_nodejs">
 <a href="#labvirtualnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">lab<wbr>Virtual<wbr>Network<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The lab virtual network identifier of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastknownpowerstate_nodejs">
 <a href="#lastknownpowerstate_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Known<wbr>Power<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last known compute power state captured in DTL{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the new virtual machine or environment{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the virtual machine or environment{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkinterface_nodejs">
 <a href="#networkinterface_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interface</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkinterfacepropertiesresponse">Network<wbr>Interface<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The network interface properties.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notes_nodejs">
 <a href="#notes_nodejs" style="color: inherit; text-decoration: inherit;">notes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The notes of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ostype_nodejs">
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OS type of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ownerobjectid_nodejs">
 <a href="#ownerobjectid_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>Object<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object identifier of the owner of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="owneruserprincipalname_nodejs">
 <a href="#owneruserprincipalname_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>User<wbr>Principal<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user principal name of the virtual machine owner.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the virtual machine administrator.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="planid_nodejs">
 <a href="#planid_nodejs" style="color: inherit; text-decoration: inherit;">plan<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the plan associated with the virtual machine image{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scheduleparameters_nodejs">
 <a href="#scheduleparameters_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#schedulecreationparameterresponse">Schedule<wbr>Creation<wbr>Parameter<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Virtual Machine schedules to be created{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="size_nodejs">
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sshkey_nodejs">
 <a href="#sshkey_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSH key of the virtual machine administrator.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storagetype_nodejs">
 <a href="#storagetype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Storage type to use for virtual machine (i.e. Standard, Premium).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="virtualmachinecreationsource_nodejs">
 <a href="#virtualmachinecreationsource_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Creation<wbr>Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tells source of creation of lab virtual machine. Output property only.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -6655,366 +5872,321 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="allow_claim_python">
 <a href="#allow_claim_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>claim</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether another user can take ownership of the virtual machine{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="artifact_deployment_status_python">
 <a href="#artifact_deployment_status_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>deployment_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#artifactdeploymentstatuspropertiesresponse">Artifact<wbr>Deployment<wbr>Status<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The artifact deployment status for the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="artifacts_python">
 <a href="#artifacts_python" style="color: inherit; text-decoration: inherit;">artifacts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#artifactinstallpropertiesresponse">Sequence[Artifact<wbr>Install<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The artifacts to be installed on the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bulk_creation_parameters_python">
 <a href="#bulk_creation_parameters_python" style="color: inherit; text-decoration: inherit;">bulk_<wbr>creation_<wbr>parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bulkcreationparametersresponse">Bulk<wbr>Creation<wbr>Parameters<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The number of virtual machine instances to create.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="compute_id_python">
 <a href="#compute_id_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource identifier (Microsoft.Compute) of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="created_by_user_python">
 <a href="#created_by_user_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>user</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email address of creator of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="created_by_user_id_python">
 <a href="#created_by_user_id_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>user_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The object identifier of the creator of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="created_date_python">
 <a href="#created_date_python" style="color: inherit; text-decoration: inherit;">created_<wbr>date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The creation date of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="custom_image_id_python">
 <a href="#custom_image_id_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>image_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The custom image identifier of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="data_disk_parameters_python">
 <a href="#data_disk_parameters_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadiskpropertiesresponse">Sequence[Data<wbr>Disk<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}New or existing data disks to attach to the virtual machine after creation{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disallow_public_ip_address_python">
 <a href="#disallow_public_ip_address_python" style="color: inherit; text-decoration: inherit;">disallow_<wbr>public_<wbr>ip_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the virtual machine is to be created without a public IP address.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="environment_id_python">
 <a href="#environment_id_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource ID of the environment that contains this virtual machine, if any.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="expiration_date_python">
 <a href="#expiration_date_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The expiration date for VM.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fqdn_python">
 <a href="#fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully-qualified domain name of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gallery_image_reference_python">
 <a href="#gallery_image_reference_python" style="color: inherit; text-decoration: inherit;">gallery_<wbr>image_<wbr>reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#galleryimagereferenceresponse">Gallery<wbr>Image<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Microsoft Azure Marketplace image reference of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_authentication_with_ssh_key_python">
 <a href="#is_authentication_with_ssh_key_python" style="color: inherit; text-decoration: inherit;">is_<wbr>authentication_<wbr>with_<wbr>ssh_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this virtual machine uses an SSH key for authentication.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lab_subnet_name_python">
 <a href="#lab_subnet_name_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>subnet_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The lab subnet name of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lab_virtual_network_id_python">
 <a href="#lab_virtual_network_id_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>virtual_<wbr>network_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The lab virtual network identifier of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="last_known_power_state_python">
 <a href="#last_known_power_state_python" style="color: inherit; text-decoration: inherit;">last_<wbr>known_<wbr>power_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last known compute power state captured in DTL{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the new virtual machine or environment{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the virtual machine or environment{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="network_interface_python">
 <a href="#network_interface_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interface</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkinterfacepropertiesresponse">Network<wbr>Interface<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network interface properties.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notes_python">
 <a href="#notes_python" style="color: inherit; text-decoration: inherit;">notes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The notes of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="os_type_python">
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The OS type of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="owner_object_id_python">
 <a href="#owner_object_id_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>object_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The object identifier of the owner of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="owner_user_principal_name_python">
 <a href="#owner_user_principal_name_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>user_<wbr>principal_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user principal name of the virtual machine owner.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password of the virtual machine administrator.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="plan_id_python">
 <a href="#plan_id_python" style="color: inherit; text-decoration: inherit;">plan_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the plan associated with the virtual machine image{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schedule_parameters_python">
 <a href="#schedule_parameters_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#schedulecreationparameterresponse">Sequence[Schedule<wbr>Creation<wbr>Parameter<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Virtual Machine schedules to be created{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="size_python">
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The size of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ssh_key_python">
 <a href="#ssh_key_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SSH key of the virtual machine administrator.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storage_type_python">
 <a href="#storage_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Storage type to use for virtual machine (i.e. Standard, Premium).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="user_name_python">
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user name of the virtual machine.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="virtual_machine_creation_source_python">
 <a href="#virtual_machine_creation_source_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>creation_<wbr>source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Tells source of creation of lab virtual machine. Output property only.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="networkinterfaceproperties">Network<wbr>Interface<wbr>Properties</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7023,95 +6195,85 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="dnsname_csharp">
 <a href="#dnsname_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="privateipaddress_csharp">
 <a href="#privateipaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publicipaddress_csharp">
 <a href="#publicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP address.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publicipaddressid_csharp">
 <a href="#publicipaddressid_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Address<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the public IP address.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rdpauthority_csharp">
 <a href="#rdpauthority_csharp" style="color: inherit; text-decoration: inherit;">Rdp<wbr>Authority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sharedpublicipaddressconfiguration_csharp">
 <a href="#sharedpublicipaddressconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharedpublicipaddressconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for sharing a public IP address across multiple virtual machines.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sshauthority_csharp">
 <a href="#sshauthority_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Authority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the sub net.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkid_csharp">
 <a href="#virtualnetworkid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the virtual network.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -7120,95 +6282,85 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="dnsname_go">
 <a href="#dnsname_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="privateipaddress_go">
 <a href="#privateipaddress_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publicipaddress_go">
 <a href="#publicipaddress_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP address.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publicipaddressid_go">
 <a href="#publicipaddressid_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Address<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the public IP address.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rdpauthority_go">
 <a href="#rdpauthority_go" style="color: inherit; text-decoration: inherit;">Rdp<wbr>Authority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sharedpublicipaddressconfiguration_go">
 <a href="#sharedpublicipaddressconfiguration_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharedpublicipaddressconfiguration">Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration for sharing a public IP address across multiple virtual machines.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sshauthority_go">
 <a href="#sshauthority_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Authority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subnetid_go">
 <a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the sub net.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkid_go">
 <a href="#virtualnetworkid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the virtual network.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -7217,95 +6369,85 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="dnsname_nodejs">
 <a href="#dnsname_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="privateipaddress_nodejs">
 <a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publicipaddress_nodejs">
 <a href="#publicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP address.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publicipaddressid_nodejs">
 <a href="#publicipaddressid_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Address<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the public IP address.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rdpauthority_nodejs">
 <a href="#rdpauthority_nodejs" style="color: inherit; text-decoration: inherit;">rdp<wbr>Authority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sharedpublicipaddressconfiguration_nodejs">
 <a href="#sharedpublicipaddressconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharedpublicipaddressconfiguration">Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration for sharing a public IP address across multiple virtual machines.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sshauthority_nodejs">
 <a href="#sshauthority_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Authority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the sub net.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkid_nodejs">
 <a href="#virtualnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the virtual network.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -7314,106 +6456,87 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="dns_name_python">
 <a href="#dns_name_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="private_ip_address_python">
 <a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private IP address.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="public_ip_address_python">
 <a href="#public_ip_address_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The public IP address.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="public_ip_address_id_python">
 <a href="#public_ip_address_id_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource ID of the public IP address.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rdp_authority_python">
 <a href="#rdp_authority_python" style="color: inherit; text-decoration: inherit;">rdp_<wbr>authority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="shared_public_ip_address_configuration_python">
 <a href="#shared_public_ip_address_configuration_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>public_<wbr>ip_<wbr>address_<wbr>configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharedpublicipaddressconfiguration">Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for sharing a public IP address across multiple virtual machines.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ssh_authority_python">
 <a href="#ssh_authority_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>authority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subnet_id_python">
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource ID of the sub net.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="virtual_network_id_python">
 <a href="#virtual_network_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource ID of the virtual network.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="networkinterfacepropertiesresponse">Network<wbr>Interface<wbr>Properties<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7422,95 +6545,85 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="dnsname_csharp">
 <a href="#dnsname_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="privateipaddress_csharp">
 <a href="#privateipaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publicipaddress_csharp">
 <a href="#publicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP address.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publicipaddressid_csharp">
 <a href="#publicipaddressid_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Address<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the public IP address.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rdpauthority_csharp">
 <a href="#rdpauthority_csharp" style="color: inherit; text-decoration: inherit;">Rdp<wbr>Authority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sharedpublicipaddressconfiguration_csharp">
 <a href="#sharedpublicipaddressconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharedpublicipaddressconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for sharing a public IP address across multiple virtual machines.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sshauthority_csharp">
 <a href="#sshauthority_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Authority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the sub net.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkid_csharp">
 <a href="#virtualnetworkid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the virtual network.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -7519,95 +6632,85 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="dnsname_go">
 <a href="#dnsname_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="privateipaddress_go">
 <a href="#privateipaddress_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publicipaddress_go">
 <a href="#publicipaddress_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP address.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publicipaddressid_go">
 <a href="#publicipaddressid_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Address<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the public IP address.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rdpauthority_go">
 <a href="#rdpauthority_go" style="color: inherit; text-decoration: inherit;">Rdp<wbr>Authority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sharedpublicipaddressconfiguration_go">
 <a href="#sharedpublicipaddressconfiguration_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharedpublicipaddressconfigurationresponse">Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration for sharing a public IP address across multiple virtual machines.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sshauthority_go">
 <a href="#sshauthority_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Authority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subnetid_go">
 <a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the sub net.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkid_go">
 <a href="#virtualnetworkid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the virtual network.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -7616,95 +6719,85 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="dnsname_nodejs">
 <a href="#dnsname_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="privateipaddress_nodejs">
 <a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publicipaddress_nodejs">
 <a href="#publicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP address.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publicipaddressid_nodejs">
 <a href="#publicipaddressid_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Address<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the public IP address.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rdpauthority_nodejs">
 <a href="#rdpauthority_nodejs" style="color: inherit; text-decoration: inherit;">rdp<wbr>Authority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sharedpublicipaddressconfiguration_nodejs">
 <a href="#sharedpublicipaddressconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharedpublicipaddressconfigurationresponse">Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The configuration for sharing a public IP address across multiple virtual machines.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sshauthority_nodejs">
 <a href="#sshauthority_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Authority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the sub net.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkid_nodejs">
 <a href="#virtualnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of the virtual network.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -7713,107 +6806,88 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="dns_name_python">
 <a href="#dns_name_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="private_ip_address_python">
 <a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private IP address.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="public_ip_address_python">
 <a href="#public_ip_address_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The public IP address.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="public_ip_address_id_python">
 <a href="#public_ip_address_id_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource ID of the public IP address.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rdp_authority_python">
 <a href="#rdp_authority_python" style="color: inherit; text-decoration: inherit;">rdp_<wbr>authority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="shared_public_ip_address_configuration_python">
 <a href="#shared_public_ip_address_configuration_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>public_<wbr>ip_<wbr>address_<wbr>configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sharedpublicipaddressconfigurationresponse">Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for sharing a public IP address across multiple virtual machines.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ssh_authority_python">
 <a href="#ssh_authority_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>authority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subnet_id_python">
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource ID of the sub net.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="virtual_network_id_python">
 <a href="#virtual_network_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource ID of the virtual network.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="notificationsettings">Notification<wbr>Settings</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -7821,55 +6895,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="emailrecipient_csharp">
 <a href="#emailrecipient_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Recipient</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email recipient to send notifications to (can be a list of semi-colon separated email addresses).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notificationlocale_csharp">
 <a href="#notificationlocale_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Locale</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The locale to use when sending a notification (fallback for unsupported languages is EN).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Enable<wbr>Status</span>
+        <span class="property-type">string | <a href="#enablestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Enable<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}If notifications are enabled for this schedule (i.e. Enabled, Disabled).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeinminutes_csharp">
 <a href="#timeinminutes_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>In<wbr>Minutes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time in minutes before event at which notification will be sent.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="webhookurl_csharp">
 <a href="#webhookurl_csharp" style="color: inherit; text-decoration: inherit;">Webhook<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The webhook URL to which the notification will be sent.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -7878,55 +6946,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="emailrecipient_go">
 <a href="#emailrecipient_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Recipient</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email recipient to send notifications to (can be a list of semi-colon separated email addresses).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notificationlocale_go">
 <a href="#notificationlocale_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Locale</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The locale to use when sending a notification (fallback for unsupported languages is EN).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#enablestatus">Enable<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}If notifications are enabled for this schedule (i.e. Enabled, Disabled).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeinminutes_go">
 <a href="#timeinminutes_go" style="color: inherit; text-decoration: inherit;">Time<wbr>In<wbr>Minutes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time in minutes before event at which notification will be sent.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="webhookurl_go">
 <a href="#webhookurl_go" style="color: inherit; text-decoration: inherit;">Webhook<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The webhook URL to which the notification will be sent.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -7935,55 +6997,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="emailrecipient_nodejs">
 <a href="#emailrecipient_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Recipient</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email recipient to send notifications to (can be a list of semi-colon separated email addresses).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notificationlocale_nodejs">
 <a href="#notificationlocale_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Locale</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The locale to use when sending a notification (fallback for unsupported languages is EN).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Enable<wbr>Status</span>
+        <span class="property-type">string | <a href="#enablestatus">Enable<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}If notifications are enabled for this schedule (i.e. Enabled, Disabled).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeinminutes_nodejs">
 <a href="#timeinminutes_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>In<wbr>Minutes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Time in minutes before event at which notification will be sent.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="webhookurl_nodejs">
 <a href="#webhookurl_nodejs" style="color: inherit; text-decoration: inherit;">webhook<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The webhook URL to which the notification will be sent.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -7992,67 +7048,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="email_recipient_python">
 <a href="#email_recipient_python" style="color: inherit; text-decoration: inherit;">email_<wbr>recipient</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email recipient to send notifications to (can be a list of semi-colon separated email addresses).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notification_locale_python">
 <a href="#notification_locale_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>locale</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The locale to use when sending a notification (fallback for unsupported languages is EN).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Enable<wbr>Status</span>
+        <span class="property-type">str | <a href="#enablestatus">Enable<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}If notifications are enabled for this schedule (i.e. Enabled, Disabled).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="time_in_minutes_python">
 <a href="#time_in_minutes_python" style="color: inherit; text-decoration: inherit;">time_<wbr>in_<wbr>minutes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time in minutes before event at which notification will be sent.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="webhook_url_python">
 <a href="#webhook_url_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The webhook URL to which the notification will be sent.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="notificationsettingsresponse">Notification<wbr>Settings<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -8060,55 +7101,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="emailrecipient_csharp">
 <a href="#emailrecipient_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Recipient</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email recipient to send notifications to (can be a list of semi-colon separated email addresses).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notificationlocale_csharp">
 <a href="#notificationlocale_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Locale</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The locale to use when sending a notification (fallback for unsupported languages is EN).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If notifications are enabled for this schedule (i.e. Enabled, Disabled).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeinminutes_csharp">
 <a href="#timeinminutes_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>In<wbr>Minutes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time in minutes before event at which notification will be sent.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="webhookurl_csharp">
 <a href="#webhookurl_csharp" style="color: inherit; text-decoration: inherit;">Webhook<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The webhook URL to which the notification will be sent.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -8117,55 +7152,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="emailrecipient_go">
 <a href="#emailrecipient_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Recipient</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email recipient to send notifications to (can be a list of semi-colon separated email addresses).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notificationlocale_go">
 <a href="#notificationlocale_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Locale</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The locale to use when sending a notification (fallback for unsupported languages is EN).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If notifications are enabled for this schedule (i.e. Enabled, Disabled).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeinminutes_go">
 <a href="#timeinminutes_go" style="color: inherit; text-decoration: inherit;">Time<wbr>In<wbr>Minutes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time in minutes before event at which notification will be sent.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="webhookurl_go">
 <a href="#webhookurl_go" style="color: inherit; text-decoration: inherit;">Webhook<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The webhook URL to which the notification will be sent.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -8174,55 +7203,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="emailrecipient_nodejs">
 <a href="#emailrecipient_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Recipient</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email recipient to send notifications to (can be a list of semi-colon separated email addresses).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notificationlocale_nodejs">
 <a href="#notificationlocale_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Locale</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The locale to use when sending a notification (fallback for unsupported languages is EN).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If notifications are enabled for this schedule (i.e. Enabled, Disabled).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeinminutes_nodejs">
 <a href="#timeinminutes_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>In<wbr>Minutes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Time in minutes before event at which notification will be sent.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="webhookurl_nodejs">
 <a href="#webhookurl_nodejs" style="color: inherit; text-decoration: inherit;">webhook<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The webhook URL to which the notification will be sent.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -8231,66 +7254,51 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="email_recipient_python">
 <a href="#email_recipient_python" style="color: inherit; text-decoration: inherit;">email_<wbr>recipient</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email recipient to send notifications to (can be a list of semi-colon separated email addresses).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notification_locale_python">
 <a href="#notification_locale_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>locale</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The locale to use when sending a notification (fallback for unsupported languages is EN).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If notifications are enabled for this schedule (i.e. Enabled, Disabled).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="time_in_minutes_python">
 <a href="#time_in_minutes_python" style="color: inherit; text-decoration: inherit;">time_<wbr>in_<wbr>minutes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time in minutes before event at which notification will be sent.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="webhook_url_python">
 <a href="#webhook_url_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The webhook URL to which the notification will be sent.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="schedulecreationparameter">Schedule<wbr>Creation<wbr>Parameter</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8299,115 +7307,103 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="dailyrecurrence_csharp">
 <a href="#dailyrecurrence_csharp" style="color: inherit; text-decoration: inherit;">Daily<wbr>Recurrence</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#daydetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Day<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur once each day of the week, specify the daily recurrence.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hourlyrecurrence_csharp">
 <a href="#hourlyrecurrence_csharp" style="color: inherit; text-decoration: inherit;">Hourly<wbr>Recurrence</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hourdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Hour<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur multiple times a day, specify the hourly recurrence.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the new virtual machine or environment{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the virtual machine or environment{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notificationsettings_csharp">
 <a href="#notificationsettings_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Notification<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Notification settings.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Enable<wbr>Status</span>
+        <span class="property-type">string | <a href="#enablestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Enable<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of the schedule (i.e. Enabled, Disabled){{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targetresourceid_csharp">
 <a href="#targetresourceid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID to which the schedule belongs{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tasktype_csharp">
 <a href="#tasktype_csharp" style="color: inherit; text-decoration: inherit;">Task<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timezoneid_csharp">
 <a href="#timezoneid_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time zone ID (e.g. Pacific Standard time).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weeklyrecurrence_csharp">
 <a href="#weeklyrecurrence_csharp" style="color: inherit; text-decoration: inherit;">Weekly<wbr>Recurrence</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#weekdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Week<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur only some days of the week, specify the weekly recurrence.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -8416,115 +7412,103 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="dailyrecurrence_go">
 <a href="#dailyrecurrence_go" style="color: inherit; text-decoration: inherit;">Daily<wbr>Recurrence</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#daydetails">Day<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur once each day of the week, specify the daily recurrence.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hourlyrecurrence_go">
 <a href="#hourlyrecurrence_go" style="color: inherit; text-decoration: inherit;">Hourly<wbr>Recurrence</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hourdetails">Hour<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur multiple times a day, specify the hourly recurrence.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the new virtual machine or environment{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the virtual machine or environment{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notificationsettings_go">
 <a href="#notificationsettings_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationsettings">Notification<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Notification settings.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#enablestatus">Enable<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of the schedule (i.e. Enabled, Disabled){{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targetresourceid_go">
 <a href="#targetresourceid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID to which the schedule belongs{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tasktype_go">
 <a href="#tasktype_go" style="color: inherit; text-decoration: inherit;">Task<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timezoneid_go">
 <a href="#timezoneid_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time zone ID (e.g. Pacific Standard time).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weeklyrecurrence_go">
 <a href="#weeklyrecurrence_go" style="color: inherit; text-decoration: inherit;">Weekly<wbr>Recurrence</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#weekdetails">Week<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur only some days of the week, specify the weekly recurrence.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -8533,115 +7517,103 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="dailyrecurrence_nodejs">
 <a href="#dailyrecurrence_nodejs" style="color: inherit; text-decoration: inherit;">daily<wbr>Recurrence</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#daydetails">Day<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur once each day of the week, specify the daily recurrence.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hourlyrecurrence_nodejs">
 <a href="#hourlyrecurrence_nodejs" style="color: inherit; text-decoration: inherit;">hourly<wbr>Recurrence</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hourdetails">Hour<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur multiple times a day, specify the hourly recurrence.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the new virtual machine or environment{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the virtual machine or environment{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notificationsettings_nodejs">
 <a href="#notificationsettings_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationsettings">Notification<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Notification settings.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Enable<wbr>Status</span>
+        <span class="property-type">string | <a href="#enablestatus">Enable<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of the schedule (i.e. Enabled, Disabled){{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targetresourceid_nodejs">
 <a href="#targetresourceid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID to which the schedule belongs{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tasktype_nodejs">
 <a href="#tasktype_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timezoneid_nodejs">
 <a href="#timezoneid_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time zone ID (e.g. Pacific Standard time).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weeklyrecurrence_nodejs">
 <a href="#weeklyrecurrence_nodejs" style="color: inherit; text-decoration: inherit;">weekly<wbr>Recurrence</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#weekdetails">Week<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur only some days of the week, specify the weekly recurrence.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -8650,126 +7622,105 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="daily_recurrence_python">
 <a href="#daily_recurrence_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>recurrence</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#daydetails">Day<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur once each day of the week, specify the daily recurrence.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hourly_recurrence_python">
 <a href="#hourly_recurrence_python" style="color: inherit; text-decoration: inherit;">hourly_<wbr>recurrence</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hourdetails">Hour<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur multiple times a day, specify the hourly recurrence.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the new virtual machine or environment{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the virtual machine or environment{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notification_settings_python">
 <a href="#notification_settings_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationsettings">Notification<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Notification settings.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Enable<wbr>Status</span>
+        <span class="property-type">str | <a href="#enablestatus">Enable<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of the schedule (i.e. Enabled, Disabled){{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="target_resource_id_python">
 <a href="#target_resource_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource ID to which the schedule belongs{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="task_type_python">
 <a href="#task_type_python" style="color: inherit; text-decoration: inherit;">task_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="time_zone_id_python">
 <a href="#time_zone_id_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time zone ID (e.g. Pacific Standard time).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weekly_recurrence_python">
 <a href="#weekly_recurrence_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>recurrence</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#weekdetails">Week<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur only some days of the week, specify the weekly recurrence.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="schedulecreationparameterresponse">Schedule<wbr>Creation<wbr>Parameter<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8778,115 +7729,103 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="dailyrecurrence_csharp">
 <a href="#dailyrecurrence_csharp" style="color: inherit; text-decoration: inherit;">Daily<wbr>Recurrence</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#daydetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Day<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur once each day of the week, specify the daily recurrence.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hourlyrecurrence_csharp">
 <a href="#hourlyrecurrence_csharp" style="color: inherit; text-decoration: inherit;">Hourly<wbr>Recurrence</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hourdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Hour<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur multiple times a day, specify the hourly recurrence.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the new virtual machine or environment{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the virtual machine or environment{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notificationsettings_csharp">
 <a href="#notificationsettings_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Notification<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Notification settings.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the schedule (i.e. Enabled, Disabled){{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targetresourceid_csharp">
 <a href="#targetresourceid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID to which the schedule belongs{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tasktype_csharp">
 <a href="#tasktype_csharp" style="color: inherit; text-decoration: inherit;">Task<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timezoneid_csharp">
 <a href="#timezoneid_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time zone ID (e.g. Pacific Standard time).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weeklyrecurrence_csharp">
 <a href="#weeklyrecurrence_csharp" style="color: inherit; text-decoration: inherit;">Weekly<wbr>Recurrence</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#weekdetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Week<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur only some days of the week, specify the weekly recurrence.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -8895,115 +7834,103 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="dailyrecurrence_go">
 <a href="#dailyrecurrence_go" style="color: inherit; text-decoration: inherit;">Daily<wbr>Recurrence</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#daydetailsresponse">Day<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur once each day of the week, specify the daily recurrence.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hourlyrecurrence_go">
 <a href="#hourlyrecurrence_go" style="color: inherit; text-decoration: inherit;">Hourly<wbr>Recurrence</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hourdetailsresponse">Hour<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur multiple times a day, specify the hourly recurrence.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the new virtual machine or environment{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the virtual machine or environment{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notificationsettings_go">
 <a href="#notificationsettings_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationsettingsresponse">Notification<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Notification settings.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the schedule (i.e. Enabled, Disabled){{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targetresourceid_go">
 <a href="#targetresourceid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID to which the schedule belongs{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tasktype_go">
 <a href="#tasktype_go" style="color: inherit; text-decoration: inherit;">Task<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timezoneid_go">
 <a href="#timezoneid_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time zone ID (e.g. Pacific Standard time).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weeklyrecurrence_go">
 <a href="#weeklyrecurrence_go" style="color: inherit; text-decoration: inherit;">Weekly<wbr>Recurrence</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#weekdetailsresponse">Week<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur only some days of the week, specify the weekly recurrence.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -9012,115 +7939,103 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="dailyrecurrence_nodejs">
 <a href="#dailyrecurrence_nodejs" style="color: inherit; text-decoration: inherit;">daily<wbr>Recurrence</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#daydetailsresponse">Day<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur once each day of the week, specify the daily recurrence.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hourlyrecurrence_nodejs">
 <a href="#hourlyrecurrence_nodejs" style="color: inherit; text-decoration: inherit;">hourly<wbr>Recurrence</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hourdetailsresponse">Hour<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur multiple times a day, specify the hourly recurrence.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the new virtual machine or environment{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the virtual machine or environment{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notificationsettings_nodejs">
 <a href="#notificationsettings_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationsettingsresponse">Notification<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Notification settings.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the schedule (i.e. Enabled, Disabled){{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targetresourceid_nodejs">
 <a href="#targetresourceid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID to which the schedule belongs{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tasktype_nodejs">
 <a href="#tasktype_nodejs" style="color: inherit; text-decoration: inherit;">task<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timezoneid_nodejs">
 <a href="#timezoneid_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time zone ID (e.g. Pacific Standard time).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weeklyrecurrence_nodejs">
 <a href="#weeklyrecurrence_nodejs" style="color: inherit; text-decoration: inherit;">weekly<wbr>Recurrence</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#weekdetailsresponse">Week<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur only some days of the week, specify the weekly recurrence.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -9129,126 +8044,105 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="daily_recurrence_python">
 <a href="#daily_recurrence_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>recurrence</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#daydetailsresponse">Day<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur once each day of the week, specify the daily recurrence.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hourly_recurrence_python">
 <a href="#hourly_recurrence_python" style="color: inherit; text-decoration: inherit;">hourly_<wbr>recurrence</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hourdetailsresponse">Hour<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur multiple times a day, specify the hourly recurrence.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the new virtual machine or environment{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the virtual machine or environment{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notification_settings_python">
 <a href="#notification_settings_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#notificationsettingsresponse">Notification<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Notification settings.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the schedule (i.e. Enabled, Disabled){{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="target_resource_id_python">
 <a href="#target_resource_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource ID to which the schedule belongs{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="task_type_python">
 <a href="#task_type_python" style="color: inherit; text-decoration: inherit;">task_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The task type of the schedule (e.g. LabVmsShutdownTask, LabVmAutoStart).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="time_zone_id_python">
 <a href="#time_zone_id_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time zone ID (e.g. Pacific Standard time).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weekly_recurrence_python">
 <a href="#weekly_recurrence_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>recurrence</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#weekdetailsresponse">Week<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}If the schedule will occur only some days of the week, specify the weekly recurrence.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="sharedpublicipaddressconfiguration">Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -9257,15 +8151,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="inboundnatrules_csharp">
 <a href="#inboundnatrules_csharp" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Nat<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundnatrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Inbound<wbr>Nat<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The incoming NAT rules{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -9274,15 +8166,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="inboundnatrules_go">
 <a href="#inboundnatrules_go" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Nat<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundnatrule">[]Inbound<wbr>Nat<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The incoming NAT rules{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -9291,15 +8181,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="inboundnatrules_nodejs">
 <a href="#inboundnatrules_nodejs" style="color: inherit; text-decoration: inherit;">inbound<wbr>Nat<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundnatrule">Inbound<wbr>Nat<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}The incoming NAT rules{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -9308,26 +8196,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="inbound_nat_rules_python">
 <a href="#inbound_nat_rules_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>nat_<wbr>rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundnatrule">Sequence[Inbound<wbr>Nat<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The incoming NAT rules{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="sharedpublicipaddressconfigurationresponse">Shared<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -9336,15 +8213,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="inboundnatrules_csharp">
 <a href="#inboundnatrules_csharp" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Nat<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundnatruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Inbound<wbr>Nat<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The incoming NAT rules{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -9353,15 +8228,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="inboundnatrules_go">
 <a href="#inboundnatrules_go" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Nat<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundnatruleresponse">[]Inbound<wbr>Nat<wbr>Rule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The incoming NAT rules{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -9370,15 +8243,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="inboundnatrules_nodejs">
 <a href="#inboundnatrules_nodejs" style="color: inherit; text-decoration: inherit;">inbound<wbr>Nat<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundnatruleresponse">Inbound<wbr>Nat<wbr>Rule<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The incoming NAT rules{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -9387,27 +8258,146 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="inbound_nat_rules_python">
 <a href="#inbound_nat_rules_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>nat_<wbr>rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#inboundnatruleresponse">Sequence[Inbound<wbr>Nat<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The incoming NAT rules{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="storagetype">Storage<wbr>Type</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Standard</dt>
+    <dd>Standard</dd>
+    <dt>Premium</dt>
+    <dd>Premium</dd>
+    <dt>Standard<wbr>SSD</dt>
+    <dd>StandardSSD</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Storage<wbr>Type<wbr>Standard</dt>
+    <dd>Standard</dd>
+    <dt>Storage<wbr>Type<wbr>Premium</dt>
+    <dd>Premium</dd>
+    <dt>Storage<wbr>Type<wbr>Standard<wbr>SSD</dt>
+    <dd>StandardSSD</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Standard</dt>
+    <dd>Standard</dd>
+    <dt>Premium</dt>
+    <dd>Premium</dd>
+    <dt>Standard<wbr>SSD</dt>
+    <dd>StandardSSD</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>STANDARD</dt>
+    <dd>Standard</dd>
+    <dt>PREMIUM</dt>
+    <dd>Premium</dd>
+    <dt>STANDARD_SSD</dt>
+    <dd>StandardSSD</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="transportprotocol">Transport<wbr>Protocol</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Tcp</dt>
+    <dd>Tcp</dd>
+    <dt>Udp</dt>
+    <dd>Udp</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Transport<wbr>Protocol<wbr>Tcp</dt>
+    <dd>Tcp</dd>
+    <dt>Transport<wbr>Protocol<wbr>Udp</dt>
+    <dd>Udp</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Tcp</dt>
+    <dd>Tcp</dd>
+    <dt>Udp</dt>
+    <dd>Udp</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>TCP</dt>
+    <dd>Tcp</dd>
+    <dt>UDP</dt>
+    <dd>Udp</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="virtualmachinecreationsource">Virtual<wbr>Machine<wbr>Creation<wbr>Source</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>From<wbr>Custom<wbr>Image</dt>
+    <dd>FromCustomImage</dd>
+    <dt>From<wbr>Gallery<wbr>Image</dt>
+    <dd>FromGalleryImage</dd>
+    <dt>From<wbr>Shared<wbr>Gallery<wbr>Image</dt>
+    <dd>FromSharedGalleryImage</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Virtual<wbr>Machine<wbr>Creation<wbr>Source<wbr>From<wbr>Custom<wbr>Image</dt>
+    <dd>FromCustomImage</dd>
+    <dt>Virtual<wbr>Machine<wbr>Creation<wbr>Source<wbr>From<wbr>Gallery<wbr>Image</dt>
+    <dd>FromGalleryImage</dd>
+    <dt>Virtual<wbr>Machine<wbr>Creation<wbr>Source<wbr>From<wbr>Shared<wbr>Gallery<wbr>Image</dt>
+    <dd>FromSharedGalleryImage</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>From<wbr>Custom<wbr>Image</dt>
+    <dd>FromCustomImage</dd>
+    <dt>From<wbr>Gallery<wbr>Image</dt>
+    <dd>FromGalleryImage</dd>
+    <dt>From<wbr>Shared<wbr>Gallery<wbr>Image</dt>
+    <dd>FromSharedGalleryImage</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>FROM_CUSTOM_IMAGE</dt>
+    <dd>FromCustomImage</dd>
+    <dt>FROM_GALLERY_IMAGE</dt>
+    <dd>FromGalleryImage</dd>
+    <dt>FROM_SHARED_GALLERY_IMAGE</dt>
+    <dd>FromSharedGalleryImage</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="weekdetails">Week<wbr>Details</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -9415,25 +8405,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="time_csharp">
 <a href="#time_csharp" style="color: inherit; text-decoration: inherit;">Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time of the day the schedule will occur.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weekdays_csharp">
 <a href="#weekdays_csharp" style="color: inherit; text-decoration: inherit;">Weekdays</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The days of the week for which the schedule is set (e.g. Sunday, Monday, Tuesday, etc.).{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -9442,25 +8429,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="time_go">
 <a href="#time_go" style="color: inherit; text-decoration: inherit;">Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time of the day the schedule will occur.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weekdays_go">
 <a href="#weekdays_go" style="color: inherit; text-decoration: inherit;">Weekdays</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The days of the week for which the schedule is set (e.g. Sunday, Monday, Tuesday, etc.).{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -9469,25 +8453,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="time_nodejs">
 <a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time of the day the schedule will occur.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weekdays_nodejs">
 <a href="#weekdays_nodejs" style="color: inherit; text-decoration: inherit;">weekdays</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The days of the week for which the schedule is set (e.g. Sunday, Monday, Tuesday, etc.).{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -9496,37 +8477,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="time_python">
 <a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time of the day the schedule will occur.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weekdays_python">
 <a href="#weekdays_python" style="color: inherit; text-decoration: inherit;">weekdays</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The days of the week for which the schedule is set (e.g. Sunday, Monday, Tuesday, etc.).{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="weekdetailsresponse">Week<wbr>Details<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -9534,25 +8503,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="time_csharp">
 <a href="#time_csharp" style="color: inherit; text-decoration: inherit;">Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time of the day the schedule will occur.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weekdays_csharp">
 <a href="#weekdays_csharp" style="color: inherit; text-decoration: inherit;">Weekdays</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The days of the week for which the schedule is set (e.g. Sunday, Monday, Tuesday, etc.).{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -9561,25 +8527,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="time_go">
 <a href="#time_go" style="color: inherit; text-decoration: inherit;">Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time of the day the schedule will occur.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weekdays_go">
 <a href="#weekdays_go" style="color: inherit; text-decoration: inherit;">Weekdays</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The days of the week for which the schedule is set (e.g. Sunday, Monday, Tuesday, etc.).{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -9588,25 +8551,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="time_nodejs">
 <a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time of the day the schedule will occur.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weekdays_nodejs">
 <a href="#weekdays_nodejs" style="color: inherit; text-decoration: inherit;">weekdays</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The days of the week for which the schedule is set (e.g. Sunday, Monday, Tuesday, etc.).{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -9615,33 +8575,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="time_python">
 <a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time of the day the schedule will occur.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weekdays_python">
 <a href="#weekdays_python" style="color: inherit; text-decoration: inherit;">weekdays</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The days of the week for which the schedule is set (e.g. Sunday, Monday, Tuesday, etc.).{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 
 
 <h2 id="package-details">Package Details</h2>

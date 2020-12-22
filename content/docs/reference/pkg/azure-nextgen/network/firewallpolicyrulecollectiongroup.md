@@ -2,7 +2,7 @@
 ---
 title: "FirewallPolicyRuleCollectionGroup"
 title_tag: "azure-nextgen.network.FirewallPolicyRuleCollectionGroup"
-meta_desc: "Explore the FirewallPolicyRuleCollectionGroup resource of the network module, including examples, input properties, output properties, lookup functions, and supporting types. Rule Collection Group resource."
+meta_desc: "Documentation for the azure-nextgen.network.FirewallPolicyRuleCollectionGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -11,6 +11,7 @@ meta_desc: "Explore the FirewallPolicyRuleCollectionGroup resource of the networ
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Rule Collection Group resource.
+Latest API Version: 2020-07-01.
 
 
 {{% examples %}}
@@ -313,9 +314,9 @@ class MyStack : Stack
             RuleCollectionGroupName = "ruleCollectionGroup1",
             RuleCollections = 
             {
-                new AzureNextGen.Network.Latest.Inputs.FirewallPolicyFilterRuleCollectionArgs
+                new AzureNextGen.Network.Latest.Inputs.FirewallPolicyNatRuleCollectionArgs
                 {
-                    Action = new AzureNextGen.Network.Latest.Inputs.FirewallPolicyFilterRuleCollectionActionArgs
+                    Action = new AzureNextGen.Network.Latest.Inputs.FirewallPolicyNatRuleCollectionActionArgs
                     {
                         Type = "Deny",
                     },
@@ -371,8 +372,8 @@ firewall_policy_rule_collection_group = azure_nextgen.network.latest.FirewallPol
     priority=110,
     resource_group_name="rg1",
     rule_collection_group_name="ruleCollectionGroup1",
-    rule_collections=[azure_nextgen.network.latest.FirewallPolicyFilterRuleCollectionArgs(
-        action=azure_nextgen.network.latest.FirewallPolicyFilterRuleCollectionActionArgs(
+    rule_collections=[azure_nextgen.network.latest.FirewallPolicyNatRuleCollectionArgs(
+        action=azure_nextgen.network.latest.FirewallPolicyNatRuleCollectionActionArgs(
             type="Deny",
         ),
         name="Example-Filter-Rule-Collection",
@@ -573,7 +574,7 @@ const firewallPolicyRuleCollectionGroup = new azure_nextgen.network.latest.Firew
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">FirewallPolicyRuleCollectionGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">FirewallPolicyRuleCollectionGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">FirewallPolicyRuleCollectionGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">FirewallPolicyRuleCollectionGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -581,11 +582,11 @@ const firewallPolicyRuleCollectionGroup = new azure_nextgen.network.latest.Firew
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFirewallPolicyRuleCollectionGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">FirewallPolicyRuleCollectionGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FirewallPolicyRuleCollectionGroup</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFirewallPolicyRuleCollectionGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">FirewallPolicyRuleCollectionGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FirewallPolicyRuleCollectionGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">FirewallPolicyRuleCollectionGroup</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">FirewallPolicyRuleCollectionGroupArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">FirewallPolicyRuleCollectionGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">FirewallPolicyRuleCollectionGroupArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -596,7 +597,7 @@ const firewallPolicyRuleCollectionGroup = new azure_nextgen.network.latest.Firew
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -665,7 +666,7 @@ const firewallPolicyRuleCollectionGroup = new azure_nextgen.network.latest.Firew
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -704,7 +705,7 @@ const firewallPolicyRuleCollectionGroup = new azure_nextgen.network.latest.Firew
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -745,7 +746,6 @@ The FirewallPolicyRuleCollectionGroup resource accepts the following [input]({{<
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -753,75 +753,67 @@ The FirewallPolicyRuleCollectionGroup resource accepts the following [input]({{<
             title="Required">
         <span id="firewallpolicyname_csharp">
 <a href="#firewallpolicyname_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Firewall Policy.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rulecollectiongroupname_csharp">
 <a href="#rulecollectiongroupname_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Collection<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the FirewallPolicyRuleCollectionGroup.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority of the Firewall Policy Rule Collection Group resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rulecollections_csharp">
 <a href="#rulecollections_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Collections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Collection<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Args&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Group of Firewall Policy rule collections.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -830,75 +822,67 @@ The FirewallPolicyRuleCollectionGroup resource accepts the following [input]({{<
             title="Required">
         <span id="firewallpolicyname_go">
 <a href="#firewallpolicyname_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Firewall Policy.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rulecollectiongroupname_go">
 <a href="#rulecollectiongroupname_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Collection<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the FirewallPolicyRuleCollectionGroup.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority of the Firewall Policy Rule Collection Group resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rulecollections_go">
 <a href="#rulecollections_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Collections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
     <dd>{{% md %}}Group of Firewall Policy rule collections.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -907,75 +891,67 @@ The FirewallPolicyRuleCollectionGroup resource accepts the following [input]({{<
             title="Required">
         <span id="firewallpolicyname_nodejs">
 <a href="#firewallpolicyname_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Firewall Policy.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rulecollectiongroupname_nodejs">
 <a href="#rulecollectiongroupname_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Collection<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the FirewallPolicyRuleCollectionGroup.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Priority of the Firewall Policy Rule Collection Group resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rulecollections_nodejs">
 <a href="#rulecollections_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Collections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Collection | Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Collection[]</span>
     </dt>
     <dd>{{% md %}}Group of Firewall Policy rule collections.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -984,84 +960,72 @@ The FirewallPolicyRuleCollectionGroup resource accepts the following [input]({{<
             title="Required">
         <span id="firewall_policy_name_python">
 <a href="#firewall_policy_name_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>policy_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Firewall Policy.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rule_collection_group_name_python">
 <a href="#rule_collection_group_name_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>collection_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the FirewallPolicyRuleCollectionGroup.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority of the Firewall Policy Rule Collection Group resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rule_collections_python">
 <a href="#rule_collections_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>collections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Collection<wbr>Args, Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Group of Firewall Policy rule collections.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the FirewallPolicyRuleCollectionGroup resource produces the following output properties:
-
 
 
 
@@ -1072,45 +1036,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provisioning state of the firewall policy rule collection group resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Rule Group type.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1119,45 +1078,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provisioning state of the firewall policy rule collection group resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Rule Group type.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1166,45 +1120,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provisioning state of the firewall policy rule collection group resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Rule Group type.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1213,48 +1162,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provisioning state of the firewall policy rule collection group resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Rule Group type.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1265,13 +1206,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
 <h4 id="applicationrule">Application<wbr>Rule</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1280,115 +1216,103 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationaddresses_csharp">
 <a href="#destinationaddresses_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fqdntags_csharp">
 <a href="#fqdntags_csharp" style="color: inherit; text-decoration: inherit;">Fqdn<wbr>Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of FQDN Tags for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocols_csharp">
 <a href="#protocols_csharp" style="color: inherit; text-decoration: inherit;">Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyruleapplicationprotocol">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Rule<wbr>Application<wbr>Protocol<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of Application Protocols.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceaddresses_csharp">
 <a href="#sourceaddresses_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceipgroups_csharp">
 <a href="#sourceipgroups_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Ip<wbr>Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targetfqdns_csharp">
 <a href="#targetfqdns_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Fqdns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of FQDNs for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targeturls_csharp">
 <a href="#targeturls_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Urls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of Urls for this rule condition.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="terminatetls_csharp">
 <a href="#terminatetls_csharp" style="color: inherit; text-decoration: inherit;">Terminate<wbr>TLS</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Terminate TLS connections for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="webcategories_csharp">
 <a href="#webcategories_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Categories</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of destination azure web categories.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1397,115 +1321,103 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationaddresses_go">
 <a href="#destinationaddresses_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fqdntags_go">
 <a href="#fqdntags_go" style="color: inherit; text-decoration: inherit;">Fqdn<wbr>Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of FQDN Tags for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocols_go">
 <a href="#protocols_go" style="color: inherit; text-decoration: inherit;">Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyruleapplicationprotocol">[]Firewall<wbr>Policy<wbr>Rule<wbr>Application<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}Array of Application Protocols.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceaddresses_go">
 <a href="#sourceaddresses_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceipgroups_go">
 <a href="#sourceipgroups_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Ip<wbr>Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targetfqdns_go">
 <a href="#targetfqdns_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Fqdns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of FQDNs for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targeturls_go">
 <a href="#targeturls_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Urls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of Urls for this rule condition.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="terminatetls_go">
 <a href="#terminatetls_go" style="color: inherit; text-decoration: inherit;">Terminate<wbr>TLS</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Terminate TLS connections for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="webcategories_go">
 <a href="#webcategories_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Categories</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of destination azure web categories.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1514,115 +1426,103 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationaddresses_nodejs">
 <a href="#destinationaddresses_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fqdntags_nodejs">
 <a href="#fqdntags_nodejs" style="color: inherit; text-decoration: inherit;">fqdn<wbr>Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of FQDN Tags for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocols_nodejs">
 <a href="#protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyruleapplicationprotocol">Firewall<wbr>Policy<wbr>Rule<wbr>Application<wbr>Protocol[]</a></span>
     </dt>
     <dd>{{% md %}}Array of Application Protocols.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceaddresses_nodejs">
 <a href="#sourceaddresses_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceipgroups_nodejs">
 <a href="#sourceipgroups_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ip<wbr>Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targetfqdns_nodejs">
 <a href="#targetfqdns_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Fqdns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of FQDNs for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targeturls_nodejs">
 <a href="#targeturls_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Urls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Urls for this rule condition.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="terminatetls_nodejs">
 <a href="#terminatetls_nodejs" style="color: inherit; text-decoration: inherit;">terminate<wbr>TLS</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Terminate TLS connections for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="webcategories_nodejs">
 <a href="#webcategories_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Categories</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of destination azure web categories.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1631,126 +1531,105 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destination_addresses_python">
 <a href="#destination_addresses_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fqdn_tags_python">
 <a href="#fqdn_tags_python" style="color: inherit; text-decoration: inherit;">fqdn_<wbr>tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of FQDN Tags for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocols_python">
 <a href="#protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyruleapplicationprotocol">Sequence[Firewall<wbr>Policy<wbr>Rule<wbr>Application<wbr>Protocol<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of Application Protocols.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_addresses_python">
 <a href="#source_addresses_python" style="color: inherit; text-decoration: inherit;">source_<wbr>addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_ip_groups_python">
 <a href="#source_ip_groups_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip_<wbr>groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="target_fqdns_python">
 <a href="#target_fqdns_python" style="color: inherit; text-decoration: inherit;">target_<wbr>fqdns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of FQDNs for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="target_urls_python">
 <a href="#target_urls_python" style="color: inherit; text-decoration: inherit;">target_<wbr>urls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of Urls for this rule condition.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="terminate_tls_python">
 <a href="#terminate_tls_python" style="color: inherit; text-decoration: inherit;">terminate_<wbr>tls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Terminate TLS connections for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="web_categories_python">
 <a href="#web_categories_python" style="color: inherit; text-decoration: inherit;">web_<wbr>categories</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of destination azure web categories.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="applicationruleresponse">Application<wbr>Rule<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1759,115 +1638,103 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationaddresses_csharp">
 <a href="#destinationaddresses_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fqdntags_csharp">
 <a href="#fqdntags_csharp" style="color: inherit; text-decoration: inherit;">Fqdn<wbr>Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of FQDN Tags for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocols_csharp">
 <a href="#protocols_csharp" style="color: inherit; text-decoration: inherit;">Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyruleapplicationprotocolresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Rule<wbr>Application<wbr>Protocol<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of Application Protocols.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceaddresses_csharp">
 <a href="#sourceaddresses_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceipgroups_csharp">
 <a href="#sourceipgroups_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Ip<wbr>Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targetfqdns_csharp">
 <a href="#targetfqdns_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Fqdns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of FQDNs for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targeturls_csharp">
 <a href="#targeturls_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Urls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of Urls for this rule condition.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="terminatetls_csharp">
 <a href="#terminatetls_csharp" style="color: inherit; text-decoration: inherit;">Terminate<wbr>TLS</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Terminate TLS connections for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="webcategories_csharp">
 <a href="#webcategories_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Categories</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of destination azure web categories.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1876,115 +1743,103 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationaddresses_go">
 <a href="#destinationaddresses_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fqdntags_go">
 <a href="#fqdntags_go" style="color: inherit; text-decoration: inherit;">Fqdn<wbr>Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of FQDN Tags for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocols_go">
 <a href="#protocols_go" style="color: inherit; text-decoration: inherit;">Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyruleapplicationprotocolresponse">[]Firewall<wbr>Policy<wbr>Rule<wbr>Application<wbr>Protocol<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Array of Application Protocols.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceaddresses_go">
 <a href="#sourceaddresses_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceipgroups_go">
 <a href="#sourceipgroups_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Ip<wbr>Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targetfqdns_go">
 <a href="#targetfqdns_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Fqdns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of FQDNs for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targeturls_go">
 <a href="#targeturls_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Urls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of Urls for this rule condition.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="terminatetls_go">
 <a href="#terminatetls_go" style="color: inherit; text-decoration: inherit;">Terminate<wbr>TLS</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Terminate TLS connections for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="webcategories_go">
 <a href="#webcategories_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Categories</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of destination azure web categories.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1993,115 +1848,103 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationaddresses_nodejs">
 <a href="#destinationaddresses_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fqdntags_nodejs">
 <a href="#fqdntags_nodejs" style="color: inherit; text-decoration: inherit;">fqdn<wbr>Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of FQDN Tags for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocols_nodejs">
 <a href="#protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyruleapplicationprotocolresponse">Firewall<wbr>Policy<wbr>Rule<wbr>Application<wbr>Protocol<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Array of Application Protocols.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceaddresses_nodejs">
 <a href="#sourceaddresses_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceipgroups_nodejs">
 <a href="#sourceipgroups_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ip<wbr>Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targetfqdns_nodejs">
 <a href="#targetfqdns_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Fqdns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of FQDNs for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="targeturls_nodejs">
 <a href="#targeturls_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Urls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Urls for this rule condition.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="terminatetls_nodejs">
 <a href="#terminatetls_nodejs" style="color: inherit; text-decoration: inherit;">terminate<wbr>TLS</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Terminate TLS connections for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="webcategories_nodejs">
 <a href="#webcategories_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Categories</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of destination azure web categories.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2110,126 +1953,105 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destination_addresses_python">
 <a href="#destination_addresses_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fqdn_tags_python">
 <a href="#fqdn_tags_python" style="color: inherit; text-decoration: inherit;">fqdn_<wbr>tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of FQDN Tags for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocols_python">
 <a href="#protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyruleapplicationprotocolresponse">Sequence[Firewall<wbr>Policy<wbr>Rule<wbr>Application<wbr>Protocol<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of Application Protocols.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_addresses_python">
 <a href="#source_addresses_python" style="color: inherit; text-decoration: inherit;">source_<wbr>addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_ip_groups_python">
 <a href="#source_ip_groups_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip_<wbr>groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="target_fqdns_python">
 <a href="#target_fqdns_python" style="color: inherit; text-decoration: inherit;">target_<wbr>fqdns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of FQDNs for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="target_urls_python">
 <a href="#target_urls_python" style="color: inherit; text-decoration: inherit;">target_<wbr>urls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of Urls for this rule condition.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="terminate_tls_python">
 <a href="#terminate_tls_python" style="color: inherit; text-decoration: inherit;">terminate_<wbr>tls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Terminate TLS connections for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="web_categories_python">
 <a href="#web_categories_python" style="color: inherit; text-decoration: inherit;">web_<wbr>categories</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of destination azure web categories.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="firewallpolicyfilterrulecollection">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Collection</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2238,45 +2060,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyfilterrulecollectionaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Collection<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Filter rule collection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule collection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority of the Firewall Policy Rule Collection resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rules_csharp">
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Rule<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Nat<wbr>Rule<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Args&gt;&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}List of rules included in a rule collection.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2285,45 +2102,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyfilterrulecollectionaction">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Collection<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Filter rule collection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule collection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority of the Firewall Policy Rule Collection resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rules_go">
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
     <dd>{{% md %}}List of rules included in a rule collection.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2332,45 +2144,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyfilterrulecollectionaction">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Collection<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Filter rule collection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule collection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Priority of the Firewall Policy Rule Collection resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rules_nodejs">
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Application<wbr>Rule | Nat<wbr>Rule | Network<wbr>Rule[]</span>
     </dt>
     <dd>{{% md %}}List of rules included in a rule collection.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2379,57 +2186,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyfilterrulecollectionaction">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Collection<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Filter rule collection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the rule collection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority of the Firewall Policy Rule Collection resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rules_python">
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[Application<wbr>Rule<wbr>Args, Nat<wbr>Rule<wbr>Args, Network<wbr>Rule<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}List of rules included in a rule collection.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="firewallpolicyfilterrulecollectionaction">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Collection<wbr>Action</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2437,15 +2230,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Collection<wbr>Action<wbr>Type</span>
+        <span class="property-type">string | <a href="#firewallpolicyfilterrulecollectionactiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Collection<wbr>Action<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of action.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2454,15 +2245,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#firewallpolicyfilterrulecollectionactiontype">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Collection<wbr>Action<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of action.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2471,15 +2260,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Collection<wbr>Action<wbr>Type</span>
+        <span class="property-type">string | <a href="#firewallpolicyfilterrulecollectionactiontype">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Collection<wbr>Action<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of action.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2488,27 +2275,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Collection<wbr>Action<wbr>Type</span>
+        <span class="property-type">str | <a href="#firewallpolicyfilterrulecollectionactiontype">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Collection<wbr>Action<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of action.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="firewallpolicyfilterrulecollectionactionresponse">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Collection<wbr>Action<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2516,15 +2292,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of action.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2533,15 +2307,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of action.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2550,15 +2322,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of action.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2567,26 +2337,53 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of action.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="firewallpolicyfilterrulecollectionactiontype">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Collection<wbr>Action<wbr>Type</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Allow</dt>
+    <dd>Allow</dd>
+    <dt>Deny</dt>
+    <dd>Deny</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Collection<wbr>Action<wbr>Type<wbr>Allow</dt>
+    <dd>Allow</dd>
+    <dt>Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Collection<wbr>Action<wbr>Type<wbr>Deny</dt>
+    <dd>Deny</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Allow</dt>
+    <dd>Allow</dd>
+    <dt>Deny</dt>
+    <dd>Deny</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>ALLOW</dt>
+    <dd>Allow</dd>
+    <dt>DENY</dt>
+    <dd>Deny</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="firewallpolicyfilterrulecollectionresponse">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Collection<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2595,45 +2392,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyfilterrulecollectionactionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Collection<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Filter rule collection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule collection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority of the Firewall Policy Rule Collection resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rules_csharp">
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Rule<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Nat<wbr>Rule<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Response<wbr>Args&gt;&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}List of rules included in a rule collection.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2642,45 +2434,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyfilterrulecollectionactionresponse">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Collection<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Filter rule collection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule collection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority of the Firewall Policy Rule Collection resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rules_go">
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
     <dd>{{% md %}}List of rules included in a rule collection.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2689,45 +2476,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyfilterrulecollectionactionresponse">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Collection<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Filter rule collection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule collection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Priority of the Firewall Policy Rule Collection resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rules_nodejs">
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Application<wbr>Rule<wbr>Response | Nat<wbr>Rule<wbr>Response | Network<wbr>Rule<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}List of rules included in a rule collection.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2736,56 +2518,42 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicyfilterrulecollectionactionresponse">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Collection<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Filter rule collection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the rule collection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority of the Firewall Policy Rule Collection resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rules_python">
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[Application<wbr>Rule<wbr>Response<wbr>Args, Nat<wbr>Rule<wbr>Response<wbr>Args, Network<wbr>Rule<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}List of rules included in a rule collection.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="firewallpolicynatrulecollection">Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Collection</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2794,45 +2562,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicynatrulecollectionaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Nat rule collection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule collection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority of the Firewall Policy Rule Collection resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rules_csharp">
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Rule<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Nat<wbr>Rule<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Args&gt;&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}List of rules included in a rule collection.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2841,45 +2604,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicynatrulecollectionaction">Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Nat rule collection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule collection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority of the Firewall Policy Rule Collection resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rules_go">
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
     <dd>{{% md %}}List of rules included in a rule collection.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2888,45 +2646,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicynatrulecollectionaction">Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Nat rule collection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule collection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Priority of the Firewall Policy Rule Collection resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rules_nodejs">
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Application<wbr>Rule | Nat<wbr>Rule | Network<wbr>Rule[]</span>
     </dt>
     <dd>{{% md %}}List of rules included in a rule collection.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2935,57 +2688,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicynatrulecollectionaction">Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Nat rule collection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the rule collection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority of the Firewall Policy Rule Collection resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rules_python">
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[Application<wbr>Rule<wbr>Args, Nat<wbr>Rule<wbr>Args, Network<wbr>Rule<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}List of rules included in a rule collection.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="firewallpolicynatrulecollectionaction">Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Action</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2993,15 +2732,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Action<wbr>Type</span>
+        <span class="property-type">string | <a href="#firewallpolicynatrulecollectionactiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Action<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of action.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3010,15 +2747,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#firewallpolicynatrulecollectionactiontype">Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Action<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of action.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3027,15 +2762,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Action<wbr>Type</span>
+        <span class="property-type">string | <a href="#firewallpolicynatrulecollectionactiontype">Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Action<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of action.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3044,27 +2777,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Action<wbr>Type</span>
+        <span class="property-type">str | <a href="#firewallpolicynatrulecollectionactiontype">Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Action<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of action.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="firewallpolicynatrulecollectionactionresponse">Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Action<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3072,15 +2794,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of action.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3089,15 +2809,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of action.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3106,15 +2824,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of action.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3123,26 +2839,45 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of action.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="firewallpolicynatrulecollectionactiontype">Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Action<wbr>Type</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>DNAT</dt>
+    <dd>DNAT</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Action<wbr>Type<wbr>DNAT</dt>
+    <dd>DNAT</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>DNAT</dt>
+    <dd>DNAT</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>DNAT</dt>
+    <dd>DNAT</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="firewallpolicynatrulecollectionresponse">Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3151,45 +2886,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicynatrulecollectionactionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Nat rule collection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule collection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority of the Firewall Policy Rule Collection resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rules_csharp">
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Application<wbr>Rule<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Nat<wbr>Rule<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Response<wbr>Args&gt;&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}List of rules included in a rule collection.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3198,45 +2928,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicynatrulecollectionactionresponse">Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Nat rule collection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule collection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority of the Firewall Policy Rule Collection resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rules_go">
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
     <dd>{{% md %}}List of rules included in a rule collection.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3245,45 +2970,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicynatrulecollectionactionresponse">Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Nat rule collection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule collection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Priority of the Firewall Policy Rule Collection resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rules_nodejs">
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Application<wbr>Rule<wbr>Response | Nat<wbr>Rule<wbr>Response | Network<wbr>Rule<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}List of rules included in a rule collection.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3292,57 +3012,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicynatrulecollectionactionresponse">Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Collection<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The action type of a Nat rule collection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the rule collection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority of the Firewall Policy Rule Collection resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rules_python">
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[Application<wbr>Rule<wbr>Response<wbr>Args, Nat<wbr>Rule<wbr>Response<wbr>Args, Network<wbr>Rule<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}List of rules included in a rule collection.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="firewallpolicyruleapplicationprotocol">Firewall<wbr>Policy<wbr>Rule<wbr>Application<wbr>Protocol</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3350,25 +3056,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port number for the protocol, cannot be greater than 64000.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocoltype_csharp">
 <a href="#protocoltype_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Firewall<wbr>Policy<wbr>Rule<wbr>Application<wbr>Protocol<wbr>Type</span>
+        <span class="property-type">string | <a href="#firewallpolicyruleapplicationprotocoltype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Firewall<wbr>Policy<wbr>Rule<wbr>Application<wbr>Protocol<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Protocol type.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3377,25 +3080,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port number for the protocol, cannot be greater than 64000.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocoltype_go">
 <a href="#protocoltype_go" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#firewallpolicyruleapplicationprotocoltype">Firewall<wbr>Policy<wbr>Rule<wbr>Application<wbr>Protocol<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Protocol type.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3404,25 +3104,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Port number for the protocol, cannot be greater than 64000.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocoltype_nodejs">
 <a href="#protocoltype_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Firewall<wbr>Policy<wbr>Rule<wbr>Application<wbr>Protocol<wbr>Type</span>
+        <span class="property-type">string | <a href="#firewallpolicyruleapplicationprotocoltype">Firewall<wbr>Policy<wbr>Rule<wbr>Application<wbr>Protocol<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Protocol type.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3431,37 +3128,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port number for the protocol, cannot be greater than 64000.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocol_type_python">
 <a href="#protocol_type_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Firewall<wbr>Policy<wbr>Rule<wbr>Application<wbr>Protocol<wbr>Type</span>
+        <span class="property-type">str | <a href="#firewallpolicyruleapplicationprotocoltype">Firewall<wbr>Policy<wbr>Rule<wbr>Application<wbr>Protocol<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Protocol type.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="firewallpolicyruleapplicationprotocolresponse">Firewall<wbr>Policy<wbr>Rule<wbr>Application<wbr>Protocol<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3469,25 +3154,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port number for the protocol, cannot be greater than 64000.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocoltype_csharp">
 <a href="#protocoltype_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protocol type.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3496,25 +3178,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port number for the protocol, cannot be greater than 64000.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocoltype_go">
 <a href="#protocoltype_go" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protocol type.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3523,25 +3202,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Port number for the protocol, cannot be greater than 64000.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocoltype_nodejs">
 <a href="#protocoltype_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protocol type.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3550,37 +3226,117 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port number for the protocol, cannot be greater than 64000.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocol_type_python">
 <a href="#protocol_type_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Protocol type.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="firewallpolicyruleapplicationprotocoltype">Firewall<wbr>Policy<wbr>Rule<wbr>Application<wbr>Protocol<wbr>Type</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Http</dt>
+    <dd>Http</dd>
+    <dt>Https</dt>
+    <dd>Https</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Firewall<wbr>Policy<wbr>Rule<wbr>Application<wbr>Protocol<wbr>Type<wbr>Http</dt>
+    <dd>Http</dd>
+    <dt>Firewall<wbr>Policy<wbr>Rule<wbr>Application<wbr>Protocol<wbr>Type<wbr>Https</dt>
+    <dd>Https</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Http</dt>
+    <dd>Http</dd>
+    <dt>Https</dt>
+    <dd>Https</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>HTTP</dt>
+    <dd>Http</dd>
+    <dt>HTTPS</dt>
+    <dd>Https</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="firewallpolicyrulenetworkprotocol">Firewall<wbr>Policy<wbr>Rule<wbr>Network<wbr>Protocol</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>TCP</dt>
+    <dd>TCP</dd>
+    <dt>UDP</dt>
+    <dd>UDP</dd>
+    <dt>Any</dt>
+    <dd>Any</dd>
+    <dt>ICMP</dt>
+    <dd>ICMP</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Firewall<wbr>Policy<wbr>Rule<wbr>Network<wbr>Protocol<wbr>TCP</dt>
+    <dd>TCP</dd>
+    <dt>Firewall<wbr>Policy<wbr>Rule<wbr>Network<wbr>Protocol<wbr>UDP</dt>
+    <dd>UDP</dd>
+    <dt>Firewall<wbr>Policy<wbr>Rule<wbr>Network<wbr>Protocol<wbr>Any</dt>
+    <dd>Any</dd>
+    <dt>Firewall<wbr>Policy<wbr>Rule<wbr>Network<wbr>Protocol<wbr>ICMP</dt>
+    <dd>ICMP</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>TCP</dt>
+    <dd>TCP</dd>
+    <dt>UDP</dt>
+    <dd>UDP</dd>
+    <dt>Any</dt>
+    <dd>Any</dd>
+    <dt>ICMP</dt>
+    <dd>ICMP</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>TCP</dt>
+    <dd>TCP</dd>
+    <dt>UDP</dt>
+    <dd>UDP</dd>
+    <dt>ANY</dt>
+    <dd>Any</dd>
+    <dt>ICMP</dt>
+    <dd>ICMP</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="natrule">Nat<wbr>Rule</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3588,105 +3344,94 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationaddresses_csharp">
 <a href="#destinationaddresses_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationports_csharp">
 <a href="#destinationports_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of destination ports.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipprotocols_csharp">
 <a href="#ipprotocols_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Firewall<wbr>Policy<wbr>Rule<wbr>Network<wbr>Protocol&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of FirewallPolicyRuleNetworkProtocols.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceaddresses_csharp">
 <a href="#sourceaddresses_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceipgroups_csharp">
 <a href="#sourceipgroups_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Ip<wbr>Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="translatedaddress_csharp">
 <a href="#translatedaddress_csharp" style="color: inherit; text-decoration: inherit;">Translated<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The translated address for this NAT rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="translatedfqdn_csharp">
 <a href="#translatedfqdn_csharp" style="color: inherit; text-decoration: inherit;">Translated<wbr>Fqdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The translated FQDN for this NAT rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="translatedport_csharp">
 <a href="#translatedport_csharp" style="color: inherit; text-decoration: inherit;">Translated<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The translated port for this NAT rule.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3695,105 +3440,94 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationaddresses_go">
 <a href="#destinationaddresses_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationports_go">
 <a href="#destinationports_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of destination ports.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipprotocols_go">
 <a href="#ipprotocols_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Array of FirewallPolicyRuleNetworkProtocols.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceaddresses_go">
 <a href="#sourceaddresses_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceipgroups_go">
 <a href="#sourceipgroups_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Ip<wbr>Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="translatedaddress_go">
 <a href="#translatedaddress_go" style="color: inherit; text-decoration: inherit;">Translated<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The translated address for this NAT rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="translatedfqdn_go">
 <a href="#translatedfqdn_go" style="color: inherit; text-decoration: inherit;">Translated<wbr>Fqdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The translated FQDN for this NAT rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="translatedport_go">
 <a href="#translatedport_go" style="color: inherit; text-decoration: inherit;">Translated<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The translated port for this NAT rule.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3802,105 +3536,94 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationaddresses_nodejs">
 <a href="#destinationaddresses_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationports_nodejs">
 <a href="#destinationports_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of destination ports.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipprotocols_nodejs">
 <a href="#ipprotocols_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | enums.<wbr>Firewall<wbr>Policy<wbr>Rule<wbr>Network<wbr>Protocol[]</span>
+        <span class="property-type">string | Firewall<wbr>Policy<wbr>Rule<wbr>Network<wbr>Protocol[]</span>
     </dt>
     <dd>{{% md %}}Array of FirewallPolicyRuleNetworkProtocols.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceaddresses_nodejs">
 <a href="#sourceaddresses_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceipgroups_nodejs">
 <a href="#sourceipgroups_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ip<wbr>Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="translatedaddress_nodejs">
 <a href="#translatedaddress_nodejs" style="color: inherit; text-decoration: inherit;">translated<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The translated address for this NAT rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="translatedfqdn_nodejs">
 <a href="#translatedfqdn_nodejs" style="color: inherit; text-decoration: inherit;">translated<wbr>Fqdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The translated FQDN for this NAT rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="translatedport_nodejs">
 <a href="#translatedport_nodejs" style="color: inherit; text-decoration: inherit;">translated<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The translated port for this NAT rule.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3909,117 +3632,97 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destination_addresses_python">
 <a href="#destination_addresses_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destination_ports_python">
 <a href="#destination_ports_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of destination ports.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ip_protocols_python">
 <a href="#ip_protocols_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[str, Firewall<wbr>Policy<wbr>Rule<wbr>Network<wbr>Protocol]]</span>
     </dt>
     <dd>{{% md %}}Array of FirewallPolicyRuleNetworkProtocols.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_addresses_python">
 <a href="#source_addresses_python" style="color: inherit; text-decoration: inherit;">source_<wbr>addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_ip_groups_python">
 <a href="#source_ip_groups_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip_<wbr>groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="translated_address_python">
 <a href="#translated_address_python" style="color: inherit; text-decoration: inherit;">translated_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The translated address for this NAT rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="translated_fqdn_python">
 <a href="#translated_fqdn_python" style="color: inherit; text-decoration: inherit;">translated_<wbr>fqdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The translated FQDN for this NAT rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="translated_port_python">
 <a href="#translated_port_python" style="color: inherit; text-decoration: inherit;">translated_<wbr>port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The translated port for this NAT rule.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="natruleresponse">Nat<wbr>Rule<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4027,105 +3730,94 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationaddresses_csharp">
 <a href="#destinationaddresses_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationports_csharp">
 <a href="#destinationports_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of destination ports.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipprotocols_csharp">
 <a href="#ipprotocols_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Array of FirewallPolicyRuleNetworkProtocols.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceaddresses_csharp">
 <a href="#sourceaddresses_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceipgroups_csharp">
 <a href="#sourceipgroups_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Ip<wbr>Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="translatedaddress_csharp">
 <a href="#translatedaddress_csharp" style="color: inherit; text-decoration: inherit;">Translated<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The translated address for this NAT rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="translatedfqdn_csharp">
 <a href="#translatedfqdn_csharp" style="color: inherit; text-decoration: inherit;">Translated<wbr>Fqdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The translated FQDN for this NAT rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="translatedport_csharp">
 <a href="#translatedport_csharp" style="color: inherit; text-decoration: inherit;">Translated<wbr>Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The translated port for this NAT rule.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4134,524 +3826,94 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationaddresses_go">
 <a href="#destinationaddresses_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationports_go">
 <a href="#destinationports_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of destination ports.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipprotocols_go">
 <a href="#ipprotocols_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocols</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}Array of FirewallPolicyRuleNetworkProtocols.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Name of the rule.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="sourceaddresses_go">
-<a href="#sourceaddresses_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Addresses</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="sourceipgroups_go">
-<a href="#sourceipgroups_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Ip<wbr>Groups</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="translatedaddress_go">
-<a href="#translatedaddress_go" style="color: inherit; text-decoration: inherit;">Translated<wbr>Address</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The translated address for this NAT rule.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="translatedfqdn_go">
-<a href="#translatedfqdn_go" style="color: inherit; text-decoration: inherit;">Translated<wbr>Fqdn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The translated FQDN for this NAT rule.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="translatedport_go">
-<a href="#translatedport_go" style="color: inherit; text-decoration: inherit;">Translated<wbr>Port</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The translated port for this NAT rule.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="description_nodejs">
-<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Description of the rule.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="destinationaddresses_nodejs">
-<a href="#destinationaddresses_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Addresses</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="destinationports_nodejs">
-<a href="#destinationports_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Ports</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}List of destination ports.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="ipprotocols_nodejs">
-<a href="#ipprotocols_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocols</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}Array of FirewallPolicyRuleNetworkProtocols.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Name of the rule.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="sourceaddresses_nodejs">
-<a href="#sourceaddresses_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Addresses</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="sourceipgroups_nodejs">
-<a href="#sourceipgroups_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ip<wbr>Groups</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="translatedaddress_nodejs">
-<a href="#translatedaddress_nodejs" style="color: inherit; text-decoration: inherit;">translated<wbr>Address</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The translated address for this NAT rule.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="translatedfqdn_nodejs">
-<a href="#translatedfqdn_nodejs" style="color: inherit; text-decoration: inherit;">translated<wbr>Fqdn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The translated FQDN for this NAT rule.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="translatedport_nodejs">
-<a href="#translatedport_nodejs" style="color: inherit; text-decoration: inherit;">translated<wbr>Port</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The translated port for this NAT rule.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="description_python">
-<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Description of the rule.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="destination_addresses_python">
-<a href="#destination_addresses_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>addresses</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
-    </dt>
-    <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="destination_ports_python">
-<a href="#destination_ports_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ports</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
-    </dt>
-    <dd>{{% md %}}List of destination ports.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="ip_protocols_python">
-<a href="#ip_protocols_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocols</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
-    </dt>
-    <dd>{{% md %}}Array of FirewallPolicyRuleNetworkProtocols.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Name of the rule.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="source_addresses_python">
-<a href="#source_addresses_python" style="color: inherit; text-decoration: inherit;">source_<wbr>addresses</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
-    </dt>
-    <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="source_ip_groups_python">
-<a href="#source_ip_groups_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip_<wbr>groups</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
-    </dt>
-    <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="translated_address_python">
-<a href="#translated_address_python" style="color: inherit; text-decoration: inherit;">translated_<wbr>address</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The translated address for this NAT rule.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="translated_fqdn_python">
-<a href="#translated_fqdn_python" style="color: inherit; text-decoration: inherit;">translated_<wbr>fqdn</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The translated FQDN for this NAT rule.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="translated_port_python">
-<a href="#translated_port_python" style="color: inherit; text-decoration: inherit;">translated_<wbr>port</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The translated port for this NAT rule.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-<h4 id="networkrule">Network<wbr>Rule</h4>
-
-
-
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="description_csharp">
-<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Description of the rule.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="destinationaddresses_csharp">
-<a href="#destinationaddresses_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Addresses</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="destinationfqdns_csharp">
-<a href="#destinationfqdns_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Fqdns</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}List of destination FQDNs.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="destinationipgroups_csharp">
-<a href="#destinationipgroups_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ip<wbr>Groups</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}List of destination IpGroups for this rule.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="destinationports_csharp">
-<a href="#destinationports_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ports</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}List of destination ports.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="ipprotocols_csharp">
-<a href="#ipprotocols_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocols</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Firewall<wbr>Policy<wbr>Rule<wbr>Network<wbr>Protocol&gt;&gt;</span>
-    </dt>
-    <dd>{{% md %}}Array of FirewallPolicyRuleNetworkProtocols.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Name of the rule.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="sourceaddresses_csharp">
-<a href="#sourceaddresses_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Addresses</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="sourceipgroups_csharp">
-<a href="#sourceipgroups_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Ip<wbr>Groups</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="description_go">
-<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Description of the rule.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="destinationaddresses_go">
-<a href="#destinationaddresses_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Addresses</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="destinationfqdns_go">
-<a href="#destinationfqdns_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Fqdns</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}List of destination FQDNs.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="destinationipgroups_go">
-<a href="#destinationipgroups_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ip<wbr>Groups</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}List of destination IpGroups for this rule.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="destinationports_go">
-<a href="#destinationports_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ports</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}List of destination ports.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="ipprotocols_go">
-<a href="#ipprotocols_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Array of FirewallPolicyRuleNetworkProtocols.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceaddresses_go">
 <a href="#sourceaddresses_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceipgroups_go">
 <a href="#sourceipgroups_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Ip<wbr>Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="translatedaddress_go">
+<a href="#translatedaddress_go" style="color: inherit; text-decoration: inherit;">Translated<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The translated address for this NAT rule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="translatedfqdn_go">
+<a href="#translatedfqdn_go" style="color: inherit; text-decoration: inherit;">Translated<wbr>Fqdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The translated FQDN for this NAT rule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="translatedport_go">
+<a href="#translatedport_go" style="color: inherit; text-decoration: inherit;">Translated<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The translated port for this NAT rule.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4660,95 +3922,94 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationaddresses_nodejs">
 <a href="#destinationaddresses_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="destinationfqdns_nodejs">
-<a href="#destinationfqdns_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Fqdns</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}List of destination FQDNs.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="destinationipgroups_nodejs">
-<a href="#destinationipgroups_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Ip<wbr>Groups</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}List of destination IpGroups for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationports_nodejs">
 <a href="#destinationports_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of destination ports.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipprotocols_nodejs">
 <a href="#ipprotocols_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | enums.<wbr>Firewall<wbr>Policy<wbr>Rule<wbr>Network<wbr>Protocol[]</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Array of FirewallPolicyRuleNetworkProtocols.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceaddresses_nodejs">
 <a href="#sourceaddresses_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceipgroups_nodejs">
 <a href="#sourceipgroups_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ip<wbr>Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="translatedaddress_nodejs">
+<a href="#translatedaddress_nodejs" style="color: inherit; text-decoration: inherit;">translated<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The translated address for this NAT rule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="translatedfqdn_nodejs">
+<a href="#translatedfqdn_nodejs" style="color: inherit; text-decoration: inherit;">translated<wbr>Fqdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The translated FQDN for this NAT rule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="translatedport_nodejs">
+<a href="#translatedport_nodejs" style="color: inherit; text-decoration: inherit;">translated<wbr>Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The translated port for this NAT rule.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4757,106 +4018,96 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destination_addresses_python">
 <a href="#destination_addresses_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="destination_fqdns_python">
-<a href="#destination_fqdns_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>fqdns</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
-    </dt>
-    <dd>{{% md %}}List of destination FQDNs.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="destination_ip_groups_python">
-<a href="#destination_ip_groups_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ip_<wbr>groups</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
-    </dt>
-    <dd>{{% md %}}List of destination IpGroups for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destination_ports_python">
 <a href="#destination_ports_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of destination ports.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ip_protocols_python">
 <a href="#ip_protocols_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[str, Firewall<wbr>Policy<wbr>Rule<wbr>Network<wbr>Protocol]]</span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Array of FirewallPolicyRuleNetworkProtocols.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_addresses_python">
 <a href="#source_addresses_python" style="color: inherit; text-decoration: inherit;">source_<wbr>addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_ip_groups_python">
 <a href="#source_ip_groups_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip_<wbr>groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="translated_address_python">
+<a href="#translated_address_python" style="color: inherit; text-decoration: inherit;">translated_<wbr>address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The translated address for this NAT rule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="translated_fqdn_python">
+<a href="#translated_fqdn_python" style="color: inherit; text-decoration: inherit;">translated_<wbr>fqdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The translated FQDN for this NAT rule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="translated_port_python">
+<a href="#translated_port_python" style="color: inherit; text-decoration: inherit;">translated_<wbr>port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The translated port for this NAT rule.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
-
-
-
-
-<h4 id="networkruleresponse">Network<wbr>Rule<wbr>Response</h4>
-
-
-
-
-
-
+<h4 id="networkrule">Network<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4865,95 +4116,85 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationaddresses_csharp">
 <a href="#destinationaddresses_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationfqdns_csharp">
 <a href="#destinationfqdns_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Fqdns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of destination FQDNs.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationipgroups_csharp">
 <a href="#destinationipgroups_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ip<wbr>Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of destination IpGroups for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationports_csharp">
 <a href="#destinationports_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of destination ports.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipprotocols_csharp">
 <a href="#ipprotocols_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Firewall<wbr>Policy<wbr>Rule<wbr>Network<wbr>Protocol&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Array of FirewallPolicyRuleNetworkProtocols.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceaddresses_csharp">
 <a href="#sourceaddresses_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceipgroups_csharp">
 <a href="#sourceipgroups_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Ip<wbr>Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4962,95 +4203,85 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationaddresses_go">
 <a href="#destinationaddresses_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationfqdns_go">
 <a href="#destinationfqdns_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Fqdns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of destination FQDNs.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationipgroups_go">
 <a href="#destinationipgroups_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ip<wbr>Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of destination IpGroups for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationports_go">
 <a href="#destinationports_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of destination ports.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipprotocols_go">
 <a href="#ipprotocols_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Array of FirewallPolicyRuleNetworkProtocols.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceaddresses_go">
 <a href="#sourceaddresses_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceipgroups_go">
 <a href="#sourceipgroups_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Ip<wbr>Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5059,95 +4290,85 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationaddresses_nodejs">
 <a href="#destinationaddresses_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationfqdns_nodejs">
 <a href="#destinationfqdns_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Fqdns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of destination FQDNs.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationipgroups_nodejs">
 <a href="#destinationipgroups_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Ip<wbr>Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of destination IpGroups for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationports_nodejs">
 <a href="#destinationports_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of destination ports.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipprotocols_nodejs">
 <a href="#ipprotocols_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string | Firewall<wbr>Policy<wbr>Rule<wbr>Network<wbr>Protocol[]</span>
     </dt>
     <dd>{{% md %}}Array of FirewallPolicyRuleNetworkProtocols.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceaddresses_nodejs">
 <a href="#sourceaddresses_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceipgroups_nodejs">
 <a href="#sourceipgroups_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ip<wbr>Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5156,103 +4377,435 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destination_addresses_python">
 <a href="#destination_addresses_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destination_fqdns_python">
 <a href="#destination_fqdns_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>fqdns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of destination FQDNs.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destination_ip_groups_python">
 <a href="#destination_ip_groups_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ip_<wbr>groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of destination IpGroups for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destination_ports_python">
 <a href="#destination_ports_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ports</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of destination ports.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ip_protocols_python">
 <a href="#ip_protocols_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[Union[str, Firewall<wbr>Policy<wbr>Rule<wbr>Network<wbr>Protocol]]</span>
     </dt>
     <dd>{{% md %}}Array of FirewallPolicyRuleNetworkProtocols.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_addresses_python">
 <a href="#source_addresses_python" style="color: inherit; text-decoration: inherit;">source_<wbr>addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_ip_groups_python">
 <a href="#source_ip_groups_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip_<wbr>groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="networkruleresponse">Network<wbr>Rule<wbr>Response</h4>
 
+{{% choosable language csharp %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Description of the rule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="destinationaddresses_csharp">
+<a href="#destinationaddresses_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="destinationfqdns_csharp">
+<a href="#destinationfqdns_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Fqdns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of destination FQDNs.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="destinationipgroups_csharp">
+<a href="#destinationipgroups_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of destination IpGroups for this rule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="destinationports_csharp">
+<a href="#destinationports_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ports</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of destination ports.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipprotocols_csharp">
+<a href="#ipprotocols_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocols</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Array of FirewallPolicyRuleNetworkProtocols.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the rule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceaddresses_csharp">
+<a href="#sourceaddresses_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceipgroups_csharp">
+<a href="#sourceipgroups_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Ip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Description of the rule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="destinationaddresses_go">
+<a href="#destinationaddresses_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="destinationfqdns_go">
+<a href="#destinationfqdns_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Fqdns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of destination FQDNs.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="destinationipgroups_go">
+<a href="#destinationipgroups_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of destination IpGroups for this rule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="destinationports_go">
+<a href="#destinationports_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ports</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of destination ports.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipprotocols_go">
+<a href="#ipprotocols_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Protocols</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Array of FirewallPolicyRuleNetworkProtocols.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the rule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceaddresses_go">
+<a href="#sourceaddresses_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceipgroups_go">
+<a href="#sourceipgroups_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Ip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Description of the rule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="destinationaddresses_nodejs">
+<a href="#destinationaddresses_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="destinationfqdns_nodejs">
+<a href="#destinationfqdns_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Fqdns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of destination FQDNs.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="destinationipgroups_nodejs">
+<a href="#destinationipgroups_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Ip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of destination IpGroups for this rule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="destinationports_nodejs">
+<a href="#destinationports_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Ports</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of destination ports.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipprotocols_nodejs">
+<a href="#ipprotocols_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Protocols</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Array of FirewallPolicyRuleNetworkProtocols.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the rule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceaddresses_nodejs">
+<a href="#sourceaddresses_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceipgroups_nodejs">
+<a href="#sourceipgroups_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ip<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Description of the rule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="destination_addresses_python">
+<a href="#destination_addresses_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of destination IP addresses or Service Tags.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="destination_fqdns_python">
+<a href="#destination_fqdns_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>fqdns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of destination FQDNs.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="destination_ip_groups_python">
+<a href="#destination_ip_groups_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ip_<wbr>groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of destination IpGroups for this rule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="destination_ports_python">
+<a href="#destination_ports_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ports</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of destination ports.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ip_protocols_python">
+<a href="#ip_protocols_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>protocols</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Array of FirewallPolicyRuleNetworkProtocols.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the rule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_addresses_python">
+<a href="#source_addresses_python" style="color: inherit; text-decoration: inherit;">source_<wbr>addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of source IP addresses for this rule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_ip_groups_python">
+<a href="#source_ip_groups_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ip_<wbr>groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>

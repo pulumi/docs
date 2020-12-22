@@ -45,13 +45,11 @@ meta_desc: "Explore the ListEASubscriptionListMigrationDatePost function of the 
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -59,23 +57,17 @@ The following arguments are supported:
 </dl>
 {{% /choosable %}}
 
-
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
 </dl>
 {{% /choosable %}}
 
-
 {{% choosable language python %}}
 <dl class="resources-properties">
 
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -86,7 +78,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -94,25 +85,22 @@ The following output properties are available:
             title="">
         <span id="isgrandfatherablesubscription_csharp">
 <a href="#isgrandfatherablesubscription_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Grand<wbr>Fatherable<wbr>Subscription</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is subscription in the grand fatherable subscription list.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="optedindate_csharp">
 <a href="#optedindate_csharp" style="color: inherit; text-decoration: inherit;">Opted<wbr>In<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time to start using new pricing model.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -121,25 +109,22 @@ The following output properties are available:
             title="">
         <span id="isgrandfatherablesubscription_go">
 <a href="#isgrandfatherablesubscription_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Grand<wbr>Fatherable<wbr>Subscription</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is subscription in the grand fatherable subscription list.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="optedindate_go">
 <a href="#optedindate_go" style="color: inherit; text-decoration: inherit;">Opted<wbr>In<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time to start using new pricing model.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -148,25 +133,22 @@ The following output properties are available:
             title="">
         <span id="isgrandfatherablesubscription_nodejs">
 <a href="#isgrandfatherablesubscription_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Grand<wbr>Fatherable<wbr>Subscription</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is subscription in the grand fatherable subscription list.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="optedindate_nodejs">
 <a href="#optedindate_nodejs" style="color: inherit; text-decoration: inherit;">opted<wbr>In<wbr>Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time to start using new pricing model.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -175,28 +157,22 @@ The following output properties are available:
             title="">
         <span id="is_grand_fatherable_subscription_python">
 <a href="#is_grand_fatherable_subscription_python" style="color: inherit; text-decoration: inherit;">is_<wbr>grand_<wbr>fatherable_<wbr>subscription</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is subscription in the grand fatherable subscription list.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="opted_in_date_python">
 <a href="#opted_in_date_python" style="color: inherit; text-decoration: inherit;">opted_<wbr>in_<wbr>date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time to start using new pricing model.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

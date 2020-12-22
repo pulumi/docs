@@ -47,7 +47,6 @@ meta_desc: "Explore the GetProfile function of the customerinsights module, incl
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -55,45 +54,40 @@ The following arguments are supported:
             title="Required">
         <span id="hubname_csharp">
 <a href="#hubname_csharp" style="color: inherit; text-decoration: inherit;">Hub<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the hub.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="profilename_csharp">
 <a href="#profilename_csharp" style="color: inherit; text-decoration: inherit;">Profile<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the profile.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="localecode_csharp">
 <a href="#localecode_csharp" style="color: inherit; text-decoration: inherit;">Locale<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Locale of profile to retrieve, default is en-us.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -102,45 +96,40 @@ The following arguments are supported:
             title="Required">
         <span id="hubname_go">
 <a href="#hubname_go" style="color: inherit; text-decoration: inherit;">Hub<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the hub.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="profilename_go">
 <a href="#profilename_go" style="color: inherit; text-decoration: inherit;">Profile<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the profile.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="localecode_go">
 <a href="#localecode_go" style="color: inherit; text-decoration: inherit;">Locale<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Locale of profile to retrieve, default is en-us.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -149,45 +138,40 @@ The following arguments are supported:
             title="Required">
         <span id="hubname_nodejs">
 <a href="#hubname_nodejs" style="color: inherit; text-decoration: inherit;">hub<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the hub.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="profilename_nodejs">
 <a href="#profilename_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the profile.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="localecode_nodejs">
 <a href="#localecode_nodejs" style="color: inherit; text-decoration: inherit;">locale<wbr>Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Locale of profile to retrieve, default is en-us.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -196,48 +180,40 @@ The following arguments are supported:
             title="Required">
         <span id="hub_name_python">
 <a href="#hub_name_python" style="color: inherit; text-decoration: inherit;">hub_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the hub.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="profile_name_python">
 <a href="#profile_name_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the profile.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="locale_code_python">
 <a href="#locale_code_python" style="color: inherit; text-decoration: inherit;">locale_<wbr>code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Locale of profile to retrieve, default is en-us.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -248,7 +224,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -256,215 +231,193 @@ The following output properties are available:
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lastchangedutc_csharp">
 <a href="#lastchangedutc_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Changed<wbr>Utc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last changed time for the type definition.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning state.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hub name.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="apientitysetname_csharp">
 <a href="#apientitysetname_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Entity<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The api entity set name. This becomes the odata entity set name for the entity Type being referred in this object.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="attributes_csharp">
 <a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Immutable<wbr>Array&lt;string&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}The attributes for the Type.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Localized descriptions for the property.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Localized display names for the property.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="entitytype_csharp">
 <a href="#entitytype_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of entity.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="fields_csharp">
 <a href="#fields_csharp" style="color: inherit; text-decoration: inherit;">Fields</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#propertydefinitionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Property<wbr>Definition<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The properties of the Profile.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="instancescount_csharp">
 <a href="#instancescount_csharp" style="color: inherit; text-decoration: inherit;">Instances<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The instance count.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="largeimage_csharp">
 <a href="#largeimage_csharp" style="color: inherit; text-decoration: inherit;">Large<wbr>Image</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Large Image associated with the Property or EntityType.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="localizedattributes_csharp">
 <a href="#localizedattributes_csharp" style="color: inherit; text-decoration: inherit;">Localized<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Immutable<wbr>Dictionary&lt;string, string&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}Any custom localized attributes for the Type.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="mediumimage_csharp">
 <a href="#mediumimage_csharp" style="color: inherit; text-decoration: inherit;">Medium<wbr>Image</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Medium Image associated with the Property or EntityType.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="schemaitemtypelink_csharp">
 <a href="#schemaitemtypelink_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Item<wbr>Type<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The schema org link. This helps ACI identify and suggest semantic models.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="smallimage_csharp">
 <a href="#smallimage_csharp" style="color: inherit; text-decoration: inherit;">Small<wbr>Image</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Small Image associated with the Property or EntityType.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="strongids_csharp">
 <a href="#strongids_csharp" style="color: inherit; text-decoration: inherit;">Strong<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#strongidresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Outputs.<wbr>Strong<wbr>Id<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}The strong IDs.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="timestampfieldname_csharp">
 <a href="#timestampfieldname_csharp" style="color: inherit; text-decoration: inherit;">Timestamp<wbr>Field<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp property name. Represents the time when the interaction or profile update happened.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="typename_csharp">
 <a href="#typename_csharp" style="color: inherit; text-decoration: inherit;">Type<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the entity.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -473,215 +426,193 @@ The following output properties are available:
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lastchangedutc_go">
 <a href="#lastchangedutc_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Changed<wbr>Utc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last changed time for the type definition.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning state.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hub name.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="apientitysetname_go">
 <a href="#apientitysetname_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Entity<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The api entity set name. This becomes the odata entity set name for the entity Type being referred in this object.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="attributes_go">
 <a href="#attributes_go" style="color: inherit; text-decoration: inherit;">Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string][]string</span>
     </dt>
     <dd>{{% md %}}The attributes for the Type.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Localized descriptions for the property.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Localized display names for the property.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="entitytype_go">
 <a href="#entitytype_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of entity.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="fields_go">
 <a href="#fields_go" style="color: inherit; text-decoration: inherit;">Fields</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#propertydefinitionresponse">[]Property<wbr>Definition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties of the Profile.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="instancescount_go">
 <a href="#instancescount_go" style="color: inherit; text-decoration: inherit;">Instances<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The instance count.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="largeimage_go">
 <a href="#largeimage_go" style="color: inherit; text-decoration: inherit;">Large<wbr>Image</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Large Image associated with the Property or EntityType.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="localizedattributes_go">
 <a href="#localizedattributes_go" style="color: inherit; text-decoration: inherit;">Localized<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]map[string]string</span>
     </dt>
     <dd>{{% md %}}Any custom localized attributes for the Type.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="mediumimage_go">
 <a href="#mediumimage_go" style="color: inherit; text-decoration: inherit;">Medium<wbr>Image</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Medium Image associated with the Property or EntityType.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="schemaitemtypelink_go">
 <a href="#schemaitemtypelink_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Item<wbr>Type<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The schema org link. This helps ACI identify and suggest semantic models.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="smallimage_go">
 <a href="#smallimage_go" style="color: inherit; text-decoration: inherit;">Small<wbr>Image</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Small Image associated with the Property or EntityType.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="strongids_go">
 <a href="#strongids_go" style="color: inherit; text-decoration: inherit;">Strong<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#strongidresponse">[]Strong<wbr>Id<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The strong IDs.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="timestampfieldname_go">
 <a href="#timestampfieldname_go" style="color: inherit; text-decoration: inherit;">Timestamp<wbr>Field<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp property name. Represents the time when the interaction or profile update happened.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="typename_go">
 <a href="#typename_go" style="color: inherit; text-decoration: inherit;">Type<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the entity.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -690,215 +621,193 @@ The following output properties are available:
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lastchangedutc_nodejs">
 <a href="#lastchangedutc_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Changed<wbr>Utc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last changed time for the type definition.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning state.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hub name.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="apientitysetname_nodejs">
 <a href="#apientitysetname_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Entity<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The api entity set name. This becomes the odata entity set name for the entity Type being referred in this object.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="attributes_nodejs">
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string[]}</span>
     </dt>
     <dd>{{% md %}}The attributes for the Type.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Localized descriptions for the property.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Localized display names for the property.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="entitytype_nodejs">
 <a href="#entitytype_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of entity.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="fields_nodejs">
 <a href="#fields_nodejs" style="color: inherit; text-decoration: inherit;">fields</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#propertydefinitionresponse">Property<wbr>Definition<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The properties of the Profile.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="instancescount_nodejs">
 <a href="#instancescount_nodejs" style="color: inherit; text-decoration: inherit;">instances<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The instance count.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="largeimage_nodejs">
 <a href="#largeimage_nodejs" style="color: inherit; text-decoration: inherit;">large<wbr>Image</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Large Image associated with the Property or EntityType.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="localizedattributes_nodejs">
 <a href="#localizedattributes_nodejs" style="color: inherit; text-decoration: inherit;">localized<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: {[key: string]: string}}</span>
     </dt>
     <dd>{{% md %}}Any custom localized attributes for the Type.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="mediumimage_nodejs">
 <a href="#mediumimage_nodejs" style="color: inherit; text-decoration: inherit;">medium<wbr>Image</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Medium Image associated with the Property or EntityType.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="schemaitemtypelink_nodejs">
 <a href="#schemaitemtypelink_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Item<wbr>Type<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The schema org link. This helps ACI identify and suggest semantic models.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="smallimage_nodejs">
 <a href="#smallimage_nodejs" style="color: inherit; text-decoration: inherit;">small<wbr>Image</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Small Image associated with the Property or EntityType.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="strongids_nodejs">
 <a href="#strongids_nodejs" style="color: inherit; text-decoration: inherit;">strong<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#strongidresponse">Strong<wbr>Id<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The strong IDs.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="timestampfieldname_nodejs">
 <a href="#timestampfieldname_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Field<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp property name. Represents the time when the interaction or profile update happened.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="typename_nodejs">
 <a href="#typename_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the entity.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -907,218 +816,193 @@ The following output properties are available:
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="last_changed_utc_python">
 <a href="#last_changed_utc_python" style="color: inherit; text-decoration: inherit;">last_<wbr>changed_<wbr>utc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The last changed time for the type definition.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Provisioning state.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hub name.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="api_entity_set_name_python">
 <a href="#api_entity_set_name_python" style="color: inherit; text-decoration: inherit;">api_<wbr>entity_<wbr>set_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The api entity set name. This becomes the odata entity set name for the entity Type being referred in this object.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="attributes_python">
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Sequence[str]]</span>
     </dt>
     <dd>{{% md %}}The attributes for the Type.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Localized descriptions for the property.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Localized display names for the property.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="entity_type_python">
 <a href="#entity_type_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of entity.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="fields_python">
 <a href="#fields_python" style="color: inherit; text-decoration: inherit;">fields</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#propertydefinitionresponse">Sequence[Property<wbr>Definition<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The properties of the Profile.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="instances_count_python">
 <a href="#instances_count_python" style="color: inherit; text-decoration: inherit;">instances_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The instance count.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="large_image_python">
 <a href="#large_image_python" style="color: inherit; text-decoration: inherit;">large_<wbr>image</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Large Image associated with the Property or EntityType.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="localized_attributes_python">
 <a href="#localized_attributes_python" style="color: inherit; text-decoration: inherit;">localized_<wbr>attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Mapping[str, str]]</span>
     </dt>
     <dd>{{% md %}}Any custom localized attributes for the Type.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="medium_image_python">
 <a href="#medium_image_python" style="color: inherit; text-decoration: inherit;">medium_<wbr>image</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Medium Image associated with the Property or EntityType.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="schema_item_type_link_python">
 <a href="#schema_item_type_link_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>item_<wbr>type_<wbr>link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The schema org link. This helps ACI identify and suggest semantic models.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="small_image_python">
 <a href="#small_image_python" style="color: inherit; text-decoration: inherit;">small_<wbr>image</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Small Image associated with the Property or EntityType.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="strong_ids_python">
 <a href="#strong_ids_python" style="color: inherit; text-decoration: inherit;">strong_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#strongidresponse">Sequence[Strong<wbr>Id<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}The strong IDs.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="timestamp_field_name_python">
 <a href="#timestamp_field_name_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>field_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp property name. Represents the time when the interaction or profile update happened.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_name_python">
 <a href="#type_name_python" style="color: inherit; text-decoration: inherit;">type_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the entity.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1133,7 +1017,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1141,65 +1024,58 @@ The following output properties are available:
             title="Required">
         <span id="datasourcereferenceid_csharp">
 <a href="#datasourcereferenceid_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Reference<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data source reference id.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="datasourcetype_csharp">
 <a href="#datasourcetype_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data source type.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The data source ID.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data source name{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data source status.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="precedence_csharp">
 <a href="#precedence_csharp" style="color: inherit; text-decoration: inherit;">Precedence</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}the precedence value.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1208,65 +1084,58 @@ The following output properties are available:
             title="Required">
         <span id="datasourcereferenceid_go">
 <a href="#datasourcereferenceid_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Reference<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data source reference id.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="datasourcetype_go">
 <a href="#datasourcetype_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data source type.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The data source ID.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data source name{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data source status.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="precedence_go">
 <a href="#precedence_go" style="color: inherit; text-decoration: inherit;">Precedence</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}the precedence value.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1275,65 +1144,58 @@ The following output properties are available:
             title="Required">
         <span id="datasourcereferenceid_nodejs">
 <a href="#datasourcereferenceid_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Reference<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data source reference id.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="datasourcetype_nodejs">
 <a href="#datasourcetype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data source type.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The data source ID.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data source name{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data source status.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="precedence_nodejs">
 <a href="#precedence_nodejs" style="color: inherit; text-decoration: inherit;">precedence</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}the precedence value.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1342,71 +1204,60 @@ The following output properties are available:
             title="Required">
         <span id="data_source_reference_id_python">
 <a href="#data_source_reference_id_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>reference_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The data source reference id.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="data_source_type_python">
 <a href="#data_source_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The data source type.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The data source ID.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The data source name{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The data source status.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="precedence_python">
 <a href="#precedence_python" style="color: inherit; text-decoration: inherit;">precedence</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}the precedence value.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="profileenumvalidvaluesformatresponse">Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Response</h4>
-
 
 
 
@@ -1420,25 +1271,22 @@ The following output properties are available:
             title="Optional">
         <span id="localizedvaluenames_csharp">
 <a href="#localizedvaluenames_csharp" style="color: inherit; text-decoration: inherit;">Localized<wbr>Value<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Localized names of the enum member.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The integer value of the enum member.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1447,25 +1295,22 @@ The following output properties are available:
             title="Optional">
         <span id="localizedvaluenames_go">
 <a href="#localizedvaluenames_go" style="color: inherit; text-decoration: inherit;">Localized<wbr>Value<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Localized names of the enum member.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The integer value of the enum member.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1474,25 +1319,22 @@ The following output properties are available:
             title="Optional">
         <span id="localizedvaluenames_nodejs">
 <a href="#localizedvaluenames_nodejs" style="color: inherit; text-decoration: inherit;">localized<wbr>Value<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Localized names of the enum member.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The integer value of the enum member.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1501,31 +1343,24 @@ The following output properties are available:
             title="Optional">
         <span id="localized_value_names_python">
 <a href="#localized_value_names_python" style="color: inherit; text-decoration: inherit;">localized_<wbr>value_<wbr>names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Localized names of the enum member.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The integer value of the enum member.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="propertydefinitionresponse">Property<wbr>Definition<wbr>Response</h4>
-
 
 
 
@@ -1539,165 +1374,148 @@ The following output properties are available:
             title="Required">
         <span id="datasourceprecedencerules_csharp">
 <a href="#datasourceprecedencerules_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Precedence<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasourceprecedenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Data<wbr>Source<wbr>Precedence<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}This is specific to interactions modeled as activities. Data sources are used to determine where data is stored and also in precedence rules.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="fieldname_csharp">
 <a href="#fieldname_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the property.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="fieldtype_csharp">
 <a href="#fieldtype_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the property.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="arrayvalueseparator_csharp">
 <a href="#arrayvalueseparator_csharp" style="color: inherit; text-decoration: inherit;">Array<wbr>Value<wbr>Separator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Array value separator for properties with isArray set.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enumvalidvalues_csharp">
 <a href="#enumvalidvalues_csharp" style="color: inherit; text-decoration: inherit;">Enum<wbr>Valid<wbr>Values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#profileenumvalidvaluesformatresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Customer<wbr>Insights.<wbr>Inputs.<wbr>Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes valid values for an enum property.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isarray_csharp">
 <a href="#isarray_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Array</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the property is actually an array of the fieldType above on the data api.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isavailableingraph_csharp">
 <a href="#isavailableingraph_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Available<wbr>In<wbr>Graph</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether property is available in graph or not.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isenum_csharp">
 <a href="#isenum_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enum</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the property is an enum.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isflagenum_csharp">
 <a href="#isflagenum_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Flag<wbr>Enum</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the property is an flag enum.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isimage_csharp">
 <a href="#isimage_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Image</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the property is an Image.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="islocalizedstring_csharp">
 <a href="#islocalizedstring_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Localized<wbr>String</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the property is a localized string.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isname_csharp">
 <a href="#isname_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the property is a name or a part of name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrequired_csharp">
 <a href="#isrequired_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Required</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether property value is required on instances, IsRequired field only for Interaction. Profile Instance will not check for required field.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxlength_csharp">
 <a href="#maxlength_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Length</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max length of string. Used only if type is string.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="propertyid_csharp">
 <a href="#propertyid_csharp" style="color: inherit; text-decoration: inherit;">Property<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID associated with the property.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schemaitemproplink_csharp">
 <a href="#schemaitemproplink_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Item<wbr>Prop<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL encoded schema.org item prop link for the property.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1706,165 +1524,148 @@ The following output properties are available:
             title="Required">
         <span id="datasourceprecedencerules_go">
 <a href="#datasourceprecedencerules_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Precedence<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasourceprecedenceresponse">[]Data<wbr>Source<wbr>Precedence<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}This is specific to interactions modeled as activities. Data sources are used to determine where data is stored and also in precedence rules.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="fieldname_go">
 <a href="#fieldname_go" style="color: inherit; text-decoration: inherit;">Field<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the property.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="fieldtype_go">
 <a href="#fieldtype_go" style="color: inherit; text-decoration: inherit;">Field<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the property.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="arrayvalueseparator_go">
 <a href="#arrayvalueseparator_go" style="color: inherit; text-decoration: inherit;">Array<wbr>Value<wbr>Separator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Array value separator for properties with isArray set.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enumvalidvalues_go">
 <a href="#enumvalidvalues_go" style="color: inherit; text-decoration: inherit;">Enum<wbr>Valid<wbr>Values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#profileenumvalidvaluesformatresponse">[]Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes valid values for an enum property.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isarray_go">
 <a href="#isarray_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Array</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the property is actually an array of the fieldType above on the data api.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isavailableingraph_go">
 <a href="#isavailableingraph_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Available<wbr>In<wbr>Graph</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether property is available in graph or not.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isenum_go">
 <a href="#isenum_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enum</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the property is an enum.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isflagenum_go">
 <a href="#isflagenum_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Flag<wbr>Enum</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the property is an flag enum.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isimage_go">
 <a href="#isimage_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Image</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the property is an Image.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="islocalizedstring_go">
 <a href="#islocalizedstring_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Localized<wbr>String</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the property is a localized string.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isname_go">
 <a href="#isname_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the property is a name or a part of name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrequired_go">
 <a href="#isrequired_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Required</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether property value is required on instances, IsRequired field only for Interaction. Profile Instance will not check for required field.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxlength_go">
 <a href="#maxlength_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Length</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max length of string. Used only if type is string.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="propertyid_go">
 <a href="#propertyid_go" style="color: inherit; text-decoration: inherit;">Property<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID associated with the property.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schemaitemproplink_go">
 <a href="#schemaitemproplink_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Item<wbr>Prop<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL encoded schema.org item prop link for the property.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1873,165 +1674,148 @@ The following output properties are available:
             title="Required">
         <span id="datasourceprecedencerules_nodejs">
 <a href="#datasourceprecedencerules_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Precedence<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasourceprecedenceresponse">Data<wbr>Source<wbr>Precedence<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}This is specific to interactions modeled as activities. Data sources are used to determine where data is stored and also in precedence rules.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="fieldname_nodejs">
 <a href="#fieldname_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the property.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="fieldtype_nodejs">
 <a href="#fieldtype_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the property.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="arrayvalueseparator_nodejs">
 <a href="#arrayvalueseparator_nodejs" style="color: inherit; text-decoration: inherit;">array<wbr>Value<wbr>Separator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Array value separator for properties with isArray set.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enumvalidvalues_nodejs">
 <a href="#enumvalidvalues_nodejs" style="color: inherit; text-decoration: inherit;">enum<wbr>Valid<wbr>Values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#profileenumvalidvaluesformatresponse">Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Describes valid values for an enum property.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isarray_nodejs">
 <a href="#isarray_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Array</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates if the property is actually an array of the fieldType above on the data api.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isavailableingraph_nodejs">
 <a href="#isavailableingraph_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Available<wbr>In<wbr>Graph</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether property is available in graph or not.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isenum_nodejs">
 <a href="#isenum_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enum</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates if the property is an enum.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isflagenum_nodejs">
 <a href="#isflagenum_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Flag<wbr>Enum</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates if the property is an flag enum.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isimage_nodejs">
 <a href="#isimage_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Image</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the property is an Image.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="islocalizedstring_nodejs">
 <a href="#islocalizedstring_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Localized<wbr>String</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the property is a localized string.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isname_nodejs">
 <a href="#isname_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the property is a name or a part of name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrequired_nodejs">
 <a href="#isrequired_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Required</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether property value is required on instances, IsRequired field only for Interaction. Profile Instance will not check for required field.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxlength_nodejs">
 <a href="#maxlength_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Length</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Max length of string. Used only if type is string.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="propertyid_nodejs">
 <a href="#propertyid_nodejs" style="color: inherit; text-decoration: inherit;">property<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID associated with the property.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schemaitemproplink_nodejs">
 <a href="#schemaitemproplink_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Item<wbr>Prop<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL encoded schema.org item prop link for the property.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2040,171 +1824,150 @@ The following output properties are available:
             title="Required">
         <span id="data_source_precedence_rules_python">
 <a href="#data_source_precedence_rules_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>precedence_<wbr>rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasourceprecedenceresponse">Sequence[Data<wbr>Source<wbr>Precedence<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}This is specific to interactions modeled as activities. Data sources are used to determine where data is stored and also in precedence rules.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="field_name_python">
 <a href="#field_name_python" style="color: inherit; text-decoration: inherit;">field_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the property.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="field_type_python">
 <a href="#field_type_python" style="color: inherit; text-decoration: inherit;">field_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the property.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="array_value_separator_python">
 <a href="#array_value_separator_python" style="color: inherit; text-decoration: inherit;">array_<wbr>value_<wbr>separator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Array value separator for properties with isArray set.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enum_valid_values_python">
 <a href="#enum_valid_values_python" style="color: inherit; text-decoration: inherit;">enum_<wbr>valid_<wbr>values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#profileenumvalidvaluesformatresponse">Sequence[Profile<wbr>Enum<wbr>Valid<wbr>Values<wbr>Format<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Describes valid values for an enum property.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_array_python">
 <a href="#is_array_python" style="color: inherit; text-decoration: inherit;">is_<wbr>array</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the property is actually an array of the fieldType above on the data api.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_available_in_graph_python">
 <a href="#is_available_in_graph_python" style="color: inherit; text-decoration: inherit;">is_<wbr>available_<wbr>in_<wbr>graph</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether property is available in graph or not.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_enum_python">
 <a href="#is_enum_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enum</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the property is an enum.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_flag_enum_python">
 <a href="#is_flag_enum_python" style="color: inherit; text-decoration: inherit;">is_<wbr>flag_<wbr>enum</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if the property is an flag enum.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_image_python">
 <a href="#is_image_python" style="color: inherit; text-decoration: inherit;">is_<wbr>image</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the property is an Image.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_localized_string_python">
 <a href="#is_localized_string_python" style="color: inherit; text-decoration: inherit;">is_<wbr>localized_<wbr>string</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the property is a localized string.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_name_python">
 <a href="#is_name_python" style="color: inherit; text-decoration: inherit;">is_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the property is a name or a part of name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_required_python">
 <a href="#is_required_python" style="color: inherit; text-decoration: inherit;">is_<wbr>required</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether property value is required on instances, IsRequired field only for Interaction. Profile Instance will not check for required field.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_length_python">
 <a href="#max_length_python" style="color: inherit; text-decoration: inherit;">max_<wbr>length</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max length of string. Used only if type is string.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="property_id_python">
 <a href="#property_id_python" style="color: inherit; text-decoration: inherit;">property_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID associated with the property.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schema_item_prop_link_python">
 <a href="#schema_item_prop_link_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>item_<wbr>prop_<wbr>link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL encoded schema.org item prop link for the property.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="strongidresponse">Strong<wbr>Id<wbr>Response</h4>
-
 
 
 
@@ -2218,45 +1981,40 @@ The following output properties are available:
             title="Required">
         <span id="keypropertynames_csharp">
 <a href="#keypropertynames_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Property<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The properties which make up the unique ID.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="strongidname_csharp">
 <a href="#strongidname_csharp" style="color: inherit; text-decoration: inherit;">Strong<wbr>Id<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name identifying the strong ID.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Localized descriptions.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Localized display name.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2265,45 +2023,40 @@ The following output properties are available:
             title="Required">
         <span id="keypropertynames_go">
 <a href="#keypropertynames_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Property<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The properties which make up the unique ID.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="strongidname_go">
 <a href="#strongidname_go" style="color: inherit; text-decoration: inherit;">Strong<wbr>Id<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name identifying the strong ID.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Localized descriptions.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Localized display name.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2312,45 +2065,40 @@ The following output properties are available:
             title="Required">
         <span id="keypropertynames_nodejs">
 <a href="#keypropertynames_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Property<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The properties which make up the unique ID.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="strongidname_nodejs">
 <a href="#strongidname_nodejs" style="color: inherit; text-decoration: inherit;">strong<wbr>Id<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name identifying the strong ID.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Localized descriptions.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Localized display name.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2359,48 +2107,40 @@ The following output properties are available:
             title="Required">
         <span id="key_property_names_python">
 <a href="#key_property_names_python" style="color: inherit; text-decoration: inherit;">key_<wbr>property_<wbr>names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The properties which make up the unique ID.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="strong_id_name_python">
 <a href="#strong_id_name_python" style="color: inherit; text-decoration: inherit;">strong_<wbr>id_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name identifying the strong ID.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Localized descriptions.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Localized display name.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

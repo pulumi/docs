@@ -2,7 +2,7 @@
 ---
 title: "Api"
 title_tag: "azure-nextgen.apimanagement.Api"
-meta_desc: "Explore the Api resource of the apimanagement module, including examples, input properties, output properties, lookup functions, and supporting types. Api details."
+meta_desc: "Documentation for the azure-nextgen.apimanagement.Api resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -11,6 +11,7 @@ meta_desc: "Explore the Api resource of the apimanagement module, including exam
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Api details.
+Latest API Version: 2019-12-01.
 
 
 {{% examples %}}
@@ -1158,7 +1159,7 @@ const api = new azure_nextgen.apimanagement.latest.Api("api", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Api</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ApiArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Api</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ApiArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1166,11 +1167,11 @@ const api = new azure_nextgen.apimanagement.latest.Api("api", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApi</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ApiArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Api</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApi</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ApiArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Api</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Api</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ApiArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Api</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ApiArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1181,7 +1182,7 @@ const api = new azure_nextgen.apimanagement.latest.Api("api", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -1250,7 +1251,7 @@ const api = new azure_nextgen.apimanagement.latest.Api("api", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -1289,7 +1290,7 @@ const api = new azure_nextgen.apimanagement.latest.Api("api", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -1330,7 +1331,6 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1338,247 +1338,222 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
             title="Required">
         <span id="apiid_csharp">
 <a href="#apiid_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="apirevision_csharp">
 <a href="#apirevision_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Revision</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes the Revision of the Api. If no value is provided, default revision 1 is created{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="apirevisiondescription_csharp">
 <a href="#apirevisiondescription_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Revision<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the Api Revision.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="apitype_csharp">
 <a href="#apitype_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Api<wbr>Type</span>
+        <span class="property-type">string | <a href="#apitype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Api<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of API.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="apiversion_csharp">
 <a href="#apiversion_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the Version identifier of the API if the API is versioned{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="apiversiondescription_csharp">
 <a href="#apiversiondescription_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Version<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the Api Version.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="apiversionset_csharp">
 <a href="#apiversionset_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Version<wbr>Set</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#apiversionsetcontractdetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Api<wbr>Version<wbr>Set<wbr>Contract<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Version set details{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="apiversionsetid_csharp">
 <a href="#apiversionsetid_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Version<wbr>Set<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A resource identifier for the related ApiVersionSet.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authenticationsettings_csharp">
 <a href="#authenticationsettings_csharp" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authenticationsettingscontract">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Collection of authentication settings included into this API.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the API. May include HTML formatting tags.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API name. Must be 1 to 300 characters long.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="format_csharp">
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Content<wbr>Format</span>
+        <span class="property-type">string | <a href="#contentformat">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Content<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Format of the Content in which the API is getting imported.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iscurrent_csharp">
 <a href="#iscurrent_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Current</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if API revision is current api revision.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocols_csharp">
 <a href="#protocols_csharp" style="color: inherit; text-decoration: inherit;">Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Protocol&gt;</span>
+        <span class="property-type"><a href="#protocol">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Protocol&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes on which protocols the operations in this API can be invoked.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serviceurl_csharp">
 <a href="#serviceurl_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="soapapitype_csharp">
 <a href="#soapapitype_csharp" style="color: inherit; text-decoration: inherit;">Soap<wbr>Api<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Soap<wbr>Api<wbr>Type</span>
+        <span class="property-type">string | <a href="#soapapitype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Soap<wbr>Api<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of Api to create. 
  * `http` creates a SOAP to REST API 
  * `soap` creates a SOAP pass-through API .{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceapiid_csharp">
 <a href="#sourceapiid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Api<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API identifier of the source API.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subscriptionkeyparameternames_csharp">
 <a href="#subscriptionkeyparameternames_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Key<wbr>Parameter<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionkeyparameternamescontract">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Subscription<wbr>Key<wbr>Parameter<wbr>Names<wbr>Contract<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Protocols over which API is made available.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subscriptionrequired_csharp">
 <a href="#subscriptionrequired_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Required</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether an API or Product subscription is required for accessing the API.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Content value when Importing an API.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="wsdlselector_csharp">
 <a href="#wsdlselector_csharp" style="color: inherit; text-decoration: inherit;">Wsdl<wbr>Selector</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#apicreateorupdatepropertieswsdlselector">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Api<wbr>Create<wbr>Or<wbr>Update<wbr>Properties<wbr>Wsdl<wbr>Selector<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Criteria to limit import of WSDL to a subset of the document.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1587,247 +1562,222 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
             title="Required">
         <span id="apiid_go">
 <a href="#apiid_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="apirevision_go">
 <a href="#apirevision_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Revision</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes the Revision of the Api. If no value is provided, default revision 1 is created{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="apirevisiondescription_go">
 <a href="#apirevisiondescription_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Revision<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the Api Revision.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="apitype_go">
 <a href="#apitype_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#apitype">Api<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of API.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="apiversion_go">
 <a href="#apiversion_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the Version identifier of the API if the API is versioned{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="apiversiondescription_go">
 <a href="#apiversiondescription_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Version<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the Api Version.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="apiversionset_go">
 <a href="#apiversionset_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Version<wbr>Set</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#apiversionsetcontractdetails">Api<wbr>Version<wbr>Set<wbr>Contract<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}Version set details{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="apiversionsetid_go">
 <a href="#apiversionsetid_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Version<wbr>Set<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A resource identifier for the related ApiVersionSet.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authenticationsettings_go">
 <a href="#authenticationsettings_go" style="color: inherit; text-decoration: inherit;">Authentication<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authenticationsettingscontract">Authentication<wbr>Settings<wbr>Contract</a></span>
     </dt>
     <dd>{{% md %}}Collection of authentication settings included into this API.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the API. May include HTML formatting tags.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API name. Must be 1 to 300 characters long.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="format_go">
 <a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#contentformat">Content<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Format of the Content in which the API is getting imported.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iscurrent_go">
 <a href="#iscurrent_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Current</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if API revision is current api revision.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocols_go">
 <a href="#protocols_go" style="color: inherit; text-decoration: inherit;">Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="#protocol">[]string</a></span>
     </dt>
     <dd>{{% md %}}Describes on which protocols the operations in this API can be invoked.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serviceurl_go">
 <a href="#serviceurl_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="soapapitype_go">
 <a href="#soapapitype_go" style="color: inherit; text-decoration: inherit;">Soap<wbr>Api<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#soapapitype">Soap<wbr>Api<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of Api to create. 
  * `http` creates a SOAP to REST API 
  * `soap` creates a SOAP pass-through API .{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceapiid_go">
 <a href="#sourceapiid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Api<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API identifier of the source API.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subscriptionkeyparameternames_go">
 <a href="#subscriptionkeyparameternames_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Key<wbr>Parameter<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionkeyparameternamescontract">Subscription<wbr>Key<wbr>Parameter<wbr>Names<wbr>Contract</a></span>
     </dt>
     <dd>{{% md %}}Protocols over which API is made available.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subscriptionrequired_go">
 <a href="#subscriptionrequired_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Required</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether an API or Product subscription is required for accessing the API.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Content value when Importing an API.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="wsdlselector_go">
 <a href="#wsdlselector_go" style="color: inherit; text-decoration: inherit;">Wsdl<wbr>Selector</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#apicreateorupdatepropertieswsdlselector">Api<wbr>Create<wbr>Or<wbr>Update<wbr>Properties<wbr>Wsdl<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}Criteria to limit import of WSDL to a subset of the document.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1836,247 +1786,222 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
             title="Required">
         <span id="apiid_nodejs">
 <a href="#apiid_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="apirevision_nodejs">
 <a href="#apirevision_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Revision</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes the Revision of the Api. If no value is provided, default revision 1 is created{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="apirevisiondescription_nodejs">
 <a href="#apirevisiondescription_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Revision<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the Api Revision.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="apitype_nodejs">
 <a href="#apitype_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Api<wbr>Type</span>
+        <span class="property-type">string | <a href="#apitype">Api<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of API.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="apiversion_nodejs">
 <a href="#apiversion_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the Version identifier of the API if the API is versioned{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="apiversiondescription_nodejs">
 <a href="#apiversiondescription_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Version<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the Api Version.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="apiversionset_nodejs">
 <a href="#apiversionset_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Version<wbr>Set</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#apiversionsetcontractdetails">Api<wbr>Version<wbr>Set<wbr>Contract<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}Version set details{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="apiversionsetid_nodejs">
 <a href="#apiversionsetid_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Version<wbr>Set<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A resource identifier for the related ApiVersionSet.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authenticationsettings_nodejs">
 <a href="#authenticationsettings_nodejs" style="color: inherit; text-decoration: inherit;">authentication<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authenticationsettingscontract">Authentication<wbr>Settings<wbr>Contract</a></span>
     </dt>
     <dd>{{% md %}}Collection of authentication settings included into this API.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the API. May include HTML formatting tags.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API name. Must be 1 to 300 characters long.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="format_nodejs">
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Content<wbr>Format</span>
+        <span class="property-type">string | <a href="#contentformat">Content<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Format of the Content in which the API is getting imported.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iscurrent_nodejs">
 <a href="#iscurrent_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Current</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates if API revision is current api revision.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocols_nodejs">
 <a href="#protocols_nodejs" style="color: inherit; text-decoration: inherit;">protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">enums.<wbr>Protocol[]</span>
+        <span class="property-type"><a href="#protocol">Protocol[]</a></span>
     </dt>
     <dd>{{% md %}}Describes on which protocols the operations in this API can be invoked.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serviceurl_nodejs">
 <a href="#serviceurl_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="soapapitype_nodejs">
 <a href="#soapapitype_nodejs" style="color: inherit; text-decoration: inherit;">soap<wbr>Api<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Soap<wbr>Api<wbr>Type</span>
+        <span class="property-type">string | <a href="#soapapitype">Soap<wbr>Api<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of Api to create. 
  * `http` creates a SOAP to REST API 
  * `soap` creates a SOAP pass-through API .{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceapiid_nodejs">
 <a href="#sourceapiid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Api<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API identifier of the source API.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subscriptionkeyparameternames_nodejs">
 <a href="#subscriptionkeyparameternames_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Key<wbr>Parameter<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionkeyparameternamescontract">Subscription<wbr>Key<wbr>Parameter<wbr>Names<wbr>Contract</a></span>
     </dt>
     <dd>{{% md %}}Protocols over which API is made available.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subscriptionrequired_nodejs">
 <a href="#subscriptionrequired_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Required</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether an API or Product subscription is required for accessing the API.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Content value when Importing an API.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="wsdlselector_nodejs">
 <a href="#wsdlselector_nodejs" style="color: inherit; text-decoration: inherit;">wsdl<wbr>Selector</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#apicreateorupdatepropertieswsdlselector">Api<wbr>Create<wbr>Or<wbr>Update<wbr>Properties<wbr>Wsdl<wbr>Selector</a></span>
     </dt>
     <dd>{{% md %}}Criteria to limit import of WSDL to a subset of the document.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2085,256 +2010,227 @@ The Api resource accepts the following [input]({{< relref "/docs/intro/concepts/
             title="Required">
         <span id="api_id_python">
 <a href="#api_id_python" style="color: inherit; text-decoration: inherit;">api_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Relative URL uniquely identifying this API and all of its resource paths within the API Management service instance. It is appended to the API endpoint base URL specified during the service instance creation to form a public URL for this API.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="api_revision_python">
 <a href="#api_revision_python" style="color: inherit; text-decoration: inherit;">api_<wbr>revision</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Describes the Revision of the Api. If no value is provided, default revision 1 is created{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="api_revision_description_python">
 <a href="#api_revision_description_python" style="color: inherit; text-decoration: inherit;">api_<wbr>revision_<wbr>description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the Api Revision.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="api_type_python">
 <a href="#api_type_python" style="color: inherit; text-decoration: inherit;">api_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Api<wbr>Type</span>
+        <span class="property-type">str | <a href="#apitype">Api<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of API.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="api_version_python">
 <a href="#api_version_python" style="color: inherit; text-decoration: inherit;">api_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates the Version identifier of the API if the API is versioned{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="api_version_description_python">
 <a href="#api_version_description_python" style="color: inherit; text-decoration: inherit;">api_<wbr>version_<wbr>description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the Api Version.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="api_version_set_python">
 <a href="#api_version_set_python" style="color: inherit; text-decoration: inherit;">api_<wbr>version_<wbr>set</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#apiversionsetcontractdetails">Api<wbr>Version<wbr>Set<wbr>Contract<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Version set details{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="api_version_set_id_python">
 <a href="#api_version_set_id_python" style="color: inherit; text-decoration: inherit;">api_<wbr>version_<wbr>set_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A resource identifier for the related ApiVersionSet.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authentication_settings_python">
 <a href="#authentication_settings_python" style="color: inherit; text-decoration: inherit;">authentication_<wbr>settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authenticationsettingscontract">Authentication<wbr>Settings<wbr>Contract<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Collection of authentication settings included into this API.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the API. May include HTML formatting tags.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}API name. Must be 1 to 300 characters long.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="format_python">
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Content<wbr>Format</span>
+        <span class="property-type">str | <a href="#contentformat">Content<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}Format of the Content in which the API is getting imported.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_current_python">
 <a href="#is_current_python" style="color: inherit; text-decoration: inherit;">is_<wbr>current</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if API revision is current api revision.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocols_python">
 <a href="#protocols_python" style="color: inherit; text-decoration: inherit;">protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Protocol]</span>
+        <span class="property-type"><a href="#protocol">Sequence[Protocol]</a></span>
     </dt>
     <dd>{{% md %}}Describes on which protocols the operations in this API can be invoked.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="service_url_python">
 <a href="#service_url_python" style="color: inherit; text-decoration: inherit;">service_<wbr>url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="soap_api_type_python">
 <a href="#soap_api_type_python" style="color: inherit; text-decoration: inherit;">soap_<wbr>api_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Soap<wbr>Api<wbr>Type</span>
+        <span class="property-type">str | <a href="#soapapitype">Soap<wbr>Api<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of Api to create. 
  * `http` creates a SOAP to REST API 
  * `soap` creates a SOAP pass-through API .{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_api_id_python">
 <a href="#source_api_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>api_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}API identifier of the source API.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subscription_key_parameter_names_python">
 <a href="#subscription_key_parameter_names_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>key_<wbr>parameter_<wbr>names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionkeyparameternamescontract">Subscription<wbr>Key<wbr>Parameter<wbr>Names<wbr>Contract<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Protocols over which API is made available.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subscription_required_python">
 <a href="#subscription_required_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>required</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether an API or Product subscription is required for accessing the API.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Content value when Importing an API.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="wsdl_selector_python">
 <a href="#wsdl_selector_python" style="color: inherit; text-decoration: inherit;">wsdl_<wbr>selector</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#apicreateorupdatepropertieswsdlselector">Api<wbr>Create<wbr>Or<wbr>Update<wbr>Properties<wbr>Wsdl<wbr>Selector<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Criteria to limit import of WSDL to a subset of the document.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Api resource produces the following output properties:
-
 
 
 
@@ -2345,45 +2241,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="isonline_csharp">
 <a href="#isonline_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Online</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if API revision is accessible via the gateway.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2392,45 +2283,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="isonline_go">
 <a href="#isonline_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Online</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if API revision is accessible via the gateway.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2439,45 +2325,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="isonline_nodejs">
 <a href="#isonline_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Online</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates if API revision is accessible via the gateway.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2486,48 +2367,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="is_online_python">
 <a href="#is_online_python" style="color: inherit; text-decoration: inherit;">is_<wbr>online</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if API revision is accessible via the gateway.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -2538,13 +2411,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
 <h4 id="apicreateorupdatepropertieswsdlselector">Api<wbr>Create<wbr>Or<wbr>Update<wbr>Properties<wbr>Wsdl<wbr>Selector</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2553,25 +2421,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="wsdlendpointname_csharp">
 <a href="#wsdlendpointname_csharp" style="color: inherit; text-decoration: inherit;">Wsdl<wbr>Endpoint<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of endpoint(port) to import from WSDL{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="wsdlservicename_csharp">
 <a href="#wsdlservicename_csharp" style="color: inherit; text-decoration: inherit;">Wsdl<wbr>Service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of service to import from WSDL{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2580,25 +2445,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="wsdlendpointname_go">
 <a href="#wsdlendpointname_go" style="color: inherit; text-decoration: inherit;">Wsdl<wbr>Endpoint<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of endpoint(port) to import from WSDL{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="wsdlservicename_go">
 <a href="#wsdlservicename_go" style="color: inherit; text-decoration: inherit;">Wsdl<wbr>Service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of service to import from WSDL{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2607,25 +2469,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="wsdlendpointname_nodejs">
 <a href="#wsdlendpointname_nodejs" style="color: inherit; text-decoration: inherit;">wsdl<wbr>Endpoint<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of endpoint(port) to import from WSDL{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="wsdlservicename_nodejs">
 <a href="#wsdlservicename_nodejs" style="color: inherit; text-decoration: inherit;">wsdl<wbr>Service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of service to import from WSDL{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2634,37 +2493,63 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="wsdl_endpoint_name_python">
 <a href="#wsdl_endpoint_name_python" style="color: inherit; text-decoration: inherit;">wsdl_<wbr>endpoint_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of endpoint(port) to import from WSDL{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="wsdl_service_name_python">
 <a href="#wsdl_service_name_python" style="color: inherit; text-decoration: inherit;">wsdl_<wbr>service_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of service to import from WSDL{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="apitype">Api<wbr>Type</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Http</dt>
+    <dd>http</dd>
+    <dt>Soap</dt>
+    <dd>soap</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Api<wbr>Type<wbr>Http</dt>
+    <dd>http</dd>
+    <dt>Api<wbr>Type<wbr>Soap</dt>
+    <dd>soap</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Http</dt>
+    <dd>http</dd>
+    <dt>Soap</dt>
+    <dd>soap</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>HTTP</dt>
+    <dd>http</dd>
+    <dt>SOAP</dt>
+    <dd>soap</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="apiversionsetcontractdetails">Api<wbr>Version<wbr>Set<wbr>Contract<wbr>Details</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2672,65 +2557,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of API Version Set.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for existing API Version Set. Omit this value to create a new Version Set.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display Name of the API Version Set.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="versionheadername_csharp">
 <a href="#versionheadername_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Header<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="versionqueryname_csharp">
 <a href="#versionqueryname_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Query<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of query parameter that indicates the API Version if versioningScheme is set to `query`.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="versioningscheme_csharp">
 <a href="#versioningscheme_csharp" style="color: inherit; text-decoration: inherit;">Versioning<wbr>Scheme</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An value that determines where the API Version identifer will be located in a HTTP request.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2739,65 +2617,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of API Version Set.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for existing API Version Set. Omit this value to create a new Version Set.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display Name of the API Version Set.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="versionheadername_go">
 <a href="#versionheadername_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Header<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="versionqueryname_go">
 <a href="#versionqueryname_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Query<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of query parameter that indicates the API Version if versioningScheme is set to `query`.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="versioningscheme_go">
 <a href="#versioningscheme_go" style="color: inherit; text-decoration: inherit;">Versioning<wbr>Scheme</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An value that determines where the API Version identifer will be located in a HTTP request.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2806,65 +2677,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of API Version Set.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for existing API Version Set. Omit this value to create a new Version Set.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display Name of the API Version Set.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="versionheadername_nodejs">
 <a href="#versionheadername_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Header<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="versionqueryname_nodejs">
 <a href="#versionqueryname_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Query<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of query parameter that indicates the API Version if versioningScheme is set to `query`.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="versioningscheme_nodejs">
 <a href="#versioningscheme_nodejs" style="color: inherit; text-decoration: inherit;">versioning<wbr>Scheme</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An value that determines where the API Version identifer will be located in a HTTP request.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2873,77 +2737,61 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of API Version Set.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier for existing API Version Set. Omit this value to create a new Version Set.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display Name of the API Version Set.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_header_name_python">
 <a href="#version_header_name_python" style="color: inherit; text-decoration: inherit;">version_<wbr>header_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_query_name_python">
 <a href="#version_query_name_python" style="color: inherit; text-decoration: inherit;">version_<wbr>query_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of query parameter that indicates the API Version if versioningScheme is set to `query`.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="versioning_scheme_python">
 <a href="#versioning_scheme_python" style="color: inherit; text-decoration: inherit;">versioning_<wbr>scheme</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An value that determines where the API Version identifer will be located in a HTTP request.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="apiversionsetcontractdetailsresponse">Api<wbr>Version<wbr>Set<wbr>Contract<wbr>Details<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2951,65 +2799,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of API Version Set.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for existing API Version Set. Omit this value to create a new Version Set.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display Name of the API Version Set.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="versionheadername_csharp">
 <a href="#versionheadername_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Header<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="versionqueryname_csharp">
 <a href="#versionqueryname_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Query<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of query parameter that indicates the API Version if versioningScheme is set to `query`.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="versioningscheme_csharp">
 <a href="#versioningscheme_csharp" style="color: inherit; text-decoration: inherit;">Versioning<wbr>Scheme</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An value that determines where the API Version identifer will be located in a HTTP request.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3018,65 +2859,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of API Version Set.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for existing API Version Set. Omit this value to create a new Version Set.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display Name of the API Version Set.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="versionheadername_go">
 <a href="#versionheadername_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Header<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="versionqueryname_go">
 <a href="#versionqueryname_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Query<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of query parameter that indicates the API Version if versioningScheme is set to `query`.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="versioningscheme_go">
 <a href="#versioningscheme_go" style="color: inherit; text-decoration: inherit;">Versioning<wbr>Scheme</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An value that determines where the API Version identifer will be located in a HTTP request.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3085,65 +2919,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of API Version Set.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for existing API Version Set. Omit this value to create a new Version Set.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display Name of the API Version Set.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="versionheadername_nodejs">
 <a href="#versionheadername_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Header<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="versionqueryname_nodejs">
 <a href="#versionqueryname_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Query<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of query parameter that indicates the API Version if versioningScheme is set to `query`.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="versioningscheme_nodejs">
 <a href="#versioningscheme_nodejs" style="color: inherit; text-decoration: inherit;">versioning<wbr>Scheme</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An value that determines where the API Version identifer will be located in a HTTP request.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3152,76 +2979,60 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of API Version Set.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier for existing API Version Set. Omit this value to create a new Version Set.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display Name of the API Version Set.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_header_name_python">
 <a href="#version_header_name_python" style="color: inherit; text-decoration: inherit;">version_<wbr>header_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_query_name_python">
 <a href="#version_query_name_python" style="color: inherit; text-decoration: inherit;">version_<wbr>query_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of query parameter that indicates the API Version if versioningScheme is set to `query`.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="versioning_scheme_python">
 <a href="#versioning_scheme_python" style="color: inherit; text-decoration: inherit;">versioning_<wbr>scheme</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An value that determines where the API Version identifer will be located in a HTTP request.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="authenticationsettingscontract">Authentication<wbr>Settings<wbr>Contract</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3230,25 +3041,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="oauth2_csharp">
 <a href="#oauth2_csharp" style="color: inherit; text-decoration: inherit;">OAuth2</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oauth2authenticationsettingscontract">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>OAuth2Authentication<wbr>Settings<wbr>Contract<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}OAuth2 Authentication settings{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="openid_csharp">
 <a href="#openid_csharp" style="color: inherit; text-decoration: inherit;">Openid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#openidauthenticationsettingscontract">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}OpenID Connect Authentication Settings{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3257,25 +3065,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="oauth2_go">
 <a href="#oauth2_go" style="color: inherit; text-decoration: inherit;">OAuth2</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oauth2authenticationsettingscontract">OAuth2Authentication<wbr>Settings<wbr>Contract</a></span>
     </dt>
     <dd>{{% md %}}OAuth2 Authentication settings{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="openid_go">
 <a href="#openid_go" style="color: inherit; text-decoration: inherit;">Openid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#openidauthenticationsettingscontract">Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract</a></span>
     </dt>
     <dd>{{% md %}}OpenID Connect Authentication Settings{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3284,25 +3089,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="oauth2_nodejs">
 <a href="#oauth2_nodejs" style="color: inherit; text-decoration: inherit;">o<wbr>Auth2</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oauth2authenticationsettingscontract">OAuth2Authentication<wbr>Settings<wbr>Contract</a></span>
     </dt>
     <dd>{{% md %}}OAuth2 Authentication settings{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="openid_nodejs">
 <a href="#openid_nodejs" style="color: inherit; text-decoration: inherit;">openid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#openidauthenticationsettingscontract">Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract</a></span>
     </dt>
     <dd>{{% md %}}OpenID Connect Authentication Settings{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3311,36 +3113,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="o_auth2_python">
 <a href="#o_auth2_python" style="color: inherit; text-decoration: inherit;">o_<wbr>auth2</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oauth2authenticationsettingscontract">OAuth2Authentication<wbr>Settings<wbr>Contract<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}OAuth2 Authentication settings{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="openid_python">
 <a href="#openid_python" style="color: inherit; text-decoration: inherit;">openid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#openidauthenticationsettingscontract">Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}OpenID Connect Authentication Settings{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="authenticationsettingscontractresponse">Authentication<wbr>Settings<wbr>Contract<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3349,25 +3139,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="oauth2_csharp">
 <a href="#oauth2_csharp" style="color: inherit; text-decoration: inherit;">OAuth2</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oauth2authenticationsettingscontractresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>OAuth2Authentication<wbr>Settings<wbr>Contract<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}OAuth2 Authentication settings{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="openid_csharp">
 <a href="#openid_csharp" style="color: inherit; text-decoration: inherit;">Openid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#openidauthenticationsettingscontractresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}OpenID Connect Authentication Settings{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3376,25 +3163,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="oauth2_go">
 <a href="#oauth2_go" style="color: inherit; text-decoration: inherit;">OAuth2</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oauth2authenticationsettingscontractresponse">OAuth2Authentication<wbr>Settings<wbr>Contract<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}OAuth2 Authentication settings{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="openid_go">
 <a href="#openid_go" style="color: inherit; text-decoration: inherit;">Openid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#openidauthenticationsettingscontractresponse">Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}OpenID Connect Authentication Settings{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3403,25 +3187,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="oauth2_nodejs">
 <a href="#oauth2_nodejs" style="color: inherit; text-decoration: inherit;">o<wbr>Auth2</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oauth2authenticationsettingscontractresponse">OAuth2Authentication<wbr>Settings<wbr>Contract<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}OAuth2 Authentication settings{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="openid_nodejs">
 <a href="#openid_nodejs" style="color: inherit; text-decoration: inherit;">openid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#openidauthenticationsettingscontractresponse">Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}OpenID Connect Authentication Settings{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3430,37 +3211,165 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="o_auth2_python">
 <a href="#o_auth2_python" style="color: inherit; text-decoration: inherit;">o_<wbr>auth2</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oauth2authenticationsettingscontractresponse">OAuth2Authentication<wbr>Settings<wbr>Contract<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}OAuth2 Authentication settings{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="openid_python">
 <a href="#openid_python" style="color: inherit; text-decoration: inherit;">openid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#openidauthenticationsettingscontractresponse">Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}OpenID Connect Authentication Settings{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="bearertokensendingmethods">Bearer<wbr>Token<wbr>Sending<wbr>Methods</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Authorization<wbr>Header</dt>
+    <dd>authorizationHeader{{% md %}}Access token will be transmitted in the Authorization header using Bearer schema{{% /md %}}</dd>
+    <dt>Query</dt>
+    <dd>query{{% md %}}Access token will be transmitted as query parameters.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Bearer<wbr>Token<wbr>Sending<wbr>Methods<wbr>Authorization<wbr>Header</dt>
+    <dd>authorizationHeader{{% md %}}Access token will be transmitted in the Authorization header using Bearer schema{{% /md %}}</dd>
+    <dt>Bearer<wbr>Token<wbr>Sending<wbr>Methods<wbr>Query</dt>
+    <dd>query{{% md %}}Access token will be transmitted as query parameters.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Authorization<wbr>Header</dt>
+    <dd>authorizationHeader{{% md %}}Access token will be transmitted in the Authorization header using Bearer schema{{% /md %}}</dd>
+    <dt>Query</dt>
+    <dd>query{{% md %}}Access token will be transmitted as query parameters.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>AUTHORIZATION_HEADER</dt>
+    <dd>authorizationHeader{{% md %}}Access token will be transmitted in the Authorization header using Bearer schema{{% /md %}}</dd>
+    <dt>QUERY</dt>
+    <dd>query{{% md %}}Access token will be transmitted as query parameters.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="contentformat">Content<wbr>Format</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Wadl_<wbr>xml</dt>
+    <dd>wadl-xml{{% md %}}The contents are inline and Content type is a WADL document.{{% /md %}}</dd>
+    <dt>Wadl_<wbr>link_<wbr>json</dt>
+    <dd>wadl-link-json{{% md %}}The WADL document is hosted on a publicly accessible internet address.{{% /md %}}</dd>
+    <dt>Swagger_<wbr>json</dt>
+    <dd>swagger-json{{% md %}}The contents are inline and Content Type is a OpenAPI 2.0 JSON Document.{{% /md %}}</dd>
+    <dt>Swagger_<wbr>link_<wbr>json</dt>
+    <dd>swagger-link-json{{% md %}}The OpenAPI 2.0 JSON document is hosted on a publicly accessible internet address.{{% /md %}}</dd>
+    <dt>Wsdl</dt>
+    <dd>wsdl{{% md %}}The contents are inline and the document is a WSDL/Soap document.{{% /md %}}</dd>
+    <dt>Wsdl_<wbr>link</dt>
+    <dd>wsdl-link{{% md %}}The WSDL document is hosted on a publicly accessible internet address.{{% /md %}}</dd>
+    <dt>Openapi</dt>
+    <dd>openapi{{% md %}}The contents are inline and Content Type is a OpenAPI 3.0 YAML Document.{{% /md %}}</dd>
+    <dt>Openapi_<wbr>json</dt>
+    <dd>openapi+json{{% md %}}The contents are inline and Content Type is a OpenAPI 3.0 JSON Document.{{% /md %}}</dd>
+    <dt>Openapi_<wbr>link</dt>
+    <dd>openapi-link{{% md %}}The OpenAPI 3.0 YAML document is hosted on a publicly accessible internet address.{{% /md %}}</dd>
+    <dt>Openapi_<wbr>json_<wbr>link</dt>
+    <dd>openapi+json-link{{% md %}}The OpenAPI 3.0 JSON document is hosted on a publicly accessible internet address.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Content<wbr>Format_Wadl_<wbr>xml</dt>
+    <dd>wadl-xml{{% md %}}The contents are inline and Content type is a WADL document.{{% /md %}}</dd>
+    <dt>Content<wbr>Format_Wadl_<wbr>link_<wbr>json</dt>
+    <dd>wadl-link-json{{% md %}}The WADL document is hosted on a publicly accessible internet address.{{% /md %}}</dd>
+    <dt>Content<wbr>Format_Swagger_<wbr>json</dt>
+    <dd>swagger-json{{% md %}}The contents are inline and Content Type is a OpenAPI 2.0 JSON Document.{{% /md %}}</dd>
+    <dt>Content<wbr>Format_Swagger_<wbr>link_<wbr>json</dt>
+    <dd>swagger-link-json{{% md %}}The OpenAPI 2.0 JSON document is hosted on a publicly accessible internet address.{{% /md %}}</dd>
+    <dt>Content<wbr>Format<wbr>Wsdl</dt>
+    <dd>wsdl{{% md %}}The contents are inline and the document is a WSDL/Soap document.{{% /md %}}</dd>
+    <dt>Content<wbr>Format_Wsdl_<wbr>link</dt>
+    <dd>wsdl-link{{% md %}}The WSDL document is hosted on a publicly accessible internet address.{{% /md %}}</dd>
+    <dt>Content<wbr>Format<wbr>Openapi</dt>
+    <dd>openapi{{% md %}}The contents are inline and Content Type is a OpenAPI 3.0 YAML Document.{{% /md %}}</dd>
+    <dt>Content<wbr>Format_Openapi_<wbr>json</dt>
+    <dd>openapi+json{{% md %}}The contents are inline and Content Type is a OpenAPI 3.0 JSON Document.{{% /md %}}</dd>
+    <dt>Content<wbr>Format_Openapi_<wbr>link</dt>
+    <dd>openapi-link{{% md %}}The OpenAPI 3.0 YAML document is hosted on a publicly accessible internet address.{{% /md %}}</dd>
+    <dt>Content<wbr>Format_Openapi_<wbr>json_<wbr>link</dt>
+    <dd>openapi+json-link{{% md %}}The OpenAPI 3.0 JSON document is hosted on a publicly accessible internet address.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Wadl_<wbr>xml</dt>
+    <dd>wadl-xml{{% md %}}The contents are inline and Content type is a WADL document.{{% /md %}}</dd>
+    <dt>Wadl_<wbr>link_<wbr>json</dt>
+    <dd>wadl-link-json{{% md %}}The WADL document is hosted on a publicly accessible internet address.{{% /md %}}</dd>
+    <dt>Swagger_<wbr>json</dt>
+    <dd>swagger-json{{% md %}}The contents are inline and Content Type is a OpenAPI 2.0 JSON Document.{{% /md %}}</dd>
+    <dt>Swagger_<wbr>link_<wbr>json</dt>
+    <dd>swagger-link-json{{% md %}}The OpenAPI 2.0 JSON document is hosted on a publicly accessible internet address.{{% /md %}}</dd>
+    <dt>Wsdl</dt>
+    <dd>wsdl{{% md %}}The contents are inline and the document is a WSDL/Soap document.{{% /md %}}</dd>
+    <dt>Wsdl_<wbr>link</dt>
+    <dd>wsdl-link{{% md %}}The WSDL document is hosted on a publicly accessible internet address.{{% /md %}}</dd>
+    <dt>Openapi</dt>
+    <dd>openapi{{% md %}}The contents are inline and Content Type is a OpenAPI 3.0 YAML Document.{{% /md %}}</dd>
+    <dt>Openapi_<wbr>json</dt>
+    <dd>openapi+json{{% md %}}The contents are inline and Content Type is a OpenAPI 3.0 JSON Document.{{% /md %}}</dd>
+    <dt>Openapi_<wbr>link</dt>
+    <dd>openapi-link{{% md %}}The OpenAPI 3.0 YAML document is hosted on a publicly accessible internet address.{{% /md %}}</dd>
+    <dt>Openapi_<wbr>json_<wbr>link</dt>
+    <dd>openapi+json-link{{% md %}}The OpenAPI 3.0 JSON document is hosted on a publicly accessible internet address.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>WADL_XML</dt>
+    <dd>wadl-xml{{% md %}}The contents are inline and Content type is a WADL document.{{% /md %}}</dd>
+    <dt>WADL_LINK_JSON</dt>
+    <dd>wadl-link-json{{% md %}}The WADL document is hosted on a publicly accessible internet address.{{% /md %}}</dd>
+    <dt>SWAGGER_JSON</dt>
+    <dd>swagger-json{{% md %}}The contents are inline and Content Type is a OpenAPI 2.0 JSON Document.{{% /md %}}</dd>
+    <dt>SWAGGER_LINK_JSON</dt>
+    <dd>swagger-link-json{{% md %}}The OpenAPI 2.0 JSON document is hosted on a publicly accessible internet address.{{% /md %}}</dd>
+    <dt>WSDL</dt>
+    <dd>wsdl{{% md %}}The contents are inline and the document is a WSDL/Soap document.{{% /md %}}</dd>
+    <dt>WSDL_LINK</dt>
+    <dd>wsdl-link{{% md %}}The WSDL document is hosted on a publicly accessible internet address.{{% /md %}}</dd>
+    <dt>OPENAPI</dt>
+    <dd>openapi{{% md %}}The contents are inline and Content Type is a OpenAPI 3.0 YAML Document.{{% /md %}}</dd>
+    <dt>OPENAPI_JSON</dt>
+    <dd>openapi+json{{% md %}}The contents are inline and Content Type is a OpenAPI 3.0 JSON Document.{{% /md %}}</dd>
+    <dt>OPENAPI_LINK</dt>
+    <dd>openapi-link{{% md %}}The OpenAPI 3.0 YAML document is hosted on a publicly accessible internet address.{{% /md %}}</dd>
+    <dt>OPENAPI_JSON_LINK</dt>
+    <dd>openapi+json-link{{% md %}}The OpenAPI 3.0 JSON document is hosted on a publicly accessible internet address.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="oauth2authenticationsettingscontract">OAuth2Authentication<wbr>Settings<wbr>Contract</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3468,25 +3377,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="authorizationserverid_csharp">
 <a href="#authorizationserverid_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Server<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth authorization server identifier.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}operations scope.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3495,25 +3401,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="authorizationserverid_go">
 <a href="#authorizationserverid_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Server<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth authorization server identifier.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}operations scope.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3522,25 +3425,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="authorizationserverid_nodejs">
 <a href="#authorizationserverid_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Server<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth authorization server identifier.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}operations scope.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3549,37 +3449,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="authorization_server_id_python">
 <a href="#authorization_server_id_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>server_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OAuth authorization server identifier.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}operations scope.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="oauth2authenticationsettingscontractresponse">OAuth2Authentication<wbr>Settings<wbr>Contract<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3587,25 +3475,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="authorizationserverid_csharp">
 <a href="#authorizationserverid_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Server<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth authorization server identifier.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}operations scope.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3614,25 +3499,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="authorizationserverid_go">
 <a href="#authorizationserverid_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Server<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth authorization server identifier.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}operations scope.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3641,25 +3523,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="authorizationserverid_nodejs">
 <a href="#authorizationserverid_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Server<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth authorization server identifier.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}operations scope.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3668,36 +3547,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="authorization_server_id_python">
 <a href="#authorization_server_id_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>server_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OAuth authorization server identifier.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}operations scope.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="openidauthenticationsettingscontract">Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3706,25 +3573,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="bearertokensendingmethods_csharp">
 <a href="#bearertokensendingmethods_csharp" style="color: inherit; text-decoration: inherit;">Bearer<wbr>Token<wbr>Sending<wbr>Methods</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Bearer<wbr>Token<wbr>Sending<wbr>Methods&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}How to send token to the server.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="openidproviderid_csharp">
 <a href="#openidproviderid_csharp" style="color: inherit; text-decoration: inherit;">Openid<wbr>Provider<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth authorization server identifier.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3733,25 +3597,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="bearertokensendingmethods_go">
 <a href="#bearertokensendingmethods_go" style="color: inherit; text-decoration: inherit;">Bearer<wbr>Token<wbr>Sending<wbr>Methods</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}How to send token to the server.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="openidproviderid_go">
 <a href="#openidproviderid_go" style="color: inherit; text-decoration: inherit;">Openid<wbr>Provider<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth authorization server identifier.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3760,25 +3621,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="bearertokensendingmethods_nodejs">
 <a href="#bearertokensendingmethods_nodejs" style="color: inherit; text-decoration: inherit;">bearer<wbr>Token<wbr>Sending<wbr>Methods</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | enums.<wbr>Bearer<wbr>Token<wbr>Sending<wbr>Methods[]</span>
+        <span class="property-type">string | Bearer<wbr>Token<wbr>Sending<wbr>Methods[]</span>
     </dt>
     <dd>{{% md %}}How to send token to the server.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="openidproviderid_nodejs">
 <a href="#openidproviderid_nodejs" style="color: inherit; text-decoration: inherit;">openid<wbr>Provider<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth authorization server identifier.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3787,36 +3645,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="bearer_token_sending_methods_python">
 <a href="#bearer_token_sending_methods_python" style="color: inherit; text-decoration: inherit;">bearer_<wbr>token_<wbr>sending_<wbr>methods</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[str, Bearer<wbr>Token<wbr>Sending<wbr>Methods]]</span>
     </dt>
     <dd>{{% md %}}How to send token to the server.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="openid_provider_id_python">
 <a href="#openid_provider_id_python" style="color: inherit; text-decoration: inherit;">openid_<wbr>provider_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OAuth authorization server identifier.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="openidauthenticationsettingscontractresponse">Open<wbr>Id<wbr>Authentication<wbr>Settings<wbr>Contract<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3825,25 +3671,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="bearertokensendingmethods_csharp">
 <a href="#bearertokensendingmethods_csharp" style="color: inherit; text-decoration: inherit;">Bearer<wbr>Token<wbr>Sending<wbr>Methods</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}How to send token to the server.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="openidproviderid_csharp">
 <a href="#openidproviderid_csharp" style="color: inherit; text-decoration: inherit;">Openid<wbr>Provider<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth authorization server identifier.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3852,25 +3695,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="bearertokensendingmethods_go">
 <a href="#bearertokensendingmethods_go" style="color: inherit; text-decoration: inherit;">Bearer<wbr>Token<wbr>Sending<wbr>Methods</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}How to send token to the server.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="openidproviderid_go">
 <a href="#openidproviderid_go" style="color: inherit; text-decoration: inherit;">Openid<wbr>Provider<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth authorization server identifier.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3879,25 +3719,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="bearertokensendingmethods_nodejs">
 <a href="#bearertokensendingmethods_nodejs" style="color: inherit; text-decoration: inherit;">bearer<wbr>Token<wbr>Sending<wbr>Methods</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}How to send token to the server.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="openidproviderid_nodejs">
 <a href="#openidproviderid_nodejs" style="color: inherit; text-decoration: inherit;">openid<wbr>Provider<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth authorization server identifier.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3906,37 +3743,101 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="bearer_token_sending_methods_python">
 <a href="#bearer_token_sending_methods_python" style="color: inherit; text-decoration: inherit;">bearer_<wbr>token_<wbr>sending_<wbr>methods</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}How to send token to the server.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="openid_provider_id_python">
 <a href="#openid_provider_id_python" style="color: inherit; text-decoration: inherit;">openid_<wbr>provider_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OAuth authorization server identifier.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="protocol">Protocol</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Http</dt>
+    <dd>http</dd>
+    <dt>Https</dt>
+    <dd>https</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Protocol<wbr>Http</dt>
+    <dd>http</dd>
+    <dt>Protocol<wbr>Https</dt>
+    <dd>https</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Http</dt>
+    <dd>http</dd>
+    <dt>Https</dt>
+    <dd>https</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>HTTP</dt>
+    <dd>http</dd>
+    <dt>HTTPS</dt>
+    <dd>https</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="soapapitype">Soap<wbr>Api<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Soap<wbr>To<wbr>Rest</dt>
+    <dd>http{{% md %}}Imports a SOAP API having a RESTful front end.{{% /md %}}</dd>
+    <dt>Soap<wbr>Pass<wbr>Through</dt>
+    <dd>soap{{% md %}}Imports the Soap API having a SOAP front end.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Soap<wbr>Api<wbr>Type<wbr>Soap<wbr>To<wbr>Rest</dt>
+    <dd>http{{% md %}}Imports a SOAP API having a RESTful front end.{{% /md %}}</dd>
+    <dt>Soap<wbr>Api<wbr>Type<wbr>Soap<wbr>Pass<wbr>Through</dt>
+    <dd>soap{{% md %}}Imports the Soap API having a SOAP front end.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Soap<wbr>To<wbr>Rest</dt>
+    <dd>http{{% md %}}Imports a SOAP API having a RESTful front end.{{% /md %}}</dd>
+    <dt>Soap<wbr>Pass<wbr>Through</dt>
+    <dd>soap{{% md %}}Imports the Soap API having a SOAP front end.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>SOAP_TO_REST</dt>
+    <dd>http{{% md %}}Imports a SOAP API having a RESTful front end.{{% /md %}}</dd>
+    <dt>SOAP_PASS_THROUGH</dt>
+    <dd>soap{{% md %}}Imports the Soap API having a SOAP front end.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="subscriptionkeyparameternamescontract">Subscription<wbr>Key<wbr>Parameter<wbr>Names<wbr>Contract</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3944,25 +3845,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="header_csharp">
 <a href="#header_csharp" style="color: inherit; text-decoration: inherit;">Header</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subscription key header name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="query_csharp">
 <a href="#query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subscription key query string parameter name.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3971,25 +3869,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="header_go">
 <a href="#header_go" style="color: inherit; text-decoration: inherit;">Header</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subscription key header name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="query_go">
 <a href="#query_go" style="color: inherit; text-decoration: inherit;">Query</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subscription key query string parameter name.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3998,25 +3893,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="header_nodejs">
 <a href="#header_nodejs" style="color: inherit; text-decoration: inherit;">header</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subscription key header name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="query_nodejs">
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subscription key query string parameter name.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4025,37 +3917,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="header_python">
 <a href="#header_python" style="color: inherit; text-decoration: inherit;">header</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Subscription key header name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="query_python">
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Subscription key query string parameter name.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="subscriptionkeyparameternamescontractresponse">Subscription<wbr>Key<wbr>Parameter<wbr>Names<wbr>Contract<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4063,25 +3943,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="header_csharp">
 <a href="#header_csharp" style="color: inherit; text-decoration: inherit;">Header</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subscription key header name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="query_csharp">
 <a href="#query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subscription key query string parameter name.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4090,25 +3967,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="header_go">
 <a href="#header_go" style="color: inherit; text-decoration: inherit;">Header</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subscription key header name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="query_go">
 <a href="#query_go" style="color: inherit; text-decoration: inherit;">Query</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subscription key query string parameter name.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4117,25 +3991,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="header_nodejs">
 <a href="#header_nodejs" style="color: inherit; text-decoration: inherit;">header</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subscription key header name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="query_nodejs">
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subscription key query string parameter name.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4144,33 +4015,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="header_python">
 <a href="#header_python" style="color: inherit; text-decoration: inherit;">header</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Subscription key header name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="query_python">
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Subscription key query string parameter name.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 
 
 <h2 id="package-details">Package Details</h2>

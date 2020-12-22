@@ -2,7 +2,7 @@
 ---
 title: "ContainerService"
 title_tag: "azure-nextgen.containerservice.ContainerService"
-meta_desc: "Explore the ContainerService resource of the containerservice module, including examples, input properties, output properties, lookup functions, and supporting types. Container service."
+meta_desc: "Documentation for the azure-nextgen.containerservice.ContainerService resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -11,6 +11,7 @@ meta_desc: "Explore the ContainerService resource of the containerservice module
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Container service.
+Latest API Version: 2017-01-31.
 
 
 {{% examples %}}
@@ -108,7 +109,7 @@ const containerService = new azure_nextgen.containerservice.latest.ContainerServ
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ContainerService</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ContainerServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ContainerService</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ContainerServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -116,11 +117,11 @@ const containerService = new azure_nextgen.containerservice.latest.ContainerServ
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewContainerService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ContainerServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ContainerService</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewContainerService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ContainerServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ContainerService</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ContainerService</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ContainerServiceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ContainerService</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ContainerServiceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -131,7 +132,7 @@ const containerService = new azure_nextgen.containerservice.latest.ContainerServ
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -200,7 +201,7 @@ const containerService = new azure_nextgen.containerservice.latest.ContainerServ
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -239,7 +240,7 @@ const containerService = new azure_nextgen.containerservice.latest.ContainerServ
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -280,7 +281,6 @@ The ContainerService resource accepts the following [input]({{< relref "/docs/in
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -288,125 +288,112 @@ The ContainerService resource accepts the following [input]({{< relref "/docs/in
             title="Required">
         <span id="agentpoolprofiles_csharp">
 <a href="#agentpoolprofiles_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Pool<wbr>Profiles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerserviceagentpoolprofile">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Properties of the agent pool.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="containerservicename_csharp">
 <a href="#containerservicename_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the container service in the specified subscription and resource group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="linuxprofile_csharp">
 <a href="#linuxprofile_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicelinuxprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Linux<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of Linux VMs.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="masterprofile_csharp">
 <a href="#masterprofile_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicemasterprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Master<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of master agents.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customprofile_csharp">
 <a href="#customprofile_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicecustomprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Custom<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties for custom clusters.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="diagnosticsprofile_csharp">
 <a href="#diagnosticsprofile_csharp" style="color: inherit; text-decoration: inherit;">Diagnostics<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicediagnosticsprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Diagnostics<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the diagnostic agent.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="orchestratorprofile_csharp">
 <a href="#orchestratorprofile_csharp" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerserviceorchestratorprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Orchestrator<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the orchestrator.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serviceprincipalprofile_csharp">
 <a href="#serviceprincipalprofile_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerserviceserviceprincipalprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Service<wbr>Principal<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties for cluster service principals.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="windowsprofile_csharp">
 <a href="#windowsprofile_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicewindowsprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Windows<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of Windows VMs.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -415,125 +402,112 @@ The ContainerService resource accepts the following [input]({{< relref "/docs/in
             title="Required">
         <span id="agentpoolprofiles_go">
 <a href="#agentpoolprofiles_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Pool<wbr>Profiles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerserviceagentpoolprofile">[]Container<wbr>Service<wbr>Agent<wbr>Pool<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Properties of the agent pool.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="containerservicename_go">
 <a href="#containerservicename_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the container service in the specified subscription and resource group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="linuxprofile_go">
 <a href="#linuxprofile_go" style="color: inherit; text-decoration: inherit;">Linux<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicelinuxprofile">Container<wbr>Service<wbr>Linux<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Properties of Linux VMs.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="masterprofile_go">
 <a href="#masterprofile_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicemasterprofile">Container<wbr>Service<wbr>Master<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Properties of master agents.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customprofile_go">
 <a href="#customprofile_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicecustomprofile">Container<wbr>Service<wbr>Custom<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Properties for custom clusters.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="diagnosticsprofile_go">
 <a href="#diagnosticsprofile_go" style="color: inherit; text-decoration: inherit;">Diagnostics<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicediagnosticsprofile">Container<wbr>Service<wbr>Diagnostics<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Properties of the diagnostic agent.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="orchestratorprofile_go">
 <a href="#orchestratorprofile_go" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerserviceorchestratorprofile">Container<wbr>Service<wbr>Orchestrator<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Properties of the orchestrator.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serviceprincipalprofile_go">
 <a href="#serviceprincipalprofile_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerserviceserviceprincipalprofile">Container<wbr>Service<wbr>Service<wbr>Principal<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Properties for cluster service principals.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="windowsprofile_go">
 <a href="#windowsprofile_go" style="color: inherit; text-decoration: inherit;">Windows<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicewindowsprofile">Container<wbr>Service<wbr>Windows<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Properties of Windows VMs.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -542,125 +516,112 @@ The ContainerService resource accepts the following [input]({{< relref "/docs/in
             title="Required">
         <span id="agentpoolprofiles_nodejs">
 <a href="#agentpoolprofiles_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Pool<wbr>Profiles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerserviceagentpoolprofile">Container<wbr>Service<wbr>Agent<wbr>Pool<wbr>Profile[]</a></span>
     </dt>
     <dd>{{% md %}}Properties of the agent pool.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="containerservicename_nodejs">
 <a href="#containerservicename_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the container service in the specified subscription and resource group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="linuxprofile_nodejs">
 <a href="#linuxprofile_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicelinuxprofile">Container<wbr>Service<wbr>Linux<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Properties of Linux VMs.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="masterprofile_nodejs">
 <a href="#masterprofile_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicemasterprofile">Container<wbr>Service<wbr>Master<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Properties of master agents.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customprofile_nodejs">
 <a href="#customprofile_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicecustomprofile">Container<wbr>Service<wbr>Custom<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Properties for custom clusters.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="diagnosticsprofile_nodejs">
 <a href="#diagnosticsprofile_nodejs" style="color: inherit; text-decoration: inherit;">diagnostics<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicediagnosticsprofile">Container<wbr>Service<wbr>Diagnostics<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Properties of the diagnostic agent.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="orchestratorprofile_nodejs">
 <a href="#orchestratorprofile_nodejs" style="color: inherit; text-decoration: inherit;">orchestrator<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerserviceorchestratorprofile">Container<wbr>Service<wbr>Orchestrator<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Properties of the orchestrator.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serviceprincipalprofile_nodejs">
 <a href="#serviceprincipalprofile_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerserviceserviceprincipalprofile">Container<wbr>Service<wbr>Service<wbr>Principal<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Properties for cluster service principals.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="windowsprofile_nodejs">
 <a href="#windowsprofile_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicewindowsprofile">Container<wbr>Service<wbr>Windows<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Properties of Windows VMs.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -669,134 +630,117 @@ The ContainerService resource accepts the following [input]({{< relref "/docs/in
             title="Required">
         <span id="agent_pool_profiles_python">
 <a href="#agent_pool_profiles_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>pool_<wbr>profiles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerserviceagentpoolprofile">Sequence[Container<wbr>Service<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Properties of the agent pool.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="container_service_name_python">
 <a href="#container_service_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>service_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the container service in the specified subscription and resource group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="linux_profile_python">
 <a href="#linux_profile_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicelinuxprofile">Container<wbr>Service<wbr>Linux<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of Linux VMs.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="master_profile_python">
 <a href="#master_profile_python" style="color: inherit; text-decoration: inherit;">master_<wbr>profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicemasterprofile">Container<wbr>Service<wbr>Master<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of master agents.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="custom_profile_python">
 <a href="#custom_profile_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicecustomprofile">Container<wbr>Service<wbr>Custom<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties for custom clusters.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="diagnostics_profile_python">
 <a href="#diagnostics_profile_python" style="color: inherit; text-decoration: inherit;">diagnostics_<wbr>profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicediagnosticsprofile">Container<wbr>Service<wbr>Diagnostics<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the diagnostic agent.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="orchestrator_profile_python">
 <a href="#orchestrator_profile_python" style="color: inherit; text-decoration: inherit;">orchestrator_<wbr>profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerserviceorchestratorprofile">Container<wbr>Service<wbr>Orchestrator<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the orchestrator.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="service_principal_profile_python">
 <a href="#service_principal_profile_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerserviceserviceprincipalprofile">Container<wbr>Service<wbr>Service<wbr>Principal<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties for cluster service principals.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="windows_profile_python">
 <a href="#windows_profile_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicewindowsprofile">Container<wbr>Service<wbr>Windows<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of Windows VMs.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the ContainerService resource produces the following output properties:
-
 
 
 
@@ -807,45 +751,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -854,45 +793,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -901,45 +835,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -948,48 +877,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the current deployment or provisioning state, which only appears in the response.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1000,13 +921,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
 <h4 id="containerserviceagentpoolprofile">Container<wbr>Service<wbr>Agent<wbr>Pool<wbr>Profile</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1015,45 +931,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="count_csharp">
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of agents (VMs) to host docker containers. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1. {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="dnsprefix_csharp">
 <a href="#dnsprefix_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DNS prefix to be used to create the FQDN for the agent pool.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of the agent pool profile in the context of the subscription and resource group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vmsize_csharp">
 <a href="#vmsize_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Container<wbr>Service<wbr>VMSize<wbr>Types</span>
+        <span class="property-type">string | <a href="#containerservicevmsizetypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Container<wbr>Service<wbr>VMSize<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1062,45 +973,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="count_go">
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of agents (VMs) to host docker containers. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1. {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="dnsprefix_go">
 <a href="#dnsprefix_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DNS prefix to be used to create the FQDN for the agent pool.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of the agent pool profile in the context of the subscription and resource group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vmsize_go">
 <a href="#vmsize_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#containerservicevmsizetypes">Container<wbr>Service<wbr>VMSize<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1109,45 +1015,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="count_nodejs">
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of agents (VMs) to host docker containers. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1. {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="dnsprefix_nodejs">
 <a href="#dnsprefix_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DNS prefix to be used to create the FQDN for the agent pool.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of the agent pool profile in the context of the subscription and resource group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vmsize_nodejs">
 <a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Container<wbr>Service<wbr>VMSize<wbr>Types</span>
+        <span class="property-type">string | <a href="#containerservicevmsizetypes">Container<wbr>Service<wbr>VMSize<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1156,56 +1057,42 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="count_python">
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of agents (VMs) to host docker containers. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1. {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="dns_prefix_python">
 <a href="#dns_prefix_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}DNS prefix to be used to create the FQDN for the agent pool.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name of the agent pool profile in the context of the subscription and resource group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vm_size_python">
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Container<wbr>Service<wbr>VMSize<wbr>Types</span>
+        <span class="property-type">str | <a href="#containerservicevmsizetypes">Container<wbr>Service<wbr>VMSize<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="containerserviceagentpoolprofileresponse">Container<wbr>Service<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1214,55 +1101,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="count_csharp">
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of agents (VMs) to host docker containers. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1. {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="dnsprefix_csharp">
 <a href="#dnsprefix_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DNS prefix to be used to create the FQDN for the agent pool.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="fqdn_csharp">
 <a href="#fqdn_csharp" style="color: inherit; text-decoration: inherit;">Fqdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}FQDN for the agent pool.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of the agent pool profile in the context of the subscription and resource group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vmsize_csharp">
 <a href="#vmsize_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1271,55 +1152,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="count_go">
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of agents (VMs) to host docker containers. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1. {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="dnsprefix_go">
 <a href="#dnsprefix_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DNS prefix to be used to create the FQDN for the agent pool.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="fqdn_go">
 <a href="#fqdn_go" style="color: inherit; text-decoration: inherit;">Fqdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}FQDN for the agent pool.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of the agent pool profile in the context of the subscription and resource group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vmsize_go">
 <a href="#vmsize_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1328,55 +1203,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="count_nodejs">
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of agents (VMs) to host docker containers. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1. {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="dnsprefix_nodejs">
 <a href="#dnsprefix_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DNS prefix to be used to create the FQDN for the agent pool.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="fqdn_nodejs">
 <a href="#fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}FQDN for the agent pool.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of the agent pool profile in the context of the subscription and resource group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vmsize_nodejs">
 <a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1385,67 +1254,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="count_python">
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of agents (VMs) to host docker containers. Allowed values must be in the range of 1 to 100 (inclusive). The default value is 1. {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="dns_prefix_python">
 <a href="#dns_prefix_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}DNS prefix to be used to create the FQDN for the agent pool.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="fqdn_python">
 <a href="#fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}FQDN for the agent pool.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name of the agent pool profile in the context of the subscription and resource group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vm_size_python">
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Size of agent VMs.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="containerservicecustomprofile">Container<wbr>Service<wbr>Custom<wbr>Profile</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1453,15 +1307,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="orchestrator_csharp">
 <a href="#orchestrator_csharp" style="color: inherit; text-decoration: inherit;">Orchestrator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the custom orchestrator to use.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1470,15 +1322,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="orchestrator_go">
 <a href="#orchestrator_go" style="color: inherit; text-decoration: inherit;">Orchestrator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the custom orchestrator to use.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1487,15 +1337,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="orchestrator_nodejs">
 <a href="#orchestrator_nodejs" style="color: inherit; text-decoration: inherit;">orchestrator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the custom orchestrator to use.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1504,27 +1352,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="orchestrator_python">
 <a href="#orchestrator_python" style="color: inherit; text-decoration: inherit;">orchestrator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the custom orchestrator to use.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="containerservicecustomprofileresponse">Container<wbr>Service<wbr>Custom<wbr>Profile<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1532,15 +1369,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="orchestrator_csharp">
 <a href="#orchestrator_csharp" style="color: inherit; text-decoration: inherit;">Orchestrator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the custom orchestrator to use.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1549,15 +1384,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="orchestrator_go">
 <a href="#orchestrator_go" style="color: inherit; text-decoration: inherit;">Orchestrator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the custom orchestrator to use.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1566,15 +1399,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="orchestrator_nodejs">
 <a href="#orchestrator_nodejs" style="color: inherit; text-decoration: inherit;">orchestrator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the custom orchestrator to use.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1583,26 +1414,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="orchestrator_python">
 <a href="#orchestrator_python" style="color: inherit; text-decoration: inherit;">orchestrator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the custom orchestrator to use.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="containerservicediagnosticsprofile">Container<wbr>Service<wbr>Diagnostics<wbr>Profile</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1611,15 +1431,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="vmdiagnostics_csharp">
 <a href="#vmdiagnostics_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Diagnostics</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicevmdiagnostics">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>VMDiagnostics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profile for the container service VM diagnostic agent.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1628,15 +1446,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="vmdiagnostics_go">
 <a href="#vmdiagnostics_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Diagnostics</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicevmdiagnostics">Container<wbr>Service<wbr>VMDiagnostics</a></span>
     </dt>
     <dd>{{% md %}}Profile for the container service VM diagnostic agent.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1645,15 +1461,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="vmdiagnostics_nodejs">
 <a href="#vmdiagnostics_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Diagnostics</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicevmdiagnostics">Container<wbr>Service<wbr>VMDiagnostics</a></span>
     </dt>
     <dd>{{% md %}}Profile for the container service VM diagnostic agent.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1662,26 +1476,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="vm_diagnostics_python">
 <a href="#vm_diagnostics_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>diagnostics</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicevmdiagnostics">Container<wbr>Service<wbr>VMDiagnostics<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profile for the container service VM diagnostic agent.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="containerservicediagnosticsprofileresponse">Container<wbr>Service<wbr>Diagnostics<wbr>Profile<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1690,15 +1493,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="vmdiagnostics_csharp">
 <a href="#vmdiagnostics_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Diagnostics</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicevmdiagnosticsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>VMDiagnostics<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profile for the container service VM diagnostic agent.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1707,15 +1508,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="vmdiagnostics_go">
 <a href="#vmdiagnostics_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Diagnostics</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicevmdiagnosticsresponse">Container<wbr>Service<wbr>VMDiagnostics<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Profile for the container service VM diagnostic agent.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1724,15 +1523,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="vmdiagnostics_nodejs">
 <a href="#vmdiagnostics_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Diagnostics</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicevmdiagnosticsresponse">Container<wbr>Service<wbr>VMDiagnostics<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Profile for the container service VM diagnostic agent.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1741,26 +1538,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="vm_diagnostics_python">
 <a href="#vm_diagnostics_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>diagnostics</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicevmdiagnosticsresponse">Container<wbr>Service<wbr>VMDiagnostics<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Profile for the container service VM diagnostic agent.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="containerservicelinuxprofile">Container<wbr>Service<wbr>Linux<wbr>Profile</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1769,25 +1555,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="adminusername_csharp">
 <a href="#adminusername_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The administrator username to use for Linux VMs.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ssh_csharp">
 <a href="#ssh_csharp" style="color: inherit; text-decoration: inherit;">Ssh</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicesshconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSH configuration for Linux-based VMs running on Azure.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1796,25 +1579,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="adminusername_go">
 <a href="#adminusername_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The administrator username to use for Linux VMs.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ssh_go">
 <a href="#ssh_go" style="color: inherit; text-decoration: inherit;">Ssh</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicesshconfiguration">Container<wbr>Service<wbr>Ssh<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}SSH configuration for Linux-based VMs running on Azure.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1823,25 +1603,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="adminusername_nodejs">
 <a href="#adminusername_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The administrator username to use for Linux VMs.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ssh_nodejs">
 <a href="#ssh_nodejs" style="color: inherit; text-decoration: inherit;">ssh</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicesshconfiguration">Container<wbr>Service<wbr>Ssh<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}SSH configuration for Linux-based VMs running on Azure.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1850,36 +1627,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="admin_username_python">
 <a href="#admin_username_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The administrator username to use for Linux VMs.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ssh_python">
 <a href="#ssh_python" style="color: inherit; text-decoration: inherit;">ssh</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicesshconfiguration">Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSH configuration for Linux-based VMs running on Azure.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="containerservicelinuxprofileresponse">Container<wbr>Service<wbr>Linux<wbr>Profile<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1888,25 +1653,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="adminusername_csharp">
 <a href="#adminusername_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The administrator username to use for Linux VMs.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ssh_csharp">
 <a href="#ssh_csharp" style="color: inherit; text-decoration: inherit;">Ssh</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicesshconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSH configuration for Linux-based VMs running on Azure.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1915,25 +1677,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="adminusername_go">
 <a href="#adminusername_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The administrator username to use for Linux VMs.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ssh_go">
 <a href="#ssh_go" style="color: inherit; text-decoration: inherit;">Ssh</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicesshconfigurationresponse">Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SSH configuration for Linux-based VMs running on Azure.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1942,25 +1701,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="adminusername_nodejs">
 <a href="#adminusername_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The administrator username to use for Linux VMs.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ssh_nodejs">
 <a href="#ssh_nodejs" style="color: inherit; text-decoration: inherit;">ssh</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicesshconfigurationresponse">Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}SSH configuration for Linux-based VMs running on Azure.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1969,36 +1725,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="admin_username_python">
 <a href="#admin_username_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The administrator username to use for Linux VMs.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ssh_python">
 <a href="#ssh_python" style="color: inherit; text-decoration: inherit;">ssh</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicesshconfigurationresponse">Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSH configuration for Linux-based VMs running on Azure.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="containerservicemasterprofile">Container<wbr>Service<wbr>Master<wbr>Profile</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2007,25 +1751,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="dnsprefix_csharp">
 <a href="#dnsprefix_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DNS prefix to be used to create the FQDN for master.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="count_csharp">
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of masters (VMs) in the container service cluster. Allowed values are 1, 3, and 5. The default value is 1.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2034,25 +1775,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="dnsprefix_go">
 <a href="#dnsprefix_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DNS prefix to be used to create the FQDN for master.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="count_go">
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of masters (VMs) in the container service cluster. Allowed values are 1, 3, and 5. The default value is 1.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2061,25 +1799,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="dnsprefix_nodejs">
 <a href="#dnsprefix_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DNS prefix to be used to create the FQDN for master.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="count_nodejs">
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of masters (VMs) in the container service cluster. Allowed values are 1, 3, and 5. The default value is 1.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2088,36 +1823,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="dns_prefix_python">
 <a href="#dns_prefix_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}DNS prefix to be used to create the FQDN for master.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="count_python">
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of masters (VMs) in the container service cluster. Allowed values are 1, 3, and 5. The default value is 1.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="containerservicemasterprofileresponse">Container<wbr>Service<wbr>Master<wbr>Profile<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2126,35 +1849,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="dnsprefix_csharp">
 <a href="#dnsprefix_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DNS prefix to be used to create the FQDN for master.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="fqdn_csharp">
 <a href="#fqdn_csharp" style="color: inherit; text-decoration: inherit;">Fqdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}FQDN for the master.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="count_csharp">
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of masters (VMs) in the container service cluster. Allowed values are 1, 3, and 5. The default value is 1.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2163,35 +1882,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="dnsprefix_go">
 <a href="#dnsprefix_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DNS prefix to be used to create the FQDN for master.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="fqdn_go">
 <a href="#fqdn_go" style="color: inherit; text-decoration: inherit;">Fqdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}FQDN for the master.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="count_go">
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of masters (VMs) in the container service cluster. Allowed values are 1, 3, and 5. The default value is 1.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2200,35 +1915,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="dnsprefix_nodejs">
 <a href="#dnsprefix_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DNS prefix to be used to create the FQDN for master.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="fqdn_nodejs">
 <a href="#fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}FQDN for the master.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="count_nodejs">
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of masters (VMs) in the container service cluster. Allowed values are 1, 3, and 5. The default value is 1.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2237,46 +1948,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="dns_prefix_python">
 <a href="#dns_prefix_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}DNS prefix to be used to create the FQDN for master.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="fqdn_python">
 <a href="#fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}FQDN for the master.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="count_python">
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of masters (VMs) in the container service cluster. Allowed values are 1, 3, and 5. The default value is 1.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="containerserviceorchestratorprofile">Container<wbr>Service<wbr>Orchestrator<wbr>Profile</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2285,15 +1983,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="orchestratortype_csharp">
 <a href="#orchestratortype_csharp" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Container<wbr>Service<wbr>Orchestrator<wbr>Types</span>
+        <span class="property-type"><a href="#containerserviceorchestratortypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Container<wbr>Service<wbr>Orchestrator<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}The orchestrator to use to manage container service cluster resources. Valid values are Swarm, DCOS, and Custom.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2302,77 +1998,60 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="orchestratortype_go">
 <a href="#orchestratortype_go" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Type</a>
-</span> 
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#containerserviceorchestratortypes">Container<wbr>Service<wbr>Orchestrator<wbr>Types</a></span>
+    </dt>
+    <dd>{{% md %}}The orchestrator to use to manage container service cluster resources. Valid values are Swarm, DCOS, and Custom.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="orchestratortype_nodejs">
+<a href="#orchestratortype_nodejs" style="color: inherit; text-decoration: inherit;">orchestrator<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#containerserviceorchestratortypes">Container<wbr>Service<wbr>Orchestrator<wbr>Types</a></span>
+    </dt>
+    <dd>{{% md %}}The orchestrator to use to manage container service cluster resources. Valid values are Swarm, DCOS, and Custom.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="orchestrator_type_python">
+<a href="#orchestrator_type_python" style="color: inherit; text-decoration: inherit;">orchestrator_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#containerserviceorchestratortypes">Container<wbr>Service<wbr>Orchestrator<wbr>Types</a></span>
+    </dt>
+    <dd>{{% md %}}The orchestrator to use to manage container service cluster resources. Valid values are Swarm, DCOS, and Custom.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="containerserviceorchestratorprofileresponse">Container<wbr>Service<wbr>Orchestrator<wbr>Profile<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="orchestratortype_csharp">
+<a href="#orchestratortype_csharp" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Type</a>
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The orchestrator to use to manage container service cluster resources. Valid values are Swarm, DCOS, and Custom.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="orchestratortype_nodejs">
-<a href="#orchestratortype_nodejs" style="color: inherit; text-decoration: inherit;">orchestrator<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">enums.<wbr>Container<wbr>Service<wbr>Orchestrator<wbr>Types</span>
-    </dt>
-    <dd>{{% md %}}The orchestrator to use to manage container service cluster resources. Valid values are Swarm, DCOS, and Custom.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="orchestrator_type_python">
-<a href="#orchestrator_type_python" style="color: inherit; text-decoration: inherit;">orchestrator_<wbr>type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type">Container<wbr>Service<wbr>Orchestrator<wbr>Types</span>
-    </dt>
-    <dd>{{% md %}}The orchestrator to use to manage container service cluster resources. Valid values are Swarm, DCOS, and Custom.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-<h4 id="containerserviceorchestratorprofileresponse">Container<wbr>Service<wbr>Orchestrator<wbr>Profile<wbr>Response</h4>
-
-
-
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="orchestratortype_csharp">
-<a href="#orchestratortype_csharp" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The orchestrator to use to manage container service cluster resources. Valid values are Swarm, DCOS, and Custom.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2381,15 +2060,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="orchestratortype_go">
 <a href="#orchestratortype_go" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The orchestrator to use to manage container service cluster resources. Valid values are Swarm, DCOS, and Custom.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2398,15 +2075,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="orchestratortype_nodejs">
 <a href="#orchestratortype_nodejs" style="color: inherit; text-decoration: inherit;">orchestrator<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The orchestrator to use to manage container service cluster resources. Valid values are Swarm, DCOS, and Custom.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2415,27 +2090,70 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="orchestrator_type_python">
 <a href="#orchestrator_type_python" style="color: inherit; text-decoration: inherit;">orchestrator_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The orchestrator to use to manage container service cluster resources. Valid values are Swarm, DCOS, and Custom.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="containerserviceorchestratortypes">Container<wbr>Service<wbr>Orchestrator<wbr>Types</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Swarm</dt>
+    <dd>Swarm</dd>
+    <dt>DCOS</dt>
+    <dd>DCOS</dd>
+    <dt>Custom</dt>
+    <dd>Custom</dd>
+    <dt>Kubernetes</dt>
+    <dd>Kubernetes</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Container<wbr>Service<wbr>Orchestrator<wbr>Types<wbr>Swarm</dt>
+    <dd>Swarm</dd>
+    <dt>Container<wbr>Service<wbr>Orchestrator<wbr>Types<wbr>DCOS</dt>
+    <dd>DCOS</dd>
+    <dt>Container<wbr>Service<wbr>Orchestrator<wbr>Types<wbr>Custom</dt>
+    <dd>Custom</dd>
+    <dt>Container<wbr>Service<wbr>Orchestrator<wbr>Types<wbr>Kubernetes</dt>
+    <dd>Kubernetes</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Swarm</dt>
+    <dd>Swarm</dd>
+    <dt>DCOS</dt>
+    <dd>DCOS</dd>
+    <dt>Custom</dt>
+    <dd>Custom</dd>
+    <dt>Kubernetes</dt>
+    <dd>Kubernetes</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>SWARM</dt>
+    <dd>Swarm</dd>
+    <dt>DCOS</dt>
+    <dd>DCOS</dd>
+    <dt>CUSTOM</dt>
+    <dd>Custom</dd>
+    <dt>KUBERNETES</dt>
+    <dd>Kubernetes</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="containerserviceserviceprincipalprofile">Container<wbr>Service<wbr>Service<wbr>Principal<wbr>Profile</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2443,25 +2161,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the service principal.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="secret_csharp">
 <a href="#secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret password associated with the service principal.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2470,25 +2185,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the service principal.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="secret_go">
 <a href="#secret_go" style="color: inherit; text-decoration: inherit;">Secret</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret password associated with the service principal.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2497,25 +2209,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the service principal.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="secret_nodejs">
 <a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret password associated with the service principal.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2524,37 +2233,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID for the service principal.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="secret_python">
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secret password associated with the service principal.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="containerserviceserviceprincipalprofileresponse">Container<wbr>Service<wbr>Service<wbr>Principal<wbr>Profile<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2562,25 +2259,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the service principal.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="secret_csharp">
 <a href="#secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret password associated with the service principal.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2589,25 +2283,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the service principal.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="secret_go">
 <a href="#secret_go" style="color: inherit; text-decoration: inherit;">Secret</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret password associated with the service principal.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2616,25 +2307,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the service principal.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="secret_nodejs">
 <a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret password associated with the service principal.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2643,36 +2331,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID for the service principal.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="secret_python">
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secret password associated with the service principal.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="containerservicesshconfiguration">Container<wbr>Service<wbr>Ssh<wbr>Configuration</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2681,15 +2357,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="publickeys_csharp">
 <a href="#publickeys_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicesshpublickey">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2698,15 +2372,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="publickeys_go">
 <a href="#publickeys_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicesshpublickey">[]Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2715,15 +2387,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="publickeys_nodejs">
 <a href="#publickeys_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicesshpublickey">Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2732,26 +2402,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="public_keys_python">
 <a href="#public_keys_python" style="color: inherit; text-decoration: inherit;">public_<wbr>keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicesshpublickey">Sequence[Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="containerservicesshconfigurationresponse">Container<wbr>Service<wbr>Ssh<wbr>Configuration<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2760,15 +2419,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="publickeys_csharp">
 <a href="#publickeys_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicesshpublickeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2777,15 +2434,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="publickeys_go">
 <a href="#publickeys_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicesshpublickeyresponse">[]Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2794,15 +2449,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="publickeys_nodejs">
 <a href="#publickeys_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicesshpublickeyresponse">Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2811,27 +2464,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="public_keys_python">
 <a href="#public_keys_python" style="color: inherit; text-decoration: inherit;">public_<wbr>keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#containerservicesshpublickeyresponse">Sequence[Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="containerservicesshpublickey">Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2839,15 +2481,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="keydata_csharp">
 <a href="#keydata_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2856,15 +2496,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="keydata_go">
 <a href="#keydata_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2873,15 +2511,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="keydata_nodejs">
 <a href="#keydata_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2890,27 +2526,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="key_data_python">
 <a href="#key_data_python" style="color: inherit; text-decoration: inherit;">key_<wbr>data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="containerservicesshpublickeyresponse">Container<wbr>Service<wbr>Ssh<wbr>Public<wbr>Key<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2918,15 +2543,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="keydata_csharp">
 <a href="#keydata_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2935,15 +2558,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="keydata_go">
 <a href="#keydata_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2952,15 +2573,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="keydata_nodejs">
 <a href="#keydata_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2969,26 +2588,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="key_data_python">
 <a href="#key_data_python" style="color: inherit; text-decoration: inherit;">key_<wbr>data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="containerservicevmdiagnostics">Container<wbr>Service<wbr>VMDiagnostics</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2997,15 +2605,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the VM diagnostic agent is provisioned on the VM.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3014,15 +2620,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the VM diagnostic agent is provisioned on the VM.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3031,15 +2635,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the VM diagnostic agent is provisioned on the VM.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3048,26 +2650,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the VM diagnostic agent is provisioned on the VM.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="containerservicevmdiagnosticsresponse">Container<wbr>Service<wbr>VMDiagnostics<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3076,25 +2667,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the VM diagnostic agent is provisioned on the VM.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="storageuri_csharp">
 <a href="#storageuri_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the storage account where diagnostics are stored.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3103,25 +2691,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the VM diagnostic agent is provisioned on the VM.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="storageuri_go">
 <a href="#storageuri_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the storage account where diagnostics are stored.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3130,25 +2715,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the VM diagnostic agent is provisioned on the VM.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="storageuri_nodejs">
 <a href="#storageuri_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the storage account where diagnostics are stored.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3157,37 +2739,1439 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the VM diagnostic agent is provisioned on the VM.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="storage_uri_python">
 <a href="#storage_uri_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the storage account where diagnostics are stored.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="containerservicevmsizetypes">Container<wbr>Service<wbr>VMSize<wbr>Types</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Standard_A1</dt>
+    <dd>Standard_A1</dd>
+    <dt>Standard_A10</dt>
+    <dd>Standard_A10</dd>
+    <dt>Standard_A11</dt>
+    <dd>Standard_A11</dd>
+    <dt>Standard_A1_<wbr>v2</dt>
+    <dd>Standard_A1_v2</dd>
+    <dt>Standard_A2</dt>
+    <dd>Standard_A2</dd>
+    <dt>Standard_A2_<wbr>v2</dt>
+    <dd>Standard_A2_v2</dd>
+    <dt>Standard_A2m_<wbr>v2</dt>
+    <dd>Standard_A2m_v2</dd>
+    <dt>Standard_A3</dt>
+    <dd>Standard_A3</dd>
+    <dt>Standard_A4</dt>
+    <dd>Standard_A4</dd>
+    <dt>Standard_A4_<wbr>v2</dt>
+    <dd>Standard_A4_v2</dd>
+    <dt>Standard_A4m_<wbr>v2</dt>
+    <dd>Standard_A4m_v2</dd>
+    <dt>Standard_A5</dt>
+    <dd>Standard_A5</dd>
+    <dt>Standard_A6</dt>
+    <dd>Standard_A6</dd>
+    <dt>Standard_A7</dt>
+    <dd>Standard_A7</dd>
+    <dt>Standard_A8</dt>
+    <dd>Standard_A8</dd>
+    <dt>Standard_A8_<wbr>v2</dt>
+    <dd>Standard_A8_v2</dd>
+    <dt>Standard_A8m_<wbr>v2</dt>
+    <dd>Standard_A8m_v2</dd>
+    <dt>Standard_A9</dt>
+    <dd>Standard_A9</dd>
+    <dt>Standard_B2ms</dt>
+    <dd>Standard_B2ms</dd>
+    <dt>Standard_B2s</dt>
+    <dd>Standard_B2s</dd>
+    <dt>Standard_B4ms</dt>
+    <dd>Standard_B4ms</dd>
+    <dt>Standard_B8ms</dt>
+    <dd>Standard_B8ms</dd>
+    <dt>Standard_D1</dt>
+    <dd>Standard_D1</dd>
+    <dt>Standard_D11</dt>
+    <dd>Standard_D11</dd>
+    <dt>Standard_D11_<wbr>v2</dt>
+    <dd>Standard_D11_v2</dd>
+    <dt>Standard_D11_<wbr>v2_Promo</dt>
+    <dd>Standard_D11_v2_Promo</dd>
+    <dt>Standard_D12</dt>
+    <dd>Standard_D12</dd>
+    <dt>Standard_D12_<wbr>v2</dt>
+    <dd>Standard_D12_v2</dd>
+    <dt>Standard_D12_<wbr>v2_Promo</dt>
+    <dd>Standard_D12_v2_Promo</dd>
+    <dt>Standard_D13</dt>
+    <dd>Standard_D13</dd>
+    <dt>Standard_D13_<wbr>v2</dt>
+    <dd>Standard_D13_v2</dd>
+    <dt>Standard_D13_<wbr>v2_Promo</dt>
+    <dd>Standard_D13_v2_Promo</dd>
+    <dt>Standard_D14</dt>
+    <dd>Standard_D14</dd>
+    <dt>Standard_D14_<wbr>v2</dt>
+    <dd>Standard_D14_v2</dd>
+    <dt>Standard_D14_<wbr>v2_Promo</dt>
+    <dd>Standard_D14_v2_Promo</dd>
+    <dt>Standard_D15_<wbr>v2</dt>
+    <dd>Standard_D15_v2</dd>
+    <dt>Standard_D16_<wbr>v3</dt>
+    <dd>Standard_D16_v3</dd>
+    <dt>Standard_D16s_<wbr>v3</dt>
+    <dd>Standard_D16s_v3</dd>
+    <dt>Standard_D1_<wbr>v2</dt>
+    <dd>Standard_D1_v2</dd>
+    <dt>Standard_D2</dt>
+    <dd>Standard_D2</dd>
+    <dt>Standard_D2_<wbr>v2</dt>
+    <dd>Standard_D2_v2</dd>
+    <dt>Standard_D2_<wbr>v2_Promo</dt>
+    <dd>Standard_D2_v2_Promo</dd>
+    <dt>Standard_D2_<wbr>v3</dt>
+    <dd>Standard_D2_v3</dd>
+    <dt>Standard_D2s_<wbr>v3</dt>
+    <dd>Standard_D2s_v3</dd>
+    <dt>Standard_D3</dt>
+    <dd>Standard_D3</dd>
+    <dt>Standard_D32_<wbr>v3</dt>
+    <dd>Standard_D32_v3</dd>
+    <dt>Standard_D32s_<wbr>v3</dt>
+    <dd>Standard_D32s_v3</dd>
+    <dt>Standard_D3_<wbr>v2</dt>
+    <dd>Standard_D3_v2</dd>
+    <dt>Standard_D3_<wbr>v2_Promo</dt>
+    <dd>Standard_D3_v2_Promo</dd>
+    <dt>Standard_D4</dt>
+    <dd>Standard_D4</dd>
+    <dt>Standard_D4_<wbr>v2</dt>
+    <dd>Standard_D4_v2</dd>
+    <dt>Standard_D4_<wbr>v2_Promo</dt>
+    <dd>Standard_D4_v2_Promo</dd>
+    <dt>Standard_D4_<wbr>v3</dt>
+    <dd>Standard_D4_v3</dd>
+    <dt>Standard_D4s_<wbr>v3</dt>
+    <dd>Standard_D4s_v3</dd>
+    <dt>Standard_D5_<wbr>v2</dt>
+    <dd>Standard_D5_v2</dd>
+    <dt>Standard_D5_<wbr>v2_Promo</dt>
+    <dd>Standard_D5_v2_Promo</dd>
+    <dt>Standard_D64_<wbr>v3</dt>
+    <dd>Standard_D64_v3</dd>
+    <dt>Standard_D64s_<wbr>v3</dt>
+    <dd>Standard_D64s_v3</dd>
+    <dt>Standard_D8_<wbr>v3</dt>
+    <dd>Standard_D8_v3</dd>
+    <dt>Standard_D8s_<wbr>v3</dt>
+    <dd>Standard_D8s_v3</dd>
+    <dt>Standard_DS1</dt>
+    <dd>Standard_DS1</dd>
+    <dt>Standard_DS11</dt>
+    <dd>Standard_DS11</dd>
+    <dt>Standard_DS11_<wbr>v2</dt>
+    <dd>Standard_DS11_v2</dd>
+    <dt>Standard_DS11_<wbr>v2_Promo</dt>
+    <dd>Standard_DS11_v2_Promo</dd>
+    <dt>Standard_DS12</dt>
+    <dd>Standard_DS12</dd>
+    <dt>Standard_DS12_<wbr>v2</dt>
+    <dd>Standard_DS12_v2</dd>
+    <dt>Standard_DS12_<wbr>v2_Promo</dt>
+    <dd>Standard_DS12_v2_Promo</dd>
+    <dt>Standard_DS13</dt>
+    <dd>Standard_DS13</dd>
+    <dt>Standard_DS13_2_<wbr>v2</dt>
+    <dd>Standard_DS13-2_v2</dd>
+    <dt>Standard_DS13_4_<wbr>v2</dt>
+    <dd>Standard_DS13-4_v2</dd>
+    <dt>Standard_DS13_<wbr>v2</dt>
+    <dd>Standard_DS13_v2</dd>
+    <dt>Standard_DS13_<wbr>v2_Promo</dt>
+    <dd>Standard_DS13_v2_Promo</dd>
+    <dt>Standard_DS14</dt>
+    <dd>Standard_DS14</dd>
+    <dt>Standard_DS14_4_<wbr>v2</dt>
+    <dd>Standard_DS14-4_v2</dd>
+    <dt>Standard_DS14_8_<wbr>v2</dt>
+    <dd>Standard_DS14-8_v2</dd>
+    <dt>Standard_DS14_<wbr>v2</dt>
+    <dd>Standard_DS14_v2</dd>
+    <dt>Standard_DS14_<wbr>v2_Promo</dt>
+    <dd>Standard_DS14_v2_Promo</dd>
+    <dt>Standard_DS15_<wbr>v2</dt>
+    <dd>Standard_DS15_v2</dd>
+    <dt>Standard_DS1_<wbr>v2</dt>
+    <dd>Standard_DS1_v2</dd>
+    <dt>Standard_DS2</dt>
+    <dd>Standard_DS2</dd>
+    <dt>Standard_DS2_<wbr>v2</dt>
+    <dd>Standard_DS2_v2</dd>
+    <dt>Standard_DS2_<wbr>v2_Promo</dt>
+    <dd>Standard_DS2_v2_Promo</dd>
+    <dt>Standard_DS3</dt>
+    <dd>Standard_DS3</dd>
+    <dt>Standard_DS3_<wbr>v2</dt>
+    <dd>Standard_DS3_v2</dd>
+    <dt>Standard_DS3_<wbr>v2_Promo</dt>
+    <dd>Standard_DS3_v2_Promo</dd>
+    <dt>Standard_DS4</dt>
+    <dd>Standard_DS4</dd>
+    <dt>Standard_DS4_<wbr>v2</dt>
+    <dd>Standard_DS4_v2</dd>
+    <dt>Standard_DS4_<wbr>v2_Promo</dt>
+    <dd>Standard_DS4_v2_Promo</dd>
+    <dt>Standard_DS5_<wbr>v2</dt>
+    <dd>Standard_DS5_v2</dd>
+    <dt>Standard_DS5_<wbr>v2_Promo</dt>
+    <dd>Standard_DS5_v2_Promo</dd>
+    <dt>Standard_E16_<wbr>v3</dt>
+    <dd>Standard_E16_v3</dd>
+    <dt>Standard_E16s_<wbr>v3</dt>
+    <dd>Standard_E16s_v3</dd>
+    <dt>Standard_E2_<wbr>v3</dt>
+    <dd>Standard_E2_v3</dd>
+    <dt>Standard_E2s_<wbr>v3</dt>
+    <dd>Standard_E2s_v3</dd>
+    <dt>Standard_E32_16s_<wbr>v3</dt>
+    <dd>Standard_E32-16s_v3</dd>
+    <dt>Standard_E32_8s_<wbr>v3</dt>
+    <dd>Standard_E32-8s_v3</dd>
+    <dt>Standard_E32_<wbr>v3</dt>
+    <dd>Standard_E32_v3</dd>
+    <dt>Standard_E32s_<wbr>v3</dt>
+    <dd>Standard_E32s_v3</dd>
+    <dt>Standard_E4_<wbr>v3</dt>
+    <dd>Standard_E4_v3</dd>
+    <dt>Standard_E4s_<wbr>v3</dt>
+    <dd>Standard_E4s_v3</dd>
+    <dt>Standard_E64_16s_<wbr>v3</dt>
+    <dd>Standard_E64-16s_v3</dd>
+    <dt>Standard_E64_32s_<wbr>v3</dt>
+    <dd>Standard_E64-32s_v3</dd>
+    <dt>Standard_E64_<wbr>v3</dt>
+    <dd>Standard_E64_v3</dd>
+    <dt>Standard_E64s_<wbr>v3</dt>
+    <dd>Standard_E64s_v3</dd>
+    <dt>Standard_E8_<wbr>v3</dt>
+    <dd>Standard_E8_v3</dd>
+    <dt>Standard_E8s_<wbr>v3</dt>
+    <dd>Standard_E8s_v3</dd>
+    <dt>Standard_F1</dt>
+    <dd>Standard_F1</dd>
+    <dt>Standard_F16</dt>
+    <dd>Standard_F16</dd>
+    <dt>Standard_F16s</dt>
+    <dd>Standard_F16s</dd>
+    <dt>Standard_F16s_<wbr>v2</dt>
+    <dd>Standard_F16s_v2</dd>
+    <dt>Standard_F1s</dt>
+    <dd>Standard_F1s</dd>
+    <dt>Standard_F2</dt>
+    <dd>Standard_F2</dd>
+    <dt>Standard_F2s</dt>
+    <dd>Standard_F2s</dd>
+    <dt>Standard_F2s_<wbr>v2</dt>
+    <dd>Standard_F2s_v2</dd>
+    <dt>Standard_F32s_<wbr>v2</dt>
+    <dd>Standard_F32s_v2</dd>
+    <dt>Standard_F4</dt>
+    <dd>Standard_F4</dd>
+    <dt>Standard_F4s</dt>
+    <dd>Standard_F4s</dd>
+    <dt>Standard_F4s_<wbr>v2</dt>
+    <dd>Standard_F4s_v2</dd>
+    <dt>Standard_F64s_<wbr>v2</dt>
+    <dd>Standard_F64s_v2</dd>
+    <dt>Standard_F72s_<wbr>v2</dt>
+    <dd>Standard_F72s_v2</dd>
+    <dt>Standard_F8</dt>
+    <dd>Standard_F8</dd>
+    <dt>Standard_F8s</dt>
+    <dd>Standard_F8s</dd>
+    <dt>Standard_F8s_<wbr>v2</dt>
+    <dd>Standard_F8s_v2</dd>
+    <dt>Standard_G1</dt>
+    <dd>Standard_G1</dd>
+    <dt>Standard_G2</dt>
+    <dd>Standard_G2</dd>
+    <dt>Standard_G3</dt>
+    <dd>Standard_G3</dd>
+    <dt>Standard_G4</dt>
+    <dd>Standard_G4</dd>
+    <dt>Standard_G5</dt>
+    <dd>Standard_G5</dd>
+    <dt>Standard_GS1</dt>
+    <dd>Standard_GS1</dd>
+    <dt>Standard_GS2</dt>
+    <dd>Standard_GS2</dd>
+    <dt>Standard_GS3</dt>
+    <dd>Standard_GS3</dd>
+    <dt>Standard_GS4</dt>
+    <dd>Standard_GS4</dd>
+    <dt>Standard_GS4_4</dt>
+    <dd>Standard_GS4-4</dd>
+    <dt>Standard_GS4_8</dt>
+    <dd>Standard_GS4-8</dd>
+    <dt>Standard_GS5</dt>
+    <dd>Standard_GS5</dd>
+    <dt>Standard_GS5_16</dt>
+    <dd>Standard_GS5-16</dd>
+    <dt>Standard_GS5_8</dt>
+    <dd>Standard_GS5-8</dd>
+    <dt>Standard_H16</dt>
+    <dd>Standard_H16</dd>
+    <dt>Standard_H16m</dt>
+    <dd>Standard_H16m</dd>
+    <dt>Standard_H16mr</dt>
+    <dd>Standard_H16mr</dd>
+    <dt>Standard_H16r</dt>
+    <dd>Standard_H16r</dd>
+    <dt>Standard_H8</dt>
+    <dd>Standard_H8</dd>
+    <dt>Standard_H8m</dt>
+    <dd>Standard_H8m</dd>
+    <dt>Standard_L16s</dt>
+    <dd>Standard_L16s</dd>
+    <dt>Standard_L32s</dt>
+    <dd>Standard_L32s</dd>
+    <dt>Standard_L4s</dt>
+    <dd>Standard_L4s</dd>
+    <dt>Standard_L8s</dt>
+    <dd>Standard_L8s</dd>
+    <dt>Standard_M128_32ms</dt>
+    <dd>Standard_M128-32ms</dd>
+    <dt>Standard_M128_64ms</dt>
+    <dd>Standard_M128-64ms</dd>
+    <dt>Standard_M128ms</dt>
+    <dd>Standard_M128ms</dd>
+    <dt>Standard_M128s</dt>
+    <dd>Standard_M128s</dd>
+    <dt>Standard_M64_16ms</dt>
+    <dd>Standard_M64-16ms</dd>
+    <dt>Standard_M64_32ms</dt>
+    <dd>Standard_M64-32ms</dd>
+    <dt>Standard_M64ms</dt>
+    <dd>Standard_M64ms</dd>
+    <dt>Standard_M64s</dt>
+    <dd>Standard_M64s</dd>
+    <dt>Standard_NC12</dt>
+    <dd>Standard_NC12</dd>
+    <dt>Standard_NC12s_<wbr>v2</dt>
+    <dd>Standard_NC12s_v2</dd>
+    <dt>Standard_NC12s_<wbr>v3</dt>
+    <dd>Standard_NC12s_v3</dd>
+    <dt>Standard_NC24</dt>
+    <dd>Standard_NC24</dd>
+    <dt>Standard_NC24r</dt>
+    <dd>Standard_NC24r</dd>
+    <dt>Standard_NC24rs_<wbr>v2</dt>
+    <dd>Standard_NC24rs_v2</dd>
+    <dt>Standard_NC24rs_<wbr>v3</dt>
+    <dd>Standard_NC24rs_v3</dd>
+    <dt>Standard_NC24s_<wbr>v2</dt>
+    <dd>Standard_NC24s_v2</dd>
+    <dt>Standard_NC24s_<wbr>v3</dt>
+    <dd>Standard_NC24s_v3</dd>
+    <dt>Standard_NC6</dt>
+    <dd>Standard_NC6</dd>
+    <dt>Standard_NC6s_<wbr>v2</dt>
+    <dd>Standard_NC6s_v2</dd>
+    <dt>Standard_NC6s_<wbr>v3</dt>
+    <dd>Standard_NC6s_v3</dd>
+    <dt>Standard_ND12s</dt>
+    <dd>Standard_ND12s</dd>
+    <dt>Standard_ND24rs</dt>
+    <dd>Standard_ND24rs</dd>
+    <dt>Standard_ND24s</dt>
+    <dd>Standard_ND24s</dd>
+    <dt>Standard_ND6s</dt>
+    <dd>Standard_ND6s</dd>
+    <dt>Standard_NV12</dt>
+    <dd>Standard_NV12</dd>
+    <dt>Standard_NV24</dt>
+    <dd>Standard_NV24</dd>
+    <dt>Standard_NV6</dt>
+    <dd>Standard_NV6</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_A1</dt>
+    <dd>Standard_A1</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_A10</dt>
+    <dd>Standard_A10</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_A11</dt>
+    <dd>Standard_A11</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_A1_<wbr>v2</dt>
+    <dd>Standard_A1_v2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_A2</dt>
+    <dd>Standard_A2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_A2_<wbr>v2</dt>
+    <dd>Standard_A2_v2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_A2m_<wbr>v2</dt>
+    <dd>Standard_A2m_v2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_A3</dt>
+    <dd>Standard_A3</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_A4</dt>
+    <dd>Standard_A4</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_A4_<wbr>v2</dt>
+    <dd>Standard_A4_v2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_A4m_<wbr>v2</dt>
+    <dd>Standard_A4m_v2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_A5</dt>
+    <dd>Standard_A5</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_A6</dt>
+    <dd>Standard_A6</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_A7</dt>
+    <dd>Standard_A7</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_A8</dt>
+    <dd>Standard_A8</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_A8_<wbr>v2</dt>
+    <dd>Standard_A8_v2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_A8m_<wbr>v2</dt>
+    <dd>Standard_A8m_v2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_A9</dt>
+    <dd>Standard_A9</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_B2ms</dt>
+    <dd>Standard_B2ms</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_B2s</dt>
+    <dd>Standard_B2s</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_B4ms</dt>
+    <dd>Standard_B4ms</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_B8ms</dt>
+    <dd>Standard_B8ms</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D1</dt>
+    <dd>Standard_D1</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D11</dt>
+    <dd>Standard_D11</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D11_<wbr>v2</dt>
+    <dd>Standard_D11_v2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D11_<wbr>v2_Promo</dt>
+    <dd>Standard_D11_v2_Promo</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D12</dt>
+    <dd>Standard_D12</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D12_<wbr>v2</dt>
+    <dd>Standard_D12_v2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D12_<wbr>v2_Promo</dt>
+    <dd>Standard_D12_v2_Promo</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D13</dt>
+    <dd>Standard_D13</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D13_<wbr>v2</dt>
+    <dd>Standard_D13_v2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D13_<wbr>v2_Promo</dt>
+    <dd>Standard_D13_v2_Promo</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D14</dt>
+    <dd>Standard_D14</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D14_<wbr>v2</dt>
+    <dd>Standard_D14_v2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D14_<wbr>v2_Promo</dt>
+    <dd>Standard_D14_v2_Promo</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D15_<wbr>v2</dt>
+    <dd>Standard_D15_v2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D16_<wbr>v3</dt>
+    <dd>Standard_D16_v3</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D16s_<wbr>v3</dt>
+    <dd>Standard_D16s_v3</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D1_<wbr>v2</dt>
+    <dd>Standard_D1_v2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D2</dt>
+    <dd>Standard_D2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D2_<wbr>v2</dt>
+    <dd>Standard_D2_v2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D2_<wbr>v2_Promo</dt>
+    <dd>Standard_D2_v2_Promo</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D2_<wbr>v3</dt>
+    <dd>Standard_D2_v3</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D2s_<wbr>v3</dt>
+    <dd>Standard_D2s_v3</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D3</dt>
+    <dd>Standard_D3</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D32_<wbr>v3</dt>
+    <dd>Standard_D32_v3</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D32s_<wbr>v3</dt>
+    <dd>Standard_D32s_v3</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D3_<wbr>v2</dt>
+    <dd>Standard_D3_v2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D3_<wbr>v2_Promo</dt>
+    <dd>Standard_D3_v2_Promo</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D4</dt>
+    <dd>Standard_D4</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D4_<wbr>v2</dt>
+    <dd>Standard_D4_v2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D4_<wbr>v2_Promo</dt>
+    <dd>Standard_D4_v2_Promo</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D4_<wbr>v3</dt>
+    <dd>Standard_D4_v3</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D4s_<wbr>v3</dt>
+    <dd>Standard_D4s_v3</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D5_<wbr>v2</dt>
+    <dd>Standard_D5_v2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D5_<wbr>v2_Promo</dt>
+    <dd>Standard_D5_v2_Promo</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D64_<wbr>v3</dt>
+    <dd>Standard_D64_v3</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D64s_<wbr>v3</dt>
+    <dd>Standard_D64s_v3</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D8_<wbr>v3</dt>
+    <dd>Standard_D8_v3</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_D8s_<wbr>v3</dt>
+    <dd>Standard_D8s_v3</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS1</dt>
+    <dd>Standard_DS1</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS11</dt>
+    <dd>Standard_DS11</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS11_<wbr>v2</dt>
+    <dd>Standard_DS11_v2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS11_<wbr>v2_Promo</dt>
+    <dd>Standard_DS11_v2_Promo</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS12</dt>
+    <dd>Standard_DS12</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS12_<wbr>v2</dt>
+    <dd>Standard_DS12_v2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS12_<wbr>v2_Promo</dt>
+    <dd>Standard_DS12_v2_Promo</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS13</dt>
+    <dd>Standard_DS13</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS13_2_<wbr>v2</dt>
+    <dd>Standard_DS13-2_v2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS13_4_<wbr>v2</dt>
+    <dd>Standard_DS13-4_v2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS13_<wbr>v2</dt>
+    <dd>Standard_DS13_v2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS13_<wbr>v2_Promo</dt>
+    <dd>Standard_DS13_v2_Promo</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS14</dt>
+    <dd>Standard_DS14</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS14_4_<wbr>v2</dt>
+    <dd>Standard_DS14-4_v2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS14_8_<wbr>v2</dt>
+    <dd>Standard_DS14-8_v2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS14_<wbr>v2</dt>
+    <dd>Standard_DS14_v2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS14_<wbr>v2_Promo</dt>
+    <dd>Standard_DS14_v2_Promo</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS15_<wbr>v2</dt>
+    <dd>Standard_DS15_v2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS1_<wbr>v2</dt>
+    <dd>Standard_DS1_v2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS2</dt>
+    <dd>Standard_DS2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS2_<wbr>v2</dt>
+    <dd>Standard_DS2_v2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS2_<wbr>v2_Promo</dt>
+    <dd>Standard_DS2_v2_Promo</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS3</dt>
+    <dd>Standard_DS3</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS3_<wbr>v2</dt>
+    <dd>Standard_DS3_v2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS3_<wbr>v2_Promo</dt>
+    <dd>Standard_DS3_v2_Promo</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS4</dt>
+    <dd>Standard_DS4</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS4_<wbr>v2</dt>
+    <dd>Standard_DS4_v2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS4_<wbr>v2_Promo</dt>
+    <dd>Standard_DS4_v2_Promo</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS5_<wbr>v2</dt>
+    <dd>Standard_DS5_v2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_DS5_<wbr>v2_Promo</dt>
+    <dd>Standard_DS5_v2_Promo</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_E16_<wbr>v3</dt>
+    <dd>Standard_E16_v3</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_E16s_<wbr>v3</dt>
+    <dd>Standard_E16s_v3</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_E2_<wbr>v3</dt>
+    <dd>Standard_E2_v3</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_E2s_<wbr>v3</dt>
+    <dd>Standard_E2s_v3</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_E32_16s_<wbr>v3</dt>
+    <dd>Standard_E32-16s_v3</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_E32_8s_<wbr>v3</dt>
+    <dd>Standard_E32-8s_v3</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_E32_<wbr>v3</dt>
+    <dd>Standard_E32_v3</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_E32s_<wbr>v3</dt>
+    <dd>Standard_E32s_v3</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_E4_<wbr>v3</dt>
+    <dd>Standard_E4_v3</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_E4s_<wbr>v3</dt>
+    <dd>Standard_E4s_v3</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_E64_16s_<wbr>v3</dt>
+    <dd>Standard_E64-16s_v3</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_E64_32s_<wbr>v3</dt>
+    <dd>Standard_E64-32s_v3</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_E64_<wbr>v3</dt>
+    <dd>Standard_E64_v3</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_E64s_<wbr>v3</dt>
+    <dd>Standard_E64s_v3</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_E8_<wbr>v3</dt>
+    <dd>Standard_E8_v3</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_E8s_<wbr>v3</dt>
+    <dd>Standard_E8s_v3</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_F1</dt>
+    <dd>Standard_F1</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_F16</dt>
+    <dd>Standard_F16</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_F16s</dt>
+    <dd>Standard_F16s</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_F16s_<wbr>v2</dt>
+    <dd>Standard_F16s_v2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_F1s</dt>
+    <dd>Standard_F1s</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_F2</dt>
+    <dd>Standard_F2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_F2s</dt>
+    <dd>Standard_F2s</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_F2s_<wbr>v2</dt>
+    <dd>Standard_F2s_v2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_F32s_<wbr>v2</dt>
+    <dd>Standard_F32s_v2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_F4</dt>
+    <dd>Standard_F4</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_F4s</dt>
+    <dd>Standard_F4s</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_F4s_<wbr>v2</dt>
+    <dd>Standard_F4s_v2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_F64s_<wbr>v2</dt>
+    <dd>Standard_F64s_v2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_F72s_<wbr>v2</dt>
+    <dd>Standard_F72s_v2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_F8</dt>
+    <dd>Standard_F8</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_F8s</dt>
+    <dd>Standard_F8s</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_F8s_<wbr>v2</dt>
+    <dd>Standard_F8s_v2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_G1</dt>
+    <dd>Standard_G1</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_G2</dt>
+    <dd>Standard_G2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_G3</dt>
+    <dd>Standard_G3</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_G4</dt>
+    <dd>Standard_G4</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_G5</dt>
+    <dd>Standard_G5</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_GS1</dt>
+    <dd>Standard_GS1</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_GS2</dt>
+    <dd>Standard_GS2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_GS3</dt>
+    <dd>Standard_GS3</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_GS4</dt>
+    <dd>Standard_GS4</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_GS4_4</dt>
+    <dd>Standard_GS4-4</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_GS4_8</dt>
+    <dd>Standard_GS4-8</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_GS5</dt>
+    <dd>Standard_GS5</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_GS5_16</dt>
+    <dd>Standard_GS5-16</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_GS5_8</dt>
+    <dd>Standard_GS5-8</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_H16</dt>
+    <dd>Standard_H16</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_H16m</dt>
+    <dd>Standard_H16m</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_H16mr</dt>
+    <dd>Standard_H16mr</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_H16r</dt>
+    <dd>Standard_H16r</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_H8</dt>
+    <dd>Standard_H8</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_H8m</dt>
+    <dd>Standard_H8m</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_L16s</dt>
+    <dd>Standard_L16s</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_L32s</dt>
+    <dd>Standard_L32s</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_L4s</dt>
+    <dd>Standard_L4s</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_L8s</dt>
+    <dd>Standard_L8s</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_M128_32ms</dt>
+    <dd>Standard_M128-32ms</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_M128_64ms</dt>
+    <dd>Standard_M128-64ms</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_M128ms</dt>
+    <dd>Standard_M128ms</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_M128s</dt>
+    <dd>Standard_M128s</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_M64_16ms</dt>
+    <dd>Standard_M64-16ms</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_M64_32ms</dt>
+    <dd>Standard_M64-32ms</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_M64ms</dt>
+    <dd>Standard_M64ms</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_M64s</dt>
+    <dd>Standard_M64s</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_NC12</dt>
+    <dd>Standard_NC12</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_NC12s_<wbr>v2</dt>
+    <dd>Standard_NC12s_v2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_NC12s_<wbr>v3</dt>
+    <dd>Standard_NC12s_v3</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_NC24</dt>
+    <dd>Standard_NC24</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_NC24r</dt>
+    <dd>Standard_NC24r</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_NC24rs_<wbr>v2</dt>
+    <dd>Standard_NC24rs_v2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_NC24rs_<wbr>v3</dt>
+    <dd>Standard_NC24rs_v3</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_NC24s_<wbr>v2</dt>
+    <dd>Standard_NC24s_v2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_NC24s_<wbr>v3</dt>
+    <dd>Standard_NC24s_v3</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_NC6</dt>
+    <dd>Standard_NC6</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_NC6s_<wbr>v2</dt>
+    <dd>Standard_NC6s_v2</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_NC6s_<wbr>v3</dt>
+    <dd>Standard_NC6s_v3</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_ND12s</dt>
+    <dd>Standard_ND12s</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_ND24rs</dt>
+    <dd>Standard_ND24rs</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_ND24s</dt>
+    <dd>Standard_ND24s</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_ND6s</dt>
+    <dd>Standard_ND6s</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_NV12</dt>
+    <dd>Standard_NV12</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_NV24</dt>
+    <dd>Standard_NV24</dd>
+    <dt>Container<wbr>Service<wbr>VMSize<wbr>Types_Standard_NV6</dt>
+    <dd>Standard_NV6</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Standard_A1</dt>
+    <dd>Standard_A1</dd>
+    <dt>Standard_A10</dt>
+    <dd>Standard_A10</dd>
+    <dt>Standard_A11</dt>
+    <dd>Standard_A11</dd>
+    <dt>Standard_A1_<wbr>v2</dt>
+    <dd>Standard_A1_v2</dd>
+    <dt>Standard_A2</dt>
+    <dd>Standard_A2</dd>
+    <dt>Standard_A2_<wbr>v2</dt>
+    <dd>Standard_A2_v2</dd>
+    <dt>Standard_A2m_<wbr>v2</dt>
+    <dd>Standard_A2m_v2</dd>
+    <dt>Standard_A3</dt>
+    <dd>Standard_A3</dd>
+    <dt>Standard_A4</dt>
+    <dd>Standard_A4</dd>
+    <dt>Standard_A4_<wbr>v2</dt>
+    <dd>Standard_A4_v2</dd>
+    <dt>Standard_A4m_<wbr>v2</dt>
+    <dd>Standard_A4m_v2</dd>
+    <dt>Standard_A5</dt>
+    <dd>Standard_A5</dd>
+    <dt>Standard_A6</dt>
+    <dd>Standard_A6</dd>
+    <dt>Standard_A7</dt>
+    <dd>Standard_A7</dd>
+    <dt>Standard_A8</dt>
+    <dd>Standard_A8</dd>
+    <dt>Standard_A8_<wbr>v2</dt>
+    <dd>Standard_A8_v2</dd>
+    <dt>Standard_A8m_<wbr>v2</dt>
+    <dd>Standard_A8m_v2</dd>
+    <dt>Standard_A9</dt>
+    <dd>Standard_A9</dd>
+    <dt>Standard_B2ms</dt>
+    <dd>Standard_B2ms</dd>
+    <dt>Standard_B2s</dt>
+    <dd>Standard_B2s</dd>
+    <dt>Standard_B4ms</dt>
+    <dd>Standard_B4ms</dd>
+    <dt>Standard_B8ms</dt>
+    <dd>Standard_B8ms</dd>
+    <dt>Standard_D1</dt>
+    <dd>Standard_D1</dd>
+    <dt>Standard_D11</dt>
+    <dd>Standard_D11</dd>
+    <dt>Standard_D11_<wbr>v2</dt>
+    <dd>Standard_D11_v2</dd>
+    <dt>Standard_D11_<wbr>v2_Promo</dt>
+    <dd>Standard_D11_v2_Promo</dd>
+    <dt>Standard_D12</dt>
+    <dd>Standard_D12</dd>
+    <dt>Standard_D12_<wbr>v2</dt>
+    <dd>Standard_D12_v2</dd>
+    <dt>Standard_D12_<wbr>v2_Promo</dt>
+    <dd>Standard_D12_v2_Promo</dd>
+    <dt>Standard_D13</dt>
+    <dd>Standard_D13</dd>
+    <dt>Standard_D13_<wbr>v2</dt>
+    <dd>Standard_D13_v2</dd>
+    <dt>Standard_D13_<wbr>v2_Promo</dt>
+    <dd>Standard_D13_v2_Promo</dd>
+    <dt>Standard_D14</dt>
+    <dd>Standard_D14</dd>
+    <dt>Standard_D14_<wbr>v2</dt>
+    <dd>Standard_D14_v2</dd>
+    <dt>Standard_D14_<wbr>v2_Promo</dt>
+    <dd>Standard_D14_v2_Promo</dd>
+    <dt>Standard_D15_<wbr>v2</dt>
+    <dd>Standard_D15_v2</dd>
+    <dt>Standard_D16_<wbr>v3</dt>
+    <dd>Standard_D16_v3</dd>
+    <dt>Standard_D16s_<wbr>v3</dt>
+    <dd>Standard_D16s_v3</dd>
+    <dt>Standard_D1_<wbr>v2</dt>
+    <dd>Standard_D1_v2</dd>
+    <dt>Standard_D2</dt>
+    <dd>Standard_D2</dd>
+    <dt>Standard_D2_<wbr>v2</dt>
+    <dd>Standard_D2_v2</dd>
+    <dt>Standard_D2_<wbr>v2_Promo</dt>
+    <dd>Standard_D2_v2_Promo</dd>
+    <dt>Standard_D2_<wbr>v3</dt>
+    <dd>Standard_D2_v3</dd>
+    <dt>Standard_D2s_<wbr>v3</dt>
+    <dd>Standard_D2s_v3</dd>
+    <dt>Standard_D3</dt>
+    <dd>Standard_D3</dd>
+    <dt>Standard_D32_<wbr>v3</dt>
+    <dd>Standard_D32_v3</dd>
+    <dt>Standard_D32s_<wbr>v3</dt>
+    <dd>Standard_D32s_v3</dd>
+    <dt>Standard_D3_<wbr>v2</dt>
+    <dd>Standard_D3_v2</dd>
+    <dt>Standard_D3_<wbr>v2_Promo</dt>
+    <dd>Standard_D3_v2_Promo</dd>
+    <dt>Standard_D4</dt>
+    <dd>Standard_D4</dd>
+    <dt>Standard_D4_<wbr>v2</dt>
+    <dd>Standard_D4_v2</dd>
+    <dt>Standard_D4_<wbr>v2_Promo</dt>
+    <dd>Standard_D4_v2_Promo</dd>
+    <dt>Standard_D4_<wbr>v3</dt>
+    <dd>Standard_D4_v3</dd>
+    <dt>Standard_D4s_<wbr>v3</dt>
+    <dd>Standard_D4s_v3</dd>
+    <dt>Standard_D5_<wbr>v2</dt>
+    <dd>Standard_D5_v2</dd>
+    <dt>Standard_D5_<wbr>v2_Promo</dt>
+    <dd>Standard_D5_v2_Promo</dd>
+    <dt>Standard_D64_<wbr>v3</dt>
+    <dd>Standard_D64_v3</dd>
+    <dt>Standard_D64s_<wbr>v3</dt>
+    <dd>Standard_D64s_v3</dd>
+    <dt>Standard_D8_<wbr>v3</dt>
+    <dd>Standard_D8_v3</dd>
+    <dt>Standard_D8s_<wbr>v3</dt>
+    <dd>Standard_D8s_v3</dd>
+    <dt>Standard_DS1</dt>
+    <dd>Standard_DS1</dd>
+    <dt>Standard_DS11</dt>
+    <dd>Standard_DS11</dd>
+    <dt>Standard_DS11_<wbr>v2</dt>
+    <dd>Standard_DS11_v2</dd>
+    <dt>Standard_DS11_<wbr>v2_Promo</dt>
+    <dd>Standard_DS11_v2_Promo</dd>
+    <dt>Standard_DS12</dt>
+    <dd>Standard_DS12</dd>
+    <dt>Standard_DS12_<wbr>v2</dt>
+    <dd>Standard_DS12_v2</dd>
+    <dt>Standard_DS12_<wbr>v2_Promo</dt>
+    <dd>Standard_DS12_v2_Promo</dd>
+    <dt>Standard_DS13</dt>
+    <dd>Standard_DS13</dd>
+    <dt>Standard_DS13_2_<wbr>v2</dt>
+    <dd>Standard_DS13-2_v2</dd>
+    <dt>Standard_DS13_4_<wbr>v2</dt>
+    <dd>Standard_DS13-4_v2</dd>
+    <dt>Standard_DS13_<wbr>v2</dt>
+    <dd>Standard_DS13_v2</dd>
+    <dt>Standard_DS13_<wbr>v2_Promo</dt>
+    <dd>Standard_DS13_v2_Promo</dd>
+    <dt>Standard_DS14</dt>
+    <dd>Standard_DS14</dd>
+    <dt>Standard_DS14_4_<wbr>v2</dt>
+    <dd>Standard_DS14-4_v2</dd>
+    <dt>Standard_DS14_8_<wbr>v2</dt>
+    <dd>Standard_DS14-8_v2</dd>
+    <dt>Standard_DS14_<wbr>v2</dt>
+    <dd>Standard_DS14_v2</dd>
+    <dt>Standard_DS14_<wbr>v2_Promo</dt>
+    <dd>Standard_DS14_v2_Promo</dd>
+    <dt>Standard_DS15_<wbr>v2</dt>
+    <dd>Standard_DS15_v2</dd>
+    <dt>Standard_DS1_<wbr>v2</dt>
+    <dd>Standard_DS1_v2</dd>
+    <dt>Standard_DS2</dt>
+    <dd>Standard_DS2</dd>
+    <dt>Standard_DS2_<wbr>v2</dt>
+    <dd>Standard_DS2_v2</dd>
+    <dt>Standard_DS2_<wbr>v2_Promo</dt>
+    <dd>Standard_DS2_v2_Promo</dd>
+    <dt>Standard_DS3</dt>
+    <dd>Standard_DS3</dd>
+    <dt>Standard_DS3_<wbr>v2</dt>
+    <dd>Standard_DS3_v2</dd>
+    <dt>Standard_DS3_<wbr>v2_Promo</dt>
+    <dd>Standard_DS3_v2_Promo</dd>
+    <dt>Standard_DS4</dt>
+    <dd>Standard_DS4</dd>
+    <dt>Standard_DS4_<wbr>v2</dt>
+    <dd>Standard_DS4_v2</dd>
+    <dt>Standard_DS4_<wbr>v2_Promo</dt>
+    <dd>Standard_DS4_v2_Promo</dd>
+    <dt>Standard_DS5_<wbr>v2</dt>
+    <dd>Standard_DS5_v2</dd>
+    <dt>Standard_DS5_<wbr>v2_Promo</dt>
+    <dd>Standard_DS5_v2_Promo</dd>
+    <dt>Standard_E16_<wbr>v3</dt>
+    <dd>Standard_E16_v3</dd>
+    <dt>Standard_E16s_<wbr>v3</dt>
+    <dd>Standard_E16s_v3</dd>
+    <dt>Standard_E2_<wbr>v3</dt>
+    <dd>Standard_E2_v3</dd>
+    <dt>Standard_E2s_<wbr>v3</dt>
+    <dd>Standard_E2s_v3</dd>
+    <dt>Standard_E32_16s_<wbr>v3</dt>
+    <dd>Standard_E32-16s_v3</dd>
+    <dt>Standard_E32_8s_<wbr>v3</dt>
+    <dd>Standard_E32-8s_v3</dd>
+    <dt>Standard_E32_<wbr>v3</dt>
+    <dd>Standard_E32_v3</dd>
+    <dt>Standard_E32s_<wbr>v3</dt>
+    <dd>Standard_E32s_v3</dd>
+    <dt>Standard_E4_<wbr>v3</dt>
+    <dd>Standard_E4_v3</dd>
+    <dt>Standard_E4s_<wbr>v3</dt>
+    <dd>Standard_E4s_v3</dd>
+    <dt>Standard_E64_16s_<wbr>v3</dt>
+    <dd>Standard_E64-16s_v3</dd>
+    <dt>Standard_E64_32s_<wbr>v3</dt>
+    <dd>Standard_E64-32s_v3</dd>
+    <dt>Standard_E64_<wbr>v3</dt>
+    <dd>Standard_E64_v3</dd>
+    <dt>Standard_E64s_<wbr>v3</dt>
+    <dd>Standard_E64s_v3</dd>
+    <dt>Standard_E8_<wbr>v3</dt>
+    <dd>Standard_E8_v3</dd>
+    <dt>Standard_E8s_<wbr>v3</dt>
+    <dd>Standard_E8s_v3</dd>
+    <dt>Standard_F1</dt>
+    <dd>Standard_F1</dd>
+    <dt>Standard_F16</dt>
+    <dd>Standard_F16</dd>
+    <dt>Standard_F16s</dt>
+    <dd>Standard_F16s</dd>
+    <dt>Standard_F16s_<wbr>v2</dt>
+    <dd>Standard_F16s_v2</dd>
+    <dt>Standard_F1s</dt>
+    <dd>Standard_F1s</dd>
+    <dt>Standard_F2</dt>
+    <dd>Standard_F2</dd>
+    <dt>Standard_F2s</dt>
+    <dd>Standard_F2s</dd>
+    <dt>Standard_F2s_<wbr>v2</dt>
+    <dd>Standard_F2s_v2</dd>
+    <dt>Standard_F32s_<wbr>v2</dt>
+    <dd>Standard_F32s_v2</dd>
+    <dt>Standard_F4</dt>
+    <dd>Standard_F4</dd>
+    <dt>Standard_F4s</dt>
+    <dd>Standard_F4s</dd>
+    <dt>Standard_F4s_<wbr>v2</dt>
+    <dd>Standard_F4s_v2</dd>
+    <dt>Standard_F64s_<wbr>v2</dt>
+    <dd>Standard_F64s_v2</dd>
+    <dt>Standard_F72s_<wbr>v2</dt>
+    <dd>Standard_F72s_v2</dd>
+    <dt>Standard_F8</dt>
+    <dd>Standard_F8</dd>
+    <dt>Standard_F8s</dt>
+    <dd>Standard_F8s</dd>
+    <dt>Standard_F8s_<wbr>v2</dt>
+    <dd>Standard_F8s_v2</dd>
+    <dt>Standard_G1</dt>
+    <dd>Standard_G1</dd>
+    <dt>Standard_G2</dt>
+    <dd>Standard_G2</dd>
+    <dt>Standard_G3</dt>
+    <dd>Standard_G3</dd>
+    <dt>Standard_G4</dt>
+    <dd>Standard_G4</dd>
+    <dt>Standard_G5</dt>
+    <dd>Standard_G5</dd>
+    <dt>Standard_GS1</dt>
+    <dd>Standard_GS1</dd>
+    <dt>Standard_GS2</dt>
+    <dd>Standard_GS2</dd>
+    <dt>Standard_GS3</dt>
+    <dd>Standard_GS3</dd>
+    <dt>Standard_GS4</dt>
+    <dd>Standard_GS4</dd>
+    <dt>Standard_GS4_4</dt>
+    <dd>Standard_GS4-4</dd>
+    <dt>Standard_GS4_8</dt>
+    <dd>Standard_GS4-8</dd>
+    <dt>Standard_GS5</dt>
+    <dd>Standard_GS5</dd>
+    <dt>Standard_GS5_16</dt>
+    <dd>Standard_GS5-16</dd>
+    <dt>Standard_GS5_8</dt>
+    <dd>Standard_GS5-8</dd>
+    <dt>Standard_H16</dt>
+    <dd>Standard_H16</dd>
+    <dt>Standard_H16m</dt>
+    <dd>Standard_H16m</dd>
+    <dt>Standard_H16mr</dt>
+    <dd>Standard_H16mr</dd>
+    <dt>Standard_H16r</dt>
+    <dd>Standard_H16r</dd>
+    <dt>Standard_H8</dt>
+    <dd>Standard_H8</dd>
+    <dt>Standard_H8m</dt>
+    <dd>Standard_H8m</dd>
+    <dt>Standard_L16s</dt>
+    <dd>Standard_L16s</dd>
+    <dt>Standard_L32s</dt>
+    <dd>Standard_L32s</dd>
+    <dt>Standard_L4s</dt>
+    <dd>Standard_L4s</dd>
+    <dt>Standard_L8s</dt>
+    <dd>Standard_L8s</dd>
+    <dt>Standard_M128_32ms</dt>
+    <dd>Standard_M128-32ms</dd>
+    <dt>Standard_M128_64ms</dt>
+    <dd>Standard_M128-64ms</dd>
+    <dt>Standard_M128ms</dt>
+    <dd>Standard_M128ms</dd>
+    <dt>Standard_M128s</dt>
+    <dd>Standard_M128s</dd>
+    <dt>Standard_M64_16ms</dt>
+    <dd>Standard_M64-16ms</dd>
+    <dt>Standard_M64_32ms</dt>
+    <dd>Standard_M64-32ms</dd>
+    <dt>Standard_M64ms</dt>
+    <dd>Standard_M64ms</dd>
+    <dt>Standard_M64s</dt>
+    <dd>Standard_M64s</dd>
+    <dt>Standard_NC12</dt>
+    <dd>Standard_NC12</dd>
+    <dt>Standard_NC12s_<wbr>v2</dt>
+    <dd>Standard_NC12s_v2</dd>
+    <dt>Standard_NC12s_<wbr>v3</dt>
+    <dd>Standard_NC12s_v3</dd>
+    <dt>Standard_NC24</dt>
+    <dd>Standard_NC24</dd>
+    <dt>Standard_NC24r</dt>
+    <dd>Standard_NC24r</dd>
+    <dt>Standard_NC24rs_<wbr>v2</dt>
+    <dd>Standard_NC24rs_v2</dd>
+    <dt>Standard_NC24rs_<wbr>v3</dt>
+    <dd>Standard_NC24rs_v3</dd>
+    <dt>Standard_NC24s_<wbr>v2</dt>
+    <dd>Standard_NC24s_v2</dd>
+    <dt>Standard_NC24s_<wbr>v3</dt>
+    <dd>Standard_NC24s_v3</dd>
+    <dt>Standard_NC6</dt>
+    <dd>Standard_NC6</dd>
+    <dt>Standard_NC6s_<wbr>v2</dt>
+    <dd>Standard_NC6s_v2</dd>
+    <dt>Standard_NC6s_<wbr>v3</dt>
+    <dd>Standard_NC6s_v3</dd>
+    <dt>Standard_ND12s</dt>
+    <dd>Standard_ND12s</dd>
+    <dt>Standard_ND24rs</dt>
+    <dd>Standard_ND24rs</dd>
+    <dt>Standard_ND24s</dt>
+    <dd>Standard_ND24s</dd>
+    <dt>Standard_ND6s</dt>
+    <dd>Standard_ND6s</dd>
+    <dt>Standard_NV12</dt>
+    <dd>Standard_NV12</dd>
+    <dt>Standard_NV24</dt>
+    <dd>Standard_NV24</dd>
+    <dt>Standard_NV6</dt>
+    <dd>Standard_NV6</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>STANDARD_A1</dt>
+    <dd>Standard_A1</dd>
+    <dt>STANDARD_A10</dt>
+    <dd>Standard_A10</dd>
+    <dt>STANDARD_A11</dt>
+    <dd>Standard_A11</dd>
+    <dt>STANDARD_A1_V2</dt>
+    <dd>Standard_A1_v2</dd>
+    <dt>STANDARD_A2</dt>
+    <dd>Standard_A2</dd>
+    <dt>STANDARD_A2_V2</dt>
+    <dd>Standard_A2_v2</dd>
+    <dt>STANDARD_A2M_V2</dt>
+    <dd>Standard_A2m_v2</dd>
+    <dt>STANDARD_A3</dt>
+    <dd>Standard_A3</dd>
+    <dt>STANDARD_A4</dt>
+    <dd>Standard_A4</dd>
+    <dt>STANDARD_A4_V2</dt>
+    <dd>Standard_A4_v2</dd>
+    <dt>STANDARD_A4M_V2</dt>
+    <dd>Standard_A4m_v2</dd>
+    <dt>STANDARD_A5</dt>
+    <dd>Standard_A5</dd>
+    <dt>STANDARD_A6</dt>
+    <dd>Standard_A6</dd>
+    <dt>STANDARD_A7</dt>
+    <dd>Standard_A7</dd>
+    <dt>STANDARD_A8</dt>
+    <dd>Standard_A8</dd>
+    <dt>STANDARD_A8_V2</dt>
+    <dd>Standard_A8_v2</dd>
+    <dt>STANDARD_A8M_V2</dt>
+    <dd>Standard_A8m_v2</dd>
+    <dt>STANDARD_A9</dt>
+    <dd>Standard_A9</dd>
+    <dt>STANDARD_B2MS</dt>
+    <dd>Standard_B2ms</dd>
+    <dt>STANDARD_B2S</dt>
+    <dd>Standard_B2s</dd>
+    <dt>STANDARD_B4MS</dt>
+    <dd>Standard_B4ms</dd>
+    <dt>STANDARD_B8MS</dt>
+    <dd>Standard_B8ms</dd>
+    <dt>STANDARD_D1</dt>
+    <dd>Standard_D1</dd>
+    <dt>STANDARD_D11</dt>
+    <dd>Standard_D11</dd>
+    <dt>STANDARD_D11_V2</dt>
+    <dd>Standard_D11_v2</dd>
+    <dt>STANDARD_D11_V2_PROMO</dt>
+    <dd>Standard_D11_v2_Promo</dd>
+    <dt>STANDARD_D12</dt>
+    <dd>Standard_D12</dd>
+    <dt>STANDARD_D12_V2</dt>
+    <dd>Standard_D12_v2</dd>
+    <dt>STANDARD_D12_V2_PROMO</dt>
+    <dd>Standard_D12_v2_Promo</dd>
+    <dt>STANDARD_D13</dt>
+    <dd>Standard_D13</dd>
+    <dt>STANDARD_D13_V2</dt>
+    <dd>Standard_D13_v2</dd>
+    <dt>STANDARD_D13_V2_PROMO</dt>
+    <dd>Standard_D13_v2_Promo</dd>
+    <dt>STANDARD_D14</dt>
+    <dd>Standard_D14</dd>
+    <dt>STANDARD_D14_V2</dt>
+    <dd>Standard_D14_v2</dd>
+    <dt>STANDARD_D14_V2_PROMO</dt>
+    <dd>Standard_D14_v2_Promo</dd>
+    <dt>STANDARD_D15_V2</dt>
+    <dd>Standard_D15_v2</dd>
+    <dt>STANDARD_D16_V3</dt>
+    <dd>Standard_D16_v3</dd>
+    <dt>STANDARD_D16S_V3</dt>
+    <dd>Standard_D16s_v3</dd>
+    <dt>STANDARD_D1_V2</dt>
+    <dd>Standard_D1_v2</dd>
+    <dt>STANDARD_D2</dt>
+    <dd>Standard_D2</dd>
+    <dt>STANDARD_D2_V2</dt>
+    <dd>Standard_D2_v2</dd>
+    <dt>STANDARD_D2_V2_PROMO</dt>
+    <dd>Standard_D2_v2_Promo</dd>
+    <dt>STANDARD_D2_V3</dt>
+    <dd>Standard_D2_v3</dd>
+    <dt>STANDARD_D2S_V3</dt>
+    <dd>Standard_D2s_v3</dd>
+    <dt>STANDARD_D3</dt>
+    <dd>Standard_D3</dd>
+    <dt>STANDARD_D32_V3</dt>
+    <dd>Standard_D32_v3</dd>
+    <dt>STANDARD_D32S_V3</dt>
+    <dd>Standard_D32s_v3</dd>
+    <dt>STANDARD_D3_V2</dt>
+    <dd>Standard_D3_v2</dd>
+    <dt>STANDARD_D3_V2_PROMO</dt>
+    <dd>Standard_D3_v2_Promo</dd>
+    <dt>STANDARD_D4</dt>
+    <dd>Standard_D4</dd>
+    <dt>STANDARD_D4_V2</dt>
+    <dd>Standard_D4_v2</dd>
+    <dt>STANDARD_D4_V2_PROMO</dt>
+    <dd>Standard_D4_v2_Promo</dd>
+    <dt>STANDARD_D4_V3</dt>
+    <dd>Standard_D4_v3</dd>
+    <dt>STANDARD_D4S_V3</dt>
+    <dd>Standard_D4s_v3</dd>
+    <dt>STANDARD_D5_V2</dt>
+    <dd>Standard_D5_v2</dd>
+    <dt>STANDARD_D5_V2_PROMO</dt>
+    <dd>Standard_D5_v2_Promo</dd>
+    <dt>STANDARD_D64_V3</dt>
+    <dd>Standard_D64_v3</dd>
+    <dt>STANDARD_D64S_V3</dt>
+    <dd>Standard_D64s_v3</dd>
+    <dt>STANDARD_D8_V3</dt>
+    <dd>Standard_D8_v3</dd>
+    <dt>STANDARD_D8S_V3</dt>
+    <dd>Standard_D8s_v3</dd>
+    <dt>STANDARD_DS1</dt>
+    <dd>Standard_DS1</dd>
+    <dt>STANDARD_DS11</dt>
+    <dd>Standard_DS11</dd>
+    <dt>STANDARD_DS11_V2</dt>
+    <dd>Standard_DS11_v2</dd>
+    <dt>STANDARD_DS11_V2_PROMO</dt>
+    <dd>Standard_DS11_v2_Promo</dd>
+    <dt>STANDARD_DS12</dt>
+    <dd>Standard_DS12</dd>
+    <dt>STANDARD_DS12_V2</dt>
+    <dd>Standard_DS12_v2</dd>
+    <dt>STANDARD_DS12_V2_PROMO</dt>
+    <dd>Standard_DS12_v2_Promo</dd>
+    <dt>STANDARD_DS13</dt>
+    <dd>Standard_DS13</dd>
+    <dt>STANDARD_DS13_2_V2</dt>
+    <dd>Standard_DS13-2_v2</dd>
+    <dt>STANDARD_DS13_4_V2</dt>
+    <dd>Standard_DS13-4_v2</dd>
+    <dt>STANDARD_DS13_V2</dt>
+    <dd>Standard_DS13_v2</dd>
+    <dt>STANDARD_DS13_V2_PROMO</dt>
+    <dd>Standard_DS13_v2_Promo</dd>
+    <dt>STANDARD_DS14</dt>
+    <dd>Standard_DS14</dd>
+    <dt>STANDARD_DS14_4_V2</dt>
+    <dd>Standard_DS14-4_v2</dd>
+    <dt>STANDARD_DS14_8_V2</dt>
+    <dd>Standard_DS14-8_v2</dd>
+    <dt>STANDARD_DS14_V2</dt>
+    <dd>Standard_DS14_v2</dd>
+    <dt>STANDARD_DS14_V2_PROMO</dt>
+    <dd>Standard_DS14_v2_Promo</dd>
+    <dt>STANDARD_DS15_V2</dt>
+    <dd>Standard_DS15_v2</dd>
+    <dt>STANDARD_DS1_V2</dt>
+    <dd>Standard_DS1_v2</dd>
+    <dt>STANDARD_DS2</dt>
+    <dd>Standard_DS2</dd>
+    <dt>STANDARD_DS2_V2</dt>
+    <dd>Standard_DS2_v2</dd>
+    <dt>STANDARD_DS2_V2_PROMO</dt>
+    <dd>Standard_DS2_v2_Promo</dd>
+    <dt>STANDARD_DS3</dt>
+    <dd>Standard_DS3</dd>
+    <dt>STANDARD_DS3_V2</dt>
+    <dd>Standard_DS3_v2</dd>
+    <dt>STANDARD_DS3_V2_PROMO</dt>
+    <dd>Standard_DS3_v2_Promo</dd>
+    <dt>STANDARD_DS4</dt>
+    <dd>Standard_DS4</dd>
+    <dt>STANDARD_DS4_V2</dt>
+    <dd>Standard_DS4_v2</dd>
+    <dt>STANDARD_DS4_V2_PROMO</dt>
+    <dd>Standard_DS4_v2_Promo</dd>
+    <dt>STANDARD_DS5_V2</dt>
+    <dd>Standard_DS5_v2</dd>
+    <dt>STANDARD_DS5_V2_PROMO</dt>
+    <dd>Standard_DS5_v2_Promo</dd>
+    <dt>STANDARD_E16_V3</dt>
+    <dd>Standard_E16_v3</dd>
+    <dt>STANDARD_E16S_V3</dt>
+    <dd>Standard_E16s_v3</dd>
+    <dt>STANDARD_E2_V3</dt>
+    <dd>Standard_E2_v3</dd>
+    <dt>STANDARD_E2S_V3</dt>
+    <dd>Standard_E2s_v3</dd>
+    <dt>STANDARD_E32_16S_V3</dt>
+    <dd>Standard_E32-16s_v3</dd>
+    <dt>STANDARD_E32_8S_V3</dt>
+    <dd>Standard_E32-8s_v3</dd>
+    <dt>STANDARD_E32_V3</dt>
+    <dd>Standard_E32_v3</dd>
+    <dt>STANDARD_E32S_V3</dt>
+    <dd>Standard_E32s_v3</dd>
+    <dt>STANDARD_E4_V3</dt>
+    <dd>Standard_E4_v3</dd>
+    <dt>STANDARD_E4S_V3</dt>
+    <dd>Standard_E4s_v3</dd>
+    <dt>STANDARD_E64_16S_V3</dt>
+    <dd>Standard_E64-16s_v3</dd>
+    <dt>STANDARD_E64_32S_V3</dt>
+    <dd>Standard_E64-32s_v3</dd>
+    <dt>STANDARD_E64_V3</dt>
+    <dd>Standard_E64_v3</dd>
+    <dt>STANDARD_E64S_V3</dt>
+    <dd>Standard_E64s_v3</dd>
+    <dt>STANDARD_E8_V3</dt>
+    <dd>Standard_E8_v3</dd>
+    <dt>STANDARD_E8S_V3</dt>
+    <dd>Standard_E8s_v3</dd>
+    <dt>STANDARD_F1</dt>
+    <dd>Standard_F1</dd>
+    <dt>STANDARD_F16</dt>
+    <dd>Standard_F16</dd>
+    <dt>STANDARD_F16S</dt>
+    <dd>Standard_F16s</dd>
+    <dt>STANDARD_F16S_V2</dt>
+    <dd>Standard_F16s_v2</dd>
+    <dt>STANDARD_F1S</dt>
+    <dd>Standard_F1s</dd>
+    <dt>STANDARD_F2</dt>
+    <dd>Standard_F2</dd>
+    <dt>STANDARD_F2S</dt>
+    <dd>Standard_F2s</dd>
+    <dt>STANDARD_F2S_V2</dt>
+    <dd>Standard_F2s_v2</dd>
+    <dt>STANDARD_F32S_V2</dt>
+    <dd>Standard_F32s_v2</dd>
+    <dt>STANDARD_F4</dt>
+    <dd>Standard_F4</dd>
+    <dt>STANDARD_F4S</dt>
+    <dd>Standard_F4s</dd>
+    <dt>STANDARD_F4S_V2</dt>
+    <dd>Standard_F4s_v2</dd>
+    <dt>STANDARD_F64S_V2</dt>
+    <dd>Standard_F64s_v2</dd>
+    <dt>STANDARD_F72S_V2</dt>
+    <dd>Standard_F72s_v2</dd>
+    <dt>STANDARD_F8</dt>
+    <dd>Standard_F8</dd>
+    <dt>STANDARD_F8S</dt>
+    <dd>Standard_F8s</dd>
+    <dt>STANDARD_F8S_V2</dt>
+    <dd>Standard_F8s_v2</dd>
+    <dt>STANDARD_G1</dt>
+    <dd>Standard_G1</dd>
+    <dt>STANDARD_G2</dt>
+    <dd>Standard_G2</dd>
+    <dt>STANDARD_G3</dt>
+    <dd>Standard_G3</dd>
+    <dt>STANDARD_G4</dt>
+    <dd>Standard_G4</dd>
+    <dt>STANDARD_G5</dt>
+    <dd>Standard_G5</dd>
+    <dt>STANDARD_GS1</dt>
+    <dd>Standard_GS1</dd>
+    <dt>STANDARD_GS2</dt>
+    <dd>Standard_GS2</dd>
+    <dt>STANDARD_GS3</dt>
+    <dd>Standard_GS3</dd>
+    <dt>STANDARD_GS4</dt>
+    <dd>Standard_GS4</dd>
+    <dt>STANDARD_GS4_4</dt>
+    <dd>Standard_GS4-4</dd>
+    <dt>STANDARD_GS4_8</dt>
+    <dd>Standard_GS4-8</dd>
+    <dt>STANDARD_GS5</dt>
+    <dd>Standard_GS5</dd>
+    <dt>STANDARD_GS5_16</dt>
+    <dd>Standard_GS5-16</dd>
+    <dt>STANDARD_GS5_8</dt>
+    <dd>Standard_GS5-8</dd>
+    <dt>STANDARD_H16</dt>
+    <dd>Standard_H16</dd>
+    <dt>STANDARD_H16M</dt>
+    <dd>Standard_H16m</dd>
+    <dt>STANDARD_H16MR</dt>
+    <dd>Standard_H16mr</dd>
+    <dt>STANDARD_H16R</dt>
+    <dd>Standard_H16r</dd>
+    <dt>STANDARD_H8</dt>
+    <dd>Standard_H8</dd>
+    <dt>STANDARD_H8M</dt>
+    <dd>Standard_H8m</dd>
+    <dt>STANDARD_L16S</dt>
+    <dd>Standard_L16s</dd>
+    <dt>STANDARD_L32S</dt>
+    <dd>Standard_L32s</dd>
+    <dt>STANDARD_L4S</dt>
+    <dd>Standard_L4s</dd>
+    <dt>STANDARD_L8S</dt>
+    <dd>Standard_L8s</dd>
+    <dt>STANDARD_M128_32MS</dt>
+    <dd>Standard_M128-32ms</dd>
+    <dt>STANDARD_M128_64MS</dt>
+    <dd>Standard_M128-64ms</dd>
+    <dt>STANDARD_M128MS</dt>
+    <dd>Standard_M128ms</dd>
+    <dt>STANDARD_M128S</dt>
+    <dd>Standard_M128s</dd>
+    <dt>STANDARD_M64_16MS</dt>
+    <dd>Standard_M64-16ms</dd>
+    <dt>STANDARD_M64_32MS</dt>
+    <dd>Standard_M64-32ms</dd>
+    <dt>STANDARD_M64MS</dt>
+    <dd>Standard_M64ms</dd>
+    <dt>STANDARD_M64S</dt>
+    <dd>Standard_M64s</dd>
+    <dt>STANDARD_NC12</dt>
+    <dd>Standard_NC12</dd>
+    <dt>STANDARD_NC12S_V2</dt>
+    <dd>Standard_NC12s_v2</dd>
+    <dt>STANDARD_NC12S_V3</dt>
+    <dd>Standard_NC12s_v3</dd>
+    <dt>STANDARD_NC24</dt>
+    <dd>Standard_NC24</dd>
+    <dt>STANDARD_NC24R</dt>
+    <dd>Standard_NC24r</dd>
+    <dt>STANDARD_NC24RS_V2</dt>
+    <dd>Standard_NC24rs_v2</dd>
+    <dt>STANDARD_NC24RS_V3</dt>
+    <dd>Standard_NC24rs_v3</dd>
+    <dt>STANDARD_NC24S_V2</dt>
+    <dd>Standard_NC24s_v2</dd>
+    <dt>STANDARD_NC24S_V3</dt>
+    <dd>Standard_NC24s_v3</dd>
+    <dt>STANDARD_NC6</dt>
+    <dd>Standard_NC6</dd>
+    <dt>STANDARD_NC6S_V2</dt>
+    <dd>Standard_NC6s_v2</dd>
+    <dt>STANDARD_NC6S_V3</dt>
+    <dd>Standard_NC6s_v3</dd>
+    <dt>STANDARD_ND12S</dt>
+    <dd>Standard_ND12s</dd>
+    <dt>STANDARD_ND24RS</dt>
+    <dd>Standard_ND24rs</dd>
+    <dt>STANDARD_ND24S</dt>
+    <dd>Standard_ND24s</dd>
+    <dt>STANDARD_ND6S</dt>
+    <dd>Standard_ND6s</dd>
+    <dt>STANDARD_NV12</dt>
+    <dd>Standard_NV12</dd>
+    <dt>STANDARD_NV24</dt>
+    <dd>Standard_NV24</dd>
+    <dt>STANDARD_NV6</dt>
+    <dd>Standard_NV6</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="containerservicewindowsprofile">Container<wbr>Service<wbr>Windows<wbr>Profile</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3195,25 +4179,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="adminpassword_csharp">
 <a href="#adminpassword_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The administrator password to use for Windows VMs.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="adminusername_csharp">
 <a href="#adminusername_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The administrator username to use for Windows VMs.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3222,25 +4203,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="adminpassword_go">
 <a href="#adminpassword_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The administrator password to use for Windows VMs.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="adminusername_go">
 <a href="#adminusername_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The administrator username to use for Windows VMs.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3249,25 +4227,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="adminpassword_nodejs">
 <a href="#adminpassword_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The administrator password to use for Windows VMs.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="adminusername_nodejs">
 <a href="#adminusername_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The administrator username to use for Windows VMs.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3276,37 +4251,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="admin_password_python">
 <a href="#admin_password_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The administrator password to use for Windows VMs.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="admin_username_python">
 <a href="#admin_username_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The administrator username to use for Windows VMs.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="containerservicewindowsprofileresponse">Container<wbr>Service<wbr>Windows<wbr>Profile<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3314,25 +4277,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="adminpassword_csharp">
 <a href="#adminpassword_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The administrator password to use for Windows VMs.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="adminusername_csharp">
 <a href="#adminusername_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The administrator username to use for Windows VMs.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3341,25 +4301,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="adminpassword_go">
 <a href="#adminpassword_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The administrator password to use for Windows VMs.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="adminusername_go">
 <a href="#adminusername_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The administrator username to use for Windows VMs.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3368,25 +4325,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="adminpassword_nodejs">
 <a href="#adminpassword_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The administrator password to use for Windows VMs.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="adminusername_nodejs">
 <a href="#adminusername_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The administrator username to use for Windows VMs.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3395,33 +4349,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="admin_password_python">
 <a href="#admin_password_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The administrator password to use for Windows VMs.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="admin_username_python">
 <a href="#admin_username_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The administrator username to use for Windows VMs.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 
 
 <h2 id="package-details">Package Details</h2>

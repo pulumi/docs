@@ -2,7 +2,7 @@
 ---
 title: "IdentityProvider"
 title_tag: "azure-nextgen.apimanagement.IdentityProvider"
-meta_desc: "Explore the IdentityProvider resource of the apimanagement module, including examples, input properties, output properties, lookup functions, and supporting types. Identity Provider details."
+meta_desc: "Documentation for the azure-nextgen.apimanagement.IdentityProvider resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -11,6 +11,7 @@ meta_desc: "Explore the IdentityProvider resource of the apimanagement module, i
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Identity Provider details.
+Latest API Version: 2019-12-01.
 
 
 {{% examples %}}
@@ -116,7 +117,7 @@ const identityProvider = new azure_nextgen.apimanagement.latest.IdentityProvider
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IdentityProvider</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">IdentityProviderArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">IdentityProvider</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">IdentityProviderArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -124,11 +125,11 @@ const identityProvider = new azure_nextgen.apimanagement.latest.IdentityProvider
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIdentityProvider</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">IdentityProviderArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IdentityProvider</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewIdentityProvider</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">IdentityProviderArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">IdentityProvider</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IdentityProvider</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">IdentityProviderArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">IdentityProvider</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">IdentityProviderArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -139,7 +140,7 @@ const identityProvider = new azure_nextgen.apimanagement.latest.IdentityProvider
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -208,7 +209,7 @@ const identityProvider = new azure_nextgen.apimanagement.latest.IdentityProvider
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -247,7 +248,7 @@ const identityProvider = new azure_nextgen.apimanagement.latest.IdentityProvider
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -288,7 +289,6 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -296,135 +296,121 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
             title="Required">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client Id of the Application in the external Identity Provider. It is App ID for Facebook login, Client ID for Google login, App ID for Microsoft.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="clientsecret_csharp">
 <a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client secret of the Application in external Identity Provider, used to authenticate login request. For example, it is App Secret for Facebook login, API Key for Google login, Public Key for Microsoft. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="identityprovidername_csharp">
 <a href="#identityprovidername_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identity Provider Type identifier.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedtenants_csharp">
 <a href="#allowedtenants_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Tenants</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of Allowed Tenants when configuring Azure Active Directory login.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authority_csharp">
 <a href="#authority_csharp" style="color: inherit; text-decoration: inherit;">Authority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenID Connect discovery endpoint hostname for AAD or AAD B2C.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="passwordresetpolicyname_csharp">
 <a href="#passwordresetpolicyname_csharp" style="color: inherit; text-decoration: inherit;">Password<wbr>Reset<wbr>Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password Reset Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="profileeditingpolicyname_csharp">
 <a href="#profileeditingpolicyname_csharp" style="color: inherit; text-decoration: inherit;">Profile<wbr>Editing<wbr>Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Profile Editing Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="signinpolicyname_csharp">
 <a href="#signinpolicyname_csharp" style="color: inherit; text-decoration: inherit;">Signin<wbr>Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signin Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="signintenant_csharp">
 <a href="#signintenant_csharp" style="color: inherit; text-decoration: inherit;">Signin<wbr>Tenant</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TenantId to use instead of Common when logging into Active Directory{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="signuppolicyname_csharp">
 <a href="#signuppolicyname_csharp" style="color: inherit; text-decoration: inherit;">Signup<wbr>Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signup Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Identity<wbr>Provider<wbr>Type</span>
+        <span class="property-type">string | <a href="#identityprovidertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Api<wbr>Management.<wbr>Identity<wbr>Provider<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Identity Provider Type identifier.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -433,135 +419,121 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
             title="Required">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client Id of the Application in the external Identity Provider. It is App ID for Facebook login, Client ID for Google login, App ID for Microsoft.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="clientsecret_go">
 <a href="#clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client secret of the Application in external Identity Provider, used to authenticate login request. For example, it is App Secret for Facebook login, API Key for Google login, Public Key for Microsoft. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="identityprovidername_go">
 <a href="#identityprovidername_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Provider<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identity Provider Type identifier.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedtenants_go">
 <a href="#allowedtenants_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Tenants</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of Allowed Tenants when configuring Azure Active Directory login.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authority_go">
 <a href="#authority_go" style="color: inherit; text-decoration: inherit;">Authority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenID Connect discovery endpoint hostname for AAD or AAD B2C.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="passwordresetpolicyname_go">
 <a href="#passwordresetpolicyname_go" style="color: inherit; text-decoration: inherit;">Password<wbr>Reset<wbr>Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password Reset Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="profileeditingpolicyname_go">
 <a href="#profileeditingpolicyname_go" style="color: inherit; text-decoration: inherit;">Profile<wbr>Editing<wbr>Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Profile Editing Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="signinpolicyname_go">
 <a href="#signinpolicyname_go" style="color: inherit; text-decoration: inherit;">Signin<wbr>Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signin Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="signintenant_go">
 <a href="#signintenant_go" style="color: inherit; text-decoration: inherit;">Signin<wbr>Tenant</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TenantId to use instead of Common when logging into Active Directory{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="signuppolicyname_go">
 <a href="#signuppolicyname_go" style="color: inherit; text-decoration: inherit;">Signup<wbr>Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signup Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#identityprovidertype">Identity<wbr>Provider<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Identity Provider Type identifier.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -570,135 +542,121 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
             title="Required">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client Id of the Application in the external Identity Provider. It is App ID for Facebook login, Client ID for Google login, App ID for Microsoft.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="clientsecret_nodejs">
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client secret of the Application in external Identity Provider, used to authenticate login request. For example, it is App Secret for Facebook login, API Key for Google login, Public Key for Microsoft. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="identityprovidername_nodejs">
 <a href="#identityprovidername_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Provider<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identity Provider Type identifier.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedtenants_nodejs">
 <a href="#allowedtenants_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Tenants</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Allowed Tenants when configuring Azure Active Directory login.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authority_nodejs">
 <a href="#authority_nodejs" style="color: inherit; text-decoration: inherit;">authority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenID Connect discovery endpoint hostname for AAD or AAD B2C.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="passwordresetpolicyname_nodejs">
 <a href="#passwordresetpolicyname_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Reset<wbr>Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password Reset Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="profileeditingpolicyname_nodejs">
 <a href="#profileeditingpolicyname_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Editing<wbr>Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Profile Editing Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="signinpolicyname_nodejs">
 <a href="#signinpolicyname_nodejs" style="color: inherit; text-decoration: inherit;">signin<wbr>Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signin Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="signintenant_nodejs">
 <a href="#signintenant_nodejs" style="color: inherit; text-decoration: inherit;">signin<wbr>Tenant</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TenantId to use instead of Common when logging into Active Directory{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="signuppolicyname_nodejs">
 <a href="#signuppolicyname_nodejs" style="color: inherit; text-decoration: inherit;">signup<wbr>Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signup Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Identity<wbr>Provider<wbr>Type</span>
+        <span class="property-type">string | <a href="#identityprovidertype">Identity<wbr>Provider<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Identity Provider Type identifier.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -707,144 +665,126 @@ The IdentityProvider resource accepts the following [input]({{< relref "/docs/in
             title="Required">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Client Id of the Application in the external Identity Provider. It is App ID for Facebook login, Client ID for Google login, App ID for Microsoft.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="client_secret_python">
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Client secret of the Application in external Identity Provider, used to authenticate login request. For example, it is App Secret for Facebook login, API Key for Google login, Public Key for Microsoft. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="identity_provider_name_python">
 <a href="#identity_provider_name_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>provider_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identity Provider Type identifier.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowed_tenants_python">
 <a href="#allowed_tenants_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>tenants</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of Allowed Tenants when configuring Azure Active Directory login.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authority_python">
 <a href="#authority_python" style="color: inherit; text-decoration: inherit;">authority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OpenID Connect discovery endpoint hostname for AAD or AAD B2C.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_reset_policy_name_python">
 <a href="#password_reset_policy_name_python" style="color: inherit; text-decoration: inherit;">password_<wbr>reset_<wbr>policy_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password Reset Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="profile_editing_policy_name_python">
 <a href="#profile_editing_policy_name_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>editing_<wbr>policy_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Profile Editing Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="signin_policy_name_python">
 <a href="#signin_policy_name_python" style="color: inherit; text-decoration: inherit;">signin_<wbr>policy_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Signin Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="signin_tenant_python">
 <a href="#signin_tenant_python" style="color: inherit; text-decoration: inherit;">signin_<wbr>tenant</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The TenantId to use instead of Common when logging into Active Directory{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="signup_policy_name_python">
 <a href="#signup_policy_name_python" style="color: inherit; text-decoration: inherit;">signup_<wbr>policy_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Signup Policy Name. Only applies to AAD B2C Identity Provider.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Identity<wbr>Provider<wbr>Type</span>
+        <span class="property-type">str | <a href="#identityprovidertype">Identity<wbr>Provider<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Identity Provider Type identifier.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the IdentityProvider resource produces the following output properties:
-
 
 
 
@@ -855,25 +795,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -882,25 +819,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -909,25 +843,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -936,22 +867,20 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -961,11 +890,79 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+## Supporting Types
 
 
 
+<h4 id="identityprovidertype">Identity<wbr>Provider<wbr>Type</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Facebook</dt>
+    <dd>facebook{{% md %}}Facebook as Identity provider.{{% /md %}}</dd>
+    <dt>Google</dt>
+    <dd>google{{% md %}}Google as Identity provider.{{% /md %}}</dd>
+    <dt>Microsoft</dt>
+    <dd>microsoft{{% md %}}Microsoft Live as Identity provider.{{% /md %}}</dd>
+    <dt>Twitter</dt>
+    <dd>twitter{{% md %}}Twitter as Identity provider.{{% /md %}}</dd>
+    <dt>Aad</dt>
+    <dd>aad{{% md %}}Azure Active Directory as Identity provider.{{% /md %}}</dd>
+    <dt>Aad<wbr>B2C</dt>
+    <dd>aadB2C{{% md %}}Azure Active Directory B2C as Identity provider.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Identity<wbr>Provider<wbr>Type<wbr>Facebook</dt>
+    <dd>facebook{{% md %}}Facebook as Identity provider.{{% /md %}}</dd>
+    <dt>Identity<wbr>Provider<wbr>Type<wbr>Google</dt>
+    <dd>google{{% md %}}Google as Identity provider.{{% /md %}}</dd>
+    <dt>Identity<wbr>Provider<wbr>Type<wbr>Microsoft</dt>
+    <dd>microsoft{{% md %}}Microsoft Live as Identity provider.{{% /md %}}</dd>
+    <dt>Identity<wbr>Provider<wbr>Type<wbr>Twitter</dt>
+    <dd>twitter{{% md %}}Twitter as Identity provider.{{% /md %}}</dd>
+    <dt>Identity<wbr>Provider<wbr>Type<wbr>Aad</dt>
+    <dd>aad{{% md %}}Azure Active Directory as Identity provider.{{% /md %}}</dd>
+    <dt>Identity<wbr>Provider<wbr>Type<wbr>Aad<wbr>B2C</dt>
+    <dd>aadB2C{{% md %}}Azure Active Directory B2C as Identity provider.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Facebook</dt>
+    <dd>facebook{{% md %}}Facebook as Identity provider.{{% /md %}}</dd>
+    <dt>Google</dt>
+    <dd>google{{% md %}}Google as Identity provider.{{% /md %}}</dd>
+    <dt>Microsoft</dt>
+    <dd>microsoft{{% md %}}Microsoft Live as Identity provider.{{% /md %}}</dd>
+    <dt>Twitter</dt>
+    <dd>twitter{{% md %}}Twitter as Identity provider.{{% /md %}}</dd>
+    <dt>Aad</dt>
+    <dd>aad{{% md %}}Azure Active Directory as Identity provider.{{% /md %}}</dd>
+    <dt>Aad<wbr>B2C</dt>
+    <dd>aadB2C{{% md %}}Azure Active Directory B2C as Identity provider.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>FACEBOOK</dt>
+    <dd>facebook{{% md %}}Facebook as Identity provider.{{% /md %}}</dd>
+    <dt>GOOGLE</dt>
+    <dd>google{{% md %}}Google as Identity provider.{{% /md %}}</dd>
+    <dt>MICROSOFT</dt>
+    <dd>microsoft{{% md %}}Microsoft Live as Identity provider.{{% /md %}}</dd>
+    <dt>TWITTER</dt>
+    <dd>twitter{{% md %}}Twitter as Identity provider.{{% /md %}}</dd>
+    <dt>AAD</dt>
+    <dd>aad{{% md %}}Azure Active Directory as Identity provider.{{% /md %}}</dd>
+    <dt>AAD_B2_C</dt>
+    <dd>aadB2C{{% md %}}Azure Active Directory B2C as Identity provider.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>

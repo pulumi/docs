@@ -47,7 +47,6 @@ meta_desc: "Explore the GetScalingPlan function of the desktopvirtualization mod
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -55,25 +54,22 @@ The following arguments are supported:
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="scalingplanname_csharp">
 <a href="#scalingplanname_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Plan<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the scaling plan.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -82,25 +78,22 @@ The following arguments are supported:
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="scalingplanname_go">
 <a href="#scalingplanname_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Plan<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the scaling plan.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -109,25 +102,22 @@ The following arguments are supported:
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="scalingplanname_nodejs">
 <a href="#scalingplanname_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Plan<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the scaling plan.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -136,28 +126,22 @@ The following arguments are supported:
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="scaling_plan_name_python">
 <a href="#scaling_plan_name_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>plan_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the scaling plan.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -168,7 +152,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -176,125 +159,112 @@ The following output properties are available:
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of scaling plan.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="exclusiontag_csharp">
 <a href="#exclusiontag_csharp" style="color: inherit; text-decoration: inherit;">Exclusion<wbr>Tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Exclusion tag for scaling plan.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="friendlyname_csharp">
 <a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User friendly name of scaling plan.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="hostpoolreferences_csharp">
 <a href="#hostpoolreferences_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Pool<wbr>References</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalinghostpoolreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization.<wbr>Outputs.<wbr>Scaling<wbr>Host<wbr>Pool<wbr>Reference<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of ScalingHostPoolReference definitions.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="hostpooltype_csharp">
 <a href="#hostpooltype_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Pool<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}HostPool type for scaling plan.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="schedules_csharp">
 <a href="#schedules_csharp" style="color: inherit; text-decoration: inherit;">Schedules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalingscheduleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Desktop<wbr>Virtualization.<wbr>Outputs.<wbr>Scaling<wbr>Schedule<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of ScalingSchedule definitions.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="timezone_csharp">
 <a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timezone of the scaling plan.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -303,125 +273,112 @@ The following output properties are available:
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of scaling plan.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="exclusiontag_go">
 <a href="#exclusiontag_go" style="color: inherit; text-decoration: inherit;">Exclusion<wbr>Tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Exclusion tag for scaling plan.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="friendlyname_go">
 <a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User friendly name of scaling plan.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="hostpoolreferences_go">
 <a href="#hostpoolreferences_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Pool<wbr>References</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalinghostpoolreferenceresponse">[]Scaling<wbr>Host<wbr>Pool<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}List of ScalingHostPoolReference definitions.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="hostpooltype_go">
 <a href="#hostpooltype_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Pool<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}HostPool type for scaling plan.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="schedules_go">
 <a href="#schedules_go" style="color: inherit; text-decoration: inherit;">Schedules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalingscheduleresponse">[]Scaling<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}List of ScalingSchedule definitions.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="timezone_go">
 <a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timezone of the scaling plan.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -430,125 +387,112 @@ The following output properties are available:
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of scaling plan.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="exclusiontag_nodejs">
 <a href="#exclusiontag_nodejs" style="color: inherit; text-decoration: inherit;">exclusion<wbr>Tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Exclusion tag for scaling plan.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="friendlyname_nodejs">
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User friendly name of scaling plan.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="hostpoolreferences_nodejs">
 <a href="#hostpoolreferences_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Pool<wbr>References</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalinghostpoolreferenceresponse">Scaling<wbr>Host<wbr>Pool<wbr>Reference<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of ScalingHostPoolReference definitions.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="hostpooltype_nodejs">
 <a href="#hostpooltype_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Pool<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}HostPool type for scaling plan.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="schedules_nodejs">
 <a href="#schedules_nodejs" style="color: inherit; text-decoration: inherit;">schedules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalingscheduleresponse">Scaling<wbr>Schedule<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of ScalingSchedule definitions.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="timezone_nodejs">
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timezone of the scaling plan.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -557,128 +501,112 @@ The following output properties are available:
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of scaling plan.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="exclusion_tag_python">
 <a href="#exclusion_tag_python" style="color: inherit; text-decoration: inherit;">exclusion_<wbr>tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Exclusion tag for scaling plan.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="friendly_name_python">
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User friendly name of scaling plan.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="host_pool_references_python">
 <a href="#host_pool_references_python" style="color: inherit; text-decoration: inherit;">host_<wbr>pool_<wbr>references</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalinghostpoolreferenceresponse">Sequence[Scaling<wbr>Host<wbr>Pool<wbr>Reference<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of ScalingHostPoolReference definitions.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="host_pool_type_python">
 <a href="#host_pool_type_python" style="color: inherit; text-decoration: inherit;">host_<wbr>pool_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}HostPool type for scaling plan.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="schedules_python">
 <a href="#schedules_python" style="color: inherit; text-decoration: inherit;">schedules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalingscheduleresponse">Sequence[Scaling<wbr>Schedule<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of ScalingSchedule definitions.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="time_zone_python">
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Timezone of the scaling plan.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -693,7 +621,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -701,25 +628,22 @@ The following output properties are available:
             title="Optional">
         <span id="hostpoolarmpath_csharp">
 <a href="#hostpoolarmpath_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Pool<wbr>Arm<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Arm path of referenced hostpool.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scalingplanenabled_csharp">
 <a href="#scalingplanenabled_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Plan<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the scaling plan enabled for this hostpool.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -728,25 +652,22 @@ The following output properties are available:
             title="Optional">
         <span id="hostpoolarmpath_go">
 <a href="#hostpoolarmpath_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Pool<wbr>Arm<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Arm path of referenced hostpool.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scalingplanenabled_go">
 <a href="#scalingplanenabled_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Plan<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the scaling plan enabled for this hostpool.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -755,25 +676,22 @@ The following output properties are available:
             title="Optional">
         <span id="hostpoolarmpath_nodejs">
 <a href="#hostpoolarmpath_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Pool<wbr>Arm<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Arm path of referenced hostpool.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scalingplanenabled_nodejs">
 <a href="#scalingplanenabled_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Plan<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is the scaling plan enabled for this hostpool.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -782,31 +700,24 @@ The following output properties are available:
             title="Optional">
         <span id="host_pool_arm_path_python">
 <a href="#host_pool_arm_path_python" style="color: inherit; text-decoration: inherit;">host_<wbr>pool_<wbr>arm_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Arm path of referenced hostpool.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scaling_plan_enabled_python">
 <a href="#scaling_plan_enabled_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>plan_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is the scaling plan enabled for this hostpool.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="scalingscheduleresponse">Scaling<wbr>Schedule<wbr>Response</h4>
-
 
 
 
@@ -820,185 +731,166 @@ The following output properties are available:
             title="Optional">
         <span id="daysofweek_csharp">
 <a href="#daysofweek_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>Of<wbr>Week</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of days of the week on which this schedule is active.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the scaling schedule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="offpeakloadbalancingalgorithm_csharp">
 <a href="#offpeakloadbalancingalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Off<wbr>Peak<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Load balancing algorithm for off-peak period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="offpeakstarttime_csharp">
 <a href="#offpeakstarttime_csharp" style="color: inherit; text-decoration: inherit;">Off<wbr>Peak<wbr>Start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Starting time for off-peak period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="peakloadbalancingalgorithm_csharp">
 <a href="#peakloadbalancingalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Peak<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Load balancing algorithm for peak period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="peakstarttime_csharp">
 <a href="#peakstarttime_csharp" style="color: inherit; text-decoration: inherit;">Peak<wbr>Start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Starting time for peak period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rampdowncapacitythresholdpct_csharp">
 <a href="#rampdowncapacitythresholdpct_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Capacity<wbr>Threshold<wbr>Pct</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Capacity threshold for ramp down period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rampdownforcelogoffusers_csharp">
 <a href="#rampdownforcelogoffusers_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Force<wbr>Logoff<wbr>Users</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should users be logged off forcefully from hosts.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rampdownloadbalancingalgorithm_csharp">
 <a href="#rampdownloadbalancingalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Load balancing algorithm for ramp down period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rampdownminimumhostspct_csharp">
 <a href="#rampdownminimumhostspct_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Minimum<wbr>Hosts<wbr>Pct</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum host percentage for ramp down period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rampdownnotificationmessage_csharp">
 <a href="#rampdownnotificationmessage_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Notification<wbr>Message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Notification message for users during ramp down period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rampdownnotificationminutes_csharp">
 <a href="#rampdownnotificationminutes_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Notification<wbr>Minutes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of minutes to wait to stop hosts during ramp down period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rampdownstarttime_csharp">
 <a href="#rampdownstarttime_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Starting time for ramp down period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rampdownstophostswhen_csharp">
 <a href="#rampdownstophostswhen_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Stop<wbr>Hosts<wbr>When</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies when to stop hosts during ramp down period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rampupalgorithm_csharp">
 <a href="#rampupalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rampupcapacitythresholdpct_csharp">
 <a href="#rampupcapacitythresholdpct_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Capacity<wbr>Threshold<wbr>Pct</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Capacity threshold for ramp up period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rampupminimumhostpct_csharp">
 <a href="#rampupminimumhostpct_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Minimum<wbr>Host<wbr>Pct</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum host percentage for ramp up period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rampupstarttime_csharp">
 <a href="#rampupstarttime_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Starting time for ramp up period.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1007,185 +899,166 @@ The following output properties are available:
             title="Optional">
         <span id="daysofweek_go">
 <a href="#daysofweek_go" style="color: inherit; text-decoration: inherit;">Days<wbr>Of<wbr>Week</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Set of days of the week on which this schedule is active.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the scaling schedule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="offpeakloadbalancingalgorithm_go">
 <a href="#offpeakloadbalancingalgorithm_go" style="color: inherit; text-decoration: inherit;">Off<wbr>Peak<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Load balancing algorithm for off-peak period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="offpeakstarttime_go">
 <a href="#offpeakstarttime_go" style="color: inherit; text-decoration: inherit;">Off<wbr>Peak<wbr>Start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Starting time for off-peak period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="peakloadbalancingalgorithm_go">
 <a href="#peakloadbalancingalgorithm_go" style="color: inherit; text-decoration: inherit;">Peak<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Load balancing algorithm for peak period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="peakstarttime_go">
 <a href="#peakstarttime_go" style="color: inherit; text-decoration: inherit;">Peak<wbr>Start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Starting time for peak period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rampdowncapacitythresholdpct_go">
 <a href="#rampdowncapacitythresholdpct_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Capacity<wbr>Threshold<wbr>Pct</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Capacity threshold for ramp down period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rampdownforcelogoffusers_go">
 <a href="#rampdownforcelogoffusers_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Force<wbr>Logoff<wbr>Users</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should users be logged off forcefully from hosts.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rampdownloadbalancingalgorithm_go">
 <a href="#rampdownloadbalancingalgorithm_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Load balancing algorithm for ramp down period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rampdownminimumhostspct_go">
 <a href="#rampdownminimumhostspct_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Minimum<wbr>Hosts<wbr>Pct</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum host percentage for ramp down period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rampdownnotificationmessage_go">
 <a href="#rampdownnotificationmessage_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Notification<wbr>Message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Notification message for users during ramp down period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rampdownnotificationminutes_go">
 <a href="#rampdownnotificationminutes_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Notification<wbr>Minutes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of minutes to wait to stop hosts during ramp down period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rampdownstarttime_go">
 <a href="#rampdownstarttime_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Starting time for ramp down period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rampdownstophostswhen_go">
 <a href="#rampdownstophostswhen_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Stop<wbr>Hosts<wbr>When</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies when to stop hosts during ramp down period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rampupalgorithm_go">
 <a href="#rampupalgorithm_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rampupcapacitythresholdpct_go">
 <a href="#rampupcapacitythresholdpct_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Capacity<wbr>Threshold<wbr>Pct</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Capacity threshold for ramp up period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rampupminimumhostpct_go">
 <a href="#rampupminimumhostpct_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Minimum<wbr>Host<wbr>Pct</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum host percentage for ramp up period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rampupstarttime_go">
 <a href="#rampupstarttime_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Starting time for ramp up period.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1194,185 +1067,166 @@ The following output properties are available:
             title="Optional">
         <span id="daysofweek_nodejs">
 <a href="#daysofweek_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Of<wbr>Week</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of days of the week on which this schedule is active.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the scaling schedule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="offpeakloadbalancingalgorithm_nodejs">
 <a href="#offpeakloadbalancingalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">off<wbr>Peak<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Load balancing algorithm for off-peak period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="offpeakstarttime_nodejs">
 <a href="#offpeakstarttime_nodejs" style="color: inherit; text-decoration: inherit;">off<wbr>Peak<wbr>Start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Starting time for off-peak period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="peakloadbalancingalgorithm_nodejs">
 <a href="#peakloadbalancingalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">peak<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Load balancing algorithm for peak period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="peakstarttime_nodejs">
 <a href="#peakstarttime_nodejs" style="color: inherit; text-decoration: inherit;">peak<wbr>Start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Starting time for peak period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rampdowncapacitythresholdpct_nodejs">
 <a href="#rampdowncapacitythresholdpct_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Down<wbr>Capacity<wbr>Threshold<wbr>Pct</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Capacity threshold for ramp down period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rampdownforcelogoffusers_nodejs">
 <a href="#rampdownforcelogoffusers_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Down<wbr>Force<wbr>Logoff<wbr>Users</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should users be logged off forcefully from hosts.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rampdownloadbalancingalgorithm_nodejs">
 <a href="#rampdownloadbalancingalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Down<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Load balancing algorithm for ramp down period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rampdownminimumhostspct_nodejs">
 <a href="#rampdownminimumhostspct_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Down<wbr>Minimum<wbr>Hosts<wbr>Pct</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum host percentage for ramp down period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rampdownnotificationmessage_nodejs">
 <a href="#rampdownnotificationmessage_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Down<wbr>Notification<wbr>Message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Notification message for users during ramp down period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rampdownnotificationminutes_nodejs">
 <a href="#rampdownnotificationminutes_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Down<wbr>Notification<wbr>Minutes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of minutes to wait to stop hosts during ramp down period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rampdownstarttime_nodejs">
 <a href="#rampdownstarttime_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Down<wbr>Start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Starting time for ramp down period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rampdownstophostswhen_nodejs">
 <a href="#rampdownstophostswhen_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Down<wbr>Stop<wbr>Hosts<wbr>When</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies when to stop hosts during ramp down period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rampupalgorithm_nodejs">
 <a href="#rampupalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Up<wbr>Algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rampupcapacitythresholdpct_nodejs">
 <a href="#rampupcapacitythresholdpct_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Up<wbr>Capacity<wbr>Threshold<wbr>Pct</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Capacity threshold for ramp up period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rampupminimumhostpct_nodejs">
 <a href="#rampupminimumhostpct_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Up<wbr>Minimum<wbr>Host<wbr>Pct</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum host percentage for ramp up period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rampupstarttime_nodejs">
 <a href="#rampupstarttime_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Up<wbr>Start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Starting time for ramp up period.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1381,188 +1235,166 @@ The following output properties are available:
             title="Optional">
         <span id="days_of_week_python">
 <a href="#days_of_week_python" style="color: inherit; text-decoration: inherit;">days_<wbr>of_<wbr>week</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of days of the week on which this schedule is active.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the scaling schedule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="off_peak_load_balancing_algorithm_python">
 <a href="#off_peak_load_balancing_algorithm_python" style="color: inherit; text-decoration: inherit;">off_<wbr>peak_<wbr>load_<wbr>balancing_<wbr>algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Load balancing algorithm for off-peak period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="off_peak_start_time_python">
 <a href="#off_peak_start_time_python" style="color: inherit; text-decoration: inherit;">off_<wbr>peak_<wbr>start_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Starting time for off-peak period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="peak_load_balancing_algorithm_python">
 <a href="#peak_load_balancing_algorithm_python" style="color: inherit; text-decoration: inherit;">peak_<wbr>load_<wbr>balancing_<wbr>algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Load balancing algorithm for peak period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="peak_start_time_python">
 <a href="#peak_start_time_python" style="color: inherit; text-decoration: inherit;">peak_<wbr>start_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Starting time for peak period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ramp_down_capacity_threshold_pct_python">
 <a href="#ramp_down_capacity_threshold_pct_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>down_<wbr>capacity_<wbr>threshold_<wbr>pct</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Capacity threshold for ramp down period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ramp_down_force_logoff_users_python">
 <a href="#ramp_down_force_logoff_users_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>down_<wbr>force_<wbr>logoff_<wbr>users</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should users be logged off forcefully from hosts.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ramp_down_load_balancing_algorithm_python">
 <a href="#ramp_down_load_balancing_algorithm_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>down_<wbr>load_<wbr>balancing_<wbr>algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Load balancing algorithm for ramp down period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ramp_down_minimum_hosts_pct_python">
 <a href="#ramp_down_minimum_hosts_pct_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>down_<wbr>minimum_<wbr>hosts_<wbr>pct</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum host percentage for ramp down period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ramp_down_notification_message_python">
 <a href="#ramp_down_notification_message_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>down_<wbr>notification_<wbr>message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Notification message for users during ramp down period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ramp_down_notification_minutes_python">
 <a href="#ramp_down_notification_minutes_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>down_<wbr>notification_<wbr>minutes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of minutes to wait to stop hosts during ramp down period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ramp_down_start_time_python">
 <a href="#ramp_down_start_time_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>down_<wbr>start_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Starting time for ramp down period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ramp_down_stop_hosts_when_python">
 <a href="#ramp_down_stop_hosts_when_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>down_<wbr>stop_<wbr>hosts_<wbr>when</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies when to stop hosts during ramp down period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ramp_up_algorithm_python">
 <a href="#ramp_up_algorithm_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>up_<wbr>algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ramp_up_capacity_threshold_pct_python">
 <a href="#ramp_up_capacity_threshold_pct_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>up_<wbr>capacity_<wbr>threshold_<wbr>pct</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Capacity threshold for ramp up period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ramp_up_minimum_host_pct_python">
 <a href="#ramp_up_minimum_host_pct_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>up_<wbr>minimum_<wbr>host_<wbr>pct</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum host percentage for ramp up period.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ramp_up_start_time_python">
 <a href="#ramp_up_start_time_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>up_<wbr>start_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Starting time for ramp up period.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

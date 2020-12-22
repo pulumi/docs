@@ -2,7 +2,7 @@
 ---
 title: "PrivateCloud"
 title_tag: "azure-nextgen.avs.PrivateCloud"
-meta_desc: "Explore the PrivateCloud resource of the avs module, including examples, input properties, output properties, lookup functions, and supporting types. A private cloud resource"
+meta_desc: "Documentation for the azure-nextgen.avs.PrivateCloud resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -11,6 +11,7 @@ meta_desc: "Explore the PrivateCloud resource of the avs module, including examp
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A private cloud resource
+Latest API Version: 2020-03-20.
 
 
 {{% examples %}}
@@ -142,7 +143,7 @@ const privateCloud = new azure_nextgen.avs.latest.PrivateCloud("privateCloud", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PrivateCloud</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">PrivateCloudArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PrivateCloud</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">PrivateCloudArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -150,11 +151,11 @@ const privateCloud = new azure_nextgen.avs.latest.PrivateCloud("privateCloud", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPrivateCloud</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">PrivateCloudArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PrivateCloud</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPrivateCloud</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">PrivateCloudArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PrivateCloud</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PrivateCloud</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">PrivateCloudArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PrivateCloud</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">PrivateCloudArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -165,7 +166,7 @@ const privateCloud = new azure_nextgen.avs.latest.PrivateCloud("privateCloud", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -234,7 +235,7 @@ const privateCloud = new azure_nextgen.avs.latest.PrivateCloud("privateCloud", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -273,7 +274,7 @@ const privateCloud = new azure_nextgen.avs.latest.PrivateCloud("privateCloud", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -314,7 +315,6 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -322,115 +322,103 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
             title="Required">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="managementcluster_csharp">
 <a href="#managementcluster_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Cluster</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementcluster">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS.<wbr>Inputs.<wbr>Management<wbr>Cluster<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default cluster used for management{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="networkblock_csharp">
 <a href="#networkblock_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Block</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The block of addresses should be unique across VNet in your subscription as well as on-premise. Make sure the CIDR format is conformed to (A.B.C.D/X) where A,B,C,D are between 0 and 255, and X is between 0 and 22{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="privatecloudname_csharp">
 <a href="#privatecloudname_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Cloud<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the private cloud{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The private cloud SKU{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="identitysources_csharp">
 <a href="#identitysources_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Sources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identitysource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS.<wbr>Inputs.<wbr>Identity<wbr>Source<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}vCenter Single Sign On Identity Sources{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="internet_csharp">
 <a href="#internet_csharp" style="color: inherit; text-decoration: inherit;">Internet</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS.<wbr>Internet<wbr>Enum</span>
+        <span class="property-type">string | <a href="#internetenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS.<wbr>Internet<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Connectivity to internet is enabled or disabled{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nsxtpassword_csharp">
 <a href="#nsxtpassword_csharp" style="color: inherit; text-decoration: inherit;">Nsxt<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optionally, set the NSX-T Manager password when the private cloud is created{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vcenterpassword_csharp">
 <a href="#vcenterpassword_csharp" style="color: inherit; text-decoration: inherit;">Vcenter<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optionally, set the vCenter admin password when the private cloud is created{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -439,115 +427,103 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
             title="Required">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="managementcluster_go">
 <a href="#managementcluster_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Cluster</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementcluster">Management<wbr>Cluster</a></span>
     </dt>
     <dd>{{% md %}}The default cluster used for management{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="networkblock_go">
 <a href="#networkblock_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Block</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The block of addresses should be unique across VNet in your subscription as well as on-premise. Make sure the CIDR format is conformed to (A.B.C.D/X) where A,B,C,D are between 0 and 255, and X is between 0 and 22{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="privatecloudname_go">
 <a href="#privatecloudname_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Cloud<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the private cloud{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sku">Sku</a></span>
     </dt>
     <dd>{{% md %}}The private cloud SKU{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="identitysources_go">
 <a href="#identitysources_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Sources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identitysource">[]Identity<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}vCenter Single Sign On Identity Sources{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="internet_go">
 <a href="#internet_go" style="color: inherit; text-decoration: inherit;">Internet</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#internetenum">Internet<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Connectivity to internet is enabled or disabled{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nsxtpassword_go">
 <a href="#nsxtpassword_go" style="color: inherit; text-decoration: inherit;">Nsxt<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optionally, set the NSX-T Manager password when the private cloud is created{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vcenterpassword_go">
 <a href="#vcenterpassword_go" style="color: inherit; text-decoration: inherit;">Vcenter<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optionally, set the vCenter admin password when the private cloud is created{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -556,115 +532,103 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
             title="Required">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="managementcluster_nodejs">
 <a href="#managementcluster_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Cluster</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementcluster">Management<wbr>Cluster</a></span>
     </dt>
     <dd>{{% md %}}The default cluster used for management{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="networkblock_nodejs">
 <a href="#networkblock_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Block</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The block of addresses should be unique across VNet in your subscription as well as on-premise. Make sure the CIDR format is conformed to (A.B.C.D/X) where A,B,C,D are between 0 and 255, and X is between 0 and 22{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="privatecloudname_nodejs">
 <a href="#privatecloudname_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Cloud<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the private cloud{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sku">Sku</a></span>
     </dt>
     <dd>{{% md %}}The private cloud SKU{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="identitysources_nodejs">
 <a href="#identitysources_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Sources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identitysource">Identity<wbr>Source[]</a></span>
     </dt>
     <dd>{{% md %}}vCenter Single Sign On Identity Sources{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="internet_nodejs">
 <a href="#internet_nodejs" style="color: inherit; text-decoration: inherit;">internet</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Internet<wbr>Enum</span>
+        <span class="property-type">string | <a href="#internetenum">Internet<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Connectivity to internet is enabled or disabled{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nsxtpassword_nodejs">
 <a href="#nsxtpassword_nodejs" style="color: inherit; text-decoration: inherit;">nsxt<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optionally, set the NSX-T Manager password when the private cloud is created{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vcenterpassword_nodejs">
 <a href="#vcenterpassword_nodejs" style="color: inherit; text-decoration: inherit;">vcenter<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optionally, set the vCenter admin password when the private cloud is created{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -673,124 +637,108 @@ The PrivateCloud resource accepts the following [input]({{< relref "/docs/intro/
             title="Required">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="management_cluster_python">
 <a href="#management_cluster_python" style="color: inherit; text-decoration: inherit;">management_<wbr>cluster</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementcluster">Management<wbr>Cluster<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default cluster used for management{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="network_block_python">
 <a href="#network_block_python" style="color: inherit; text-decoration: inherit;">network_<wbr>block</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The block of addresses should be unique across VNet in your subscription as well as on-premise. Make sure the CIDR format is conformed to (A.B.C.D/X) where A,B,C,D are between 0 and 255, and X is between 0 and 22{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="private_cloud_name_python">
 <a href="#private_cloud_name_python" style="color: inherit; text-decoration: inherit;">private_<wbr>cloud_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the private cloud{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The private cloud SKU{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="identity_sources_python">
 <a href="#identity_sources_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>sources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identitysource">Sequence[Identity<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}vCenter Single Sign On Identity Sources{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="internet_python">
 <a href="#internet_python" style="color: inherit; text-decoration: inherit;">internet</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Internet<wbr>Enum</span>
+        <span class="property-type">str | <a href="#internetenum">Internet<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Connectivity to internet is enabled or disabled{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nsxt_password_python">
 <a href="#nsxt_password_python" style="color: inherit; text-decoration: inherit;">nsxt_<wbr>password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optionally, set the NSX-T Manager password when the private cloud is created{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vcenter_password_python">
 <a href="#vcenter_password_python" style="color: inherit; text-decoration: inherit;">vcenter_<wbr>password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optionally, set the vCenter admin password when the private cloud is created{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the PrivateCloud resource produces the following output properties:
-
 
 
 
@@ -801,115 +749,103 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="endpoints_csharp">
 <a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS.<wbr>Outputs.<wbr>Endpoints<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The endpoints{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="managementnetwork_csharp">
 <a href="#managementnetwork_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network used to access vCenter Server and NSX-T Manager{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="nsxtcertificatethumbprint_csharp">
 <a href="#nsxtcertificatethumbprint_csharp" style="color: inherit; text-decoration: inherit;">Nsxt<wbr>Certificate<wbr>Thumbprint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Thumbprint of the NSX-T Manager SSL certificate{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningnetwork_csharp">
 <a href="#provisioningnetwork_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used for virtual machine cold migration, cloning, and snapshot migration{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provisioning state{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vcentercertificatethumbprint_csharp">
 <a href="#vcentercertificatethumbprint_csharp" style="color: inherit; text-decoration: inherit;">Vcenter<wbr>Certificate<wbr>Thumbprint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Thumbprint of the vCenter Server SSL certificate{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vmotionnetwork_csharp">
 <a href="#vmotionnetwork_csharp" style="color: inherit; text-decoration: inherit;">Vmotion<wbr>Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used for live migration of virtual machines{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="circuit_csharp">
 <a href="#circuit_csharp" style="color: inherit; text-decoration: inherit;">Circuit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#circuitresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS.<wbr>Outputs.<wbr>Circuit<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An ExpressRoute Circuit{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -918,115 +854,103 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="endpoints_go">
 <a href="#endpoints_go" style="color: inherit; text-decoration: inherit;">Endpoints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointsresponse">Endpoints<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The endpoints{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="managementnetwork_go">
 <a href="#managementnetwork_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network used to access vCenter Server and NSX-T Manager{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="nsxtcertificatethumbprint_go">
 <a href="#nsxtcertificatethumbprint_go" style="color: inherit; text-decoration: inherit;">Nsxt<wbr>Certificate<wbr>Thumbprint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Thumbprint of the NSX-T Manager SSL certificate{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningnetwork_go">
 <a href="#provisioningnetwork_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used for virtual machine cold migration, cloning, and snapshot migration{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provisioning state{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vcentercertificatethumbprint_go">
 <a href="#vcentercertificatethumbprint_go" style="color: inherit; text-decoration: inherit;">Vcenter<wbr>Certificate<wbr>Thumbprint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Thumbprint of the vCenter Server SSL certificate{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vmotionnetwork_go">
 <a href="#vmotionnetwork_go" style="color: inherit; text-decoration: inherit;">Vmotion<wbr>Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used for live migration of virtual machines{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="circuit_go">
 <a href="#circuit_go" style="color: inherit; text-decoration: inherit;">Circuit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#circuitresponse">Circuit<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An ExpressRoute Circuit{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1035,115 +959,103 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="endpoints_nodejs">
 <a href="#endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointsresponse">Endpoints<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The endpoints{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="managementnetwork_nodejs">
 <a href="#managementnetwork_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network used to access vCenter Server and NSX-T Manager{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="nsxtcertificatethumbprint_nodejs">
 <a href="#nsxtcertificatethumbprint_nodejs" style="color: inherit; text-decoration: inherit;">nsxt<wbr>Certificate<wbr>Thumbprint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Thumbprint of the NSX-T Manager SSL certificate{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningnetwork_nodejs">
 <a href="#provisioningnetwork_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used for virtual machine cold migration, cloning, and snapshot migration{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provisioning state{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vcentercertificatethumbprint_nodejs">
 <a href="#vcentercertificatethumbprint_nodejs" style="color: inherit; text-decoration: inherit;">vcenter<wbr>Certificate<wbr>Thumbprint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Thumbprint of the vCenter Server SSL certificate{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vmotionnetwork_nodejs">
 <a href="#vmotionnetwork_nodejs" style="color: inherit; text-decoration: inherit;">vmotion<wbr>Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used for live migration of virtual machines{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="circuit_nodejs">
 <a href="#circuit_nodejs" style="color: inherit; text-decoration: inherit;">circuit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#circuitresponse">Circuit<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An ExpressRoute Circuit{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1152,118 +1064,103 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="endpoints_python">
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointsresponse">Endpoints<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The endpoints{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="management_network_python">
 <a href="#management_network_python" style="color: inherit; text-decoration: inherit;">management_<wbr>network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Network used to access vCenter Server and NSX-T Manager{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="nsxt_certificate_thumbprint_python">
 <a href="#nsxt_certificate_thumbprint_python" style="color: inherit; text-decoration: inherit;">nsxt_<wbr>certificate_<wbr>thumbprint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Thumbprint of the NSX-T Manager SSL certificate{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioning_network_python">
 <a href="#provisioning_network_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Used for virtual machine cold migration, cloning, and snapshot migration{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provisioning state{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vcenter_certificate_thumbprint_python">
 <a href="#vcenter_certificate_thumbprint_python" style="color: inherit; text-decoration: inherit;">vcenter_<wbr>certificate_<wbr>thumbprint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Thumbprint of the vCenter Server SSL certificate{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vmotion_network_python">
 <a href="#vmotion_network_python" style="color: inherit; text-decoration: inherit;">vmotion_<wbr>network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Used for live migration of virtual machines{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="circuit_python">
 <a href="#circuit_python" style="color: inherit; text-decoration: inherit;">circuit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#circuitresponse">Circuit<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An ExpressRoute Circuit{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1274,13 +1171,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
 <h4 id="circuitresponse">Circuit<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1289,45 +1181,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="expressrouteid_csharp">
 <a href="#expressrouteid_csharp" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>ID</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the ExpressRoute Circuit (Microsoft Colo only){{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="expressrouteprivatepeeringid_csharp">
 <a href="#expressrouteprivatepeeringid_csharp" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Private<wbr>Peering<wbr>ID</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ExpressRoute Circuit private peering identifier{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="primarysubnet_csharp">
 <a href="#primarysubnet_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Subnet</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CIDR of primary subnet{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="secondarysubnet_csharp">
 <a href="#secondarysubnet_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Subnet</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CIDR of secondary subnet{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1336,45 +1223,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="expressrouteid_go">
 <a href="#expressrouteid_go" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>ID</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the ExpressRoute Circuit (Microsoft Colo only){{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="expressrouteprivatepeeringid_go">
 <a href="#expressrouteprivatepeeringid_go" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Private<wbr>Peering<wbr>ID</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ExpressRoute Circuit private peering identifier{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="primarysubnet_go">
 <a href="#primarysubnet_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Subnet</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CIDR of primary subnet{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="secondarysubnet_go">
 <a href="#secondarysubnet_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Subnet</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CIDR of secondary subnet{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1383,45 +1265,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="expressrouteid_nodejs">
 <a href="#expressrouteid_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>ID</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the ExpressRoute Circuit (Microsoft Colo only){{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="expressrouteprivatepeeringid_nodejs">
 <a href="#expressrouteprivatepeeringid_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>Private<wbr>Peering<wbr>ID</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ExpressRoute Circuit private peering identifier{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="primarysubnet_nodejs">
 <a href="#primarysubnet_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Subnet</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CIDR of primary subnet{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="secondarysubnet_nodejs">
 <a href="#secondarysubnet_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Subnet</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CIDR of secondary subnet{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1430,56 +1307,42 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="express_route_id_python">
 <a href="#express_route_id_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier of the ExpressRoute Circuit (Microsoft Colo only){{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="express_route_private_peering_id_python">
 <a href="#express_route_private_peering_id_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>private_<wbr>peering_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ExpressRoute Circuit private peering identifier{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="primary_subnet_python">
 <a href="#primary_subnet_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>subnet</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}CIDR of primary subnet{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="secondary_subnet_python">
 <a href="#secondary_subnet_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>subnet</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}CIDR of secondary subnet{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="endpointsresponse">Endpoints<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1488,35 +1351,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="hcxcloudmanager_csharp">
 <a href="#hcxcloudmanager_csharp" style="color: inherit; text-decoration: inherit;">Hcx<wbr>Cloud<wbr>Manager</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoint for the HCX Cloud Manager{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="nsxtmanager_csharp">
 <a href="#nsxtmanager_csharp" style="color: inherit; text-decoration: inherit;">Nsxt<wbr>Manager</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoint for the NSX-T Data Center manager{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vcsa_csharp">
 <a href="#vcsa_csharp" style="color: inherit; text-decoration: inherit;">Vcsa</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoint for Virtual Center Server Appliance{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1525,35 +1384,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="hcxcloudmanager_go">
 <a href="#hcxcloudmanager_go" style="color: inherit; text-decoration: inherit;">Hcx<wbr>Cloud<wbr>Manager</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoint for the HCX Cloud Manager{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="nsxtmanager_go">
 <a href="#nsxtmanager_go" style="color: inherit; text-decoration: inherit;">Nsxt<wbr>Manager</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoint for the NSX-T Data Center manager{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vcsa_go">
 <a href="#vcsa_go" style="color: inherit; text-decoration: inherit;">Vcsa</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoint for Virtual Center Server Appliance{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1562,35 +1417,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="hcxcloudmanager_nodejs">
 <a href="#hcxcloudmanager_nodejs" style="color: inherit; text-decoration: inherit;">hcx<wbr>Cloud<wbr>Manager</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoint for the HCX Cloud Manager{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="nsxtmanager_nodejs">
 <a href="#nsxtmanager_nodejs" style="color: inherit; text-decoration: inherit;">nsxt<wbr>Manager</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoint for the NSX-T Data Center manager{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vcsa_nodejs">
 <a href="#vcsa_nodejs" style="color: inherit; text-decoration: inherit;">vcsa</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoint for Virtual Center Server Appliance{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1599,47 +1450,34 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="hcx_cloud_manager_python">
 <a href="#hcx_cloud_manager_python" style="color: inherit; text-decoration: inherit;">hcx_<wbr>cloud_<wbr>manager</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Endpoint for the HCX Cloud Manager{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="nsxt_manager_python">
 <a href="#nsxt_manager_python" style="color: inherit; text-decoration: inherit;">nsxt_<wbr>manager</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Endpoint for the NSX-T Data Center manager{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vcsa_python">
 <a href="#vcsa_python" style="color: inherit; text-decoration: inherit;">vcsa</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Endpoint for Virtual Center Server Appliance{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="identitysource">Identity<wbr>Source</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1647,105 +1485,94 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="alias_csharp">
 <a href="#alias_csharp" style="color: inherit; text-decoration: inherit;">Alias</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain's NetBIOS name{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="basegroupdn_csharp">
 <a href="#basegroupdn_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Group<wbr>DN</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base distinguished name for groups{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="baseuserdn_csharp">
 <a href="#baseuserdn_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>User<wbr>DN</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base distinguished name for users{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="domain_csharp">
 <a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain's dns name{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the identity source{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the Active Directory user with a minimum of read-only access to Base DN for users and groups.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="primaryserver_csharp">
 <a href="#primaryserver_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Server</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Primary server URL{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="secondaryserver_csharp">
 <a href="#secondaryserver_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Server</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Secondary server URL{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ssl_csharp">
 <a href="#ssl_csharp" style="color: inherit; text-decoration: inherit;">Ssl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS.<wbr>Ssl<wbr>Enum</span>
+        <span class="property-type">string | <a href="#sslenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>AVS.<wbr>Ssl<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Protect LDAP communication using SSL certificate (LDAPS){{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of an Active Directory user with a minimum of read-only access to Base DN for users and group{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1754,105 +1581,94 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="alias_go">
 <a href="#alias_go" style="color: inherit; text-decoration: inherit;">Alias</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain's NetBIOS name{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="basegroupdn_go">
 <a href="#basegroupdn_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Group<wbr>DN</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base distinguished name for groups{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="baseuserdn_go">
 <a href="#baseuserdn_go" style="color: inherit; text-decoration: inherit;">Base<wbr>User<wbr>DN</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base distinguished name for users{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="domain_go">
 <a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain's dns name{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the identity source{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the Active Directory user with a minimum of read-only access to Base DN for users and groups.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="primaryserver_go">
 <a href="#primaryserver_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Server</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Primary server URL{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="secondaryserver_go">
 <a href="#secondaryserver_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Server</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Secondary server URL{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ssl_go">
 <a href="#ssl_go" style="color: inherit; text-decoration: inherit;">Ssl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#sslenum">Ssl<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Protect LDAP communication using SSL certificate (LDAPS){{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of an Active Directory user with a minimum of read-only access to Base DN for users and group{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1861,105 +1677,94 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="alias_nodejs">
 <a href="#alias_nodejs" style="color: inherit; text-decoration: inherit;">alias</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain's NetBIOS name{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="basegroupdn_nodejs">
 <a href="#basegroupdn_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Group<wbr>DN</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base distinguished name for groups{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="baseuserdn_nodejs">
 <a href="#baseuserdn_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>User<wbr>DN</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base distinguished name for users{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="domain_nodejs">
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain's dns name{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the identity source{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the Active Directory user with a minimum of read-only access to Base DN for users and groups.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="primaryserver_nodejs">
 <a href="#primaryserver_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Server</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Primary server URL{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="secondaryserver_nodejs">
 <a href="#secondaryserver_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Server</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Secondary server URL{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ssl_nodejs">
 <a href="#ssl_nodejs" style="color: inherit; text-decoration: inherit;">ssl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Ssl<wbr>Enum</span>
+        <span class="property-type">string | <a href="#sslenum">Ssl<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Protect LDAP communication using SSL certificate (LDAPS){{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of an Active Directory user with a minimum of read-only access to Base DN for users and group{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1968,117 +1773,97 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="alias_python">
 <a href="#alias_python" style="color: inherit; text-decoration: inherit;">alias</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain's NetBIOS name{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="base_group_dn_python">
 <a href="#base_group_dn_python" style="color: inherit; text-decoration: inherit;">base_<wbr>group_<wbr>dn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base distinguished name for groups{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="base_user_dn_python">
 <a href="#base_user_dn_python" style="color: inherit; text-decoration: inherit;">base_<wbr>user_<wbr>dn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base distinguished name for users{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="domain_python">
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain's dns name{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the identity source{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password of the Active Directory user with a minimum of read-only access to Base DN for users and groups.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="primary_server_python">
 <a href="#primary_server_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>server</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Primary server URL{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="secondary_server_python">
 <a href="#secondary_server_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>server</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Secondary server URL{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ssl_python">
 <a href="#ssl_python" style="color: inherit; text-decoration: inherit;">ssl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Ssl<wbr>Enum</span>
+        <span class="property-type">str | <a href="#sslenum">Ssl<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}Protect LDAP communication using SSL certificate (LDAPS){{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of an Active Directory user with a minimum of read-only access to Base DN for users and group{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="identitysourceresponse">Identity<wbr>Source<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2086,105 +1871,94 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="alias_csharp">
 <a href="#alias_csharp" style="color: inherit; text-decoration: inherit;">Alias</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain's NetBIOS name{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="basegroupdn_csharp">
 <a href="#basegroupdn_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Group<wbr>DN</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base distinguished name for groups{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="baseuserdn_csharp">
 <a href="#baseuserdn_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>User<wbr>DN</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base distinguished name for users{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="domain_csharp">
 <a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain's dns name{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the identity source{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the Active Directory user with a minimum of read-only access to Base DN for users and groups.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="primaryserver_csharp">
 <a href="#primaryserver_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Server</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Primary server URL{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="secondaryserver_csharp">
 <a href="#secondaryserver_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Server</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Secondary server URL{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ssl_csharp">
 <a href="#ssl_csharp" style="color: inherit; text-decoration: inherit;">Ssl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protect LDAP communication using SSL certificate (LDAPS){{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of an Active Directory user with a minimum of read-only access to Base DN for users and group{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2193,105 +1967,94 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="alias_go">
 <a href="#alias_go" style="color: inherit; text-decoration: inherit;">Alias</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain's NetBIOS name{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="basegroupdn_go">
 <a href="#basegroupdn_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Group<wbr>DN</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base distinguished name for groups{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="baseuserdn_go">
 <a href="#baseuserdn_go" style="color: inherit; text-decoration: inherit;">Base<wbr>User<wbr>DN</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base distinguished name for users{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="domain_go">
 <a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain's dns name{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the identity source{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the Active Directory user with a minimum of read-only access to Base DN for users and groups.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="primaryserver_go">
 <a href="#primaryserver_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Server</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Primary server URL{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="secondaryserver_go">
 <a href="#secondaryserver_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Server</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Secondary server URL{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ssl_go">
 <a href="#ssl_go" style="color: inherit; text-decoration: inherit;">Ssl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protect LDAP communication using SSL certificate (LDAPS){{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of an Active Directory user with a minimum of read-only access to Base DN for users and group{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2300,105 +2063,94 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="alias_nodejs">
 <a href="#alias_nodejs" style="color: inherit; text-decoration: inherit;">alias</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain's NetBIOS name{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="basegroupdn_nodejs">
 <a href="#basegroupdn_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Group<wbr>DN</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base distinguished name for groups{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="baseuserdn_nodejs">
 <a href="#baseuserdn_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>User<wbr>DN</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base distinguished name for users{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="domain_nodejs">
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain's dns name{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the identity source{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the Active Directory user with a minimum of read-only access to Base DN for users and groups.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="primaryserver_nodejs">
 <a href="#primaryserver_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Server</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Primary server URL{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="secondaryserver_nodejs">
 <a href="#secondaryserver_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Server</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Secondary server URL{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ssl_nodejs">
 <a href="#ssl_nodejs" style="color: inherit; text-decoration: inherit;">ssl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protect LDAP communication using SSL certificate (LDAPS){{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of an Active Directory user with a minimum of read-only access to Base DN for users and group{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2407,116 +2159,134 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="alias_python">
 <a href="#alias_python" style="color: inherit; text-decoration: inherit;">alias</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain's NetBIOS name{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="base_group_dn_python">
 <a href="#base_group_dn_python" style="color: inherit; text-decoration: inherit;">base_<wbr>group_<wbr>dn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base distinguished name for groups{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="base_user_dn_python">
 <a href="#base_user_dn_python" style="color: inherit; text-decoration: inherit;">base_<wbr>user_<wbr>dn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base distinguished name for users{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="domain_python">
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain's dns name{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the identity source{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password of the Active Directory user with a minimum of read-only access to Base DN for users and groups.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="primary_server_python">
 <a href="#primary_server_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>server</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Primary server URL{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="secondary_server_python">
 <a href="#secondary_server_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>server</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Secondary server URL{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ssl_python">
 <a href="#ssl_python" style="color: inherit; text-decoration: inherit;">ssl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Protect LDAP communication using SSL certificate (LDAPS){{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of an Active Directory user with a minimum of read-only access to Base DN for users and group{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="internetenum">Internet<wbr>Enum</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Enabled</dt>
+    <dd>Enabled</dd>
+    <dt>Disabled</dt>
+    <dd>Disabled</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Internet<wbr>Enum<wbr>Enabled</dt>
+    <dd>Enabled</dd>
+    <dt>Internet<wbr>Enum<wbr>Disabled</dt>
+    <dd>Disabled</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Enabled</dt>
+    <dd>Enabled</dd>
+    <dt>Disabled</dt>
+    <dd>Disabled</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>ENABLED</dt>
+    <dd>Enabled</dd>
+    <dt>DISABLED</dt>
+    <dd>Disabled</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="managementcluster">Management<wbr>Cluster</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2525,15 +2295,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="clustersize_csharp">
 <a href="#clustersize_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The cluster size{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2542,15 +2310,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="clustersize_go">
 <a href="#clustersize_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The cluster size{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2559,15 +2325,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="clustersize_nodejs">
 <a href="#clustersize_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The cluster size{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2576,26 +2340,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="cluster_size_python">
 <a href="#cluster_size_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The cluster size{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="managementclusterresponse">Management<wbr>Cluster<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2604,45 +2357,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="clusterid_csharp">
 <a href="#clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The identity{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="clustersize_csharp">
 <a href="#clustersize_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The cluster size{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="hosts_csharp">
 <a href="#hosts_csharp" style="color: inherit; text-decoration: inherit;">Hosts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The hosts{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the cluster provisioning{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2651,45 +2399,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="clusterid_go">
 <a href="#clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The identity{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="clustersize_go">
 <a href="#clustersize_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The cluster size{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="hosts_go">
 <a href="#hosts_go" style="color: inherit; text-decoration: inherit;">Hosts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The hosts{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the cluster provisioning{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2698,45 +2441,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="clusterid_nodejs">
 <a href="#clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The identity{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="clustersize_nodejs">
 <a href="#clustersize_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The cluster size{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="hosts_nodejs">
 <a href="#hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The hosts{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the cluster provisioning{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2745,57 +2483,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="cluster_id_python">
 <a href="#cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The identity{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="cluster_size_python">
 <a href="#cluster_size_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The cluster size{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="hosts_python">
 <a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The hosts{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The state of the cluster provisioning{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="sku">Sku</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2803,15 +2527,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2820,15 +2542,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2837,15 +2557,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2854,27 +2572,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="skuresponse">Sku<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2882,15 +2589,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2899,15 +2604,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2916,15 +2619,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2933,23 +2634,51 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="sslenum">Ssl<wbr>Enum</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Enabled</dt>
+    <dd>Enabled</dd>
+    <dt>Disabled</dt>
+    <dd>Disabled</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Ssl<wbr>Enum<wbr>Enabled</dt>
+    <dd>Enabled</dd>
+    <dt>Ssl<wbr>Enum<wbr>Disabled</dt>
+    <dd>Disabled</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Enabled</dt>
+    <dd>Enabled</dd>
+    <dt>Disabled</dt>
+    <dd>Disabled</dd>
+</dl>
+{{% /choosable %}}
 
-
-
-
-
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>ENABLED</dt>
+    <dd>Enabled</dd>
+    <dt>DISABLED</dt>
+    <dd>Disabled</dd>
+</dl>
+{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>

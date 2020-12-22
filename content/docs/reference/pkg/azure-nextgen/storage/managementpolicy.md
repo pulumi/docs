@@ -2,7 +2,7 @@
 ---
 title: "ManagementPolicy"
 title_tag: "azure-nextgen.storage.ManagementPolicy"
-meta_desc: "Explore the ManagementPolicy resource of the storage module, including examples, input properties, output properties, lookup functions, and supporting types. The Get Storage Account ManagementPolicies operation response."
+meta_desc: "Documentation for the azure-nextgen.storage.ManagementPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -11,6 +11,7 @@ meta_desc: "Explore the ManagementPolicy resource of the storage module, includi
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The Get Storage Account ManagementPolicies operation response.
+Latest API Version: 2019-06-01.
 
 
 {{% examples %}}
@@ -427,7 +428,7 @@ const managementPolicy = new azure_nextgen.storage.latest.ManagementPolicy("mana
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ManagementPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ManagementPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ManagementPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ManagementPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -435,11 +436,11 @@ const managementPolicy = new azure_nextgen.storage.latest.ManagementPolicy("mana
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewManagementPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ManagementPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ManagementPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewManagementPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ManagementPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ManagementPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ManagementPolicy</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ManagementPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ManagementPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ManagementPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -450,7 +451,7 @@ const managementPolicy = new azure_nextgen.storage.latest.ManagementPolicy("mana
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -519,7 +520,7 @@ const managementPolicy = new azure_nextgen.storage.latest.ManagementPolicy("mana
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -558,7 +559,7 @@ const managementPolicy = new azure_nextgen.storage.latest.ManagementPolicy("mana
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -599,7 +600,6 @@ The ManagementPolicy resource accepts the following [input]({{< relref "/docs/in
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -607,45 +607,40 @@ The ManagementPolicy resource accepts the following [input]({{< relref "/docs/in
             title="Required">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="managementpolicyname_csharp">
 <a href="#managementpolicyname_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Storage Account Management Policy. It should always be 'default'{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="policy_csharp">
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicyschema">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Schema<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Storage Account ManagementPolicy, in JSON format. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -654,45 +649,40 @@ The ManagementPolicy resource accepts the following [input]({{< relref "/docs/in
             title="Required">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="managementpolicyname_go">
 <a href="#managementpolicyname_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Storage Account Management Policy. It should always be 'default'{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="policy_go">
 <a href="#policy_go" style="color: inherit; text-decoration: inherit;">Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicyschema">Management<wbr>Policy<wbr>Schema</a></span>
     </dt>
     <dd>{{% md %}}The Storage Account ManagementPolicy, in JSON format. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -701,45 +691,40 @@ The ManagementPolicy resource accepts the following [input]({{< relref "/docs/in
             title="Required">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="managementpolicyname_nodejs">
 <a href="#managementpolicyname_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Storage Account Management Policy. It should always be 'default'{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="policy_nodejs">
 <a href="#policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicyschema">Management<wbr>Policy<wbr>Schema</a></span>
     </dt>
     <dd>{{% md %}}The Storage Account ManagementPolicy, in JSON format. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -748,54 +733,45 @@ The ManagementPolicy resource accepts the following [input]({{< relref "/docs/in
             title="Required">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="management_policy_name_python">
 <a href="#management_policy_name_python" style="color: inherit; text-decoration: inherit;">management_<wbr>policy_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Storage Account Management Policy. It should always be 'default'{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="policy_python">
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicyschema">Management<wbr>Policy<wbr>Schema<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Storage Account ManagementPolicy, in JSON format. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the ManagementPolicy resource produces the following output properties:
-
 
 
 
@@ -806,45 +782,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lastmodifiedtime_csharp">
 <a href="#lastmodifiedtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Returns the date and time the ManagementPolicies was last modified.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -853,45 +824,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lastmodifiedtime_go">
 <a href="#lastmodifiedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Returns the date and time the ManagementPolicies was last modified.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -900,45 +866,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lastmodifiedtime_nodejs">
 <a href="#lastmodifiedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Returns the date and time the ManagementPolicies was last modified.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -947,48 +908,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="last_modified_time_python">
 <a href="#last_modified_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Returns the date and time the ManagementPolicies was last modified.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -999,13 +952,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
 <h4 id="dateaftercreation">Date<wbr>After<wbr>Creation</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1014,15 +962,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="daysaftercreationgreaterthan_csharp">
 <a href="#daysaftercreationgreaterthan_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>After<wbr>Creation<wbr>Greater<wbr>Than</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Value indicating the age in days after creation{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1031,15 +977,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="daysaftercreationgreaterthan_go">
 <a href="#daysaftercreationgreaterthan_go" style="color: inherit; text-decoration: inherit;">Days<wbr>After<wbr>Creation<wbr>Greater<wbr>Than</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Value indicating the age in days after creation{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1048,15 +992,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="daysaftercreationgreaterthan_nodejs">
 <a href="#daysaftercreationgreaterthan_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>After<wbr>Creation<wbr>Greater<wbr>Than</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Value indicating the age in days after creation{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1065,27 +1007,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="days_after_creation_greater_than_python">
 <a href="#days_after_creation_greater_than_python" style="color: inherit; text-decoration: inherit;">days_<wbr>after_<wbr>creation_<wbr>greater_<wbr>than</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Value indicating the age in days after creation{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1093,15 +1024,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="daysaftercreationgreaterthan_csharp">
 <a href="#daysaftercreationgreaterthan_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>After<wbr>Creation<wbr>Greater<wbr>Than</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Value indicating the age in days after creation{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1110,15 +1039,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="daysaftercreationgreaterthan_go">
 <a href="#daysaftercreationgreaterthan_go" style="color: inherit; text-decoration: inherit;">Days<wbr>After<wbr>Creation<wbr>Greater<wbr>Than</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Value indicating the age in days after creation{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1127,15 +1054,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="daysaftercreationgreaterthan_nodejs">
 <a href="#daysaftercreationgreaterthan_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>After<wbr>Creation<wbr>Greater<wbr>Than</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Value indicating the age in days after creation{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1144,27 +1069,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="days_after_creation_greater_than_python">
 <a href="#days_after_creation_greater_than_python" style="color: inherit; text-decoration: inherit;">days_<wbr>after_<wbr>creation_<wbr>greater_<wbr>than</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Value indicating the age in days after creation{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="dateaftermodification">Date<wbr>After<wbr>Modification</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1172,15 +1086,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="daysaftermodificationgreaterthan_csharp">
 <a href="#daysaftermodificationgreaterthan_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>After<wbr>Modification<wbr>Greater<wbr>Than</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Value indicating the age in days after last modification{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1189,15 +1101,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="daysaftermodificationgreaterthan_go">
 <a href="#daysaftermodificationgreaterthan_go" style="color: inherit; text-decoration: inherit;">Days<wbr>After<wbr>Modification<wbr>Greater<wbr>Than</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Value indicating the age in days after last modification{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1206,15 +1116,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="daysaftermodificationgreaterthan_nodejs">
 <a href="#daysaftermodificationgreaterthan_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>After<wbr>Modification<wbr>Greater<wbr>Than</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Value indicating the age in days after last modification{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1223,27 +1131,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="days_after_modification_greater_than_python">
 <a href="#days_after_modification_greater_than_python" style="color: inherit; text-decoration: inherit;">days_<wbr>after_<wbr>modification_<wbr>greater_<wbr>than</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Value indicating the age in days after last modification{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="dateaftermodificationresponse">Date<wbr>After<wbr>Modification<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1251,15 +1148,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="daysaftermodificationgreaterthan_csharp">
 <a href="#daysaftermodificationgreaterthan_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>After<wbr>Modification<wbr>Greater<wbr>Than</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Value indicating the age in days after last modification{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1268,15 +1163,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="daysaftermodificationgreaterthan_go">
 <a href="#daysaftermodificationgreaterthan_go" style="color: inherit; text-decoration: inherit;">Days<wbr>After<wbr>Modification<wbr>Greater<wbr>Than</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Value indicating the age in days after last modification{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1285,15 +1178,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="daysaftermodificationgreaterthan_nodejs">
 <a href="#daysaftermodificationgreaterthan_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>After<wbr>Modification<wbr>Greater<wbr>Than</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Value indicating the age in days after last modification{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1302,26 +1193,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="days_after_modification_greater_than_python">
 <a href="#days_after_modification_greater_than_python" style="color: inherit; text-decoration: inherit;">days_<wbr>after_<wbr>modification_<wbr>greater_<wbr>than</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Value indicating the age in days after last modification{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="managementpolicyaction">Management<wbr>Policy<wbr>Action</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1330,25 +1210,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="baseblob_csharp">
 <a href="#baseblob_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Blob</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicybaseblob">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Base<wbr>Blob<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for base blob{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="snapshot_csharp">
 <a href="#snapshot_csharp" style="color: inherit; text-decoration: inherit;">Snapshot</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicysnapshot">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Snap<wbr>Shot<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for snapshot{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1357,25 +1234,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="baseblob_go">
 <a href="#baseblob_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Blob</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicybaseblob">Management<wbr>Policy<wbr>Base<wbr>Blob</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for base blob{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="snapshot_go">
 <a href="#snapshot_go" style="color: inherit; text-decoration: inherit;">Snapshot</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicysnapshot">Management<wbr>Policy<wbr>Snap<wbr>Shot</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for snapshot{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1384,25 +1258,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="baseblob_nodejs">
 <a href="#baseblob_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Blob</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicybaseblob">Management<wbr>Policy<wbr>Base<wbr>Blob</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for base blob{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="snapshot_nodejs">
 <a href="#snapshot_nodejs" style="color: inherit; text-decoration: inherit;">snapshot</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicysnapshot">Management<wbr>Policy<wbr>Snap<wbr>Shot</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for snapshot{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1411,36 +1282,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="base_blob_python">
 <a href="#base_blob_python" style="color: inherit; text-decoration: inherit;">base_<wbr>blob</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicybaseblob">Management<wbr>Policy<wbr>Base<wbr>Blob<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for base blob{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="snapshot_python">
 <a href="#snapshot_python" style="color: inherit; text-decoration: inherit;">snapshot</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicysnapshot">Management<wbr>Policy<wbr>Snap<wbr>Shot<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for snapshot{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="managementpolicyactionresponse">Management<wbr>Policy<wbr>Action<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1449,25 +1308,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="baseblob_csharp">
 <a href="#baseblob_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Blob</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicybaseblobresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Base<wbr>Blob<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for base blob{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="snapshot_csharp">
 <a href="#snapshot_csharp" style="color: inherit; text-decoration: inherit;">Snapshot</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicysnapshotresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Snap<wbr>Shot<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for snapshot{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1476,25 +1332,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="baseblob_go">
 <a href="#baseblob_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Blob</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicybaseblobresponse">Management<wbr>Policy<wbr>Base<wbr>Blob<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for base blob{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="snapshot_go">
 <a href="#snapshot_go" style="color: inherit; text-decoration: inherit;">Snapshot</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicysnapshotresponse">Management<wbr>Policy<wbr>Snap<wbr>Shot<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for snapshot{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1503,25 +1356,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="baseblob_nodejs">
 <a href="#baseblob_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Blob</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicybaseblobresponse">Management<wbr>Policy<wbr>Base<wbr>Blob<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for base blob{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="snapshot_nodejs">
 <a href="#snapshot_nodejs" style="color: inherit; text-decoration: inherit;">snapshot</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicysnapshotresponse">Management<wbr>Policy<wbr>Snap<wbr>Shot<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for snapshot{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1530,37 +1380,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="base_blob_python">
 <a href="#base_blob_python" style="color: inherit; text-decoration: inherit;">base_<wbr>blob</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicybaseblobresponse">Management<wbr>Policy<wbr>Base<wbr>Blob<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for base blob{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="snapshot_python">
 <a href="#snapshot_python" style="color: inherit; text-decoration: inherit;">snapshot</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicysnapshotresponse">Management<wbr>Policy<wbr>Snap<wbr>Shot<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The management policy action for snapshot{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="managementpolicybaseblob">Management<wbr>Policy<wbr>Base<wbr>Blob</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1568,35 +1406,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="delete_csharp">
 <a href="#delete_csharp" style="color: inherit; text-decoration: inherit;">Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dateaftermodification">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Modification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tiertoarchive_csharp">
 <a href="#tiertoarchive_csharp" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Archive</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dateaftermodification">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Modification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blobs to archive storage. Support blobs currently at Hot or Cool tier{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tiertocool_csharp">
 <a href="#tiertocool_csharp" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Cool</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dateaftermodification">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Modification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blobs to cool storage. Support blobs currently at Hot tier{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1605,35 +1439,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="delete_go">
 <a href="#delete_go" style="color: inherit; text-decoration: inherit;">Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dateaftermodification">Date<wbr>After<wbr>Modification</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tiertoarchive_go">
 <a href="#tiertoarchive_go" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Archive</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dateaftermodification">Date<wbr>After<wbr>Modification</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blobs to archive storage. Support blobs currently at Hot or Cool tier{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tiertocool_go">
 <a href="#tiertocool_go" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Cool</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dateaftermodification">Date<wbr>After<wbr>Modification</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blobs to cool storage. Support blobs currently at Hot tier{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1642,35 +1472,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="delete_nodejs">
 <a href="#delete_nodejs" style="color: inherit; text-decoration: inherit;">delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dateaftermodification">Date<wbr>After<wbr>Modification</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tiertoarchive_nodejs">
 <a href="#tiertoarchive_nodejs" style="color: inherit; text-decoration: inherit;">tier<wbr>To<wbr>Archive</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dateaftermodification">Date<wbr>After<wbr>Modification</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blobs to archive storage. Support blobs currently at Hot or Cool tier{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tiertocool_nodejs">
 <a href="#tiertocool_nodejs" style="color: inherit; text-decoration: inherit;">tier<wbr>To<wbr>Cool</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dateaftermodification">Date<wbr>After<wbr>Modification</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blobs to cool storage. Support blobs currently at Hot tier{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1679,47 +1505,34 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="delete_python">
 <a href="#delete_python" style="color: inherit; text-decoration: inherit;">delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dateaftermodification">Date<wbr>After<wbr>Modification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tier_to_archive_python">
 <a href="#tier_to_archive_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>to_<wbr>archive</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dateaftermodification">Date<wbr>After<wbr>Modification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blobs to archive storage. Support blobs currently at Hot or Cool tier{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tier_to_cool_python">
 <a href="#tier_to_cool_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>to_<wbr>cool</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dateaftermodification">Date<wbr>After<wbr>Modification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blobs to cool storage. Support blobs currently at Hot tier{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="managementpolicybaseblobresponse">Management<wbr>Policy<wbr>Base<wbr>Blob<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1727,35 +1540,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="delete_csharp">
 <a href="#delete_csharp" style="color: inherit; text-decoration: inherit;">Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dateaftermodificationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Modification<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tiertoarchive_csharp">
 <a href="#tiertoarchive_csharp" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Archive</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dateaftermodificationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Modification<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blobs to archive storage. Support blobs currently at Hot or Cool tier{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tiertocool_csharp">
 <a href="#tiertocool_csharp" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Cool</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dateaftermodificationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Modification<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blobs to cool storage. Support blobs currently at Hot tier{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1764,35 +1573,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="delete_go">
 <a href="#delete_go" style="color: inherit; text-decoration: inherit;">Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dateaftermodificationresponse">Date<wbr>After<wbr>Modification<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tiertoarchive_go">
 <a href="#tiertoarchive_go" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Archive</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dateaftermodificationresponse">Date<wbr>After<wbr>Modification<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blobs to archive storage. Support blobs currently at Hot or Cool tier{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tiertocool_go">
 <a href="#tiertocool_go" style="color: inherit; text-decoration: inherit;">Tier<wbr>To<wbr>Cool</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dateaftermodificationresponse">Date<wbr>After<wbr>Modification<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blobs to cool storage. Support blobs currently at Hot tier{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1801,35 +1606,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="delete_nodejs">
 <a href="#delete_nodejs" style="color: inherit; text-decoration: inherit;">delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dateaftermodificationresponse">Date<wbr>After<wbr>Modification<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tiertoarchive_nodejs">
 <a href="#tiertoarchive_nodejs" style="color: inherit; text-decoration: inherit;">tier<wbr>To<wbr>Archive</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dateaftermodificationresponse">Date<wbr>After<wbr>Modification<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blobs to archive storage. Support blobs currently at Hot or Cool tier{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tiertocool_nodejs">
 <a href="#tiertocool_nodejs" style="color: inherit; text-decoration: inherit;">tier<wbr>To<wbr>Cool</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dateaftermodificationresponse">Date<wbr>After<wbr>Modification<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blobs to cool storage. Support blobs currently at Hot tier{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1838,46 +1639,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="delete_python">
 <a href="#delete_python" style="color: inherit; text-decoration: inherit;">delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dateaftermodificationresponse">Date<wbr>After<wbr>Modification<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tier_to_archive_python">
 <a href="#tier_to_archive_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>to_<wbr>archive</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dateaftermodificationresponse">Date<wbr>After<wbr>Modification<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blobs to archive storage. Support blobs currently at Hot or Cool tier{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tier_to_cool_python">
 <a href="#tier_to_cool_python" style="color: inherit; text-decoration: inherit;">tier_<wbr>to_<wbr>cool</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dateaftermodificationresponse">Date<wbr>After<wbr>Modification<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to tier blobs to cool storage. Support blobs currently at Hot tier{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="managementpolicydefinition">Management<wbr>Policy<wbr>Definition</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1886,25 +1674,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="actions_csharp">
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicyaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the action set.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filters_csharp">
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicyfilter">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the filter set.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1913,25 +1698,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="actions_go">
 <a href="#actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicyaction">Management<wbr>Policy<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the action set.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filters_go">
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicyfilter">Management<wbr>Policy<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the filter set.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1940,25 +1722,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="actions_nodejs">
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicyaction">Management<wbr>Policy<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the action set.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filters_nodejs">
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicyfilter">Management<wbr>Policy<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the filter set.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1967,36 +1746,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="actions_python">
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicyaction">Management<wbr>Policy<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the action set.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filters_python">
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicyfilter">Management<wbr>Policy<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the filter set.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="managementpolicydefinitionresponse">Management<wbr>Policy<wbr>Definition<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2005,25 +1772,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="actions_csharp">
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicyactionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the action set.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filters_csharp">
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicyfilterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the filter set.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2032,25 +1796,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="actions_go">
 <a href="#actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicyactionresponse">Management<wbr>Policy<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the action set.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filters_go">
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicyfilterresponse">Management<wbr>Policy<wbr>Filter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the filter set.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2059,25 +1820,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="actions_nodejs">
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicyactionresponse">Management<wbr>Policy<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the action set.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filters_nodejs">
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicyfilterresponse">Management<wbr>Policy<wbr>Filter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the filter set.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2086,36 +1844,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="actions_python">
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicyactionresponse">Management<wbr>Policy<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the action set.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filters_python">
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicyfilterresponse">Management<wbr>Policy<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the filter set.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="managementpolicyfilter">Management<wbr>Policy<wbr>Filter</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2124,35 +1870,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="blobtypes_csharp">
 <a href="#blobtypes_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An array of predefined enum values. Only blockBlob is supported.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="blobindexmatch_csharp">
 <a href="#blobindexmatch_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Index<wbr>Match</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tagfilter">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Tag<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of blob index tag based filters, there can be at most 10 tag filters{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="prefixmatch_csharp">
 <a href="#prefixmatch_csharp" style="color: inherit; text-decoration: inherit;">Prefix<wbr>Match</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An array of strings for prefixes to be match.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2161,35 +1903,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="blobtypes_go">
 <a href="#blobtypes_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An array of predefined enum values. Only blockBlob is supported.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="blobindexmatch_go">
 <a href="#blobindexmatch_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Index<wbr>Match</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tagfilter">[]Tag<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}An array of blob index tag based filters, there can be at most 10 tag filters{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="prefixmatch_go">
 <a href="#prefixmatch_go" style="color: inherit; text-decoration: inherit;">Prefix<wbr>Match</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An array of strings for prefixes to be match.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2198,35 +1936,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="blobtypes_nodejs">
 <a href="#blobtypes_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of predefined enum values. Only blockBlob is supported.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="blobindexmatch_nodejs">
 <a href="#blobindexmatch_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Index<wbr>Match</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tagfilter">Tag<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}An array of blob index tag based filters, there can be at most 10 tag filters{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="prefixmatch_nodejs">
 <a href="#prefixmatch_nodejs" style="color: inherit; text-decoration: inherit;">prefix<wbr>Match</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of strings for prefixes to be match.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2235,46 +1969,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="blob_types_python">
 <a href="#blob_types_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of predefined enum values. Only blockBlob is supported.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="blob_index_match_python">
 <a href="#blob_index_match_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>index_<wbr>match</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tagfilter">Sequence[Tag<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of blob index tag based filters, there can be at most 10 tag filters{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="prefix_match_python">
 <a href="#prefix_match_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>match</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of strings for prefixes to be match.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="managementpolicyfilterresponse">Management<wbr>Policy<wbr>Filter<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2283,35 +2004,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="blobtypes_csharp">
 <a href="#blobtypes_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An array of predefined enum values. Only blockBlob is supported.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="blobindexmatch_csharp">
 <a href="#blobindexmatch_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Index<wbr>Match</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tagfilterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Tag<wbr>Filter<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of blob index tag based filters, there can be at most 10 tag filters{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="prefixmatch_csharp">
 <a href="#prefixmatch_csharp" style="color: inherit; text-decoration: inherit;">Prefix<wbr>Match</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An array of strings for prefixes to be match.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2320,35 +2037,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="blobtypes_go">
 <a href="#blobtypes_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An array of predefined enum values. Only blockBlob is supported.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="blobindexmatch_go">
 <a href="#blobindexmatch_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Index<wbr>Match</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tagfilterresponse">[]Tag<wbr>Filter<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An array of blob index tag based filters, there can be at most 10 tag filters{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="prefixmatch_go">
 <a href="#prefixmatch_go" style="color: inherit; text-decoration: inherit;">Prefix<wbr>Match</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An array of strings for prefixes to be match.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2357,35 +2070,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="blobtypes_nodejs">
 <a href="#blobtypes_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of predefined enum values. Only blockBlob is supported.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="blobindexmatch_nodejs">
 <a href="#blobindexmatch_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Index<wbr>Match</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tagfilterresponse">Tag<wbr>Filter<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}An array of blob index tag based filters, there can be at most 10 tag filters{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="prefixmatch_nodejs">
 <a href="#prefixmatch_nodejs" style="color: inherit; text-decoration: inherit;">prefix<wbr>Match</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of strings for prefixes to be match.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2394,46 +2103,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="blob_types_python">
 <a href="#blob_types_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of predefined enum values. Only blockBlob is supported.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="blob_index_match_python">
 <a href="#blob_index_match_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>index_<wbr>match</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tagfilterresponse">Sequence[Tag<wbr>Filter<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of blob index tag based filters, there can be at most 10 tag filters{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="prefix_match_python">
 <a href="#prefix_match_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>match</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of strings for prefixes to be match.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="managementpolicyrule">Management<wbr>Policy<wbr>Rule</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2442,45 +2138,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="definition_csharp">
 <a href="#definition_csharp" style="color: inherit; text-decoration: inherit;">Definition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicydefinition">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the Lifecycle rule.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Rule<wbr>Type</span>
+        <span class="property-type">string | <a href="#ruletype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Rule<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The valid value is Lifecycle{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Rule is enabled if set to true.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2489,45 +2180,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="definition_go">
 <a href="#definition_go" style="color: inherit; text-decoration: inherit;">Definition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicydefinition">Management<wbr>Policy<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the Lifecycle rule.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#ruletype">Rule<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The valid value is Lifecycle{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Rule is enabled if set to true.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2536,45 +2222,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="definition_nodejs">
 <a href="#definition_nodejs" style="color: inherit; text-decoration: inherit;">definition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicydefinition">Management<wbr>Policy<wbr>Definition</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the Lifecycle rule.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Rule<wbr>Type</span>
+        <span class="property-type">string | <a href="#ruletype">Rule<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The valid value is Lifecycle{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Rule is enabled if set to true.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2583,56 +2264,42 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="definition_python">
 <a href="#definition_python" style="color: inherit; text-decoration: inherit;">definition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicydefinition">Management<wbr>Policy<wbr>Definition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the Lifecycle rule.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Rule<wbr>Type</span>
+        <span class="property-type">str | <a href="#ruletype">Rule<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The valid value is Lifecycle{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Rule is enabled if set to true.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="managementpolicyruleresponse">Management<wbr>Policy<wbr>Rule<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2641,45 +2308,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="definition_csharp">
 <a href="#definition_csharp" style="color: inherit; text-decoration: inherit;">Definition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicydefinitionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Definition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the Lifecycle rule.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The valid value is Lifecycle{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Rule is enabled if set to true.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2688,45 +2350,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="definition_go">
 <a href="#definition_go" style="color: inherit; text-decoration: inherit;">Definition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicydefinitionresponse">Management<wbr>Policy<wbr>Definition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the Lifecycle rule.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The valid value is Lifecycle{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Rule is enabled if set to true.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2735,45 +2392,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="definition_nodejs">
 <a href="#definition_nodejs" style="color: inherit; text-decoration: inherit;">definition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicydefinitionresponse">Management<wbr>Policy<wbr>Definition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the Lifecycle rule.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The valid value is Lifecycle{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Rule is enabled if set to true.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2782,56 +2434,42 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="definition_python">
 <a href="#definition_python" style="color: inherit; text-decoration: inherit;">definition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicydefinitionresponse">Management<wbr>Policy<wbr>Definition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An object that defines the Lifecycle rule.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The valid value is Lifecycle{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Rule is enabled if set to true.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="managementpolicyschema">Management<wbr>Policy<wbr>Schema</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2840,15 +2478,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="rules_csharp">
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicyrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2857,15 +2493,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="rules_go">
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicyrule">[]Management<wbr>Policy<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2874,15 +2508,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="rules_nodejs">
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicyrule">Management<wbr>Policy<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2891,26 +2523,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="rules_python">
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicyrule">Sequence[Management<wbr>Policy<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="managementpolicyschemaresponse">Management<wbr>Policy<wbr>Schema<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2919,15 +2540,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="rules_csharp">
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicyruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Management<wbr>Policy<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2936,15 +2555,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="rules_go">
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicyruleresponse">[]Management<wbr>Policy<wbr>Rule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2953,15 +2570,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="rules_nodejs">
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicyruleresponse">Management<wbr>Policy<wbr>Rule<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2970,26 +2585,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="rules_python">
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementpolicyruleresponse">Sequence[Management<wbr>Policy<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Storage Account ManagementPolicies Rules. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="managementpolicysnapshot">Management<wbr>Policy<wbr>Snap<wbr>Shot</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2998,15 +2602,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="delete_csharp">
 <a href="#delete_csharp" style="color: inherit; text-decoration: inherit;">Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dateaftercreation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob snapshot{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3015,15 +2617,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="delete_go">
 <a href="#delete_go" style="color: inherit; text-decoration: inherit;">Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob snapshot{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3032,15 +2632,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="delete_nodejs">
 <a href="#delete_nodejs" style="color: inherit; text-decoration: inherit;">delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob snapshot{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3049,26 +2647,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="delete_python">
 <a href="#delete_python" style="color: inherit; text-decoration: inherit;">delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dateaftercreation">Date<wbr>After<wbr>Creation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob snapshot{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="managementpolicysnapshotresponse">Management<wbr>Policy<wbr>Snap<wbr>Shot<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3077,15 +2664,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="delete_csharp">
 <a href="#delete_csharp" style="color: inherit; text-decoration: inherit;">Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dateaftercreationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Inputs.<wbr>Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob snapshot{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3094,15 +2679,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="delete_go">
 <a href="#delete_go" style="color: inherit; text-decoration: inherit;">Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob snapshot{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3111,15 +2694,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="delete_nodejs">
 <a href="#delete_nodejs" style="color: inherit; text-decoration: inherit;">delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob snapshot{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3128,27 +2709,46 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="delete_python">
 <a href="#delete_python" style="color: inherit; text-decoration: inherit;">delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dateaftercreationresponse">Date<wbr>After<wbr>Creation<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The function to delete the blob snapshot{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="ruletype">Rule<wbr>Type</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Lifecycle</dt>
+    <dd>Lifecycle</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Rule<wbr>Type<wbr>Lifecycle</dt>
+    <dd>Lifecycle</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Lifecycle</dt>
+    <dd>Lifecycle</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>LIFECYCLE</dt>
+    <dd>Lifecycle</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="tagfilter">Tag<wbr>Filter</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3156,35 +2756,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the filter tag name, it can have 1 - 128 characters{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="op_csharp">
 <a href="#op_csharp" style="color: inherit; text-decoration: inherit;">Op</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the comparison operator which is used for object comparison and filtering. Only == (equality operator) is currently supported{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the filter tag value field used for tag based filtering, it can have 0 - 256 characters{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3193,35 +2789,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the filter tag name, it can have 1 - 128 characters{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="op_go">
 <a href="#op_go" style="color: inherit; text-decoration: inherit;">Op</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the comparison operator which is used for object comparison and filtering. Only == (equality operator) is currently supported{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the filter tag value field used for tag based filtering, it can have 0 - 256 characters{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3230,35 +2822,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the filter tag name, it can have 1 - 128 characters{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="op_nodejs">
 <a href="#op_nodejs" style="color: inherit; text-decoration: inherit;">op</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the comparison operator which is used for object comparison and filtering. Only == (equality operator) is currently supported{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the filter tag value field used for tag based filtering, it can have 0 - 256 characters{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3267,47 +2855,34 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is the filter tag name, it can have 1 - 128 characters{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="op_python">
 <a href="#op_python" style="color: inherit; text-decoration: inherit;">op</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is the comparison operator which is used for object comparison and filtering. Only == (equality operator) is currently supported{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is the filter tag value field used for tag based filtering, it can have 0 - 256 characters{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="tagfilterresponse">Tag<wbr>Filter<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3315,35 +2890,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the filter tag name, it can have 1 - 128 characters{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="op_csharp">
 <a href="#op_csharp" style="color: inherit; text-decoration: inherit;">Op</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the comparison operator which is used for object comparison and filtering. Only == (equality operator) is currently supported{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the filter tag value field used for tag based filtering, it can have 0 - 256 characters{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3352,35 +2923,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the filter tag name, it can have 1 - 128 characters{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="op_go">
 <a href="#op_go" style="color: inherit; text-decoration: inherit;">Op</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the comparison operator which is used for object comparison and filtering. Only == (equality operator) is currently supported{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the filter tag value field used for tag based filtering, it can have 0 - 256 characters{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3389,35 +2956,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the filter tag name, it can have 1 - 128 characters{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="op_nodejs">
 <a href="#op_nodejs" style="color: inherit; text-decoration: inherit;">op</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the comparison operator which is used for object comparison and filtering. Only == (equality operator) is currently supported{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the filter tag value field used for tag based filtering, it can have 0 - 256 characters{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3426,43 +2989,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is the filter tag name, it can have 1 - 128 characters{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="op_python">
 <a href="#op_python" style="color: inherit; text-decoration: inherit;">op</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is the comparison operator which is used for object comparison and filtering. Only == (equality operator) is currently supported{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is the filter tag value field used for tag based filtering, it can have 0 - 256 characters{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 
 
 <h2 id="package-details">Package Details</h2>

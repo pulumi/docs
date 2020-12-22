@@ -2,7 +2,7 @@
 ---
 title: "Volume"
 title_tag: "azure-nextgen.storsimple.Volume"
-meta_desc: "Explore the Volume resource of the storsimple module, including examples, input properties, output properties, lookup functions, and supporting types. The volume."
+meta_desc: "Documentation for the azure-nextgen.storsimple.Volume resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -11,6 +11,7 @@ meta_desc: "Explore the Volume resource of the storsimple module, including exam
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The volume.
+Latest API Version: 2017-06-01.
 
 
 {{% examples %}}
@@ -141,7 +142,7 @@ const volume = new azure_nextgen.storsimple.latest.Volume("volume", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">VolumeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">VolumeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -149,11 +150,11 @@ const volume = new azure_nextgen.storsimple.latest.Volume("volume", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVolume</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">VolumeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Volume</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVolume</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">VolumeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Volume</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Volume</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">VolumeArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">VolumeArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -164,7 +165,7 @@ const volume = new azure_nextgen.storsimple.latest.Volume("volume", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -233,7 +234,7 @@ const volume = new azure_nextgen.storsimple.latest.Volume("volume", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -272,7 +273,7 @@ const volume = new azure_nextgen.storsimple.latest.Volume("volume", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -313,7 +314,6 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -321,115 +321,103 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Required">
         <span id="accesscontrolrecordids_csharp">
 <a href="#accesscontrolrecordids_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Control<wbr>Record<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The IDs of the access control records, associated with the volume.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="devicename_csharp">
 <a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The device name{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="managername_csharp">
 <a href="#managername_csharp" style="color: inherit; text-decoration: inherit;">Manager<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The manager name{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="monitoringstatus_csharp">
 <a href="#monitoringstatus_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Monitoring<wbr>Status</span>
+        <span class="property-type"><a href="#monitoringstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Monitoring<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The monitoring status of the volume.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource group name{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sizeinbytes_csharp">
 <a href="#sizeinbytes_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>In<wbr>Bytes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the volume in bytes.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="volumecontainername_csharp">
 <a href="#volumecontainername_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The volume container name.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="volumename_csharp">
 <a href="#volumename_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The volume name.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="volumestatus_csharp">
 <a href="#volumestatus_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Volume<wbr>Status</span>
+        <span class="property-type"><a href="#volumestatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Volume<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The volume status.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="volumetype_csharp">
 <a href="#volumetype_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Volume<wbr>Type</span>
+        <span class="property-type"><a href="#volumetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Volume<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the volume.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Kind</span>
+        <span class="property-type"><a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stor<wbr>Simple.<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -438,115 +426,103 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Required">
         <span id="accesscontrolrecordids_go">
 <a href="#accesscontrolrecordids_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Control<wbr>Record<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The IDs of the access control records, associated with the volume.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="devicename_go">
 <a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The device name{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="managername_go">
 <a href="#managername_go" style="color: inherit; text-decoration: inherit;">Manager<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The manager name{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="monitoringstatus_go">
 <a href="#monitoringstatus_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#monitoringstatus">Monitoring<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The monitoring status of the volume.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource group name{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sizeinbytes_go">
 <a href="#sizeinbytes_go" style="color: inherit; text-decoration: inherit;">Size<wbr>In<wbr>Bytes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the volume in bytes.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="volumecontainername_go">
 <a href="#volumecontainername_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The volume container name.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="volumename_go">
 <a href="#volumename_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The volume name.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="volumestatus_go">
 <a href="#volumestatus_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#volumestatus">Volume<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The volume status.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="volumetype_go">
 <a href="#volumetype_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#volumetype">Volume<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the volume.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#kind">Kind</a></span>
     </dt>
     <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -555,115 +531,103 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Required">
         <span id="accesscontrolrecordids_nodejs">
 <a href="#accesscontrolrecordids_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Control<wbr>Record<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The IDs of the access control records, associated with the volume.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="devicename_nodejs">
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The device name{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="managername_nodejs">
 <a href="#managername_nodejs" style="color: inherit; text-decoration: inherit;">manager<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The manager name{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="monitoringstatus_nodejs">
 <a href="#monitoringstatus_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">enums.<wbr>Monitoring<wbr>Status</span>
+        <span class="property-type"><a href="#monitoringstatus">Monitoring<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The monitoring status of the volume.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource group name{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sizeinbytes_nodejs">
 <a href="#sizeinbytes_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>In<wbr>Bytes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the volume in bytes.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="volumecontainername_nodejs">
 <a href="#volumecontainername_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The volume container name.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="volumename_nodejs">
 <a href="#volumename_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The volume name.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="volumestatus_nodejs">
 <a href="#volumestatus_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">enums.<wbr>Volume<wbr>Status</span>
+        <span class="property-type"><a href="#volumestatus">Volume<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The volume status.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="volumetype_nodejs">
 <a href="#volumetype_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">enums.<wbr>Volume<wbr>Type</span>
+        <span class="property-type"><a href="#volumetype">Volume<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the volume.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">enums.<wbr>Kind</span>
+        <span class="property-type"><a href="#kind">Kind</a></span>
     </dt>
     <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -672,124 +636,108 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Required">
         <span id="access_control_record_ids_python">
 <a href="#access_control_record_ids_python" style="color: inherit; text-decoration: inherit;">access_<wbr>control_<wbr>record_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The IDs of the access control records, associated with the volume.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="device_name_python">
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The device name{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="manager_name_python">
 <a href="#manager_name_python" style="color: inherit; text-decoration: inherit;">manager_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The manager name{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="monitoring_status_python">
 <a href="#monitoring_status_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Monitoring<wbr>Status</span>
+        <span class="property-type"><a href="#monitoringstatus">Monitoring<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The monitoring status of the volume.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource group name{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="size_in_bytes_python">
 <a href="#size_in_bytes_python" style="color: inherit; text-decoration: inherit;">size_<wbr>in_<wbr>bytes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the volume in bytes.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="volume_container_name_python">
 <a href="#volume_container_name_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>container_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The volume container name.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="volume_name_python">
 <a href="#volume_name_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The volume name.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="volume_status_python">
 <a href="#volume_status_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Volume<wbr>Status</span>
+        <span class="property-type"><a href="#volumestatus">Volume<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The volume status.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="volume_type_python">
 <a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Volume<wbr>Type</span>
+        <span class="property-type"><a href="#volumetype">Volume<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of the volume.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Kind</span>
+        <span class="property-type"><a href="#kind">Kind</a></span>
     </dt>
     <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Volume resource produces the following output properties:
-
 
 
 
@@ -800,75 +748,67 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="backuppolicyids_csharp">
 <a href="#backuppolicyids_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Policy<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The IDs of the backup policies, in which this volume is part of.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="backupstatus_csharp">
 <a href="#backupstatus_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The backup status of the volume.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the object.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="operationstatus_csharp">
 <a href="#operationstatus_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operation status on the volume.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="volumecontainerid_csharp">
 <a href="#volumecontainerid_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Container<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the volume container, in which this volume is created.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -877,75 +817,67 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="backuppolicyids_go">
 <a href="#backuppolicyids_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Policy<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The IDs of the backup policies, in which this volume is part of.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="backupstatus_go">
 <a href="#backupstatus_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The backup status of the volume.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the object.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="operationstatus_go">
 <a href="#operationstatus_go" style="color: inherit; text-decoration: inherit;">Operation<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operation status on the volume.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="volumecontainerid_go">
 <a href="#volumecontainerid_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Container<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the volume container, in which this volume is created.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -954,75 +886,67 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="backuppolicyids_nodejs">
 <a href="#backuppolicyids_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Policy<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The IDs of the backup policies, in which this volume is part of.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="backupstatus_nodejs">
 <a href="#backupstatus_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The backup status of the volume.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the object.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="operationstatus_nodejs">
 <a href="#operationstatus_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operation status on the volume.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="volumecontainerid_nodejs">
 <a href="#volumecontainerid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Container<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the volume container, in which this volume is created.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1031,72 +955,65 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="backup_policy_ids_python">
 <a href="#backup_policy_ids_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>policy_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The IDs of the backup policies, in which this volume is part of.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="backup_status_python">
 <a href="#backup_status_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The backup status of the volume.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the object.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="operation_status_python">
 <a href="#operation_status_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The operation status on the volume.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="volume_container_id_python">
 <a href="#volume_container_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>container_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the volume container, in which this volume is created.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1106,11 +1023,161 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+## Supporting Types
 
 
 
+<h4 id="kind">Kind</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Series8000</dt>
+    <dd>Series8000</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Kind<wbr>Series8000</dt>
+    <dd>Series8000</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Series8000</dt>
+    <dd>Series8000</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>SERIES8000</dt>
+    <dd>Series8000</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="monitoringstatus">Monitoring<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Enabled</dt>
+    <dd>Enabled</dd>
+    <dt>Disabled</dt>
+    <dd>Disabled</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Monitoring<wbr>Status<wbr>Enabled</dt>
+    <dd>Enabled</dd>
+    <dt>Monitoring<wbr>Status<wbr>Disabled</dt>
+    <dd>Disabled</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Enabled</dt>
+    <dd>Enabled</dd>
+    <dt>Disabled</dt>
+    <dd>Disabled</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>ENABLED</dt>
+    <dd>Enabled</dd>
+    <dt>DISABLED</dt>
+    <dd>Disabled</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="volumestatus">Volume<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Online</dt>
+    <dd>Online</dd>
+    <dt>Offline</dt>
+    <dd>Offline</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Volume<wbr>Status<wbr>Online</dt>
+    <dd>Online</dd>
+    <dt>Volume<wbr>Status<wbr>Offline</dt>
+    <dd>Offline</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Online</dt>
+    <dd>Online</dd>
+    <dt>Offline</dt>
+    <dd>Offline</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>ONLINE</dt>
+    <dd>Online</dd>
+    <dt>OFFLINE</dt>
+    <dd>Offline</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="volumetype">Volume<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Tiered</dt>
+    <dd>Tiered</dd>
+    <dt>Archival</dt>
+    <dd>Archival</dd>
+    <dt>Locally<wbr>Pinned</dt>
+    <dd>LocallyPinned</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Volume<wbr>Type<wbr>Tiered</dt>
+    <dd>Tiered</dd>
+    <dt>Volume<wbr>Type<wbr>Archival</dt>
+    <dd>Archival</dd>
+    <dt>Volume<wbr>Type<wbr>Locally<wbr>Pinned</dt>
+    <dd>LocallyPinned</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Tiered</dt>
+    <dd>Tiered</dd>
+    <dt>Archival</dt>
+    <dd>Archival</dd>
+    <dt>Locally<wbr>Pinned</dt>
+    <dd>LocallyPinned</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>TIERED</dt>
+    <dd>Tiered</dd>
+    <dt>ARCHIVAL</dt>
+    <dd>Archival</dd>
+    <dt>LOCALLY_PINNED</dt>
+    <dd>LocallyPinned</dd>
+</dl>
+{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>

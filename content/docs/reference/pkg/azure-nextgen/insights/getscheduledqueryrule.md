@@ -47,7 +47,6 @@ meta_desc: "Explore the GetScheduledQueryRule function of the insights module, i
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -55,25 +54,22 @@ The following arguments are supported:
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rulename_csharp">
 <a href="#rulename_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -82,25 +78,22 @@ The following arguments are supported:
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rulename_go">
 <a href="#rulename_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -109,25 +102,22 @@ The following arguments are supported:
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rulename_nodejs">
 <a href="#rulename_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the rule.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -136,28 +126,22 @@ The following arguments are supported:
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rule_name_python">
 <a href="#rule_name_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the rule.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -168,7 +152,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -176,125 +159,112 @@ The following output properties are available:
             title="">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertingactionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Outputs.<wbr>Alerting<wbr>Action<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#logtometricactionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Outputs.<wbr>Log<wbr>To<wbr>Metric<wbr>Action<wbr>Response</a></span>
+        <span class="property-type"><a href="#alertingactionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Outputs.<wbr>Alerting<wbr>Action<wbr>Response</a> | <a href="#logtometricactionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Outputs.<wbr>Log<wbr>To<wbr>Metric<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Action needs to be taken on rule execution.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lastupdatedtime_csharp">
 <a href="#lastupdatedtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last time the rule was updated in IS08601 format.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the scheduled query rule{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Outputs.<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Data Source against which rule will Query Data{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the Log Search rule.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The flag which indicates whether the Log Search rule is enabled. Value should be true or false{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="schedule_csharp">
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scheduleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Outputs.<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schedule (Frequency, Time Window) for rule. Required for action type - AlertingAction{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -303,125 +273,112 @@ The following output properties are available:
             title="">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertingactionresponse">Alerting<wbr>Action<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#logtometricactionresponse">Log<wbr>To<wbr>Metric<wbr>Action<wbr>Response</a></span>
+        <span class="property-type"><a href="#alertingactionresponse">Alerting<wbr>Action<wbr>Response</a> | <a href="#logtometricactionresponse">Log<wbr>To<wbr>Metric<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Action needs to be taken on rule execution.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lastupdatedtime_go">
 <a href="#lastupdatedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last time the rule was updated in IS08601 format.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the scheduled query rule{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourceresponse">Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Data Source against which rule will Query Data{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the Log Search rule.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The flag which indicates whether the Log Search rule is enabled. Value should be true or false{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="schedule_go">
 <a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scheduleresponse">Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schedule (Frequency, Time Window) for rule. Required for action type - AlertingAction{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -430,125 +387,112 @@ The following output properties are available:
             title="">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertingactionresponse">Alerting<wbr>Action<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#logtometricactionresponse">Log<wbr>To<wbr>Metric<wbr>Action<wbr>Response</a></span>
+        <span class="property-type"><a href="#alertingactionresponse">Alerting<wbr>Action<wbr>Response</a> | <a href="#logtometricactionresponse">Log<wbr>To<wbr>Metric<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Action needs to be taken on rule execution.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lastupdatedtime_nodejs">
 <a href="#lastupdatedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last time the rule was updated in IS08601 format.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the scheduled query rule{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourceresponse">Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Data Source against which rule will Query Data{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the Log Search rule.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The flag which indicates whether the Log Search rule is enabled. Value should be true or false{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="schedule_nodejs">
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scheduleresponse">Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schedule (Frequency, Time Window) for rule. Required for action type - AlertingAction{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -557,128 +501,112 @@ The following output properties are available:
             title="">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertingactionresponse">Alerting<wbr>Action<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#logtometricactionresponse">Log<wbr>To<wbr>Metric<wbr>Action<wbr>Response</a></span>
+        <span class="property-type"><a href="#alertingactionresponse">Alerting<wbr>Action<wbr>Response</a> | <a href="#logtometricactionresponse">Log<wbr>To<wbr>Metric<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Action needs to be taken on rule execution.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="last_updated_time_python">
 <a href="#last_updated_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last time the rule was updated in IS08601 format.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the scheduled query rule{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourceresponse">Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Data Source against which rule will Query Data{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the Log Search rule.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The flag which indicates whether the Log Search rule is enabled. Value should be true or false{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="schedule_python">
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scheduleresponse">Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schedule (Frequency, Time Window) for rule. Required for action type - AlertingAction{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -693,7 +621,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -701,45 +628,40 @@ The following output properties are available:
             title="Required">
         <span id="severity_csharp">
 <a href="#severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Severity of the alert{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="trigger_csharp">
 <a href="#trigger_csharp" style="color: inherit; text-decoration: inherit;">Trigger</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerconditionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Trigger<wbr>Condition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The trigger condition that results in the alert rule being.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="aznsaction_csharp">
 <a href="#aznsaction_csharp" style="color: inherit; text-decoration: inherit;">Azns<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aznsactiongroupresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Az<wbr>Ns<wbr>Action<wbr>Group<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure action group reference.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="throttlinginmin_csharp">
 <a href="#throttlinginmin_csharp" style="color: inherit; text-decoration: inherit;">Throttling<wbr>In<wbr>Min</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}time (in minutes) for which Alerts should be throttled or suppressed.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -748,45 +670,40 @@ The following output properties are available:
             title="Required">
         <span id="severity_go">
 <a href="#severity_go" style="color: inherit; text-decoration: inherit;">Severity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Severity of the alert{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="trigger_go">
 <a href="#trigger_go" style="color: inherit; text-decoration: inherit;">Trigger</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerconditionresponse">Trigger<wbr>Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The trigger condition that results in the alert rule being.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="aznsaction_go">
 <a href="#aznsaction_go" style="color: inherit; text-decoration: inherit;">Azns<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aznsactiongroupresponse">Az<wbr>Ns<wbr>Action<wbr>Group<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Azure action group reference.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="throttlinginmin_go">
 <a href="#throttlinginmin_go" style="color: inherit; text-decoration: inherit;">Throttling<wbr>In<wbr>Min</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}time (in minutes) for which Alerts should be throttled or suppressed.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -795,45 +712,40 @@ The following output properties are available:
             title="Required">
         <span id="severity_nodejs">
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Severity of the alert{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="trigger_nodejs">
 <a href="#trigger_nodejs" style="color: inherit; text-decoration: inherit;">trigger</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerconditionresponse">Trigger<wbr>Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The trigger condition that results in the alert rule being.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="aznsaction_nodejs">
 <a href="#aznsaction_nodejs" style="color: inherit; text-decoration: inherit;">azns<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aznsactiongroupresponse">Az<wbr>Ns<wbr>Action<wbr>Group<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Azure action group reference.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="throttlinginmin_nodejs">
 <a href="#throttlinginmin_nodejs" style="color: inherit; text-decoration: inherit;">throttling<wbr>In<wbr>Min</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}time (in minutes) for which Alerts should be throttled or suppressed.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -842,51 +754,42 @@ The following output properties are available:
             title="Required">
         <span id="severity_python">
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Severity of the alert{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="trigger_python">
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerconditionresponse">Trigger<wbr>Condition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The trigger condition that results in the alert rule being.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="azns_action_python">
 <a href="#azns_action_python" style="color: inherit; text-decoration: inherit;">azns_<wbr>action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aznsactiongroupresponse">Az<wbr>Ns<wbr>Action<wbr>Group<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure action group reference.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="throttling_in_min_python">
 <a href="#throttling_in_min_python" style="color: inherit; text-decoration: inherit;">throttling_<wbr>in_<wbr>min</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}time (in minutes) for which Alerts should be throttled or suppressed.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="aznsactiongroupresponse">Az<wbr>Ns<wbr>Action<wbr>Group<wbr>Response</h4>
-
 
 
 
@@ -900,35 +803,31 @@ The following output properties are available:
             title="Optional">
         <span id="actiongroup_csharp">
 <a href="#actiongroup_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Group</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Azure Action Group reference.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customwebhookpayload_csharp">
 <a href="#customwebhookpayload_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Webhook<wbr>Payload</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom payload to be sent for all webhook URI in Azure action group{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="emailsubject_csharp">
 <a href="#emailsubject_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Subject</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom subject override for all email ids in Azure action group{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -937,35 +836,31 @@ The following output properties are available:
             title="Optional">
         <span id="actiongroup_go">
 <a href="#actiongroup_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Group</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Azure Action Group reference.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customwebhookpayload_go">
 <a href="#customwebhookpayload_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Webhook<wbr>Payload</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom payload to be sent for all webhook URI in Azure action group{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="emailsubject_go">
 <a href="#emailsubject_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Subject</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom subject override for all email ids in Azure action group{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -974,35 +869,31 @@ The following output properties are available:
             title="Optional">
         <span id="actiongroup_nodejs">
 <a href="#actiongroup_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Group</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Azure Action Group reference.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customwebhookpayload_nodejs">
 <a href="#customwebhookpayload_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Webhook<wbr>Payload</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom payload to be sent for all webhook URI in Azure action group{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="emailsubject_nodejs">
 <a href="#emailsubject_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Subject</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom subject override for all email ids in Azure action group{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1011,41 +902,33 @@ The following output properties are available:
             title="Optional">
         <span id="action_group_python">
 <a href="#action_group_python" style="color: inherit; text-decoration: inherit;">action_<wbr>group</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Azure Action Group reference.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="custom_webhook_payload_python">
 <a href="#custom_webhook_payload_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>webhook_<wbr>payload</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Custom payload to be sent for all webhook URI in Azure action group{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="email_subject_python">
 <a href="#email_subject_python" style="color: inherit; text-decoration: inherit;">email_<wbr>subject</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Custom subject override for all email ids in Azure action group{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="criteriaresponse">Criteria<wbr>Response</h4>
-
 
 
 
@@ -1059,25 +942,22 @@ The following output properties are available:
             title="Required">
         <span id="metricname_csharp">
 <a href="#metricname_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the metric{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_csharp">
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dimensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Dimension<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Dimensions for creating metric{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1086,25 +966,22 @@ The following output properties are available:
             title="Required">
         <span id="metricname_go">
 <a href="#metricname_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the metric{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_go">
 <a href="#dimensions_go" style="color: inherit; text-decoration: inherit;">Dimensions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dimensionresponse">[]Dimension<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}List of Dimensions for creating metric{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1113,25 +990,22 @@ The following output properties are available:
             title="Required">
         <span id="metricname_nodejs">
 <a href="#metricname_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the metric{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_nodejs">
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dimensionresponse">Dimension<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of Dimensions for creating metric{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1140,31 +1014,24 @@ The following output properties are available:
             title="Required">
         <span id="metric_name_python">
 <a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the metric{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_python">
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dimensionresponse">Sequence[Dimension<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of Dimensions for creating metric{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="dimensionresponse">Dimension<wbr>Response</h4>
-
 
 
 
@@ -1178,35 +1045,31 @@ The following output properties are available:
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the dimension{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operator for dimension values{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of dimension values{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1215,35 +1078,31 @@ The following output properties are available:
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the dimension{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operator for dimension values{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of dimension values{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1252,35 +1111,31 @@ The following output properties are available:
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the dimension{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operator for dimension values{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of dimension values{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1289,41 +1144,33 @@ The following output properties are available:
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the dimension{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Operator for dimension values{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of dimension values{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="logmetrictriggerresponse">Log<wbr>Metric<wbr>Trigger<wbr>Response</h4>
-
 
 
 
@@ -1337,45 +1184,40 @@ The following output properties are available:
             title="Optional">
         <span id="metriccolumn_csharp">
 <a href="#metriccolumn_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Column</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Evaluation of metric on a particular column{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metrictriggertype_csharp">
 <a href="#metrictriggertype_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Trigger<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Metric Trigger Type - 'Consecutive' or 'Total'{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="threshold_csharp">
 <a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The threshold of the metric trigger.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="thresholdoperator_csharp">
 <a href="#thresholdoperator_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Evaluation operation for Metric -'GreaterThan' or 'LessThan' or 'Equal'.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1384,45 +1226,40 @@ The following output properties are available:
             title="Optional">
         <span id="metriccolumn_go">
 <a href="#metriccolumn_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Column</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Evaluation of metric on a particular column{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metrictriggertype_go">
 <a href="#metrictriggertype_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Trigger<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Metric Trigger Type - 'Consecutive' or 'Total'{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="threshold_go">
 <a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The threshold of the metric trigger.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="thresholdoperator_go">
 <a href="#thresholdoperator_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Evaluation operation for Metric -'GreaterThan' or 'LessThan' or 'Equal'.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1431,45 +1268,40 @@ The following output properties are available:
             title="Optional">
         <span id="metriccolumn_nodejs">
 <a href="#metriccolumn_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Column</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Evaluation of metric on a particular column{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metrictriggertype_nodejs">
 <a href="#metrictriggertype_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Trigger<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Metric Trigger Type - 'Consecutive' or 'Total'{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="threshold_nodejs">
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The threshold of the metric trigger.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="thresholdoperator_nodejs">
 <a href="#thresholdoperator_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Evaluation operation for Metric -'GreaterThan' or 'LessThan' or 'Equal'.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1478,51 +1310,42 @@ The following output properties are available:
             title="Optional">
         <span id="metric_column_python">
 <a href="#metric_column_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>column</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Evaluation of metric on a particular column{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metric_trigger_type_python">
 <a href="#metric_trigger_type_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>trigger_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Metric Trigger Type - 'Consecutive' or 'Total'{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="threshold_python">
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The threshold of the metric trigger.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="threshold_operator_python">
 <a href="#threshold_operator_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Evaluation operation for Metric -'GreaterThan' or 'LessThan' or 'Equal'.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="logtometricactionresponse">Log<wbr>To<wbr>Metric<wbr>Action<wbr>Response</h4>
-
 
 
 
@@ -1536,15 +1359,13 @@ The following output properties are available:
             title="Required">
         <span id="criteria_csharp">
 <a href="#criteria_csharp" style="color: inherit; text-decoration: inherit;">Criteria</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#criteriaresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Criteria<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Criteria of Metric{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1553,15 +1374,13 @@ The following output properties are available:
             title="Required">
         <span id="criteria_go">
 <a href="#criteria_go" style="color: inherit; text-decoration: inherit;">Criteria</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#criteriaresponse">[]Criteria<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Criteria of Metric{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1570,15 +1389,13 @@ The following output properties are available:
             title="Required">
         <span id="criteria_nodejs">
 <a href="#criteria_nodejs" style="color: inherit; text-decoration: inherit;">criteria</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#criteriaresponse">Criteria<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Criteria of Metric{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1587,21 +1404,15 @@ The following output properties are available:
             title="Required">
         <span id="criteria_python">
 <a href="#criteria_python" style="color: inherit; text-decoration: inherit;">criteria</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#criteriaresponse">Sequence[Criteria<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Criteria of Metric{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="scheduleresponse">Schedule<wbr>Response</h4>
-
 
 
 
@@ -1615,25 +1426,22 @@ The following output properties are available:
             title="Required">
         <span id="frequencyinminutes_csharp">
 <a href="#frequencyinminutes_csharp" style="color: inherit; text-decoration: inherit;">Frequency<wbr>In<wbr>Minutes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}frequency (in minutes) at which rule condition should be evaluated.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="timewindowinminutes_csharp">
 <a href="#timewindowinminutes_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Window<wbr>In<wbr>Minutes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time window for which data needs to be fetched for query (should be greater than or equal to frequencyInMinutes).{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1642,25 +1450,22 @@ The following output properties are available:
             title="Required">
         <span id="frequencyinminutes_go">
 <a href="#frequencyinminutes_go" style="color: inherit; text-decoration: inherit;">Frequency<wbr>In<wbr>Minutes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}frequency (in minutes) at which rule condition should be evaluated.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="timewindowinminutes_go">
 <a href="#timewindowinminutes_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Window<wbr>In<wbr>Minutes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time window for which data needs to be fetched for query (should be greater than or equal to frequencyInMinutes).{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1669,25 +1474,22 @@ The following output properties are available:
             title="Required">
         <span id="frequencyinminutes_nodejs">
 <a href="#frequencyinminutes_nodejs" style="color: inherit; text-decoration: inherit;">frequency<wbr>In<wbr>Minutes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}frequency (in minutes) at which rule condition should be evaluated.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="timewindowinminutes_nodejs">
 <a href="#timewindowinminutes_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Window<wbr>In<wbr>Minutes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Time window for which data needs to be fetched for query (should be greater than or equal to frequencyInMinutes).{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1696,31 +1498,24 @@ The following output properties are available:
             title="Required">
         <span id="frequency_in_minutes_python">
 <a href="#frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">frequency_<wbr>in_<wbr>minutes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}frequency (in minutes) at which rule condition should be evaluated.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="time_window_in_minutes_python">
 <a href="#time_window_in_minutes_python" style="color: inherit; text-decoration: inherit;">time_<wbr>window_<wbr>in_<wbr>minutes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time window for which data needs to be fetched for query (should be greater than or equal to frequencyInMinutes).{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="sourceresponse">Source<wbr>Response</h4>
-
 
 
 
@@ -1734,45 +1529,40 @@ The following output properties are available:
             title="Required">
         <span id="datasourceid_csharp">
 <a href="#datasourceid_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource uri over which log search query is to be run.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authorizedresources_csharp">
 <a href="#authorizedresources_csharp" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of  Resource referred into query{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="query_csharp">
 <a href="#query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Log search query. Required for action type - AlertingAction{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="querytype_csharp">
 <a href="#querytype_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set value to 'ResultCount' .{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1781,45 +1571,40 @@ The following output properties are available:
             title="Required">
         <span id="datasourceid_go">
 <a href="#datasourceid_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource uri over which log search query is to be run.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authorizedresources_go">
 <a href="#authorizedresources_go" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of  Resource referred into query{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="query_go">
 <a href="#query_go" style="color: inherit; text-decoration: inherit;">Query</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Log search query. Required for action type - AlertingAction{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="querytype_go">
 <a href="#querytype_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set value to 'ResultCount' .{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1828,45 +1613,40 @@ The following output properties are available:
             title="Required">
         <span id="datasourceid_nodejs">
 <a href="#datasourceid_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource uri over which log search query is to be run.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authorizedresources_nodejs">
 <a href="#authorizedresources_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of  Resource referred into query{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="query_nodejs">
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Log search query. Required for action type - AlertingAction{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="querytype_nodejs">
 <a href="#querytype_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set value to 'ResultCount' .{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1875,51 +1655,42 @@ The following output properties are available:
             title="Required">
         <span id="data_source_id_python">
 <a href="#data_source_id_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource uri over which log search query is to be run.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authorized_resources_python">
 <a href="#authorized_resources_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>resources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of  Resource referred into query{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="query_python">
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Log search query. Required for action type - AlertingAction{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="query_type_python">
 <a href="#query_type_python" style="color: inherit; text-decoration: inherit;">query_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Set value to 'ResultCount' .{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="triggerconditionresponse">Trigger<wbr>Condition<wbr>Response</h4>
-
 
 
 
@@ -1933,35 +1704,31 @@ The following output properties are available:
             title="Required">
         <span id="threshold_csharp">
 <a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Result or count threshold based on which rule should be triggered.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="thresholdoperator_csharp">
 <a href="#thresholdoperator_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Evaluation operation for rule - 'GreaterThan' or 'LessThan.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metrictrigger_csharp">
 <a href="#metrictrigger_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Trigger</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logmetrictriggerresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Log<wbr>Metric<wbr>Trigger<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Trigger condition for metric query rule{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1970,35 +1737,31 @@ The following output properties are available:
             title="Required">
         <span id="threshold_go">
 <a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Result or count threshold based on which rule should be triggered.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="thresholdoperator_go">
 <a href="#thresholdoperator_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Evaluation operation for rule - 'GreaterThan' or 'LessThan.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metrictrigger_go">
 <a href="#metrictrigger_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Trigger</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logmetrictriggerresponse">Log<wbr>Metric<wbr>Trigger<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Trigger condition for metric query rule{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2007,35 +1770,31 @@ The following output properties are available:
             title="Required">
         <span id="threshold_nodejs">
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Result or count threshold based on which rule should be triggered.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="thresholdoperator_nodejs">
 <a href="#thresholdoperator_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Evaluation operation for rule - 'GreaterThan' or 'LessThan.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metrictrigger_nodejs">
 <a href="#metrictrigger_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Trigger</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logmetrictriggerresponse">Log<wbr>Metric<wbr>Trigger<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Trigger condition for metric query rule{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2044,38 +1803,31 @@ The following output properties are available:
             title="Required">
         <span id="threshold_python">
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Result or count threshold based on which rule should be triggered.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="threshold_operator_python">
 <a href="#threshold_operator_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Evaluation operation for rule - 'GreaterThan' or 'LessThan.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metric_trigger_python">
 <a href="#metric_trigger_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>trigger</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logmetrictriggerresponse">Log<wbr>Metric<wbr>Trigger<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Trigger condition for metric query rule{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

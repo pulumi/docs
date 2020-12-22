@@ -2,7 +2,7 @@
 ---
 title: "AccountFilter"
 title_tag: "azure-nextgen.media.AccountFilter"
-meta_desc: "Explore the AccountFilter resource of the media module, including examples, input properties, output properties, lookup functions, and supporting types. An Account Filter."
+meta_desc: "Documentation for the azure-nextgen.media.AccountFilter resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -11,6 +11,7 @@ meta_desc: "Explore the AccountFilter resource of the media module, including ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Account Filter.
+Latest API Version: 2020-05-01.
 
 
 {{% examples %}}
@@ -304,7 +305,7 @@ const accountFilter = new azure_nextgen.media.latest.AccountFilter("accountFilte
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AccountFilter</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">AccountFilterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AccountFilter</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">AccountFilterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -312,11 +313,11 @@ const accountFilter = new azure_nextgen.media.latest.AccountFilter("accountFilte
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccountFilter</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">AccountFilterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AccountFilter</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccountFilter</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">AccountFilterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AccountFilter</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AccountFilter</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">AccountFilterArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AccountFilter</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">AccountFilterArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -327,7 +328,7 @@ const accountFilter = new azure_nextgen.media.latest.AccountFilter("accountFilte
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -396,7 +397,7 @@ const accountFilter = new azure_nextgen.media.latest.AccountFilter("accountFilte
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -435,7 +436,7 @@ const accountFilter = new azure_nextgen.media.latest.AccountFilter("accountFilte
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -476,7 +477,6 @@ The AccountFilter resource accepts the following [input]({{< relref "/docs/intro
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -484,65 +484,58 @@ The AccountFilter resource accepts the following [input]({{< relref "/docs/intro
             title="Required">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="filtername_csharp">
 <a href="#filtername_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Account Filter name{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="firstquality_csharp">
 <a href="#firstquality_csharp" style="color: inherit; text-decoration: inherit;">First<wbr>Quality</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firstquality">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>First<wbr>Quality<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The first quality.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="presentationtimerange_csharp">
 <a href="#presentationtimerange_csharp" style="color: inherit; text-decoration: inherit;">Presentation<wbr>Time<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#presentationtimerange">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Presentation<wbr>Time<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The presentation time range.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tracks_csharp">
 <a href="#tracks_csharp" style="color: inherit; text-decoration: inherit;">Tracks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filtertrackselection">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Filter<wbr>Track<wbr>Selection<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The tracks selection conditions.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -551,65 +544,58 @@ The AccountFilter resource accepts the following [input]({{< relref "/docs/intro
             title="Required">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="filtername_go">
 <a href="#filtername_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Account Filter name{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="firstquality_go">
 <a href="#firstquality_go" style="color: inherit; text-decoration: inherit;">First<wbr>Quality</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firstquality">First<wbr>Quality</a></span>
     </dt>
     <dd>{{% md %}}The first quality.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="presentationtimerange_go">
 <a href="#presentationtimerange_go" style="color: inherit; text-decoration: inherit;">Presentation<wbr>Time<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#presentationtimerange">Presentation<wbr>Time<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}The presentation time range.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tracks_go">
 <a href="#tracks_go" style="color: inherit; text-decoration: inherit;">Tracks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filtertrackselection">[]Filter<wbr>Track<wbr>Selection</a></span>
     </dt>
     <dd>{{% md %}}The tracks selection conditions.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -618,65 +604,58 @@ The AccountFilter resource accepts the following [input]({{< relref "/docs/intro
             title="Required">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="filtername_nodejs">
 <a href="#filtername_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Account Filter name{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="firstquality_nodejs">
 <a href="#firstquality_nodejs" style="color: inherit; text-decoration: inherit;">first<wbr>Quality</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firstquality">First<wbr>Quality</a></span>
     </dt>
     <dd>{{% md %}}The first quality.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="presentationtimerange_nodejs">
 <a href="#presentationtimerange_nodejs" style="color: inherit; text-decoration: inherit;">presentation<wbr>Time<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#presentationtimerange">Presentation<wbr>Time<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}The presentation time range.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tracks_nodejs">
 <a href="#tracks_nodejs" style="color: inherit; text-decoration: inherit;">tracks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filtertrackselection">Filter<wbr>Track<wbr>Selection[]</a></span>
     </dt>
     <dd>{{% md %}}The tracks selection conditions.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -685,74 +664,63 @@ The AccountFilter resource accepts the following [input]({{< relref "/docs/intro
             title="Required">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="filter_name_python">
 <a href="#filter_name_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Account Filter name{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="first_quality_python">
 <a href="#first_quality_python" style="color: inherit; text-decoration: inherit;">first_<wbr>quality</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firstquality">First<wbr>Quality<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The first quality.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="presentation_time_range_python">
 <a href="#presentation_time_range_python" style="color: inherit; text-decoration: inherit;">presentation_<wbr>time_<wbr>range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#presentationtimerange">Presentation<wbr>Time<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The presentation time range.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tracks_python">
 <a href="#tracks_python" style="color: inherit; text-decoration: inherit;">tracks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filtertrackselection">Sequence[Filter<wbr>Track<wbr>Selection<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The tracks selection conditions.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the AccountFilter resource produces the following output properties:
-
 
 
 
@@ -763,35 +731,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -800,35 +764,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -837,35 +797,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -874,38 +830,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -916,13 +865,46 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="filtertrackpropertycompareoperation">Filter<wbr>Track<wbr>Property<wbr>Compare<wbr>Operation</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Equal</dt>
+    <dd>Equal{{% md %}}The equal operation.{{% /md %}}</dd>
+    <dt>Not<wbr>Equal</dt>
+    <dd>NotEqual{{% md %}}The not equal operation.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Filter<wbr>Track<wbr>Property<wbr>Compare<wbr>Operation<wbr>Equal</dt>
+    <dd>Equal{{% md %}}The equal operation.{{% /md %}}</dd>
+    <dt>Filter<wbr>Track<wbr>Property<wbr>Compare<wbr>Operation<wbr>Not<wbr>Equal</dt>
+    <dd>NotEqual{{% md %}}The not equal operation.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Equal</dt>
+    <dd>Equal{{% md %}}The equal operation.{{% /md %}}</dd>
+    <dt>Not<wbr>Equal</dt>
+    <dd>NotEqual{{% md %}}The not equal operation.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>EQUAL</dt>
+    <dd>Equal{{% md %}}The equal operation.{{% /md %}}</dd>
+    <dt>NOT_EQUAL</dt>
+    <dd>NotEqual{{% md %}}The not equal operation.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="filtertrackpropertycondition">Filter<wbr>Track<wbr>Property<wbr>Condition</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -931,35 +913,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="operation_csharp">
 <a href="#operation_csharp" style="color: inherit; text-decoration: inherit;">Operation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Filter<wbr>Track<wbr>Property<wbr>Compare<wbr>Operation</span>
+        <span class="property-type">string | <a href="#filtertrackpropertycompareoperation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Filter<wbr>Track<wbr>Property<wbr>Compare<wbr>Operation</a></span>
     </dt>
     <dd>{{% md %}}The track property condition operation.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="property_csharp">
 <a href="#property_csharp" style="color: inherit; text-decoration: inherit;">Property</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Filter<wbr>Track<wbr>Property<wbr>Type</span>
+        <span class="property-type">string | <a href="#filtertrackpropertytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Filter<wbr>Track<wbr>Property<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The track property type.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The track property value.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -968,35 +946,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="operation_go">
 <a href="#operation_go" style="color: inherit; text-decoration: inherit;">Operation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#filtertrackpropertycompareoperation">Filter<wbr>Track<wbr>Property<wbr>Compare<wbr>Operation</a></span>
     </dt>
     <dd>{{% md %}}The track property condition operation.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="property_go">
 <a href="#property_go" style="color: inherit; text-decoration: inherit;">Property</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#filtertrackpropertytype">Filter<wbr>Track<wbr>Property<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The track property type.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The track property value.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1005,35 +979,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="operation_nodejs">
 <a href="#operation_nodejs" style="color: inherit; text-decoration: inherit;">operation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Filter<wbr>Track<wbr>Property<wbr>Compare<wbr>Operation</span>
+        <span class="property-type">string | <a href="#filtertrackpropertycompareoperation">Filter<wbr>Track<wbr>Property<wbr>Compare<wbr>Operation</a></span>
     </dt>
     <dd>{{% md %}}The track property condition operation.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="property_nodejs">
 <a href="#property_nodejs" style="color: inherit; text-decoration: inherit;">property</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Filter<wbr>Track<wbr>Property<wbr>Type</span>
+        <span class="property-type">string | <a href="#filtertrackpropertytype">Filter<wbr>Track<wbr>Property<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The track property type.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The track property value.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1042,47 +1012,34 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="operation_python">
 <a href="#operation_python" style="color: inherit; text-decoration: inherit;">operation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Filter<wbr>Track<wbr>Property<wbr>Compare<wbr>Operation</span>
+        <span class="property-type">str | <a href="#filtertrackpropertycompareoperation">Filter<wbr>Track<wbr>Property<wbr>Compare<wbr>Operation</a></span>
     </dt>
     <dd>{{% md %}}The track property condition operation.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="property_python">
 <a href="#property_python" style="color: inherit; text-decoration: inherit;">property</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Filter<wbr>Track<wbr>Property<wbr>Type</span>
+        <span class="property-type">str | <a href="#filtertrackpropertytype">Filter<wbr>Track<wbr>Property<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The track property type.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The track property value.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="filtertrackpropertyconditionresponse">Filter<wbr>Track<wbr>Property<wbr>Condition<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1090,35 +1047,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="operation_csharp">
 <a href="#operation_csharp" style="color: inherit; text-decoration: inherit;">Operation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The track property condition operation.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="property_csharp">
 <a href="#property_csharp" style="color: inherit; text-decoration: inherit;">Property</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The track property type.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The track property value.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1127,35 +1080,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="operation_go">
 <a href="#operation_go" style="color: inherit; text-decoration: inherit;">Operation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The track property condition operation.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="property_go">
 <a href="#property_go" style="color: inherit; text-decoration: inherit;">Property</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The track property type.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The track property value.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1164,35 +1113,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="operation_nodejs">
 <a href="#operation_nodejs" style="color: inherit; text-decoration: inherit;">operation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The track property condition operation.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="property_nodejs">
 <a href="#property_nodejs" style="color: inherit; text-decoration: inherit;">property</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The track property type.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The track property value.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1201,46 +1146,103 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="operation_python">
 <a href="#operation_python" style="color: inherit; text-decoration: inherit;">operation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The track property condition operation.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="property_python">
 <a href="#property_python" style="color: inherit; text-decoration: inherit;">property</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The track property type.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The track property value.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="filtertrackpropertytype">Filter<wbr>Track<wbr>Property<wbr>Type</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Unknown</dt>
+    <dd>Unknown{{% md %}}The unknown track property type.{{% /md %}}</dd>
+    <dt>Type</dt>
+    <dd>Type{{% md %}}The type.{{% /md %}}</dd>
+    <dt>Name</dt>
+    <dd>Name{{% md %}}The name.{{% /md %}}</dd>
+    <dt>Language</dt>
+    <dd>Language{{% md %}}The language.{{% /md %}}</dd>
+    <dt>Four<wbr>CC</dt>
+    <dd>FourCC{{% md %}}The fourCC.{{% /md %}}</dd>
+    <dt>Bitrate</dt>
+    <dd>Bitrate{{% md %}}The bitrate.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Filter<wbr>Track<wbr>Property<wbr>Type<wbr>Unknown</dt>
+    <dd>Unknown{{% md %}}The unknown track property type.{{% /md %}}</dd>
+    <dt>Filter<wbr>Track<wbr>Property<wbr>Type<wbr>Type</dt>
+    <dd>Type{{% md %}}The type.{{% /md %}}</dd>
+    <dt>Filter<wbr>Track<wbr>Property<wbr>Type<wbr>Name</dt>
+    <dd>Name{{% md %}}The name.{{% /md %}}</dd>
+    <dt>Filter<wbr>Track<wbr>Property<wbr>Type<wbr>Language</dt>
+    <dd>Language{{% md %}}The language.{{% /md %}}</dd>
+    <dt>Filter<wbr>Track<wbr>Property<wbr>Type<wbr>Four<wbr>CC</dt>
+    <dd>FourCC{{% md %}}The fourCC.{{% /md %}}</dd>
+    <dt>Filter<wbr>Track<wbr>Property<wbr>Type<wbr>Bitrate</dt>
+    <dd>Bitrate{{% md %}}The bitrate.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Unknown</dt>
+    <dd>Unknown{{% md %}}The unknown track property type.{{% /md %}}</dd>
+    <dt>Type</dt>
+    <dd>Type{{% md %}}The type.{{% /md %}}</dd>
+    <dt>Name</dt>
+    <dd>Name{{% md %}}The name.{{% /md %}}</dd>
+    <dt>Language</dt>
+    <dd>Language{{% md %}}The language.{{% /md %}}</dd>
+    <dt>Four<wbr>CC</dt>
+    <dd>FourCC{{% md %}}The fourCC.{{% /md %}}</dd>
+    <dt>Bitrate</dt>
+    <dd>Bitrate{{% md %}}The bitrate.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>UNKNOWN</dt>
+    <dd>Unknown{{% md %}}The unknown track property type.{{% /md %}}</dd>
+    <dt>TYPE</dt>
+    <dd>Type{{% md %}}The type.{{% /md %}}</dd>
+    <dt>NAME</dt>
+    <dd>Name{{% md %}}The name.{{% /md %}}</dd>
+    <dt>LANGUAGE</dt>
+    <dd>Language{{% md %}}The language.{{% /md %}}</dd>
+    <dt>FOUR_CC</dt>
+    <dd>FourCC{{% md %}}The fourCC.{{% /md %}}</dd>
+    <dt>BITRATE</dt>
+    <dd>Bitrate{{% md %}}The bitrate.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="filtertrackselection">Filter<wbr>Track<wbr>Selection</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1249,15 +1251,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="trackselections_csharp">
 <a href="#trackselections_csharp" style="color: inherit; text-decoration: inherit;">Track<wbr>Selections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filtertrackpropertycondition">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Filter<wbr>Track<wbr>Property<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The track selections.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1266,15 +1266,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="trackselections_go">
 <a href="#trackselections_go" style="color: inherit; text-decoration: inherit;">Track<wbr>Selections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filtertrackpropertycondition">[]Filter<wbr>Track<wbr>Property<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}The track selections.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1283,15 +1281,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="trackselections_nodejs">
 <a href="#trackselections_nodejs" style="color: inherit; text-decoration: inherit;">track<wbr>Selections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filtertrackpropertycondition">Filter<wbr>Track<wbr>Property<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}The track selections.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1300,26 +1296,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="track_selections_python">
 <a href="#track_selections_python" style="color: inherit; text-decoration: inherit;">track_<wbr>selections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filtertrackpropertycondition">Sequence[Filter<wbr>Track<wbr>Property<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The track selections.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="filtertrackselectionresponse">Filter<wbr>Track<wbr>Selection<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1328,15 +1313,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="trackselections_csharp">
 <a href="#trackselections_csharp" style="color: inherit; text-decoration: inherit;">Track<wbr>Selections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filtertrackpropertyconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Filter<wbr>Track<wbr>Property<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The track selections.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1345,15 +1328,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="trackselections_go">
 <a href="#trackselections_go" style="color: inherit; text-decoration: inherit;">Track<wbr>Selections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filtertrackpropertyconditionresponse">[]Filter<wbr>Track<wbr>Property<wbr>Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The track selections.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1362,15 +1343,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="trackselections_nodejs">
 <a href="#trackselections_nodejs" style="color: inherit; text-decoration: inherit;">track<wbr>Selections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filtertrackpropertyconditionresponse">Filter<wbr>Track<wbr>Property<wbr>Condition<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The track selections.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1379,27 +1358,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="track_selections_python">
 <a href="#track_selections_python" style="color: inherit; text-decoration: inherit;">track_<wbr>selections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#filtertrackpropertyconditionresponse">Sequence[Filter<wbr>Track<wbr>Property<wbr>Condition<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The track selections.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="firstquality">First<wbr>Quality</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1407,15 +1375,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="bitrate_csharp">
 <a href="#bitrate_csharp" style="color: inherit; text-decoration: inherit;">Bitrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The first quality bitrate.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1424,15 +1390,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="bitrate_go">
 <a href="#bitrate_go" style="color: inherit; text-decoration: inherit;">Bitrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The first quality bitrate.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1441,15 +1405,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="bitrate_nodejs">
 <a href="#bitrate_nodejs" style="color: inherit; text-decoration: inherit;">bitrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The first quality bitrate.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1458,27 +1420,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="bitrate_python">
 <a href="#bitrate_python" style="color: inherit; text-decoration: inherit;">bitrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The first quality bitrate.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="firstqualityresponse">First<wbr>Quality<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1486,15 +1437,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="bitrate_csharp">
 <a href="#bitrate_csharp" style="color: inherit; text-decoration: inherit;">Bitrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The first quality bitrate.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1503,15 +1452,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="bitrate_go">
 <a href="#bitrate_go" style="color: inherit; text-decoration: inherit;">Bitrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The first quality bitrate.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1520,15 +1467,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="bitrate_nodejs">
 <a href="#bitrate_nodejs" style="color: inherit; text-decoration: inherit;">bitrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The first quality bitrate.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1537,27 +1482,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="bitrate_python">
 <a href="#bitrate_python" style="color: inherit; text-decoration: inherit;">bitrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The first quality bitrate.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="presentationtimerange">Presentation<wbr>Time<wbr>Range</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1565,65 +1499,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="endtimestamp_csharp">
 <a href="#endtimestamp_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The absolute end time boundary.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="forceendtimestamp_csharp">
 <a href="#forceendtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>End<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The indicator of forcing existing of end time stamp.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="livebackoffduration_csharp">
 <a href="#livebackoffduration_csharp" style="color: inherit; text-decoration: inherit;">Live<wbr>Backoff<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The relative to end right edge.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="presentationwindowduration_csharp">
 <a href="#presentationwindowduration_csharp" style="color: inherit; text-decoration: inherit;">Presentation<wbr>Window<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The relative to end sliding window.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="starttimestamp_csharp">
 <a href="#starttimestamp_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The absolute start time boundary.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timescale_csharp">
 <a href="#timescale_csharp" style="color: inherit; text-decoration: inherit;">Timescale</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time scale of time stamps.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1632,65 +1559,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="endtimestamp_go">
 <a href="#endtimestamp_go" style="color: inherit; text-decoration: inherit;">End<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The absolute end time boundary.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="forceendtimestamp_go">
 <a href="#forceendtimestamp_go" style="color: inherit; text-decoration: inherit;">Force<wbr>End<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The indicator of forcing existing of end time stamp.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="livebackoffduration_go">
 <a href="#livebackoffduration_go" style="color: inherit; text-decoration: inherit;">Live<wbr>Backoff<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The relative to end right edge.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="presentationwindowduration_go">
 <a href="#presentationwindowduration_go" style="color: inherit; text-decoration: inherit;">Presentation<wbr>Window<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The relative to end sliding window.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="starttimestamp_go">
 <a href="#starttimestamp_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The absolute start time boundary.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timescale_go">
 <a href="#timescale_go" style="color: inherit; text-decoration: inherit;">Timescale</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time scale of time stamps.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1699,65 +1619,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="endtimestamp_nodejs">
 <a href="#endtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The absolute end time boundary.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="forceendtimestamp_nodejs">
 <a href="#forceendtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>End<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The indicator of forcing existing of end time stamp.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="livebackoffduration_nodejs">
 <a href="#livebackoffduration_nodejs" style="color: inherit; text-decoration: inherit;">live<wbr>Backoff<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The relative to end right edge.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="presentationwindowduration_nodejs">
 <a href="#presentationwindowduration_nodejs" style="color: inherit; text-decoration: inherit;">presentation<wbr>Window<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The relative to end sliding window.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="starttimestamp_nodejs">
 <a href="#starttimestamp_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The absolute start time boundary.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timescale_nodejs">
 <a href="#timescale_nodejs" style="color: inherit; text-decoration: inherit;">timescale</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time scale of time stamps.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1766,77 +1679,61 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="end_timestamp_python">
 <a href="#end_timestamp_python" style="color: inherit; text-decoration: inherit;">end_<wbr>timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The absolute end time boundary.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="force_end_timestamp_python">
 <a href="#force_end_timestamp_python" style="color: inherit; text-decoration: inherit;">force_<wbr>end_<wbr>timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The indicator of forcing existing of end time stamp.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="live_backoff_duration_python">
 <a href="#live_backoff_duration_python" style="color: inherit; text-decoration: inherit;">live_<wbr>backoff_<wbr>duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The relative to end right edge.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="presentation_window_duration_python">
 <a href="#presentation_window_duration_python" style="color: inherit; text-decoration: inherit;">presentation_<wbr>window_<wbr>duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The relative to end sliding window.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="start_timestamp_python">
 <a href="#start_timestamp_python" style="color: inherit; text-decoration: inherit;">start_<wbr>timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The absolute start time boundary.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timescale_python">
 <a href="#timescale_python" style="color: inherit; text-decoration: inherit;">timescale</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time scale of time stamps.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="presentationtimerangeresponse">Presentation<wbr>Time<wbr>Range<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1844,65 +1741,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="endtimestamp_csharp">
 <a href="#endtimestamp_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The absolute end time boundary.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="forceendtimestamp_csharp">
 <a href="#forceendtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>End<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The indicator of forcing existing of end time stamp.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="livebackoffduration_csharp">
 <a href="#livebackoffduration_csharp" style="color: inherit; text-decoration: inherit;">Live<wbr>Backoff<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The relative to end right edge.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="presentationwindowduration_csharp">
 <a href="#presentationwindowduration_csharp" style="color: inherit; text-decoration: inherit;">Presentation<wbr>Window<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The relative to end sliding window.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="starttimestamp_csharp">
 <a href="#starttimestamp_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The absolute start time boundary.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timescale_csharp">
 <a href="#timescale_csharp" style="color: inherit; text-decoration: inherit;">Timescale</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time scale of time stamps.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1911,65 +1801,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="endtimestamp_go">
 <a href="#endtimestamp_go" style="color: inherit; text-decoration: inherit;">End<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The absolute end time boundary.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="forceendtimestamp_go">
 <a href="#forceendtimestamp_go" style="color: inherit; text-decoration: inherit;">Force<wbr>End<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The indicator of forcing existing of end time stamp.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="livebackoffduration_go">
 <a href="#livebackoffduration_go" style="color: inherit; text-decoration: inherit;">Live<wbr>Backoff<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The relative to end right edge.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="presentationwindowduration_go">
 <a href="#presentationwindowduration_go" style="color: inherit; text-decoration: inherit;">Presentation<wbr>Window<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The relative to end sliding window.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="starttimestamp_go">
 <a href="#starttimestamp_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The absolute start time boundary.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timescale_go">
 <a href="#timescale_go" style="color: inherit; text-decoration: inherit;">Timescale</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time scale of time stamps.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1978,65 +1861,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="endtimestamp_nodejs">
 <a href="#endtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The absolute end time boundary.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="forceendtimestamp_nodejs">
 <a href="#forceendtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>End<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The indicator of forcing existing of end time stamp.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="livebackoffduration_nodejs">
 <a href="#livebackoffduration_nodejs" style="color: inherit; text-decoration: inherit;">live<wbr>Backoff<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The relative to end right edge.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="presentationwindowduration_nodejs">
 <a href="#presentationwindowduration_nodejs" style="color: inherit; text-decoration: inherit;">presentation<wbr>Window<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The relative to end sliding window.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="starttimestamp_nodejs">
 <a href="#starttimestamp_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The absolute start time boundary.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timescale_nodejs">
 <a href="#timescale_nodejs" style="color: inherit; text-decoration: inherit;">timescale</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time scale of time stamps.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2045,73 +1921,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="end_timestamp_python">
 <a href="#end_timestamp_python" style="color: inherit; text-decoration: inherit;">end_<wbr>timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The absolute end time boundary.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="force_end_timestamp_python">
 <a href="#force_end_timestamp_python" style="color: inherit; text-decoration: inherit;">force_<wbr>end_<wbr>timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The indicator of forcing existing of end time stamp.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="live_backoff_duration_python">
 <a href="#live_backoff_duration_python" style="color: inherit; text-decoration: inherit;">live_<wbr>backoff_<wbr>duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The relative to end right edge.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="presentation_window_duration_python">
 <a href="#presentation_window_duration_python" style="color: inherit; text-decoration: inherit;">presentation_<wbr>window_<wbr>duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The relative to end sliding window.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="start_timestamp_python">
 <a href="#start_timestamp_python" style="color: inherit; text-decoration: inherit;">start_<wbr>timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The absolute start time boundary.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timescale_python">
 <a href="#timescale_python" style="color: inherit; text-decoration: inherit;">timescale</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time scale of time stamps.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 
 
 <h2 id="package-details">Package Details</h2>

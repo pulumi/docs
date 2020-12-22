@@ -45,7 +45,6 @@ meta_desc: "Explore the ListHost function of the datadog module, including examp
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -53,25 +52,22 @@ The following arguments are supported:
             title="Required">
         <span id="monitorname_csharp">
 <a href="#monitorname_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Monitor resource name{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group to which the Datadog resource belongs.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -80,25 +76,22 @@ The following arguments are supported:
             title="Required">
         <span id="monitorname_go">
 <a href="#monitorname_go" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Monitor resource name{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group to which the Datadog resource belongs.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -107,25 +100,22 @@ The following arguments are supported:
             title="Required">
         <span id="monitorname_nodejs">
 <a href="#monitorname_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Monitor resource name{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group to which the Datadog resource belongs.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -134,28 +124,22 @@ The following arguments are supported:
             title="Required">
         <span id="monitor_name_python">
 <a href="#monitor_name_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Monitor resource name{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group to which the Datadog resource belongs.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -166,7 +150,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -174,25 +157,22 @@ The following output properties are available:
             title="">
         <span id="nextlink_csharp">
 <a href="#nextlink_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Link to the next set of results, if any.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadoghostresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Datadog.<wbr>Outputs.<wbr>Datadog<wbr>Host<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}Results of a list operation.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -201,25 +181,22 @@ The following output properties are available:
             title="">
         <span id="nextlink_go">
 <a href="#nextlink_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Link to the next set of results, if any.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadoghostresponse">[]Datadog<wbr>Host<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Results of a list operation.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -228,25 +205,22 @@ The following output properties are available:
             title="">
         <span id="nextlink_nodejs">
 <a href="#nextlink_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Link to the next set of results, if any.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadoghostresponse">Datadog<wbr>Host<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Results of a list operation.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -255,28 +229,22 @@ The following output properties are available:
             title="">
         <span id="next_link_python">
 <a href="#next_link_python" style="color: inherit; text-decoration: inherit;">next_<wbr>link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Link to the next set of results, if any.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadoghostresponse">Sequence[Datadog<wbr>Host<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Results of a list operation.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -291,7 +259,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -299,35 +266,31 @@ The following output properties are available:
             title="Optional">
         <span id="agentversion_csharp">
 <a href="#agentversion_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The agent version.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="installmethod_csharp">
 <a href="#installmethod_csharp" style="color: inherit; text-decoration: inherit;">Install<wbr>Method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadoginstallmethodresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Datadog.<wbr>Inputs.<wbr>Datadog<wbr>Install<wbr>Method<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="logsagent_csharp">
 <a href="#logsagent_csharp" style="color: inherit; text-decoration: inherit;">Logs<wbr>Agent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadoglogsagentresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Datadog.<wbr>Inputs.<wbr>Datadog<wbr>Logs<wbr>Agent<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -336,35 +299,31 @@ The following output properties are available:
             title="Optional">
         <span id="agentversion_go">
 <a href="#agentversion_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The agent version.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="installmethod_go">
 <a href="#installmethod_go" style="color: inherit; text-decoration: inherit;">Install<wbr>Method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadoginstallmethodresponse">Datadog<wbr>Install<wbr>Method<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="logsagent_go">
 <a href="#logsagent_go" style="color: inherit; text-decoration: inherit;">Logs<wbr>Agent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadoglogsagentresponse">Datadog<wbr>Logs<wbr>Agent<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -373,35 +332,31 @@ The following output properties are available:
             title="Optional">
         <span id="agentversion_nodejs">
 <a href="#agentversion_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The agent version.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="installmethod_nodejs">
 <a href="#installmethod_nodejs" style="color: inherit; text-decoration: inherit;">install<wbr>Method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadoginstallmethodresponse">Datadog<wbr>Install<wbr>Method<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="logsagent_nodejs">
 <a href="#logsagent_nodejs" style="color: inherit; text-decoration: inherit;">logs<wbr>Agent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadoglogsagentresponse">Datadog<wbr>Logs<wbr>Agent<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -410,41 +365,33 @@ The following output properties are available:
             title="Optional">
         <span id="agent_version_python">
 <a href="#agent_version_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The agent version.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="install_method_python">
 <a href="#install_method_python" style="color: inherit; text-decoration: inherit;">install_<wbr>method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadoginstallmethodresponse">Datadog<wbr>Install<wbr>Method<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="logs_agent_python">
 <a href="#logs_agent_python" style="color: inherit; text-decoration: inherit;">logs_<wbr>agent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadoglogsagentresponse">Datadog<wbr>Logs<wbr>Agent<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="datadoghostresponse">Datadog<wbr>Host<wbr>Response</h4>
-
 
 
 
@@ -458,45 +405,40 @@ The following output properties are available:
             title="Optional">
         <span id="aliases_csharp">
 <a href="#aliases_csharp" style="color: inherit; text-decoration: inherit;">Aliases</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The aliases for the host.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="apps_csharp">
 <a href="#apps_csharp" style="color: inherit; text-decoration: inherit;">Apps</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The Datadog integrations reporting metrics for the host.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="meta_csharp">
 <a href="#meta_csharp" style="color: inherit; text-decoration: inherit;">Meta</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadoghostmetadataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Datadog.<wbr>Inputs.<wbr>Datadog<wbr>Host<wbr>Metadata<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the host.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -505,45 +447,40 @@ The following output properties are available:
             title="Optional">
         <span id="aliases_go">
 <a href="#aliases_go" style="color: inherit; text-decoration: inherit;">Aliases</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The aliases for the host.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="apps_go">
 <a href="#apps_go" style="color: inherit; text-decoration: inherit;">Apps</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The Datadog integrations reporting metrics for the host.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="meta_go">
 <a href="#meta_go" style="color: inherit; text-decoration: inherit;">Meta</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadoghostmetadataresponse">Datadog<wbr>Host<wbr>Metadata<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the host.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -552,45 +489,40 @@ The following output properties are available:
             title="Optional">
         <span id="aliases_nodejs">
 <a href="#aliases_nodejs" style="color: inherit; text-decoration: inherit;">aliases</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The aliases for the host.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="apps_nodejs">
 <a href="#apps_nodejs" style="color: inherit; text-decoration: inherit;">apps</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The Datadog integrations reporting metrics for the host.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="meta_nodejs">
 <a href="#meta_nodejs" style="color: inherit; text-decoration: inherit;">meta</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadoghostmetadataresponse">Datadog<wbr>Host<wbr>Metadata<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the host.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -599,51 +531,42 @@ The following output properties are available:
             title="Optional">
         <span id="aliases_python">
 <a href="#aliases_python" style="color: inherit; text-decoration: inherit;">aliases</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The aliases for the host.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="apps_python">
 <a href="#apps_python" style="color: inherit; text-decoration: inherit;">apps</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The Datadog integrations reporting metrics for the host.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="meta_python">
 <a href="#meta_python" style="color: inherit; text-decoration: inherit;">meta</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadoghostmetadataresponse">Datadog<wbr>Host<wbr>Metadata<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the host.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="datadoginstallmethodresponse">Datadog<wbr>Install<wbr>Method<wbr>Response</h4>
-
 
 
 
@@ -657,35 +580,31 @@ The following output properties are available:
             title="Optional">
         <span id="installerversion_csharp">
 <a href="#installerversion_csharp" style="color: inherit; text-decoration: inherit;">Installer<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The installer version.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tool_csharp">
 <a href="#tool_csharp" style="color: inherit; text-decoration: inherit;">Tool</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tool.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="toolversion_csharp">
 <a href="#toolversion_csharp" style="color: inherit; text-decoration: inherit;">Tool<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tool version.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -694,35 +613,31 @@ The following output properties are available:
             title="Optional">
         <span id="installerversion_go">
 <a href="#installerversion_go" style="color: inherit; text-decoration: inherit;">Installer<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The installer version.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tool_go">
 <a href="#tool_go" style="color: inherit; text-decoration: inherit;">Tool</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tool.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="toolversion_go">
 <a href="#toolversion_go" style="color: inherit; text-decoration: inherit;">Tool<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tool version.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -731,35 +646,31 @@ The following output properties are available:
             title="Optional">
         <span id="installerversion_nodejs">
 <a href="#installerversion_nodejs" style="color: inherit; text-decoration: inherit;">installer<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The installer version.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tool_nodejs">
 <a href="#tool_nodejs" style="color: inherit; text-decoration: inherit;">tool</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tool.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="toolversion_nodejs">
 <a href="#toolversion_nodejs" style="color: inherit; text-decoration: inherit;">tool<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tool version.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -768,41 +679,33 @@ The following output properties are available:
             title="Optional">
         <span id="installer_version_python">
 <a href="#installer_version_python" style="color: inherit; text-decoration: inherit;">installer_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The installer version.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tool_python">
 <a href="#tool_python" style="color: inherit; text-decoration: inherit;">tool</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tool.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tool_version_python">
 <a href="#tool_version_python" style="color: inherit; text-decoration: inherit;">tool_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tool version.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="datadoglogsagentresponse">Datadog<wbr>Logs<wbr>Agent<wbr>Response</h4>
-
 
 
 
@@ -816,15 +719,13 @@ The following output properties are available:
             title="Optional">
         <span id="transport_csharp">
 <a href="#transport_csharp" style="color: inherit; text-decoration: inherit;">Transport</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The transport.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -833,15 +734,13 @@ The following output properties are available:
             title="Optional">
         <span id="transport_go">
 <a href="#transport_go" style="color: inherit; text-decoration: inherit;">Transport</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The transport.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -850,15 +749,13 @@ The following output properties are available:
             title="Optional">
         <span id="transport_nodejs">
 <a href="#transport_nodejs" style="color: inherit; text-decoration: inherit;">transport</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The transport.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -867,18 +764,13 @@ The following output properties are available:
             title="Optional">
         <span id="transport_python">
 <a href="#transport_python" style="color: inherit; text-decoration: inherit;">transport</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The transport.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

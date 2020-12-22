@@ -2,7 +2,7 @@
 ---
 title: "CloudService"
 title_tag: "azure-nextgen.compute.CloudService"
-meta_desc: "Explore the CloudService resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. Describes the cloud service."
+meta_desc: "Documentation for the azure-nextgen.compute.CloudService resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -1089,7 +1089,7 @@ const cloudService = new azure_nextgen.compute.v20201001preview.CloudService("cl
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CloudService</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">CloudServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">CloudService</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">CloudServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1097,11 +1097,11 @@ const cloudService = new azure_nextgen.compute.v20201001preview.CloudService("cl
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCloudService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">CloudServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CloudService</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCloudService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">CloudServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">CloudService</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CloudService</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">CloudServiceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">CloudService</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">CloudServiceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1112,7 +1112,7 @@ const cloudService = new azure_nextgen.compute.v20201001preview.CloudService("cl
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -1181,7 +1181,7 @@ const cloudService = new azure_nextgen.compute.v20201001preview.CloudService("cl
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -1220,7 +1220,7 @@ const cloudService = new azure_nextgen.compute.v20201001preview.CloudService("cl
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -1261,7 +1261,6 @@ The CloudService resource accepts the following [input]({{< relref "/docs/intro/
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1269,55 +1268,49 @@ The CloudService resource accepts the following [input]({{< relref "/docs/intro/
             title="Required">
         <span id="cloudservicename_csharp">
 <a href="#cloudservicename_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cloud service.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource group.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cloud service properties{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1326,55 +1319,49 @@ The CloudService resource accepts the following [input]({{< relref "/docs/intro/
             title="Required">
         <span id="cloudservicename_go">
 <a href="#cloudservicename_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cloud service.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource group.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceproperties">Cloud<wbr>Service<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Cloud service properties{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1383,55 +1370,49 @@ The CloudService resource accepts the following [input]({{< relref "/docs/intro/
             title="Required">
         <span id="cloudservicename_nodejs">
 <a href="#cloudservicename_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cloud service.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource group.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceproperties">Cloud<wbr>Service<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Cloud service properties{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1440,64 +1421,54 @@ The CloudService resource accepts the following [input]({{< relref "/docs/intro/
             title="Required">
         <span id="cloud_service_name_python">
 <a href="#cloud_service_name_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>service_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the cloud service.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource group.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceproperties">Cloud<wbr>Service<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cloud service properties{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the CloudService resource produces the following output properties:
-
 
 
 
@@ -1508,35 +1479,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1545,35 +1512,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1582,35 +1545,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1619,38 +1578,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1661,13 +1613,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
 <h4 id="cloudserviceextensionprofile">Cloud<wbr>Service<wbr>Extension<wbr>Profile</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1676,15 +1623,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="extensions_csharp">
 <a href="#extensions_csharp" style="color: inherit; text-decoration: inherit;">Extensions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#extension">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Extension<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of extensions for the cloud service.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1693,15 +1638,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="extensions_go">
 <a href="#extensions_go" style="color: inherit; text-decoration: inherit;">Extensions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#extension">[]Extension</a></span>
     </dt>
     <dd>{{% md %}}List of extensions for the cloud service.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1710,15 +1653,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="extensions_nodejs">
 <a href="#extensions_nodejs" style="color: inherit; text-decoration: inherit;">extensions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#extension">Extension[]</a></span>
     </dt>
     <dd>{{% md %}}List of extensions for the cloud service.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1727,26 +1668,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="extensions_python">
 <a href="#extensions_python" style="color: inherit; text-decoration: inherit;">extensions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#extension">Sequence[Extension<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of extensions for the cloud service.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="cloudserviceextensionprofileresponse">Cloud<wbr>Service<wbr>Extension<wbr>Profile<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1755,15 +1685,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="extensions_csharp">
 <a href="#extensions_csharp" style="color: inherit; text-decoration: inherit;">Extensions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#extensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Extension<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of extensions for the cloud service.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1772,15 +1700,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="extensions_go">
 <a href="#extensions_go" style="color: inherit; text-decoration: inherit;">Extensions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#extensionresponse">[]Extension<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}List of extensions for the cloud service.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1789,15 +1715,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="extensions_nodejs">
 <a href="#extensions_nodejs" style="color: inherit; text-decoration: inherit;">extensions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#extensionresponse">Extension<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of extensions for the cloud service.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1806,26 +1730,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="extensions_python">
 <a href="#extensions_python" style="color: inherit; text-decoration: inherit;">extensions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#extensionresponse">Sequence[Extension<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of extensions for the cloud service.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="cloudserviceextensionproperties">Cloud<wbr>Service<wbr>Extension<wbr>Properties</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1834,99 +1747,89 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="autoupgrademinorversion_csharp">
 <a href="#autoupgrademinorversion_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Explicitly specify whether platform can automatically upgrade typeHandlerVersion to higher minor versions when they become available.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="forceupdatetag_csharp">
 <a href="#forceupdatetag_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Update<wbr>Tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tag to force apply the provided public and protected settings.
 Changing the tag value allows for re-running the extension without changing any of the public or protected settings.
 If forceUpdateTag is not changed, updates to public or protected settings would still be applied by the handler.
 If neither forceUpdateTag nor any of public or protected settings change, extension would flow to the role instance with the same sequence-number, and
 it is up to handler implementation whether to re-run it or not{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectedsettings_csharp">
 <a href="#protectedsettings_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protected settings for the extension which are encrypted before sent to the role instance.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectedsettingsfromkeyvault_csharp">
 <a href="#protectedsettingsfromkeyvault_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Settings<wbr>From<wbr>Key<wbr>Vault</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudservicevaultandsecretreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publisher_csharp">
 <a href="#publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the extension handler publisher.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rolesappliedto_csharp">
 <a href="#rolesappliedto_csharp" style="color: inherit; text-decoration: inherit;">Roles<wbr>Applied<wbr>To</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Optional list of roles to apply this extension. If property is not specified or '*' is specified, extension is applied to all roles in the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="settings_csharp">
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Public settings for the extension. For JSON extensions, this is the JSON settings for the extension. For XML Extension (like RDP), this is the XML setting for the extension.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the extension.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="typehandlerversion_csharp">
 <a href="#typehandlerversion_csharp" style="color: inherit; text-decoration: inherit;">Type<wbr>Handler<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the extension. Specifies the version of the extension. If this element is not specified or an asterisk (*) is used as the value, the latest version of the extension is used. If the value is specified with a major version number and an asterisk as the minor version number (X.), the latest minor version of the specified major version is selected. If a major version number and a minor version number are specified (X.Y), the specific extension version is selected. If a version is specified, an auto-upgrade is performed on the role instance.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1935,99 +1838,89 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd>
             title="Optional">
         <span id="autoupgrademinorversion_go">
 <a href="#autoupgrademinorversion_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Explicitly specify whether platform can automatically upgrade typeHandlerVersion to higher minor versions when they become available.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="forceupdatetag_go">
 <a href="#forceupdatetag_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Update<wbr>Tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tag to force apply the provided public and protected settings.
 Changing the tag value allows for re-running the extension without changing any of the public or protected settings.
 If forceUpdateTag is not changed, updates to public or protected settings would still be applied by the handler.
 If neither forceUpdateTag nor any of public or protected settings change, extension would flow to the role instance with the same sequence-number, and
 it is up to handler implementation whether to re-run it or not{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectedsettings_go">
 <a href="#protectedsettings_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protected settings for the extension which are encrypted before sent to the role instance.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectedsettingsfromkeyvault_go">
 <a href="#protectedsettingsfromkeyvault_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Settings<wbr>From<wbr>Key<wbr>Vault</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudservicevaultandsecretreference">Cloud<wbr>Service<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publisher_go">
 <a href="#publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the extension handler publisher.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rolesappliedto_go">
 <a href="#rolesappliedto_go" style="color: inherit; text-decoration: inherit;">Roles<wbr>Applied<wbr>To</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Optional list of roles to apply this extension. If property is not specified or '*' is specified, extension is applied to all roles in the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="settings_go">
 <a href="#settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Public settings for the extension. For JSON extensions, this is the JSON settings for the extension. For XML Extension (like RDP), this is the XML setting for the extension.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the extension.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="typehandlerversion_go">
 <a href="#typehandlerversion_go" style="color: inherit; text-decoration: inherit;">Type<wbr>Handler<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the extension. Specifies the version of the extension. If this element is not specified or an asterisk (*) is used as the value, the latest version of the extension is used. If the value is specified with a major version number and an asterisk as the minor version number (X.), the latest minor version of the specified major version is selected. If a major version number and a minor version number are specified (X.Y), the specific extension version is selected. If a version is specified, an auto-upgrade is performed on the role instance.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2036,99 +1929,89 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd>
             title="Optional">
         <span id="autoupgrademinorversion_nodejs">
 <a href="#autoupgrademinorversion_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Explicitly specify whether platform can automatically upgrade typeHandlerVersion to higher minor versions when they become available.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="forceupdatetag_nodejs">
 <a href="#forceupdatetag_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Update<wbr>Tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tag to force apply the provided public and protected settings.
 Changing the tag value allows for re-running the extension without changing any of the public or protected settings.
 If forceUpdateTag is not changed, updates to public or protected settings would still be applied by the handler.
 If neither forceUpdateTag nor any of public or protected settings change, extension would flow to the role instance with the same sequence-number, and
 it is up to handler implementation whether to re-run it or not{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectedsettings_nodejs">
 <a href="#protectedsettings_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protected settings for the extension which are encrypted before sent to the role instance.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectedsettingsfromkeyvault_nodejs">
 <a href="#protectedsettingsfromkeyvault_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Settings<wbr>From<wbr>Key<wbr>Vault</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudservicevaultandsecretreference">Cloud<wbr>Service<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publisher_nodejs">
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the extension handler publisher.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rolesappliedto_nodejs">
 <a href="#rolesappliedto_nodejs" style="color: inherit; text-decoration: inherit;">roles<wbr>Applied<wbr>To</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional list of roles to apply this extension. If property is not specified or '*' is specified, extension is applied to all roles in the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="settings_nodejs">
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Public settings for the extension. For JSON extensions, this is the JSON settings for the extension. For XML Extension (like RDP), this is the XML setting for the extension.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the extension.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="typehandlerversion_nodejs">
 <a href="#typehandlerversion_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Handler<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the extension. Specifies the version of the extension. If this element is not specified or an asterisk (*) is used as the value, the latest version of the extension is used. If the value is specified with a major version number and an asterisk as the minor version number (X.), the latest minor version of the specified major version is selected. If a major version number and a minor version number are specified (X.Y), the specific extension version is selected. If a version is specified, an auto-upgrade is performed on the role instance.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2137,110 +2020,91 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd>
             title="Optional">
         <span id="auto_upgrade_minor_version_python">
 <a href="#auto_upgrade_minor_version_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>upgrade_<wbr>minor_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Explicitly specify whether platform can automatically upgrade typeHandlerVersion to higher minor versions when they become available.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="force_update_tag_python">
 <a href="#force_update_tag_python" style="color: inherit; text-decoration: inherit;">force_<wbr>update_<wbr>tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Tag to force apply the provided public and protected settings.
 Changing the tag value allows for re-running the extension without changing any of the public or protected settings.
 If forceUpdateTag is not changed, updates to public or protected settings would still be applied by the handler.
 If neither forceUpdateTag nor any of public or protected settings change, extension would flow to the role instance with the same sequence-number, and
 it is up to handler implementation whether to re-run it or not{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protected_settings_python">
 <a href="#protected_settings_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Protected settings for the extension which are encrypted before sent to the role instance.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protected_settings_from_key_vault_python">
 <a href="#protected_settings_from_key_vault_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>settings_<wbr>from_<wbr>key_<wbr>vault</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudservicevaultandsecretreference">Cloud<wbr>Service<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publisher_python">
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the extension handler publisher.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="roles_applied_to_python">
 <a href="#roles_applied_to_python" style="color: inherit; text-decoration: inherit;">roles_<wbr>applied_<wbr>to</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional list of roles to apply this extension. If property is not specified or '*' is specified, extension is applied to all roles in the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="settings_python">
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Public settings for the extension. For JSON extensions, this is the JSON settings for the extension. For XML Extension (like RDP), this is the XML setting for the extension.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the extension.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_handler_version_python">
 <a href="#type_handler_version_python" style="color: inherit; text-decoration: inherit;">type_<wbr>handler_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the extension. Specifies the version of the extension. If this element is not specified or an asterisk (*) is used as the value, the latest version of the extension is used. If the value is specified with a major version number and an asterisk as the minor version number (X.), the latest minor version of the specified major version is selected. If a major version number and a minor version number are specified (X.Y), the specific extension version is selected. If a version is specified, an auto-upgrade is performed on the role instance.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="cloudserviceextensionpropertiesresponse">Cloud<wbr>Service<wbr>Extension<wbr>Properties<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2249,109 +2113,98 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd>
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autoupgrademinorversion_csharp">
 <a href="#autoupgrademinorversion_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Explicitly specify whether platform can automatically upgrade typeHandlerVersion to higher minor versions when they become available.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="forceupdatetag_csharp">
 <a href="#forceupdatetag_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Update<wbr>Tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tag to force apply the provided public and protected settings.
 Changing the tag value allows for re-running the extension without changing any of the public or protected settings.
 If forceUpdateTag is not changed, updates to public or protected settings would still be applied by the handler.
 If neither forceUpdateTag nor any of public or protected settings change, extension would flow to the role instance with the same sequence-number, and
 it is up to handler implementation whether to re-run it or not{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectedsettings_csharp">
 <a href="#protectedsettings_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protected settings for the extension which are encrypted before sent to the role instance.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectedsettingsfromkeyvault_csharp">
 <a href="#protectedsettingsfromkeyvault_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Settings<wbr>From<wbr>Key<wbr>Vault</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudservicevaultandsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publisher_csharp">
 <a href="#publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the extension handler publisher.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rolesappliedto_csharp">
 <a href="#rolesappliedto_csharp" style="color: inherit; text-decoration: inherit;">Roles<wbr>Applied<wbr>To</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Optional list of roles to apply this extension. If property is not specified or '*' is specified, extension is applied to all roles in the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="settings_csharp">
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Public settings for the extension. For JSON extensions, this is the JSON settings for the extension. For XML Extension (like RDP), this is the XML setting for the extension.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the extension.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="typehandlerversion_csharp">
 <a href="#typehandlerversion_csharp" style="color: inherit; text-decoration: inherit;">Type<wbr>Handler<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the extension. Specifies the version of the extension. If this element is not specified or an asterisk (*) is used as the value, the latest version of the extension is used. If the value is specified with a major version number and an asterisk as the minor version number (X.), the latest minor version of the specified major version is selected. If a major version number and a minor version number are specified (X.Y), the specific extension version is selected. If a version is specified, an auto-upgrade is performed on the role instance.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2360,109 +2213,98 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd>
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autoupgrademinorversion_go">
 <a href="#autoupgrademinorversion_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Explicitly specify whether platform can automatically upgrade typeHandlerVersion to higher minor versions when they become available.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="forceupdatetag_go">
 <a href="#forceupdatetag_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Update<wbr>Tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tag to force apply the provided public and protected settings.
 Changing the tag value allows for re-running the extension without changing any of the public or protected settings.
 If forceUpdateTag is not changed, updates to public or protected settings would still be applied by the handler.
 If neither forceUpdateTag nor any of public or protected settings change, extension would flow to the role instance with the same sequence-number, and
 it is up to handler implementation whether to re-run it or not{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectedsettings_go">
 <a href="#protectedsettings_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protected settings for the extension which are encrypted before sent to the role instance.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectedsettingsfromkeyvault_go">
 <a href="#protectedsettingsfromkeyvault_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Settings<wbr>From<wbr>Key<wbr>Vault</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudservicevaultandsecretreferenceresponse">Cloud<wbr>Service<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publisher_go">
 <a href="#publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the extension handler publisher.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rolesappliedto_go">
 <a href="#rolesappliedto_go" style="color: inherit; text-decoration: inherit;">Roles<wbr>Applied<wbr>To</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Optional list of roles to apply this extension. If property is not specified or '*' is specified, extension is applied to all roles in the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="settings_go">
 <a href="#settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Public settings for the extension. For JSON extensions, this is the JSON settings for the extension. For XML Extension (like RDP), this is the XML setting for the extension.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the extension.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="typehandlerversion_go">
 <a href="#typehandlerversion_go" style="color: inherit; text-decoration: inherit;">Type<wbr>Handler<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the extension. Specifies the version of the extension. If this element is not specified or an asterisk (*) is used as the value, the latest version of the extension is used. If the value is specified with a major version number and an asterisk as the minor version number (X.), the latest minor version of the specified major version is selected. If a major version number and a minor version number are specified (X.Y), the specific extension version is selected. If a version is specified, an auto-upgrade is performed on the role instance.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2471,109 +2313,98 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd>
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autoupgrademinorversion_nodejs">
 <a href="#autoupgrademinorversion_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Explicitly specify whether platform can automatically upgrade typeHandlerVersion to higher minor versions when they become available.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="forceupdatetag_nodejs">
 <a href="#forceupdatetag_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Update<wbr>Tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Tag to force apply the provided public and protected settings.
 Changing the tag value allows for re-running the extension without changing any of the public or protected settings.
 If forceUpdateTag is not changed, updates to public or protected settings would still be applied by the handler.
 If neither forceUpdateTag nor any of public or protected settings change, extension would flow to the role instance with the same sequence-number, and
 it is up to handler implementation whether to re-run it or not{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectedsettings_nodejs">
 <a href="#protectedsettings_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protected settings for the extension which are encrypted before sent to the role instance.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectedsettingsfromkeyvault_nodejs">
 <a href="#protectedsettingsfromkeyvault_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Settings<wbr>From<wbr>Key<wbr>Vault</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudservicevaultandsecretreferenceresponse">Cloud<wbr>Service<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publisher_nodejs">
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the extension handler publisher.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rolesappliedto_nodejs">
 <a href="#rolesappliedto_nodejs" style="color: inherit; text-decoration: inherit;">roles<wbr>Applied<wbr>To</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional list of roles to apply this extension. If property is not specified or '*' is specified, extension is applied to all roles in the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="settings_nodejs">
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Public settings for the extension. For JSON extensions, this is the JSON settings for the extension. For XML Extension (like RDP), this is the XML setting for the extension.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the extension.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="typehandlerversion_nodejs">
 <a href="#typehandlerversion_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Handler<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the extension. Specifies the version of the extension. If this element is not specified or an asterisk (*) is used as the value, the latest version of the extension is used. If the value is specified with a major version number and an asterisk as the minor version number (X.), the latest minor version of the specified major version is selected. If a major version number and a minor version number are specified (X.Y), the specific extension version is selected. If a version is specified, an auto-upgrade is performed on the role instance.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2582,120 +2413,100 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd>
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="auto_upgrade_minor_version_python">
 <a href="#auto_upgrade_minor_version_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>upgrade_<wbr>minor_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Explicitly specify whether platform can automatically upgrade typeHandlerVersion to higher minor versions when they become available.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="force_update_tag_python">
 <a href="#force_update_tag_python" style="color: inherit; text-decoration: inherit;">force_<wbr>update_<wbr>tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Tag to force apply the provided public and protected settings.
 Changing the tag value allows for re-running the extension without changing any of the public or protected settings.
 If forceUpdateTag is not changed, updates to public or protected settings would still be applied by the handler.
 If neither forceUpdateTag nor any of public or protected settings change, extension would flow to the role instance with the same sequence-number, and
 it is up to handler implementation whether to re-run it or not{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protected_settings_python">
 <a href="#protected_settings_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Protected settings for the extension which are encrypted before sent to the role instance.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protected_settings_from_key_vault_python">
 <a href="#protected_settings_from_key_vault_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>settings_<wbr>from_<wbr>key_<wbr>vault</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudservicevaultandsecretreferenceresponse">Cloud<wbr>Service<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publisher_python">
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the extension handler publisher.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="roles_applied_to_python">
 <a href="#roles_applied_to_python" style="color: inherit; text-decoration: inherit;">roles_<wbr>applied_<wbr>to</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional list of roles to apply this extension. If property is not specified or '*' is specified, extension is applied to all roles in the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="settings_python">
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Public settings for the extension. For JSON extensions, this is the JSON settings for the extension. For XML Extension (like RDP), this is the XML setting for the extension.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the extension.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_handler_version_python">
 <a href="#type_handler_version_python" style="color: inherit; text-decoration: inherit;">type_<wbr>handler_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the extension. Specifies the version of the extension. If this element is not specified or an asterisk (*) is used as the value, the latest version of the extension is used. If the value is specified with a major version number and an asterisk as the minor version number (X.), the latest minor version of the specified major version is selected. If a major version number and a minor version number are specified (X.Y), the specific extension version is selected. If a version is specified, an auto-upgrade is performed on the role instance.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="cloudservicenetworkprofile">Cloud<wbr>Service<wbr>Network<wbr>Profile</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2704,25 +2515,22 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd>
             title="Optional">
         <span id="loadbalancerconfigurations_csharp">
 <a href="#loadbalancerconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Configurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of load balancer configurations for the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="swappablecloudservice_csharp">
 <a href="#swappablecloudservice_csharp" style="color: inherit; text-decoration: inherit;">Swappable<wbr>Cloud<wbr>Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2731,25 +2539,22 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd>
             title="Optional">
         <span id="loadbalancerconfigurations_go">
 <a href="#loadbalancerconfigurations_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Configurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerconfiguration">[]Load<wbr>Balancer<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The list of load balancer configurations for the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="swappablecloudservice_go">
 <a href="#swappablecloudservice_go" style="color: inherit; text-decoration: inherit;">Swappable<wbr>Cloud<wbr>Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2758,25 +2563,22 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd>
             title="Optional">
         <span id="loadbalancerconfigurations_nodejs">
 <a href="#loadbalancerconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Configurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerconfiguration">Load<wbr>Balancer<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}The list of load balancer configurations for the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="swappablecloudservice_nodejs">
 <a href="#swappablecloudservice_nodejs" style="color: inherit; text-decoration: inherit;">swappable<wbr>Cloud<wbr>Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2785,36 +2587,24 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd>
             title="Optional">
         <span id="load_balancer_configurations_python">
 <a href="#load_balancer_configurations_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>configurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerconfiguration">Sequence[Load<wbr>Balancer<wbr>Configuration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of load balancer configurations for the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="swappable_cloud_service_python">
 <a href="#swappable_cloud_service_python" style="color: inherit; text-decoration: inherit;">swappable_<wbr>cloud_<wbr>service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="cloudservicenetworkprofileresponse">Cloud<wbr>Service<wbr>Network<wbr>Profile<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2823,25 +2613,22 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd>
             title="Optional">
         <span id="loadbalancerconfigurations_csharp">
 <a href="#loadbalancerconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Configurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Configuration<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of load balancer configurations for the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="swappablecloudservice_csharp">
 <a href="#swappablecloudservice_csharp" style="color: inherit; text-decoration: inherit;">Swappable<wbr>Cloud<wbr>Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2850,25 +2637,22 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd>
             title="Optional">
         <span id="loadbalancerconfigurations_go">
 <a href="#loadbalancerconfigurations_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Configurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerconfigurationresponse">[]Load<wbr>Balancer<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The list of load balancer configurations for the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="swappablecloudservice_go">
 <a href="#swappablecloudservice_go" style="color: inherit; text-decoration: inherit;">Swappable<wbr>Cloud<wbr>Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2877,25 +2661,22 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd>
             title="Optional">
         <span id="loadbalancerconfigurations_nodejs">
 <a href="#loadbalancerconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Configurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerconfigurationresponse">Load<wbr>Balancer<wbr>Configuration<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of load balancer configurations for the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="swappablecloudservice_nodejs">
 <a href="#swappablecloudservice_nodejs" style="color: inherit; text-decoration: inherit;">swappable<wbr>Cloud<wbr>Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2904,36 +2685,24 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd>
             title="Optional">
         <span id="load_balancer_configurations_python">
 <a href="#load_balancer_configurations_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>configurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerconfigurationresponse">Sequence[Load<wbr>Balancer<wbr>Configuration<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of load balancer configurations for the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="swappable_cloud_service_python">
 <a href="#swappable_cloud_service_python" style="color: inherit; text-decoration: inherit;">swappable_<wbr>cloud_<wbr>service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="cloudserviceosprofile">Cloud<wbr>Service<wbr>Os<wbr>Profile</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2942,15 +2711,13 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd>
             title="Optional">
         <span id="secrets_csharp">
 <a href="#secrets_csharp" style="color: inherit; text-decoration: inherit;">Secrets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudservicevaultsecretgroup">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Vault<wbr>Secret<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies set of certificates that should be installed onto the role instances.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2959,15 +2726,13 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd>
             title="Optional">
         <span id="secrets_go">
 <a href="#secrets_go" style="color: inherit; text-decoration: inherit;">Secrets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudservicevaultsecretgroup">[]Cloud<wbr>Service<wbr>Vault<wbr>Secret<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}Specifies set of certificates that should be installed onto the role instances.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2976,15 +2741,13 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd>
             title="Optional">
         <span id="secrets_nodejs">
 <a href="#secrets_nodejs" style="color: inherit; text-decoration: inherit;">secrets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudservicevaultsecretgroup">Cloud<wbr>Service<wbr>Vault<wbr>Secret<wbr>Group[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies set of certificates that should be installed onto the role instances.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2993,26 +2756,15 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd>
             title="Optional">
         <span id="secrets_python">
 <a href="#secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudservicevaultsecretgroup">Sequence[Cloud<wbr>Service<wbr>Vault<wbr>Secret<wbr>Group<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies set of certificates that should be installed onto the role instances.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="cloudserviceosprofileresponse">Cloud<wbr>Service<wbr>Os<wbr>Profile<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3021,15 +2773,13 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd>
             title="Optional">
         <span id="secrets_csharp">
 <a href="#secrets_csharp" style="color: inherit; text-decoration: inherit;">Secrets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudservicevaultsecretgroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Vault<wbr>Secret<wbr>Group<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies set of certificates that should be installed onto the role instances.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3038,15 +2788,13 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd>
             title="Optional">
         <span id="secrets_go">
 <a href="#secrets_go" style="color: inherit; text-decoration: inherit;">Secrets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudservicevaultsecretgroupresponse">[]Cloud<wbr>Service<wbr>Vault<wbr>Secret<wbr>Group<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Specifies set of certificates that should be installed onto the role instances.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3055,15 +2803,13 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd>
             title="Optional">
         <span id="secrets_nodejs">
 <a href="#secrets_nodejs" style="color: inherit; text-decoration: inherit;">secrets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudservicevaultsecretgroupresponse">Cloud<wbr>Service<wbr>Vault<wbr>Secret<wbr>Group<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies set of certificates that should be installed onto the role instances.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3072,26 +2818,15 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd>
             title="Optional">
         <span id="secrets_python">
 <a href="#secrets_python" style="color: inherit; text-decoration: inherit;">secrets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudservicevaultsecretgroupresponse">Sequence[Cloud<wbr>Service<wbr>Vault<wbr>Secret<wbr>Group<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies set of certificates that should be installed onto the role instances.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="cloudserviceproperties">Cloud<wbr>Service<wbr>Properties</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3100,100 +2835,90 @@ it is up to handler implementation whether to re-run it or not{{% /md %}}</dd>
             title="Optional">
         <span id="configuration_csharp">
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the XML service configuration (.cscfg) for the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="configurationurl_csharp">
 <a href="#configurationurl_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a URL that refers to the location of the service configuration in the Blob service. The service package URL  can be Shared Access Signature (SAS) URI from any storage account.
 This is a write-only property and is not returned in GET calls.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extensionprofile_csharp">
 <a href="#extensionprofile_csharp" style="color: inherit; text-decoration: inherit;">Extension<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceextensionprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Extension<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a cloud service extension profile.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkprofile_csharp">
 <a href="#networkprofile_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudservicenetworkprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Network<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network Profile for the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="osprofile_csharp">
 <a href="#osprofile_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceosprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Os<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the OS profile for the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="packageurl_csharp">
 <a href="#packageurl_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a URL that refers to the location of the service package in the Blob service. The service package URL can be Shared Access Signature (SAS) URI from any storage account.
 This is a write-only property and is not returned in GET calls.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="roleprofile_csharp">
 <a href="#roleprofile_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceroleprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the role profile for the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="startcloudservice_csharp">
 <a href="#startcloudservice_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Cloud<wbr>Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Optional) Indicates whether to start the cloud service immediately after it is created. The default value is `true`.
 If false, the service model is still deployed, but the code is not run immediately. Instead, the service is PoweredOff until you call Start, at which time the service will be started. A deployed service still incurs charges, even if it is poweredoff.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="upgrademode_csharp">
 <a href="#upgrademode_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Cloud<wbr>Service<wbr>Upgrade<wbr>Mode</span>
+        <span class="property-type">string | <a href="#cloudserviceupgrademode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Cloud<wbr>Service<wbr>Upgrade<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Update mode for the cloud service. Role instances are allocated to update domains when the service is deployed. Updates can be initiated manually in each update domain or initiated automatically in all update domains.
 Possible Values are <br /><br />**Auto**<br /><br />**Manual** <br /><br />**Simultaneous**<br /><br />
 If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain must be called to apply the update. If set to Auto, the update is automatically applied to each update domain in sequence.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3202,100 +2927,90 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="configuration_go">
 <a href="#configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the XML service configuration (.cscfg) for the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="configurationurl_go">
 <a href="#configurationurl_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a URL that refers to the location of the service configuration in the Blob service. The service package URL  can be Shared Access Signature (SAS) URI from any storage account.
 This is a write-only property and is not returned in GET calls.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extensionprofile_go">
 <a href="#extensionprofile_go" style="color: inherit; text-decoration: inherit;">Extension<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceextensionprofile">Cloud<wbr>Service<wbr>Extension<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Describes a cloud service extension profile.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkprofile_go">
 <a href="#networkprofile_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudservicenetworkprofile">Cloud<wbr>Service<wbr>Network<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Network Profile for the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="osprofile_go">
 <a href="#osprofile_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceosprofile">Cloud<wbr>Service<wbr>Os<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Describes the OS profile for the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="packageurl_go">
 <a href="#packageurl_go" style="color: inherit; text-decoration: inherit;">Package<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a URL that refers to the location of the service package in the Blob service. The service package URL can be Shared Access Signature (SAS) URI from any storage account.
 This is a write-only property and is not returned in GET calls.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="roleprofile_go">
 <a href="#roleprofile_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceroleprofile">Cloud<wbr>Service<wbr>Role<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Describes the role profile for the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="startcloudservice_go">
 <a href="#startcloudservice_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Cloud<wbr>Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Optional) Indicates whether to start the cloud service immediately after it is created. The default value is `true`.
 If false, the service model is still deployed, but the code is not run immediately. Instead, the service is PoweredOff until you call Start, at which time the service will be started. A deployed service still incurs charges, even if it is poweredoff.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="upgrademode_go">
 <a href="#upgrademode_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#cloudserviceupgrademode">Cloud<wbr>Service<wbr>Upgrade<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Update mode for the cloud service. Role instances are allocated to update domains when the service is deployed. Updates can be initiated manually in each update domain or initiated automatically in all update domains.
 Possible Values are <br /><br />**Auto**<br /><br />**Manual** <br /><br />**Simultaneous**<br /><br />
 If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain must be called to apply the update. If set to Auto, the update is automatically applied to each update domain in sequence.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3304,100 +3019,90 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="configuration_nodejs">
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the XML service configuration (.cscfg) for the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="configurationurl_nodejs">
 <a href="#configurationurl_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a URL that refers to the location of the service configuration in the Blob service. The service package URL  can be Shared Access Signature (SAS) URI from any storage account.
 This is a write-only property and is not returned in GET calls.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extensionprofile_nodejs">
 <a href="#extensionprofile_nodejs" style="color: inherit; text-decoration: inherit;">extension<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceextensionprofile">Cloud<wbr>Service<wbr>Extension<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Describes a cloud service extension profile.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkprofile_nodejs">
 <a href="#networkprofile_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudservicenetworkprofile">Cloud<wbr>Service<wbr>Network<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Network Profile for the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="osprofile_nodejs">
 <a href="#osprofile_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceosprofile">Cloud<wbr>Service<wbr>Os<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Describes the OS profile for the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="packageurl_nodejs">
 <a href="#packageurl_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a URL that refers to the location of the service package in the Blob service. The service package URL can be Shared Access Signature (SAS) URI from any storage account.
 This is a write-only property and is not returned in GET calls.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="roleprofile_nodejs">
 <a href="#roleprofile_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceroleprofile">Cloud<wbr>Service<wbr>Role<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Describes the role profile for the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="startcloudservice_nodejs">
 <a href="#startcloudservice_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Cloud<wbr>Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}(Optional) Indicates whether to start the cloud service immediately after it is created. The default value is `true`.
 If false, the service model is still deployed, but the code is not run immediately. Instead, the service is PoweredOff until you call Start, at which time the service will be started. A deployed service still incurs charges, even if it is poweredoff.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="upgrademode_nodejs">
 <a href="#upgrademode_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Cloud<wbr>Service<wbr>Upgrade<wbr>Mode</span>
+        <span class="property-type">string | <a href="#cloudserviceupgrademode">Cloud<wbr>Service<wbr>Upgrade<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Update mode for the cloud service. Role instances are allocated to update domains when the service is deployed. Updates can be initiated manually in each update domain or initiated automatically in all update domains.
 Possible Values are <br /><br />**Auto**<br /><br />**Manual** <br /><br />**Simultaneous**<br /><br />
 If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain must be called to apply the update. If set to Auto, the update is automatically applied to each update domain in sequence.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3406,111 +3111,92 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="configuration_python">
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the XML service configuration (.cscfg) for the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="configuration_url_python">
 <a href="#configuration_url_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a URL that refers to the location of the service configuration in the Blob service. The service package URL  can be Shared Access Signature (SAS) URI from any storage account.
 This is a write-only property and is not returned in GET calls.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extension_profile_python">
 <a href="#extension_profile_python" style="color: inherit; text-decoration: inherit;">extension_<wbr>profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceextensionprofile">Cloud<wbr>Service<wbr>Extension<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a cloud service extension profile.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="network_profile_python">
 <a href="#network_profile_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudservicenetworkprofile">Cloud<wbr>Service<wbr>Network<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network Profile for the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="os_profile_python">
 <a href="#os_profile_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceosprofile">Cloud<wbr>Service<wbr>Os<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the OS profile for the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="package_url_python">
 <a href="#package_url_python" style="color: inherit; text-decoration: inherit;">package_<wbr>url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a URL that refers to the location of the service package in the Blob service. The service package URL can be Shared Access Signature (SAS) URI from any storage account.
 This is a write-only property and is not returned in GET calls.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="role_profile_python">
 <a href="#role_profile_python" style="color: inherit; text-decoration: inherit;">role_<wbr>profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceroleprofile">Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the role profile for the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="start_cloud_service_python">
 <a href="#start_cloud_service_python" style="color: inherit; text-decoration: inherit;">start_<wbr>cloud_<wbr>service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Optional) Indicates whether to start the cloud service immediately after it is created. The default value is `true`.
 If false, the service model is still deployed, but the code is not run immediately. Instead, the service is PoweredOff until you call Start, at which time the service will be started. A deployed service still incurs charges, even if it is poweredoff.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="upgrade_mode_python">
 <a href="#upgrade_mode_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Cloud<wbr>Service<wbr>Upgrade<wbr>Mode</span>
+        <span class="property-type">str | <a href="#cloudserviceupgrademode">Cloud<wbr>Service<wbr>Upgrade<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Update mode for the cloud service. Role instances are allocated to update domains when the service is deployed. Updates can be initiated manually in each update domain or initiated automatically in all update domains.
 Possible Values are <br /><br />**Auto**<br /><br />**Manual** <br /><br />**Simultaneous**<br /><br />
 If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain must be called to apply the update. If set to Auto, the update is automatically applied to each update domain in sequence.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="cloudservicepropertiesresponse">Cloud<wbr>Service<wbr>Properties<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3519,120 +3205,108 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="uniqueid_csharp">
 <a href="#uniqueid_csharp" style="color: inherit; text-decoration: inherit;">Unique<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="configuration_csharp">
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the XML service configuration (.cscfg) for the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="configurationurl_csharp">
 <a href="#configurationurl_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a URL that refers to the location of the service configuration in the Blob service. The service package URL  can be Shared Access Signature (SAS) URI from any storage account.
 This is a write-only property and is not returned in GET calls.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extensionprofile_csharp">
 <a href="#extensionprofile_csharp" style="color: inherit; text-decoration: inherit;">Extension<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceextensionprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Extension<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a cloud service extension profile.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkprofile_csharp">
 <a href="#networkprofile_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudservicenetworkprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Network<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network Profile for the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="osprofile_csharp">
 <a href="#osprofile_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceosprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Os<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the OS profile for the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="packageurl_csharp">
 <a href="#packageurl_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a URL that refers to the location of the service package in the Blob service. The service package URL can be Shared Access Signature (SAS) URI from any storage account.
 This is a write-only property and is not returned in GET calls.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="roleprofile_csharp">
 <a href="#roleprofile_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceroleprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the role profile for the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="startcloudservice_csharp">
 <a href="#startcloudservice_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Cloud<wbr>Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Optional) Indicates whether to start the cloud service immediately after it is created. The default value is `true`.
 If false, the service model is still deployed, but the code is not run immediately. Instead, the service is PoweredOff until you call Start, at which time the service will be started. A deployed service still incurs charges, even if it is poweredoff.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="upgrademode_csharp">
 <a href="#upgrademode_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Update mode for the cloud service. Role instances are allocated to update domains when the service is deployed. Updates can be initiated manually in each update domain or initiated automatically in all update domains.
 Possible Values are <br /><br />**Auto**<br /><br />**Manual** <br /><br />**Simultaneous**<br /><br />
 If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain must be called to apply the update. If set to Auto, the update is automatically applied to each update domain in sequence.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3641,120 +3315,108 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="uniqueid_go">
 <a href="#uniqueid_go" style="color: inherit; text-decoration: inherit;">Unique<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="configuration_go">
 <a href="#configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the XML service configuration (.cscfg) for the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="configurationurl_go">
 <a href="#configurationurl_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a URL that refers to the location of the service configuration in the Blob service. The service package URL  can be Shared Access Signature (SAS) URI from any storage account.
 This is a write-only property and is not returned in GET calls.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extensionprofile_go">
 <a href="#extensionprofile_go" style="color: inherit; text-decoration: inherit;">Extension<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceextensionprofileresponse">Cloud<wbr>Service<wbr>Extension<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes a cloud service extension profile.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkprofile_go">
 <a href="#networkprofile_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudservicenetworkprofileresponse">Cloud<wbr>Service<wbr>Network<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Network Profile for the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="osprofile_go">
 <a href="#osprofile_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceosprofileresponse">Cloud<wbr>Service<wbr>Os<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the OS profile for the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="packageurl_go">
 <a href="#packageurl_go" style="color: inherit; text-decoration: inherit;">Package<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a URL that refers to the location of the service package in the Blob service. The service package URL can be Shared Access Signature (SAS) URI from any storage account.
 This is a write-only property and is not returned in GET calls.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="roleprofile_go">
 <a href="#roleprofile_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceroleprofileresponse">Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the role profile for the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="startcloudservice_go">
 <a href="#startcloudservice_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Cloud<wbr>Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Optional) Indicates whether to start the cloud service immediately after it is created. The default value is `true`.
 If false, the service model is still deployed, but the code is not run immediately. Instead, the service is PoweredOff until you call Start, at which time the service will be started. A deployed service still incurs charges, even if it is poweredoff.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="upgrademode_go">
 <a href="#upgrademode_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Update mode for the cloud service. Role instances are allocated to update domains when the service is deployed. Updates can be initiated manually in each update domain or initiated automatically in all update domains.
 Possible Values are <br /><br />**Auto**<br /><br />**Manual** <br /><br />**Simultaneous**<br /><br />
 If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain must be called to apply the update. If set to Auto, the update is automatically applied to each update domain in sequence.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3763,120 +3425,108 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="uniqueid_nodejs">
 <a href="#uniqueid_nodejs" style="color: inherit; text-decoration: inherit;">unique<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="configuration_nodejs">
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the XML service configuration (.cscfg) for the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="configurationurl_nodejs">
 <a href="#configurationurl_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a URL that refers to the location of the service configuration in the Blob service. The service package URL  can be Shared Access Signature (SAS) URI from any storage account.
 This is a write-only property and is not returned in GET calls.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extensionprofile_nodejs">
 <a href="#extensionprofile_nodejs" style="color: inherit; text-decoration: inherit;">extension<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceextensionprofileresponse">Cloud<wbr>Service<wbr>Extension<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes a cloud service extension profile.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkprofile_nodejs">
 <a href="#networkprofile_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudservicenetworkprofileresponse">Cloud<wbr>Service<wbr>Network<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Network Profile for the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="osprofile_nodejs">
 <a href="#osprofile_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceosprofileresponse">Cloud<wbr>Service<wbr>Os<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the OS profile for the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="packageurl_nodejs">
 <a href="#packageurl_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a URL that refers to the location of the service package in the Blob service. The service package URL can be Shared Access Signature (SAS) URI from any storage account.
 This is a write-only property and is not returned in GET calls.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="roleprofile_nodejs">
 <a href="#roleprofile_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceroleprofileresponse">Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the role profile for the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="startcloudservice_nodejs">
 <a href="#startcloudservice_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Cloud<wbr>Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}(Optional) Indicates whether to start the cloud service immediately after it is created. The default value is `true`.
 If false, the service model is still deployed, but the code is not run immediately. Instead, the service is PoweredOff until you call Start, at which time the service will be started. A deployed service still incurs charges, even if it is poweredoff.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="upgrademode_nodejs">
 <a href="#upgrademode_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Update mode for the cloud service. Role instances are allocated to update domains when the service is deployed. Updates can be initiated manually in each update domain or initiated automatically in all update domains.
 Possible Values are <br /><br />**Auto**<br /><br />**Manual** <br /><br />**Simultaneous**<br /><br />
 If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain must be called to apply the update. If set to Auto, the update is automatically applied to each update domain in sequence.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3885,131 +3535,110 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="unique_id_python">
 <a href="#unique_id_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="configuration_python">
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the XML service configuration (.cscfg) for the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="configuration_url_python">
 <a href="#configuration_url_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a URL that refers to the location of the service configuration in the Blob service. The service package URL  can be Shared Access Signature (SAS) URI from any storage account.
 This is a write-only property and is not returned in GET calls.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extension_profile_python">
 <a href="#extension_profile_python" style="color: inherit; text-decoration: inherit;">extension_<wbr>profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceextensionprofileresponse">Cloud<wbr>Service<wbr>Extension<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a cloud service extension profile.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="network_profile_python">
 <a href="#network_profile_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudservicenetworkprofileresponse">Cloud<wbr>Service<wbr>Network<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Network Profile for the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="os_profile_python">
 <a href="#os_profile_python" style="color: inherit; text-decoration: inherit;">os_<wbr>profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceosprofileresponse">Cloud<wbr>Service<wbr>Os<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the OS profile for the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="package_url_python">
 <a href="#package_url_python" style="color: inherit; text-decoration: inherit;">package_<wbr>url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a URL that refers to the location of the service package in the Blob service. The service package URL can be Shared Access Signature (SAS) URI from any storage account.
 This is a write-only property and is not returned in GET calls.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="role_profile_python">
 <a href="#role_profile_python" style="color: inherit; text-decoration: inherit;">role_<wbr>profile</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceroleprofileresponse">Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the role profile for the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="start_cloud_service_python">
 <a href="#start_cloud_service_python" style="color: inherit; text-decoration: inherit;">start_<wbr>cloud_<wbr>service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Optional) Indicates whether to start the cloud service immediately after it is created. The default value is `true`.
 If false, the service model is still deployed, but the code is not run immediately. Instead, the service is PoweredOff until you call Start, at which time the service will be started. A deployed service still incurs charges, even if it is poweredoff.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="upgrade_mode_python">
 <a href="#upgrade_mode_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Update mode for the cloud service. Role instances are allocated to update domains when the service is deployed. Updates can be initiated manually in each update domain or initiated automatically in all update domains.
 Possible Values are <br /><br />**Auto**<br /><br />**Manual** <br /><br />**Simultaneous**<br /><br />
 If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain must be called to apply the update. If set to Auto, the update is automatically applied to each update domain in sequence.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="cloudserviceroleprofile">Cloud<wbr>Service<wbr>Role<wbr>Profile</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4018,15 +3647,13 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="roles_csharp">
 <a href="#roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceroleprofileproperties">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Properties<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of roles for the cloud service.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4035,15 +3662,13 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="roles_go">
 <a href="#roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceroleprofileproperties">[]Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}List of roles for the cloud service.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4052,15 +3677,13 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="roles_nodejs">
 <a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceroleprofileproperties">Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Properties[]</a></span>
     </dt>
     <dd>{{% md %}}List of roles for the cloud service.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4069,26 +3692,15 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="roles_python">
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceroleprofileproperties">Sequence[Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Properties<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of roles for the cloud service.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="cloudserviceroleprofileproperties">Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Properties</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4097,25 +3709,22 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudservicerolesku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Role<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the cloud service role sku.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4124,25 +3733,22 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudservicerolesku">Cloud<wbr>Service<wbr>Role<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}Describes the cloud service role sku.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4151,25 +3757,22 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudservicerolesku">Cloud<wbr>Service<wbr>Role<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}Describes the cloud service role sku.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4178,36 +3781,24 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudservicerolesku">Cloud<wbr>Service<wbr>Role<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the cloud service role sku.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="cloudserviceroleprofilepropertiesresponse">Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Properties<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4216,25 +3807,22 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceroleskuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Role<wbr>Sku<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the cloud service role sku.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4243,25 +3831,22 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceroleskuresponse">Cloud<wbr>Service<wbr>Role<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the cloud service role sku.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4270,25 +3855,22 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceroleskuresponse">Cloud<wbr>Service<wbr>Role<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes the cloud service role sku.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4297,36 +3879,24 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceroleskuresponse">Cloud<wbr>Service<wbr>Role<wbr>Sku<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the cloud service role sku.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="cloudserviceroleprofileresponse">Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4335,15 +3905,13 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="roles_csharp">
 <a href="#roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceroleprofilepropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Properties<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of roles for the cloud service.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4352,15 +3920,13 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="roles_go">
 <a href="#roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceroleprofilepropertiesresponse">[]Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}List of roles for the cloud service.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4369,15 +3935,13 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="roles_nodejs">
 <a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceroleprofilepropertiesresponse">Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Properties<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of roles for the cloud service.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4386,27 +3950,16 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="roles_python">
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceroleprofilepropertiesresponse">Sequence[Cloud<wbr>Service<wbr>Role<wbr>Profile<wbr>Properties<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of roles for the cloud service.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="cloudservicerolesku">Cloud<wbr>Service<wbr>Role<wbr>Sku</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4414,35 +3967,31 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="capacity_csharp">
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of role instances in the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sku name. NOTE: If the new SKU is not supported on the hardware the cloud service is currently on, you need to delete and recreate the cloud service or move back to the old sku.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the tier of the cloud service. Possible Values are <br /><br /> **Standard** <br /><br /> **Basic**{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4451,35 +4000,31 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="capacity_go">
 <a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of role instances in the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sku name. NOTE: If the new SKU is not supported on the hardware the cloud service is currently on, you need to delete and recreate the cloud service or move back to the old sku.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the tier of the cloud service. Possible Values are <br /><br /> **Standard** <br /><br /> **Basic**{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4488,35 +4033,31 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="capacity_nodejs">
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of role instances in the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sku name. NOTE: If the new SKU is not supported on the hardware the cloud service is currently on, you need to delete and recreate the cloud service or move back to the old sku.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the tier of the cloud service. Possible Values are <br /><br /> **Standard** <br /><br /> **Basic**{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4525,47 +4066,34 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="capacity_python">
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of role instances in the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The sku name. NOTE: If the new SKU is not supported on the hardware the cloud service is currently on, you need to delete and recreate the cloud service or move back to the old sku.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the tier of the cloud service. Possible Values are <br /><br /> **Standard** <br /><br /> **Basic**{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="cloudserviceroleskuresponse">Cloud<wbr>Service<wbr>Role<wbr>Sku<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4573,35 +4101,31 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="capacity_csharp">
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of role instances in the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sku name. NOTE: If the new SKU is not supported on the hardware the cloud service is currently on, you need to delete and recreate the cloud service or move back to the old sku.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the tier of the cloud service. Possible Values are <br /><br /> **Standard** <br /><br /> **Basic**{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4610,35 +4134,31 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="capacity_go">
 <a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of role instances in the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sku name. NOTE: If the new SKU is not supported on the hardware the cloud service is currently on, you need to delete and recreate the cloud service or move back to the old sku.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the tier of the cloud service. Possible Values are <br /><br /> **Standard** <br /><br /> **Basic**{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4647,35 +4167,31 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="capacity_nodejs">
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of role instances in the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The sku name. NOTE: If the new SKU is not supported on the hardware the cloud service is currently on, you need to delete and recreate the cloud service or move back to the old sku.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the tier of the cloud service. Possible Values are <br /><br /> **Standard** <br /><br /> **Basic**{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4684,46 +4200,79 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="capacity_python">
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of role instances in the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The sku name. NOTE: If the new SKU is not supported on the hardware the cloud service is currently on, you need to delete and recreate the cloud service or move back to the old sku.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the tier of the cloud service. Possible Values are <br /><br /> **Standard** <br /><br /> **Basic**{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="cloudserviceupgrademode">Cloud<wbr>Service<wbr>Upgrade<wbr>Mode</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Auto</dt>
+    <dd>Auto</dd>
+    <dt>Manual</dt>
+    <dd>Manual</dd>
+    <dt>Simultaneous</dt>
+    <dd>Simultaneous</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Cloud<wbr>Service<wbr>Upgrade<wbr>Mode<wbr>Auto</dt>
+    <dd>Auto</dd>
+    <dt>Cloud<wbr>Service<wbr>Upgrade<wbr>Mode<wbr>Manual</dt>
+    <dd>Manual</dd>
+    <dt>Cloud<wbr>Service<wbr>Upgrade<wbr>Mode<wbr>Simultaneous</dt>
+    <dd>Simultaneous</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Auto</dt>
+    <dd>Auto</dd>
+    <dt>Manual</dt>
+    <dd>Manual</dd>
+    <dt>Simultaneous</dt>
+    <dd>Simultaneous</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>AUTO</dt>
+    <dd>Auto</dd>
+    <dt>MANUAL</dt>
+    <dd>Manual</dd>
+    <dt>SIMULTANEOUS</dt>
+    <dd>Simultaneous</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="cloudservicevaultandsecretreference">Cloud<wbr>Service<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4732,25 +4281,22 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="secreturl_csharp">
 <a href="#secreturl_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourcevault_csharp">
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4759,25 +4305,22 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="secreturl_go">
 <a href="#secreturl_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourcevault_go">
 <a href="#sourcevault_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4786,25 +4329,22 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="secreturl_nodejs">
 <a href="#secreturl_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourcevault_nodejs">
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4813,36 +4353,24 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="secret_url_python">
 <a href="#secret_url_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_vault_python">
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="cloudservicevaultandsecretreferenceresponse">Cloud<wbr>Service<wbr>Vault<wbr>And<wbr>Secret<wbr>Reference<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4851,25 +4379,22 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="secreturl_csharp">
 <a href="#secreturl_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourcevault_csharp">
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4878,25 +4403,22 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="secreturl_go">
 <a href="#secreturl_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourcevault_go">
 <a href="#sourcevault_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4905,25 +4427,22 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="secreturl_nodejs">
 <a href="#secreturl_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourcevault_nodejs">
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4932,37 +4451,25 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="secret_url_python">
 <a href="#secret_url_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_vault_python">
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="cloudservicevaultcertificate">Cloud<wbr>Service<wbr>Vault<wbr>Certificate</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4970,15 +4477,13 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="certificateurl_csharp">
 <a href="#certificateurl_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the URL of a certificate that has been uploaded to Key Vault as a secret.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4987,15 +4492,13 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="certificateurl_go">
 <a href="#certificateurl_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the URL of a certificate that has been uploaded to Key Vault as a secret.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5004,15 +4507,13 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="certificateurl_nodejs">
 <a href="#certificateurl_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the URL of a certificate that has been uploaded to Key Vault as a secret.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5021,27 +4522,16 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="certificate_url_python">
 <a href="#certificate_url_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is the URL of a certificate that has been uploaded to Key Vault as a secret.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="cloudservicevaultcertificateresponse">Cloud<wbr>Service<wbr>Vault<wbr>Certificate<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5049,15 +4539,13 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="certificateurl_csharp">
 <a href="#certificateurl_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the URL of a certificate that has been uploaded to Key Vault as a secret.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5066,15 +4554,13 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="certificateurl_go">
 <a href="#certificateurl_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the URL of a certificate that has been uploaded to Key Vault as a secret.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5083,15 +4569,13 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="certificateurl_nodejs">
 <a href="#certificateurl_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the URL of a certificate that has been uploaded to Key Vault as a secret.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5100,26 +4584,15 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="certificate_url_python">
 <a href="#certificate_url_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is the URL of a certificate that has been uploaded to Key Vault as a secret.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="cloudservicevaultsecretgroup">Cloud<wbr>Service<wbr>Vault<wbr>Secret<wbr>Group</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5128,25 +4601,22 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="sourcevault_csharp">
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing all of the certificates in VaultCertificates.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vaultcertificates_csharp">
 <a href="#vaultcertificates_csharp" style="color: inherit; text-decoration: inherit;">Vault<wbr>Certificates</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudservicevaultcertificate">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Vault<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of key vault references in SourceVault which contain certificates.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5155,25 +4625,22 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="sourcevault_go">
 <a href="#sourcevault_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing all of the certificates in VaultCertificates.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vaultcertificates_go">
 <a href="#vaultcertificates_go" style="color: inherit; text-decoration: inherit;">Vault<wbr>Certificates</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudservicevaultcertificate">[]Cloud<wbr>Service<wbr>Vault<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}The list of key vault references in SourceVault which contain certificates.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5182,25 +4649,22 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="sourcevault_nodejs">
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing all of the certificates in VaultCertificates.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vaultcertificates_nodejs">
 <a href="#vaultcertificates_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>Certificates</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudservicevaultcertificate">Cloud<wbr>Service<wbr>Vault<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}The list of key vault references in SourceVault which contain certificates.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5209,36 +4673,24 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="source_vault_python">
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing all of the certificates in VaultCertificates.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vault_certificates_python">
 <a href="#vault_certificates_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>certificates</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudservicevaultcertificate">Sequence[Cloud<wbr>Service<wbr>Vault<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of key vault references in SourceVault which contain certificates.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="cloudservicevaultsecretgroupresponse">Cloud<wbr>Service<wbr>Vault<wbr>Secret<wbr>Group<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5247,25 +4699,22 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="sourcevault_csharp">
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing all of the certificates in VaultCertificates.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vaultcertificates_csharp">
 <a href="#vaultcertificates_csharp" style="color: inherit; text-decoration: inherit;">Vault<wbr>Certificates</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudservicevaultcertificateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Vault<wbr>Certificate<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of key vault references in SourceVault which contain certificates.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5274,25 +4723,22 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="sourcevault_go">
 <a href="#sourcevault_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing all of the certificates in VaultCertificates.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vaultcertificates_go">
 <a href="#vaultcertificates_go" style="color: inherit; text-decoration: inherit;">Vault<wbr>Certificates</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudservicevaultcertificateresponse">[]Cloud<wbr>Service<wbr>Vault<wbr>Certificate<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The list of key vault references in SourceVault which contain certificates.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5301,25 +4747,22 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="sourcevault_nodejs">
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing all of the certificates in VaultCertificates.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vaultcertificates_nodejs">
 <a href="#vaultcertificates_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>Certificates</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudservicevaultcertificateresponse">Cloud<wbr>Service<wbr>Vault<wbr>Certificate<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The list of key vault references in SourceVault which contain certificates.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5328,36 +4771,24 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="source_vault_python">
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The relative URL of the Key Vault containing all of the certificates in VaultCertificates.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vault_certificates_python">
 <a href="#vault_certificates_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>certificates</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudservicevaultcertificateresponse">Sequence[Cloud<wbr>Service<wbr>Vault<wbr>Certificate<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of key vault references in SourceVault which contain certificates.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="extension">Extension</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5366,25 +4797,22 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the extension.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceextensionproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Extension<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extension Properties.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5393,25 +4821,22 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the extension.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceextensionproperties">Cloud<wbr>Service<wbr>Extension<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Extension Properties.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5420,25 +4845,22 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the extension.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceextensionproperties">Cloud<wbr>Service<wbr>Extension<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Extension Properties.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5447,36 +4869,24 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the extension.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceextensionproperties">Cloud<wbr>Service<wbr>Extension<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extension Properties.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="extensionresponse">Extension<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5485,25 +4895,22 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the extension.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceextensionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Cloud<wbr>Service<wbr>Extension<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extension Properties.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5512,25 +4919,22 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the extension.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceextensionpropertiesresponse">Cloud<wbr>Service<wbr>Extension<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Extension Properties.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5539,25 +4943,22 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the extension.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceextensionpropertiesresponse">Cloud<wbr>Service<wbr>Extension<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Extension Properties.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5566,36 +4967,24 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the extension.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cloudserviceextensionpropertiesresponse">Cloud<wbr>Service<wbr>Extension<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extension Properties.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="loadbalancerconfiguration">Load<wbr>Balancer<wbr>Configuration</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5604,25 +4993,22 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource Name{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerconfigurationproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Configuration<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5631,25 +5017,22 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource Name{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerconfigurationproperties">Load<wbr>Balancer<wbr>Configuration<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5658,25 +5041,22 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource Name{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerconfigurationproperties">Load<wbr>Balancer<wbr>Configuration<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5685,36 +5065,24 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource Name{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerconfigurationproperties">Load<wbr>Balancer<wbr>Configuration<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="loadbalancerconfigurationproperties">Load<wbr>Balancer<wbr>Configuration<wbr>Properties</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5723,15 +5091,13 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="frontendipconfigurations_csharp">
 <a href="#frontendipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Frontend<wbr>IPConfigurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerfrontendipconfiguration">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of IP{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5740,15 +5106,13 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="frontendipconfigurations_go">
 <a href="#frontendipconfigurations_go" style="color: inherit; text-decoration: inherit;">Frontend<wbr>IPConfigurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerfrontendipconfiguration">[]Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration</a></span>
     </dt>
     <dd>{{% md %}}List of IP{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5757,15 +5121,13 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="frontendipconfigurations_nodejs">
 <a href="#frontendipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>IPConfigurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerfrontendipconfiguration">Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration[]</a></span>
     </dt>
     <dd>{{% md %}}List of IP{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5774,26 +5136,15 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="frontend_ip_configurations_python">
 <a href="#frontend_ip_configurations_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>ip_<wbr>configurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerfrontendipconfiguration">Sequence[Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of IP{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="loadbalancerconfigurationpropertiesresponse">Load<wbr>Balancer<wbr>Configuration<wbr>Properties<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5802,15 +5153,13 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="frontendipconfigurations_csharp">
 <a href="#frontendipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Frontend<wbr>IPConfigurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerfrontendipconfigurationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of IP{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5819,15 +5168,13 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="frontendipconfigurations_go">
 <a href="#frontendipconfigurations_go" style="color: inherit; text-decoration: inherit;">Frontend<wbr>IPConfigurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerfrontendipconfigurationresponse">[]Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}List of IP{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5836,15 +5183,13 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="frontendipconfigurations_nodejs">
 <a href="#frontendipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>IPConfigurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerfrontendipconfigurationresponse">Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of IP{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5853,26 +5198,15 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="frontend_ip_configurations_python">
 <a href="#frontend_ip_configurations_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>ip_<wbr>configurations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerfrontendipconfigurationresponse">Sequence[Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of IP{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="loadbalancerconfigurationresponse">Load<wbr>Balancer<wbr>Configuration<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5881,25 +5215,22 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource Name{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerconfigurationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Configuration<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5908,25 +5239,22 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource Name{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerconfigurationpropertiesresponse">Load<wbr>Balancer<wbr>Configuration<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5935,25 +5263,22 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource Name{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerconfigurationpropertiesresponse">Load<wbr>Balancer<wbr>Configuration<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5962,36 +5287,24 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource Name{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerconfigurationpropertiesresponse">Load<wbr>Balancer<wbr>Configuration<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="loadbalancerfrontendipconfiguration">Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6000,25 +5313,22 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerfrontendipconfigurationproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a cloud service IP Configuration{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6027,25 +5337,22 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerfrontendipconfigurationproperties">Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Describes a cloud service IP Configuration{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6054,25 +5361,22 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerfrontendipconfigurationproperties">Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Describes a cloud service IP Configuration{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -6081,37 +5385,25 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerfrontendipconfigurationproperties">Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a cloud service IP Configuration{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="loadbalancerfrontendipconfigurationproperties">Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Properties</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -6119,35 +5411,31 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="privateipaddress_csharp">
 <a href="#privateipaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAddress</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address referenced by the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publicipaddress_csharp">
 <a href="#publicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subnet_csharp">
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6156,35 +5444,31 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="privateipaddress_go">
 <a href="#privateipaddress_go" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAddress</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address referenced by the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publicipaddress_go">
 <a href="#publicipaddress_go" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subnet_go">
 <a href="#subnet_go" style="color: inherit; text-decoration: inherit;">Subnet</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6193,35 +5477,31 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="privateipaddress_nodejs">
 <a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>IPAddress</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address referenced by the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publicipaddress_nodejs">
 <a href="#publicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPAddress</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subnet_nodejs">
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -6230,47 +5510,34 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="private_ip_address_python">
 <a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private IP address referenced by the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="public_ip_address_python">
 <a href="#public_ip_address_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subnet_python">
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="loadbalancerfrontendipconfigurationpropertiesresponse">Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Properties<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -6278,35 +5545,31 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="privateipaddress_csharp">
 <a href="#privateipaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAddress</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address referenced by the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publicipaddress_csharp">
 <a href="#publicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subnet_csharp">
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6315,35 +5578,31 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="privateipaddress_go">
 <a href="#privateipaddress_go" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAddress</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address referenced by the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publicipaddress_go">
 <a href="#publicipaddress_go" style="color: inherit; text-decoration: inherit;">Public<wbr>IPAddress</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subnet_go">
 <a href="#subnet_go" style="color: inherit; text-decoration: inherit;">Subnet</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6352,35 +5611,31 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="privateipaddress_nodejs">
 <a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>IPAddress</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address referenced by the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="publicipaddress_nodejs">
 <a href="#publicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>IPAddress</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subnet_nodejs">
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -6389,46 +5644,33 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="private_ip_address_python">
 <a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private IP address referenced by the cloud service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="public_ip_address_python">
 <a href="#public_ip_address_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subnet_python">
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="loadbalancerfrontendipconfigurationresponse">Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6437,25 +5679,22 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerfrontendipconfigurationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a cloud service IP Configuration{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6464,25 +5703,22 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerfrontendipconfigurationpropertiesresponse">Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes a cloud service IP Configuration{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6491,25 +5727,22 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerfrontendipconfigurationpropertiesresponse">Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes a cloud service IP Configuration{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -6518,37 +5751,25 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerfrontendipconfigurationpropertiesresponse">Load<wbr>Balancer<wbr>Frontend<wbr>IPConfiguration<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes a cloud service IP Configuration{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="subresource">Sub<wbr>Resource</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -6556,15 +5777,13 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6573,15 +5792,13 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6590,15 +5807,13 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -6607,27 +5822,16 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="subresourceresponse">Sub<wbr>Resource<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -6635,15 +5839,13 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6652,15 +5854,13 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6669,15 +5869,13 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -6686,23 +5884,13 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 
 
 <h2 id="package-details">Package Details</h2>

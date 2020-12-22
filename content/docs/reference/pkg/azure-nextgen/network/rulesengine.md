@@ -2,7 +2,7 @@
 ---
 title: "RulesEngine"
 title_tag: "azure-nextgen.network.RulesEngine"
-meta_desc: "Explore the RulesEngine resource of the network module, including examples, input properties, output properties, lookup functions, and supporting types. A rules engine configuration containing a list of rules that will run to modify the runtime behavior of the request and response."
+meta_desc: "Documentation for the azure-nextgen.network.RulesEngine resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -11,6 +11,7 @@ meta_desc: "Explore the RulesEngine resource of the network module, including ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A rules engine configuration containing a list of rules that will run to modify the runtime behavior of the request and response.
+Latest API Version: 2020-05-01.
 
 
 {{% examples %}}
@@ -327,7 +328,7 @@ const rulesEngine = new azure_nextgen.network.latest.RulesEngine("rulesEngine", 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RulesEngine</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">RulesEngineArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RulesEngine</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">RulesEngineArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -335,11 +336,11 @@ const rulesEngine = new azure_nextgen.network.latest.RulesEngine("rulesEngine", 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRulesEngine</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">RulesEngineArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RulesEngine</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRulesEngine</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">RulesEngineArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RulesEngine</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RulesEngine</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">RulesEngineArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RulesEngine</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">RulesEngineArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -350,7 +351,7 @@ const rulesEngine = new azure_nextgen.network.latest.RulesEngine("rulesEngine", 
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -419,7 +420,7 @@ const rulesEngine = new azure_nextgen.network.latest.RulesEngine("rulesEngine", 
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -458,7 +459,7 @@ const rulesEngine = new azure_nextgen.network.latest.RulesEngine("rulesEngine", 
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -499,7 +500,6 @@ The RulesEngine resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -507,45 +507,40 @@ The RulesEngine resource accepts the following [input]({{< relref "/docs/intro/c
             title="Required">
         <span id="frontdoorname_csharp">
 <a href="#frontdoorname_csharp" style="color: inherit; text-decoration: inherit;">Front<wbr>Door<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Front Door which is globally unique.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rulesenginename_csharp">
 <a href="#rulesenginename_csharp" style="color: inherit; text-decoration: inherit;">Rules<wbr>Engine<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Rules Engine which is unique within the Front Door.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rules_csharp">
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulesenginerule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Rules<wbr>Engine<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of rules that define a particular Rules Engine Configuration.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -554,45 +549,40 @@ The RulesEngine resource accepts the following [input]({{< relref "/docs/intro/c
             title="Required">
         <span id="frontdoorname_go">
 <a href="#frontdoorname_go" style="color: inherit; text-decoration: inherit;">Front<wbr>Door<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Front Door which is globally unique.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rulesenginename_go">
 <a href="#rulesenginename_go" style="color: inherit; text-decoration: inherit;">Rules<wbr>Engine<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Rules Engine which is unique within the Front Door.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rules_go">
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulesenginerule">[]Rules<wbr>Engine<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}A list of rules that define a particular Rules Engine Configuration.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -601,45 +591,40 @@ The RulesEngine resource accepts the following [input]({{< relref "/docs/intro/c
             title="Required">
         <span id="frontdoorname_nodejs">
 <a href="#frontdoorname_nodejs" style="color: inherit; text-decoration: inherit;">front<wbr>Door<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Front Door which is globally unique.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rulesenginename_nodejs">
 <a href="#rulesenginename_nodejs" style="color: inherit; text-decoration: inherit;">rules<wbr>Engine<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Rules Engine which is unique within the Front Door.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rules_nodejs">
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulesenginerule">Rules<wbr>Engine<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A list of rules that define a particular Rules Engine Configuration.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -648,54 +633,45 @@ The RulesEngine resource accepts the following [input]({{< relref "/docs/intro/c
             title="Required">
         <span id="front_door_name_python">
 <a href="#front_door_name_python" style="color: inherit; text-decoration: inherit;">front_<wbr>door_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Front Door which is globally unique.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rules_engine_name_python">
 <a href="#rules_engine_name_python" style="color: inherit; text-decoration: inherit;">rules_<wbr>engine_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Rules Engine which is unique within the Front Door.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rules_python">
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulesenginerule">Sequence[Rules<wbr>Engine<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of rules that define a particular Rules Engine Configuration.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the RulesEngine resource produces the following output properties:
-
 
 
 
@@ -706,45 +682,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="resourcestate_csharp">
 <a href="#resourcestate_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource status.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -753,45 +724,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="resourcestate_go">
 <a href="#resourcestate_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource status.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -800,45 +766,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="resourcestate_nodejs">
 <a href="#resourcestate_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource status.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -847,48 +808,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="resource_state_python">
 <a href="#resource_state_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource status.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -899,13 +852,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
 <h4 id="cacheconfiguration">Cache<wbr>Configuration</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -914,45 +862,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="cacheduration_csharp">
 <a href="#cacheduration_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The duration for which the content needs to be cached. Allowed format is in ISO 8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations). HTTP requires the value to be no more than a year{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dynamiccompression_csharp">
 <a href="#dynamiccompression_csharp" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Compression</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Dynamic<wbr>Compression<wbr>Enabled</span>
+        <span class="property-type">string | <a href="#dynamiccompressionenabled">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Dynamic<wbr>Compression<wbr>Enabled</a></span>
     </dt>
     <dd>{{% md %}}Whether to use dynamic compression for cached content{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="queryparameterstripdirective_csharp">
 <a href="#queryparameterstripdirective_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Parameter<wbr>Strip<wbr>Directive</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Front<wbr>Door<wbr>Query</span>
+        <span class="property-type">string | <a href="#frontdoorquery">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Front<wbr>Door<wbr>Query</a></span>
     </dt>
     <dd>{{% md %}}Treatment of URL query terms when forming the cache key.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="queryparameters_csharp">
 <a href="#queryparameters_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}query parameters to include or exclude (comma separated).{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -961,45 +904,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="cacheduration_go">
 <a href="#cacheduration_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The duration for which the content needs to be cached. Allowed format is in ISO 8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations). HTTP requires the value to be no more than a year{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dynamiccompression_go">
 <a href="#dynamiccompression_go" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Compression</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#dynamiccompressionenabled">Dynamic<wbr>Compression<wbr>Enabled</a></span>
     </dt>
     <dd>{{% md %}}Whether to use dynamic compression for cached content{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="queryparameterstripdirective_go">
 <a href="#queryparameterstripdirective_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Parameter<wbr>Strip<wbr>Directive</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#frontdoorquery">Front<wbr>Door<wbr>Query</a></span>
     </dt>
     <dd>{{% md %}}Treatment of URL query terms when forming the cache key.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="queryparameters_go">
 <a href="#queryparameters_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}query parameters to include or exclude (comma separated).{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1008,45 +946,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="cacheduration_nodejs">
 <a href="#cacheduration_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The duration for which the content needs to be cached. Allowed format is in ISO 8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations). HTTP requires the value to be no more than a year{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dynamiccompression_nodejs">
 <a href="#dynamiccompression_nodejs" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Compression</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Dynamic<wbr>Compression<wbr>Enabled</span>
+        <span class="property-type">string | <a href="#dynamiccompressionenabled">Dynamic<wbr>Compression<wbr>Enabled</a></span>
     </dt>
     <dd>{{% md %}}Whether to use dynamic compression for cached content{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="queryparameterstripdirective_nodejs">
 <a href="#queryparameterstripdirective_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Parameter<wbr>Strip<wbr>Directive</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Front<wbr>Door<wbr>Query</span>
+        <span class="property-type">string | <a href="#frontdoorquery">Front<wbr>Door<wbr>Query</a></span>
     </dt>
     <dd>{{% md %}}Treatment of URL query terms when forming the cache key.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="queryparameters_nodejs">
 <a href="#queryparameters_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}query parameters to include or exclude (comma separated).{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1055,57 +988,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="cache_duration_python">
 <a href="#cache_duration_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The duration for which the content needs to be cached. Allowed format is in ISO 8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations). HTTP requires the value to be no more than a year{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dynamic_compression_python">
 <a href="#dynamic_compression_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>compression</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Dynamic<wbr>Compression<wbr>Enabled</span>
+        <span class="property-type">str | <a href="#dynamiccompressionenabled">Dynamic<wbr>Compression<wbr>Enabled</a></span>
     </dt>
     <dd>{{% md %}}Whether to use dynamic compression for cached content{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="query_parameter_strip_directive_python">
 <a href="#query_parameter_strip_directive_python" style="color: inherit; text-decoration: inherit;">query_<wbr>parameter_<wbr>strip_<wbr>directive</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Front<wbr>Door<wbr>Query</span>
+        <span class="property-type">str | <a href="#frontdoorquery">Front<wbr>Door<wbr>Query</a></span>
     </dt>
     <dd>{{% md %}}Treatment of URL query terms when forming the cache key.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="query_parameters_python">
 <a href="#query_parameters_python" style="color: inherit; text-decoration: inherit;">query_<wbr>parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}query parameters to include or exclude (comma separated).{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="cacheconfigurationresponse">Cache<wbr>Configuration<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1113,45 +1032,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="cacheduration_csharp">
 <a href="#cacheduration_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The duration for which the content needs to be cached. Allowed format is in ISO 8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations). HTTP requires the value to be no more than a year{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dynamiccompression_csharp">
 <a href="#dynamiccompression_csharp" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Compression</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to use dynamic compression for cached content{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="queryparameterstripdirective_csharp">
 <a href="#queryparameterstripdirective_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Parameter<wbr>Strip<wbr>Directive</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Treatment of URL query terms when forming the cache key.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="queryparameters_csharp">
 <a href="#queryparameters_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}query parameters to include or exclude (comma separated).{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1160,45 +1074,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="cacheduration_go">
 <a href="#cacheduration_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The duration for which the content needs to be cached. Allowed format is in ISO 8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations). HTTP requires the value to be no more than a year{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dynamiccompression_go">
 <a href="#dynamiccompression_go" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Compression</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to use dynamic compression for cached content{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="queryparameterstripdirective_go">
 <a href="#queryparameterstripdirective_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Parameter<wbr>Strip<wbr>Directive</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Treatment of URL query terms when forming the cache key.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="queryparameters_go">
 <a href="#queryparameters_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}query parameters to include or exclude (comma separated).{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1207,45 +1116,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="cacheduration_nodejs">
 <a href="#cacheduration_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The duration for which the content needs to be cached. Allowed format is in ISO 8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations). HTTP requires the value to be no more than a year{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dynamiccompression_nodejs">
 <a href="#dynamiccompression_nodejs" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Compression</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to use dynamic compression for cached content{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="queryparameterstripdirective_nodejs">
 <a href="#queryparameterstripdirective_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Parameter<wbr>Strip<wbr>Directive</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Treatment of URL query terms when forming the cache key.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="queryparameters_nodejs">
 <a href="#queryparameters_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}query parameters to include or exclude (comma separated).{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1254,56 +1158,80 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="cache_duration_python">
 <a href="#cache_duration_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The duration for which the content needs to be cached. Allowed format is in ISO 8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations). HTTP requires the value to be no more than a year{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dynamic_compression_python">
 <a href="#dynamic_compression_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>compression</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether to use dynamic compression for cached content{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="query_parameter_strip_directive_python">
 <a href="#query_parameter_strip_directive_python" style="color: inherit; text-decoration: inherit;">query_<wbr>parameter_<wbr>strip_<wbr>directive</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Treatment of URL query terms when forming the cache key.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="query_parameters_python">
 <a href="#query_parameters_python" style="color: inherit; text-decoration: inherit;">query_<wbr>parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}query parameters to include or exclude (comma separated).{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="dynamiccompressionenabled">Dynamic<wbr>Compression<wbr>Enabled</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Enabled</dt>
+    <dd>Enabled</dd>
+    <dt>Disabled</dt>
+    <dd>Disabled</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Dynamic<wbr>Compression<wbr>Enabled<wbr>Enabled</dt>
+    <dd>Enabled</dd>
+    <dt>Dynamic<wbr>Compression<wbr>Enabled<wbr>Disabled</dt>
+    <dd>Disabled</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Enabled</dt>
+    <dd>Enabled</dd>
+    <dt>Disabled</dt>
+    <dd>Disabled</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>ENABLED</dt>
+    <dd>Enabled</dd>
+    <dt>DISABLED</dt>
+    <dd>Disabled</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="forwardingconfiguration">Forwarding<wbr>Configuration</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1312,45 +1240,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backendpool_csharp">
 <a href="#backendpool_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pool</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to the BackendPool which this rule routes to.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cacheconfiguration_csharp">
 <a href="#cacheconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cacheconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Cache<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The caching configuration associated with this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customforwardingpath_csharp">
 <a href="#customforwardingpath_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Forwarding<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A custom path used to rewrite resource paths matched by this rule. Leave empty to use incoming path.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="forwardingprotocol_csharp">
 <a href="#forwardingprotocol_csharp" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Front<wbr>Door<wbr>Forwarding<wbr>Protocol</span>
+        <span class="property-type">string | <a href="#frontdoorforwardingprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Front<wbr>Door<wbr>Forwarding<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}Protocol this rule will use when forwarding traffic to backends.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1359,45 +1282,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backendpool_go">
 <a href="#backendpool_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pool</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}A reference to the BackendPool which this rule routes to.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cacheconfiguration_go">
 <a href="#cacheconfiguration_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cacheconfiguration">Cache<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The caching configuration associated with this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customforwardingpath_go">
 <a href="#customforwardingpath_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Forwarding<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A custom path used to rewrite resource paths matched by this rule. Leave empty to use incoming path.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="forwardingprotocol_go">
 <a href="#forwardingprotocol_go" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#frontdoorforwardingprotocol">Front<wbr>Door<wbr>Forwarding<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}Protocol this rule will use when forwarding traffic to backends.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1406,45 +1324,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backendpool_nodejs">
 <a href="#backendpool_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Pool</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}A reference to the BackendPool which this rule routes to.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cacheconfiguration_nodejs">
 <a href="#cacheconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cacheconfiguration">Cache<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The caching configuration associated with this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customforwardingpath_nodejs">
 <a href="#customforwardingpath_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Forwarding<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A custom path used to rewrite resource paths matched by this rule. Leave empty to use incoming path.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="forwardingprotocol_nodejs">
 <a href="#forwardingprotocol_nodejs" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Front<wbr>Door<wbr>Forwarding<wbr>Protocol</span>
+        <span class="property-type">string | <a href="#frontdoorforwardingprotocol">Front<wbr>Door<wbr>Forwarding<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}Protocol this rule will use when forwarding traffic to backends.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1453,56 +1366,42 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backend_pool_python">
 <a href="#backend_pool_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pool</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to the BackendPool which this rule routes to.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cache_configuration_python">
 <a href="#cache_configuration_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cacheconfiguration">Cache<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The caching configuration associated with this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="custom_forwarding_path_python">
 <a href="#custom_forwarding_path_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>forwarding_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A custom path used to rewrite resource paths matched by this rule. Leave empty to use incoming path.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="forwarding_protocol_python">
 <a href="#forwarding_protocol_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Front<wbr>Door<wbr>Forwarding<wbr>Protocol</span>
+        <span class="property-type">str | <a href="#frontdoorforwardingprotocol">Front<wbr>Door<wbr>Forwarding<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}Protocol this rule will use when forwarding traffic to backends.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="forwardingconfigurationresponse">Forwarding<wbr>Configuration<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1511,45 +1410,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backendpool_csharp">
 <a href="#backendpool_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pool</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to the BackendPool which this rule routes to.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cacheconfiguration_csharp">
 <a href="#cacheconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cacheconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Cache<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The caching configuration associated with this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customforwardingpath_csharp">
 <a href="#customforwardingpath_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Forwarding<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A custom path used to rewrite resource paths matched by this rule. Leave empty to use incoming path.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="forwardingprotocol_csharp">
 <a href="#forwardingprotocol_csharp" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protocol this rule will use when forwarding traffic to backends.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1558,45 +1452,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backendpool_go">
 <a href="#backendpool_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Pool</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A reference to the BackendPool which this rule routes to.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cacheconfiguration_go">
 <a href="#cacheconfiguration_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cacheconfigurationresponse">Cache<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The caching configuration associated with this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customforwardingpath_go">
 <a href="#customforwardingpath_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Forwarding<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A custom path used to rewrite resource paths matched by this rule. Leave empty to use incoming path.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="forwardingprotocol_go">
 <a href="#forwardingprotocol_go" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protocol this rule will use when forwarding traffic to backends.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1605,45 +1494,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backendpool_nodejs">
 <a href="#backendpool_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Pool</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A reference to the BackendPool which this rule routes to.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cacheconfiguration_nodejs">
 <a href="#cacheconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cacheconfigurationresponse">Cache<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The caching configuration associated with this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customforwardingpath_nodejs">
 <a href="#customforwardingpath_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Forwarding<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A custom path used to rewrite resource paths matched by this rule. Leave empty to use incoming path.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="forwardingprotocol_nodejs">
 <a href="#forwardingprotocol_nodejs" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protocol this rule will use when forwarding traffic to backends.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1652,57 +1536,243 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backend_pool_python">
 <a href="#backend_pool_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>pool</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to the BackendPool which this rule routes to.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cache_configuration_python">
 <a href="#cache_configuration_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>configuration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cacheconfigurationresponse">Cache<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The caching configuration associated with this rule.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="custom_forwarding_path_python">
 <a href="#custom_forwarding_path_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>forwarding_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A custom path used to rewrite resource paths matched by this rule. Leave empty to use incoming path.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="forwarding_protocol_python">
 <a href="#forwarding_protocol_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Protocol this rule will use when forwarding traffic to backends.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="frontdoorforwardingprotocol">Front<wbr>Door<wbr>Forwarding<wbr>Protocol</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Http<wbr>Only</dt>
+    <dd>HttpOnly</dd>
+    <dt>Https<wbr>Only</dt>
+    <dd>HttpsOnly</dd>
+    <dt>Match<wbr>Request</dt>
+    <dd>MatchRequest</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Front<wbr>Door<wbr>Forwarding<wbr>Protocol<wbr>Http<wbr>Only</dt>
+    <dd>HttpOnly</dd>
+    <dt>Front<wbr>Door<wbr>Forwarding<wbr>Protocol<wbr>Https<wbr>Only</dt>
+    <dd>HttpsOnly</dd>
+    <dt>Front<wbr>Door<wbr>Forwarding<wbr>Protocol<wbr>Match<wbr>Request</dt>
+    <dd>MatchRequest</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Http<wbr>Only</dt>
+    <dd>HttpOnly</dd>
+    <dt>Https<wbr>Only</dt>
+    <dd>HttpsOnly</dd>
+    <dt>Match<wbr>Request</dt>
+    <dd>MatchRequest</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>HTTP_ONLY</dt>
+    <dd>HttpOnly</dd>
+    <dt>HTTPS_ONLY</dt>
+    <dd>HttpsOnly</dd>
+    <dt>MATCH_REQUEST</dt>
+    <dd>MatchRequest</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="frontdoorquery">Front<wbr>Door<wbr>Query</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Strip<wbr>None</dt>
+    <dd>StripNone</dd>
+    <dt>Strip<wbr>All</dt>
+    <dd>StripAll</dd>
+    <dt>Strip<wbr>Only</dt>
+    <dd>StripOnly</dd>
+    <dt>Strip<wbr>All<wbr>Except</dt>
+    <dd>StripAllExcept</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Front<wbr>Door<wbr>Query<wbr>Strip<wbr>None</dt>
+    <dd>StripNone</dd>
+    <dt>Front<wbr>Door<wbr>Query<wbr>Strip<wbr>All</dt>
+    <dd>StripAll</dd>
+    <dt>Front<wbr>Door<wbr>Query<wbr>Strip<wbr>Only</dt>
+    <dd>StripOnly</dd>
+    <dt>Front<wbr>Door<wbr>Query<wbr>Strip<wbr>All<wbr>Except</dt>
+    <dd>StripAllExcept</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Strip<wbr>None</dt>
+    <dd>StripNone</dd>
+    <dt>Strip<wbr>All</dt>
+    <dd>StripAll</dd>
+    <dt>Strip<wbr>Only</dt>
+    <dd>StripOnly</dd>
+    <dt>Strip<wbr>All<wbr>Except</dt>
+    <dd>StripAllExcept</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>STRIP_NONE</dt>
+    <dd>StripNone</dd>
+    <dt>STRIP_ALL</dt>
+    <dd>StripAll</dd>
+    <dt>STRIP_ONLY</dt>
+    <dd>StripOnly</dd>
+    <dt>STRIP_ALL_EXCEPT</dt>
+    <dd>StripAllExcept</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="frontdoorredirectprotocol">Front<wbr>Door<wbr>Redirect<wbr>Protocol</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Http<wbr>Only</dt>
+    <dd>HttpOnly</dd>
+    <dt>Https<wbr>Only</dt>
+    <dd>HttpsOnly</dd>
+    <dt>Match<wbr>Request</dt>
+    <dd>MatchRequest</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Front<wbr>Door<wbr>Redirect<wbr>Protocol<wbr>Http<wbr>Only</dt>
+    <dd>HttpOnly</dd>
+    <dt>Front<wbr>Door<wbr>Redirect<wbr>Protocol<wbr>Https<wbr>Only</dt>
+    <dd>HttpsOnly</dd>
+    <dt>Front<wbr>Door<wbr>Redirect<wbr>Protocol<wbr>Match<wbr>Request</dt>
+    <dd>MatchRequest</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Http<wbr>Only</dt>
+    <dd>HttpOnly</dd>
+    <dt>Https<wbr>Only</dt>
+    <dd>HttpsOnly</dd>
+    <dt>Match<wbr>Request</dt>
+    <dd>MatchRequest</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>HTTP_ONLY</dt>
+    <dd>HttpOnly</dd>
+    <dt>HTTPS_ONLY</dt>
+    <dd>HttpsOnly</dd>
+    <dt>MATCH_REQUEST</dt>
+    <dd>MatchRequest</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="frontdoorredirecttype">Front<wbr>Door<wbr>Redirect<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Moved</dt>
+    <dd>Moved</dd>
+    <dt>Found</dt>
+    <dd>Found</dd>
+    <dt>Temporary<wbr>Redirect</dt>
+    <dd>TemporaryRedirect</dd>
+    <dt>Permanent<wbr>Redirect</dt>
+    <dd>PermanentRedirect</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Front<wbr>Door<wbr>Redirect<wbr>Type<wbr>Moved</dt>
+    <dd>Moved</dd>
+    <dt>Front<wbr>Door<wbr>Redirect<wbr>Type<wbr>Found</dt>
+    <dd>Found</dd>
+    <dt>Front<wbr>Door<wbr>Redirect<wbr>Type<wbr>Temporary<wbr>Redirect</dt>
+    <dd>TemporaryRedirect</dd>
+    <dt>Front<wbr>Door<wbr>Redirect<wbr>Type<wbr>Permanent<wbr>Redirect</dt>
+    <dd>PermanentRedirect</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Moved</dt>
+    <dd>Moved</dd>
+    <dt>Found</dt>
+    <dd>Found</dd>
+    <dt>Temporary<wbr>Redirect</dt>
+    <dd>TemporaryRedirect</dd>
+    <dt>Permanent<wbr>Redirect</dt>
+    <dd>PermanentRedirect</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>MOVED</dt>
+    <dd>Moved</dd>
+    <dt>FOUND</dt>
+    <dd>Found</dd>
+    <dt>TEMPORARY_REDIRECT</dt>
+    <dd>TemporaryRedirect</dd>
+    <dt>PERMANENT_REDIRECT</dt>
+    <dd>PermanentRedirect</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="headeraction">Header<wbr>Action</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1710,35 +1780,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="headeractiontype_csharp">
 <a href="#headeractiontype_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Action<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Header<wbr>Action<wbr>Type</span>
+        <span class="property-type">string | <a href="#headeractiontype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Header<wbr>Action<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Which type of manipulation to apply to the header.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="headername_csharp">
 <a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header this action will apply to.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value to update the given header name with. This value is not used if the actionType is Delete.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1747,35 +1813,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="headeractiontype_go">
 <a href="#headeractiontype_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Action<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#headeractiontype">Header<wbr>Action<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Which type of manipulation to apply to the header.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="headername_go">
 <a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header this action will apply to.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value to update the given header name with. This value is not used if the actionType is Delete.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1784,35 +1846,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="headeractiontype_nodejs">
 <a href="#headeractiontype_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Header<wbr>Action<wbr>Type</span>
+        <span class="property-type">string | <a href="#headeractiontype">Header<wbr>Action<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Which type of manipulation to apply to the header.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="headername_nodejs">
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header this action will apply to.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value to update the given header name with. This value is not used if the actionType is Delete.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1821,47 +1879,34 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="header_action_type_python">
 <a href="#header_action_type_python" style="color: inherit; text-decoration: inherit;">header_<wbr>action_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Header<wbr>Action<wbr>Type</span>
+        <span class="property-type">str | <a href="#headeractiontype">Header<wbr>Action<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Which type of manipulation to apply to the header.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="header_name_python">
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the header this action will apply to.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value to update the given header name with. This value is not used if the actionType is Delete.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="headeractionresponse">Header<wbr>Action<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1869,35 +1914,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="headeractiontype_csharp">
 <a href="#headeractiontype_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Action<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which type of manipulation to apply to the header.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="headername_csharp">
 <a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header this action will apply to.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value to update the given header name with. This value is not used if the actionType is Delete.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1906,35 +1947,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="headeractiontype_go">
 <a href="#headeractiontype_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Action<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which type of manipulation to apply to the header.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="headername_go">
 <a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header this action will apply to.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value to update the given header name with. This value is not used if the actionType is Delete.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1943,35 +1980,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="headeractiontype_nodejs">
 <a href="#headeractiontype_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Action<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which type of manipulation to apply to the header.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="headername_nodejs">
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the header this action will apply to.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value to update the given header name with. This value is not used if the actionType is Delete.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1980,47 +2013,118 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="header_action_type_python">
 <a href="#header_action_type_python" style="color: inherit; text-decoration: inherit;">header_<wbr>action_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Which type of manipulation to apply to the header.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="header_name_python">
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the header this action will apply to.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value to update the given header name with. This value is not used if the actionType is Delete.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="headeractiontype">Header<wbr>Action<wbr>Type</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Append</dt>
+    <dd>Append</dd>
+    <dt>Delete</dt>
+    <dd>Delete</dd>
+    <dt>Overwrite</dt>
+    <dd>Overwrite</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Header<wbr>Action<wbr>Type<wbr>Append</dt>
+    <dd>Append</dd>
+    <dt>Header<wbr>Action<wbr>Type<wbr>Delete</dt>
+    <dd>Delete</dd>
+    <dt>Header<wbr>Action<wbr>Type<wbr>Overwrite</dt>
+    <dd>Overwrite</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Append</dt>
+    <dd>Append</dd>
+    <dt>Delete</dt>
+    <dd>Delete</dd>
+    <dt>Overwrite</dt>
+    <dd>Overwrite</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>APPEND</dt>
+    <dd>Append</dd>
+    <dt>DELETE</dt>
+    <dd>Delete</dd>
+    <dt>OVERWRITE</dt>
+    <dd>Overwrite</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="matchprocessingbehavior">Match<wbr>Processing<wbr>Behavior</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Continue</dt>
+    <dd>Continue</dd>
+    <dt>Stop</dt>
+    <dd>Stop</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Match<wbr>Processing<wbr>Behavior<wbr>Continue</dt>
+    <dd>Continue</dd>
+    <dt>Match<wbr>Processing<wbr>Behavior<wbr>Stop</dt>
+    <dd>Stop</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Continue</dt>
+    <dd>Continue</dd>
+    <dt>Stop</dt>
+    <dd>Stop</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>CONTINUE_</dt>
+    <dd>Continue</dd>
+    <dt>STOP</dt>
+    <dd>Stop</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="redirectconfiguration">Redirect<wbr>Configuration</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2028,65 +2132,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="customfragment_csharp">
 <a href="#customfragment_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Fragment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customhost_csharp">
 <a href="#customhost_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host to redirect. Leave empty to use the incoming host as the destination host.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="custompath_csharp">
 <a href="#custompath_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customquerystring_csharp">
 <a href="#customquerystring_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Query<wbr>String</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format. The first ? and & will be added automatically so do not include them in the front, but do separate multiple query strings with &.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="redirectprotocol_csharp">
 <a href="#redirectprotocol_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Front<wbr>Door<wbr>Redirect<wbr>Protocol</span>
+        <span class="property-type">string | <a href="#frontdoorredirectprotocol">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Front<wbr>Door<wbr>Redirect<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}The protocol of the destination to where the traffic is redirected{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="redirecttype_csharp">
 <a href="#redirecttype_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Front<wbr>Door<wbr>Redirect<wbr>Type</span>
+        <span class="property-type">string | <a href="#frontdoorredirecttype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Front<wbr>Door<wbr>Redirect<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The redirect type the rule will use when redirecting traffic.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2095,65 +2192,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="customfragment_go">
 <a href="#customfragment_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Fragment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customhost_go">
 <a href="#customhost_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host to redirect. Leave empty to use the incoming host as the destination host.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="custompath_go">
 <a href="#custompath_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customquerystring_go">
 <a href="#customquerystring_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Query<wbr>String</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format. The first ? and & will be added automatically so do not include them in the front, but do separate multiple query strings with &.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="redirectprotocol_go">
 <a href="#redirectprotocol_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#frontdoorredirectprotocol">Front<wbr>Door<wbr>Redirect<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}The protocol of the destination to where the traffic is redirected{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="redirecttype_go">
 <a href="#redirecttype_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#frontdoorredirecttype">Front<wbr>Door<wbr>Redirect<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The redirect type the rule will use when redirecting traffic.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2162,65 +2252,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="customfragment_nodejs">
 <a href="#customfragment_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Fragment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customhost_nodejs">
 <a href="#customhost_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host to redirect. Leave empty to use the incoming host as the destination host.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="custompath_nodejs">
 <a href="#custompath_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customquerystring_nodejs">
 <a href="#customquerystring_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Query<wbr>String</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format. The first ? and & will be added automatically so do not include them in the front, but do separate multiple query strings with &.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="redirectprotocol_nodejs">
 <a href="#redirectprotocol_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Front<wbr>Door<wbr>Redirect<wbr>Protocol</span>
+        <span class="property-type">string | <a href="#frontdoorredirectprotocol">Front<wbr>Door<wbr>Redirect<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}The protocol of the destination to where the traffic is redirected{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="redirecttype_nodejs">
 <a href="#redirecttype_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Front<wbr>Door<wbr>Redirect<wbr>Type</span>
+        <span class="property-type">string | <a href="#frontdoorredirecttype">Front<wbr>Door<wbr>Redirect<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The redirect type the rule will use when redirecting traffic.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2229,77 +2312,61 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="custom_fragment_python">
 <a href="#custom_fragment_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>fragment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="custom_host_python">
 <a href="#custom_host_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Host to redirect. Leave empty to use the incoming host as the destination host.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="custom_path_python">
 <a href="#custom_path_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="custom_query_string_python">
 <a href="#custom_query_string_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>query_<wbr>string</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format. The first ? and & will be added automatically so do not include them in the front, but do separate multiple query strings with &.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="redirect_protocol_python">
 <a href="#redirect_protocol_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Front<wbr>Door<wbr>Redirect<wbr>Protocol</span>
+        <span class="property-type">str | <a href="#frontdoorredirectprotocol">Front<wbr>Door<wbr>Redirect<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}The protocol of the destination to where the traffic is redirected{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="redirect_type_python">
 <a href="#redirect_type_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Front<wbr>Door<wbr>Redirect<wbr>Type</span>
+        <span class="property-type">str | <a href="#frontdoorredirecttype">Front<wbr>Door<wbr>Redirect<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The redirect type the rule will use when redirecting traffic.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="redirectconfigurationresponse">Redirect<wbr>Configuration<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2307,65 +2374,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="customfragment_csharp">
 <a href="#customfragment_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Fragment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customhost_csharp">
 <a href="#customhost_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host to redirect. Leave empty to use the incoming host as the destination host.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="custompath_csharp">
 <a href="#custompath_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customquerystring_csharp">
 <a href="#customquerystring_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Query<wbr>String</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format. The first ? and & will be added automatically so do not include them in the front, but do separate multiple query strings with &.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="redirectprotocol_csharp">
 <a href="#redirectprotocol_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol of the destination to where the traffic is redirected{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="redirecttype_csharp">
 <a href="#redirecttype_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The redirect type the rule will use when redirecting traffic.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2374,65 +2434,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="customfragment_go">
 <a href="#customfragment_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Fragment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customhost_go">
 <a href="#customhost_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host to redirect. Leave empty to use the incoming host as the destination host.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="custompath_go">
 <a href="#custompath_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customquerystring_go">
 <a href="#customquerystring_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Query<wbr>String</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format. The first ? and & will be added automatically so do not include them in the front, but do separate multiple query strings with &.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="redirectprotocol_go">
 <a href="#redirectprotocol_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol of the destination to where the traffic is redirected{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="redirecttype_go">
 <a href="#redirecttype_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The redirect type the rule will use when redirecting traffic.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2441,65 +2494,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="customfragment_nodejs">
 <a href="#customfragment_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Fragment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customhost_nodejs">
 <a href="#customhost_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host to redirect. Leave empty to use the incoming host as the destination host.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="custompath_nodejs">
 <a href="#custompath_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customquerystring_nodejs">
 <a href="#customquerystring_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Query<wbr>String</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format. The first ? and & will be added automatically so do not include them in the front, but do separate multiple query strings with &.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="redirectprotocol_nodejs">
 <a href="#redirectprotocol_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol of the destination to where the traffic is redirected{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="redirecttype_nodejs">
 <a href="#redirecttype_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The redirect type the rule will use when redirecting traffic.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2508,77 +2554,61 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="custom_fragment_python">
 <a href="#custom_fragment_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>fragment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="custom_host_python">
 <a href="#custom_host_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Host to redirect. Leave empty to use the incoming host as the destination host.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="custom_path_python">
 <a href="#custom_path_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="custom_query_string_python">
 <a href="#custom_query_string_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>query_<wbr>string</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format. The first ? and & will be added automatically so do not include them in the front, but do separate multiple query strings with &.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="redirect_protocol_python">
 <a href="#redirect_protocol_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protocol of the destination to where the traffic is redirected{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="redirect_type_python">
 <a href="#redirect_type_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The redirect type the rule will use when redirecting traffic.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="rulesengineaction">Rules<wbr>Engine<wbr>Action</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2586,35 +2616,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="requestheaderactions_csharp">
 <a href="#requestheaderactions_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Header<wbr>Actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#headeraction">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Header<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of header actions to apply from the request from AFD to the origin.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="responseheaderactions_csharp">
 <a href="#responseheaderactions_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Header<wbr>Actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#headeraction">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Header<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of header actions to apply from the response from AFD to the client.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="routeconfigurationoverride_csharp">
 <a href="#routeconfigurationoverride_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Configuration<wbr>Override</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardingconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Forwarding<wbr>Configuration<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#redirectconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Redirect<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#forwardingconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Forwarding<wbr>Configuration<wbr>Args</a> | <a href="#redirectconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Redirect<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Override the route configuration.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2623,35 +2649,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="requestheaderactions_go">
 <a href="#requestheaderactions_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Header<wbr>Actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#headeraction">[]Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A list of header actions to apply from the request from AFD to the origin.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="responseheaderactions_go">
 <a href="#responseheaderactions_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Header<wbr>Actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#headeraction">[]Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A list of header actions to apply from the response from AFD to the client.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="routeconfigurationoverride_go">
 <a href="#routeconfigurationoverride_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Configuration<wbr>Override</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardingconfiguration">Forwarding<wbr>Configuration</a></span><span class="property-type"> | </span><span class="property-type"><a href="#redirectconfiguration">Redirect<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#forwardingconfiguration">Forwarding<wbr>Configuration</a> | <a href="#redirectconfiguration">Redirect<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Override the route configuration.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2660,35 +2682,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="requestheaderactions_nodejs">
 <a href="#requestheaderactions_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Header<wbr>Actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#headeraction">Header<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}A list of header actions to apply from the request from AFD to the origin.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="responseheaderactions_nodejs">
 <a href="#responseheaderactions_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Header<wbr>Actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#headeraction">Header<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}A list of header actions to apply from the response from AFD to the client.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="routeconfigurationoverride_nodejs">
 <a href="#routeconfigurationoverride_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Configuration<wbr>Override</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardingconfiguration">Forwarding<wbr>Configuration</a></span><span class="property-type"> | </span><span class="property-type"><a href="#redirectconfiguration">Redirect<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#forwardingconfiguration">Forwarding<wbr>Configuration</a> | <a href="#redirectconfiguration">Redirect<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Override the route configuration.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2697,47 +2715,34 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="request_header_actions_python">
 <a href="#request_header_actions_python" style="color: inherit; text-decoration: inherit;">request_<wbr>header_<wbr>actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#headeraction">Sequence[Header<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of header actions to apply from the request from AFD to the origin.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="response_header_actions_python">
 <a href="#response_header_actions_python" style="color: inherit; text-decoration: inherit;">response_<wbr>header_<wbr>actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#headeraction">Sequence[Header<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of header actions to apply from the response from AFD to the client.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="route_configuration_override_python">
 <a href="#route_configuration_override_python" style="color: inherit; text-decoration: inherit;">route_<wbr>configuration_<wbr>override</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardingconfiguration">Forwarding<wbr>Configuration<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#redirectconfiguration">Redirect<wbr>Configuration<wbr>Args</a></span>
+        <span class="property-type"><a href="#forwardingconfiguration">Forwarding<wbr>Configuration<wbr>Args</a> | <a href="#redirectconfiguration">Redirect<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Override the route configuration.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="rulesengineactionresponse">Rules<wbr>Engine<wbr>Action<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2745,35 +2750,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="requestheaderactions_csharp">
 <a href="#requestheaderactions_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Header<wbr>Actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#headeractionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Header<wbr>Action<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of header actions to apply from the request from AFD to the origin.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="responseheaderactions_csharp">
 <a href="#responseheaderactions_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Header<wbr>Actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#headeractionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Header<wbr>Action<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of header actions to apply from the response from AFD to the client.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="routeconfigurationoverride_csharp">
 <a href="#routeconfigurationoverride_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Configuration<wbr>Override</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardingconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Forwarding<wbr>Configuration<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#redirectconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Redirect<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#forwardingconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Forwarding<wbr>Configuration<wbr>Response<wbr>Args</a> | <a href="#redirectconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Redirect<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Override the route configuration.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2782,35 +2783,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="requestheaderactions_go">
 <a href="#requestheaderactions_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Header<wbr>Actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#headeractionresponse">[]Header<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A list of header actions to apply from the request from AFD to the origin.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="responseheaderactions_go">
 <a href="#responseheaderactions_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Header<wbr>Actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#headeractionresponse">[]Header<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A list of header actions to apply from the response from AFD to the client.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="routeconfigurationoverride_go">
 <a href="#routeconfigurationoverride_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Configuration<wbr>Override</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardingconfigurationresponse">Forwarding<wbr>Configuration<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#redirectconfigurationresponse">Redirect<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#forwardingconfigurationresponse">Forwarding<wbr>Configuration<wbr>Response</a> | <a href="#redirectconfigurationresponse">Redirect<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Override the route configuration.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2819,35 +2816,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="requestheaderactions_nodejs">
 <a href="#requestheaderactions_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Header<wbr>Actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#headeractionresponse">Header<wbr>Action<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A list of header actions to apply from the request from AFD to the origin.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="responseheaderactions_nodejs">
 <a href="#responseheaderactions_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Header<wbr>Actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#headeractionresponse">Header<wbr>Action<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A list of header actions to apply from the response from AFD to the client.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="routeconfigurationoverride_nodejs">
 <a href="#routeconfigurationoverride_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Configuration<wbr>Override</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardingconfigurationresponse">Forwarding<wbr>Configuration<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#redirectconfigurationresponse">Redirect<wbr>Configuration<wbr>Response</a></span>
+        <span class="property-type"><a href="#forwardingconfigurationresponse">Forwarding<wbr>Configuration<wbr>Response</a> | <a href="#redirectconfigurationresponse">Redirect<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Override the route configuration.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2856,46 +2849,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="request_header_actions_python">
 <a href="#request_header_actions_python" style="color: inherit; text-decoration: inherit;">request_<wbr>header_<wbr>actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#headeractionresponse">Sequence[Header<wbr>Action<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of header actions to apply from the request from AFD to the origin.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="response_header_actions_python">
 <a href="#response_header_actions_python" style="color: inherit; text-decoration: inherit;">response_<wbr>header_<wbr>actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#headeractionresponse">Sequence[Header<wbr>Action<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of header actions to apply from the response from AFD to the client.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="route_configuration_override_python">
 <a href="#route_configuration_override_python" style="color: inherit; text-decoration: inherit;">route_<wbr>configuration_<wbr>override</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#forwardingconfigurationresponse">Forwarding<wbr>Configuration<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#redirectconfigurationresponse">Redirect<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#forwardingconfigurationresponse">Forwarding<wbr>Configuration<wbr>Response<wbr>Args</a> | <a href="#redirectconfigurationresponse">Redirect<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Override the route configuration.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="rulesenginematchcondition">Rules<wbr>Engine<wbr>Match<wbr>Condition</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2904,65 +2884,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="rulesenginematchvalue_csharp">
 <a href="#rulesenginematchvalue_csharp" style="color: inherit; text-decoration: inherit;">Rules<wbr>Engine<wbr>Match<wbr>Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rulesenginematchvariable_csharp">
 <a href="#rulesenginematchvariable_csharp" style="color: inherit; text-decoration: inherit;">Rules<wbr>Engine<wbr>Match<wbr>Variable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Rules<wbr>Engine<wbr>Match<wbr>Variable</span>
+        <span class="property-type">string | <a href="#rulesenginematchvariable">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Rules<wbr>Engine<wbr>Match<wbr>Variable</a></span>
     </dt>
     <dd>{{% md %}}Match Variable{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rulesengineoperator_csharp">
 <a href="#rulesengineoperator_csharp" style="color: inherit; text-decoration: inherit;">Rules<wbr>Engine<wbr>Operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Rules<wbr>Engine<wbr>Operator</span>
+        <span class="property-type">string | <a href="#rulesengineoperator">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Rules<wbr>Engine<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to apply to the match condition.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="negatecondition_csharp">
 <a href="#negatecondition_csharp" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="selector_csharp">
 <a href="#selector_csharp" style="color: inherit; text-decoration: inherit;">Selector</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of selector in RequestHeader or RequestBody to be matched{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="transforms_csharp">
 <a href="#transforms_csharp" style="color: inherit; text-decoration: inherit;">Transforms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Transform&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2971,65 +2944,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="rulesenginematchvalue_go">
 <a href="#rulesenginematchvalue_go" style="color: inherit; text-decoration: inherit;">Rules<wbr>Engine<wbr>Match<wbr>Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rulesenginematchvariable_go">
 <a href="#rulesenginematchvariable_go" style="color: inherit; text-decoration: inherit;">Rules<wbr>Engine<wbr>Match<wbr>Variable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#rulesenginematchvariable">Rules<wbr>Engine<wbr>Match<wbr>Variable</a></span>
     </dt>
     <dd>{{% md %}}Match Variable{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rulesengineoperator_go">
 <a href="#rulesengineoperator_go" style="color: inherit; text-decoration: inherit;">Rules<wbr>Engine<wbr>Operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#rulesengineoperator">Rules<wbr>Engine<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to apply to the match condition.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="negatecondition_go">
 <a href="#negatecondition_go" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="selector_go">
 <a href="#selector_go" style="color: inherit; text-decoration: inherit;">Selector</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of selector in RequestHeader or RequestBody to be matched{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="transforms_go">
 <a href="#transforms_go" style="color: inherit; text-decoration: inherit;">Transforms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3038,65 +3004,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="rulesenginematchvalue_nodejs">
 <a href="#rulesenginematchvalue_nodejs" style="color: inherit; text-decoration: inherit;">rules<wbr>Engine<wbr>Match<wbr>Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rulesenginematchvariable_nodejs">
 <a href="#rulesenginematchvariable_nodejs" style="color: inherit; text-decoration: inherit;">rules<wbr>Engine<wbr>Match<wbr>Variable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Rules<wbr>Engine<wbr>Match<wbr>Variable</span>
+        <span class="property-type">string | <a href="#rulesenginematchvariable">Rules<wbr>Engine<wbr>Match<wbr>Variable</a></span>
     </dt>
     <dd>{{% md %}}Match Variable{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rulesengineoperator_nodejs">
 <a href="#rulesengineoperator_nodejs" style="color: inherit; text-decoration: inherit;">rules<wbr>Engine<wbr>Operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Rules<wbr>Engine<wbr>Operator</span>
+        <span class="property-type">string | <a href="#rulesengineoperator">Rules<wbr>Engine<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to apply to the match condition.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="negatecondition_nodejs">
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="selector_nodejs">
 <a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of selector in RequestHeader or RequestBody to be matched{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="transforms_nodejs">
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | enums.<wbr>Transform[]</span>
+        <span class="property-type">string | Transform[]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3105,76 +3064,60 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="rules_engine_match_value_python">
 <a href="#rules_engine_match_value_python" style="color: inherit; text-decoration: inherit;">rules_<wbr>engine_<wbr>match_<wbr>value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rules_engine_match_variable_python">
 <a href="#rules_engine_match_variable_python" style="color: inherit; text-decoration: inherit;">rules_<wbr>engine_<wbr>match_<wbr>variable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Rules<wbr>Engine<wbr>Match<wbr>Variable</span>
+        <span class="property-type">str | <a href="#rulesenginematchvariable">Rules<wbr>Engine<wbr>Match<wbr>Variable</a></span>
     </dt>
     <dd>{{% md %}}Match Variable{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rules_engine_operator_python">
 <a href="#rules_engine_operator_python" style="color: inherit; text-decoration: inherit;">rules_<wbr>engine_<wbr>operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Rules<wbr>Engine<wbr>Operator</span>
+        <span class="property-type">str | <a href="#rulesengineoperator">Rules<wbr>Engine<wbr>Operator</a></span>
     </dt>
     <dd>{{% md %}}Describes operator to apply to the match condition.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="negate_condition_python">
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="selector_python">
 <a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of selector in RequestHeader or RequestBody to be matched{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="transforms_python">
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[str, Transform]]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="rulesenginematchconditionresponse">Rules<wbr>Engine<wbr>Match<wbr>Condition<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3183,65 +3126,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="rulesenginematchvalue_csharp">
 <a href="#rulesenginematchvalue_csharp" style="color: inherit; text-decoration: inherit;">Rules<wbr>Engine<wbr>Match<wbr>Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rulesenginematchvariable_csharp">
 <a href="#rulesenginematchvariable_csharp" style="color: inherit; text-decoration: inherit;">Rules<wbr>Engine<wbr>Match<wbr>Variable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Match Variable{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rulesengineoperator_csharp">
 <a href="#rulesengineoperator_csharp" style="color: inherit; text-decoration: inherit;">Rules<wbr>Engine<wbr>Operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes operator to apply to the match condition.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="negatecondition_csharp">
 <a href="#negatecondition_csharp" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="selector_csharp">
 <a href="#selector_csharp" style="color: inherit; text-decoration: inherit;">Selector</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of selector in RequestHeader or RequestBody to be matched{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="transforms_csharp">
 <a href="#transforms_csharp" style="color: inherit; text-decoration: inherit;">Transforms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3250,65 +3186,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="rulesenginematchvalue_go">
 <a href="#rulesenginematchvalue_go" style="color: inherit; text-decoration: inherit;">Rules<wbr>Engine<wbr>Match<wbr>Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rulesenginematchvariable_go">
 <a href="#rulesenginematchvariable_go" style="color: inherit; text-decoration: inherit;">Rules<wbr>Engine<wbr>Match<wbr>Variable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Match Variable{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rulesengineoperator_go">
 <a href="#rulesengineoperator_go" style="color: inherit; text-decoration: inherit;">Rules<wbr>Engine<wbr>Operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes operator to apply to the match condition.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="negatecondition_go">
 <a href="#negatecondition_go" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="selector_go">
 <a href="#selector_go" style="color: inherit; text-decoration: inherit;">Selector</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of selector in RequestHeader or RequestBody to be matched{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="transforms_go">
 <a href="#transforms_go" style="color: inherit; text-decoration: inherit;">Transforms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3317,65 +3246,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="rulesenginematchvalue_nodejs">
 <a href="#rulesenginematchvalue_nodejs" style="color: inherit; text-decoration: inherit;">rules<wbr>Engine<wbr>Match<wbr>Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rulesenginematchvariable_nodejs">
 <a href="#rulesenginematchvariable_nodejs" style="color: inherit; text-decoration: inherit;">rules<wbr>Engine<wbr>Match<wbr>Variable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Match Variable{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rulesengineoperator_nodejs">
 <a href="#rulesengineoperator_nodejs" style="color: inherit; text-decoration: inherit;">rules<wbr>Engine<wbr>Operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Describes operator to apply to the match condition.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="negatecondition_nodejs">
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="selector_nodejs">
 <a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of selector in RequestHeader or RequestBody to be matched{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="transforms_nodejs">
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3384,76 +3306,288 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="rules_engine_match_value_python">
 <a href="#rules_engine_match_value_python" style="color: inherit; text-decoration: inherit;">rules_<wbr>engine_<wbr>match_<wbr>value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rules_engine_match_variable_python">
 <a href="#rules_engine_match_variable_python" style="color: inherit; text-decoration: inherit;">rules_<wbr>engine_<wbr>match_<wbr>variable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Match Variable{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rules_engine_operator_python">
 <a href="#rules_engine_operator_python" style="color: inherit; text-decoration: inherit;">rules_<wbr>engine_<wbr>operator</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Describes operator to apply to the match condition.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="negate_condition_python">
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Describes if this is negate condition or not{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="selector_python">
 <a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of selector in RequestHeader or RequestBody to be matched{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="transforms_python">
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of transforms{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="rulesenginematchvariable">Rules<wbr>Engine<wbr>Match<wbr>Variable</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Is<wbr>Mobile</dt>
+    <dd>IsMobile</dd>
+    <dt>Remote<wbr>Addr</dt>
+    <dd>RemoteAddr</dd>
+    <dt>Request<wbr>Method</dt>
+    <dd>RequestMethod</dd>
+    <dt>Query<wbr>String</dt>
+    <dd>QueryString</dd>
+    <dt>Post<wbr>Args</dt>
+    <dd>PostArgs</dd>
+    <dt>Request<wbr>Uri</dt>
+    <dd>RequestUri</dd>
+    <dt>Request<wbr>Path</dt>
+    <dd>RequestPath</dd>
+    <dt>Request<wbr>Filename</dt>
+    <dd>RequestFilename</dd>
+    <dt>Request<wbr>Filename<wbr>Extension</dt>
+    <dd>RequestFilenameExtension</dd>
+    <dt>Request<wbr>Header</dt>
+    <dd>RequestHeader</dd>
+    <dt>Request<wbr>Body</dt>
+    <dd>RequestBody</dd>
+    <dt>Request<wbr>Scheme</dt>
+    <dd>RequestScheme</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Rules<wbr>Engine<wbr>Match<wbr>Variable<wbr>Is<wbr>Mobile</dt>
+    <dd>IsMobile</dd>
+    <dt>Rules<wbr>Engine<wbr>Match<wbr>Variable<wbr>Remote<wbr>Addr</dt>
+    <dd>RemoteAddr</dd>
+    <dt>Rules<wbr>Engine<wbr>Match<wbr>Variable<wbr>Request<wbr>Method</dt>
+    <dd>RequestMethod</dd>
+    <dt>Rules<wbr>Engine<wbr>Match<wbr>Variable<wbr>Query<wbr>String</dt>
+    <dd>QueryString</dd>
+    <dt>Rules<wbr>Engine<wbr>Match<wbr>Variable<wbr>Post<wbr>Args</dt>
+    <dd>PostArgs</dd>
+    <dt>Rules<wbr>Engine<wbr>Match<wbr>Variable<wbr>Request<wbr>Uri</dt>
+    <dd>RequestUri</dd>
+    <dt>Rules<wbr>Engine<wbr>Match<wbr>Variable<wbr>Request<wbr>Path</dt>
+    <dd>RequestPath</dd>
+    <dt>Rules<wbr>Engine<wbr>Match<wbr>Variable<wbr>Request<wbr>Filename</dt>
+    <dd>RequestFilename</dd>
+    <dt>Rules<wbr>Engine<wbr>Match<wbr>Variable<wbr>Request<wbr>Filename<wbr>Extension</dt>
+    <dd>RequestFilenameExtension</dd>
+    <dt>Rules<wbr>Engine<wbr>Match<wbr>Variable<wbr>Request<wbr>Header</dt>
+    <dd>RequestHeader</dd>
+    <dt>Rules<wbr>Engine<wbr>Match<wbr>Variable<wbr>Request<wbr>Body</dt>
+    <dd>RequestBody</dd>
+    <dt>Rules<wbr>Engine<wbr>Match<wbr>Variable<wbr>Request<wbr>Scheme</dt>
+    <dd>RequestScheme</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Is<wbr>Mobile</dt>
+    <dd>IsMobile</dd>
+    <dt>Remote<wbr>Addr</dt>
+    <dd>RemoteAddr</dd>
+    <dt>Request<wbr>Method</dt>
+    <dd>RequestMethod</dd>
+    <dt>Query<wbr>String</dt>
+    <dd>QueryString</dd>
+    <dt>Post<wbr>Args</dt>
+    <dd>PostArgs</dd>
+    <dt>Request<wbr>Uri</dt>
+    <dd>RequestUri</dd>
+    <dt>Request<wbr>Path</dt>
+    <dd>RequestPath</dd>
+    <dt>Request<wbr>Filename</dt>
+    <dd>RequestFilename</dd>
+    <dt>Request<wbr>Filename<wbr>Extension</dt>
+    <dd>RequestFilenameExtension</dd>
+    <dt>Request<wbr>Header</dt>
+    <dd>RequestHeader</dd>
+    <dt>Request<wbr>Body</dt>
+    <dd>RequestBody</dd>
+    <dt>Request<wbr>Scheme</dt>
+    <dd>RequestScheme</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>IS_MOBILE</dt>
+    <dd>IsMobile</dd>
+    <dt>REMOTE_ADDR</dt>
+    <dd>RemoteAddr</dd>
+    <dt>REQUEST_METHOD</dt>
+    <dd>RequestMethod</dd>
+    <dt>QUERY_STRING</dt>
+    <dd>QueryString</dd>
+    <dt>POST_ARGS</dt>
+    <dd>PostArgs</dd>
+    <dt>REQUEST_URI</dt>
+    <dd>RequestUri</dd>
+    <dt>REQUEST_PATH</dt>
+    <dd>RequestPath</dd>
+    <dt>REQUEST_FILENAME</dt>
+    <dd>RequestFilename</dd>
+    <dt>REQUEST_FILENAME_EXTENSION</dt>
+    <dd>RequestFilenameExtension</dd>
+    <dt>REQUEST_HEADER</dt>
+    <dd>RequestHeader</dd>
+    <dt>REQUEST_BODY</dt>
+    <dd>RequestBody</dd>
+    <dt>REQUEST_SCHEME</dt>
+    <dd>RequestScheme</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="rulesengineoperator">Rules<wbr>Engine<wbr>Operator</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Any</dt>
+    <dd>Any</dd>
+    <dt>IPMatch</dt>
+    <dd>IPMatch</dd>
+    <dt>Geo<wbr>Match</dt>
+    <dd>GeoMatch</dd>
+    <dt>Equal</dt>
+    <dd>Equal</dd>
+    <dt>Contains</dt>
+    <dd>Contains</dd>
+    <dt>Less<wbr>Than</dt>
+    <dd>LessThan</dd>
+    <dt>Greater<wbr>Than</dt>
+    <dd>GreaterThan</dd>
+    <dt>Less<wbr>Than<wbr>Or<wbr>Equal</dt>
+    <dd>LessThanOrEqual</dd>
+    <dt>Greater<wbr>Than<wbr>Or<wbr>Equal</dt>
+    <dd>GreaterThanOrEqual</dd>
+    <dt>Begins<wbr>With</dt>
+    <dd>BeginsWith</dd>
+    <dt>Ends<wbr>With</dt>
+    <dd>EndsWith</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Rules<wbr>Engine<wbr>Operator<wbr>Any</dt>
+    <dd>Any</dd>
+    <dt>Rules<wbr>Engine<wbr>Operator<wbr>IPMatch</dt>
+    <dd>IPMatch</dd>
+    <dt>Rules<wbr>Engine<wbr>Operator<wbr>Geo<wbr>Match</dt>
+    <dd>GeoMatch</dd>
+    <dt>Rules<wbr>Engine<wbr>Operator<wbr>Equal</dt>
+    <dd>Equal</dd>
+    <dt>Rules<wbr>Engine<wbr>Operator<wbr>Contains</dt>
+    <dd>Contains</dd>
+    <dt>Rules<wbr>Engine<wbr>Operator<wbr>Less<wbr>Than</dt>
+    <dd>LessThan</dd>
+    <dt>Rules<wbr>Engine<wbr>Operator<wbr>Greater<wbr>Than</dt>
+    <dd>GreaterThan</dd>
+    <dt>Rules<wbr>Engine<wbr>Operator<wbr>Less<wbr>Than<wbr>Or<wbr>Equal</dt>
+    <dd>LessThanOrEqual</dd>
+    <dt>Rules<wbr>Engine<wbr>Operator<wbr>Greater<wbr>Than<wbr>Or<wbr>Equal</dt>
+    <dd>GreaterThanOrEqual</dd>
+    <dt>Rules<wbr>Engine<wbr>Operator<wbr>Begins<wbr>With</dt>
+    <dd>BeginsWith</dd>
+    <dt>Rules<wbr>Engine<wbr>Operator<wbr>Ends<wbr>With</dt>
+    <dd>EndsWith</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Any</dt>
+    <dd>Any</dd>
+    <dt>IPMatch</dt>
+    <dd>IPMatch</dd>
+    <dt>Geo<wbr>Match</dt>
+    <dd>GeoMatch</dd>
+    <dt>Equal</dt>
+    <dd>Equal</dd>
+    <dt>Contains</dt>
+    <dd>Contains</dd>
+    <dt>Less<wbr>Than</dt>
+    <dd>LessThan</dd>
+    <dt>Greater<wbr>Than</dt>
+    <dd>GreaterThan</dd>
+    <dt>Less<wbr>Than<wbr>Or<wbr>Equal</dt>
+    <dd>LessThanOrEqual</dd>
+    <dt>Greater<wbr>Than<wbr>Or<wbr>Equal</dt>
+    <dd>GreaterThanOrEqual</dd>
+    <dt>Begins<wbr>With</dt>
+    <dd>BeginsWith</dd>
+    <dt>Ends<wbr>With</dt>
+    <dd>EndsWith</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>ANY</dt>
+    <dd>Any</dd>
+    <dt>IP_MATCH</dt>
+    <dd>IPMatch</dd>
+    <dt>GEO_MATCH</dt>
+    <dd>GeoMatch</dd>
+    <dt>EQUAL</dt>
+    <dd>Equal</dd>
+    <dt>CONTAINS</dt>
+    <dd>Contains</dd>
+    <dt>LESS_THAN</dt>
+    <dd>LessThan</dd>
+    <dt>GREATER_THAN</dt>
+    <dd>GreaterThan</dd>
+    <dt>LESS_THAN_OR_EQUAL</dt>
+    <dd>LessThanOrEqual</dd>
+    <dt>GREATER_THAN_OR_EQUAL</dt>
+    <dd>GreaterThanOrEqual</dd>
+    <dt>BEGINS_WITH</dt>
+    <dd>BeginsWith</dd>
+    <dt>ENDS_WITH</dt>
+    <dd>EndsWith</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="rulesenginerule">Rules<wbr>Engine<wbr>Rule</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3462,55 +3596,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulesengineaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Rules<wbr>Engine<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Actions to perform on the request and response if all of the match conditions are met.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name to refer to this specific rule.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A priority assigned to this rule. {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="matchconditions_csharp">
 <a href="#matchconditions_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Conditions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulesenginematchcondition">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Rules<wbr>Engine<wbr>Match<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of match conditions that must meet in order for the actions of this rule to run. Having no match conditions means the actions will always run.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="matchprocessingbehavior_csharp">
 <a href="#matchprocessingbehavior_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Processing<wbr>Behavior</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Match<wbr>Processing<wbr>Behavior</span>
+        <span class="property-type">string | <a href="#matchprocessingbehavior">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Match<wbr>Processing<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3519,55 +3647,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulesengineaction">Rules<wbr>Engine<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Actions to perform on the request and response if all of the match conditions are met.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name to refer to this specific rule.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A priority assigned to this rule. {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="matchconditions_go">
 <a href="#matchconditions_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Conditions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulesenginematchcondition">[]Rules<wbr>Engine<wbr>Match<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}A list of match conditions that must meet in order for the actions of this rule to run. Having no match conditions means the actions will always run.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="matchprocessingbehavior_go">
 <a href="#matchprocessingbehavior_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Processing<wbr>Behavior</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#matchprocessingbehavior">Match<wbr>Processing<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3576,55 +3698,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulesengineaction">Rules<wbr>Engine<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Actions to perform on the request and response if all of the match conditions are met.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name to refer to this specific rule.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A priority assigned to this rule. {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="matchconditions_nodejs">
 <a href="#matchconditions_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Conditions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulesenginematchcondition">Rules<wbr>Engine<wbr>Match<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}A list of match conditions that must meet in order for the actions of this rule to run. Having no match conditions means the actions will always run.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="matchprocessingbehavior_nodejs">
 <a href="#matchprocessingbehavior_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Processing<wbr>Behavior</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Match<wbr>Processing<wbr>Behavior</span>
+        <span class="property-type">string | <a href="#matchprocessingbehavior">Match<wbr>Processing<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3633,66 +3749,51 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulesengineaction">Rules<wbr>Engine<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Actions to perform on the request and response if all of the match conditions are met.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A name to refer to this specific rule.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A priority assigned to this rule. {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="match_conditions_python">
 <a href="#match_conditions_python" style="color: inherit; text-decoration: inherit;">match_<wbr>conditions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulesenginematchcondition">Sequence[Rules<wbr>Engine<wbr>Match<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of match conditions that must meet in order for the actions of this rule to run. Having no match conditions means the actions will always run.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="match_processing_behavior_python">
 <a href="#match_processing_behavior_python" style="color: inherit; text-decoration: inherit;">match_<wbr>processing_<wbr>behavior</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Match<wbr>Processing<wbr>Behavior</span>
+        <span class="property-type">str | <a href="#matchprocessingbehavior">Match<wbr>Processing<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="rulesengineruleresponse">Rules<wbr>Engine<wbr>Rule<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3701,55 +3802,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulesengineactionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Rules<wbr>Engine<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Actions to perform on the request and response if all of the match conditions are met.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name to refer to this specific rule.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A priority assigned to this rule. {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="matchconditions_csharp">
 <a href="#matchconditions_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Conditions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulesenginematchconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Rules<wbr>Engine<wbr>Match<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of match conditions that must meet in order for the actions of this rule to run. Having no match conditions means the actions will always run.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="matchprocessingbehavior_csharp">
 <a href="#matchprocessingbehavior_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Processing<wbr>Behavior</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3758,55 +3853,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulesengineactionresponse">Rules<wbr>Engine<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Actions to perform on the request and response if all of the match conditions are met.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name to refer to this specific rule.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A priority assigned to this rule. {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="matchconditions_go">
 <a href="#matchconditions_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Conditions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulesenginematchconditionresponse">[]Rules<wbr>Engine<wbr>Match<wbr>Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A list of match conditions that must meet in order for the actions of this rule to run. Having no match conditions means the actions will always run.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="matchprocessingbehavior_go">
 <a href="#matchprocessingbehavior_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Processing<wbr>Behavior</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3815,55 +3904,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulesengineactionresponse">Rules<wbr>Engine<wbr>Action<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Actions to perform on the request and response if all of the match conditions are met.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name to refer to this specific rule.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A priority assigned to this rule. {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="matchconditions_nodejs">
 <a href="#matchconditions_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Conditions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulesenginematchconditionresponse">Rules<wbr>Engine<wbr>Match<wbr>Condition<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A list of match conditions that must meet in order for the actions of this rule to run. Having no match conditions means the actions will always run.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="matchprocessingbehavior_nodejs">
 <a href="#matchprocessingbehavior_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Processing<wbr>Behavior</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3872,67 +3955,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulesengineactionresponse">Rules<wbr>Engine<wbr>Action<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Actions to perform on the request and response if all of the match conditions are met.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A name to refer to this specific rule.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A priority assigned to this rule. {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="match_conditions_python">
 <a href="#match_conditions_python" style="color: inherit; text-decoration: inherit;">match_<wbr>conditions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulesenginematchconditionresponse">Sequence[Rules<wbr>Engine<wbr>Match<wbr>Condition<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of match conditions that must meet in order for the actions of this rule to run. Having no match conditions means the actions will always run.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="match_processing_behavior_python">
 <a href="#match_processing_behavior_python" style="color: inherit; text-decoration: inherit;">match_<wbr>processing_<wbr>behavior</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="subresource">Sub<wbr>Resource</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3940,15 +4008,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3957,15 +4023,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3974,15 +4038,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3991,27 +4053,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="subresourceresponse">Sub<wbr>Resource<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4019,15 +4070,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4036,15 +4085,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4053,15 +4100,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4070,23 +4115,83 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="transform">Transform</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Lowercase</dt>
+    <dd>Lowercase</dd>
+    <dt>Uppercase</dt>
+    <dd>Uppercase</dd>
+    <dt>Trim</dt>
+    <dd>Trim</dd>
+    <dt>Url<wbr>Decode</dt>
+    <dd>UrlDecode</dd>
+    <dt>Url<wbr>Encode</dt>
+    <dd>UrlEncode</dd>
+    <dt>Remove<wbr>Nulls</dt>
+    <dd>RemoveNulls</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Transform<wbr>Lowercase</dt>
+    <dd>Lowercase</dd>
+    <dt>Transform<wbr>Uppercase</dt>
+    <dd>Uppercase</dd>
+    <dt>Transform<wbr>Trim</dt>
+    <dd>Trim</dd>
+    <dt>Transform<wbr>Url<wbr>Decode</dt>
+    <dd>UrlDecode</dd>
+    <dt>Transform<wbr>Url<wbr>Encode</dt>
+    <dd>UrlEncode</dd>
+    <dt>Transform<wbr>Remove<wbr>Nulls</dt>
+    <dd>RemoveNulls</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Lowercase</dt>
+    <dd>Lowercase</dd>
+    <dt>Uppercase</dt>
+    <dd>Uppercase</dd>
+    <dt>Trim</dt>
+    <dd>Trim</dd>
+    <dt>Url<wbr>Decode</dt>
+    <dd>UrlDecode</dd>
+    <dt>Url<wbr>Encode</dt>
+    <dd>UrlEncode</dd>
+    <dt>Remove<wbr>Nulls</dt>
+    <dd>RemoveNulls</dd>
+</dl>
+{{% /choosable %}}
 
-
-
-
-
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>LOWERCASE</dt>
+    <dd>Lowercase</dd>
+    <dt>UPPERCASE</dt>
+    <dd>Uppercase</dd>
+    <dt>TRIM</dt>
+    <dd>Trim</dd>
+    <dt>URL_DECODE</dt>
+    <dd>UrlDecode</dd>
+    <dt>URL_ENCODE</dt>
+    <dd>UrlEncode</dd>
+    <dt>REMOVE_NULLS</dt>
+    <dd>RemoveNulls</dd>
+</dl>
+{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>

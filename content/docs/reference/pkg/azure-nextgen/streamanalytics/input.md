@@ -2,7 +2,7 @@
 ---
 title: "Input"
 title_tag: "azure-nextgen.streamanalytics.Input"
-meta_desc: "Explore the Input resource of the streamanalytics module, including examples, input properties, output properties, lookup functions, and supporting types. An input object, containing all information associated with the named input. All inputs are contained under a streaming job."
+meta_desc: "Documentation for the azure-nextgen.streamanalytics.Input resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -11,6 +11,7 @@ meta_desc: "Explore the Input resource of the streamanalytics module, including 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An input object, containing all information associated with the named input. All inputs are contained under a streaming job.
+Latest API Version: 2016-03-01.
 
 
 {{% examples %}}
@@ -485,7 +486,7 @@ const input = new azure_nextgen.streamanalytics.latest.Input("input", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Input</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">InputArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Input</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">InputArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -493,11 +494,11 @@ const input = new azure_nextgen.streamanalytics.latest.Input("input", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInput</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">InputArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Input</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInput</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">InputArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Input</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Input</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">InputArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Input</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">InputArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -508,7 +509,7 @@ const input = new azure_nextgen.streamanalytics.latest.Input("input", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -577,7 +578,7 @@ const input = new azure_nextgen.streamanalytics.latest.Input("input", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -616,7 +617,7 @@ const input = new azure_nextgen.streamanalytics.latest.Input("input", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -657,7 +658,6 @@ The Input resource accepts the following [input]({{< relref "/docs/intro/concept
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -665,55 +665,49 @@ The Input resource accepts the following [input]({{< relref "/docs/intro/concept
             title="Required">
         <span id="inputname_csharp">
 <a href="#inputname_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the input.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="jobname_csharp">
 <a href="#jobname_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the streaming job.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#referenceinputproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Reference<wbr>Input<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#streaminputproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Stream<wbr>Input<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#referenceinputproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Reference<wbr>Input<wbr>Properties<wbr>Args</a> | <a href="#streaminputproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Stream<wbr>Input<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -722,55 +716,49 @@ The Input resource accepts the following [input]({{< relref "/docs/intro/concept
             title="Required">
         <span id="inputname_go">
 <a href="#inputname_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the input.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="jobname_go">
 <a href="#jobname_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the streaming job.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#referenceinputproperties">Reference<wbr>Input<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#streaminputproperties">Stream<wbr>Input<wbr>Properties</a></span>
+        <span class="property-type"><a href="#referenceinputproperties">Reference<wbr>Input<wbr>Properties</a> | <a href="#streaminputproperties">Stream<wbr>Input<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -779,55 +767,49 @@ The Input resource accepts the following [input]({{< relref "/docs/intro/concept
             title="Required">
         <span id="inputname_nodejs">
 <a href="#inputname_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the input.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="jobname_nodejs">
 <a href="#jobname_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the streaming job.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#referenceinputproperties">Reference<wbr>Input<wbr>Properties</a></span><span class="property-type"> | </span><span class="property-type"><a href="#streaminputproperties">Stream<wbr>Input<wbr>Properties</a></span>
+        <span class="property-type"><a href="#referenceinputproperties">Reference<wbr>Input<wbr>Properties</a> | <a href="#streaminputproperties">Stream<wbr>Input<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -836,64 +818,54 @@ The Input resource accepts the following [input]({{< relref "/docs/intro/concept
             title="Required">
         <span id="input_name_python">
 <a href="#input_name_python" style="color: inherit; text-decoration: inherit;">input_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the input.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="job_name_python">
 <a href="#job_name_python" style="color: inherit; text-decoration: inherit;">job_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the streaming job.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#referenceinputproperties">Reference<wbr>Input<wbr>Properties<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#streaminputproperties">Stream<wbr>Input<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#referenceinputproperties">Reference<wbr>Input<wbr>Properties<wbr>Args</a> | <a href="#streaminputproperties">Stream<wbr>Input<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Input resource produces the following output properties:
-
 
 
 
@@ -904,25 +876,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -931,25 +900,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -958,25 +924,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -985,28 +948,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1017,13 +974,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
 <h4 id="avroserialization">Avro<wbr>Serialization</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1031,13 +983,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </dl>
 {{% /choosable %}}
 
-
 {{% choosable language go %}}
 <dl class="resources-properties">
 
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1045,31 +995,19 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </dl>
 {{% /choosable %}}
 
-
 {{% choosable language python %}}
 <dl class="resources-properties">
 
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="avroserializationresponse">Avro<wbr>Serialization<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1077,32 +1015,20 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </dl>
 {{% /choosable %}}
 
-
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
 </dl>
 {{% /choosable %}}
 
-
 {{% choosable language python %}}
 <dl class="resources-properties">
 
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="blobreferenceinputdatasource">Blob<wbr>Reference<wbr>Input<wbr>Data<wbr>Source</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1110,55 +1036,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="container_csharp">
 <a href="#container_csharp" style="color: inherit; text-decoration: inherit;">Container</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dateformat_csharp">
 <a href="#dateformat_csharp" style="color: inherit; text-decoration: inherit;">Date<wbr>Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pathpattern_csharp">
 <a href="#pathpattern_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storageaccounts_csharp">
 <a href="#storageaccounts_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storageaccount">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeformat_csharp">
 <a href="#timeformat_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time format. Wherever {time} appears in pathPattern, the value of this property is used as the time format instead.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1167,55 +1087,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="container_go">
 <a href="#container_go" style="color: inherit; text-decoration: inherit;">Container</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dateformat_go">
 <a href="#dateformat_go" style="color: inherit; text-decoration: inherit;">Date<wbr>Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pathpattern_go">
 <a href="#pathpattern_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storageaccounts_go">
 <a href="#storageaccounts_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storageaccount">[]Storage<wbr>Account</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeformat_go">
 <a href="#timeformat_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time format. Wherever {time} appears in pathPattern, the value of this property is used as the time format instead.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1224,55 +1138,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="container_nodejs">
 <a href="#container_nodejs" style="color: inherit; text-decoration: inherit;">container</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dateformat_nodejs">
 <a href="#dateformat_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pathpattern_nodejs">
 <a href="#pathpattern_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storageaccounts_nodejs">
 <a href="#storageaccounts_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storageaccount">Storage<wbr>Account[]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeformat_nodejs">
 <a href="#timeformat_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time format. Wherever {time} appears in pathPattern, the value of this property is used as the time format instead.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1281,67 +1189,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="container_python">
 <a href="#container_python" style="color: inherit; text-decoration: inherit;">container</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="date_format_python">
 <a href="#date_format_python" style="color: inherit; text-decoration: inherit;">date_<wbr>format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="path_pattern_python">
 <a href="#path_pattern_python" style="color: inherit; text-decoration: inherit;">path_<wbr>pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storage_accounts_python">
 <a href="#storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storageaccount">Sequence[Storage<wbr>Account<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="time_format_python">
 <a href="#time_format_python" style="color: inherit; text-decoration: inherit;">time_<wbr>format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time format. Wherever {time} appears in pathPattern, the value of this property is used as the time format instead.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="blobreferenceinputdatasourceresponse">Blob<wbr>Reference<wbr>Input<wbr>Data<wbr>Source<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1349,55 +1242,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="container_csharp">
 <a href="#container_csharp" style="color: inherit; text-decoration: inherit;">Container</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dateformat_csharp">
 <a href="#dateformat_csharp" style="color: inherit; text-decoration: inherit;">Date<wbr>Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pathpattern_csharp">
 <a href="#pathpattern_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storageaccounts_csharp">
 <a href="#storageaccounts_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storageaccountresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeformat_csharp">
 <a href="#timeformat_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time format. Wherever {time} appears in pathPattern, the value of this property is used as the time format instead.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1406,55 +1293,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="container_go">
 <a href="#container_go" style="color: inherit; text-decoration: inherit;">Container</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dateformat_go">
 <a href="#dateformat_go" style="color: inherit; text-decoration: inherit;">Date<wbr>Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pathpattern_go">
 <a href="#pathpattern_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storageaccounts_go">
 <a href="#storageaccounts_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storageaccountresponse">[]Storage<wbr>Account<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeformat_go">
 <a href="#timeformat_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time format. Wherever {time} appears in pathPattern, the value of this property is used as the time format instead.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1463,55 +1344,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="container_nodejs">
 <a href="#container_nodejs" style="color: inherit; text-decoration: inherit;">container</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dateformat_nodejs">
 <a href="#dateformat_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pathpattern_nodejs">
 <a href="#pathpattern_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storageaccounts_nodejs">
 <a href="#storageaccounts_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storageaccountresponse">Storage<wbr>Account<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeformat_nodejs">
 <a href="#timeformat_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time format. Wherever {time} appears in pathPattern, the value of this property is used as the time format instead.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1520,66 +1395,51 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="container_python">
 <a href="#container_python" style="color: inherit; text-decoration: inherit;">container</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="date_format_python">
 <a href="#date_format_python" style="color: inherit; text-decoration: inherit;">date_<wbr>format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="path_pattern_python">
 <a href="#path_pattern_python" style="color: inherit; text-decoration: inherit;">path_<wbr>pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storage_accounts_python">
 <a href="#storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storageaccountresponse">Sequence[Storage<wbr>Account<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="time_format_python">
 <a href="#time_format_python" style="color: inherit; text-decoration: inherit;">time_<wbr>format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time format. Wherever {time} appears in pathPattern, the value of this property is used as the time format instead.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="blobstreaminputdatasource">Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1588,65 +1448,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="container_csharp">
 <a href="#container_csharp" style="color: inherit; text-decoration: inherit;">Container</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dateformat_csharp">
 <a href="#dateformat_csharp" style="color: inherit; text-decoration: inherit;">Date<wbr>Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pathpattern_csharp">
 <a href="#pathpattern_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourcepartitioncount_csharp">
 <a href="#sourcepartitioncount_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Partition<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The partition count of the blob input data source. Range 1 - 256.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storageaccounts_csharp">
 <a href="#storageaccounts_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storageaccount">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeformat_csharp">
 <a href="#timeformat_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time format. Wherever {time} appears in pathPattern, the value of this property is used as the time format instead.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1655,65 +1508,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="container_go">
 <a href="#container_go" style="color: inherit; text-decoration: inherit;">Container</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dateformat_go">
 <a href="#dateformat_go" style="color: inherit; text-decoration: inherit;">Date<wbr>Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pathpattern_go">
 <a href="#pathpattern_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourcepartitioncount_go">
 <a href="#sourcepartitioncount_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Partition<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The partition count of the blob input data source. Range 1 - 256.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storageaccounts_go">
 <a href="#storageaccounts_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storageaccount">[]Storage<wbr>Account</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeformat_go">
 <a href="#timeformat_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time format. Wherever {time} appears in pathPattern, the value of this property is used as the time format instead.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1722,65 +1568,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="container_nodejs">
 <a href="#container_nodejs" style="color: inherit; text-decoration: inherit;">container</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dateformat_nodejs">
 <a href="#dateformat_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pathpattern_nodejs">
 <a href="#pathpattern_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourcepartitioncount_nodejs">
 <a href="#sourcepartitioncount_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Partition<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The partition count of the blob input data source. Range 1 - 256.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storageaccounts_nodejs">
 <a href="#storageaccounts_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storageaccount">Storage<wbr>Account[]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeformat_nodejs">
 <a href="#timeformat_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time format. Wherever {time} appears in pathPattern, the value of this property is used as the time format instead.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1789,76 +1628,60 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="container_python">
 <a href="#container_python" style="color: inherit; text-decoration: inherit;">container</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="date_format_python">
 <a href="#date_format_python" style="color: inherit; text-decoration: inherit;">date_<wbr>format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="path_pattern_python">
 <a href="#path_pattern_python" style="color: inherit; text-decoration: inherit;">path_<wbr>pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_partition_count_python">
 <a href="#source_partition_count_python" style="color: inherit; text-decoration: inherit;">source_<wbr>partition_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The partition count of the blob input data source. Range 1 - 256.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storage_accounts_python">
 <a href="#storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storageaccount">Sequence[Storage<wbr>Account<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="time_format_python">
 <a href="#time_format_python" style="color: inherit; text-decoration: inherit;">time_<wbr>format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time format. Wherever {time} appears in pathPattern, the value of this property is used as the time format instead.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="blobstreaminputdatasourceresponse">Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1867,65 +1690,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="container_csharp">
 <a href="#container_csharp" style="color: inherit; text-decoration: inherit;">Container</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dateformat_csharp">
 <a href="#dateformat_csharp" style="color: inherit; text-decoration: inherit;">Date<wbr>Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pathpattern_csharp">
 <a href="#pathpattern_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourcepartitioncount_csharp">
 <a href="#sourcepartitioncount_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Partition<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The partition count of the blob input data source. Range 1 - 256.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storageaccounts_csharp">
 <a href="#storageaccounts_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storageaccountresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeformat_csharp">
 <a href="#timeformat_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time format. Wherever {time} appears in pathPattern, the value of this property is used as the time format instead.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1934,65 +1750,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="container_go">
 <a href="#container_go" style="color: inherit; text-decoration: inherit;">Container</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dateformat_go">
 <a href="#dateformat_go" style="color: inherit; text-decoration: inherit;">Date<wbr>Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pathpattern_go">
 <a href="#pathpattern_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourcepartitioncount_go">
 <a href="#sourcepartitioncount_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Partition<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The partition count of the blob input data source. Range 1 - 256.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storageaccounts_go">
 <a href="#storageaccounts_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storageaccountresponse">[]Storage<wbr>Account<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeformat_go">
 <a href="#timeformat_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time format. Wherever {time} appears in pathPattern, the value of this property is used as the time format instead.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2001,65 +1810,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="container_nodejs">
 <a href="#container_nodejs" style="color: inherit; text-decoration: inherit;">container</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dateformat_nodejs">
 <a href="#dateformat_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pathpattern_nodejs">
 <a href="#pathpattern_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourcepartitioncount_nodejs">
 <a href="#sourcepartitioncount_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Partition<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The partition count of the blob input data source. Range 1 - 256.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storageaccounts_nodejs">
 <a href="#storageaccounts_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storageaccountresponse">Storage<wbr>Account<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeformat_nodejs">
 <a href="#timeformat_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time format. Wherever {time} appears in pathPattern, the value of this property is used as the time format instead.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2068,77 +1870,61 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="container_python">
 <a href="#container_python" style="color: inherit; text-decoration: inherit;">container</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="date_format_python">
 <a href="#date_format_python" style="color: inherit; text-decoration: inherit;">date_<wbr>format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="path_pattern_python">
 <a href="#path_pattern_python" style="color: inherit; text-decoration: inherit;">path_<wbr>pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_partition_count_python">
 <a href="#source_partition_count_python" style="color: inherit; text-decoration: inherit;">source_<wbr>partition_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The partition count of the blob input data source. Range 1 - 256.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storage_accounts_python">
 <a href="#storage_accounts_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>accounts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storageaccountresponse">Sequence[Storage<wbr>Account<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="time_format_python">
 <a href="#time_format_python" style="color: inherit; text-decoration: inherit;">time_<wbr>format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time format. Wherever {time} appears in pathPattern, the value of this property is used as the time format instead.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="csvserialization">Csv<wbr>Serialization</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2146,25 +1932,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="encoding_csharp">
 <a href="#encoding_csharp" style="color: inherit; text-decoration: inherit;">Encoding</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Encoding</span>
+        <span class="property-type">string | <a href="#encoding">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Encoding</a></span>
     </dt>
     <dd>{{% md %}}Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fielddelimiter_csharp">
 <a href="#fielddelimiter_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Delimiter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the delimiter that will be used to separate comma-separated value (CSV) records. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a list of supported values. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2173,25 +1956,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="encoding_go">
 <a href="#encoding_go" style="color: inherit; text-decoration: inherit;">Encoding</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#encoding">Encoding</a></span>
     </dt>
     <dd>{{% md %}}Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fielddelimiter_go">
 <a href="#fielddelimiter_go" style="color: inherit; text-decoration: inherit;">Field<wbr>Delimiter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the delimiter that will be used to separate comma-separated value (CSV) records. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a list of supported values. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2200,25 +1980,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="encoding_nodejs">
 <a href="#encoding_nodejs" style="color: inherit; text-decoration: inherit;">encoding</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Encoding</span>
+        <span class="property-type">string | <a href="#encoding">Encoding</a></span>
     </dt>
     <dd>{{% md %}}Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fielddelimiter_nodejs">
 <a href="#fielddelimiter_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Delimiter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the delimiter that will be used to separate comma-separated value (CSV) records. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a list of supported values. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2227,37 +2004,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="encoding_python">
 <a href="#encoding_python" style="color: inherit; text-decoration: inherit;">encoding</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Encoding</span>
+        <span class="property-type">str | <a href="#encoding">Encoding</a></span>
     </dt>
     <dd>{{% md %}}Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="field_delimiter_python">
 <a href="#field_delimiter_python" style="color: inherit; text-decoration: inherit;">field_<wbr>delimiter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the delimiter that will be used to separate comma-separated value (CSV) records. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a list of supported values. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="csvserializationresponse">Csv<wbr>Serialization<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2265,25 +2030,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="encoding_csharp">
 <a href="#encoding_csharp" style="color: inherit; text-decoration: inherit;">Encoding</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fielddelimiter_csharp">
 <a href="#fielddelimiter_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Delimiter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the delimiter that will be used to separate comma-separated value (CSV) records. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a list of supported values. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2292,25 +2054,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="encoding_go">
 <a href="#encoding_go" style="color: inherit; text-decoration: inherit;">Encoding</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fielddelimiter_go">
 <a href="#fielddelimiter_go" style="color: inherit; text-decoration: inherit;">Field<wbr>Delimiter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the delimiter that will be used to separate comma-separated value (CSV) records. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a list of supported values. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2319,25 +2078,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="encoding_nodejs">
 <a href="#encoding_nodejs" style="color: inherit; text-decoration: inherit;">encoding</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fielddelimiter_nodejs">
 <a href="#fielddelimiter_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Delimiter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the delimiter that will be used to separate comma-separated value (CSV) records. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a list of supported values. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2346,36 +2102,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="encoding_python">
 <a href="#encoding_python" style="color: inherit; text-decoration: inherit;">encoding</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="field_delimiter_python">
 <a href="#field_delimiter_python" style="color: inherit; text-decoration: inherit;">field_<wbr>delimiter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the delimiter that will be used to separate comma-separated value (CSV) records. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a list of supported values. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="diagnosticconditionresponse">Diagnostic<wbr>Condition<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2384,35 +2128,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="code_csharp">
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The opaque diagnostic code.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable message describing the condition in detail. Localized in the Accept-Language of the client request.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="since_csharp">
 <a href="#since_csharp" style="color: inherit; text-decoration: inherit;">Since</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UTC timestamp of when the condition started. Customers should be able to find a corresponding event in the ops log around this time.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2421,35 +2161,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="code_go">
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The opaque diagnostic code.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable message describing the condition in detail. Localized in the Accept-Language of the client request.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="since_go">
 <a href="#since_go" style="color: inherit; text-decoration: inherit;">Since</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UTC timestamp of when the condition started. Customers should be able to find a corresponding event in the ops log around this time.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2458,35 +2194,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="code_nodejs">
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The opaque diagnostic code.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable message describing the condition in detail. Localized in the Accept-Language of the client request.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="since_nodejs">
 <a href="#since_nodejs" style="color: inherit; text-decoration: inherit;">since</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UTC timestamp of when the condition started. Customers should be able to find a corresponding event in the ops log around this time.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2495,46 +2227,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="code_python">
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The opaque diagnostic code.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The human-readable message describing the condition in detail. Localized in the Accept-Language of the client request.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="since_python">
 <a href="#since_python" style="color: inherit; text-decoration: inherit;">since</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The UTC timestamp of when the condition started. Customers should be able to find a corresponding event in the ops log around this time.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="diagnosticsresponse">Diagnostics<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2543,15 +2262,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="conditions_csharp">
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diagnosticconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Diagnostic<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of zero or more conditions applicable to the resource, or to the job overall, that warrant customer attention.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2560,15 +2277,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="conditions_go">
 <a href="#conditions_go" style="color: inherit; text-decoration: inherit;">Conditions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diagnosticconditionresponse">[]Diagnostic<wbr>Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A collection of zero or more conditions applicable to the resource, or to the job overall, that warrant customer attention.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2577,15 +2292,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="conditions_nodejs">
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diagnosticconditionresponse">Diagnostic<wbr>Condition<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of zero or more conditions applicable to the resource, or to the job overall, that warrant customer attention.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2594,27 +2307,46 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="conditions_python">
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diagnosticconditionresponse">Sequence[Diagnostic<wbr>Condition<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A collection of zero or more conditions applicable to the resource, or to the job overall, that warrant customer attention.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="encoding">Encoding</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>UTF8</dt>
+    <dd>UTF8</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Encoding<wbr>UTF8</dt>
+    <dd>UTF8</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>UTF8</dt>
+    <dd>UTF8</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>UTF8</dt>
+    <dd>UTF8</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="eventhubstreaminputdatasource">Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2622,55 +2354,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="consumergroupname_csharp">
 <a href="#consumergroupname_csharp" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of an Event Hub Consumer Group that should be used to read events from the Event Hub. Specifying distinct consumer group names for multiple inputs allows each of those inputs to receive the same events from the Event Hub. If not specified, the input uses the Event Hub’s default consumer group.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="eventhubname_csharp">
 <a href="#eventhubname_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Hub<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Event Hub. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="servicebusnamespace_csharp">
 <a href="#servicebusnamespace_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sharedaccesspolicykey_csharp">
 <a href="#sharedaccesspolicykey_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Policy<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sharedaccesspolicyname_csharp">
 <a href="#sharedaccesspolicyname_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2679,55 +2405,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="consumergroupname_go">
 <a href="#consumergroupname_go" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of an Event Hub Consumer Group that should be used to read events from the Event Hub. Specifying distinct consumer group names for multiple inputs allows each of those inputs to receive the same events from the Event Hub. If not specified, the input uses the Event Hub’s default consumer group.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="eventhubname_go">
 <a href="#eventhubname_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Hub<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Event Hub. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="servicebusnamespace_go">
 <a href="#servicebusnamespace_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sharedaccesspolicykey_go">
 <a href="#sharedaccesspolicykey_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Policy<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sharedaccesspolicyname_go">
 <a href="#sharedaccesspolicyname_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2736,55 +2456,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="consumergroupname_nodejs">
 <a href="#consumergroupname_nodejs" style="color: inherit; text-decoration: inherit;">consumer<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of an Event Hub Consumer Group that should be used to read events from the Event Hub. Specifying distinct consumer group names for multiple inputs allows each of those inputs to receive the same events from the Event Hub. If not specified, the input uses the Event Hub’s default consumer group.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="eventhubname_nodejs">
 <a href="#eventhubname_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Hub<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Event Hub. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="servicebusnamespace_nodejs">
 <a href="#servicebusnamespace_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sharedaccesspolicykey_nodejs">
 <a href="#sharedaccesspolicykey_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sharedaccesspolicyname_nodejs">
 <a href="#sharedaccesspolicyname_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2793,67 +2507,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="consumer_group_name_python">
 <a href="#consumer_group_name_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of an Event Hub Consumer Group that should be used to read events from the Event Hub. Specifying distinct consumer group names for multiple inputs allows each of those inputs to receive the same events from the Event Hub. If not specified, the input uses the Event Hub’s default consumer group.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="event_hub_name_python">
 <a href="#event_hub_name_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hub_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Event Hub. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="service_bus_namespace_python">
 <a href="#service_bus_namespace_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="shared_access_policy_key_python">
 <a href="#shared_access_policy_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="shared_access_policy_name_python">
 <a href="#shared_access_policy_name_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="eventhubstreaminputdatasourceresponse">Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2861,55 +2560,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="consumergroupname_csharp">
 <a href="#consumergroupname_csharp" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of an Event Hub Consumer Group that should be used to read events from the Event Hub. Specifying distinct consumer group names for multiple inputs allows each of those inputs to receive the same events from the Event Hub. If not specified, the input uses the Event Hub’s default consumer group.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="eventhubname_csharp">
 <a href="#eventhubname_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Hub<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Event Hub. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="servicebusnamespace_csharp">
 <a href="#servicebusnamespace_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sharedaccesspolicykey_csharp">
 <a href="#sharedaccesspolicykey_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Policy<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sharedaccesspolicyname_csharp">
 <a href="#sharedaccesspolicyname_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2918,55 +2611,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="consumergroupname_go">
 <a href="#consumergroupname_go" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of an Event Hub Consumer Group that should be used to read events from the Event Hub. Specifying distinct consumer group names for multiple inputs allows each of those inputs to receive the same events from the Event Hub. If not specified, the input uses the Event Hub’s default consumer group.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="eventhubname_go">
 <a href="#eventhubname_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Hub<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Event Hub. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="servicebusnamespace_go">
 <a href="#servicebusnamespace_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sharedaccesspolicykey_go">
 <a href="#sharedaccesspolicykey_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Policy<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sharedaccesspolicyname_go">
 <a href="#sharedaccesspolicyname_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2975,55 +2662,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="consumergroupname_nodejs">
 <a href="#consumergroupname_nodejs" style="color: inherit; text-decoration: inherit;">consumer<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of an Event Hub Consumer Group that should be used to read events from the Event Hub. Specifying distinct consumer group names for multiple inputs allows each of those inputs to receive the same events from the Event Hub. If not specified, the input uses the Event Hub’s default consumer group.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="eventhubname_nodejs">
 <a href="#eventhubname_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Hub<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Event Hub. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="servicebusnamespace_nodejs">
 <a href="#servicebusnamespace_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sharedaccesspolicykey_nodejs">
 <a href="#sharedaccesspolicykey_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sharedaccesspolicyname_nodejs">
 <a href="#sharedaccesspolicyname_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3032,67 +2713,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="consumer_group_name_python">
 <a href="#consumer_group_name_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of an Event Hub Consumer Group that should be used to read events from the Event Hub. Specifying distinct consumer group names for multiple inputs allows each of those inputs to receive the same events from the Event Hub. If not specified, the input uses the Event Hub’s default consumer group.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="event_hub_name_python">
 <a href="#event_hub_name_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hub_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Event Hub. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="service_bus_namespace_python">
 <a href="#service_bus_namespace_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace that is associated with the desired Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="shared_access_policy_key_python">
 <a href="#shared_access_policy_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="shared_access_policy_name_python">
 <a href="#shared_access_policy_name_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The shared access policy name for the Event Hub, Service Bus Queue, Service Bus Topic, etc. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="iothubstreaminputdatasource">Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3100,55 +2766,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="consumergroupname_csharp">
 <a href="#consumergroupname_csharp" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of an IoT Hub Consumer Group that should be used to read events from the IoT Hub. If not specified, the input uses the Iot Hub’s default consumer group.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="endpoint_csharp">
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IoT Hub endpoint to connect to (ie. messages/events, messages/operationsMonitoringEvents, etc.).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iothubnamespace_csharp">
 <a href="#iothubnamespace_csharp" style="color: inherit; text-decoration: inherit;">Iot<wbr>Hub<wbr>Namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or the URI of the IoT Hub. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sharedaccesspolicykey_csharp">
 <a href="#sharedaccesspolicykey_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Policy<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sharedaccesspolicyname_csharp">
 <a href="#sharedaccesspolicyname_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared access policy name for the IoT Hub. This policy must contain at least the Service connect permission. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3157,55 +2817,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="consumergroupname_go">
 <a href="#consumergroupname_go" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of an IoT Hub Consumer Group that should be used to read events from the IoT Hub. If not specified, the input uses the Iot Hub’s default consumer group.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="endpoint_go">
 <a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IoT Hub endpoint to connect to (ie. messages/events, messages/operationsMonitoringEvents, etc.).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iothubnamespace_go">
 <a href="#iothubnamespace_go" style="color: inherit; text-decoration: inherit;">Iot<wbr>Hub<wbr>Namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or the URI of the IoT Hub. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sharedaccesspolicykey_go">
 <a href="#sharedaccesspolicykey_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Policy<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sharedaccesspolicyname_go">
 <a href="#sharedaccesspolicyname_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared access policy name for the IoT Hub. This policy must contain at least the Service connect permission. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3214,55 +2868,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="consumergroupname_nodejs">
 <a href="#consumergroupname_nodejs" style="color: inherit; text-decoration: inherit;">consumer<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of an IoT Hub Consumer Group that should be used to read events from the IoT Hub. If not specified, the input uses the Iot Hub’s default consumer group.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="endpoint_nodejs">
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IoT Hub endpoint to connect to (ie. messages/events, messages/operationsMonitoringEvents, etc.).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iothubnamespace_nodejs">
 <a href="#iothubnamespace_nodejs" style="color: inherit; text-decoration: inherit;">iot<wbr>Hub<wbr>Namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or the URI of the IoT Hub. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sharedaccesspolicykey_nodejs">
 <a href="#sharedaccesspolicykey_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sharedaccesspolicyname_nodejs">
 <a href="#sharedaccesspolicyname_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared access policy name for the IoT Hub. This policy must contain at least the Service connect permission. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3271,67 +2919,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="consumer_group_name_python">
 <a href="#consumer_group_name_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of an IoT Hub Consumer Group that should be used to read events from the IoT Hub. If not specified, the input uses the Iot Hub’s default consumer group.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="endpoint_python">
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IoT Hub endpoint to connect to (ie. messages/events, messages/operationsMonitoringEvents, etc.).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iot_hub_namespace_python">
 <a href="#iot_hub_namespace_python" style="color: inherit; text-decoration: inherit;">iot_<wbr>hub_<wbr>namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name or the URI of the IoT Hub. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="shared_access_policy_key_python">
 <a href="#shared_access_policy_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="shared_access_policy_name_python">
 <a href="#shared_access_policy_name_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The shared access policy name for the IoT Hub. This policy must contain at least the Service connect permission. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="iothubstreaminputdatasourceresponse">Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3339,55 +2972,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="consumergroupname_csharp">
 <a href="#consumergroupname_csharp" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of an IoT Hub Consumer Group that should be used to read events from the IoT Hub. If not specified, the input uses the Iot Hub’s default consumer group.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="endpoint_csharp">
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IoT Hub endpoint to connect to (ie. messages/events, messages/operationsMonitoringEvents, etc.).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iothubnamespace_csharp">
 <a href="#iothubnamespace_csharp" style="color: inherit; text-decoration: inherit;">Iot<wbr>Hub<wbr>Namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or the URI of the IoT Hub. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sharedaccesspolicykey_csharp">
 <a href="#sharedaccesspolicykey_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Policy<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sharedaccesspolicyname_csharp">
 <a href="#sharedaccesspolicyname_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared access policy name for the IoT Hub. This policy must contain at least the Service connect permission. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3396,55 +3023,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="consumergroupname_go">
 <a href="#consumergroupname_go" style="color: inherit; text-decoration: inherit;">Consumer<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of an IoT Hub Consumer Group that should be used to read events from the IoT Hub. If not specified, the input uses the Iot Hub’s default consumer group.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="endpoint_go">
 <a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IoT Hub endpoint to connect to (ie. messages/events, messages/operationsMonitoringEvents, etc.).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iothubnamespace_go">
 <a href="#iothubnamespace_go" style="color: inherit; text-decoration: inherit;">Iot<wbr>Hub<wbr>Namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or the URI of the IoT Hub. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sharedaccesspolicykey_go">
 <a href="#sharedaccesspolicykey_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Policy<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sharedaccesspolicyname_go">
 <a href="#sharedaccesspolicyname_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Access<wbr>Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared access policy name for the IoT Hub. This policy must contain at least the Service connect permission. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3453,55 +3074,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="consumergroupname_nodejs">
 <a href="#consumergroupname_nodejs" style="color: inherit; text-decoration: inherit;">consumer<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of an IoT Hub Consumer Group that should be used to read events from the IoT Hub. If not specified, the input uses the Iot Hub’s default consumer group.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="endpoint_nodejs">
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IoT Hub endpoint to connect to (ie. messages/events, messages/operationsMonitoringEvents, etc.).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iothubnamespace_nodejs">
 <a href="#iothubnamespace_nodejs" style="color: inherit; text-decoration: inherit;">iot<wbr>Hub<wbr>Namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or the URI of the IoT Hub. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sharedaccesspolicykey_nodejs">
 <a href="#sharedaccesspolicykey_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sharedaccesspolicyname_nodejs">
 <a href="#sharedaccesspolicyname_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Access<wbr>Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shared access policy name for the IoT Hub. This policy must contain at least the Service connect permission. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3510,67 +3125,90 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="consumer_group_name_python">
 <a href="#consumer_group_name_python" style="color: inherit; text-decoration: inherit;">consumer_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of an IoT Hub Consumer Group that should be used to read events from the IoT Hub. If not specified, the input uses the Iot Hub’s default consumer group.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="endpoint_python">
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IoT Hub endpoint to connect to (ie. messages/events, messages/operationsMonitoringEvents, etc.).{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iot_hub_namespace_python">
 <a href="#iot_hub_namespace_python" style="color: inherit; text-decoration: inherit;">iot_<wbr>hub_<wbr>namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name or the URI of the IoT Hub. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="shared_access_policy_key_python">
 <a href="#shared_access_policy_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The shared access policy key for the specified shared access policy. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="shared_access_policy_name_python">
 <a href="#shared_access_policy_name_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>access_<wbr>policy_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The shared access policy name for the IoT Hub. This policy must contain at least the Service connect permission. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="jsonoutputserializationformat">Json<wbr>Output<wbr>Serialization<wbr>Format</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Line<wbr>Separated</dt>
+    <dd>LineSeparated</dd>
+    <dt>Array</dt>
+    <dd>Array</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Json<wbr>Output<wbr>Serialization<wbr>Format<wbr>Line<wbr>Separated</dt>
+    <dd>LineSeparated</dd>
+    <dt>Json<wbr>Output<wbr>Serialization<wbr>Format<wbr>Array</dt>
+    <dd>Array</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Line<wbr>Separated</dt>
+    <dd>LineSeparated</dd>
+    <dt>Array</dt>
+    <dd>Array</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>LINE_SEPARATED</dt>
+    <dd>LineSeparated</dd>
+    <dt>ARRAY</dt>
+    <dd>Array</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="jsonserialization">Json<wbr>Serialization</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3578,25 +3216,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="encoding_csharp">
 <a href="#encoding_csharp" style="color: inherit; text-decoration: inherit;">Encoding</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Encoding</span>
+        <span class="property-type">string | <a href="#encoding">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Encoding</a></span>
     </dt>
     <dd>{{% md %}}Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="format_csharp">
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Json<wbr>Output<wbr>Serialization<wbr>Format</span>
+        <span class="property-type">string | <a href="#jsonoutputserializationformat">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Json<wbr>Output<wbr>Serialization<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}This property only applies to JSON serialization of outputs only. It is not applicable to inputs. This property specifies the format of the JSON the output will be written in. The currently supported values are 'lineSeparated' indicating the output will be formatted by having each JSON object separated by a new line and 'array' indicating the output will be formatted as an array of JSON objects. Default value is 'lineSeparated' if left null.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3605,25 +3240,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="encoding_go">
 <a href="#encoding_go" style="color: inherit; text-decoration: inherit;">Encoding</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#encoding">Encoding</a></span>
     </dt>
     <dd>{{% md %}}Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="format_go">
 <a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#jsonoutputserializationformat">Json<wbr>Output<wbr>Serialization<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}This property only applies to JSON serialization of outputs only. It is not applicable to inputs. This property specifies the format of the JSON the output will be written in. The currently supported values are 'lineSeparated' indicating the output will be formatted by having each JSON object separated by a new line and 'array' indicating the output will be formatted as an array of JSON objects. Default value is 'lineSeparated' if left null.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3632,25 +3264,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="encoding_nodejs">
 <a href="#encoding_nodejs" style="color: inherit; text-decoration: inherit;">encoding</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Encoding</span>
+        <span class="property-type">string | <a href="#encoding">Encoding</a></span>
     </dt>
     <dd>{{% md %}}Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="format_nodejs">
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Json<wbr>Output<wbr>Serialization<wbr>Format</span>
+        <span class="property-type">string | <a href="#jsonoutputserializationformat">Json<wbr>Output<wbr>Serialization<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}This property only applies to JSON serialization of outputs only. It is not applicable to inputs. This property specifies the format of the JSON the output will be written in. The currently supported values are 'lineSeparated' indicating the output will be formatted by having each JSON object separated by a new line and 'array' indicating the output will be formatted as an array of JSON objects. Default value is 'lineSeparated' if left null.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3659,37 +3288,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="encoding_python">
 <a href="#encoding_python" style="color: inherit; text-decoration: inherit;">encoding</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Encoding</span>
+        <span class="property-type">str | <a href="#encoding">Encoding</a></span>
     </dt>
     <dd>{{% md %}}Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="format_python">
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Json<wbr>Output<wbr>Serialization<wbr>Format</span>
+        <span class="property-type">str | <a href="#jsonoutputserializationformat">Json<wbr>Output<wbr>Serialization<wbr>Format</a></span>
     </dt>
     <dd>{{% md %}}This property only applies to JSON serialization of outputs only. It is not applicable to inputs. This property specifies the format of the JSON the output will be written in. The currently supported values are 'lineSeparated' indicating the output will be formatted by having each JSON object separated by a new line and 'array' indicating the output will be formatted as an array of JSON objects. Default value is 'lineSeparated' if left null.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="jsonserializationresponse">Json<wbr>Serialization<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3697,25 +3314,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="encoding_csharp">
 <a href="#encoding_csharp" style="color: inherit; text-decoration: inherit;">Encoding</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="format_csharp">
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This property only applies to JSON serialization of outputs only. It is not applicable to inputs. This property specifies the format of the JSON the output will be written in. The currently supported values are 'lineSeparated' indicating the output will be formatted by having each JSON object separated by a new line and 'array' indicating the output will be formatted as an array of JSON objects. Default value is 'lineSeparated' if left null.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3724,25 +3338,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="encoding_go">
 <a href="#encoding_go" style="color: inherit; text-decoration: inherit;">Encoding</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="format_go">
 <a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This property only applies to JSON serialization of outputs only. It is not applicable to inputs. This property specifies the format of the JSON the output will be written in. The currently supported values are 'lineSeparated' indicating the output will be formatted by having each JSON object separated by a new line and 'array' indicating the output will be formatted as an array of JSON objects. Default value is 'lineSeparated' if left null.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3751,25 +3362,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="encoding_nodejs">
 <a href="#encoding_nodejs" style="color: inherit; text-decoration: inherit;">encoding</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="format_nodejs">
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This property only applies to JSON serialization of outputs only. It is not applicable to inputs. This property specifies the format of the JSON the output will be written in. The currently supported values are 'lineSeparated' indicating the output will be formatted by having each JSON object separated by a new line and 'array' indicating the output will be formatted as an array of JSON objects. Default value is 'lineSeparated' if left null.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3778,36 +3386,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="encoding_python">
 <a href="#encoding_python" style="color: inherit; text-decoration: inherit;">encoding</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the encoding of the incoming data in the case of input and the encoding of outgoing data in the case of output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="format_python">
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This property only applies to JSON serialization of outputs only. It is not applicable to inputs. This property specifies the format of the JSON the output will be written in. The currently supported values are 'lineSeparated' indicating the output will be formatted by having each JSON object separated by a new line and 'array' indicating the output will be formatted as an array of JSON objects. Default value is 'lineSeparated' if left null.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="referenceinputproperties">Reference<wbr>Input<wbr>Properties</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3816,25 +3412,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="datasource_csharp">
 <a href="#datasource_csharp" style="color: inherit; text-decoration: inherit;">Datasource</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#blobreferenceinputdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Blob<wbr>Reference<wbr>Input<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains reference data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serialization_csharp">
 <a href="#serialization_csharp" style="color: inherit; text-decoration: inherit;">Serialization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserialization">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Avro<wbr>Serialization<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#csvserialization">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Csv<wbr>Serialization<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#jsonserialization">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Json<wbr>Serialization<wbr>Args</a></span>
+        <span class="property-type"><a href="#avroserialization">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Avro<wbr>Serialization<wbr>Args</a> | <a href="#csvserialization">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Csv<wbr>Serialization<wbr>Args</a> | <a href="#jsonserialization">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Json<wbr>Serialization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3843,25 +3436,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="datasource_go">
 <a href="#datasource_go" style="color: inherit; text-decoration: inherit;">Datasource</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#blobreferenceinputdatasource">Blob<wbr>Reference<wbr>Input<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains reference data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serialization_go">
 <a href="#serialization_go" style="color: inherit; text-decoration: inherit;">Serialization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserialization">Avro<wbr>Serialization</a></span><span class="property-type"> | </span><span class="property-type"><a href="#csvserialization">Csv<wbr>Serialization</a></span><span class="property-type"> | </span><span class="property-type"><a href="#jsonserialization">Json<wbr>Serialization</a></span>
+        <span class="property-type"><a href="#avroserialization">Avro<wbr>Serialization</a> | <a href="#csvserialization">Csv<wbr>Serialization</a> | <a href="#jsonserialization">Json<wbr>Serialization</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3870,25 +3460,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="datasource_nodejs">
 <a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">datasource</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#blobreferenceinputdatasource">Blob<wbr>Reference<wbr>Input<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains reference data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serialization_nodejs">
 <a href="#serialization_nodejs" style="color: inherit; text-decoration: inherit;">serialization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserialization">Avro<wbr>Serialization</a></span><span class="property-type"> | </span><span class="property-type"><a href="#csvserialization">Csv<wbr>Serialization</a></span><span class="property-type"> | </span><span class="property-type"><a href="#jsonserialization">Json<wbr>Serialization</a></span>
+        <span class="property-type"><a href="#avroserialization">Avro<wbr>Serialization</a> | <a href="#csvserialization">Csv<wbr>Serialization</a> | <a href="#jsonserialization">Json<wbr>Serialization</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3897,36 +3484,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="datasource_python">
 <a href="#datasource_python" style="color: inherit; text-decoration: inherit;">datasource</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#blobreferenceinputdatasource">Blob<wbr>Reference<wbr>Input<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains reference data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serialization_python">
 <a href="#serialization_python" style="color: inherit; text-decoration: inherit;">serialization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserialization">Avro<wbr>Serialization<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#csvserialization">Csv<wbr>Serialization<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#jsonserialization">Json<wbr>Serialization<wbr>Args</a></span>
+        <span class="property-type"><a href="#avroserialization">Avro<wbr>Serialization<wbr>Args</a> | <a href="#csvserialization">Csv<wbr>Serialization<wbr>Args</a> | <a href="#jsonserialization">Json<wbr>Serialization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="referenceinputpropertiesresponse">Reference<wbr>Input<wbr>Properties<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3935,45 +3510,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="diagnostics_csharp">
 <a href="#diagnostics_csharp" style="color: inherit; text-decoration: inherit;">Diagnostics</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diagnosticsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Diagnostics<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current entity tag for the input. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datasource_csharp">
 <a href="#datasource_csharp" style="color: inherit; text-decoration: inherit;">Datasource</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#blobreferenceinputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Blob<wbr>Reference<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains reference data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serialization_csharp">
 <a href="#serialization_csharp" style="color: inherit; text-decoration: inherit;">Serialization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserializationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Avro<wbr>Serialization<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#csvserializationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Csv<wbr>Serialization<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#jsonserializationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Json<wbr>Serialization<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#avroserializationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Avro<wbr>Serialization<wbr>Response<wbr>Args</a> | <a href="#csvserializationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Csv<wbr>Serialization<wbr>Response<wbr>Args</a> | <a href="#jsonserializationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Json<wbr>Serialization<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3982,45 +3552,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="diagnostics_go">
 <a href="#diagnostics_go" style="color: inherit; text-decoration: inherit;">Diagnostics</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diagnosticsresponse">Diagnostics<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current entity tag for the input. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datasource_go">
 <a href="#datasource_go" style="color: inherit; text-decoration: inherit;">Datasource</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#blobreferenceinputdatasourceresponse">Blob<wbr>Reference<wbr>Input<wbr>Data<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains reference data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serialization_go">
 <a href="#serialization_go" style="color: inherit; text-decoration: inherit;">Serialization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserializationresponse">Avro<wbr>Serialization<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#csvserializationresponse">Csv<wbr>Serialization<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#jsonserializationresponse">Json<wbr>Serialization<wbr>Response</a></span>
+        <span class="property-type"><a href="#avroserializationresponse">Avro<wbr>Serialization<wbr>Response</a> | <a href="#csvserializationresponse">Csv<wbr>Serialization<wbr>Response</a> | <a href="#jsonserializationresponse">Json<wbr>Serialization<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4029,45 +3594,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="diagnostics_nodejs">
 <a href="#diagnostics_nodejs" style="color: inherit; text-decoration: inherit;">diagnostics</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diagnosticsresponse">Diagnostics<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current entity tag for the input. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datasource_nodejs">
 <a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">datasource</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#blobreferenceinputdatasourceresponse">Blob<wbr>Reference<wbr>Input<wbr>Data<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains reference data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serialization_nodejs">
 <a href="#serialization_nodejs" style="color: inherit; text-decoration: inherit;">serialization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserializationresponse">Avro<wbr>Serialization<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#csvserializationresponse">Csv<wbr>Serialization<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#jsonserializationresponse">Json<wbr>Serialization<wbr>Response</a></span>
+        <span class="property-type"><a href="#avroserializationresponse">Avro<wbr>Serialization<wbr>Response</a> | <a href="#csvserializationresponse">Csv<wbr>Serialization<wbr>Response</a> | <a href="#jsonserializationresponse">Json<wbr>Serialization<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4076,57 +3636,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="diagnostics_python">
 <a href="#diagnostics_python" style="color: inherit; text-decoration: inherit;">diagnostics</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diagnosticsresponse">Diagnostics<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current entity tag for the input. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datasource_python">
 <a href="#datasource_python" style="color: inherit; text-decoration: inherit;">datasource</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#blobreferenceinputdatasourceresponse">Blob<wbr>Reference<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains reference data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serialization_python">
 <a href="#serialization_python" style="color: inherit; text-decoration: inherit;">serialization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserializationresponse">Avro<wbr>Serialization<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#csvserializationresponse">Csv<wbr>Serialization<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#jsonserializationresponse">Json<wbr>Serialization<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#avroserializationresponse">Avro<wbr>Serialization<wbr>Response<wbr>Args</a> | <a href="#csvserializationresponse">Csv<wbr>Serialization<wbr>Response<wbr>Args</a> | <a href="#jsonserializationresponse">Json<wbr>Serialization<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="storageaccount">Storage<wbr>Account</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4134,25 +3680,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="accountkey_csharp">
 <a href="#accountkey_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Storage account. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4161,25 +3704,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="accountkey_go">
 <a href="#accountkey_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Storage account. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4188,25 +3728,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="accountkey_nodejs">
 <a href="#accountkey_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Storage account. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4215,37 +3752,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="account_key_python">
 <a href="#account_key_python" style="color: inherit; text-decoration: inherit;">account_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Storage account. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="storageaccountresponse">Storage<wbr>Account<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4253,25 +3778,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="accountkey_csharp">
 <a href="#accountkey_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Storage account. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4280,25 +3802,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="accountkey_go">
 <a href="#accountkey_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Storage account. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4307,25 +3826,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="accountkey_nodejs">
 <a href="#accountkey_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Storage account. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4334,36 +3850,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="account_key_python">
 <a href="#account_key_python" style="color: inherit; text-decoration: inherit;">account_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Storage account. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="streaminputproperties">Stream<wbr>Input<wbr>Properties</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4372,25 +3876,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="datasource_csharp">
 <a href="#datasource_csharp" style="color: inherit; text-decoration: inherit;">Datasource</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobstreaminputdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#eventhubstreaminputdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#iothubstreaminputdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobstreaminputdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#eventhubstreaminputdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#iothubstreaminputdatasource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains stream data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serialization_csharp">
 <a href="#serialization_csharp" style="color: inherit; text-decoration: inherit;">Serialization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserialization">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Avro<wbr>Serialization<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#csvserialization">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Csv<wbr>Serialization<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#jsonserialization">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Json<wbr>Serialization<wbr>Args</a></span>
+        <span class="property-type"><a href="#avroserialization">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Avro<wbr>Serialization<wbr>Args</a> | <a href="#csvserialization">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Csv<wbr>Serialization<wbr>Args</a> | <a href="#jsonserialization">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Json<wbr>Serialization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4399,25 +3900,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="datasource_go">
 <a href="#datasource_go" style="color: inherit; text-decoration: inherit;">Datasource</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobstreaminputdatasource">Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source</a></span><span class="property-type"> | </span><span class="property-type"><a href="#eventhubstreaminputdatasource">Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source</a></span><span class="property-type"> | </span><span class="property-type"><a href="#iothubstreaminputdatasource">Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source</a></span>
+        <span class="property-type"><a href="#blobstreaminputdatasource">Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source</a> | <a href="#eventhubstreaminputdatasource">Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source</a> | <a href="#iothubstreaminputdatasource">Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains stream data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serialization_go">
 <a href="#serialization_go" style="color: inherit; text-decoration: inherit;">Serialization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserialization">Avro<wbr>Serialization</a></span><span class="property-type"> | </span><span class="property-type"><a href="#csvserialization">Csv<wbr>Serialization</a></span><span class="property-type"> | </span><span class="property-type"><a href="#jsonserialization">Json<wbr>Serialization</a></span>
+        <span class="property-type"><a href="#avroserialization">Avro<wbr>Serialization</a> | <a href="#csvserialization">Csv<wbr>Serialization</a> | <a href="#jsonserialization">Json<wbr>Serialization</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4426,25 +3924,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="datasource_nodejs">
 <a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">datasource</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobstreaminputdatasource">Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source</a></span><span class="property-type"> | </span><span class="property-type"><a href="#eventhubstreaminputdatasource">Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source</a></span><span class="property-type"> | </span><span class="property-type"><a href="#iothubstreaminputdatasource">Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source</a></span>
+        <span class="property-type"><a href="#blobstreaminputdatasource">Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source</a> | <a href="#eventhubstreaminputdatasource">Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source</a> | <a href="#iothubstreaminputdatasource">Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains stream data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serialization_nodejs">
 <a href="#serialization_nodejs" style="color: inherit; text-decoration: inherit;">serialization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserialization">Avro<wbr>Serialization</a></span><span class="property-type"> | </span><span class="property-type"><a href="#csvserialization">Csv<wbr>Serialization</a></span><span class="property-type"> | </span><span class="property-type"><a href="#jsonserialization">Json<wbr>Serialization</a></span>
+        <span class="property-type"><a href="#avroserialization">Avro<wbr>Serialization</a> | <a href="#csvserialization">Csv<wbr>Serialization</a> | <a href="#jsonserialization">Json<wbr>Serialization</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4453,36 +3948,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="datasource_python">
 <a href="#datasource_python" style="color: inherit; text-decoration: inherit;">datasource</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobstreaminputdatasource">Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#eventhubstreaminputdatasource">Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#iothubstreaminputdatasource">Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobstreaminputdatasource">Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#eventhubstreaminputdatasource">Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#iothubstreaminputdatasource">Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains stream data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serialization_python">
 <a href="#serialization_python" style="color: inherit; text-decoration: inherit;">serialization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserialization">Avro<wbr>Serialization<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#csvserialization">Csv<wbr>Serialization<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#jsonserialization">Json<wbr>Serialization<wbr>Args</a></span>
+        <span class="property-type"><a href="#avroserialization">Avro<wbr>Serialization<wbr>Args</a> | <a href="#csvserialization">Csv<wbr>Serialization<wbr>Args</a> | <a href="#jsonserialization">Json<wbr>Serialization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="streaminputpropertiesresponse">Stream<wbr>Input<wbr>Properties<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4491,45 +3974,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="diagnostics_csharp">
 <a href="#diagnostics_csharp" style="color: inherit; text-decoration: inherit;">Diagnostics</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diagnosticsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Diagnostics<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current entity tag for the input. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datasource_csharp">
 <a href="#datasource_csharp" style="color: inherit; text-decoration: inherit;">Datasource</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobstreaminputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#eventhubstreaminputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#iothubstreaminputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobstreaminputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#eventhubstreaminputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#iothubstreaminputdatasourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains stream data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serialization_csharp">
 <a href="#serialization_csharp" style="color: inherit; text-decoration: inherit;">Serialization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserializationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Avro<wbr>Serialization<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#csvserializationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Csv<wbr>Serialization<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#jsonserializationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Json<wbr>Serialization<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#avroserializationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Avro<wbr>Serialization<wbr>Response<wbr>Args</a> | <a href="#csvserializationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Csv<wbr>Serialization<wbr>Response<wbr>Args</a> | <a href="#jsonserializationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Json<wbr>Serialization<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4538,45 +4016,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="diagnostics_go">
 <a href="#diagnostics_go" style="color: inherit; text-decoration: inherit;">Diagnostics</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diagnosticsresponse">Diagnostics<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current entity tag for the input. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datasource_go">
 <a href="#datasource_go" style="color: inherit; text-decoration: inherit;">Datasource</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobstreaminputdatasourceresponse">Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#eventhubstreaminputdatasourceresponse">Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#iothubstreaminputdatasourceresponse">Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response</a></span>
+        <span class="property-type"><a href="#blobstreaminputdatasourceresponse">Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#eventhubstreaminputdatasourceresponse">Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#iothubstreaminputdatasourceresponse">Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains stream data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serialization_go">
 <a href="#serialization_go" style="color: inherit; text-decoration: inherit;">Serialization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserializationresponse">Avro<wbr>Serialization<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#csvserializationresponse">Csv<wbr>Serialization<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#jsonserializationresponse">Json<wbr>Serialization<wbr>Response</a></span>
+        <span class="property-type"><a href="#avroserializationresponse">Avro<wbr>Serialization<wbr>Response</a> | <a href="#csvserializationresponse">Csv<wbr>Serialization<wbr>Response</a> | <a href="#jsonserializationresponse">Json<wbr>Serialization<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4585,45 +4058,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="diagnostics_nodejs">
 <a href="#diagnostics_nodejs" style="color: inherit; text-decoration: inherit;">diagnostics</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diagnosticsresponse">Diagnostics<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current entity tag for the input. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datasource_nodejs">
 <a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">datasource</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobstreaminputdatasourceresponse">Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#eventhubstreaminputdatasourceresponse">Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#iothubstreaminputdatasourceresponse">Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response</a></span>
+        <span class="property-type"><a href="#blobstreaminputdatasourceresponse">Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#eventhubstreaminputdatasourceresponse">Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#iothubstreaminputdatasourceresponse">Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains stream data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serialization_nodejs">
 <a href="#serialization_nodejs" style="color: inherit; text-decoration: inherit;">serialization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserializationresponse">Avro<wbr>Serialization<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#csvserializationresponse">Csv<wbr>Serialization<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#jsonserializationresponse">Json<wbr>Serialization<wbr>Response</a></span>
+        <span class="property-type"><a href="#avroserializationresponse">Avro<wbr>Serialization<wbr>Response</a> | <a href="#csvserializationresponse">Csv<wbr>Serialization<wbr>Response</a> | <a href="#jsonserializationresponse">Json<wbr>Serialization<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4632,53 +4100,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="diagnostics_python">
 <a href="#diagnostics_python" style="color: inherit; text-decoration: inherit;">diagnostics</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diagnosticsresponse">Diagnostics<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current entity tag for the input. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datasource_python">
 <a href="#datasource_python" style="color: inherit; text-decoration: inherit;">datasource</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#blobstreaminputdatasourceresponse">Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#eventhubstreaminputdatasourceresponse">Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#iothubstreaminputdatasourceresponse">Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobstreaminputdatasourceresponse">Blob<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#eventhubstreaminputdatasourceresponse">Event<wbr>Hub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#iothubstreaminputdatasourceresponse">Io<wbr>THub<wbr>Stream<wbr>Input<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes an input data source that contains stream data. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serialization_python">
 <a href="#serialization_python" style="color: inherit; text-decoration: inherit;">serialization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#avroserializationresponse">Avro<wbr>Serialization<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#csvserializationresponse">Csv<wbr>Serialization<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#jsonserializationresponse">Json<wbr>Serialization<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#avroserializationresponse">Avro<wbr>Serialization<wbr>Response<wbr>Args</a> | <a href="#csvserializationresponse">Csv<wbr>Serialization<wbr>Response<wbr>Args</a> | <a href="#jsonserializationresponse">Json<wbr>Serialization<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 
 
 <h2 id="package-details">Package Details</h2>

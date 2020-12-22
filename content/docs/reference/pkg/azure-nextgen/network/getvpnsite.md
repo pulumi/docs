@@ -47,7 +47,6 @@ meta_desc: "Explore the GetVpnSite function of the network module, including exa
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -55,25 +54,22 @@ The following arguments are supported:
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource group name of the VpnSite.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vpnsitename_csharp">
 <a href="#vpnsitename_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Site<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the VpnSite being retrieved.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -82,25 +78,22 @@ The following arguments are supported:
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource group name of the VpnSite.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vpnsitename_go">
 <a href="#vpnsitename_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Site<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the VpnSite being retrieved.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -109,25 +102,22 @@ The following arguments are supported:
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource group name of the VpnSite.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vpnsitename_nodejs">
 <a href="#vpnsitename_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Site<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the VpnSite being retrieved.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -136,28 +126,22 @@ The following arguments are supported:
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource group name of the VpnSite.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vpn_site_name_python">
 <a href="#vpn_site_name_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>site_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the VpnSite being retrieved.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -168,7 +152,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -176,165 +159,148 @@ The following output properties are available:
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provisioning state of the VPN site resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="addressspace_csharp">
 <a href="#addressspace_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Space</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addressspaceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Address<wbr>Space<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The AddressSpace that contains an array of IP address ranges.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="bgpproperties_csharp">
 <a href="#bgpproperties_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bgpsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Bgp<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of bgp properties.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="deviceproperties_csharp">
 <a href="#deviceproperties_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#devicepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Device<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The device properties.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ipaddress_csharp">
 <a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ip-address for the vpn-site.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="issecuritysite_csharp">
 <a href="#issecuritysite_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Security<wbr>Site</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}IsSecuritySite flag.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="o365policy_csharp">
 <a href="#o365policy_csharp" style="color: inherit; text-decoration: inherit;">O365Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#o365policypropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>O365Policy<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Office365 Policy.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="sitekey_csharp">
 <a href="#sitekey_csharp" style="color: inherit; text-decoration: inherit;">Site<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key for vpn-site that can be used for connections.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="virtualwan_csharp">
 <a href="#virtualwan_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Wan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The VirtualWAN to which the vpnSite belongs.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vpnsitelinks_csharp">
 <a href="#vpnsitelinks_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Site<wbr>Links</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnsitelinkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Vpn<wbr>Site<wbr>Link<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of all vpn site links.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -343,165 +309,148 @@ The following output properties are available:
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provisioning state of the VPN site resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="addressspace_go">
 <a href="#addressspace_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Space</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The AddressSpace that contains an array of IP address ranges.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="bgpproperties_go">
 <a href="#bgpproperties_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bgpsettingsresponse">Bgp<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of bgp properties.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="deviceproperties_go">
 <a href="#deviceproperties_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#devicepropertiesresponse">Device<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The device properties.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ipaddress_go">
 <a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ip-address for the vpn-site.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="issecuritysite_go">
 <a href="#issecuritysite_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Security<wbr>Site</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}IsSecuritySite flag.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="o365policy_go">
 <a href="#o365policy_go" style="color: inherit; text-decoration: inherit;">O365Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#o365policypropertiesresponse">O365Policy<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Office365 Policy.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="sitekey_go">
 <a href="#sitekey_go" style="color: inherit; text-decoration: inherit;">Site<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key for vpn-site that can be used for connections.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="virtualwan_go">
 <a href="#virtualwan_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Wan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The VirtualWAN to which the vpnSite belongs.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vpnsitelinks_go">
 <a href="#vpnsitelinks_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Site<wbr>Links</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnsitelinkresponse">[]Vpn<wbr>Site<wbr>Link<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}List of all vpn site links.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -510,165 +459,148 @@ The following output properties are available:
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provisioning state of the VPN site resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="addressspace_nodejs">
 <a href="#addressspace_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Space</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The AddressSpace that contains an array of IP address ranges.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="bgpproperties_nodejs">
 <a href="#bgpproperties_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bgpsettingsresponse">Bgp<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of bgp properties.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="deviceproperties_nodejs">
 <a href="#deviceproperties_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#devicepropertiesresponse">Device<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The device properties.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ipaddress_nodejs">
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ip-address for the vpn-site.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="issecuritysite_nodejs">
 <a href="#issecuritysite_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Security<wbr>Site</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}IsSecuritySite flag.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="o365policy_nodejs">
 <a href="#o365policy_nodejs" style="color: inherit; text-decoration: inherit;">o365Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#o365policypropertiesresponse">O365Policy<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Office365 Policy.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="sitekey_nodejs">
 <a href="#sitekey_nodejs" style="color: inherit; text-decoration: inherit;">site<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key for vpn-site that can be used for connections.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="virtualwan_nodejs">
 <a href="#virtualwan_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Wan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The VirtualWAN to which the vpnSite belongs.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vpnsitelinks_nodejs">
 <a href="#vpnsitelinks_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Site<wbr>Links</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnsitelinkresponse">Vpn<wbr>Site<wbr>Link<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of all vpn site links.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -677,168 +609,148 @@ The following output properties are available:
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provisioning state of the VPN site resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="address_space_python">
 <a href="#address_space_python" style="color: inherit; text-decoration: inherit;">address_<wbr>space</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addressspaceresponse">Address<wbr>Space<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The AddressSpace that contains an array of IP address ranges.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="bgp_properties_python">
 <a href="#bgp_properties_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bgpsettingsresponse">Bgp<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of bgp properties.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="device_properties_python">
 <a href="#device_properties_python" style="color: inherit; text-decoration: inherit;">device_<wbr>properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#devicepropertiesresponse">Device<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The device properties.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ip_address_python">
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ip-address for the vpn-site.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="is_security_site_python">
 <a href="#is_security_site_python" style="color: inherit; text-decoration: inherit;">is_<wbr>security_<wbr>site</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}IsSecuritySite flag.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="o365_policy_python">
 <a href="#o365_policy_python" style="color: inherit; text-decoration: inherit;">o365_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#o365policypropertiesresponse">O365Policy<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Office365 Policy.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="site_key_python">
 <a href="#site_key_python" style="color: inherit; text-decoration: inherit;">site_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key for vpn-site that can be used for connections.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="virtual_wan_python">
 <a href="#virtual_wan_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>wan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The VirtualWAN to which the vpnSite belongs.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vpn_site_links_python">
 <a href="#vpn_site_links_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>site_<wbr>links</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnsitelinkresponse">Sequence[Vpn<wbr>Site<wbr>Link<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of all vpn site links.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -853,7 +765,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -861,15 +772,13 @@ The following output properties are available:
             title="Optional">
         <span id="addressprefixes_csharp">
 <a href="#addressprefixes_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Prefixes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -878,15 +787,13 @@ The following output properties are available:
             title="Optional">
         <span id="addressprefixes_go">
 <a href="#addressprefixes_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Prefixes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -895,15 +802,13 @@ The following output properties are available:
             title="Optional">
         <span id="addressprefixes_nodejs">
 <a href="#addressprefixes_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Prefixes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -912,21 +817,15 @@ The following output properties are available:
             title="Optional">
         <span id="address_prefixes_python">
 <a href="#address_prefixes_python" style="color: inherit; text-decoration: inherit;">address_<wbr>prefixes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of address blocks reserved for this virtual network in CIDR notation.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="bgpsettingsresponse">Bgp<wbr>Settings<wbr>Response</h4>
-
 
 
 
@@ -940,45 +839,40 @@ The following output properties are available:
             title="Optional">
         <span id="asn_csharp">
 <a href="#asn_csharp" style="color: inherit; text-decoration: inherit;">Asn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bgppeeringaddress_csharp">
 <a href="#bgppeeringaddress_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Peering<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The BGP peering address and BGP identifier of this BGP speaker.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bgppeeringaddresses_csharp">
 <a href="#bgppeeringaddresses_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Peering<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipconfigurationbgppeeringaddressresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="peerweight_csharp">
 <a href="#peerweight_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Weight</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The weight added to routes learned from this BGP speaker.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -987,45 +881,40 @@ The following output properties are available:
             title="Optional">
         <span id="asn_go">
 <a href="#asn_go" style="color: inherit; text-decoration: inherit;">Asn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bgppeeringaddress_go">
 <a href="#bgppeeringaddress_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Peering<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The BGP peering address and BGP identifier of this BGP speaker.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bgppeeringaddresses_go">
 <a href="#bgppeeringaddresses_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Peering<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipconfigurationbgppeeringaddressresponse">[]IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="peerweight_go">
 <a href="#peerweight_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Weight</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The weight added to routes learned from this BGP speaker.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1034,45 +923,40 @@ The following output properties are available:
             title="Optional">
         <span id="asn_nodejs">
 <a href="#asn_nodejs" style="color: inherit; text-decoration: inherit;">asn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bgppeeringaddress_nodejs">
 <a href="#bgppeeringaddress_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Peering<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The BGP peering address and BGP identifier of this BGP speaker.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bgppeeringaddresses_nodejs">
 <a href="#bgppeeringaddresses_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Peering<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipconfigurationbgppeeringaddressresponse">IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="peerweight_nodejs">
 <a href="#peerweight_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Weight</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The weight added to routes learned from this BGP speaker.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1081,51 +965,42 @@ The following output properties are available:
             title="Optional">
         <span id="asn_python">
 <a href="#asn_python" style="color: inherit; text-decoration: inherit;">asn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bgp_peering_address_python">
 <a href="#bgp_peering_address_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>peering_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The BGP peering address and BGP identifier of this BGP speaker.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bgp_peering_addresses_python">
 <a href="#bgp_peering_addresses_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>peering_<wbr>addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipconfigurationbgppeeringaddressresponse">Sequence[IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}BGP peering address with IP configuration ID for virtual network gateway.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="peer_weight_python">
 <a href="#peer_weight_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>weight</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The weight added to routes learned from this BGP speaker.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="devicepropertiesresponse">Device<wbr>Properties<wbr>Response</h4>
-
 
 
 
@@ -1139,35 +1014,31 @@ The following output properties are available:
             title="Optional">
         <span id="devicemodel_csharp">
 <a href="#devicemodel_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Model</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Model of the device.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="devicevendor_csharp">
 <a href="#devicevendor_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Vendor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the device Vendor.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="linkspeedinmbps_csharp">
 <a href="#linkspeedinmbps_csharp" style="color: inherit; text-decoration: inherit;">Link<wbr>Speed<wbr>In<wbr>Mbps</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Link speed.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1176,35 +1047,31 @@ The following output properties are available:
             title="Optional">
         <span id="devicemodel_go">
 <a href="#devicemodel_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Model</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Model of the device.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="devicevendor_go">
 <a href="#devicevendor_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Vendor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the device Vendor.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="linkspeedinmbps_go">
 <a href="#linkspeedinmbps_go" style="color: inherit; text-decoration: inherit;">Link<wbr>Speed<wbr>In<wbr>Mbps</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Link speed.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1213,35 +1080,31 @@ The following output properties are available:
             title="Optional">
         <span id="devicemodel_nodejs">
 <a href="#devicemodel_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Model</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Model of the device.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="devicevendor_nodejs">
 <a href="#devicevendor_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Vendor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the device Vendor.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="linkspeedinmbps_nodejs">
 <a href="#linkspeedinmbps_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Speed<wbr>In<wbr>Mbps</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Link speed.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1250,41 +1113,33 @@ The following output properties are available:
             title="Optional">
         <span id="device_model_python">
 <a href="#device_model_python" style="color: inherit; text-decoration: inherit;">device_<wbr>model</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Model of the device.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="device_vendor_python">
 <a href="#device_vendor_python" style="color: inherit; text-decoration: inherit;">device_<wbr>vendor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the device Vendor.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="link_speed_in_mbps_python">
 <a href="#link_speed_in_mbps_python" style="color: inherit; text-decoration: inherit;">link_<wbr>speed_<wbr>in_<wbr>mbps</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Link speed.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="ipconfigurationbgppeeringaddressresponse">IPConfiguration<wbr>Bgp<wbr>Peering<wbr>Address<wbr>Response</h4>
-
 
 
 
@@ -1298,45 +1153,40 @@ The following output properties are available:
             title="Required">
         <span id="defaultbgpipaddresses_csharp">
 <a href="#defaultbgpipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Bgp<wbr>Ip<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of default BGP peering addresses which belong to IP configuration.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="tunnelipaddresses_csharp">
 <a href="#tunnelipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Tunnel<wbr>Ip<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of tunnel public IP addresses which belong to IP configuration.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="custombgpipaddresses_csharp">
 <a href="#custombgpipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Bgp<wbr>Ip<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of custom BGP peering addresses which belong to IP configuration.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipconfigurationid_csharp">
 <a href="#ipconfigurationid_csharp" style="color: inherit; text-decoration: inherit;">Ipconfiguration<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of IP configuration which belongs to gateway.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1345,45 +1195,40 @@ The following output properties are available:
             title="Required">
         <span id="defaultbgpipaddresses_go">
 <a href="#defaultbgpipaddresses_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Bgp<wbr>Ip<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of default BGP peering addresses which belong to IP configuration.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="tunnelipaddresses_go">
 <a href="#tunnelipaddresses_go" style="color: inherit; text-decoration: inherit;">Tunnel<wbr>Ip<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of tunnel public IP addresses which belong to IP configuration.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="custombgpipaddresses_go">
 <a href="#custombgpipaddresses_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Bgp<wbr>Ip<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of custom BGP peering addresses which belong to IP configuration.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipconfigurationid_go">
 <a href="#ipconfigurationid_go" style="color: inherit; text-decoration: inherit;">Ipconfiguration<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of IP configuration which belongs to gateway.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1392,45 +1237,40 @@ The following output properties are available:
             title="Required">
         <span id="defaultbgpipaddresses_nodejs">
 <a href="#defaultbgpipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Bgp<wbr>Ip<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of default BGP peering addresses which belong to IP configuration.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="tunnelipaddresses_nodejs">
 <a href="#tunnelipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">tunnel<wbr>Ip<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of tunnel public IP addresses which belong to IP configuration.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="custombgpipaddresses_nodejs">
 <a href="#custombgpipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Bgp<wbr>Ip<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of custom BGP peering addresses which belong to IP configuration.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipconfigurationid_nodejs">
 <a href="#ipconfigurationid_nodejs" style="color: inherit; text-decoration: inherit;">ipconfiguration<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of IP configuration which belongs to gateway.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1439,51 +1279,42 @@ The following output properties are available:
             title="Required">
         <span id="default_bgp_ip_addresses_python">
 <a href="#default_bgp_ip_addresses_python" style="color: inherit; text-decoration: inherit;">default_<wbr>bgp_<wbr>ip_<wbr>addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of default BGP peering addresses which belong to IP configuration.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="tunnel_ip_addresses_python">
 <a href="#tunnel_ip_addresses_python" style="color: inherit; text-decoration: inherit;">tunnel_<wbr>ip_<wbr>addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of tunnel public IP addresses which belong to IP configuration.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="custom_bgp_ip_addresses_python">
 <a href="#custom_bgp_ip_addresses_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>bgp_<wbr>ip_<wbr>addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of custom BGP peering addresses which belong to IP configuration.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipconfiguration_id_python">
 <a href="#ipconfiguration_id_python" style="color: inherit; text-decoration: inherit;">ipconfiguration_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of IP configuration which belongs to gateway.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="o365breakoutcategorypoliciesresponse">O365Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Response</h4>
-
 
 
 
@@ -1497,35 +1328,31 @@ The following output properties are available:
             title="Optional">
         <span id="allow_csharp">
 <a href="#allow_csharp" style="color: inherit; text-decoration: inherit;">Allow</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to control allow category.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="default_csharp">
 <a href="#default_csharp" style="color: inherit; text-decoration: inherit;">Default</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to control default category.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="optimize_csharp">
 <a href="#optimize_csharp" style="color: inherit; text-decoration: inherit;">Optimize</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to control optimize category.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1534,35 +1361,31 @@ The following output properties are available:
             title="Optional">
         <span id="allow_go">
 <a href="#allow_go" style="color: inherit; text-decoration: inherit;">Allow</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to control allow category.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="default_go">
 <a href="#default_go" style="color: inherit; text-decoration: inherit;">Default</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to control default category.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="optimize_go">
 <a href="#optimize_go" style="color: inherit; text-decoration: inherit;">Optimize</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to control optimize category.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1571,35 +1394,31 @@ The following output properties are available:
             title="Optional">
         <span id="allow_nodejs">
 <a href="#allow_nodejs" style="color: inherit; text-decoration: inherit;">allow</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to control allow category.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="default_nodejs">
 <a href="#default_nodejs" style="color: inherit; text-decoration: inherit;">default</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to control default category.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="optimize_nodejs">
 <a href="#optimize_nodejs" style="color: inherit; text-decoration: inherit;">optimize</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to control optimize category.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1608,41 +1427,33 @@ The following output properties are available:
             title="Optional">
         <span id="allow_python">
 <a href="#allow_python" style="color: inherit; text-decoration: inherit;">allow</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to control allow category.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="default_python">
 <a href="#default_python" style="color: inherit; text-decoration: inherit;">default</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to control default category.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="optimize_python">
 <a href="#optimize_python" style="color: inherit; text-decoration: inherit;">optimize</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to control optimize category.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="o365policypropertiesresponse">O365Policy<wbr>Properties<wbr>Response</h4>
-
 
 
 
@@ -1656,15 +1467,13 @@ The following output properties are available:
             title="Optional">
         <span id="breakoutcategories_csharp">
 <a href="#breakoutcategories_csharp" style="color: inherit; text-decoration: inherit;">Break<wbr>Out<wbr>Categories</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#o365breakoutcategorypoliciesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>O365Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Office365 breakout categories.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1673,15 +1482,13 @@ The following output properties are available:
             title="Optional">
         <span id="breakoutcategories_go">
 <a href="#breakoutcategories_go" style="color: inherit; text-decoration: inherit;">Break<wbr>Out<wbr>Categories</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#o365breakoutcategorypoliciesresponse">O365Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Office365 breakout categories.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1690,15 +1497,13 @@ The following output properties are available:
             title="Optional">
         <span id="breakoutcategories_nodejs">
 <a href="#breakoutcategories_nodejs" style="color: inherit; text-decoration: inherit;">break<wbr>Out<wbr>Categories</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#o365breakoutcategorypoliciesresponse">O365Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Office365 breakout categories.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1707,21 +1512,15 @@ The following output properties are available:
             title="Optional">
         <span id="break_out_categories_python">
 <a href="#break_out_categories_python" style="color: inherit; text-decoration: inherit;">break_<wbr>out_<wbr>categories</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#o365breakoutcategorypoliciesresponse">O365Break<wbr>Out<wbr>Category<wbr>Policies<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Office365 breakout categories.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="subresourceresponse">Sub<wbr>Resource<wbr>Response</h4>
-
 
 
 
@@ -1735,15 +1534,13 @@ The following output properties are available:
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1752,15 +1549,13 @@ The following output properties are available:
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1769,15 +1564,13 @@ The following output properties are available:
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1786,21 +1579,15 @@ The following output properties are available:
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="vpnlinkbgpsettingsresponse">Vpn<wbr>Link<wbr>Bgp<wbr>Settings<wbr>Response</h4>
-
 
 
 
@@ -1814,25 +1601,22 @@ The following output properties are available:
             title="Optional">
         <span id="asn_csharp">
 <a href="#asn_csharp" style="color: inherit; text-decoration: inherit;">Asn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bgppeeringaddress_csharp">
 <a href="#bgppeeringaddress_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Peering<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The BGP peering address and BGP identifier of this BGP speaker.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1841,25 +1625,22 @@ The following output properties are available:
             title="Optional">
         <span id="asn_go">
 <a href="#asn_go" style="color: inherit; text-decoration: inherit;">Asn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bgppeeringaddress_go">
 <a href="#bgppeeringaddress_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Peering<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The BGP peering address and BGP identifier of this BGP speaker.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1868,25 +1649,22 @@ The following output properties are available:
             title="Optional">
         <span id="asn_nodejs">
 <a href="#asn_nodejs" style="color: inherit; text-decoration: inherit;">asn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bgppeeringaddress_nodejs">
 <a href="#bgppeeringaddress_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Peering<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The BGP peering address and BGP identifier of this BGP speaker.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1895,31 +1673,24 @@ The following output properties are available:
             title="Optional">
         <span id="asn_python">
 <a href="#asn_python" style="color: inherit; text-decoration: inherit;">asn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bgp_peering_address_python">
 <a href="#bgp_peering_address_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>peering_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The BGP peering address and BGP identifier of this BGP speaker.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="vpnlinkproviderpropertiesresponse">Vpn<wbr>Link<wbr>Provider<wbr>Properties<wbr>Response</h4>
-
 
 
 
@@ -1933,25 +1704,22 @@ The following output properties are available:
             title="Optional">
         <span id="linkprovidername_csharp">
 <a href="#linkprovidername_csharp" style="color: inherit; text-decoration: inherit;">Link<wbr>Provider<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the link provider.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="linkspeedinmbps_csharp">
 <a href="#linkspeedinmbps_csharp" style="color: inherit; text-decoration: inherit;">Link<wbr>Speed<wbr>In<wbr>Mbps</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Link speed.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1960,25 +1728,22 @@ The following output properties are available:
             title="Optional">
         <span id="linkprovidername_go">
 <a href="#linkprovidername_go" style="color: inherit; text-decoration: inherit;">Link<wbr>Provider<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the link provider.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="linkspeedinmbps_go">
 <a href="#linkspeedinmbps_go" style="color: inherit; text-decoration: inherit;">Link<wbr>Speed<wbr>In<wbr>Mbps</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Link speed.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1987,25 +1752,22 @@ The following output properties are available:
             title="Optional">
         <span id="linkprovidername_nodejs">
 <a href="#linkprovidername_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Provider<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the link provider.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="linkspeedinmbps_nodejs">
 <a href="#linkspeedinmbps_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Speed<wbr>In<wbr>Mbps</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Link speed.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2014,31 +1776,24 @@ The following output properties are available:
             title="Optional">
         <span id="link_provider_name_python">
 <a href="#link_provider_name_python" style="color: inherit; text-decoration: inherit;">link_<wbr>provider_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the link provider.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="link_speed_in_mbps_python">
 <a href="#link_speed_in_mbps_python" style="color: inherit; text-decoration: inherit;">link_<wbr>speed_<wbr>in_<wbr>mbps</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Link speed.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="vpnsitelinkresponse">Vpn<wbr>Site<wbr>Link<wbr>Response</h4>
-
 
 
 
@@ -2052,95 +1807,85 @@ The following output properties are available:
             title="Required">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provisioning state of the VPN site link resource.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bgpproperties_csharp">
 <a href="#bgpproperties_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnlinkbgpsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Vpn<wbr>Link<wbr>Bgp<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of bgp properties.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fqdn_csharp">
 <a href="#fqdn_csharp" style="color: inherit; text-decoration: inherit;">Fqdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}FQDN of vpn-site-link.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipaddress_csharp">
 <a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ip-address for the vpn-site-link.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="linkproperties_csharp">
 <a href="#linkproperties_csharp" style="color: inherit; text-decoration: inherit;">Link<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnlinkproviderpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Vpn<wbr>Link<wbr>Provider<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The link provider properties.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2149,95 +1894,85 @@ The following output properties are available:
             title="Required">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provisioning state of the VPN site link resource.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bgpproperties_go">
 <a href="#bgpproperties_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnlinkbgpsettingsresponse">Vpn<wbr>Link<wbr>Bgp<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of bgp properties.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fqdn_go">
 <a href="#fqdn_go" style="color: inherit; text-decoration: inherit;">Fqdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}FQDN of vpn-site-link.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipaddress_go">
 <a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ip-address for the vpn-site-link.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="linkproperties_go">
 <a href="#linkproperties_go" style="color: inherit; text-decoration: inherit;">Link<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnlinkproviderpropertiesresponse">Vpn<wbr>Link<wbr>Provider<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The link provider properties.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2246,95 +1981,85 @@ The following output properties are available:
             title="Required">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provisioning state of the VPN site link resource.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bgpproperties_nodejs">
 <a href="#bgpproperties_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnlinkbgpsettingsresponse">Vpn<wbr>Link<wbr>Bgp<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of bgp properties.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fqdn_nodejs">
 <a href="#fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}FQDN of vpn-site-link.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipaddress_nodejs">
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ip-address for the vpn-site-link.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="linkproperties_nodejs">
 <a href="#linkproperties_nodejs" style="color: inherit; text-decoration: inherit;">link<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnlinkproviderpropertiesresponse">Vpn<wbr>Link<wbr>Provider<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The link provider properties.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2343,98 +2068,85 @@ The following output properties are available:
             title="Required">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provisioning state of the VPN site link resource.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bgp_properties_python">
 <a href="#bgp_properties_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnlinkbgpsettingsresponse">Vpn<wbr>Link<wbr>Bgp<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The set of bgp properties.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fqdn_python">
 <a href="#fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}FQDN of vpn-site-link.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ip_address_python">
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ip-address for the vpn-site-link.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="link_properties_python">
 <a href="#link_properties_python" style="color: inherit; text-decoration: inherit;">link_<wbr>properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnlinkproviderpropertiesresponse">Vpn<wbr>Link<wbr>Provider<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The link provider properties.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

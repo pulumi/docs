@@ -2,7 +2,7 @@
 ---
 title: "ProtectedItem"
 title_tag: "azure-nextgen.recoveryservices.ProtectedItem"
-meta_desc: "Explore the ProtectedItem resource of the recoveryservices module, including examples, input properties, output properties, lookup functions, and supporting types. Base class for backup items."
+meta_desc: "Documentation for the azure-nextgen.recoveryservices.ProtectedItem resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -11,6 +11,7 @@ meta_desc: "Explore the ProtectedItem resource of the recoveryservices module, i
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Base class for backup items.
+Latest API Version: 2020-10-01.
 
 
 {{% examples %}}
@@ -187,7 +188,7 @@ const protectedItem = new azure_nextgen.recoveryservices.latest.ProtectedItem("p
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ProtectedItem</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ProtectedItemArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ProtectedItem</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ProtectedItemArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -195,11 +196,11 @@ const protectedItem = new azure_nextgen.recoveryservices.latest.ProtectedItem("p
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProtectedItem</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ProtectedItemArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ProtectedItem</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProtectedItem</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ProtectedItemArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ProtectedItem</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ProtectedItem</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ProtectedItemArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ProtectedItem</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ProtectedItemArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -210,7 +211,7 @@ const protectedItem = new azure_nextgen.recoveryservices.latest.ProtectedItem("p
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -279,7 +280,7 @@ const protectedItem = new azure_nextgen.recoveryservices.latest.ProtectedItem("p
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -318,7 +319,7 @@ const protectedItem = new azure_nextgen.recoveryservices.latest.ProtectedItem("p
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -359,7 +360,6 @@ The ProtectedItem resource accepts the following [input]({{< relref "/docs/intro
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -367,95 +367,85 @@ The ProtectedItem resource accepts the following [input]({{< relref "/docs/intro
             title="Required">
         <span id="containername_csharp">
 <a href="#containername_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Container name associated with the backup item.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="fabricname_csharp">
 <a href="#fabricname_csharp" style="color: inherit; text-decoration: inherit;">Fabric<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fabric name associated with the backup item.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="protecteditemname_csharp">
 <a href="#protecteditemname_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Item name to be backed up.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vaultname_csharp">
 <a href="#vaultname_csharp" style="color: inherit; text-decoration: inherit;">Vault<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">ETag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional ETag.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefileshareprotecteditem">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azureiaasvmprotecteditem">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuresqlprotecteditem">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azurevmworkloadprotecteditem">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#dpmprotecteditem">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>DPMProtected<wbr>Item<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#genericprotecteditem">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Generic<wbr>Protected<wbr>Item<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mabfilefolderprotecteditem">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefileshareprotecteditem">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Args</a> | <a href="#azureiaasvmprotecteditem">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Args</a> | <a href="#azuresqlprotecteditem">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Args</a> | <a href="#azurevmworkloadprotecteditem">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Args</a> | <a href="#dpmprotecteditem">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>DPMProtected<wbr>Item<wbr>Args</a> | <a href="#genericprotecteditem">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Generic<wbr>Protected<wbr>Item<wbr>Args</a> | <a href="#mabfilefolderprotecteditem">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ProtectedItemResource properties{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -464,95 +454,85 @@ The ProtectedItem resource accepts the following [input]({{< relref "/docs/intro
             title="Required">
         <span id="containername_go">
 <a href="#containername_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Container name associated with the backup item.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="fabricname_go">
 <a href="#fabricname_go" style="color: inherit; text-decoration: inherit;">Fabric<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fabric name associated with the backup item.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="protecteditemname_go">
 <a href="#protecteditemname_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Item name to be backed up.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vaultname_go">
 <a href="#vaultname_go" style="color: inherit; text-decoration: inherit;">Vault<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">ETag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional ETag.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefileshareprotecteditem">Azure<wbr>Fileshare<wbr>Protected<wbr>Item</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azureiaasvmprotecteditem">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuresqlprotecteditem">Azure<wbr>Sql<wbr>Protected<wbr>Item</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azurevmworkloadprotecteditem">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item</a></span><span class="property-type"> | </span><span class="property-type"><a href="#dpmprotecteditem">DPMProtected<wbr>Item</a></span><span class="property-type"> | </span><span class="property-type"><a href="#genericprotecteditem">Generic<wbr>Protected<wbr>Item</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mabfilefolderprotecteditem">Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item</a></span>
+        <span class="property-type"><a href="#azurefileshareprotecteditem">Azure<wbr>Fileshare<wbr>Protected<wbr>Item</a> | <a href="#azureiaasvmprotecteditem">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item</a> | <a href="#azuresqlprotecteditem">Azure<wbr>Sql<wbr>Protected<wbr>Item</a> | <a href="#azurevmworkloadprotecteditem">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item</a> | <a href="#dpmprotecteditem">DPMProtected<wbr>Item</a> | <a href="#genericprotecteditem">Generic<wbr>Protected<wbr>Item</a> | <a href="#mabfilefolderprotecteditem">Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item</a></span>
     </dt>
     <dd>{{% md %}}ProtectedItemResource properties{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -561,95 +541,85 @@ The ProtectedItem resource accepts the following [input]({{< relref "/docs/intro
             title="Required">
         <span id="containername_nodejs">
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Container name associated with the backup item.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="fabricname_nodejs">
 <a href="#fabricname_nodejs" style="color: inherit; text-decoration: inherit;">fabric<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fabric name associated with the backup item.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="protecteditemname_nodejs">
 <a href="#protecteditemname_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Item name to be backed up.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vaultname_nodejs">
 <a href="#vaultname_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">e<wbr>Tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional ETag.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefileshareprotecteditem">Azure<wbr>Fileshare<wbr>Protected<wbr>Item</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azureiaasvmprotecteditem">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuresqlprotecteditem">Azure<wbr>Sql<wbr>Protected<wbr>Item</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azurevmworkloadprotecteditem">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item</a></span><span class="property-type"> | </span><span class="property-type"><a href="#dpmprotecteditem">DPMProtected<wbr>Item</a></span><span class="property-type"> | </span><span class="property-type"><a href="#genericprotecteditem">Generic<wbr>Protected<wbr>Item</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mabfilefolderprotecteditem">Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item</a></span>
+        <span class="property-type"><a href="#azurefileshareprotecteditem">Azure<wbr>Fileshare<wbr>Protected<wbr>Item</a> | <a href="#azureiaasvmprotecteditem">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item</a> | <a href="#azuresqlprotecteditem">Azure<wbr>Sql<wbr>Protected<wbr>Item</a> | <a href="#azurevmworkloadprotecteditem">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item</a> | <a href="#dpmprotecteditem">DPMProtected<wbr>Item</a> | <a href="#genericprotecteditem">Generic<wbr>Protected<wbr>Item</a> | <a href="#mabfilefolderprotecteditem">Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item</a></span>
     </dt>
     <dd>{{% md %}}ProtectedItemResource properties{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -658,104 +628,90 @@ The ProtectedItem resource accepts the following [input]({{< relref "/docs/intro
             title="Required">
         <span id="container_name_python">
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Container name associated with the backup item.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="fabric_name_python">
 <a href="#fabric_name_python" style="color: inherit; text-decoration: inherit;">fabric_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fabric name associated with the backup item.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="protected_item_name_python">
 <a href="#protected_item_name_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Item name to be backed up.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vault_name_python">
 <a href="#vault_name_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="e_tag_python">
 <a href="#e_tag_python" style="color: inherit; text-decoration: inherit;">e_<wbr>tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional ETag.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefileshareprotecteditem">Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azureiaasvmprotecteditem">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuresqlprotecteditem">Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azurevmworkloadprotecteditem">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#dpmprotecteditem">DPMProtected<wbr>Item<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#genericprotecteditem">Generic<wbr>Protected<wbr>Item<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mabfilefolderprotecteditem">Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurefileshareprotecteditem">Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Args</a> | <a href="#azureiaasvmprotecteditem">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Args</a> | <a href="#azuresqlprotecteditem">Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Args</a> | <a href="#azurevmworkloadprotecteditem">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Args</a> | <a href="#dpmprotecteditem">DPMProtected<wbr>Item<wbr>Args</a> | <a href="#genericprotecteditem">Generic<wbr>Protected<wbr>Item<wbr>Args</a> | <a href="#mabfilefolderprotecteditem">Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ProtectedItemResource properties{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the ProtectedItem resource produces the following output properties:
-
 
 
 
@@ -766,35 +722,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name associated with the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -803,35 +755,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name associated with the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -840,35 +788,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name associated with the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -877,38 +821,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name associated with the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -919,13 +856,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
 <h4 id="azurefileshareprotecteditem">Azure<wbr>Fileshare<wbr>Protected<wbr>Item</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -934,205 +866,184 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupmanagementtype_csharp">
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupsetname_csharp">
 <a href="#backupsetname_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containername_csharp">
 <a href="#containername_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createmode_csharp">
 <a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Create<wbr>Mode</span>
+        <span class="property-type">string | <a href="#createmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeinutc_csharp">
 <a href="#deferreddeletetimeinutc_csharp" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeremaining_csharp">
 <a href="#deferreddeletetimeremaining_csharp" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extendedinfo_csharp">
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurefileshareprotecteditemextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information with this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendlyname_csharp">
 <a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the fileshare represented by this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isdeferreddeletescheduleupcoming_csharp">
 <a href="#isdeferreddeletescheduleupcoming_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrehydrate_csharp">
 <a href="#isrehydrate_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isscheduledfordeferreddelete_csharp">
 <a href="#isscheduledfordeferreddelete_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kpishealths_csharp">
 <a href="#kpishealths_csharp" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackupstatus_csharp">
 <a href="#lastbackupstatus_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackuptime_csharp">
 <a href="#lastbackuptime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrecoverypoint_csharp">
 <a href="#lastrecoverypoint_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyid_csharp">
 <a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstate_csharp">
 <a href="#protectionstate_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Protection<wbr>State</span>
+        <span class="property-type">string | <a href="#protectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Protection<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstatus_csharp">
 <a href="#protectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_csharp">
 <a href="#sourceresourceid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_csharp">
 <a href="#workloadtype_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Data<wbr>Source<wbr>Type</span>
+        <span class="property-type">string | <a href="#datasourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Data<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1141,205 +1052,184 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupmanagementtype_go">
 <a href="#backupmanagementtype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupsetname_go">
 <a href="#backupsetname_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containername_go">
 <a href="#containername_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createmode_go">
 <a href="#createmode_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#createmode">Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeinutc_go">
 <a href="#deferreddeletetimeinutc_go" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeremaining_go">
 <a href="#deferreddeletetimeremaining_go" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extendedinfo_go">
 <a href="#extendedinfo_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurefileshareprotecteditemextendedinfo">Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Additional information with this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendlyname_go">
 <a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the fileshare represented by this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isdeferreddeletescheduleupcoming_go">
 <a href="#isdeferreddeletescheduleupcoming_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrehydrate_go">
 <a href="#isrehydrate_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isscheduledfordeferreddelete_go">
 <a href="#isscheduledfordeferreddelete_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kpishealths_go">
 <a href="#kpishealths_go" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]KPIResource<wbr>Health<wbr>Details</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackupstatus_go">
 <a href="#lastbackupstatus_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackuptime_go">
 <a href="#lastbackuptime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrecoverypoint_go">
 <a href="#lastrecoverypoint_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyid_go">
 <a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstate_go">
 <a href="#protectionstate_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#protectionstate">Protection<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstatus_go">
 <a href="#protectionstatus_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_go">
 <a href="#sourceresourceid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_go">
 <a href="#workloadtype_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1348,205 +1238,184 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupmanagementtype_nodejs">
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Backup<wbr>Management<wbr>Type</span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupsetname_nodejs">
 <a href="#backupsetname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containername_nodejs">
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createmode_nodejs">
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Create<wbr>Mode</span>
+        <span class="property-type">string | <a href="#createmode">Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeinutc_nodejs">
 <a href="#deferreddeletetimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeremaining_nodejs">
 <a href="#deferreddeletetimeremaining_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extendedinfo_nodejs">
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurefileshareprotecteditemextendedinfo">Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Additional information with this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendlyname_nodejs">
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the fileshare represented by this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isdeferreddeletescheduleupcoming_nodejs">
 <a href="#isdeferreddeletescheduleupcoming_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrehydrate_nodejs">
 <a href="#isrehydrate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isscheduledfordeferreddelete_nodejs">
 <a href="#isscheduledfordeferreddelete_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kpishealths_nodejs">
 <a href="#kpishealths_nodejs" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details}</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackupstatus_nodejs">
 <a href="#lastbackupstatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackuptime_nodejs">
 <a href="#lastbackuptime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrecoverypoint_nodejs">
 <a href="#lastrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyid_nodejs">
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstate_nodejs">
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Protection<wbr>State</span>
+        <span class="property-type">string | <a href="#protectionstate">Protection<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstatus_nodejs">
 <a href="#protectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_nodejs">
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_nodejs">
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Data<wbr>Source<wbr>Type</span>
+        <span class="property-type">string | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1555,216 +1424,186 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backup_management_type_python">
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Backup<wbr>Management<wbr>Type</span>
+        <span class="property-type">str | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backup_set_name_python">
 <a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="container_name_python">
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="create_mode_python">
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Create<wbr>Mode</span>
+        <span class="property-type">str | <a href="#createmode">Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferred_delete_time_in_utc_python">
 <a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferred_delete_time_remaining_python">
 <a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extended_info_python">
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurefileshareprotecteditemextendedinfo">Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information with this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendly_name_python">
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Friendly name of the fileshare represented by this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_deferred_delete_schedule_upcoming_python">
 <a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_rehydrate_python">
 <a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_scheduled_for_deferred_delete_python">
 <a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kpis_healths_python">
 <a href="#kpis_healths_python" style="color: inherit; text-decoration: inherit;">kpis_<wbr>healths</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="last_backup_status_python">
 <a href="#last_backup_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="last_backup_time_python">
 <a href="#last_backup_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="last_recovery_point_python">
 <a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_id_python">
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protection_state_python">
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Protection<wbr>State</span>
+        <span class="property-type">str | <a href="#protectionstate">Protection<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protection_status_python">
 <a href="#protection_status_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_resource_id_python">
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workload_type_python">
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Data<wbr>Source<wbr>Type</span>
+        <span class="property-type">str | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="azurefileshareprotecteditemextendedinfo">Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1773,35 +1612,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="oldestrecoverypoint_csharp">
 <a href="#oldestrecoverypoint_csharp" style="color: inherit; text-decoration: inherit;">Oldest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this item in the service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policystate_csharp">
 <a href="#policystate_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates consistency of policy object and policy applied to this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recoverypointcount_csharp">
 <a href="#recoverypointcount_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of available backup copies associated with this backup item.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1810,35 +1645,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="oldestrecoverypoint_go">
 <a href="#oldestrecoverypoint_go" style="color: inherit; text-decoration: inherit;">Oldest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this item in the service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policystate_go">
 <a href="#policystate_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates consistency of policy object and policy applied to this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recoverypointcount_go">
 <a href="#recoverypointcount_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of available backup copies associated with this backup item.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1847,35 +1678,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="oldestrecoverypoint_nodejs">
 <a href="#oldestrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">oldest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this item in the service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policystate_nodejs">
 <a href="#policystate_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates consistency of policy object and policy applied to this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recoverypointcount_nodejs">
 <a href="#recoverypointcount_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of available backup copies associated with this backup item.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1884,46 +1711,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="oldest_recovery_point_python">
 <a href="#oldest_recovery_point_python" style="color: inherit; text-decoration: inherit;">oldest_<wbr>recovery_<wbr>point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this item in the service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_state_python">
 <a href="#policy_state_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates consistency of policy object and policy applied to this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recovery_point_count_python">
 <a href="#recovery_point_count_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of available backup copies associated with this backup item.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="azurefileshareprotecteditemextendedinforesponse">Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1932,55 +1746,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="resourcestate_csharp">
 <a href="#resourcestate_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the state of this resource. Possible values are from enum ResourceState {Invalid, Active, SoftDeleted, Deleted}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcestatesynctime_csharp">
 <a href="#resourcestatesynctime_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>State<wbr>Sync<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource state sync time for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="oldestrecoverypoint_csharp">
 <a href="#oldestrecoverypoint_csharp" style="color: inherit; text-decoration: inherit;">Oldest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this item in the service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policystate_csharp">
 <a href="#policystate_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates consistency of policy object and policy applied to this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recoverypointcount_csharp">
 <a href="#recoverypointcount_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of available backup copies associated with this backup item.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1989,55 +1797,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="resourcestate_go">
 <a href="#resourcestate_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the state of this resource. Possible values are from enum ResourceState {Invalid, Active, SoftDeleted, Deleted}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcestatesynctime_go">
 <a href="#resourcestatesynctime_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>State<wbr>Sync<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource state sync time for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="oldestrecoverypoint_go">
 <a href="#oldestrecoverypoint_go" style="color: inherit; text-decoration: inherit;">Oldest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this item in the service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policystate_go">
 <a href="#policystate_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates consistency of policy object and policy applied to this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recoverypointcount_go">
 <a href="#recoverypointcount_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of available backup copies associated with this backup item.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2046,55 +1848,49 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="resourcestate_nodejs">
 <a href="#resourcestate_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the state of this resource. Possible values are from enum ResourceState {Invalid, Active, SoftDeleted, Deleted}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcestatesynctime_nodejs">
 <a href="#resourcestatesynctime_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>State<wbr>Sync<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource state sync time for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="oldestrecoverypoint_nodejs">
 <a href="#oldestrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">oldest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this item in the service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policystate_nodejs">
 <a href="#policystate_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates consistency of policy object and policy applied to this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recoverypointcount_nodejs">
 <a href="#recoverypointcount_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of available backup copies associated with this backup item.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2103,66 +1899,51 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="resource_state_python">
 <a href="#resource_state_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates the state of this resource. Possible values are from enum ResourceState {Invalid, Active, SoftDeleted, Deleted}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_state_sync_time_python">
 <a href="#resource_state_sync_time_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>state_<wbr>sync_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource state sync time for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="oldest_recovery_point_python">
 <a href="#oldest_recovery_point_python" style="color: inherit; text-decoration: inherit;">oldest_<wbr>recovery_<wbr>point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this item in the service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_state_python">
 <a href="#policy_state_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates consistency of policy object and policy applied to this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recovery_point_count_python">
 <a href="#recovery_point_count_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of available backup copies associated with this backup item.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="azurefileshareprotecteditemresponse">Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2171,205 +1952,184 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupmanagementtype_csharp">
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupsetname_csharp">
 <a href="#backupsetname_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containername_csharp">
 <a href="#containername_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createmode_csharp">
 <a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeinutc_csharp">
 <a href="#deferreddeletetimeinutc_csharp" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeremaining_csharp">
 <a href="#deferreddeletetimeremaining_csharp" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extendedinfo_csharp">
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurefileshareprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information with this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendlyname_csharp">
 <a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the fileshare represented by this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isdeferreddeletescheduleupcoming_csharp">
 <a href="#isdeferreddeletescheduleupcoming_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrehydrate_csharp">
 <a href="#isrehydrate_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isscheduledfordeferreddelete_csharp">
 <a href="#isscheduledfordeferreddelete_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kpishealths_csharp">
 <a href="#kpishealths_csharp" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackupstatus_csharp">
 <a href="#lastbackupstatus_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackuptime_csharp">
 <a href="#lastbackuptime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrecoverypoint_csharp">
 <a href="#lastrecoverypoint_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyid_csharp">
 <a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstate_csharp">
 <a href="#protectionstate_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstatus_csharp">
 <a href="#protectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_csharp">
 <a href="#sourceresourceid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_csharp">
 <a href="#workloadtype_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2378,205 +2138,184 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupmanagementtype_go">
 <a href="#backupmanagementtype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupsetname_go">
 <a href="#backupsetname_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containername_go">
 <a href="#containername_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createmode_go">
 <a href="#createmode_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeinutc_go">
 <a href="#deferreddeletetimeinutc_go" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeremaining_go">
 <a href="#deferreddeletetimeremaining_go" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extendedinfo_go">
 <a href="#extendedinfo_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurefileshareprotecteditemextendedinforesponse">Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional information with this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendlyname_go">
 <a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the fileshare represented by this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isdeferreddeletescheduleupcoming_go">
 <a href="#isdeferreddeletescheduleupcoming_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrehydrate_go">
 <a href="#isrehydrate_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isscheduledfordeferreddelete_go">
 <a href="#isscheduledfordeferreddelete_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kpishealths_go">
 <a href="#kpishealths_go" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]KPIResource<wbr>Health<wbr>Details<wbr>Response</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackupstatus_go">
 <a href="#lastbackupstatus_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackuptime_go">
 <a href="#lastbackuptime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrecoverypoint_go">
 <a href="#lastrecoverypoint_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyid_go">
 <a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstate_go">
 <a href="#protectionstate_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstatus_go">
 <a href="#protectionstatus_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_go">
 <a href="#sourceresourceid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_go">
 <a href="#workloadtype_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2585,205 +2324,184 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupmanagementtype_nodejs">
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupsetname_nodejs">
 <a href="#backupsetname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containername_nodejs">
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createmode_nodejs">
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeinutc_nodejs">
 <a href="#deferreddeletetimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeremaining_nodejs">
 <a href="#deferreddeletetimeremaining_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extendedinfo_nodejs">
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurefileshareprotecteditemextendedinforesponse">Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional information with this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendlyname_nodejs">
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the fileshare represented by this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isdeferreddeletescheduleupcoming_nodejs">
 <a href="#isdeferreddeletescheduleupcoming_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrehydrate_nodejs">
 <a href="#isrehydrate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isscheduledfordeferreddelete_nodejs">
 <a href="#isscheduledfordeferreddelete_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kpishealths_nodejs">
 <a href="#kpishealths_nodejs" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackupstatus_nodejs">
 <a href="#lastbackupstatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackuptime_nodejs">
 <a href="#lastbackuptime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrecoverypoint_nodejs">
 <a href="#lastrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyid_nodejs">
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstate_nodejs">
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstatus_nodejs">
 <a href="#protectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_nodejs">
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_nodejs">
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2792,216 +2510,186 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backup_management_type_python">
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backup_set_name_python">
 <a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="container_name_python">
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="create_mode_python">
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferred_delete_time_in_utc_python">
 <a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferred_delete_time_remaining_python">
 <a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extended_info_python">
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurefileshareprotecteditemextendedinforesponse">Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information with this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendly_name_python">
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Friendly name of the fileshare represented by this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_deferred_delete_schedule_upcoming_python">
 <a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_rehydrate_python">
 <a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_scheduled_for_deferred_delete_python">
 <a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kpis_healths_python">
 <a href="#kpis_healths_python" style="color: inherit; text-decoration: inherit;">kpis_<wbr>healths</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="last_backup_status_python">
 <a href="#last_backup_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="last_backup_time_python">
 <a href="#last_backup_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="last_recovery_point_python">
 <a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_id_python">
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protection_state_python">
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protection_status_python">
 <a href="#protection_status_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_resource_id_python">
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workload_type_python">
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="azureiaasvmhealthdetailsresponse">Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3010,45 +2698,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="code_csharp">
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Health Code{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Health Message{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="recommendations_csharp">
 <a href="#recommendations_csharp" style="color: inherit; text-decoration: inherit;">Recommendations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Health Recommended Actions{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="title_csharp">
 <a href="#title_csharp" style="color: inherit; text-decoration: inherit;">Title</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Health Title{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3057,45 +2740,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="code_go">
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Health Code{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Health Message{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="recommendations_go">
 <a href="#recommendations_go" style="color: inherit; text-decoration: inherit;">Recommendations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Health Recommended Actions{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="title_go">
 <a href="#title_go" style="color: inherit; text-decoration: inherit;">Title</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Health Title{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3104,45 +2782,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="code_nodejs">
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Health Code{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Health Message{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="recommendations_nodejs">
 <a href="#recommendations_nodejs" style="color: inherit; text-decoration: inherit;">recommendations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Health Recommended Actions{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="title_nodejs">
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Health Title{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3151,56 +2824,42 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="code_python">
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Health Code{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Health Message{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="recommendations_python">
 <a href="#recommendations_python" style="color: inherit; text-decoration: inherit;">recommendations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Health Recommended Actions{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="title_python">
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Health Title{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="azureiaasvmprotecteditem">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3209,245 +2868,220 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupmanagementtype_csharp">
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupsetname_csharp">
 <a href="#backupsetname_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containername_csharp">
 <a href="#containername_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createmode_csharp">
 <a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Create<wbr>Mode</span>
+        <span class="property-type">string | <a href="#createmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeinutc_csharp">
 <a href="#deferreddeletetimeinutc_csharp" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeremaining_csharp">
 <a href="#deferreddeletetimeremaining_csharp" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extendedinfo_csharp">
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extendedproperties_csharp">
 <a href="#extendedproperties_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#extendedproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Extended<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendlyname_csharp">
 <a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the VM represented by this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="healthstatus_csharp">
 <a href="#healthstatus_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Health<wbr>Status</span>
+        <span class="property-type">string | <a href="#healthstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Health<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Health status of protected item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isdeferreddeletescheduleupcoming_csharp">
 <a href="#isdeferreddeletescheduleupcoming_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrehydrate_csharp">
 <a href="#isrehydrate_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isscheduledfordeferreddelete_csharp">
 <a href="#isscheduledfordeferreddelete_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kpishealths_csharp">
 <a href="#kpishealths_csharp" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackupstatus_csharp">
 <a href="#lastbackupstatus_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last backup operation status.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackuptime_csharp">
 <a href="#lastbackuptime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrecoverypoint_csharp">
 <a href="#lastrecoverypoint_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyid_csharp">
 <a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protecteditemdataid_csharp">
 <a href="#protecteditemdataid_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Data<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstate_csharp">
 <a href="#protectionstate_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Protection<wbr>State</span>
+        <span class="property-type">string | <a href="#protectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Protection<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstatus_csharp">
 <a href="#protectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_csharp">
 <a href="#sourceresourceid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="virtualmachineid_csharp">
 <a href="#virtualmachineid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fully qualified ARM ID of the virtual machine represented by this item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_csharp">
 <a href="#workloadtype_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Data<wbr>Source<wbr>Type</span>
+        <span class="property-type">string | <a href="#datasourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Data<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3456,245 +3090,220 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupmanagementtype_go">
 <a href="#backupmanagementtype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupsetname_go">
 <a href="#backupsetname_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containername_go">
 <a href="#containername_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createmode_go">
 <a href="#createmode_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#createmode">Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeinutc_go">
 <a href="#deferreddeletetimeinutc_go" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeremaining_go">
 <a href="#deferreddeletetimeremaining_go" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extendedinfo_go">
 <a href="#extendedinfo_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinfo">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extendedproperties_go">
 <a href="#extendedproperties_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#extendedproperties">Extended<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendlyname_go">
 <a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the VM represented by this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="healthstatus_go">
 <a href="#healthstatus_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#healthstatus">Health<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Health status of protected item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isdeferreddeletescheduleupcoming_go">
 <a href="#isdeferreddeletescheduleupcoming_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrehydrate_go">
 <a href="#isrehydrate_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isscheduledfordeferreddelete_go">
 <a href="#isscheduledfordeferreddelete_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kpishealths_go">
 <a href="#kpishealths_go" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]KPIResource<wbr>Health<wbr>Details</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackupstatus_go">
 <a href="#lastbackupstatus_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last backup operation status.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackuptime_go">
 <a href="#lastbackuptime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrecoverypoint_go">
 <a href="#lastrecoverypoint_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyid_go">
 <a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protecteditemdataid_go">
 <a href="#protecteditemdataid_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Data<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstate_go">
 <a href="#protectionstate_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#protectionstate">Protection<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstatus_go">
 <a href="#protectionstatus_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_go">
 <a href="#sourceresourceid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="virtualmachineid_go">
 <a href="#virtualmachineid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fully qualified ARM ID of the virtual machine represented by this item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_go">
 <a href="#workloadtype_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3703,245 +3312,220 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupmanagementtype_nodejs">
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Backup<wbr>Management<wbr>Type</span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupsetname_nodejs">
 <a href="#backupsetname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containername_nodejs">
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createmode_nodejs">
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Create<wbr>Mode</span>
+        <span class="property-type">string | <a href="#createmode">Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeinutc_nodejs">
 <a href="#deferreddeletetimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeremaining_nodejs">
 <a href="#deferreddeletetimeremaining_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extendedinfo_nodejs">
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinfo">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extendedproperties_nodejs">
 <a href="#extendedproperties_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#extendedproperties">Extended<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendlyname_nodejs">
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the VM represented by this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="healthstatus_nodejs">
 <a href="#healthstatus_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Health<wbr>Status</span>
+        <span class="property-type">string | <a href="#healthstatus">Health<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Health status of protected item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isdeferreddeletescheduleupcoming_nodejs">
 <a href="#isdeferreddeletescheduleupcoming_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrehydrate_nodejs">
 <a href="#isrehydrate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isscheduledfordeferreddelete_nodejs">
 <a href="#isscheduledfordeferreddelete_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kpishealths_nodejs">
 <a href="#kpishealths_nodejs" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details}</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackupstatus_nodejs">
 <a href="#lastbackupstatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last backup operation status.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackuptime_nodejs">
 <a href="#lastbackuptime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrecoverypoint_nodejs">
 <a href="#lastrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyid_nodejs">
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protecteditemdataid_nodejs">
 <a href="#protecteditemdataid_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Data<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstate_nodejs">
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Protection<wbr>State</span>
+        <span class="property-type">string | <a href="#protectionstate">Protection<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstatus_nodejs">
 <a href="#protectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_nodejs">
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="virtualmachineid_nodejs">
 <a href="#virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fully qualified ARM ID of the virtual machine represented by this item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_nodejs">
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Data<wbr>Source<wbr>Type</span>
+        <span class="property-type">string | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3950,257 +3534,223 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backup_management_type_python">
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Backup<wbr>Management<wbr>Type</span>
+        <span class="property-type">str | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backup_set_name_python">
 <a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="container_name_python">
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="create_mode_python">
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Create<wbr>Mode</span>
+        <span class="property-type">str | <a href="#createmode">Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferred_delete_time_in_utc_python">
 <a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferred_delete_time_remaining_python">
 <a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extended_info_python">
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinfo">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extended_properties_python">
 <a href="#extended_properties_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#extendedproperties">Extended<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendly_name_python">
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Friendly name of the VM represented by this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="health_status_python">
 <a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Health<wbr>Status</span>
+        <span class="property-type">str | <a href="#healthstatus">Health<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Health status of protected item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_deferred_delete_schedule_upcoming_python">
 <a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_rehydrate_python">
 <a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_scheduled_for_deferred_delete_python">
 <a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kpis_healths_python">
 <a href="#kpis_healths_python" style="color: inherit; text-decoration: inherit;">kpis_<wbr>healths</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="last_backup_status_python">
 <a href="#last_backup_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last backup operation status.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="last_backup_time_python">
 <a href="#last_backup_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="last_recovery_point_python">
 <a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_id_python">
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protected_item_data_id_python">
 <a href="#protected_item_data_id_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>data_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protection_state_python">
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Protection<wbr>State</span>
+        <span class="property-type">str | <a href="#protectionstate">Protection<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protection_status_python">
 <a href="#protection_status_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_resource_id_python">
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="virtual_machine_id_python">
 <a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fully qualified ARM ID of the virtual machine represented by this item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workload_type_python">
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Data<wbr>Source<wbr>Type</span>
+        <span class="property-type">str | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="azureiaasvmprotecteditemextendedinfo">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4208,35 +3758,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="oldestrecoverypoint_csharp">
 <a href="#oldestrecoverypoint_csharp" style="color: inherit; text-decoration: inherit;">Oldest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyinconsistent_csharp">
 <a href="#policyinconsistent_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Inconsistent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if backup policy associated with the backup item is inconsistent.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recoverypointcount_csharp">
 <a href="#recoverypointcount_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of backup copies available for this backup item.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4245,35 +3791,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="oldestrecoverypoint_go">
 <a href="#oldestrecoverypoint_go" style="color: inherit; text-decoration: inherit;">Oldest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyinconsistent_go">
 <a href="#policyinconsistent_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Inconsistent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if backup policy associated with the backup item is inconsistent.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recoverypointcount_go">
 <a href="#recoverypointcount_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of backup copies available for this backup item.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4282,35 +3824,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="oldestrecoverypoint_nodejs">
 <a href="#oldestrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">oldest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyinconsistent_nodejs">
 <a href="#policyinconsistent_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Inconsistent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies if backup policy associated with the backup item is inconsistent.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recoverypointcount_nodejs">
 <a href="#recoverypointcount_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of backup copies available for this backup item.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4319,47 +3857,34 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="oldest_recovery_point_python">
 <a href="#oldest_recovery_point_python" style="color: inherit; text-decoration: inherit;">oldest_<wbr>recovery_<wbr>point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_inconsistent_python">
 <a href="#policy_inconsistent_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>inconsistent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if backup policy associated with the backup item is inconsistent.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recovery_point_count_python">
 <a href="#recovery_point_count_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of backup copies available for this backup item.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="azureiaasvmprotecteditemextendedinforesponse">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4367,35 +3892,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="oldestrecoverypoint_csharp">
 <a href="#oldestrecoverypoint_csharp" style="color: inherit; text-decoration: inherit;">Oldest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyinconsistent_csharp">
 <a href="#policyinconsistent_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Inconsistent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if backup policy associated with the backup item is inconsistent.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recoverypointcount_csharp">
 <a href="#recoverypointcount_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of backup copies available for this backup item.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4404,35 +3925,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="oldestrecoverypoint_go">
 <a href="#oldestrecoverypoint_go" style="color: inherit; text-decoration: inherit;">Oldest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyinconsistent_go">
 <a href="#policyinconsistent_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Inconsistent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if backup policy associated with the backup item is inconsistent.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recoverypointcount_go">
 <a href="#recoverypointcount_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of backup copies available for this backup item.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4441,35 +3958,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="oldestrecoverypoint_nodejs">
 <a href="#oldestrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">oldest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyinconsistent_nodejs">
 <a href="#policyinconsistent_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Inconsistent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies if backup policy associated with the backup item is inconsistent.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recoverypointcount_nodejs">
 <a href="#recoverypointcount_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of backup copies available for this backup item.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4478,46 +3991,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="oldest_recovery_point_python">
 <a href="#oldest_recovery_point_python" style="color: inherit; text-decoration: inherit;">oldest_<wbr>recovery_<wbr>point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_inconsistent_python">
 <a href="#policy_inconsistent_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>inconsistent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if backup policy associated with the backup item is inconsistent.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recovery_point_count_python">
 <a href="#recovery_point_count_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of backup copies available for this backup item.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="azureiaasvmprotecteditemresponse">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4526,255 +4026,229 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupmanagementtype_csharp">
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupsetname_csharp">
 <a href="#backupsetname_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containername_csharp">
 <a href="#containername_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createmode_csharp">
 <a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeinutc_csharp">
 <a href="#deferreddeletetimeinutc_csharp" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeremaining_csharp">
 <a href="#deferreddeletetimeremaining_csharp" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extendedinfo_csharp">
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extendedproperties_csharp">
 <a href="#extendedproperties_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#extendedpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Extended<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendlyname_csharp">
 <a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the VM represented by this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="healthdetails_csharp">
 <a href="#healthdetails_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Health details on this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="healthstatus_csharp">
 <a href="#healthstatus_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Health status of protected item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isdeferreddeletescheduleupcoming_csharp">
 <a href="#isdeferreddeletescheduleupcoming_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrehydrate_csharp">
 <a href="#isrehydrate_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isscheduledfordeferreddelete_csharp">
 <a href="#isscheduledfordeferreddelete_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kpishealths_csharp">
 <a href="#kpishealths_csharp" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackupstatus_csharp">
 <a href="#lastbackupstatus_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last backup operation status.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackuptime_csharp">
 <a href="#lastbackuptime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrecoverypoint_csharp">
 <a href="#lastrecoverypoint_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyid_csharp">
 <a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protecteditemdataid_csharp">
 <a href="#protecteditemdataid_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Data<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstate_csharp">
 <a href="#protectionstate_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstatus_csharp">
 <a href="#protectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_csharp">
 <a href="#sourceresourceid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="virtualmachineid_csharp">
 <a href="#virtualmachineid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fully qualified ARM ID of the virtual machine represented by this item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_csharp">
 <a href="#workloadtype_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4783,255 +4257,229 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupmanagementtype_go">
 <a href="#backupmanagementtype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupsetname_go">
 <a href="#backupsetname_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containername_go">
 <a href="#containername_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createmode_go">
 <a href="#createmode_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeinutc_go">
 <a href="#deferreddeletetimeinutc_go" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeremaining_go">
 <a href="#deferreddeletetimeremaining_go" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extendedinfo_go">
 <a href="#extendedinfo_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extendedproperties_go">
 <a href="#extendedproperties_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#extendedpropertiesresponse">Extended<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendlyname_go">
 <a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the VM represented by this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="healthdetails_go">
 <a href="#healthdetails_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">[]Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Health details on this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="healthstatus_go">
 <a href="#healthstatus_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Health status of protected item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isdeferreddeletescheduleupcoming_go">
 <a href="#isdeferreddeletescheduleupcoming_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrehydrate_go">
 <a href="#isrehydrate_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isscheduledfordeferreddelete_go">
 <a href="#isscheduledfordeferreddelete_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kpishealths_go">
 <a href="#kpishealths_go" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]KPIResource<wbr>Health<wbr>Details<wbr>Response</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackupstatus_go">
 <a href="#lastbackupstatus_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last backup operation status.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackuptime_go">
 <a href="#lastbackuptime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrecoverypoint_go">
 <a href="#lastrecoverypoint_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyid_go">
 <a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protecteditemdataid_go">
 <a href="#protecteditemdataid_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Data<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstate_go">
 <a href="#protectionstate_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstatus_go">
 <a href="#protectionstatus_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_go">
 <a href="#sourceresourceid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="virtualmachineid_go">
 <a href="#virtualmachineid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fully qualified ARM ID of the virtual machine represented by this item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_go">
 <a href="#workloadtype_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5040,255 +4488,229 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupmanagementtype_nodejs">
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupsetname_nodejs">
 <a href="#backupsetname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containername_nodejs">
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createmode_nodejs">
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeinutc_nodejs">
 <a href="#deferreddeletetimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeremaining_nodejs">
 <a href="#deferreddeletetimeremaining_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extendedinfo_nodejs">
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extendedproperties_nodejs">
 <a href="#extendedproperties_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#extendedpropertiesresponse">Extended<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendlyname_nodejs">
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the VM represented by this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="healthdetails_nodejs">
 <a href="#healthdetails_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Health details on this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="healthstatus_nodejs">
 <a href="#healthstatus_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Health status of protected item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isdeferreddeletescheduleupcoming_nodejs">
 <a href="#isdeferreddeletescheduleupcoming_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrehydrate_nodejs">
 <a href="#isrehydrate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isscheduledfordeferreddelete_nodejs">
 <a href="#isscheduledfordeferreddelete_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kpishealths_nodejs">
 <a href="#kpishealths_nodejs" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackupstatus_nodejs">
 <a href="#lastbackupstatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last backup operation status.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackuptime_nodejs">
 <a href="#lastbackuptime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrecoverypoint_nodejs">
 <a href="#lastrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyid_nodejs">
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protecteditemdataid_nodejs">
 <a href="#protecteditemdataid_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Data<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstate_nodejs">
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstatus_nodejs">
 <a href="#protectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_nodejs">
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="virtualmachineid_nodejs">
 <a href="#virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fully qualified ARM ID of the virtual machine represented by this item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_nodejs">
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5297,266 +4719,231 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backup_management_type_python">
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backup_set_name_python">
 <a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="container_name_python">
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="create_mode_python">
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferred_delete_time_in_utc_python">
 <a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferred_delete_time_remaining_python">
 <a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extended_info_python">
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extended_properties_python">
 <a href="#extended_properties_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#extendedpropertiesresponse">Extended<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendly_name_python">
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Friendly name of the VM represented by this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="health_details_python">
 <a href="#health_details_python" style="color: inherit; text-decoration: inherit;">health_<wbr>details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">Sequence[Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Health details on this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="health_status_python">
 <a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Health status of protected item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_deferred_delete_schedule_upcoming_python">
 <a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_rehydrate_python">
 <a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_scheduled_for_deferred_delete_python">
 <a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kpis_healths_python">
 <a href="#kpis_healths_python" style="color: inherit; text-decoration: inherit;">kpis_<wbr>healths</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="last_backup_status_python">
 <a href="#last_backup_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last backup operation status.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="last_backup_time_python">
 <a href="#last_backup_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="last_recovery_point_python">
 <a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_id_python">
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protected_item_data_id_python">
 <a href="#protected_item_data_id_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>data_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protection_state_python">
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protection_status_python">
 <a href="#protection_status_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_resource_id_python">
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="virtual_machine_id_python">
 <a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fully qualified ARM ID of the virtual machine represented by this item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workload_type_python">
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="azuresqlprotecteditem">Azure<wbr>Sql<wbr>Protected<wbr>Item</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5565,165 +4952,148 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupmanagementtype_csharp">
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupsetname_csharp">
 <a href="#backupsetname_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containername_csharp">
 <a href="#containername_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createmode_csharp">
 <a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Create<wbr>Mode</span>
+        <span class="property-type">string | <a href="#createmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeinutc_csharp">
 <a href="#deferreddeletetimeinutc_csharp" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeremaining_csharp">
 <a href="#deferreddeletetimeremaining_csharp" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extendedinfo_csharp">
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuresqlprotecteditemextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isdeferreddeletescheduleupcoming_csharp">
 <a href="#isdeferreddeletescheduleupcoming_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrehydrate_csharp">
 <a href="#isrehydrate_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isscheduledfordeferreddelete_csharp">
 <a href="#isscheduledfordeferreddelete_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrecoverypoint_csharp">
 <a href="#lastrecoverypoint_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyid_csharp">
 <a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protecteditemdataid_csharp">
 <a href="#protecteditemdataid_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Data<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Internal ID of a backup item. Used by Azure SQL Backup engine to contact Recovery Services.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstate_csharp">
 <a href="#protectionstate_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Protected<wbr>Item<wbr>State</span>
+        <span class="property-type">string | <a href="#protecteditemstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Protected<wbr>Item<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Backup state of the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_csharp">
 <a href="#sourceresourceid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_csharp">
 <a href="#workloadtype_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Data<wbr>Source<wbr>Type</span>
+        <span class="property-type">string | <a href="#datasourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Data<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5732,165 +5102,148 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupmanagementtype_go">
 <a href="#backupmanagementtype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupsetname_go">
 <a href="#backupsetname_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containername_go">
 <a href="#containername_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createmode_go">
 <a href="#createmode_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#createmode">Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeinutc_go">
 <a href="#deferreddeletetimeinutc_go" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeremaining_go">
 <a href="#deferreddeletetimeremaining_go" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extendedinfo_go">
 <a href="#extendedinfo_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuresqlprotecteditemextendedinfo">Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isdeferreddeletescheduleupcoming_go">
 <a href="#isdeferreddeletescheduleupcoming_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrehydrate_go">
 <a href="#isrehydrate_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isscheduledfordeferreddelete_go">
 <a href="#isscheduledfordeferreddelete_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrecoverypoint_go">
 <a href="#lastrecoverypoint_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyid_go">
 <a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protecteditemdataid_go">
 <a href="#protecteditemdataid_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Data<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Internal ID of a backup item. Used by Azure SQL Backup engine to contact Recovery Services.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstate_go">
 <a href="#protectionstate_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#protecteditemstate">Protected<wbr>Item<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Backup state of the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_go">
 <a href="#sourceresourceid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_go">
 <a href="#workloadtype_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5899,165 +5252,148 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupmanagementtype_nodejs">
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Backup<wbr>Management<wbr>Type</span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupsetname_nodejs">
 <a href="#backupsetname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containername_nodejs">
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createmode_nodejs">
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Create<wbr>Mode</span>
+        <span class="property-type">string | <a href="#createmode">Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeinutc_nodejs">
 <a href="#deferreddeletetimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeremaining_nodejs">
 <a href="#deferreddeletetimeremaining_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extendedinfo_nodejs">
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuresqlprotecteditemextendedinfo">Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isdeferreddeletescheduleupcoming_nodejs">
 <a href="#isdeferreddeletescheduleupcoming_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrehydrate_nodejs">
 <a href="#isrehydrate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isscheduledfordeferreddelete_nodejs">
 <a href="#isscheduledfordeferreddelete_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrecoverypoint_nodejs">
 <a href="#lastrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyid_nodejs">
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protecteditemdataid_nodejs">
 <a href="#protecteditemdataid_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Data<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Internal ID of a backup item. Used by Azure SQL Backup engine to contact Recovery Services.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstate_nodejs">
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Protected<wbr>Item<wbr>State</span>
+        <span class="property-type">string | <a href="#protecteditemstate">Protected<wbr>Item<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Backup state of the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_nodejs">
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_nodejs">
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Data<wbr>Source<wbr>Type</span>
+        <span class="property-type">string | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -6066,177 +5402,151 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backup_management_type_python">
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Backup<wbr>Management<wbr>Type</span>
+        <span class="property-type">str | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backup_set_name_python">
 <a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="container_name_python">
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="create_mode_python">
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Create<wbr>Mode</span>
+        <span class="property-type">str | <a href="#createmode">Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferred_delete_time_in_utc_python">
 <a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferred_delete_time_remaining_python">
 <a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extended_info_python">
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuresqlprotecteditemextendedinfo">Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_deferred_delete_schedule_upcoming_python">
 <a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_rehydrate_python">
 <a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_scheduled_for_deferred_delete_python">
 <a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="last_recovery_point_python">
 <a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_id_python">
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protected_item_data_id_python">
 <a href="#protected_item_data_id_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>data_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Internal ID of a backup item. Used by Azure SQL Backup engine to contact Recovery Services.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protection_state_python">
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Protected<wbr>Item<wbr>State</span>
+        <span class="property-type">str | <a href="#protecteditemstate">Protected<wbr>Item<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Backup state of the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_resource_id_python">
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workload_type_python">
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Data<wbr>Source<wbr>Type</span>
+        <span class="property-type">str | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="azuresqlprotecteditemextendedinfo">Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -6244,35 +5554,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="oldestrecoverypoint_csharp">
 <a href="#oldestrecoverypoint_csharp" style="color: inherit; text-decoration: inherit;">Oldest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this item in the service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policystate_csharp">
 <a href="#policystate_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}State of the backup policy associated with this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recoverypointcount_csharp">
 <a href="#recoverypointcount_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of available backup copies associated with this backup item.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6281,35 +5587,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="oldestrecoverypoint_go">
 <a href="#oldestrecoverypoint_go" style="color: inherit; text-decoration: inherit;">Oldest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this item in the service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policystate_go">
 <a href="#policystate_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}State of the backup policy associated with this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recoverypointcount_go">
 <a href="#recoverypointcount_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of available backup copies associated with this backup item.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6318,35 +5620,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="oldestrecoverypoint_nodejs">
 <a href="#oldestrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">oldest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this item in the service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policystate_nodejs">
 <a href="#policystate_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}State of the backup policy associated with this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recoverypointcount_nodejs">
 <a href="#recoverypointcount_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of available backup copies associated with this backup item.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -6355,47 +5653,34 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="oldest_recovery_point_python">
 <a href="#oldest_recovery_point_python" style="color: inherit; text-decoration: inherit;">oldest_<wbr>recovery_<wbr>point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this item in the service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_state_python">
 <a href="#policy_state_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}State of the backup policy associated with this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recovery_point_count_python">
 <a href="#recovery_point_count_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of available backup copies associated with this backup item.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="azuresqlprotecteditemextendedinforesponse">Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -6403,35 +5688,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="oldestrecoverypoint_csharp">
 <a href="#oldestrecoverypoint_csharp" style="color: inherit; text-decoration: inherit;">Oldest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this item in the service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policystate_csharp">
 <a href="#policystate_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}State of the backup policy associated with this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recoverypointcount_csharp">
 <a href="#recoverypointcount_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of available backup copies associated with this backup item.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6440,35 +5721,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="oldestrecoverypoint_go">
 <a href="#oldestrecoverypoint_go" style="color: inherit; text-decoration: inherit;">Oldest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this item in the service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policystate_go">
 <a href="#policystate_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}State of the backup policy associated with this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recoverypointcount_go">
 <a href="#recoverypointcount_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of available backup copies associated with this backup item.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6477,35 +5754,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="oldestrecoverypoint_nodejs">
 <a href="#oldestrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">oldest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this item in the service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policystate_nodejs">
 <a href="#policystate_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}State of the backup policy associated with this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recoverypointcount_nodejs">
 <a href="#recoverypointcount_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of available backup copies associated with this backup item.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -6514,46 +5787,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="oldest_recovery_point_python">
 <a href="#oldest_recovery_point_python" style="color: inherit; text-decoration: inherit;">oldest_<wbr>recovery_<wbr>point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this item in the service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_state_python">
 <a href="#policy_state_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}State of the backup policy associated with this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recovery_point_count_python">
 <a href="#recovery_point_count_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of available backup copies associated with this backup item.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="azuresqlprotecteditemresponse">Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6562,165 +5822,148 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupmanagementtype_csharp">
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupsetname_csharp">
 <a href="#backupsetname_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containername_csharp">
 <a href="#containername_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createmode_csharp">
 <a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeinutc_csharp">
 <a href="#deferreddeletetimeinutc_csharp" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeremaining_csharp">
 <a href="#deferreddeletetimeremaining_csharp" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extendedinfo_csharp">
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuresqlprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isdeferreddeletescheduleupcoming_csharp">
 <a href="#isdeferreddeletescheduleupcoming_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrehydrate_csharp">
 <a href="#isrehydrate_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isscheduledfordeferreddelete_csharp">
 <a href="#isscheduledfordeferreddelete_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrecoverypoint_csharp">
 <a href="#lastrecoverypoint_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyid_csharp">
 <a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protecteditemdataid_csharp">
 <a href="#protecteditemdataid_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Data<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Internal ID of a backup item. Used by Azure SQL Backup engine to contact Recovery Services.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstate_csharp">
 <a href="#protectionstate_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup state of the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_csharp">
 <a href="#sourceresourceid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_csharp">
 <a href="#workloadtype_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6729,165 +5972,148 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupmanagementtype_go">
 <a href="#backupmanagementtype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupsetname_go">
 <a href="#backupsetname_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containername_go">
 <a href="#containername_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createmode_go">
 <a href="#createmode_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeinutc_go">
 <a href="#deferreddeletetimeinutc_go" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeremaining_go">
 <a href="#deferreddeletetimeremaining_go" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extendedinfo_go">
 <a href="#extendedinfo_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuresqlprotecteditemextendedinforesponse">Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isdeferreddeletescheduleupcoming_go">
 <a href="#isdeferreddeletescheduleupcoming_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrehydrate_go">
 <a href="#isrehydrate_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isscheduledfordeferreddelete_go">
 <a href="#isscheduledfordeferreddelete_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrecoverypoint_go">
 <a href="#lastrecoverypoint_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyid_go">
 <a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protecteditemdataid_go">
 <a href="#protecteditemdataid_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Data<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Internal ID of a backup item. Used by Azure SQL Backup engine to contact Recovery Services.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstate_go">
 <a href="#protectionstate_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup state of the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_go">
 <a href="#sourceresourceid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_go">
 <a href="#workloadtype_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6896,165 +6122,148 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupmanagementtype_nodejs">
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupsetname_nodejs">
 <a href="#backupsetname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containername_nodejs">
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createmode_nodejs">
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeinutc_nodejs">
 <a href="#deferreddeletetimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeremaining_nodejs">
 <a href="#deferreddeletetimeremaining_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extendedinfo_nodejs">
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuresqlprotecteditemextendedinforesponse">Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isdeferreddeletescheduleupcoming_nodejs">
 <a href="#isdeferreddeletescheduleupcoming_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrehydrate_nodejs">
 <a href="#isrehydrate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isscheduledfordeferreddelete_nodejs">
 <a href="#isscheduledfordeferreddelete_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrecoverypoint_nodejs">
 <a href="#lastrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyid_nodejs">
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protecteditemdataid_nodejs">
 <a href="#protecteditemdataid_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Data<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Internal ID of a backup item. Used by Azure SQL Backup engine to contact Recovery Services.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstate_nodejs">
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup state of the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_nodejs">
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_nodejs">
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -7063,176 +6272,150 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backup_management_type_python">
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backup_set_name_python">
 <a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="container_name_python">
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="create_mode_python">
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferred_delete_time_in_utc_python">
 <a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferred_delete_time_remaining_python">
 <a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extended_info_python">
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuresqlprotecteditemextendedinforesponse">Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_deferred_delete_schedule_upcoming_python">
 <a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_rehydrate_python">
 <a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_scheduled_for_deferred_delete_python">
 <a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="last_recovery_point_python">
 <a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_id_python">
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protected_item_data_id_python">
 <a href="#protected_item_data_id_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>data_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Internal ID of a backup item. Used by Azure SQL Backup engine to contact Recovery Services.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protection_state_python">
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Backup state of the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_resource_id_python">
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workload_type_python">
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="azurevmworkloadprotecteditem">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7241,255 +6424,229 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupmanagementtype_csharp">
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupsetname_csharp">
 <a href="#backupsetname_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containername_csharp">
 <a href="#containername_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createmode_csharp">
 <a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Create<wbr>Mode</span>
+        <span class="property-type">string | <a href="#createmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeinutc_csharp">
 <a href="#deferreddeletetimeinutc_csharp" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeremaining_csharp">
 <a href="#deferreddeletetimeremaining_csharp" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extendedinfo_csharp">
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendlyname_csharp">
 <a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the DB represented by this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isdeferreddeletescheduleupcoming_csharp">
 <a href="#isdeferreddeletescheduleupcoming_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrehydrate_csharp">
 <a href="#isrehydrate_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isscheduledfordeferreddelete_csharp">
 <a href="#isscheduledfordeferreddelete_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kpishealths_csharp">
 <a href="#kpishealths_csharp" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackupstatus_csharp">
 <a href="#lastbackupstatus_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Last<wbr>Backup<wbr>Status</span>
+        <span class="property-type">string | <a href="#lastbackupstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Last<wbr>Backup<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackuptime_csharp">
 <a href="#lastbackuptime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrecoverypoint_csharp">
 <a href="#lastrecoverypoint_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parentname_csharp">
 <a href="#parentname_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Parent name of the DB such as Instance or Availability Group.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parenttype_csharp">
 <a href="#parenttype_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Parent type of protected item, example: for a DB, standalone server or distributed{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyid_csharp">
 <a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protecteditemdatasourceid_csharp">
 <a href="#protecteditemdatasourceid_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Data<wbr>Source<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protecteditemhealthstatus_csharp">
 <a href="#protecteditemhealthstatus_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Health<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Protected<wbr>Item<wbr>Health<wbr>Status</span>
+        <span class="property-type">string | <a href="#protecteditemhealthstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Protected<wbr>Item<wbr>Health<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Health status of the backup item, evaluated based on last heartbeat received{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstate_csharp">
 <a href="#protectionstate_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Protection<wbr>State</span>
+        <span class="property-type">string | <a href="#protectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Protection<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstatus_csharp">
 <a href="#protectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="servername_csharp">
 <a href="#servername_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host/Cluster Name for instance or AG{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_csharp">
 <a href="#sourceresourceid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_csharp">
 <a href="#workloadtype_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Data<wbr>Source<wbr>Type</span>
+        <span class="property-type">string | <a href="#datasourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Data<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -7498,255 +6655,229 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupmanagementtype_go">
 <a href="#backupmanagementtype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupsetname_go">
 <a href="#backupsetname_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containername_go">
 <a href="#containername_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createmode_go">
 <a href="#createmode_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#createmode">Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeinutc_go">
 <a href="#deferreddeletetimeinutc_go" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeremaining_go">
 <a href="#deferreddeletetimeremaining_go" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extendedinfo_go">
 <a href="#extendedinfo_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinfo">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendlyname_go">
 <a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the DB represented by this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isdeferreddeletescheduleupcoming_go">
 <a href="#isdeferreddeletescheduleupcoming_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrehydrate_go">
 <a href="#isrehydrate_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isscheduledfordeferreddelete_go">
 <a href="#isscheduledfordeferreddelete_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kpishealths_go">
 <a href="#kpishealths_go" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]KPIResource<wbr>Health<wbr>Details</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackupstatus_go">
 <a href="#lastbackupstatus_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#lastbackupstatus">Last<wbr>Backup<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackuptime_go">
 <a href="#lastbackuptime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrecoverypoint_go">
 <a href="#lastrecoverypoint_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parentname_go">
 <a href="#parentname_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Parent name of the DB such as Instance or Availability Group.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parenttype_go">
 <a href="#parenttype_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Parent type of protected item, example: for a DB, standalone server or distributed{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyid_go">
 <a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protecteditemdatasourceid_go">
 <a href="#protecteditemdatasourceid_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Data<wbr>Source<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protecteditemhealthstatus_go">
 <a href="#protecteditemhealthstatus_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Health<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#protecteditemhealthstatus">Protected<wbr>Item<wbr>Health<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Health status of the backup item, evaluated based on last heartbeat received{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstate_go">
 <a href="#protectionstate_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#protectionstate">Protection<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstatus_go">
 <a href="#protectionstatus_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="servername_go">
 <a href="#servername_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host/Cluster Name for instance or AG{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_go">
 <a href="#sourceresourceid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_go">
 <a href="#workloadtype_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -7755,255 +6886,229 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupmanagementtype_nodejs">
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Backup<wbr>Management<wbr>Type</span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupsetname_nodejs">
 <a href="#backupsetname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containername_nodejs">
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createmode_nodejs">
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Create<wbr>Mode</span>
+        <span class="property-type">string | <a href="#createmode">Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeinutc_nodejs">
 <a href="#deferreddeletetimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeremaining_nodejs">
 <a href="#deferreddeletetimeremaining_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extendedinfo_nodejs">
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinfo">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendlyname_nodejs">
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the DB represented by this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isdeferreddeletescheduleupcoming_nodejs">
 <a href="#isdeferreddeletescheduleupcoming_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrehydrate_nodejs">
 <a href="#isrehydrate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isscheduledfordeferreddelete_nodejs">
 <a href="#isscheduledfordeferreddelete_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kpishealths_nodejs">
 <a href="#kpishealths_nodejs" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details}</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackupstatus_nodejs">
 <a href="#lastbackupstatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Last<wbr>Backup<wbr>Status</span>
+        <span class="property-type">string | <a href="#lastbackupstatus">Last<wbr>Backup<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackuptime_nodejs">
 <a href="#lastbackuptime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrecoverypoint_nodejs">
 <a href="#lastrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parentname_nodejs">
 <a href="#parentname_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Parent name of the DB such as Instance or Availability Group.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parenttype_nodejs">
 <a href="#parenttype_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Parent type of protected item, example: for a DB, standalone server or distributed{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyid_nodejs">
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protecteditemdatasourceid_nodejs">
 <a href="#protecteditemdatasourceid_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Data<wbr>Source<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protecteditemhealthstatus_nodejs">
 <a href="#protecteditemhealthstatus_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Health<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Protected<wbr>Item<wbr>Health<wbr>Status</span>
+        <span class="property-type">string | <a href="#protecteditemhealthstatus">Protected<wbr>Item<wbr>Health<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Health status of the backup item, evaluated based on last heartbeat received{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstate_nodejs">
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Protection<wbr>State</span>
+        <span class="property-type">string | <a href="#protectionstate">Protection<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstatus_nodejs">
 <a href="#protectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="servername_nodejs">
 <a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host/Cluster Name for instance or AG{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_nodejs">
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_nodejs">
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Data<wbr>Source<wbr>Type</span>
+        <span class="property-type">string | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -8012,267 +7117,232 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backup_management_type_python">
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Backup<wbr>Management<wbr>Type</span>
+        <span class="property-type">str | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backup_set_name_python">
 <a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="container_name_python">
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="create_mode_python">
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Create<wbr>Mode</span>
+        <span class="property-type">str | <a href="#createmode">Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferred_delete_time_in_utc_python">
 <a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferred_delete_time_remaining_python">
 <a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extended_info_python">
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinfo">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendly_name_python">
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Friendly name of the DB represented by this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_deferred_delete_schedule_upcoming_python">
 <a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_rehydrate_python">
 <a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_scheduled_for_deferred_delete_python">
 <a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kpis_healths_python">
 <a href="#kpis_healths_python" style="color: inherit; text-decoration: inherit;">kpis_<wbr>healths</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="last_backup_status_python">
 <a href="#last_backup_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Last<wbr>Backup<wbr>Status</span>
+        <span class="property-type">str | <a href="#lastbackupstatus">Last<wbr>Backup<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="last_backup_time_python">
 <a href="#last_backup_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="last_recovery_point_python">
 <a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parent_name_python">
 <a href="#parent_name_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Parent name of the DB such as Instance or Availability Group.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parent_type_python">
 <a href="#parent_type_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Parent type of protected item, example: for a DB, standalone server or distributed{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_id_python">
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protected_item_data_source_id_python">
 <a href="#protected_item_data_source_id_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>data_<wbr>source_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protected_item_health_status_python">
 <a href="#protected_item_health_status_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>health_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Protected<wbr>Item<wbr>Health<wbr>Status</span>
+        <span class="property-type">str | <a href="#protecteditemhealthstatus">Protected<wbr>Item<wbr>Health<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Health status of the backup item, evaluated based on last heartbeat received{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protection_state_python">
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Protection<wbr>State</span>
+        <span class="property-type">str | <a href="#protectionstate">Protection<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protection_status_python">
 <a href="#protection_status_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="server_name_python">
 <a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Host/Cluster Name for instance or AG{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_resource_id_python">
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workload_type_python">
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Data<wbr>Source<wbr>Type</span>
+        <span class="property-type">str | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="azurevmworkloadprotecteditemextendedinfo">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -8280,35 +7350,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="oldestrecoverypoint_csharp">
 <a href="#oldestrecoverypoint_csharp" style="color: inherit; text-decoration: inherit;">Oldest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policystate_csharp">
 <a href="#policystate_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates consistency of policy object and policy applied to this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recoverypointcount_csharp">
 <a href="#recoverypointcount_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of backup copies available for this backup item.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -8317,35 +7383,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="oldestrecoverypoint_go">
 <a href="#oldestrecoverypoint_go" style="color: inherit; text-decoration: inherit;">Oldest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policystate_go">
 <a href="#policystate_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates consistency of policy object and policy applied to this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recoverypointcount_go">
 <a href="#recoverypointcount_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of backup copies available for this backup item.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -8354,35 +7416,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="oldestrecoverypoint_nodejs">
 <a href="#oldestrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">oldest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policystate_nodejs">
 <a href="#policystate_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates consistency of policy object and policy applied to this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recoverypointcount_nodejs">
 <a href="#recoverypointcount_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of backup copies available for this backup item.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -8391,47 +7449,34 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="oldest_recovery_point_python">
 <a href="#oldest_recovery_point_python" style="color: inherit; text-decoration: inherit;">oldest_<wbr>recovery_<wbr>point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_state_python">
 <a href="#policy_state_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates consistency of policy object and policy applied to this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recovery_point_count_python">
 <a href="#recovery_point_count_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of backup copies available for this backup item.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="azurevmworkloadprotecteditemextendedinforesponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -8439,35 +7484,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="oldestrecoverypoint_csharp">
 <a href="#oldestrecoverypoint_csharp" style="color: inherit; text-decoration: inherit;">Oldest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policystate_csharp">
 <a href="#policystate_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates consistency of policy object and policy applied to this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recoverypointcount_csharp">
 <a href="#recoverypointcount_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of backup copies available for this backup item.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -8476,35 +7517,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="oldestrecoverypoint_go">
 <a href="#oldestrecoverypoint_go" style="color: inherit; text-decoration: inherit;">Oldest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policystate_go">
 <a href="#policystate_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates consistency of policy object and policy applied to this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recoverypointcount_go">
 <a href="#recoverypointcount_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of backup copies available for this backup item.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -8513,35 +7550,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="oldestrecoverypoint_nodejs">
 <a href="#oldestrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">oldest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policystate_nodejs">
 <a href="#policystate_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates consistency of policy object and policy applied to this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recoverypointcount_nodejs">
 <a href="#recoverypointcount_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of backup copies available for this backup item.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -8550,46 +7583,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="oldest_recovery_point_python">
 <a href="#oldest_recovery_point_python" style="color: inherit; text-decoration: inherit;">oldest_<wbr>recovery_<wbr>point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_state_python">
 <a href="#policy_state_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates consistency of policy object and policy applied to this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recovery_point_count_python">
 <a href="#recovery_point_count_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of backup copies available for this backup item.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="azurevmworkloadprotecteditemresponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8598,265 +7618,238 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupmanagementtype_csharp">
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupsetname_csharp">
 <a href="#backupsetname_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containername_csharp">
 <a href="#containername_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createmode_csharp">
 <a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeinutc_csharp">
 <a href="#deferreddeletetimeinutc_csharp" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeremaining_csharp">
 <a href="#deferreddeletetimeremaining_csharp" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extendedinfo_csharp">
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendlyname_csharp">
 <a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the DB represented by this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isdeferreddeletescheduleupcoming_csharp">
 <a href="#isdeferreddeletescheduleupcoming_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrehydrate_csharp">
 <a href="#isrehydrate_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isscheduledfordeferreddelete_csharp">
 <a href="#isscheduledfordeferreddelete_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kpishealths_csharp">
 <a href="#kpishealths_csharp" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackuperrordetail_csharp">
 <a href="#lastbackuperrordetail_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Error<wbr>Detail</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#errordetailresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error details in last backup{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackupstatus_csharp">
 <a href="#lastbackupstatus_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackuptime_csharp">
 <a href="#lastbackuptime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrecoverypoint_csharp">
 <a href="#lastrecoverypoint_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parentname_csharp">
 <a href="#parentname_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Parent name of the DB such as Instance or Availability Group.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parenttype_csharp">
 <a href="#parenttype_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Parent type of protected item, example: for a DB, standalone server or distributed{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyid_csharp">
 <a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protecteditemdatasourceid_csharp">
 <a href="#protecteditemdatasourceid_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Data<wbr>Source<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protecteditemhealthstatus_csharp">
 <a href="#protecteditemhealthstatus_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Health<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Health status of the backup item, evaluated based on last heartbeat received{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstate_csharp">
 <a href="#protectionstate_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstatus_csharp">
 <a href="#protectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="servername_csharp">
 <a href="#servername_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host/Cluster Name for instance or AG{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_csharp">
 <a href="#sourceresourceid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_csharp">
 <a href="#workloadtype_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -8865,265 +7858,238 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupmanagementtype_go">
 <a href="#backupmanagementtype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupsetname_go">
 <a href="#backupsetname_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containername_go">
 <a href="#containername_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createmode_go">
 <a href="#createmode_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeinutc_go">
 <a href="#deferreddeletetimeinutc_go" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeremaining_go">
 <a href="#deferreddeletetimeremaining_go" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extendedinfo_go">
 <a href="#extendedinfo_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendlyname_go">
 <a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the DB represented by this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isdeferreddeletescheduleupcoming_go">
 <a href="#isdeferreddeletescheduleupcoming_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrehydrate_go">
 <a href="#isrehydrate_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isscheduledfordeferreddelete_go">
 <a href="#isscheduledfordeferreddelete_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kpishealths_go">
 <a href="#kpishealths_go" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]KPIResource<wbr>Health<wbr>Details<wbr>Response</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackuperrordetail_go">
 <a href="#lastbackuperrordetail_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Error<wbr>Detail</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Error details in last backup{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackupstatus_go">
 <a href="#lastbackupstatus_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackuptime_go">
 <a href="#lastbackuptime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrecoverypoint_go">
 <a href="#lastrecoverypoint_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parentname_go">
 <a href="#parentname_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Parent name of the DB such as Instance or Availability Group.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parenttype_go">
 <a href="#parenttype_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Parent type of protected item, example: for a DB, standalone server or distributed{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyid_go">
 <a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protecteditemdatasourceid_go">
 <a href="#protecteditemdatasourceid_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Data<wbr>Source<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protecteditemhealthstatus_go">
 <a href="#protecteditemhealthstatus_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Health<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Health status of the backup item, evaluated based on last heartbeat received{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstate_go">
 <a href="#protectionstate_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstatus_go">
 <a href="#protectionstatus_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="servername_go">
 <a href="#servername_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host/Cluster Name for instance or AG{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_go">
 <a href="#sourceresourceid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_go">
 <a href="#workloadtype_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -9132,265 +8098,238 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupmanagementtype_nodejs">
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupsetname_nodejs">
 <a href="#backupsetname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containername_nodejs">
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createmode_nodejs">
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeinutc_nodejs">
 <a href="#deferreddeletetimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeremaining_nodejs">
 <a href="#deferreddeletetimeremaining_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extendedinfo_nodejs">
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendlyname_nodejs">
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the DB represented by this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isdeferreddeletescheduleupcoming_nodejs">
 <a href="#isdeferreddeletescheduleupcoming_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrehydrate_nodejs">
 <a href="#isrehydrate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isscheduledfordeferreddelete_nodejs">
 <a href="#isscheduledfordeferreddelete_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kpishealths_nodejs">
 <a href="#kpishealths_nodejs" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackuperrordetail_nodejs">
 <a href="#lastbackuperrordetail_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Error<wbr>Detail</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Error details in last backup{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackupstatus_nodejs">
 <a href="#lastbackupstatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackuptime_nodejs">
 <a href="#lastbackuptime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrecoverypoint_nodejs">
 <a href="#lastrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parentname_nodejs">
 <a href="#parentname_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Parent name of the DB such as Instance or Availability Group.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parenttype_nodejs">
 <a href="#parenttype_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Parent type of protected item, example: for a DB, standalone server or distributed{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyid_nodejs">
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protecteditemdatasourceid_nodejs">
 <a href="#protecteditemdatasourceid_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Data<wbr>Source<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protecteditemhealthstatus_nodejs">
 <a href="#protecteditemhealthstatus_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Health<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Health status of the backup item, evaluated based on last heartbeat received{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstate_nodejs">
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstatus_nodejs">
 <a href="#protectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="servername_nodejs">
 <a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host/Cluster Name for instance or AG{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_nodejs">
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_nodejs">
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -9399,276 +8338,380 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backup_management_type_python">
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backup_set_name_python">
 <a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="container_name_python">
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="create_mode_python">
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferred_delete_time_in_utc_python">
 <a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferred_delete_time_remaining_python">
 <a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extended_info_python">
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendly_name_python">
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Friendly name of the DB represented by this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_deferred_delete_schedule_upcoming_python">
 <a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_rehydrate_python">
 <a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_scheduled_for_deferred_delete_python">
 <a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kpis_healths_python">
 <a href="#kpis_healths_python" style="color: inherit; text-decoration: inherit;">kpis_<wbr>healths</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="last_backup_error_detail_python">
 <a href="#last_backup_error_detail_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>error_<wbr>detail</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Error details in last backup{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="last_backup_status_python">
 <a href="#last_backup_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="last_backup_time_python">
 <a href="#last_backup_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="last_recovery_point_python">
 <a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parent_name_python">
 <a href="#parent_name_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Parent name of the DB such as Instance or Availability Group.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parent_type_python">
 <a href="#parent_type_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Parent type of protected item, example: for a DB, standalone server or distributed{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_id_python">
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protected_item_data_source_id_python">
 <a href="#protected_item_data_source_id_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>data_<wbr>source_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protected_item_health_status_python">
 <a href="#protected_item_health_status_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>health_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Health status of the backup item, evaluated based on last heartbeat received{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protection_state_python">
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protection_status_python">
 <a href="#protection_status_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="server_name_python">
 <a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Host/Cluster Name for instance or AG{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_resource_id_python">
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workload_type_python">
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="backupmanagementtype">Backup<wbr>Management<wbr>Type</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Invalid</dt>
+    <dd>Invalid</dd>
+    <dt>Azure<wbr>Iaas<wbr>VM</dt>
+    <dd>AzureIaasVM</dd>
+    <dt>MAB</dt>
+    <dd>MAB</dd>
+    <dt>DPM</dt>
+    <dd>DPM</dd>
+    <dt>Azure<wbr>Backup<wbr>Server</dt>
+    <dd>AzureBackupServer</dd>
+    <dt>Azure<wbr>Sql</dt>
+    <dd>AzureSql</dd>
+    <dt>Azure<wbr>Storage</dt>
+    <dd>AzureStorage</dd>
+    <dt>Azure<wbr>Workload</dt>
+    <dd>AzureWorkload</dd>
+    <dt>Default<wbr>Backup</dt>
+    <dd>DefaultBackup</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Backup<wbr>Management<wbr>Type<wbr>Invalid</dt>
+    <dd>Invalid</dd>
+    <dt>Backup<wbr>Management<wbr>Type<wbr>Azure<wbr>Iaas<wbr>VM</dt>
+    <dd>AzureIaasVM</dd>
+    <dt>Backup<wbr>Management<wbr>Type<wbr>MAB</dt>
+    <dd>MAB</dd>
+    <dt>Backup<wbr>Management<wbr>Type<wbr>DPM</dt>
+    <dd>DPM</dd>
+    <dt>Backup<wbr>Management<wbr>Type<wbr>Azure<wbr>Backup<wbr>Server</dt>
+    <dd>AzureBackupServer</dd>
+    <dt>Backup<wbr>Management<wbr>Type<wbr>Azure<wbr>Sql</dt>
+    <dd>AzureSql</dd>
+    <dt>Backup<wbr>Management<wbr>Type<wbr>Azure<wbr>Storage</dt>
+    <dd>AzureStorage</dd>
+    <dt>Backup<wbr>Management<wbr>Type<wbr>Azure<wbr>Workload</dt>
+    <dd>AzureWorkload</dd>
+    <dt>Backup<wbr>Management<wbr>Type<wbr>Default<wbr>Backup</dt>
+    <dd>DefaultBackup</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Invalid</dt>
+    <dd>Invalid</dd>
+    <dt>Azure<wbr>Iaas<wbr>VM</dt>
+    <dd>AzureIaasVM</dd>
+    <dt>MAB</dt>
+    <dd>MAB</dd>
+    <dt>DPM</dt>
+    <dd>DPM</dd>
+    <dt>Azure<wbr>Backup<wbr>Server</dt>
+    <dd>AzureBackupServer</dd>
+    <dt>Azure<wbr>Sql</dt>
+    <dd>AzureSql</dd>
+    <dt>Azure<wbr>Storage</dt>
+    <dd>AzureStorage</dd>
+    <dt>Azure<wbr>Workload</dt>
+    <dd>AzureWorkload</dd>
+    <dt>Default<wbr>Backup</dt>
+    <dd>DefaultBackup</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>INVALID</dt>
+    <dd>Invalid</dd>
+    <dt>AZURE_IAAS_VM</dt>
+    <dd>AzureIaasVM</dd>
+    <dt>MAB</dt>
+    <dd>MAB</dd>
+    <dt>DPM</dt>
+    <dd>DPM</dd>
+    <dt>AZURE_BACKUP_SERVER</dt>
+    <dd>AzureBackupServer</dd>
+    <dt>AZURE_SQL</dt>
+    <dd>AzureSql</dd>
+    <dt>AZURE_STORAGE</dt>
+    <dd>AzureStorage</dd>
+    <dt>AZURE_WORKLOAD</dt>
+    <dd>AzureWorkload</dd>
+    <dt>DEFAULT_BACKUP</dt>
+    <dd>DefaultBackup</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="createmode">Create<wbr>Mode</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Invalid</dt>
+    <dd>Invalid</dd>
+    <dt>Default</dt>
+    <dd>Default</dd>
+    <dt>Recover</dt>
+    <dd>Recover</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Create<wbr>Mode<wbr>Invalid</dt>
+    <dd>Invalid</dd>
+    <dt>Create<wbr>Mode<wbr>Default</dt>
+    <dd>Default</dd>
+    <dt>Create<wbr>Mode<wbr>Recover</dt>
+    <dd>Recover</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Invalid</dt>
+    <dd>Invalid</dd>
+    <dt>Default</dt>
+    <dd>Default</dd>
+    <dt>Recover</dt>
+    <dd>Recover</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>INVALID</dt>
+    <dd>Invalid</dd>
+    <dt>DEFAULT</dt>
+    <dd>Default</dd>
+    <dt>RECOVER</dt>
+    <dd>Recover</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="dpmprotecteditem">DPMProtected<wbr>Item</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -9677,175 +8720,157 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupenginename_csharp">
 <a href="#backupenginename_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Engine<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup Management server protecting this backup item{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupmanagementtype_csharp">
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupsetname_csharp">
 <a href="#backupsetname_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containername_csharp">
 <a href="#containername_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createmode_csharp">
 <a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Create<wbr>Mode</span>
+        <span class="property-type">string | <a href="#createmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeinutc_csharp">
 <a href="#deferreddeletetimeinutc_csharp" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeremaining_csharp">
 <a href="#deferreddeletetimeremaining_csharp" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extendedinfo_csharp">
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dpmprotecteditemextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>DPMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended info of the backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendlyname_csharp">
 <a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the managed item{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isdeferreddeletescheduleupcoming_csharp">
 <a href="#isdeferreddeletescheduleupcoming_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrehydrate_csharp">
 <a href="#isrehydrate_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isscheduledfordeferreddelete_csharp">
 <a href="#isscheduledfordeferreddelete_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrecoverypoint_csharp">
 <a href="#lastrecoverypoint_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyid_csharp">
 <a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstate_csharp">
 <a href="#protectionstate_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Protected<wbr>Item<wbr>State</span>
+        <span class="property-type">string | <a href="#protecteditemstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Protected<wbr>Item<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Protection state of the backup engine{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_csharp">
 <a href="#sourceresourceid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_csharp">
 <a href="#workloadtype_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Data<wbr>Source<wbr>Type</span>
+        <span class="property-type">string | <a href="#datasourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Data<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -9854,175 +8879,157 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupenginename_go">
 <a href="#backupenginename_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Engine<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup Management server protecting this backup item{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupmanagementtype_go">
 <a href="#backupmanagementtype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupsetname_go">
 <a href="#backupsetname_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containername_go">
 <a href="#containername_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createmode_go">
 <a href="#createmode_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#createmode">Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeinutc_go">
 <a href="#deferreddeletetimeinutc_go" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeremaining_go">
 <a href="#deferreddeletetimeremaining_go" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extendedinfo_go">
 <a href="#extendedinfo_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dpmprotecteditemextendedinfo">DPMProtected<wbr>Item<wbr>Extended<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Extended info of the backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendlyname_go">
 <a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the managed item{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isdeferreddeletescheduleupcoming_go">
 <a href="#isdeferreddeletescheduleupcoming_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrehydrate_go">
 <a href="#isrehydrate_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isscheduledfordeferreddelete_go">
 <a href="#isscheduledfordeferreddelete_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrecoverypoint_go">
 <a href="#lastrecoverypoint_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyid_go">
 <a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstate_go">
 <a href="#protectionstate_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#protecteditemstate">Protected<wbr>Item<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Protection state of the backup engine{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_go">
 <a href="#sourceresourceid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_go">
 <a href="#workloadtype_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -10031,175 +9038,157 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupenginename_nodejs">
 <a href="#backupenginename_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Engine<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup Management server protecting this backup item{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupmanagementtype_nodejs">
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Backup<wbr>Management<wbr>Type</span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupsetname_nodejs">
 <a href="#backupsetname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containername_nodejs">
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createmode_nodejs">
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Create<wbr>Mode</span>
+        <span class="property-type">string | <a href="#createmode">Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeinutc_nodejs">
 <a href="#deferreddeletetimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeremaining_nodejs">
 <a href="#deferreddeletetimeremaining_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extendedinfo_nodejs">
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dpmprotecteditemextendedinfo">DPMProtected<wbr>Item<wbr>Extended<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Extended info of the backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendlyname_nodejs">
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the managed item{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isdeferreddeletescheduleupcoming_nodejs">
 <a href="#isdeferreddeletescheduleupcoming_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrehydrate_nodejs">
 <a href="#isrehydrate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isscheduledfordeferreddelete_nodejs">
 <a href="#isscheduledfordeferreddelete_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrecoverypoint_nodejs">
 <a href="#lastrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyid_nodejs">
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstate_nodejs">
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Protected<wbr>Item<wbr>State</span>
+        <span class="property-type">string | <a href="#protecteditemstate">Protected<wbr>Item<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Protection state of the backup engine{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_nodejs">
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_nodejs">
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Data<wbr>Source<wbr>Type</span>
+        <span class="property-type">string | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -10208,187 +9197,160 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backup_engine_name_python">
 <a href="#backup_engine_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>engine_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Backup Management server protecting this backup item{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backup_management_type_python">
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Backup<wbr>Management<wbr>Type</span>
+        <span class="property-type">str | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backup_set_name_python">
 <a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="container_name_python">
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="create_mode_python">
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Create<wbr>Mode</span>
+        <span class="property-type">str | <a href="#createmode">Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferred_delete_time_in_utc_python">
 <a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferred_delete_time_remaining_python">
 <a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extended_info_python">
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dpmprotecteditemextendedinfo">DPMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended info of the backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendly_name_python">
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Friendly name of the managed item{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_deferred_delete_schedule_upcoming_python">
 <a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_rehydrate_python">
 <a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_scheduled_for_deferred_delete_python">
 <a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="last_recovery_point_python">
 <a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_id_python">
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protection_state_python">
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Protected<wbr>Item<wbr>State</span>
+        <span class="property-type">str | <a href="#protecteditemstate">Protected<wbr>Item<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Protection state of the backup engine{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_resource_id_python">
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workload_type_python">
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Data<wbr>Source<wbr>Type</span>
+        <span class="property-type">str | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="dpmprotecteditemextendedinfo">DPMProtected<wbr>Item<wbr>Extended<wbr>Info</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -10396,145 +9358,130 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="diskstorageusedinbytes_csharp">
 <a href="#diskstorageusedinbytes_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Storage<wbr>Used<wbr>In<wbr>Bytes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used Disk storage in bytes.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iscollocated_csharp">
 <a href="#iscollocated_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Collocated</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}To check if backup item is collocated.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ispresentoncloud_csharp">
 <a href="#ispresentoncloud_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Present<wbr>On<wbr>Cloud</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}To check if backup item is cloud protected.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackupstatus_csharp">
 <a href="#lastbackupstatus_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last backup status information on backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrefreshedat_csharp">
 <a href="#lastrefreshedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Refreshed<wbr>At</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last refresh time on backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="oldestrecoverypoint_csharp">
 <a href="#oldestrecoverypoint_csharp" style="color: inherit; text-decoration: inherit;">Oldest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Oldest cloud recovery point time.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="onpremiselatestrecoverypoint_csharp">
 <a href="#onpremiselatestrecoverypoint_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Premise<wbr>Latest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}latest disk recovery point time.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="onpremiseoldestrecoverypoint_csharp">
 <a href="#onpremiseoldestrecoverypoint_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Premise<wbr>Oldest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Oldest disk recovery point time.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="onpremiserecoverypointcount_csharp">
 <a href="#onpremiserecoverypointcount_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Premise<wbr>Recovery<wbr>Point<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}disk recovery point count.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectableobjectloadpath_csharp">
 <a href="#protectableobjectloadpath_csharp" style="color: inherit; text-decoration: inherit;">Protectable<wbr>Object<wbr>Load<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Attribute to provide information on various DBs.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protected_csharp">
 <a href="#protected_csharp" style="color: inherit; text-decoration: inherit;">Protected</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}To check if backup item is disk protected.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectiongroupname_csharp">
 <a href="#protectiongroupname_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protection group name of the backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recoverypointcount_csharp">
 <a href="#recoverypointcount_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}cloud recovery point count.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="totaldiskstoragesizeinbytes_csharp">
 <a href="#totaldiskstoragesizeinbytes_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Disk<wbr>Storage<wbr>Size<wbr>In<wbr>Bytes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}total Disk storage in bytes.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -10543,145 +9490,130 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="diskstorageusedinbytes_go">
 <a href="#diskstorageusedinbytes_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Storage<wbr>Used<wbr>In<wbr>Bytes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used Disk storage in bytes.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iscollocated_go">
 <a href="#iscollocated_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Collocated</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}To check if backup item is collocated.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ispresentoncloud_go">
 <a href="#ispresentoncloud_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Present<wbr>On<wbr>Cloud</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}To check if backup item is cloud protected.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackupstatus_go">
 <a href="#lastbackupstatus_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last backup status information on backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrefreshedat_go">
 <a href="#lastrefreshedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Refreshed<wbr>At</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last refresh time on backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="oldestrecoverypoint_go">
 <a href="#oldestrecoverypoint_go" style="color: inherit; text-decoration: inherit;">Oldest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Oldest cloud recovery point time.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="onpremiselatestrecoverypoint_go">
 <a href="#onpremiselatestrecoverypoint_go" style="color: inherit; text-decoration: inherit;">On<wbr>Premise<wbr>Latest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}latest disk recovery point time.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="onpremiseoldestrecoverypoint_go">
 <a href="#onpremiseoldestrecoverypoint_go" style="color: inherit; text-decoration: inherit;">On<wbr>Premise<wbr>Oldest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Oldest disk recovery point time.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="onpremiserecoverypointcount_go">
 <a href="#onpremiserecoverypointcount_go" style="color: inherit; text-decoration: inherit;">On<wbr>Premise<wbr>Recovery<wbr>Point<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}disk recovery point count.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectableobjectloadpath_go">
 <a href="#protectableobjectloadpath_go" style="color: inherit; text-decoration: inherit;">Protectable<wbr>Object<wbr>Load<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Attribute to provide information on various DBs.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protected_go">
 <a href="#protected_go" style="color: inherit; text-decoration: inherit;">Protected</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}To check if backup item is disk protected.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectiongroupname_go">
 <a href="#protectiongroupname_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protection group name of the backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recoverypointcount_go">
 <a href="#recoverypointcount_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}cloud recovery point count.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="totaldiskstoragesizeinbytes_go">
 <a href="#totaldiskstoragesizeinbytes_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Disk<wbr>Storage<wbr>Size<wbr>In<wbr>Bytes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}total Disk storage in bytes.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -10690,145 +9622,130 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="diskstorageusedinbytes_nodejs">
 <a href="#diskstorageusedinbytes_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Storage<wbr>Used<wbr>In<wbr>Bytes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used Disk storage in bytes.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iscollocated_nodejs">
 <a href="#iscollocated_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Collocated</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}To check if backup item is collocated.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ispresentoncloud_nodejs">
 <a href="#ispresentoncloud_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Present<wbr>On<wbr>Cloud</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}To check if backup item is cloud protected.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackupstatus_nodejs">
 <a href="#lastbackupstatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last backup status information on backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrefreshedat_nodejs">
 <a href="#lastrefreshedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Refreshed<wbr>At</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last refresh time on backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="oldestrecoverypoint_nodejs">
 <a href="#oldestrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">oldest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Oldest cloud recovery point time.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="onpremiselatestrecoverypoint_nodejs">
 <a href="#onpremiselatestrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Premise<wbr>Latest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}latest disk recovery point time.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="onpremiseoldestrecoverypoint_nodejs">
 <a href="#onpremiseoldestrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Premise<wbr>Oldest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Oldest disk recovery point time.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="onpremiserecoverypointcount_nodejs">
 <a href="#onpremiserecoverypointcount_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Premise<wbr>Recovery<wbr>Point<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}disk recovery point count.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectableobjectloadpath_nodejs">
 <a href="#protectableobjectloadpath_nodejs" style="color: inherit; text-decoration: inherit;">protectable<wbr>Object<wbr>Load<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Attribute to provide information on various DBs.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protected_nodejs">
 <a href="#protected_nodejs" style="color: inherit; text-decoration: inherit;">protected</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}To check if backup item is disk protected.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectiongroupname_nodejs">
 <a href="#protectiongroupname_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protection group name of the backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recoverypointcount_nodejs">
 <a href="#recoverypointcount_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}cloud recovery point count.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="totaldiskstoragesizeinbytes_nodejs">
 <a href="#totaldiskstoragesizeinbytes_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Disk<wbr>Storage<wbr>Size<wbr>In<wbr>Bytes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}total Disk storage in bytes.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -10837,157 +9754,133 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="disk_storage_used_in_bytes_python">
 <a href="#disk_storage_used_in_bytes_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>storage_<wbr>used_<wbr>in_<wbr>bytes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Used Disk storage in bytes.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_collocated_python">
 <a href="#is_collocated_python" style="color: inherit; text-decoration: inherit;">is_<wbr>collocated</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}To check if backup item is collocated.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_present_on_cloud_python">
 <a href="#is_present_on_cloud_python" style="color: inherit; text-decoration: inherit;">is_<wbr>present_<wbr>on_<wbr>cloud</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}To check if backup item is cloud protected.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="last_backup_status_python">
 <a href="#last_backup_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last backup status information on backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="last_refreshed_at_python">
 <a href="#last_refreshed_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>refreshed_<wbr>at</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last refresh time on backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="oldest_recovery_point_python">
 <a href="#oldest_recovery_point_python" style="color: inherit; text-decoration: inherit;">oldest_<wbr>recovery_<wbr>point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Oldest cloud recovery point time.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="on_premise_latest_recovery_point_python">
 <a href="#on_premise_latest_recovery_point_python" style="color: inherit; text-decoration: inherit;">on_<wbr>premise_<wbr>latest_<wbr>recovery_<wbr>point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}latest disk recovery point time.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="on_premise_oldest_recovery_point_python">
 <a href="#on_premise_oldest_recovery_point_python" style="color: inherit; text-decoration: inherit;">on_<wbr>premise_<wbr>oldest_<wbr>recovery_<wbr>point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Oldest disk recovery point time.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="on_premise_recovery_point_count_python">
 <a href="#on_premise_recovery_point_count_python" style="color: inherit; text-decoration: inherit;">on_<wbr>premise_<wbr>recovery_<wbr>point_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}disk recovery point count.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectable_object_load_path_python">
 <a href="#protectable_object_load_path_python" style="color: inherit; text-decoration: inherit;">protectable_<wbr>object_<wbr>load_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Attribute to provide information on various DBs.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protected_python">
 <a href="#protected_python" style="color: inherit; text-decoration: inherit;">protected</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}To check if backup item is disk protected.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protection_group_name_python">
 <a href="#protection_group_name_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Protection group name of the backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recovery_point_count_python">
 <a href="#recovery_point_count_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}cloud recovery point count.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="total_disk_storage_size_in_bytes_python">
 <a href="#total_disk_storage_size_in_bytes_python" style="color: inherit; text-decoration: inherit;">total_<wbr>disk_<wbr>storage_<wbr>size_<wbr>in_<wbr>bytes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}total Disk storage in bytes.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="dpmprotecteditemextendedinforesponse">DPMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -10995,145 +9888,130 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="diskstorageusedinbytes_csharp">
 <a href="#diskstorageusedinbytes_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Storage<wbr>Used<wbr>In<wbr>Bytes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used Disk storage in bytes.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iscollocated_csharp">
 <a href="#iscollocated_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Collocated</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}To check if backup item is collocated.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ispresentoncloud_csharp">
 <a href="#ispresentoncloud_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Present<wbr>On<wbr>Cloud</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}To check if backup item is cloud protected.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackupstatus_csharp">
 <a href="#lastbackupstatus_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last backup status information on backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrefreshedat_csharp">
 <a href="#lastrefreshedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Refreshed<wbr>At</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last refresh time on backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="oldestrecoverypoint_csharp">
 <a href="#oldestrecoverypoint_csharp" style="color: inherit; text-decoration: inherit;">Oldest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Oldest cloud recovery point time.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="onpremiselatestrecoverypoint_csharp">
 <a href="#onpremiselatestrecoverypoint_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Premise<wbr>Latest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}latest disk recovery point time.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="onpremiseoldestrecoverypoint_csharp">
 <a href="#onpremiseoldestrecoverypoint_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Premise<wbr>Oldest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Oldest disk recovery point time.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="onpremiserecoverypointcount_csharp">
 <a href="#onpremiserecoverypointcount_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Premise<wbr>Recovery<wbr>Point<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}disk recovery point count.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectableobjectloadpath_csharp">
 <a href="#protectableobjectloadpath_csharp" style="color: inherit; text-decoration: inherit;">Protectable<wbr>Object<wbr>Load<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Attribute to provide information on various DBs.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protected_csharp">
 <a href="#protected_csharp" style="color: inherit; text-decoration: inherit;">Protected</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}To check if backup item is disk protected.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectiongroupname_csharp">
 <a href="#protectiongroupname_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protection group name of the backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recoverypointcount_csharp">
 <a href="#recoverypointcount_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}cloud recovery point count.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="totaldiskstoragesizeinbytes_csharp">
 <a href="#totaldiskstoragesizeinbytes_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Disk<wbr>Storage<wbr>Size<wbr>In<wbr>Bytes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}total Disk storage in bytes.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -11142,145 +10020,130 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="diskstorageusedinbytes_go">
 <a href="#diskstorageusedinbytes_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Storage<wbr>Used<wbr>In<wbr>Bytes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used Disk storage in bytes.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iscollocated_go">
 <a href="#iscollocated_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Collocated</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}To check if backup item is collocated.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ispresentoncloud_go">
 <a href="#ispresentoncloud_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Present<wbr>On<wbr>Cloud</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}To check if backup item is cloud protected.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackupstatus_go">
 <a href="#lastbackupstatus_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last backup status information on backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrefreshedat_go">
 <a href="#lastrefreshedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Refreshed<wbr>At</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last refresh time on backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="oldestrecoverypoint_go">
 <a href="#oldestrecoverypoint_go" style="color: inherit; text-decoration: inherit;">Oldest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Oldest cloud recovery point time.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="onpremiselatestrecoverypoint_go">
 <a href="#onpremiselatestrecoverypoint_go" style="color: inherit; text-decoration: inherit;">On<wbr>Premise<wbr>Latest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}latest disk recovery point time.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="onpremiseoldestrecoverypoint_go">
 <a href="#onpremiseoldestrecoverypoint_go" style="color: inherit; text-decoration: inherit;">On<wbr>Premise<wbr>Oldest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Oldest disk recovery point time.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="onpremiserecoverypointcount_go">
 <a href="#onpremiserecoverypointcount_go" style="color: inherit; text-decoration: inherit;">On<wbr>Premise<wbr>Recovery<wbr>Point<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}disk recovery point count.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectableobjectloadpath_go">
 <a href="#protectableobjectloadpath_go" style="color: inherit; text-decoration: inherit;">Protectable<wbr>Object<wbr>Load<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Attribute to provide information on various DBs.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protected_go">
 <a href="#protected_go" style="color: inherit; text-decoration: inherit;">Protected</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}To check if backup item is disk protected.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectiongroupname_go">
 <a href="#protectiongroupname_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protection group name of the backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recoverypointcount_go">
 <a href="#recoverypointcount_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}cloud recovery point count.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="totaldiskstoragesizeinbytes_go">
 <a href="#totaldiskstoragesizeinbytes_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Disk<wbr>Storage<wbr>Size<wbr>In<wbr>Bytes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}total Disk storage in bytes.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -11289,145 +10152,130 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="diskstorageusedinbytes_nodejs">
 <a href="#diskstorageusedinbytes_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Storage<wbr>Used<wbr>In<wbr>Bytes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used Disk storage in bytes.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="iscollocated_nodejs">
 <a href="#iscollocated_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Collocated</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}To check if backup item is collocated.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ispresentoncloud_nodejs">
 <a href="#ispresentoncloud_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Present<wbr>On<wbr>Cloud</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}To check if backup item is cloud protected.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackupstatus_nodejs">
 <a href="#lastbackupstatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last backup status information on backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrefreshedat_nodejs">
 <a href="#lastrefreshedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Refreshed<wbr>At</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last refresh time on backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="oldestrecoverypoint_nodejs">
 <a href="#oldestrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">oldest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Oldest cloud recovery point time.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="onpremiselatestrecoverypoint_nodejs">
 <a href="#onpremiselatestrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Premise<wbr>Latest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}latest disk recovery point time.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="onpremiseoldestrecoverypoint_nodejs">
 <a href="#onpremiseoldestrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Premise<wbr>Oldest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Oldest disk recovery point time.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="onpremiserecoverypointcount_nodejs">
 <a href="#onpremiserecoverypointcount_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Premise<wbr>Recovery<wbr>Point<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}disk recovery point count.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectableobjectloadpath_nodejs">
 <a href="#protectableobjectloadpath_nodejs" style="color: inherit; text-decoration: inherit;">protectable<wbr>Object<wbr>Load<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Attribute to provide information on various DBs.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protected_nodejs">
 <a href="#protected_nodejs" style="color: inherit; text-decoration: inherit;">protected</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}To check if backup item is disk protected.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectiongroupname_nodejs">
 <a href="#protectiongroupname_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protection group name of the backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recoverypointcount_nodejs">
 <a href="#recoverypointcount_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}cloud recovery point count.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="totaldiskstoragesizeinbytes_nodejs">
 <a href="#totaldiskstoragesizeinbytes_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Disk<wbr>Storage<wbr>Size<wbr>In<wbr>Bytes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}total Disk storage in bytes.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -11436,156 +10284,132 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="disk_storage_used_in_bytes_python">
 <a href="#disk_storage_used_in_bytes_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>storage_<wbr>used_<wbr>in_<wbr>bytes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Used Disk storage in bytes.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_collocated_python">
 <a href="#is_collocated_python" style="color: inherit; text-decoration: inherit;">is_<wbr>collocated</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}To check if backup item is collocated.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_present_on_cloud_python">
 <a href="#is_present_on_cloud_python" style="color: inherit; text-decoration: inherit;">is_<wbr>present_<wbr>on_<wbr>cloud</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}To check if backup item is cloud protected.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="last_backup_status_python">
 <a href="#last_backup_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last backup status information on backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="last_refreshed_at_python">
 <a href="#last_refreshed_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>refreshed_<wbr>at</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last refresh time on backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="oldest_recovery_point_python">
 <a href="#oldest_recovery_point_python" style="color: inherit; text-decoration: inherit;">oldest_<wbr>recovery_<wbr>point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Oldest cloud recovery point time.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="on_premise_latest_recovery_point_python">
 <a href="#on_premise_latest_recovery_point_python" style="color: inherit; text-decoration: inherit;">on_<wbr>premise_<wbr>latest_<wbr>recovery_<wbr>point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}latest disk recovery point time.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="on_premise_oldest_recovery_point_python">
 <a href="#on_premise_oldest_recovery_point_python" style="color: inherit; text-decoration: inherit;">on_<wbr>premise_<wbr>oldest_<wbr>recovery_<wbr>point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Oldest disk recovery point time.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="on_premise_recovery_point_count_python">
 <a href="#on_premise_recovery_point_count_python" style="color: inherit; text-decoration: inherit;">on_<wbr>premise_<wbr>recovery_<wbr>point_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}disk recovery point count.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectable_object_load_path_python">
 <a href="#protectable_object_load_path_python" style="color: inherit; text-decoration: inherit;">protectable_<wbr>object_<wbr>load_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Attribute to provide information on various DBs.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protected_python">
 <a href="#protected_python" style="color: inherit; text-decoration: inherit;">protected</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}To check if backup item is disk protected.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protection_group_name_python">
 <a href="#protection_group_name_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Protection group name of the backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recovery_point_count_python">
 <a href="#recovery_point_count_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}cloud recovery point count.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="total_disk_storage_size_in_bytes_python">
 <a href="#total_disk_storage_size_in_bytes_python" style="color: inherit; text-decoration: inherit;">total_<wbr>disk_<wbr>storage_<wbr>size_<wbr>in_<wbr>bytes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}total Disk storage in bytes.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="dpmprotecteditemresponse">DPMProtected<wbr>Item<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -11594,175 +10418,157 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupenginename_csharp">
 <a href="#backupenginename_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Engine<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup Management server protecting this backup item{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupmanagementtype_csharp">
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupsetname_csharp">
 <a href="#backupsetname_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containername_csharp">
 <a href="#containername_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createmode_csharp">
 <a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeinutc_csharp">
 <a href="#deferreddeletetimeinutc_csharp" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeremaining_csharp">
 <a href="#deferreddeletetimeremaining_csharp" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extendedinfo_csharp">
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dpmprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>DPMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended info of the backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendlyname_csharp">
 <a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the managed item{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isdeferreddeletescheduleupcoming_csharp">
 <a href="#isdeferreddeletescheduleupcoming_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrehydrate_csharp">
 <a href="#isrehydrate_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isscheduledfordeferreddelete_csharp">
 <a href="#isscheduledfordeferreddelete_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrecoverypoint_csharp">
 <a href="#lastrecoverypoint_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyid_csharp">
 <a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstate_csharp">
 <a href="#protectionstate_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protection state of the backup engine{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_csharp">
 <a href="#sourceresourceid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_csharp">
 <a href="#workloadtype_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -11771,175 +10577,157 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupenginename_go">
 <a href="#backupenginename_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Engine<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup Management server protecting this backup item{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupmanagementtype_go">
 <a href="#backupmanagementtype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupsetname_go">
 <a href="#backupsetname_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containername_go">
 <a href="#containername_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createmode_go">
 <a href="#createmode_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeinutc_go">
 <a href="#deferreddeletetimeinutc_go" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeremaining_go">
 <a href="#deferreddeletetimeremaining_go" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extendedinfo_go">
 <a href="#extendedinfo_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dpmprotecteditemextendedinforesponse">DPMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Extended info of the backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendlyname_go">
 <a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the managed item{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isdeferreddeletescheduleupcoming_go">
 <a href="#isdeferreddeletescheduleupcoming_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrehydrate_go">
 <a href="#isrehydrate_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isscheduledfordeferreddelete_go">
 <a href="#isscheduledfordeferreddelete_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrecoverypoint_go">
 <a href="#lastrecoverypoint_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyid_go">
 <a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstate_go">
 <a href="#protectionstate_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protection state of the backup engine{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_go">
 <a href="#sourceresourceid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_go">
 <a href="#workloadtype_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -11948,175 +10736,157 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupenginename_nodejs">
 <a href="#backupenginename_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Engine<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup Management server protecting this backup item{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupmanagementtype_nodejs">
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupsetname_nodejs">
 <a href="#backupsetname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containername_nodejs">
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createmode_nodejs">
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeinutc_nodejs">
 <a href="#deferreddeletetimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeremaining_nodejs">
 <a href="#deferreddeletetimeremaining_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extendedinfo_nodejs">
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dpmprotecteditemextendedinforesponse">DPMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Extended info of the backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendlyname_nodejs">
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the managed item{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isdeferreddeletescheduleupcoming_nodejs">
 <a href="#isdeferreddeletescheduleupcoming_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrehydrate_nodejs">
 <a href="#isrehydrate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isscheduledfordeferreddelete_nodejs">
 <a href="#isscheduledfordeferreddelete_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrecoverypoint_nodejs">
 <a href="#lastrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyid_nodejs">
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstate_nodejs">
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protection state of the backup engine{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_nodejs">
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_nodejs">
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -12125,187 +10895,302 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backup_engine_name_python">
 <a href="#backup_engine_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>engine_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Backup Management server protecting this backup item{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backup_management_type_python">
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backup_set_name_python">
 <a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="container_name_python">
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="create_mode_python">
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferred_delete_time_in_utc_python">
 <a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferred_delete_time_remaining_python">
 <a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extended_info_python">
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dpmprotecteditemextendedinforesponse">DPMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended info of the backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendly_name_python">
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Friendly name of the managed item{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_deferred_delete_schedule_upcoming_python">
 <a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_rehydrate_python">
 <a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_scheduled_for_deferred_delete_python">
 <a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="last_recovery_point_python">
 <a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_id_python">
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protection_state_python">
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Protection state of the backup engine{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_resource_id_python">
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workload_type_python">
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="datasourcetype">Data<wbr>Source<wbr>Type</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Invalid</dt>
+    <dd>Invalid</dd>
+    <dt>VM</dt>
+    <dd>VM</dd>
+    <dt>File<wbr>Folder</dt>
+    <dd>FileFolder</dd>
+    <dt>Azure<wbr>Sql<wbr>Db</dt>
+    <dd>AzureSqlDb</dd>
+    <dt>SQLDB</dt>
+    <dd>SQLDB</dd>
+    <dt>Exchange</dt>
+    <dd>Exchange</dd>
+    <dt>Sharepoint</dt>
+    <dd>Sharepoint</dd>
+    <dt>VMware<wbr>VM</dt>
+    <dd>VMwareVM</dd>
+    <dt>System<wbr>State</dt>
+    <dd>SystemState</dd>
+    <dt>Client</dt>
+    <dd>Client</dd>
+    <dt>Generic<wbr>Data<wbr>Source</dt>
+    <dd>GenericDataSource</dd>
+    <dt>SQLData<wbr>Base</dt>
+    <dd>SQLDataBase</dd>
+    <dt>Azure<wbr>File<wbr>Share</dt>
+    <dd>AzureFileShare</dd>
+    <dt>SAPHana<wbr>Database</dt>
+    <dd>SAPHanaDatabase</dd>
+    <dt>SAPAse<wbr>Database</dt>
+    <dd>SAPAseDatabase</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Data<wbr>Source<wbr>Type<wbr>Invalid</dt>
+    <dd>Invalid</dd>
+    <dt>Data<wbr>Source<wbr>Type<wbr>VM</dt>
+    <dd>VM</dd>
+    <dt>Data<wbr>Source<wbr>Type<wbr>File<wbr>Folder</dt>
+    <dd>FileFolder</dd>
+    <dt>Data<wbr>Source<wbr>Type<wbr>Azure<wbr>Sql<wbr>Db</dt>
+    <dd>AzureSqlDb</dd>
+    <dt>Data<wbr>Source<wbr>Type<wbr>SQLDB</dt>
+    <dd>SQLDB</dd>
+    <dt>Data<wbr>Source<wbr>Type<wbr>Exchange</dt>
+    <dd>Exchange</dd>
+    <dt>Data<wbr>Source<wbr>Type<wbr>Sharepoint</dt>
+    <dd>Sharepoint</dd>
+    <dt>Data<wbr>Source<wbr>Type<wbr>VMware<wbr>VM</dt>
+    <dd>VMwareVM</dd>
+    <dt>Data<wbr>Source<wbr>Type<wbr>System<wbr>State</dt>
+    <dd>SystemState</dd>
+    <dt>Data<wbr>Source<wbr>Type<wbr>Client</dt>
+    <dd>Client</dd>
+    <dt>Data<wbr>Source<wbr>Type<wbr>Generic<wbr>Data<wbr>Source</dt>
+    <dd>GenericDataSource</dd>
+    <dt>Data<wbr>Source<wbr>Type<wbr>SQLData<wbr>Base</dt>
+    <dd>SQLDataBase</dd>
+    <dt>Data<wbr>Source<wbr>Type<wbr>Azure<wbr>File<wbr>Share</dt>
+    <dd>AzureFileShare</dd>
+    <dt>Data<wbr>Source<wbr>Type<wbr>SAPHana<wbr>Database</dt>
+    <dd>SAPHanaDatabase</dd>
+    <dt>Data<wbr>Source<wbr>Type<wbr>SAPAse<wbr>Database</dt>
+    <dd>SAPAseDatabase</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Invalid</dt>
+    <dd>Invalid</dd>
+    <dt>VM</dt>
+    <dd>VM</dd>
+    <dt>File<wbr>Folder</dt>
+    <dd>FileFolder</dd>
+    <dt>Azure<wbr>Sql<wbr>Db</dt>
+    <dd>AzureSqlDb</dd>
+    <dt>SQLDB</dt>
+    <dd>SQLDB</dd>
+    <dt>Exchange</dt>
+    <dd>Exchange</dd>
+    <dt>Sharepoint</dt>
+    <dd>Sharepoint</dd>
+    <dt>VMware<wbr>VM</dt>
+    <dd>VMwareVM</dd>
+    <dt>System<wbr>State</dt>
+    <dd>SystemState</dd>
+    <dt>Client</dt>
+    <dd>Client</dd>
+    <dt>Generic<wbr>Data<wbr>Source</dt>
+    <dd>GenericDataSource</dd>
+    <dt>SQLData<wbr>Base</dt>
+    <dd>SQLDataBase</dd>
+    <dt>Azure<wbr>File<wbr>Share</dt>
+    <dd>AzureFileShare</dd>
+    <dt>SAPHana<wbr>Database</dt>
+    <dd>SAPHanaDatabase</dd>
+    <dt>SAPAse<wbr>Database</dt>
+    <dd>SAPAseDatabase</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>INVALID</dt>
+    <dd>Invalid</dd>
+    <dt>VM</dt>
+    <dd>VM</dd>
+    <dt>FILE_FOLDER</dt>
+    <dd>FileFolder</dd>
+    <dt>AZURE_SQL_DB</dt>
+    <dd>AzureSqlDb</dd>
+    <dt>SQLDB</dt>
+    <dd>SQLDB</dd>
+    <dt>EXCHANGE</dt>
+    <dd>Exchange</dd>
+    <dt>SHAREPOINT</dt>
+    <dd>Sharepoint</dd>
+    <dt>V_MWARE_VM</dt>
+    <dd>VMwareVM</dd>
+    <dt>SYSTEM_STATE</dt>
+    <dd>SystemState</dd>
+    <dt>CLIENT</dt>
+    <dd>Client</dd>
+    <dt>GENERIC_DATA_SOURCE</dt>
+    <dd>GenericDataSource</dd>
+    <dt>SQL_DATA_BASE</dt>
+    <dd>SQLDataBase</dd>
+    <dt>AZURE_FILE_SHARE</dt>
+    <dd>AzureFileShare</dd>
+    <dt>SAP_HANA_DATABASE</dt>
+    <dd>SAPHanaDatabase</dd>
+    <dt>SAPASE_DATABASE</dt>
+    <dd>SAPAseDatabase</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="diskexclusionproperties">Disk<wbr>Exclusion<wbr>Properties</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -12313,25 +11198,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="disklunlist_csharp">
 <a href="#disklunlist_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Lun<wbr>List</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
+        <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}List of Disks' Logical Unit Numbers (LUN) to be used for VM Protection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isinclusionlist_csharp">
 <a href="#isinclusionlist_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Inclusion<wbr>List</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether DiskLunList is to be included/ excluded from backup.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -12340,25 +11222,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="disklunlist_go">
 <a href="#disklunlist_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Lun<wbr>List</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
+        <span class="property-type">[]int</span>
     </dt>
     <dd>{{% md %}}List of Disks' Logical Unit Numbers (LUN) to be used for VM Protection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isinclusionlist_go">
 <a href="#isinclusionlist_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Inclusion<wbr>List</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether DiskLunList is to be included/ excluded from backup.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -12367,25 +11246,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="disklunlist_nodejs">
 <a href="#disklunlist_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Lun<wbr>List</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}List of Disks' Logical Unit Numbers (LUN) to be used for VM Protection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isinclusionlist_nodejs">
 <a href="#isinclusionlist_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Inclusion<wbr>List</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether DiskLunList is to be included/ excluded from backup.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -12394,37 +11270,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="disk_lun_list_python">
 <a href="#disk_lun_list_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>lun_<wbr>list</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}List of Disks' Logical Unit Numbers (LUN) to be used for VM Protection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_inclusion_list_python">
 <a href="#is_inclusion_list_python" style="color: inherit; text-decoration: inherit;">is_<wbr>inclusion_<wbr>list</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether DiskLunList is to be included/ excluded from backup.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="diskexclusionpropertiesresponse">Disk<wbr>Exclusion<wbr>Properties<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -12432,25 +11296,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="disklunlist_csharp">
 <a href="#disklunlist_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Lun<wbr>List</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
+        <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}List of Disks' Logical Unit Numbers (LUN) to be used for VM Protection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isinclusionlist_csharp">
 <a href="#isinclusionlist_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Inclusion<wbr>List</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether DiskLunList is to be included/ excluded from backup.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -12459,25 +11320,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="disklunlist_go">
 <a href="#disklunlist_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Lun<wbr>List</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
+        <span class="property-type">[]int</span>
     </dt>
     <dd>{{% md %}}List of Disks' Logical Unit Numbers (LUN) to be used for VM Protection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isinclusionlist_go">
 <a href="#isinclusionlist_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Inclusion<wbr>List</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether DiskLunList is to be included/ excluded from backup.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -12486,25 +11344,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="disklunlist_nodejs">
 <a href="#disklunlist_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Lun<wbr>List</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}List of Disks' Logical Unit Numbers (LUN) to be used for VM Protection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isinclusionlist_nodejs">
 <a href="#isinclusionlist_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Inclusion<wbr>List</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether DiskLunList is to be included/ excluded from backup.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -12513,36 +11368,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="disk_lun_list_python">
 <a href="#disk_lun_list_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>lun_<wbr>list</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}List of Disks' Logical Unit Numbers (LUN) to be used for VM Protection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_inclusion_list_python">
 <a href="#is_inclusion_list_python" style="color: inherit; text-decoration: inherit;">is_<wbr>inclusion_<wbr>list</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to indicate whether DiskLunList is to be included/ excluded from backup.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="errordetailresponse">Error<wbr>Detail<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -12551,35 +11394,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="code_csharp">
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Error code.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Error Message related to the Code.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="recommendations_csharp">
 <a href="#recommendations_csharp" style="color: inherit; text-decoration: inherit;">Recommendations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of recommendation strings.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -12588,35 +11427,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="code_go">
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Error code.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Error Message related to the Code.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="recommendations_go">
 <a href="#recommendations_go" style="color: inherit; text-decoration: inherit;">Recommendations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of recommendation strings.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -12625,35 +11460,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="code_nodejs">
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Error code.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Error Message related to the Code.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="recommendations_nodejs">
 <a href="#recommendations_nodejs" style="color: inherit; text-decoration: inherit;">recommendations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of recommendation strings.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -12662,46 +11493,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="code_python">
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Error code.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Error Message related to the Code.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="recommendations_python">
 <a href="#recommendations_python" style="color: inherit; text-decoration: inherit;">recommendations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of recommendation strings.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="extendedproperties">Extended<wbr>Properties</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -12710,15 +11528,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="diskexclusionproperties_csharp">
 <a href="#diskexclusionproperties_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Exclusion<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskexclusionproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Disk<wbr>Exclusion<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Disk Exclusion.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -12727,15 +11543,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="diskexclusionproperties_go">
 <a href="#diskexclusionproperties_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Exclusion<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskexclusionproperties">Disk<wbr>Exclusion<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Disk Exclusion.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -12744,15 +11558,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="diskexclusionproperties_nodejs">
 <a href="#diskexclusionproperties_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Exclusion<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskexclusionproperties">Disk<wbr>Exclusion<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Disk Exclusion.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -12761,26 +11573,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="disk_exclusion_properties_python">
 <a href="#disk_exclusion_properties_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>exclusion_<wbr>properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskexclusionproperties">Disk<wbr>Exclusion<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Disk Exclusion.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="extendedpropertiesresponse">Extended<wbr>Properties<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -12789,15 +11590,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="diskexclusionproperties_csharp">
 <a href="#diskexclusionproperties_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Exclusion<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskexclusionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Disk<wbr>Exclusion<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Disk Exclusion.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -12806,15 +11605,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="diskexclusionproperties_go">
 <a href="#diskexclusionproperties_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Exclusion<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskexclusionpropertiesresponse">Disk<wbr>Exclusion<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Disk Exclusion.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -12823,15 +11620,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="diskexclusionproperties_nodejs">
 <a href="#diskexclusionproperties_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Exclusion<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskexclusionpropertiesresponse">Disk<wbr>Exclusion<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Disk Exclusion.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -12840,27 +11635,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="disk_exclusion_properties_python">
 <a href="#disk_exclusion_properties_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>exclusion_<wbr>properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskexclusionpropertiesresponse">Disk<wbr>Exclusion<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Extended Properties for Disk Exclusion.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="genericprotecteditem">Generic<wbr>Protected<wbr>Item</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -12868,195 +11652,175 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupmanagementtype_csharp">
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupsetname_csharp">
 <a href="#backupsetname_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containername_csharp">
 <a href="#containername_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createmode_csharp">
 <a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Create<wbr>Mode</span>
+        <span class="property-type">string | <a href="#createmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeinutc_csharp">
 <a href="#deferreddeletetimeinutc_csharp" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeremaining_csharp">
 <a href="#deferreddeletetimeremaining_csharp" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fabricname_csharp">
 <a href="#fabricname_csharp" style="color: inherit; text-decoration: inherit;">Fabric<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of this backup item's fabric.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendlyname_csharp">
 <a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isdeferreddeletescheduleupcoming_csharp">
 <a href="#isdeferreddeletescheduleupcoming_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrehydrate_csharp">
 <a href="#isrehydrate_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isscheduledfordeferreddelete_csharp">
 <a href="#isscheduledfordeferreddelete_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrecoverypoint_csharp">
 <a href="#lastrecoverypoint_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyid_csharp">
 <a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policystate_csharp">
 <a href="#policystate_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates consistency of policy object and policy applied to this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protecteditemid_csharp">
 <a href="#protecteditemid_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Data Plane Service ID of the protected item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstate_csharp">
 <a href="#protectionstate_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Protection<wbr>State</span>
+        <span class="property-type">string | <a href="#protectionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Protection<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceassociations_csharp">
 <a href="#sourceassociations_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Associations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Loosely coupled (type, value) associations (example - parent of a protected item){{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_csharp">
 <a href="#sourceresourceid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_csharp">
 <a href="#workloadtype_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Data<wbr>Source<wbr>Type</span>
+        <span class="property-type">string | <a href="#datasourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Data<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -13065,195 +11829,175 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupmanagementtype_go">
 <a href="#backupmanagementtype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupsetname_go">
 <a href="#backupsetname_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containername_go">
 <a href="#containername_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createmode_go">
 <a href="#createmode_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#createmode">Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeinutc_go">
 <a href="#deferreddeletetimeinutc_go" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeremaining_go">
 <a href="#deferreddeletetimeremaining_go" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fabricname_go">
 <a href="#fabricname_go" style="color: inherit; text-decoration: inherit;">Fabric<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of this backup item's fabric.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendlyname_go">
 <a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isdeferreddeletescheduleupcoming_go">
 <a href="#isdeferreddeletescheduleupcoming_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrehydrate_go">
 <a href="#isrehydrate_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isscheduledfordeferreddelete_go">
 <a href="#isscheduledfordeferreddelete_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrecoverypoint_go">
 <a href="#lastrecoverypoint_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyid_go">
 <a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policystate_go">
 <a href="#policystate_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates consistency of policy object and policy applied to this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protecteditemid_go">
 <a href="#protecteditemid_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Data Plane Service ID of the protected item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstate_go">
 <a href="#protectionstate_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#protectionstate">Protection<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceassociations_go">
 <a href="#sourceassociations_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Associations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Loosely coupled (type, value) associations (example - parent of a protected item){{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_go">
 <a href="#sourceresourceid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_go">
 <a href="#workloadtype_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -13262,195 +12006,175 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupmanagementtype_nodejs">
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Backup<wbr>Management<wbr>Type</span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupsetname_nodejs">
 <a href="#backupsetname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containername_nodejs">
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createmode_nodejs">
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Create<wbr>Mode</span>
+        <span class="property-type">string | <a href="#createmode">Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeinutc_nodejs">
 <a href="#deferreddeletetimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeremaining_nodejs">
 <a href="#deferreddeletetimeremaining_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fabricname_nodejs">
 <a href="#fabricname_nodejs" style="color: inherit; text-decoration: inherit;">fabric<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of this backup item's fabric.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendlyname_nodejs">
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isdeferreddeletescheduleupcoming_nodejs">
 <a href="#isdeferreddeletescheduleupcoming_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrehydrate_nodejs">
 <a href="#isrehydrate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isscheduledfordeferreddelete_nodejs">
 <a href="#isscheduledfordeferreddelete_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrecoverypoint_nodejs">
 <a href="#lastrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyid_nodejs">
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policystate_nodejs">
 <a href="#policystate_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates consistency of policy object and policy applied to this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protecteditemid_nodejs">
 <a href="#protecteditemid_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Data Plane Service ID of the protected item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstate_nodejs">
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Protection<wbr>State</span>
+        <span class="property-type">string | <a href="#protectionstate">Protection<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceassociations_nodejs">
 <a href="#sourceassociations_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Associations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Loosely coupled (type, value) associations (example - parent of a protected item){{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_nodejs">
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_nodejs">
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Data<wbr>Source<wbr>Type</span>
+        <span class="property-type">string | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -13459,207 +12183,178 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backup_management_type_python">
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Backup<wbr>Management<wbr>Type</span>
+        <span class="property-type">str | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backup_set_name_python">
 <a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="container_name_python">
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="create_mode_python">
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Create<wbr>Mode</span>
+        <span class="property-type">str | <a href="#createmode">Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferred_delete_time_in_utc_python">
 <a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferred_delete_time_remaining_python">
 <a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fabric_name_python">
 <a href="#fabric_name_python" style="color: inherit; text-decoration: inherit;">fabric_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of this backup item's fabric.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendly_name_python">
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_deferred_delete_schedule_upcoming_python">
 <a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_rehydrate_python">
 <a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_scheduled_for_deferred_delete_python">
 <a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="last_recovery_point_python">
 <a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_id_python">
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_state_python">
 <a href="#policy_state_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates consistency of policy object and policy applied to this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protected_item_id_python">
 <a href="#protected_item_id_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Data Plane Service ID of the protected item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protection_state_python">
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Protection<wbr>State</span>
+        <span class="property-type">str | <a href="#protectionstate">Protection<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_associations_python">
 <a href="#source_associations_python" style="color: inherit; text-decoration: inherit;">source_<wbr>associations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Loosely coupled (type, value) associations (example - parent of a protected item){{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_resource_id_python">
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workload_type_python">
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Data<wbr>Source<wbr>Type</span>
+        <span class="property-type">str | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="genericprotecteditemresponse">Generic<wbr>Protected<wbr>Item<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -13667,195 +12362,175 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupmanagementtype_csharp">
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupsetname_csharp">
 <a href="#backupsetname_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containername_csharp">
 <a href="#containername_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createmode_csharp">
 <a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeinutc_csharp">
 <a href="#deferreddeletetimeinutc_csharp" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeremaining_csharp">
 <a href="#deferreddeletetimeremaining_csharp" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fabricname_csharp">
 <a href="#fabricname_csharp" style="color: inherit; text-decoration: inherit;">Fabric<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of this backup item's fabric.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendlyname_csharp">
 <a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isdeferreddeletescheduleupcoming_csharp">
 <a href="#isdeferreddeletescheduleupcoming_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrehydrate_csharp">
 <a href="#isrehydrate_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isscheduledfordeferreddelete_csharp">
 <a href="#isscheduledfordeferreddelete_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrecoverypoint_csharp">
 <a href="#lastrecoverypoint_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyid_csharp">
 <a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policystate_csharp">
 <a href="#policystate_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates consistency of policy object and policy applied to this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protecteditemid_csharp">
 <a href="#protecteditemid_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Data Plane Service ID of the protected item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstate_csharp">
 <a href="#protectionstate_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceassociations_csharp">
 <a href="#sourceassociations_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Associations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Loosely coupled (type, value) associations (example - parent of a protected item){{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_csharp">
 <a href="#sourceresourceid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_csharp">
 <a href="#workloadtype_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -13864,195 +12539,175 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupmanagementtype_go">
 <a href="#backupmanagementtype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupsetname_go">
 <a href="#backupsetname_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containername_go">
 <a href="#containername_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createmode_go">
 <a href="#createmode_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeinutc_go">
 <a href="#deferreddeletetimeinutc_go" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeremaining_go">
 <a href="#deferreddeletetimeremaining_go" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fabricname_go">
 <a href="#fabricname_go" style="color: inherit; text-decoration: inherit;">Fabric<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of this backup item's fabric.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendlyname_go">
 <a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isdeferreddeletescheduleupcoming_go">
 <a href="#isdeferreddeletescheduleupcoming_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrehydrate_go">
 <a href="#isrehydrate_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isscheduledfordeferreddelete_go">
 <a href="#isscheduledfordeferreddelete_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrecoverypoint_go">
 <a href="#lastrecoverypoint_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyid_go">
 <a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policystate_go">
 <a href="#policystate_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates consistency of policy object and policy applied to this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protecteditemid_go">
 <a href="#protecteditemid_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Data Plane Service ID of the protected item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstate_go">
 <a href="#protectionstate_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceassociations_go">
 <a href="#sourceassociations_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Associations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Loosely coupled (type, value) associations (example - parent of a protected item){{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_go">
 <a href="#sourceresourceid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_go">
 <a href="#workloadtype_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -14061,195 +12716,175 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupmanagementtype_nodejs">
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupsetname_nodejs">
 <a href="#backupsetname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containername_nodejs">
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createmode_nodejs">
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeinutc_nodejs">
 <a href="#deferreddeletetimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeremaining_nodejs">
 <a href="#deferreddeletetimeremaining_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fabricname_nodejs">
 <a href="#fabricname_nodejs" style="color: inherit; text-decoration: inherit;">fabric<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of this backup item's fabric.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendlyname_nodejs">
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isdeferreddeletescheduleupcoming_nodejs">
 <a href="#isdeferreddeletescheduleupcoming_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrehydrate_nodejs">
 <a href="#isrehydrate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isscheduledfordeferreddelete_nodejs">
 <a href="#isscheduledfordeferreddelete_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrecoverypoint_nodejs">
 <a href="#lastrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyid_nodejs">
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policystate_nodejs">
 <a href="#policystate_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates consistency of policy object and policy applied to this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protecteditemid_nodejs">
 <a href="#protecteditemid_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Data Plane Service ID of the protected item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstate_nodejs">
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceassociations_nodejs">
 <a href="#sourceassociations_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Associations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Loosely coupled (type, value) associations (example - parent of a protected item){{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_nodejs">
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_nodejs">
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -14258,206 +12893,231 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backup_management_type_python">
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backup_set_name_python">
 <a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="container_name_python">
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="create_mode_python">
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferred_delete_time_in_utc_python">
 <a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferred_delete_time_remaining_python">
 <a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fabric_name_python">
 <a href="#fabric_name_python" style="color: inherit; text-decoration: inherit;">fabric_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of this backup item's fabric.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendly_name_python">
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_deferred_delete_schedule_upcoming_python">
 <a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_rehydrate_python">
 <a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_scheduled_for_deferred_delete_python">
 <a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="last_recovery_point_python">
 <a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_id_python">
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_state_python">
 <a href="#policy_state_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates consistency of policy object and policy applied to this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protected_item_id_python">
 <a href="#protected_item_id_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Data Plane Service ID of the protected item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protection_state_python">
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_associations_python">
 <a href="#source_associations_python" style="color: inherit; text-decoration: inherit;">source_<wbr>associations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Loosely coupled (type, value) associations (example - parent of a protected item){{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_resource_id_python">
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workload_type_python">
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="healthstatus">Health<wbr>Status</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Passed</dt>
+    <dd>Passed</dd>
+    <dt>Action<wbr>Required</dt>
+    <dd>ActionRequired</dd>
+    <dt>Action<wbr>Suggested</dt>
+    <dd>ActionSuggested</dd>
+    <dt>Invalid</dt>
+    <dd>Invalid</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Health<wbr>Status<wbr>Passed</dt>
+    <dd>Passed</dd>
+    <dt>Health<wbr>Status<wbr>Action<wbr>Required</dt>
+    <dd>ActionRequired</dd>
+    <dt>Health<wbr>Status<wbr>Action<wbr>Suggested</dt>
+    <dd>ActionSuggested</dd>
+    <dt>Health<wbr>Status<wbr>Invalid</dt>
+    <dd>Invalid</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Passed</dt>
+    <dd>Passed</dd>
+    <dt>Action<wbr>Required</dt>
+    <dd>ActionRequired</dd>
+    <dt>Action<wbr>Suggested</dt>
+    <dd>ActionSuggested</dd>
+    <dt>Invalid</dt>
+    <dd>Invalid</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>PASSED</dt>
+    <dd>Passed</dd>
+    <dt>ACTION_REQUIRED</dt>
+    <dd>ActionRequired</dd>
+    <dt>ACTION_SUGGESTED</dt>
+    <dd>ActionSuggested</dd>
+    <dt>INVALID</dt>
+    <dd>Invalid</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="kpiresourcehealthdetails">KPIResource<wbr>Health<wbr>Details</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -14466,15 +13126,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="resourcehealthstatus_csharp">
 <a href="#resourcehealthstatus_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Health<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Resource<wbr>Health<wbr>Status</span>
+        <span class="property-type">string | <a href="#resourcehealthstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Resource<wbr>Health<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Resource Health Status{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -14483,15 +13141,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="resourcehealthstatus_go">
 <a href="#resourcehealthstatus_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Health<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#resourcehealthstatus">Resource<wbr>Health<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Resource Health Status{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -14500,15 +13156,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="resourcehealthstatus_nodejs">
 <a href="#resourcehealthstatus_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Health<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Resource<wbr>Health<wbr>Status</span>
+        <span class="property-type">string | <a href="#resourcehealthstatus">Resource<wbr>Health<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Resource Health Status{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -14517,26 +13171,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="resource_health_status_python">
 <a href="#resource_health_status_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>health_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Resource<wbr>Health<wbr>Status</span>
+        <span class="property-type">str | <a href="#resourcehealthstatus">Resource<wbr>Health<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}Resource Health Status{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="kpiresourcehealthdetailsresponse">KPIResource<wbr>Health<wbr>Details<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -14545,25 +13188,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="resourcehealthdetails_csharp">
 <a href="#resourcehealthdetails_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Health<wbr>Details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcehealthdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Resource<wbr>Health<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Resource Health Status{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resourcehealthstatus_csharp">
 <a href="#resourcehealthstatus_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Health<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource Health Status{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -14572,25 +13212,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="resourcehealthdetails_go">
 <a href="#resourcehealthdetails_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Health<wbr>Details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcehealthdetailsresponse">[]Resource<wbr>Health<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Resource Health Status{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resourcehealthstatus_go">
 <a href="#resourcehealthstatus_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Health<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource Health Status{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -14599,25 +13236,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="resourcehealthdetails_nodejs">
 <a href="#resourcehealthdetails_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Health<wbr>Details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcehealthdetailsresponse">Resource<wbr>Health<wbr>Details<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Resource Health Status{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resourcehealthstatus_nodejs">
 <a href="#resourcehealthstatus_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Health<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource Health Status{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -14626,36 +13260,78 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="resource_health_details_python">
 <a href="#resource_health_details_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>health_<wbr>details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcehealthdetailsresponse">Sequence[Resource<wbr>Health<wbr>Details<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Resource Health Status{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resource_health_status_python">
 <a href="#resource_health_status_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>health_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource Health Status{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="lastbackupstatus">Last<wbr>Backup<wbr>Status</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Invalid</dt>
+    <dd>Invalid</dd>
+    <dt>Healthy</dt>
+    <dd>Healthy</dd>
+    <dt>Unhealthy</dt>
+    <dd>Unhealthy</dd>
+    <dt>IRPending</dt>
+    <dd>IRPending</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Last<wbr>Backup<wbr>Status<wbr>Invalid</dt>
+    <dd>Invalid</dd>
+    <dt>Last<wbr>Backup<wbr>Status<wbr>Healthy</dt>
+    <dd>Healthy</dd>
+    <dt>Last<wbr>Backup<wbr>Status<wbr>Unhealthy</dt>
+    <dd>Unhealthy</dd>
+    <dt>Last<wbr>Backup<wbr>Status<wbr>IRPending</dt>
+    <dd>IRPending</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Invalid</dt>
+    <dd>Invalid</dd>
+    <dt>Healthy</dt>
+    <dd>Healthy</dd>
+    <dt>Unhealthy</dt>
+    <dd>Unhealthy</dd>
+    <dt>IRPending</dt>
+    <dd>IRPending</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>INVALID</dt>
+    <dd>Invalid</dd>
+    <dt>HEALTHY</dt>
+    <dd>Healthy</dd>
+    <dt>UNHEALTHY</dt>
+    <dd>Unhealthy</dd>
+    <dt>IR_PENDING</dt>
+    <dd>IRPending</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="mabfilefolderprotecteditem">Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -14664,205 +13340,184 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupmanagementtype_csharp">
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupsetname_csharp">
 <a href="#backupsetname_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="computername_csharp">
 <a href="#computername_csharp" style="color: inherit; text-decoration: inherit;">Computer<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the computer associated with this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containername_csharp">
 <a href="#containername_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createmode_csharp">
 <a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Create<wbr>Mode</span>
+        <span class="property-type">string | <a href="#createmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletesynctimeinutc_csharp">
 <a href="#deferreddeletesynctimeinutc_csharp" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Sync<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sync time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeinutc_csharp">
 <a href="#deferreddeletetimeinutc_csharp" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeremaining_csharp">
 <a href="#deferreddeletetimeremaining_csharp" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extendedinfo_csharp">
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mabfilefolderprotecteditemextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information with this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendlyname_csharp">
 <a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isdeferreddeletescheduleupcoming_csharp">
 <a href="#isdeferreddeletescheduleupcoming_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrehydrate_csharp">
 <a href="#isrehydrate_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isscheduledfordeferreddelete_csharp">
 <a href="#isscheduledfordeferreddelete_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackupstatus_csharp">
 <a href="#lastbackupstatus_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of last backup operation.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackuptime_csharp">
 <a href="#lastbackuptime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrecoverypoint_csharp">
 <a href="#lastrecoverypoint_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyid_csharp">
 <a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstate_csharp">
 <a href="#protectionstate_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protected, ProtectionStopped, IRPending or ProtectionError{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_csharp">
 <a href="#sourceresourceid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_csharp">
 <a href="#workloadtype_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Data<wbr>Source<wbr>Type</span>
+        <span class="property-type">string | <a href="#datasourcetype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Data<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -14871,205 +13526,184 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupmanagementtype_go">
 <a href="#backupmanagementtype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupsetname_go">
 <a href="#backupsetname_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="computername_go">
 <a href="#computername_go" style="color: inherit; text-decoration: inherit;">Computer<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the computer associated with this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containername_go">
 <a href="#containername_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createmode_go">
 <a href="#createmode_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#createmode">Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletesynctimeinutc_go">
 <a href="#deferreddeletesynctimeinutc_go" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Sync<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sync time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeinutc_go">
 <a href="#deferreddeletetimeinutc_go" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeremaining_go">
 <a href="#deferreddeletetimeremaining_go" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extendedinfo_go">
 <a href="#extendedinfo_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mabfilefolderprotecteditemextendedinfo">Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Additional information with this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendlyname_go">
 <a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isdeferreddeletescheduleupcoming_go">
 <a href="#isdeferreddeletescheduleupcoming_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrehydrate_go">
 <a href="#isrehydrate_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isscheduledfordeferreddelete_go">
 <a href="#isscheduledfordeferreddelete_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackupstatus_go">
 <a href="#lastbackupstatus_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of last backup operation.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackuptime_go">
 <a href="#lastbackuptime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrecoverypoint_go">
 <a href="#lastrecoverypoint_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyid_go">
 <a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstate_go">
 <a href="#protectionstate_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protected, ProtectionStopped, IRPending or ProtectionError{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_go">
 <a href="#sourceresourceid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_go">
 <a href="#workloadtype_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -15078,205 +13712,184 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupmanagementtype_nodejs">
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Backup<wbr>Management<wbr>Type</span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupsetname_nodejs">
 <a href="#backupsetname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="computername_nodejs">
 <a href="#computername_nodejs" style="color: inherit; text-decoration: inherit;">computer<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the computer associated with this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containername_nodejs">
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createmode_nodejs">
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Create<wbr>Mode</span>
+        <span class="property-type">string | <a href="#createmode">Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletesynctimeinutc_nodejs">
 <a href="#deferreddeletesynctimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Sync<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Sync time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeinutc_nodejs">
 <a href="#deferreddeletetimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeremaining_nodejs">
 <a href="#deferreddeletetimeremaining_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extendedinfo_nodejs">
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mabfilefolderprotecteditemextendedinfo">Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Additional information with this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendlyname_nodejs">
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isdeferreddeletescheduleupcoming_nodejs">
 <a href="#isdeferreddeletescheduleupcoming_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrehydrate_nodejs">
 <a href="#isrehydrate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isscheduledfordeferreddelete_nodejs">
 <a href="#isscheduledfordeferreddelete_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackupstatus_nodejs">
 <a href="#lastbackupstatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of last backup operation.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackuptime_nodejs">
 <a href="#lastbackuptime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrecoverypoint_nodejs">
 <a href="#lastrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyid_nodejs">
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstate_nodejs">
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protected, ProtectionStopped, IRPending or ProtectionError{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_nodejs">
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_nodejs">
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Data<wbr>Source<wbr>Type</span>
+        <span class="property-type">string | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -15285,217 +13898,187 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backup_management_type_python">
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Backup<wbr>Management<wbr>Type</span>
+        <span class="property-type">str | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backup_set_name_python">
 <a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="computer_name_python">
 <a href="#computer_name_python" style="color: inherit; text-decoration: inherit;">computer_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the computer associated with this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="container_name_python">
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="create_mode_python">
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Create<wbr>Mode</span>
+        <span class="property-type">str | <a href="#createmode">Create<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferred_delete_sync_time_in_utc_python">
 <a href="#deferred_delete_sync_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>sync_<wbr>time_<wbr>in_<wbr>utc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sync time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferred_delete_time_in_utc_python">
 <a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferred_delete_time_remaining_python">
 <a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extended_info_python">
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mabfilefolderprotecteditemextendedinfo">Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information with this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendly_name_python">
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Friendly name of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_deferred_delete_schedule_upcoming_python">
 <a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_rehydrate_python">
 <a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_scheduled_for_deferred_delete_python">
 <a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="last_backup_status_python">
 <a href="#last_backup_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Status of last backup operation.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="last_backup_time_python">
 <a href="#last_backup_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="last_recovery_point_python">
 <a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_id_python">
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protection_state_python">
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Protected, ProtectionStopped, IRPending or ProtectionError{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_resource_id_python">
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workload_type_python">
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Data<wbr>Source<wbr>Type</span>
+        <span class="property-type">str | <a href="#datasourcetype">Data<wbr>Source<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="mabfilefolderprotecteditemextendedinfo">Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -15503,35 +14086,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="lastrefreshedat_csharp">
 <a href="#lastrefreshedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Refreshed<wbr>At</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last time when the agent data synced to service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="oldestrecoverypoint_csharp">
 <a href="#oldestrecoverypoint_csharp" style="color: inherit; text-decoration: inherit;">Oldest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recoverypointcount_csharp">
 <a href="#recoverypointcount_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of backup copies associated with the backup item.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -15540,35 +14119,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="lastrefreshedat_go">
 <a href="#lastrefreshedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Refreshed<wbr>At</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last time when the agent data synced to service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="oldestrecoverypoint_go">
 <a href="#oldestrecoverypoint_go" style="color: inherit; text-decoration: inherit;">Oldest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recoverypointcount_go">
 <a href="#recoverypointcount_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of backup copies associated with the backup item.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -15577,35 +14152,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="lastrefreshedat_nodejs">
 <a href="#lastrefreshedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Refreshed<wbr>At</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last time when the agent data synced to service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="oldestrecoverypoint_nodejs">
 <a href="#oldestrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">oldest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recoverypointcount_nodejs">
 <a href="#recoverypointcount_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of backup copies associated with the backup item.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -15614,47 +14185,34 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="last_refreshed_at_python">
 <a href="#last_refreshed_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>refreshed_<wbr>at</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last time when the agent data synced to service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="oldest_recovery_point_python">
 <a href="#oldest_recovery_point_python" style="color: inherit; text-decoration: inherit;">oldest_<wbr>recovery_<wbr>point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recovery_point_count_python">
 <a href="#recovery_point_count_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of backup copies associated with the backup item.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="mabfilefolderprotecteditemextendedinforesponse">Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -15662,35 +14220,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="lastrefreshedat_csharp">
 <a href="#lastrefreshedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Refreshed<wbr>At</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last time when the agent data synced to service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="oldestrecoverypoint_csharp">
 <a href="#oldestrecoverypoint_csharp" style="color: inherit; text-decoration: inherit;">Oldest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recoverypointcount_csharp">
 <a href="#recoverypointcount_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of backup copies associated with the backup item.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -15699,35 +14253,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="lastrefreshedat_go">
 <a href="#lastrefreshedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Refreshed<wbr>At</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last time when the agent data synced to service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="oldestrecoverypoint_go">
 <a href="#oldestrecoverypoint_go" style="color: inherit; text-decoration: inherit;">Oldest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recoverypointcount_go">
 <a href="#recoverypointcount_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Point<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of backup copies associated with the backup item.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -15736,35 +14286,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="lastrefreshedat_nodejs">
 <a href="#lastrefreshedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Refreshed<wbr>At</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last time when the agent data synced to service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="oldestrecoverypoint_nodejs">
 <a href="#oldestrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">oldest<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recoverypointcount_nodejs">
 <a href="#recoverypointcount_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Point<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of backup copies associated with the backup item.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -15773,46 +14319,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="last_refreshed_at_python">
 <a href="#last_refreshed_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>refreshed_<wbr>at</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last time when the agent data synced to service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="oldest_recovery_point_python">
 <a href="#oldest_recovery_point_python" style="color: inherit; text-decoration: inherit;">oldest_<wbr>recovery_<wbr>point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The oldest backup copy available.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recovery_point_count_python">
 <a href="#recovery_point_count_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>point_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of backup copies associated with the backup item.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="mabfilefolderprotecteditemresponse">Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -15821,205 +14354,184 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupmanagementtype_csharp">
 <a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupsetname_csharp">
 <a href="#backupsetname_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="computername_csharp">
 <a href="#computername_csharp" style="color: inherit; text-decoration: inherit;">Computer<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the computer associated with this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containername_csharp">
 <a href="#containername_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createmode_csharp">
 <a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletesynctimeinutc_csharp">
 <a href="#deferreddeletesynctimeinutc_csharp" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Sync<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sync time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeinutc_csharp">
 <a href="#deferreddeletetimeinutc_csharp" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeremaining_csharp">
 <a href="#deferreddeletetimeremaining_csharp" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extendedinfo_csharp">
 <a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mabfilefolderprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information with this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendlyname_csharp">
 <a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isdeferreddeletescheduleupcoming_csharp">
 <a href="#isdeferreddeletescheduleupcoming_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrehydrate_csharp">
 <a href="#isrehydrate_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isscheduledfordeferreddelete_csharp">
 <a href="#isscheduledfordeferreddelete_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackupstatus_csharp">
 <a href="#lastbackupstatus_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of last backup operation.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackuptime_csharp">
 <a href="#lastbackuptime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrecoverypoint_csharp">
 <a href="#lastrecoverypoint_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyid_csharp">
 <a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstate_csharp">
 <a href="#protectionstate_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protected, ProtectionStopped, IRPending or ProtectionError{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_csharp">
 <a href="#sourceresourceid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_csharp">
 <a href="#workloadtype_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -16028,205 +14540,184 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupmanagementtype_go">
 <a href="#backupmanagementtype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupsetname_go">
 <a href="#backupsetname_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="computername_go">
 <a href="#computername_go" style="color: inherit; text-decoration: inherit;">Computer<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the computer associated with this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containername_go">
 <a href="#containername_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createmode_go">
 <a href="#createmode_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletesynctimeinutc_go">
 <a href="#deferreddeletesynctimeinutc_go" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Sync<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sync time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeinutc_go">
 <a href="#deferreddeletetimeinutc_go" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeremaining_go">
 <a href="#deferreddeletetimeremaining_go" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extendedinfo_go">
 <a href="#extendedinfo_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mabfilefolderprotecteditemextendedinforesponse">Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional information with this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendlyname_go">
 <a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isdeferreddeletescheduleupcoming_go">
 <a href="#isdeferreddeletescheduleupcoming_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrehydrate_go">
 <a href="#isrehydrate_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isscheduledfordeferreddelete_go">
 <a href="#isscheduledfordeferreddelete_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackupstatus_go">
 <a href="#lastbackupstatus_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of last backup operation.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackuptime_go">
 <a href="#lastbackuptime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrecoverypoint_go">
 <a href="#lastrecoverypoint_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyid_go">
 <a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstate_go">
 <a href="#protectionstate_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protected, ProtectionStopped, IRPending or ProtectionError{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_go">
 <a href="#sourceresourceid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_go">
 <a href="#workloadtype_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -16235,205 +14726,184 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backupmanagementtype_nodejs">
 <a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backupsetname_nodejs">
 <a href="#backupsetname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="computername_nodejs">
 <a href="#computername_nodejs" style="color: inherit; text-decoration: inherit;">computer<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the computer associated with this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="containername_nodejs">
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="createmode_nodejs">
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletesynctimeinutc_nodejs">
 <a href="#deferreddeletesynctimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Sync<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Sync time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeinutc_nodejs">
 <a href="#deferreddeletetimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferreddeletetimeremaining_nodejs">
 <a href="#deferreddeletetimeremaining_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extendedinfo_nodejs">
 <a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mabfilefolderprotecteditemextendedinforesponse">Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Additional information with this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendlyname_nodejs">
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isdeferreddeletescheduleupcoming_nodejs">
 <a href="#isdeferreddeletescheduleupcoming_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isrehydrate_nodejs">
 <a href="#isrehydrate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isscheduledfordeferreddelete_nodejs">
 <a href="#isscheduledfordeferreddelete_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackupstatus_nodejs">
 <a href="#lastbackupstatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of last backup operation.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastbackuptime_nodejs">
 <a href="#lastbackuptime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastrecoverypoint_nodejs">
 <a href="#lastrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyid_nodejs">
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protectionstate_nodejs">
 <a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Protected, ProtectionStopped, IRPending or ProtectionError{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceresourceid_nodejs">
 <a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_nodejs">
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -16442,216 +14912,388 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="backup_management_type_python">
 <a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backup_set_name_python">
 <a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="computer_name_python">
 <a href="#computer_name_python" style="color: inherit; text-decoration: inherit;">computer_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the computer associated with this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="container_name_python">
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="create_mode_python">
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferred_delete_sync_time_in_utc_python">
 <a href="#deferred_delete_sync_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>sync_<wbr>time_<wbr>in_<wbr>utc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sync time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferred_delete_time_in_utc_python">
 <a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deferred_delete_time_remaining_python">
 <a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extended_info_python">
 <a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mabfilefolderprotecteditemextendedinforesponse">Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional information with this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="friendly_name_python">
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Friendly name of this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_deferred_delete_schedule_upcoming_python">
 <a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_rehydrate_python">
 <a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_scheduled_for_deferred_delete_python">
 <a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="last_backup_status_python">
 <a href="#last_backup_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Status of last backup operation.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="last_backup_time_python">
 <a href="#last_backup_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="last_recovery_point_python">
 <a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_id_python">
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protection_state_python">
 <a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Protected, ProtectionStopped, IRPending or ProtectionError{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_resource_id_python">
 <a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workload_type_python">
 <a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="protecteditemhealthstatus">Protected<wbr>Item<wbr>Health<wbr>Status</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Invalid</dt>
+    <dd>Invalid</dd>
+    <dt>Healthy</dt>
+    <dd>Healthy</dd>
+    <dt>Unhealthy</dt>
+    <dd>Unhealthy</dd>
+    <dt>Not<wbr>Reachable</dt>
+    <dd>NotReachable</dd>
+    <dt>IRPending</dt>
+    <dd>IRPending</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Protected<wbr>Item<wbr>Health<wbr>Status<wbr>Invalid</dt>
+    <dd>Invalid</dd>
+    <dt>Protected<wbr>Item<wbr>Health<wbr>Status<wbr>Healthy</dt>
+    <dd>Healthy</dd>
+    <dt>Protected<wbr>Item<wbr>Health<wbr>Status<wbr>Unhealthy</dt>
+    <dd>Unhealthy</dd>
+    <dt>Protected<wbr>Item<wbr>Health<wbr>Status<wbr>Not<wbr>Reachable</dt>
+    <dd>NotReachable</dd>
+    <dt>Protected<wbr>Item<wbr>Health<wbr>Status<wbr>IRPending</dt>
+    <dd>IRPending</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Invalid</dt>
+    <dd>Invalid</dd>
+    <dt>Healthy</dt>
+    <dd>Healthy</dd>
+    <dt>Unhealthy</dt>
+    <dd>Unhealthy</dd>
+    <dt>Not<wbr>Reachable</dt>
+    <dd>NotReachable</dd>
+    <dt>IRPending</dt>
+    <dd>IRPending</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>INVALID</dt>
+    <dd>Invalid</dd>
+    <dt>HEALTHY</dt>
+    <dd>Healthy</dd>
+    <dt>UNHEALTHY</dt>
+    <dd>Unhealthy</dd>
+    <dt>NOT_REACHABLE</dt>
+    <dd>NotReachable</dd>
+    <dt>IR_PENDING</dt>
+    <dd>IRPending</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="protecteditemstate">Protected<wbr>Item<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Invalid</dt>
+    <dd>Invalid</dd>
+    <dt>IRPending</dt>
+    <dd>IRPending</dd>
+    <dt>Protected</dt>
+    <dd>Protected</dd>
+    <dt>Protection<wbr>Error</dt>
+    <dd>ProtectionError</dd>
+    <dt>Protection<wbr>Stopped</dt>
+    <dd>ProtectionStopped</dd>
+    <dt>Protection<wbr>Paused</dt>
+    <dd>ProtectionPaused</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Protected<wbr>Item<wbr>State<wbr>Invalid</dt>
+    <dd>Invalid</dd>
+    <dt>Protected<wbr>Item<wbr>State<wbr>IRPending</dt>
+    <dd>IRPending</dd>
+    <dt>Protected<wbr>Item<wbr>State<wbr>Protected</dt>
+    <dd>Protected</dd>
+    <dt>Protected<wbr>Item<wbr>State<wbr>Protection<wbr>Error</dt>
+    <dd>ProtectionError</dd>
+    <dt>Protected<wbr>Item<wbr>State<wbr>Protection<wbr>Stopped</dt>
+    <dd>ProtectionStopped</dd>
+    <dt>Protected<wbr>Item<wbr>State<wbr>Protection<wbr>Paused</dt>
+    <dd>ProtectionPaused</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Invalid</dt>
+    <dd>Invalid</dd>
+    <dt>IRPending</dt>
+    <dd>IRPending</dd>
+    <dt>Protected</dt>
+    <dd>Protected</dd>
+    <dt>Protection<wbr>Error</dt>
+    <dd>ProtectionError</dd>
+    <dt>Protection<wbr>Stopped</dt>
+    <dd>ProtectionStopped</dd>
+    <dt>Protection<wbr>Paused</dt>
+    <dd>ProtectionPaused</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>INVALID</dt>
+    <dd>Invalid</dd>
+    <dt>IR_PENDING</dt>
+    <dd>IRPending</dd>
+    <dt>PROTECTED</dt>
+    <dd>Protected</dd>
+    <dt>PROTECTION_ERROR</dt>
+    <dd>ProtectionError</dd>
+    <dt>PROTECTION_STOPPED</dt>
+    <dd>ProtectionStopped</dd>
+    <dt>PROTECTION_PAUSED</dt>
+    <dd>ProtectionPaused</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="protectionstate">Protection<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Invalid</dt>
+    <dd>Invalid</dd>
+    <dt>IRPending</dt>
+    <dd>IRPending</dd>
+    <dt>Protected</dt>
+    <dd>Protected</dd>
+    <dt>Protection<wbr>Error</dt>
+    <dd>ProtectionError</dd>
+    <dt>Protection<wbr>Stopped</dt>
+    <dd>ProtectionStopped</dd>
+    <dt>Protection<wbr>Paused</dt>
+    <dd>ProtectionPaused</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Protection<wbr>State<wbr>Invalid</dt>
+    <dd>Invalid</dd>
+    <dt>Protection<wbr>State<wbr>IRPending</dt>
+    <dd>IRPending</dd>
+    <dt>Protection<wbr>State<wbr>Protected</dt>
+    <dd>Protected</dd>
+    <dt>Protection<wbr>State<wbr>Protection<wbr>Error</dt>
+    <dd>ProtectionError</dd>
+    <dt>Protection<wbr>State<wbr>Protection<wbr>Stopped</dt>
+    <dd>ProtectionStopped</dd>
+    <dt>Protection<wbr>State<wbr>Protection<wbr>Paused</dt>
+    <dd>ProtectionPaused</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Invalid</dt>
+    <dd>Invalid</dd>
+    <dt>IRPending</dt>
+    <dd>IRPending</dd>
+    <dt>Protected</dt>
+    <dd>Protected</dd>
+    <dt>Protection<wbr>Error</dt>
+    <dd>ProtectionError</dd>
+    <dt>Protection<wbr>Stopped</dt>
+    <dd>ProtectionStopped</dd>
+    <dt>Protection<wbr>Paused</dt>
+    <dd>ProtectionPaused</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>INVALID</dt>
+    <dd>Invalid</dd>
+    <dt>IR_PENDING</dt>
+    <dd>IRPending</dd>
+    <dt>PROTECTED</dt>
+    <dd>Protected</dd>
+    <dt>PROTECTION_ERROR</dt>
+    <dd>ProtectionError</dd>
+    <dt>PROTECTION_STOPPED</dt>
+    <dd>ProtectionStopped</dd>
+    <dt>PROTECTION_PAUSED</dt>
+    <dd>ProtectionPaused</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="resourcehealthdetailsresponse">Resource<wbr>Health<wbr>Details<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -16660,45 +15302,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="code_csharp">
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Health Code{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Health Message{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="recommendations_csharp">
 <a href="#recommendations_csharp" style="color: inherit; text-decoration: inherit;">Recommendations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Health Recommended Actions{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="title_csharp">
 <a href="#title_csharp" style="color: inherit; text-decoration: inherit;">Title</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Health Title{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -16707,45 +15344,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="code_go">
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Health Code{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Health Message{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="recommendations_go">
 <a href="#recommendations_go" style="color: inherit; text-decoration: inherit;">Recommendations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Health Recommended Actions{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="title_go">
 <a href="#title_go" style="color: inherit; text-decoration: inherit;">Title</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Health Title{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -16754,45 +15386,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="code_nodejs">
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Health Code{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Health Message{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="recommendations_nodejs">
 <a href="#recommendations_nodejs" style="color: inherit; text-decoration: inherit;">recommendations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Health Recommended Actions{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="title_nodejs">
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Health Title{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -16801,53 +15428,110 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="code_python">
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Health Code{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Health Message{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="recommendations_python">
 <a href="#recommendations_python" style="color: inherit; text-decoration: inherit;">recommendations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Health Recommended Actions{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="title_python">
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Health Title{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="resourcehealthstatus">Resource<wbr>Health<wbr>Status</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Healthy</dt>
+    <dd>Healthy</dd>
+    <dt>Transient<wbr>Degraded</dt>
+    <dd>TransientDegraded</dd>
+    <dt>Persistent<wbr>Degraded</dt>
+    <dd>PersistentDegraded</dd>
+    <dt>Transient<wbr>Unhealthy</dt>
+    <dd>TransientUnhealthy</dd>
+    <dt>Persistent<wbr>Unhealthy</dt>
+    <dd>PersistentUnhealthy</dd>
+    <dt>Invalid</dt>
+    <dd>Invalid</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Resource<wbr>Health<wbr>Status<wbr>Healthy</dt>
+    <dd>Healthy</dd>
+    <dt>Resource<wbr>Health<wbr>Status<wbr>Transient<wbr>Degraded</dt>
+    <dd>TransientDegraded</dd>
+    <dt>Resource<wbr>Health<wbr>Status<wbr>Persistent<wbr>Degraded</dt>
+    <dd>PersistentDegraded</dd>
+    <dt>Resource<wbr>Health<wbr>Status<wbr>Transient<wbr>Unhealthy</dt>
+    <dd>TransientUnhealthy</dd>
+    <dt>Resource<wbr>Health<wbr>Status<wbr>Persistent<wbr>Unhealthy</dt>
+    <dd>PersistentUnhealthy</dd>
+    <dt>Resource<wbr>Health<wbr>Status<wbr>Invalid</dt>
+    <dd>Invalid</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Healthy</dt>
+    <dd>Healthy</dd>
+    <dt>Transient<wbr>Degraded</dt>
+    <dd>TransientDegraded</dd>
+    <dt>Persistent<wbr>Degraded</dt>
+    <dd>PersistentDegraded</dd>
+    <dt>Transient<wbr>Unhealthy</dt>
+    <dd>TransientUnhealthy</dd>
+    <dt>Persistent<wbr>Unhealthy</dt>
+    <dd>PersistentUnhealthy</dd>
+    <dt>Invalid</dt>
+    <dd>Invalid</dd>
+</dl>
+{{% /choosable %}}
 
-
-
-
-
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>HEALTHY</dt>
+    <dd>Healthy</dd>
+    <dt>TRANSIENT_DEGRADED</dt>
+    <dd>TransientDegraded</dd>
+    <dt>PERSISTENT_DEGRADED</dt>
+    <dd>PersistentDegraded</dd>
+    <dt>TRANSIENT_UNHEALTHY</dt>
+    <dd>TransientUnhealthy</dd>
+    <dt>PERSISTENT_UNHEALTHY</dt>
+    <dd>PersistentUnhealthy</dd>
+    <dt>INVALID</dt>
+    <dd>Invalid</dd>
+</dl>
+{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>
