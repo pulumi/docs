@@ -36,7 +36,7 @@ A Pulumi package to create TLS resources in Pulumi programs.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`tls` Terraform Provider](https://github.com/terraform-providers/terraform-provider-tls).</dd>
 	<dt>Version</dt>
-	<dd>2.5.0</dd>
+	<dd>3.0.0</dd>
 </dl>
 
 
@@ -47,7 +47,7 @@ A Pulumi package to create TLS resources in Pulumi programs.
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Tls/Pulumi.Tls.html" title="Pulumi.Tls">Pulumi.Tls</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-tls/sdk/v2/go/tls/?tab=doc#" title="tls">tls</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-tls/sdk/v3/go/tls/?tab=doc#" title="tls">tls</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/tls/#" title="@pulumi/tls">@pulumi/tls</a></dd>

@@ -62,7 +62,7 @@ package main
 import (
 	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/eks"
 	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
-	"github.com/pulumi/pulumi-tls/sdk/v2/go/tls"
+	"github.com/pulumi/pulumi-tls/sdk/v3/go/tls"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -150,7 +150,7 @@ const exampleOpenIdConnectProvider = new aws.iam.OpenIdConnectProvider("example"
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCertificate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-tls/sdk/v2/go/tls/?tab=doc#GetCertificateArgs">GetCertificateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-tls/sdk/v2/go/tls/?tab=doc#GetCertificateResult">GetCertificateResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCertificate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-tls/sdk/v3/go/tls/?tab=doc#GetCertificateArgs">GetCertificateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-tls/sdk/v3/go/tls/?tab=doc#GetCertificateResult">GetCertificateResult</a></span>, error)</span></code></pre></div>
 
 {{% /choosable %}}
 
@@ -527,7 +527,7 @@ function can be used to convert this base 10 number into other bases, such as he
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-tls/sdk/v2/go/tls/?tab=doc#GetCertificateCertificate">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-tls/sdk/v3/go/tls/?tab=doc#GetCertificateCertificate">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Tls/Pulumi.Tls.Outputs.GetCertificateCertificate.html">output</a> API doc for this type.
