@@ -17,8 +17,8 @@ This resource *does* use a cryptographic random number generator.
 
 Historically this resource's intended usage has been ambiguous as the original example
 used it in a password. For backwards compatibility it will
-continue to exist. For unique ids please use the `random.RandomId` resource, for sensitive
-random values please use the `random.RandomPassword` resource.
+continue to exist. For unique ids please use random_id, for sensitive
+random values please use random_password.
 
 {{% examples %}}
 ## Example Usage
@@ -54,7 +54,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-random/sdk/v2/go/random"
+	"github.com/pulumi/pulumi-random/sdk/v3/go/random"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -119,7 +119,7 @@ const randomRandomString = new random.RandomString("random", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v2/go/random/?tab=doc#RandomString">NewRandomString</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v2/go/random/?tab=doc#RandomStringArgs">RandomStringArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v2/go/random/?tab=doc#RandomString">RandomString</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v3/go/random/?tab=doc#RandomString">NewRandomString</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v3/go/random/?tab=doc#RandomStringArgs">RandomStringArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v3/go/random/?tab=doc#RandomString">RandomString</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -193,7 +193,7 @@ const randomRandomString = new random.RandomString("random", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -213,7 +213,7 @@ const randomRandomString = new random.RandomString("random", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v2/go/random/?tab=doc#RandomStringArgs">RandomStringArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v3/go/random/?tab=doc#RandomStringArgs">RandomStringArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -223,7 +223,7 @@ const randomRandomString = new random.RandomString("random", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -305,7 +305,8 @@ The RandomString resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
-trigger a new id to be generated.
+trigger a new id to be generated. See
+the main provider documentation for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -433,7 +434,8 @@ in random string.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
-trigger a new id to be generated.
+trigger a new id to be generated. See
+the main provider documentation for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -561,7 +563,8 @@ in random string.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
-trigger a new id to be generated.
+trigger a new id to be generated. See
+the main provider documentation for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -689,7 +692,8 @@ in random string.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
-trigger a new id to be generated.
+trigger a new id to be generated. See
+the main provider documentation for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -919,7 +923,7 @@ Get an existing RandomString resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRandomString<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v2/go/random/?tab=doc#RandomStringState">RandomStringState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v2/go/random/?tab=doc#RandomString">RandomString</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRandomString<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v3/go/random/?tab=doc#RandomStringState">RandomStringState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v3/go/random/?tab=doc#RandomString">RandomString</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1037,7 +1041,8 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
-trigger a new id to be generated.
+trigger a new id to be generated. See
+the main provider documentation for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1175,7 +1180,8 @@ in random string.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
-trigger a new id to be generated.
+trigger a new id to be generated. See
+the main provider documentation for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1313,7 +1319,8 @@ in random string.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
-trigger a new id to be generated.
+trigger a new id to be generated. See
+the main provider documentation for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1451,7 +1458,8 @@ in random string.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
-trigger a new id to be generated.
+trigger a new id to be generated. See
+the main provider documentation for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
