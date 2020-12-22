@@ -125,7 +125,7 @@ const serverInstance = new aws.ec2.Instance("server", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v2/go/random/?tab=doc#RandomId">NewRandomId</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v2/go/random/?tab=doc#RandomIdArgs">RandomIdArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v2/go/random/?tab=doc#RandomId">RandomId</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v3/go/random/?tab=doc#RandomId">NewRandomId</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v3/go/random/?tab=doc#RandomIdArgs">RandomIdArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v3/go/random/?tab=doc#RandomId">RandomId</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -199,7 +199,7 @@ const serverInstance = new aws.ec2.Instance("server", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -219,7 +219,7 @@ const serverInstance = new aws.ec2.Instance("server", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v2/go/random/?tab=doc#RandomIdArgs">RandomIdArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v3/go/random/?tab=doc#RandomIdArgs">RandomIdArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -229,7 +229,7 @@ const serverInstance = new aws.ec2.Instance("server", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -312,7 +312,8 @@ minimum value is 1, which produces eight bits of randomness.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
-trigger a new id to be generated.
+trigger a new id to be generated. See
+the main provider documentation for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -352,7 +353,8 @@ minimum value is 1, which produces eight bits of randomness.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
-trigger a new id to be generated.
+trigger a new id to be generated. See
+the main provider documentation for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -392,7 +394,8 @@ minimum value is 1, which produces eight bits of randomness.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
-trigger a new id to be generated.
+trigger a new id to be generated. See
+the main provider documentation for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -432,7 +435,8 @@ minimum value is 1, which produces eight bits of randomness.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
-trigger a new id to be generated.
+trigger a new id to be generated. See
+the main provider documentation for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -459,15 +463,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="b64_csharp">
-<a href="#b64_csharp" style="color: inherit; text-decoration: inherit;">B64</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use b64_url for old behavior, or b64_std for standard base64 encoding{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
         <span id="b64std_csharp">
@@ -523,15 +518,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="b64_go">
-<a href="#b64_go" style="color: inherit; text-decoration: inherit;">B64</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use b64_url for old behavior, or b64_std for standard base64 encoding{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
         <span id="b64std_go">
@@ -587,15 +573,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="b64_nodejs">
-<a href="#b64_nodejs" style="color: inherit; text-decoration: inherit;">b64</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use b64_url for old behavior, or b64_std for standard base64 encoding{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
         <span id="b64std_nodejs">
@@ -651,15 +628,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span id="b64_python">
-<a href="#b64_python" style="color: inherit; text-decoration: inherit;">b64</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use b64_url for old behavior, or b64_std for standard base64 encoding{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
         <span id="b64_std_python">
@@ -725,11 +693,11 @@ Get an existing RandomId resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">b64</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">b64_std</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">b64_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">byte_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">dec</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">keepers</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> RandomId</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">b64_std</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">b64_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">byte_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">dec</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">keepers</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> RandomId</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRandomId<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v2/go/random/?tab=doc#RandomIdState">RandomIdState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v2/go/random/?tab=doc#RandomId">RandomId</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRandomId<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v3/go/random/?tab=doc#RandomIdState">RandomIdState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v3/go/random/?tab=doc#RandomId">RandomId</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -838,15 +806,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_b64_csharp">
-<a href="#state_b64_csharp" style="color: inherit; text-decoration: inherit;">B64</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use b64_url for old behavior, or b64_std for standard base64 encoding{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_b64std_csharp">
@@ -907,7 +866,8 @@ minimum value is 1, which produces eight bits of randomness.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
-trigger a new id to be generated.
+trigger a new id to be generated. See
+the main provider documentation for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -927,15 +887,6 @@ base64 encoded.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_b64_go">
-<a href="#state_b64_go" style="color: inherit; text-decoration: inherit;">B64</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use b64_url for old behavior, or b64_std for standard base64 encoding{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_b64std_go">
@@ -996,7 +947,8 @@ minimum value is 1, which produces eight bits of randomness.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
-trigger a new id to be generated.
+trigger a new id to be generated. See
+the main provider documentation for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1016,15 +968,6 @@ base64 encoded.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_b64_nodejs">
-<a href="#state_b64_nodejs" style="color: inherit; text-decoration: inherit;">b64</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use b64_url for old behavior, or b64_std for standard base64 encoding{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_b64std_nodejs">
@@ -1085,7 +1028,8 @@ minimum value is 1, which produces eight bits of randomness.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
-trigger a new id to be generated.
+trigger a new id to be generated. See
+the main provider documentation for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1105,15 +1049,6 @@ base64 encoded.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span id="state_b64_python">
-<a href="#state_b64_python" style="color: inherit; text-decoration: inherit;">b64</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use b64_url for old behavior, or b64_std for standard base64 encoding{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_b64_std_python">
@@ -1174,7 +1109,8 @@ minimum value is 1, which produces eight bits of randomness.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
-trigger a new id to be generated.
+trigger a new id to be generated. See
+the main provider documentation for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

@@ -117,7 +117,7 @@ const serverInstance = new aws.ec2.Instance("server", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v2/go/random/?tab=doc#RandomPet">NewRandomPet</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v2/go/random/?tab=doc#RandomPetArgs">RandomPetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v2/go/random/?tab=doc#RandomPet">RandomPet</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v3/go/random/?tab=doc#RandomPet">NewRandomPet</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v3/go/random/?tab=doc#RandomPetArgs">RandomPetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v3/go/random/?tab=doc#RandomPet">RandomPet</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -191,7 +191,7 @@ const serverInstance = new aws.ec2.Instance("server", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -211,7 +211,7 @@ const serverInstance = new aws.ec2.Instance("server", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v2/go/random/?tab=doc#RandomPetArgs">RandomPetArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v3/go/random/?tab=doc#RandomPetArgs">RandomPetArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -221,7 +221,7 @@ const serverInstance = new aws.ec2.Instance("server", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -293,7 +293,8 @@ The RandomPet resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
-trigger a new id to be generated.
+trigger a new id to be generated. See
+the main provider documentation for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -340,7 +341,8 @@ trigger a new id to be generated.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
-trigger a new id to be generated.
+trigger a new id to be generated. See
+the main provider documentation for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -387,7 +389,8 @@ trigger a new id to be generated.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
-trigger a new id to be generated.
+trigger a new id to be generated. See
+the main provider documentation for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -434,7 +437,8 @@ trigger a new id to be generated.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
-trigger a new id to be generated.
+trigger a new id to be generated. See
+the main provider documentation for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -553,7 +557,7 @@ Get an existing RandomPet resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRandomPet<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v2/go/random/?tab=doc#RandomPetState">RandomPetState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v2/go/random/?tab=doc#RandomPet">RandomPet</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRandomPet<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v3/go/random/?tab=doc#RandomPetState">RandomPetState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v3/go/random/?tab=doc#RandomPet">RandomPet</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -671,7 +675,8 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
-trigger a new id to be generated.
+trigger a new id to be generated. See
+the main provider documentation for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -718,7 +723,8 @@ trigger a new id to be generated.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
-trigger a new id to be generated.
+trigger a new id to be generated. See
+the main provider documentation for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -765,7 +771,8 @@ trigger a new id to be generated.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
-trigger a new id to be generated.
+trigger a new id to be generated. See
+the main provider documentation for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -812,7 +819,8 @@ trigger a new id to be generated.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
-trigger a new id to be generated.
+trigger a new id to be generated. See
+the main provider documentation for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

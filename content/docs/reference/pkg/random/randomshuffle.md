@@ -57,7 +57,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elb"
-	"github.com/pulumi/pulumi-random/sdk/v2/go/random"
+	"github.com/pulumi/pulumi-random/sdk/v3/go/random"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -148,7 +148,7 @@ const example = new aws.elb.LoadBalancer("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v2/go/random/?tab=doc#RandomShuffle">NewRandomShuffle</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v2/go/random/?tab=doc#RandomShuffleArgs">RandomShuffleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v2/go/random/?tab=doc#RandomShuffle">RandomShuffle</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v3/go/random/?tab=doc#RandomShuffle">NewRandomShuffle</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v3/go/random/?tab=doc#RandomShuffleArgs">RandomShuffleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v3/go/random/?tab=doc#RandomShuffle">RandomShuffle</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -222,7 +222,7 @@ const example = new aws.elb.LoadBalancer("example", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -242,7 +242,7 @@ const example = new aws.elb.LoadBalancer("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v2/go/random/?tab=doc#RandomShuffleArgs">RandomShuffleArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v3/go/random/?tab=doc#RandomShuffleArgs">RandomShuffleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -252,7 +252,7 @@ const example = new aws.elb.LoadBalancer("example", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -334,7 +334,8 @@ The RandomShuffle resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
-trigger a new id to be generated.
+trigger a new id to be generated. See
+the main provider documentation for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -358,12 +359,9 @@ of items in the input list.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Arbitrary string with which to seed the random number
-generator, in order to produce less-volatile permutations of the list.
-**Important:** Even with an identical seed, it is not guaranteed that the
-same permutation will be produced across different versions of the provider.
-This argument causes the result to be *less volatile*, but not fixed for
-all time.
+    <dd>{{% md %}}Arbitrary string with which to seed the random number generator, in order to produce less-volatile permutations of the
+list. **Important:** Even with an identical seed, it is not guaranteed that the same permutation will be produced across
+different versions of Terraform. This argument causes the result to be *less volatile*, but not fixed for all time.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -390,7 +388,8 @@ all time.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
-trigger a new id to be generated.
+trigger a new id to be generated. See
+the main provider documentation for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -414,12 +413,9 @@ of items in the input list.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Arbitrary string with which to seed the random number
-generator, in order to produce less-volatile permutations of the list.
-**Important:** Even with an identical seed, it is not guaranteed that the
-same permutation will be produced across different versions of the provider.
-This argument causes the result to be *less volatile*, but not fixed for
-all time.
+    <dd>{{% md %}}Arbitrary string with which to seed the random number generator, in order to produce less-volatile permutations of the
+list. **Important:** Even with an identical seed, it is not guaranteed that the same permutation will be produced across
+different versions of Terraform. This argument causes the result to be *less volatile*, but not fixed for all time.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -446,7 +442,8 @@ all time.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
-trigger a new id to be generated.
+trigger a new id to be generated. See
+the main provider documentation for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -470,12 +467,9 @@ of items in the input list.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Arbitrary string with which to seed the random number
-generator, in order to produce less-volatile permutations of the list.
-**Important:** Even with an identical seed, it is not guaranteed that the
-same permutation will be produced across different versions of the provider.
-This argument causes the result to be *less volatile*, but not fixed for
-all time.
+    <dd>{{% md %}}Arbitrary string with which to seed the random number generator, in order to produce less-volatile permutations of the
+list. **Important:** Even with an identical seed, it is not guaranteed that the same permutation will be produced across
+different versions of Terraform. This argument causes the result to be *less volatile*, but not fixed for all time.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -502,7 +496,8 @@ all time.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
-trigger a new id to be generated.
+trigger a new id to be generated. See
+the main provider documentation for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -526,12 +521,9 @@ of items in the input list.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Arbitrary string with which to seed the random number
-generator, in order to produce less-volatile permutations of the list.
-**Important:** Even with an identical seed, it is not guaranteed that the
-same permutation will be produced across different versions of the provider.
-This argument causes the result to be *less volatile*, but not fixed for
-all time.
+    <dd>{{% md %}}Arbitrary string with which to seed the random number generator, in order to produce less-volatile permutations of the
+list. **Important:** Even with an identical seed, it is not guaranteed that the same permutation will be produced across
+different versions of Terraform. This argument causes the result to be *less volatile*, but not fixed for all time.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -660,7 +652,7 @@ Get an existing RandomShuffle resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRandomShuffle<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v2/go/random/?tab=doc#RandomShuffleState">RandomShuffleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v2/go/random/?tab=doc#RandomShuffle">RandomShuffle</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRandomShuffle<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v3/go/random/?tab=doc#RandomShuffleState">RandomShuffleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v3/go/random/?tab=doc#RandomShuffle">RandomShuffle</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -788,7 +780,8 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
-trigger a new id to be generated.
+trigger a new id to be generated. See
+the main provider documentation for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -822,12 +815,9 @@ of items in the input list.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Arbitrary string with which to seed the random number
-generator, in order to produce less-volatile permutations of the list.
-**Important:** Even with an identical seed, it is not guaranteed that the
-same permutation will be produced across different versions of the provider.
-This argument causes the result to be *less volatile*, but not fixed for
-all time.
+    <dd>{{% md %}}Arbitrary string with which to seed the random number generator, in order to produce less-volatile permutations of the
+list. **Important:** Even with an identical seed, it is not guaranteed that the same permutation will be produced across
+different versions of Terraform. This argument causes the result to be *less volatile*, but not fixed for all time.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -854,7 +844,8 @@ all time.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
-trigger a new id to be generated.
+trigger a new id to be generated. See
+the main provider documentation for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -888,12 +879,9 @@ of items in the input list.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Arbitrary string with which to seed the random number
-generator, in order to produce less-volatile permutations of the list.
-**Important:** Even with an identical seed, it is not guaranteed that the
-same permutation will be produced across different versions of the provider.
-This argument causes the result to be *less volatile*, but not fixed for
-all time.
+    <dd>{{% md %}}Arbitrary string with which to seed the random number generator, in order to produce less-volatile permutations of the
+list. **Important:** Even with an identical seed, it is not guaranteed that the same permutation will be produced across
+different versions of Terraform. This argument causes the result to be *less volatile*, but not fixed for all time.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -920,7 +908,8 @@ all time.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
-trigger a new id to be generated.
+trigger a new id to be generated. See
+the main provider documentation for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -954,12 +943,9 @@ of items in the input list.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Arbitrary string with which to seed the random number
-generator, in order to produce less-volatile permutations of the list.
-**Important:** Even with an identical seed, it is not guaranteed that the
-same permutation will be produced across different versions of the provider.
-This argument causes the result to be *less volatile*, but not fixed for
-all time.
+    <dd>{{% md %}}Arbitrary string with which to seed the random number generator, in order to produce less-volatile permutations of the
+list. **Important:** Even with an identical seed, it is not guaranteed that the same permutation will be produced across
+different versions of Terraform. This argument causes the result to be *less volatile*, but not fixed for all time.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -986,7 +972,8 @@ all time.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
-trigger a new id to be generated.
+trigger a new id to be generated. See
+the main provider documentation for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1020,12 +1007,9 @@ of items in the input list.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Arbitrary string with which to seed the random number
-generator, in order to produce less-volatile permutations of the list.
-**Important:** Even with an identical seed, it is not guaranteed that the
-same permutation will be produced across different versions of the provider.
-This argument causes the result to be *less volatile*, but not fixed for
-all time.
+    <dd>{{% md %}}Arbitrary string with which to seed the random number generator, in order to produce less-volatile permutations of the
+list. **Important:** Even with an identical seed, it is not guaranteed that the same permutation will be produced across
+different versions of Terraform. This argument causes the result to be *less volatile*, but not fixed for all time.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
