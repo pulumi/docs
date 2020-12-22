@@ -22,6 +22,8 @@ Explore the resources and functions of the operationalinsights module in the Azu
     <li><a href="linkedservice" title="LinkedService"><span class="symbol resource"></span>LinkedService</a></li>
     <li><a href="linkedstorageaccount" title="LinkedStorageAccount"><span class="symbol resource"></span>LinkedStorageAccount</a></li>
     <li><a href="machinegroup" title="MachineGroup"><span class="symbol resource"></span>MachineGroup</a></li>
+    <li><a href="query" title="Query"><span class="symbol resource"></span>Query</a></li>
+    <li><a href="querypack" title="QueryPack"><span class="symbol resource"></span>QueryPack</a></li>
     <li><a href="savedsearch" title="SavedSearch"><span class="symbol resource"></span>SavedSearch</a></li>
     <li><a href="storageinsightconfig" title="StorageInsightConfig"><span class="symbol resource"></span>StorageInsightConfig</a></li>
     <li><a href="workspace" title="Workspace"><span class="symbol resource"></span>Workspace</a></li>
@@ -40,6 +42,8 @@ Explore the resources and functions of the operationalinsights module in the Azu
     <li><a href="getlinkedservice" title="GetLinkedService"><span class="symbol function"></span>GetLinkedService</a></li>
     <li><a href="getlinkedstorageaccount" title="GetLinkedStorageAccount"><span class="symbol function"></span>GetLinkedStorageAccount</a></li>
     <li><a href="getmachinegroup" title="GetMachineGroup"><span class="symbol function"></span>GetMachineGroup</a></li>
+    <li><a href="getquery" title="GetQuery"><span class="symbol function"></span>GetQuery</a></li>
+    <li><a href="getquerypack" title="GetQueryPack"><span class="symbol function"></span>GetQueryPack</a></li>
     <li><a href="getsavedsearch" title="GetSavedSearch"><span class="symbol function"></span>GetSavedSearch</a></li>
     <li><a href="getstorageinsightconfig" title="GetStorageInsightConfig"><span class="symbol function"></span>GetStorageInsightConfig</a></li>
     <li><a href="getworkspace" title="GetWorkspace"><span class="symbol function"></span>GetWorkspace</a></li>
@@ -53,7 +57,7 @@ Explore the resources and functions of the operationalinsights module in the Azu
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.3.1</dd>
 </dl>
 
 

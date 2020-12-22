@@ -31,7 +31,7 @@ Explore the resources and functions of the datadog module in the Azure NextGen p
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.3.1</dd>
 </dl>
 
 

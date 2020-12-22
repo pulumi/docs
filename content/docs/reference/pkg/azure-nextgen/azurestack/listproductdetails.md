@@ -45,7 +45,6 @@ meta_desc: "Explore the ListProductDetails function of the azurestack module, in
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -53,35 +52,31 @@ The following arguments are supported:
             title="Required">
         <span id="productname_csharp">
 <a href="#productname_csharp" style="color: inherit; text-decoration: inherit;">Product<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the product.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="registrationname_csharp">
 <a href="#registrationname_csharp" style="color: inherit; text-decoration: inherit;">Registration<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Azure Stack registration.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroup_csharp">
 <a href="#resourcegroup_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource group.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -90,35 +85,31 @@ The following arguments are supported:
             title="Required">
         <span id="productname_go">
 <a href="#productname_go" style="color: inherit; text-decoration: inherit;">Product<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the product.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="registrationname_go">
 <a href="#registrationname_go" style="color: inherit; text-decoration: inherit;">Registration<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Azure Stack registration.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroup_go">
 <a href="#resourcegroup_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource group.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -127,35 +118,31 @@ The following arguments are supported:
             title="Required">
         <span id="productname_nodejs">
 <a href="#productname_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the product.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="registrationname_nodejs">
 <a href="#registrationname_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Azure Stack registration.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroup_nodejs">
 <a href="#resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource group.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -164,38 +151,31 @@ The following arguments are supported:
             title="Required">
         <span id="product_name_python">
 <a href="#product_name_python" style="color: inherit; text-decoration: inherit;">product_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the product.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="registration_name_python">
 <a href="#registration_name_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Azure Stack registration.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_group_python">
 <a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource group.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -206,7 +186,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -214,115 +193,103 @@ The following output properties are available:
             title="">
         <span id="computerole_csharp">
 <a href="#computerole_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies kind of compute role included in the package.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="datadiskimages_csharp">
 <a href="#datadiskimages_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Images</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadiskimageresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Stack.<wbr>Outputs.<wbr>Data<wbr>Disk<wbr>Image<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of attached data disks.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="gallerypackageblobsasuri_csharp">
 <a href="#gallerypackageblobsasuri_csharp" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Package<wbr>Blob<wbr>Sas<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI to the .azpkg file that provides information required for showing product in the gallery.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="issystemextension_csharp">
 <a href="#issystemextension_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>System<wbr>Extension</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if product is a Virtual Machine Extension.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="osdiskimage_csharp">
 <a href="#osdiskimage_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Image</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#osdiskimageresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Azure<wbr>Stack.<wbr>Outputs.<wbr>Os<wbr>Disk<wbr>Image<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}OS disk image used by product.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="productkind_csharp">
 <a href="#productkind_csharp" style="color: inherit; text-decoration: inherit;">Product<wbr>Kind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the kind of the product (virtualMachine or virtualMachineExtension).{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="supportmultipleextensions_csharp">
 <a href="#supportmultipleextensions_csharp" style="color: inherit; text-decoration: inherit;">Support<wbr>Multiple<wbr>Extensions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if specified product supports multiple extensions.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="uri_csharp">
 <a href="#uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies product version.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vmostype_csharp">
 <a href="#vmostype_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Os<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies operating system used by the product.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vmscalesetenabled_csharp">
 <a href="#vmscalesetenabled_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Scale<wbr>Set<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if virtual machine Scale Set is enabled in the specified product.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -331,115 +298,103 @@ The following output properties are available:
             title="">
         <span id="computerole_go">
 <a href="#computerole_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies kind of compute role included in the package.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="datadiskimages_go">
 <a href="#datadiskimages_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Images</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadiskimageresponse">[]Data<wbr>Disk<wbr>Image<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}List of attached data disks.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="gallerypackageblobsasuri_go">
 <a href="#gallerypackageblobsasuri_go" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Package<wbr>Blob<wbr>Sas<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI to the .azpkg file that provides information required for showing product in the gallery.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="issystemextension_go">
 <a href="#issystemextension_go" style="color: inherit; text-decoration: inherit;">Is<wbr>System<wbr>Extension</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if product is a Virtual Machine Extension.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="osdiskimage_go">
 <a href="#osdiskimage_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Image</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#osdiskimageresponse">Os<wbr>Disk<wbr>Image<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}OS disk image used by product.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="productkind_go">
 <a href="#productkind_go" style="color: inherit; text-decoration: inherit;">Product<wbr>Kind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the kind of the product (virtualMachine or virtualMachineExtension).{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="supportmultipleextensions_go">
 <a href="#supportmultipleextensions_go" style="color: inherit; text-decoration: inherit;">Support<wbr>Multiple<wbr>Extensions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if specified product supports multiple extensions.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="uri_go">
 <a href="#uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies product version.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vmostype_go">
 <a href="#vmostype_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Os<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies operating system used by the product.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vmscalesetenabled_go">
 <a href="#vmscalesetenabled_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Scale<wbr>Set<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if virtual machine Scale Set is enabled in the specified product.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -448,115 +403,103 @@ The following output properties are available:
             title="">
         <span id="computerole_nodejs">
 <a href="#computerole_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies kind of compute role included in the package.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="datadiskimages_nodejs">
 <a href="#datadiskimages_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disk<wbr>Images</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadiskimageresponse">Data<wbr>Disk<wbr>Image<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of attached data disks.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="gallerypackageblobsasuri_nodejs">
 <a href="#gallerypackageblobsasuri_nodejs" style="color: inherit; text-decoration: inherit;">gallery<wbr>Package<wbr>Blob<wbr>Sas<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI to the .azpkg file that provides information required for showing product in the gallery.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="issystemextension_nodejs">
 <a href="#issystemextension_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>System<wbr>Extension</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies if product is a Virtual Machine Extension.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="osdiskimage_nodejs">
 <a href="#osdiskimage_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk<wbr>Image</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#osdiskimageresponse">Os<wbr>Disk<wbr>Image<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}OS disk image used by product.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="productkind_nodejs">
 <a href="#productkind_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Kind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the kind of the product (virtualMachine or virtualMachineExtension).{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="supportmultipleextensions_nodejs">
 <a href="#supportmultipleextensions_nodejs" style="color: inherit; text-decoration: inherit;">support<wbr>Multiple<wbr>Extensions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates if specified product supports multiple extensions.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="uri_nodejs">
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies product version.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vmostype_nodejs">
 <a href="#vmostype_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Os<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies operating system used by the product.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vmscalesetenabled_nodejs">
 <a href="#vmscalesetenabled_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Scale<wbr>Set<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates if virtual machine Scale Set is enabled in the specified product.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -565,118 +508,103 @@ The following output properties are available:
             title="">
         <span id="compute_role_python">
 <a href="#compute_role_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies kind of compute role included in the package.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="data_disk_images_python">
 <a href="#data_disk_images_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>images</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadiskimageresponse">Sequence[Data<wbr>Disk<wbr>Image<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of attached data disks.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="gallery_package_blob_sas_uri_python">
 <a href="#gallery_package_blob_sas_uri_python" style="color: inherit; text-decoration: inherit;">gallery_<wbr>package_<wbr>blob_<wbr>sas_<wbr>uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI to the .azpkg file that provides information required for showing product in the gallery.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="is_system_extension_python">
 <a href="#is_system_extension_python" style="color: inherit; text-decoration: inherit;">is_<wbr>system_<wbr>extension</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if product is a Virtual Machine Extension.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="os_disk_image_python">
 <a href="#os_disk_image_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>image</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#osdiskimageresponse">Os<wbr>Disk<wbr>Image<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}OS disk image used by product.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="product_kind_python">
 <a href="#product_kind_python" style="color: inherit; text-decoration: inherit;">product_<wbr>kind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the kind of the product (virtualMachine or virtualMachineExtension).{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="support_multiple_extensions_python">
 <a href="#support_multiple_extensions_python" style="color: inherit; text-decoration: inherit;">support_<wbr>multiple_<wbr>extensions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if specified product supports multiple extensions.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="uri_python">
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies product version.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vm_os_type_python">
 <a href="#vm_os_type_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>os_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies operating system used by the product.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="vm_scale_set_enabled_python">
 <a href="#vm_scale_set_enabled_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>scale_<wbr>set_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if virtual machine Scale Set is enabled in the specified product.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -691,7 +619,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -699,25 +626,22 @@ The following output properties are available:
             title="Required">
         <span id="lun_csharp">
 <a href="#lun_csharp" style="color: inherit; text-decoration: inherit;">Lun</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The LUN.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sourceblobsasuri_csharp">
 <a href="#sourceblobsasuri_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Blob<wbr>Sas<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SAS key for source blob.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -726,25 +650,22 @@ The following output properties are available:
             title="Required">
         <span id="lun_go">
 <a href="#lun_go" style="color: inherit; text-decoration: inherit;">Lun</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The LUN.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sourceblobsasuri_go">
 <a href="#sourceblobsasuri_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Blob<wbr>Sas<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SAS key for source blob.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -753,25 +674,22 @@ The following output properties are available:
             title="Required">
         <span id="lun_nodejs">
 <a href="#lun_nodejs" style="color: inherit; text-decoration: inherit;">lun</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The LUN.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sourceblobsasuri_nodejs">
 <a href="#sourceblobsasuri_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Blob<wbr>Sas<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SAS key for source blob.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -780,31 +698,24 @@ The following output properties are available:
             title="Required">
         <span id="lun_python">
 <a href="#lun_python" style="color: inherit; text-decoration: inherit;">lun</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The LUN.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="source_blob_sas_uri_python">
 <a href="#source_blob_sas_uri_python" style="color: inherit; text-decoration: inherit;">source_<wbr>blob_<wbr>sas_<wbr>uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SAS key for source blob.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="osdiskimageresponse">Os<wbr>Disk<wbr>Image<wbr>Response</h4>
-
 
 
 
@@ -818,25 +729,22 @@ The following output properties are available:
             title="Required">
         <span id="operatingsystem_csharp">
 <a href="#operatingsystem_csharp" style="color: inherit; text-decoration: inherit;">Operating<wbr>System</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OS operating system type.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sourceblobsasuri_csharp">
 <a href="#sourceblobsasuri_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Blob<wbr>Sas<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SAS key for source blob.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -845,25 +753,22 @@ The following output properties are available:
             title="Required">
         <span id="operatingsystem_go">
 <a href="#operatingsystem_go" style="color: inherit; text-decoration: inherit;">Operating<wbr>System</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OS operating system type.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sourceblobsasuri_go">
 <a href="#sourceblobsasuri_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Blob<wbr>Sas<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SAS key for source blob.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -872,25 +777,22 @@ The following output properties are available:
             title="Required">
         <span id="operatingsystem_nodejs">
 <a href="#operatingsystem_nodejs" style="color: inherit; text-decoration: inherit;">operating<wbr>System</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OS operating system type.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sourceblobsasuri_nodejs">
 <a href="#sourceblobsasuri_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Blob<wbr>Sas<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SAS key for source blob.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -899,28 +801,22 @@ The following output properties are available:
             title="Required">
         <span id="operating_system_python">
 <a href="#operating_system_python" style="color: inherit; text-decoration: inherit;">operating_<wbr>system</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OS operating system type.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="source_blob_sas_uri_python">
 <a href="#source_blob_sas_uri_python" style="color: inherit; text-decoration: inherit;">source_<wbr>blob_<wbr>sas_<wbr>uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SAS key for source blob.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

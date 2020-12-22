@@ -13,12 +13,14 @@ Explore the resources and functions of the digitaltwins module in the Azure Next
 <ul class="api">
     <li><a href="digitaltwin" title="DigitalTwin"><span class="symbol resource"></span>DigitalTwin</a></li>
     <li><a href="digitaltwinsendpoint" title="DigitalTwinsEndpoint"><span class="symbol resource"></span>DigitalTwinsEndpoint</a></li>
+    <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getdigitaltwin" title="GetDigitalTwin"><span class="symbol function"></span>GetDigitalTwin</a></li>
     <li><a href="getdigitaltwinsendpoint" title="GetDigitalTwinsEndpoint"><span class="symbol function"></span>GetDigitalTwinsEndpoint</a></li>
+    <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -28,7 +30,7 @@ Explore the resources and functions of the digitaltwins module in the Azure Next
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.3.1</dd>
 </dl>
 
 

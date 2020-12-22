@@ -45,7 +45,6 @@ meta_desc: "Explore the GetVirtualNetworkGatewayVpnclientConnectionHealth functi
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -53,25 +52,22 @@ The following arguments are supported:
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="virtualnetworkgatewayname_csharp">
 <a href="#virtualnetworkgatewayname_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Gateway<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the virtual network gateway.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -80,25 +76,22 @@ The following arguments are supported:
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="virtualnetworkgatewayname_go">
 <a href="#virtualnetworkgatewayname_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Gateway<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the virtual network gateway.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -107,25 +100,22 @@ The following arguments are supported:
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="virtualnetworkgatewayname_nodejs">
 <a href="#virtualnetworkgatewayname_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Gateway<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the virtual network gateway.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -134,28 +124,22 @@ The following arguments are supported:
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="virtual_network_gateway_name_python">
 <a href="#virtual_network_gateway_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>gateway_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the virtual network gateway.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -166,7 +150,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -174,15 +157,13 @@ The following output properties are available:
             title="">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnclientconnectionhealthdetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Vpn<wbr>Client<wbr>Connection<wbr>Health<wbr>Detail<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of vpn client connection health.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -191,15 +172,13 @@ The following output properties are available:
             title="">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnclientconnectionhealthdetailresponse">[]Vpn<wbr>Client<wbr>Connection<wbr>Health<wbr>Detail<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}List of vpn client connection health.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -208,15 +187,13 @@ The following output properties are available:
             title="">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnclientconnectionhealthdetailresponse">Vpn<wbr>Client<wbr>Connection<wbr>Health<wbr>Detail<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of vpn client connection health.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -225,18 +202,13 @@ The following output properties are available:
             title="">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vpnclientconnectionhealthdetailresponse">Sequence[Vpn<wbr>Client<wbr>Connection<wbr>Health<wbr>Detail<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}List of vpn client connection health.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -251,7 +223,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -259,125 +230,112 @@ The following output properties are available:
             title="Required">
         <span id="egressbytestransferred_csharp">
 <a href="#egressbytestransferred_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Bytes<wbr>Transferred</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The egress bytes per second.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="egresspacketstransferred_csharp">
 <a href="#egresspacketstransferred_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Packets<wbr>Transferred</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The egress packets per second.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ingressbytestransferred_csharp">
 <a href="#ingressbytestransferred_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Bytes<wbr>Transferred</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ingress bytes per second.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ingresspacketstransferred_csharp">
 <a href="#ingresspacketstransferred_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Packets<wbr>Transferred</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ingress packets per second.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="maxbandwidth_csharp">
 <a href="#maxbandwidth_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The max band width.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="maxpacketspersecond_csharp">
 <a href="#maxpacketspersecond_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Packets<wbr>Per<wbr>Second</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The max packets transferred per second.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="privateipaddress_csharp">
 <a href="#privateipaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The assigned private Ip of a connected vpn client.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="publicipaddress_csharp">
 <a href="#publicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public Ip of a connected vpn client.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vpnconnectionduration_csharp">
 <a href="#vpnconnectionduration_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Connection<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration time of a connected vpn client.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vpnconnectionid_csharp">
 <a href="#vpnconnectionid_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Connection<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vpn client Id.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vpnconnectiontime_csharp">
 <a href="#vpnconnectiontime_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Connection<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start time of a connected vpn client.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vpnusername_csharp">
 <a href="#vpnusername_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>User<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name of a connected vpn client.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -386,125 +344,112 @@ The following output properties are available:
             title="Required">
         <span id="egressbytestransferred_go">
 <a href="#egressbytestransferred_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Bytes<wbr>Transferred</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The egress bytes per second.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="egresspacketstransferred_go">
 <a href="#egresspacketstransferred_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Packets<wbr>Transferred</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The egress packets per second.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ingressbytestransferred_go">
 <a href="#ingressbytestransferred_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Bytes<wbr>Transferred</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ingress bytes per second.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ingresspacketstransferred_go">
 <a href="#ingresspacketstransferred_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Packets<wbr>Transferred</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ingress packets per second.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="maxbandwidth_go">
 <a href="#maxbandwidth_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The max band width.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="maxpacketspersecond_go">
 <a href="#maxpacketspersecond_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Packets<wbr>Per<wbr>Second</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The max packets transferred per second.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="privateipaddress_go">
 <a href="#privateipaddress_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The assigned private Ip of a connected vpn client.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="publicipaddress_go">
 <a href="#publicipaddress_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public Ip of a connected vpn client.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vpnconnectionduration_go">
 <a href="#vpnconnectionduration_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Connection<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration time of a connected vpn client.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vpnconnectionid_go">
 <a href="#vpnconnectionid_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Connection<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vpn client Id.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vpnconnectiontime_go">
 <a href="#vpnconnectiontime_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Connection<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start time of a connected vpn client.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vpnusername_go">
 <a href="#vpnusername_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>User<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name of a connected vpn client.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -513,125 +458,112 @@ The following output properties are available:
             title="Required">
         <span id="egressbytestransferred_nodejs">
 <a href="#egressbytestransferred_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Bytes<wbr>Transferred</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The egress bytes per second.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="egresspacketstransferred_nodejs">
 <a href="#egresspacketstransferred_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Packets<wbr>Transferred</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The egress packets per second.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ingressbytestransferred_nodejs">
 <a href="#ingressbytestransferred_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Bytes<wbr>Transferred</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ingress bytes per second.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ingresspacketstransferred_nodejs">
 <a href="#ingresspacketstransferred_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Packets<wbr>Transferred</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ingress packets per second.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="maxbandwidth_nodejs">
 <a href="#maxbandwidth_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The max band width.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="maxpacketspersecond_nodejs">
 <a href="#maxpacketspersecond_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Packets<wbr>Per<wbr>Second</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The max packets transferred per second.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="privateipaddress_nodejs">
 <a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The assigned private Ip of a connected vpn client.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="publicipaddress_nodejs">
 <a href="#publicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public Ip of a connected vpn client.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vpnconnectionduration_nodejs">
 <a href="#vpnconnectionduration_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Connection<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The duration time of a connected vpn client.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vpnconnectionid_nodejs">
 <a href="#vpnconnectionid_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Connection<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vpn client Id.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vpnconnectiontime_nodejs">
 <a href="#vpnconnectiontime_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Connection<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start time of a connected vpn client.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vpnusername_nodejs">
 <a href="#vpnusername_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>User<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name of a connected vpn client.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -640,128 +572,112 @@ The following output properties are available:
             title="Required">
         <span id="egress_bytes_transferred_python">
 <a href="#egress_bytes_transferred_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>bytes_<wbr>transferred</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The egress bytes per second.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="egress_packets_transferred_python">
 <a href="#egress_packets_transferred_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>packets_<wbr>transferred</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The egress packets per second.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ingress_bytes_transferred_python">
 <a href="#ingress_bytes_transferred_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>bytes_<wbr>transferred</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ingress bytes per second.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ingress_packets_transferred_python">
 <a href="#ingress_packets_transferred_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>packets_<wbr>transferred</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ingress packets per second.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="max_bandwidth_python">
 <a href="#max_bandwidth_python" style="color: inherit; text-decoration: inherit;">max_<wbr>bandwidth</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The max band width.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="max_packets_per_second_python">
 <a href="#max_packets_per_second_python" style="color: inherit; text-decoration: inherit;">max_<wbr>packets_<wbr>per_<wbr>second</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The max packets transferred per second.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="private_ip_address_python">
 <a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The assigned private Ip of a connected vpn client.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="public_ip_address_python">
 <a href="#public_ip_address_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The public Ip of a connected vpn client.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vpn_connection_duration_python">
 <a href="#vpn_connection_duration_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>connection_<wbr>duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration time of a connected vpn client.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vpn_connection_id_python">
 <a href="#vpn_connection_id_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>connection_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The vpn client Id.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vpn_connection_time_python">
 <a href="#vpn_connection_time_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>connection_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The start time of a connected vpn client.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vpn_user_name_python">
 <a href="#vpn_user_name_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>user_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user name of a connected vpn client.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

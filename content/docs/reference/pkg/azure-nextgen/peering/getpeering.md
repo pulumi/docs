@@ -47,7 +47,6 @@ meta_desc: "Explore the GetPeering function of the peering module, including exa
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -55,25 +54,22 @@ The following arguments are supported:
             title="Required">
         <span id="peeringname_csharp">
 <a href="#peeringname_csharp" style="color: inherit; text-decoration: inherit;">Peering<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the peering.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -82,25 +78,22 @@ The following arguments are supported:
             title="Required">
         <span id="peeringname_go">
 <a href="#peeringname_go" style="color: inherit; text-decoration: inherit;">Peering<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the peering.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -109,25 +102,22 @@ The following arguments are supported:
             title="Required">
         <span id="peeringname_nodejs">
 <a href="#peeringname_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the peering.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -136,28 +126,22 @@ The following arguments are supported:
             title="Required">
         <span id="peering_name_python">
 <a href="#peering_name_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the peering.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -168,7 +152,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -176,115 +159,103 @@ The following output properties are available:
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kind of the peering.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provisioning state of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#peeringskuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Peering.<wbr>Outputs.<wbr>Peering<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The SKU that defines the tier and kind of the peering.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="direct_csharp">
 <a href="#direct_csharp" style="color: inherit; text-decoration: inherit;">Direct</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#peeringpropertiesdirectresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Peering.<wbr>Outputs.<wbr>Peering<wbr>Properties<wbr>Direct<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties that define a direct peering.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="exchange_csharp">
 <a href="#exchange_csharp" style="color: inherit; text-decoration: inherit;">Exchange</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#peeringpropertiesexchangeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Peering.<wbr>Outputs.<wbr>Peering<wbr>Properties<wbr>Exchange<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties that define an exchange peering.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="peeringlocation_csharp">
 <a href="#peeringlocation_csharp" style="color: inherit; text-decoration: inherit;">Peering<wbr>Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the peering.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -293,115 +264,103 @@ The following output properties are available:
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kind of the peering.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provisioning state of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#peeringskuresponse">Peering<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The SKU that defines the tier and kind of the peering.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="direct_go">
 <a href="#direct_go" style="color: inherit; text-decoration: inherit;">Direct</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#peeringpropertiesdirectresponse">Peering<wbr>Properties<wbr>Direct<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties that define a direct peering.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="exchange_go">
 <a href="#exchange_go" style="color: inherit; text-decoration: inherit;">Exchange</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#peeringpropertiesexchangeresponse">Peering<wbr>Properties<wbr>Exchange<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties that define an exchange peering.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="peeringlocation_go">
 <a href="#peeringlocation_go" style="color: inherit; text-decoration: inherit;">Peering<wbr>Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the peering.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -410,115 +369,103 @@ The following output properties are available:
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kind of the peering.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provisioning state of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#peeringskuresponse">Peering<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The SKU that defines the tier and kind of the peering.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="direct_nodejs">
 <a href="#direct_nodejs" style="color: inherit; text-decoration: inherit;">direct</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#peeringpropertiesdirectresponse">Peering<wbr>Properties<wbr>Direct<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties that define a direct peering.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="exchange_nodejs">
 <a href="#exchange_nodejs" style="color: inherit; text-decoration: inherit;">exchange</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#peeringpropertiesexchangeresponse">Peering<wbr>Properties<wbr>Exchange<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties that define an exchange peering.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="peeringlocation_nodejs">
 <a href="#peeringlocation_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the peering.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -527,118 +474,103 @@ The following output properties are available:
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The kind of the peering.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provisioning state of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#peeringskuresponse">Peering<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The SKU that defines the tier and kind of the peering.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="direct_python">
 <a href="#direct_python" style="color: inherit; text-decoration: inherit;">direct</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#peeringpropertiesdirectresponse">Peering<wbr>Properties<wbr>Direct<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties that define a direct peering.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="exchange_python">
 <a href="#exchange_python" style="color: inherit; text-decoration: inherit;">exchange</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#peeringpropertiesexchangeresponse">Peering<wbr>Properties<wbr>Exchange<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The properties that define an exchange peering.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="peering_location_python">
 <a href="#peering_location_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the peering.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -653,7 +585,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -661,115 +592,103 @@ The following output properties are available:
             title="Required">
         <span id="sessionstatev4_csharp">
 <a href="#sessionstatev4_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>State<wbr>V4</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the IPv4 session.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sessionstatev6_csharp">
 <a href="#sessionstatev6_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>State<wbr>V6</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the IPv6 session.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxprefixesadvertisedv4_csharp">
 <a href="#maxprefixesadvertisedv4_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Prefixes<wbr>Advertised<wbr>V4</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of prefixes advertised over the IPv4 session.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxprefixesadvertisedv6_csharp">
 <a href="#maxprefixesadvertisedv6_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Prefixes<wbr>Advertised<wbr>V6</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of prefixes advertised over the IPv6 session.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="md5authenticationkey_csharp">
 <a href="#md5authenticationkey_csharp" style="color: inherit; text-decoration: inherit;">Md5Authentication<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MD5 authentication key of the session.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="microsoftsessionipv4address_csharp">
 <a href="#microsoftsessionipv4address_csharp" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Session<wbr>IPv4Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv4 session address on Microsoft's end.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="microsoftsessionipv6address_csharp">
 <a href="#microsoftsessionipv6address_csharp" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Session<wbr>IPv6Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv6 session address on Microsoft's end.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="peersessionipv4address_csharp">
 <a href="#peersessionipv4address_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Session<wbr>IPv4Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv4 session address on peer's end.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="peersessionipv6address_csharp">
 <a href="#peersessionipv6address_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Session<wbr>IPv6Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv6 session address on peer's end.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sessionprefixv4_csharp">
 <a href="#sessionprefixv4_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Prefix<wbr>V4</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv4 prefix that contains both ends' IPv4 addresses.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sessionprefixv6_csharp">
 <a href="#sessionprefixv6_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Prefix<wbr>V6</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv6 prefix that contains both ends' IPv6 addresses.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -778,115 +697,103 @@ The following output properties are available:
             title="Required">
         <span id="sessionstatev4_go">
 <a href="#sessionstatev4_go" style="color: inherit; text-decoration: inherit;">Session<wbr>State<wbr>V4</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the IPv4 session.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sessionstatev6_go">
 <a href="#sessionstatev6_go" style="color: inherit; text-decoration: inherit;">Session<wbr>State<wbr>V6</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the IPv6 session.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxprefixesadvertisedv4_go">
 <a href="#maxprefixesadvertisedv4_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Prefixes<wbr>Advertised<wbr>V4</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of prefixes advertised over the IPv4 session.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxprefixesadvertisedv6_go">
 <a href="#maxprefixesadvertisedv6_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Prefixes<wbr>Advertised<wbr>V6</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of prefixes advertised over the IPv6 session.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="md5authenticationkey_go">
 <a href="#md5authenticationkey_go" style="color: inherit; text-decoration: inherit;">Md5Authentication<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MD5 authentication key of the session.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="microsoftsessionipv4address_go">
 <a href="#microsoftsessionipv4address_go" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Session<wbr>IPv4Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv4 session address on Microsoft's end.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="microsoftsessionipv6address_go">
 <a href="#microsoftsessionipv6address_go" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Session<wbr>IPv6Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv6 session address on Microsoft's end.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="peersessionipv4address_go">
 <a href="#peersessionipv4address_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Session<wbr>IPv4Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv4 session address on peer's end.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="peersessionipv6address_go">
 <a href="#peersessionipv6address_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Session<wbr>IPv6Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv6 session address on peer's end.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sessionprefixv4_go">
 <a href="#sessionprefixv4_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Prefix<wbr>V4</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv4 prefix that contains both ends' IPv4 addresses.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sessionprefixv6_go">
 <a href="#sessionprefixv6_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Prefix<wbr>V6</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv6 prefix that contains both ends' IPv6 addresses.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -895,115 +802,103 @@ The following output properties are available:
             title="Required">
         <span id="sessionstatev4_nodejs">
 <a href="#sessionstatev4_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>State<wbr>V4</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the IPv4 session.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sessionstatev6_nodejs">
 <a href="#sessionstatev6_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>State<wbr>V6</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the IPv6 session.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxprefixesadvertisedv4_nodejs">
 <a href="#maxprefixesadvertisedv4_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Prefixes<wbr>Advertised<wbr>V4</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of prefixes advertised over the IPv4 session.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxprefixesadvertisedv6_nodejs">
 <a href="#maxprefixesadvertisedv6_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Prefixes<wbr>Advertised<wbr>V6</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of prefixes advertised over the IPv6 session.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="md5authenticationkey_nodejs">
 <a href="#md5authenticationkey_nodejs" style="color: inherit; text-decoration: inherit;">md5Authentication<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MD5 authentication key of the session.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="microsoftsessionipv4address_nodejs">
 <a href="#microsoftsessionipv4address_nodejs" style="color: inherit; text-decoration: inherit;">microsoft<wbr>Session<wbr>IPv4Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv4 session address on Microsoft's end.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="microsoftsessionipv6address_nodejs">
 <a href="#microsoftsessionipv6address_nodejs" style="color: inherit; text-decoration: inherit;">microsoft<wbr>Session<wbr>IPv6Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv6 session address on Microsoft's end.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="peersessionipv4address_nodejs">
 <a href="#peersessionipv4address_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Session<wbr>IPv4Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv4 session address on peer's end.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="peersessionipv6address_nodejs">
 <a href="#peersessionipv6address_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Session<wbr>IPv6Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv6 session address on peer's end.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sessionprefixv4_nodejs">
 <a href="#sessionprefixv4_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Prefix<wbr>V4</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv4 prefix that contains both ends' IPv4 addresses.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sessionprefixv6_nodejs">
 <a href="#sessionprefixv6_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Prefix<wbr>V6</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv6 prefix that contains both ends' IPv6 addresses.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1012,118 +907,103 @@ The following output properties are available:
             title="Required">
         <span id="session_state_v4_python">
 <a href="#session_state_v4_python" style="color: inherit; text-decoration: inherit;">session_<wbr>state_<wbr>v4</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The state of the IPv4 session.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="session_state_v6_python">
 <a href="#session_state_v6_python" style="color: inherit; text-decoration: inherit;">session_<wbr>state_<wbr>v6</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The state of the IPv6 session.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_prefixes_advertised_v4_python">
 <a href="#max_prefixes_advertised_v4_python" style="color: inherit; text-decoration: inherit;">max_<wbr>prefixes_<wbr>advertised_<wbr>v4</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of prefixes advertised over the IPv4 session.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_prefixes_advertised_v6_python">
 <a href="#max_prefixes_advertised_v6_python" style="color: inherit; text-decoration: inherit;">max_<wbr>prefixes_<wbr>advertised_<wbr>v6</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of prefixes advertised over the IPv6 session.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="md5_authentication_key_python">
 <a href="#md5_authentication_key_python" style="color: inherit; text-decoration: inherit;">md5_<wbr>authentication_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The MD5 authentication key of the session.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="microsoft_session_i_pv4_address_python">
 <a href="#microsoft_session_i_pv4_address_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>session_<wbr>i_<wbr>pv4_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPv4 session address on Microsoft's end.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="microsoft_session_i_pv6_address_python">
 <a href="#microsoft_session_i_pv6_address_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>session_<wbr>i_<wbr>pv6_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPv6 session address on Microsoft's end.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="peer_session_i_pv4_address_python">
 <a href="#peer_session_i_pv4_address_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>session_<wbr>i_<wbr>pv4_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPv4 session address on peer's end.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="peer_session_i_pv6_address_python">
 <a href="#peer_session_i_pv6_address_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>session_<wbr>i_<wbr>pv6_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPv6 session address on peer's end.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="session_prefix_v4_python">
 <a href="#session_prefix_v4_python" style="color: inherit; text-decoration: inherit;">session_<wbr>prefix_<wbr>v4</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPv4 prefix that contains both ends' IPv4 addresses.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="session_prefix_v6_python">
 <a href="#session_prefix_v6_python" style="color: inherit; text-decoration: inherit;">session_<wbr>prefix_<wbr>v6</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPv6 prefix that contains both ends' IPv6 addresses.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="directconnectionresponse">Direct<wbr>Connection<wbr>Response</h4>
 
@@ -1132,7 +1012,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1140,105 +1019,94 @@ The following output properties are available:
             title="Required">
         <span id="connectionstate_csharp">
 <a href="#connectionstate_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the connection.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="errormessage_csharp">
 <a href="#errormessage_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The error message related to the connection state, if any.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="microsofttrackingid_csharp">
 <a href="#microsofttrackingid_csharp" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Tracking<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID used within Microsoft's peering provisioning system to track the connection{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="provisionedbandwidthinmbps_csharp">
 <a href="#provisionedbandwidthinmbps_csharp" style="color: inherit; text-decoration: inherit;">Provisioned<wbr>Bandwidth<wbr>In<wbr>Mbps</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The bandwidth that is actually provisioned.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bandwidthinmbps_csharp">
 <a href="#bandwidthinmbps_csharp" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>In<wbr>Mbps</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The bandwidth of the connection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bgpsession_csharp">
 <a href="#bgpsession_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Session</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bgpsessionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Peering.<wbr>Inputs.<wbr>Bgp<wbr>Session<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The BGP session associated with the connection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="connectionidentifier_csharp">
 <a href="#connectionidentifier_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Identifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier (GUID) for the connection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="peeringdbfacilityid_csharp">
 <a href="#peeringdbfacilityid_csharp" style="color: inherit; text-decoration: inherit;">Peering<wbr>DBFacility<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The PeeringDB.com ID of the facility at which the connection has to be set up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sessionaddressprovider_csharp">
 <a href="#sessionaddressprovider_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Address<wbr>Provider</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field indicating if Microsoft provides session ip addresses.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="useforpeeringservice_csharp">
 <a href="#useforpeeringservice_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>For<wbr>Peering<wbr>Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The flag that indicates whether or not the connection is used for peering service.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1247,105 +1115,94 @@ The following output properties are available:
             title="Required">
         <span id="connectionstate_go">
 <a href="#connectionstate_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the connection.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="errormessage_go">
 <a href="#errormessage_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The error message related to the connection state, if any.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="microsofttrackingid_go">
 <a href="#microsofttrackingid_go" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Tracking<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID used within Microsoft's peering provisioning system to track the connection{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="provisionedbandwidthinmbps_go">
 <a href="#provisionedbandwidthinmbps_go" style="color: inherit; text-decoration: inherit;">Provisioned<wbr>Bandwidth<wbr>In<wbr>Mbps</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The bandwidth that is actually provisioned.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bandwidthinmbps_go">
 <a href="#bandwidthinmbps_go" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>In<wbr>Mbps</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The bandwidth of the connection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bgpsession_go">
 <a href="#bgpsession_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Session</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bgpsessionresponse">Bgp<wbr>Session<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The BGP session associated with the connection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="connectionidentifier_go">
 <a href="#connectionidentifier_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Identifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier (GUID) for the connection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="peeringdbfacilityid_go">
 <a href="#peeringdbfacilityid_go" style="color: inherit; text-decoration: inherit;">Peering<wbr>DBFacility<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The PeeringDB.com ID of the facility at which the connection has to be set up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sessionaddressprovider_go">
 <a href="#sessionaddressprovider_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Address<wbr>Provider</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field indicating if Microsoft provides session ip addresses.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="useforpeeringservice_go">
 <a href="#useforpeeringservice_go" style="color: inherit; text-decoration: inherit;">Use<wbr>For<wbr>Peering<wbr>Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The flag that indicates whether or not the connection is used for peering service.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1354,105 +1211,94 @@ The following output properties are available:
             title="Required">
         <span id="connectionstate_nodejs">
 <a href="#connectionstate_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the connection.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="errormessage_nodejs">
 <a href="#errormessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The error message related to the connection state, if any.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="microsofttrackingid_nodejs">
 <a href="#microsofttrackingid_nodejs" style="color: inherit; text-decoration: inherit;">microsoft<wbr>Tracking<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID used within Microsoft's peering provisioning system to track the connection{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="provisionedbandwidthinmbps_nodejs">
 <a href="#provisionedbandwidthinmbps_nodejs" style="color: inherit; text-decoration: inherit;">provisioned<wbr>Bandwidth<wbr>In<wbr>Mbps</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The bandwidth that is actually provisioned.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bandwidthinmbps_nodejs">
 <a href="#bandwidthinmbps_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>In<wbr>Mbps</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The bandwidth of the connection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bgpsession_nodejs">
 <a href="#bgpsession_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Session</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bgpsessionresponse">Bgp<wbr>Session<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The BGP session associated with the connection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="connectionidentifier_nodejs">
 <a href="#connectionidentifier_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Identifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier (GUID) for the connection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="peeringdbfacilityid_nodejs">
 <a href="#peeringdbfacilityid_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>DBFacility<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The PeeringDB.com ID of the facility at which the connection has to be set up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sessionaddressprovider_nodejs">
 <a href="#sessionaddressprovider_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Address<wbr>Provider</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The field indicating if Microsoft provides session ip addresses.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="useforpeeringservice_nodejs">
 <a href="#useforpeeringservice_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>For<wbr>Peering<wbr>Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The flag that indicates whether or not the connection is used for peering service.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1461,108 +1307,94 @@ The following output properties are available:
             title="Required">
         <span id="connection_state_python">
 <a href="#connection_state_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The state of the connection.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="error_message_python">
 <a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The error message related to the connection state, if any.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="microsoft_tracking_id_python">
 <a href="#microsoft_tracking_id_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>tracking_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID used within Microsoft's peering provisioning system to track the connection{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="provisioned_bandwidth_in_mbps_python">
 <a href="#provisioned_bandwidth_in_mbps_python" style="color: inherit; text-decoration: inherit;">provisioned_<wbr>bandwidth_<wbr>in_<wbr>mbps</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The bandwidth that is actually provisioned.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bandwidth_in_mbps_python">
 <a href="#bandwidth_in_mbps_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>in_<wbr>mbps</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The bandwidth of the connection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bgp_session_python">
 <a href="#bgp_session_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>session</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bgpsessionresponse">Bgp<wbr>Session<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The BGP session associated with the connection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="connection_identifier_python">
 <a href="#connection_identifier_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>identifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier (GUID) for the connection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="peering_db_facility_id_python">
 <a href="#peering_db_facility_id_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>db_<wbr>facility_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The PeeringDB.com ID of the facility at which the connection has to be set up.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="session_address_provider_python">
 <a href="#session_address_provider_python" style="color: inherit; text-decoration: inherit;">session_<wbr>address_<wbr>provider</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The field indicating if Microsoft provides session ip addresses.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="use_for_peering_service_python">
 <a href="#use_for_peering_service_python" style="color: inherit; text-decoration: inherit;">use_<wbr>for_<wbr>peering_<wbr>service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The flag that indicates whether or not the connection is used for peering service.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="exchangeconnectionresponse">Exchange<wbr>Connection<wbr>Response</h4>
 
@@ -1571,7 +1403,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1579,55 +1410,49 @@ The following output properties are available:
             title="Required">
         <span id="connectionstate_csharp">
 <a href="#connectionstate_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the connection.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="errormessage_csharp">
 <a href="#errormessage_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The error message related to the connection state, if any.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bgpsession_csharp">
 <a href="#bgpsession_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Session</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bgpsessionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Peering.<wbr>Inputs.<wbr>Bgp<wbr>Session<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The BGP session associated with the connection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="connectionidentifier_csharp">
 <a href="#connectionidentifier_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Identifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier (GUID) for the connection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="peeringdbfacilityid_csharp">
 <a href="#peeringdbfacilityid_csharp" style="color: inherit; text-decoration: inherit;">Peering<wbr>DBFacility<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The PeeringDB.com ID of the facility at which the connection has to be set up.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1636,55 +1461,49 @@ The following output properties are available:
             title="Required">
         <span id="connectionstate_go">
 <a href="#connectionstate_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the connection.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="errormessage_go">
 <a href="#errormessage_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The error message related to the connection state, if any.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bgpsession_go">
 <a href="#bgpsession_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Session</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bgpsessionresponse">Bgp<wbr>Session<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The BGP session associated with the connection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="connectionidentifier_go">
 <a href="#connectionidentifier_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Identifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier (GUID) for the connection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="peeringdbfacilityid_go">
 <a href="#peeringdbfacilityid_go" style="color: inherit; text-decoration: inherit;">Peering<wbr>DBFacility<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The PeeringDB.com ID of the facility at which the connection has to be set up.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1693,55 +1512,49 @@ The following output properties are available:
             title="Required">
         <span id="connectionstate_nodejs">
 <a href="#connectionstate_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the connection.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="errormessage_nodejs">
 <a href="#errormessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The error message related to the connection state, if any.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bgpsession_nodejs">
 <a href="#bgpsession_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Session</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bgpsessionresponse">Bgp<wbr>Session<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The BGP session associated with the connection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="connectionidentifier_nodejs">
 <a href="#connectionidentifier_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Identifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier (GUID) for the connection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="peeringdbfacilityid_nodejs">
 <a href="#peeringdbfacilityid_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>DBFacility<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The PeeringDB.com ID of the facility at which the connection has to be set up.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1750,61 +1563,51 @@ The following output properties are available:
             title="Required">
         <span id="connection_state_python">
 <a href="#connection_state_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The state of the connection.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="error_message_python">
 <a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The error message related to the connection state, if any.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bgp_session_python">
 <a href="#bgp_session_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>session</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#bgpsessionresponse">Bgp<wbr>Session<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The BGP session associated with the connection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="connection_identifier_python">
 <a href="#connection_identifier_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>identifier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier (GUID) for the connection.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="peering_db_facility_id_python">
 <a href="#peering_db_facility_id_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>db_<wbr>facility_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The PeeringDB.com ID of the facility at which the connection has to be set up.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="peeringpropertiesdirectresponse">Peering<wbr>Properties<wbr>Direct<wbr>Response</h4>
-
 
 
 
@@ -1818,45 +1621,40 @@ The following output properties are available:
             title="Required">
         <span id="useforpeeringservice_csharp">
 <a href="#useforpeeringservice_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>For<wbr>Peering<wbr>Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The flag that indicates whether or not the peering is used for peering service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="connections_csharp">
 <a href="#connections_csharp" style="color: inherit; text-decoration: inherit;">Connections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#directconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Peering.<wbr>Inputs.<wbr>Direct<wbr>Connection<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The set of connections that constitute a direct peering.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="directpeeringtype_csharp">
 <a href="#directpeeringtype_csharp" style="color: inherit; text-decoration: inherit;">Direct<wbr>Peering<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of direct peering.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="peerasn_csharp">
 <a href="#peerasn_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Asn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Peering.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference of the peer ASN.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1865,45 +1663,40 @@ The following output properties are available:
             title="Required">
         <span id="useforpeeringservice_go">
 <a href="#useforpeeringservice_go" style="color: inherit; text-decoration: inherit;">Use<wbr>For<wbr>Peering<wbr>Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The flag that indicates whether or not the peering is used for peering service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="connections_go">
 <a href="#connections_go" style="color: inherit; text-decoration: inherit;">Connections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#directconnectionresponse">[]Direct<wbr>Connection<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of connections that constitute a direct peering.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="directpeeringtype_go">
 <a href="#directpeeringtype_go" style="color: inherit; text-decoration: inherit;">Direct<wbr>Peering<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of direct peering.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="peerasn_go">
 <a href="#peerasn_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Asn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference of the peer ASN.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1912,45 +1705,40 @@ The following output properties are available:
             title="Required">
         <span id="useforpeeringservice_nodejs">
 <a href="#useforpeeringservice_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>For<wbr>Peering<wbr>Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The flag that indicates whether or not the peering is used for peering service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="connections_nodejs">
 <a href="#connections_nodejs" style="color: inherit; text-decoration: inherit;">connections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#directconnectionresponse">Direct<wbr>Connection<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The set of connections that constitute a direct peering.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="directpeeringtype_nodejs">
 <a href="#directpeeringtype_nodejs" style="color: inherit; text-decoration: inherit;">direct<wbr>Peering<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of direct peering.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="peerasn_nodejs">
 <a href="#peerasn_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Asn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference of the peer ASN.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1959,51 +1747,42 @@ The following output properties are available:
             title="Required">
         <span id="use_for_peering_service_python">
 <a href="#use_for_peering_service_python" style="color: inherit; text-decoration: inherit;">use_<wbr>for_<wbr>peering_<wbr>service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The flag that indicates whether or not the peering is used for peering service.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="connections_python">
 <a href="#connections_python" style="color: inherit; text-decoration: inherit;">connections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#directconnectionresponse">Sequence[Direct<wbr>Connection<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The set of connections that constitute a direct peering.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="direct_peering_type_python">
 <a href="#direct_peering_type_python" style="color: inherit; text-decoration: inherit;">direct_<wbr>peering_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of direct peering.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="peer_asn_python">
 <a href="#peer_asn_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>asn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference of the peer ASN.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="peeringpropertiesexchangeresponse">Peering<wbr>Properties<wbr>Exchange<wbr>Response</h4>
-
 
 
 
@@ -2017,25 +1796,22 @@ The following output properties are available:
             title="Optional">
         <span id="connections_csharp">
 <a href="#connections_csharp" style="color: inherit; text-decoration: inherit;">Connections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exchangeconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Peering.<wbr>Inputs.<wbr>Exchange<wbr>Connection<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The set of connections that constitute an exchange peering.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="peerasn_csharp">
 <a href="#peerasn_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Asn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Peering.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference of the peer ASN.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2044,25 +1820,22 @@ The following output properties are available:
             title="Optional">
         <span id="connections_go">
 <a href="#connections_go" style="color: inherit; text-decoration: inherit;">Connections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exchangeconnectionresponse">[]Exchange<wbr>Connection<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The set of connections that constitute an exchange peering.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="peerasn_go">
 <a href="#peerasn_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Asn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference of the peer ASN.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2071,25 +1844,22 @@ The following output properties are available:
             title="Optional">
         <span id="connections_nodejs">
 <a href="#connections_nodejs" style="color: inherit; text-decoration: inherit;">connections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exchangeconnectionresponse">Exchange<wbr>Connection<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}The set of connections that constitute an exchange peering.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="peerasn_nodejs">
 <a href="#peerasn_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Asn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The reference of the peer ASN.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2098,31 +1868,24 @@ The following output properties are available:
             title="Optional">
         <span id="connections_python">
 <a href="#connections_python" style="color: inherit; text-decoration: inherit;">connections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#exchangeconnectionresponse">Sequence[Exchange<wbr>Connection<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The set of connections that constitute an exchange peering.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="peer_asn_python">
 <a href="#peer_asn_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>asn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference of the peer ASN.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="peeringskuresponse">Peering<wbr>Sku<wbr>Response</h4>
-
 
 
 
@@ -2136,45 +1899,40 @@ The following output properties are available:
             title="Optional">
         <span id="family_csharp">
 <a href="#family_csharp" style="color: inherit; text-decoration: inherit;">Family</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The family of the peering SKU.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the peering SKU.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="size_csharp">
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the peering SKU.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tier of the peering SKU.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2183,45 +1941,40 @@ The following output properties are available:
             title="Optional">
         <span id="family_go">
 <a href="#family_go" style="color: inherit; text-decoration: inherit;">Family</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The family of the peering SKU.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the peering SKU.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="size_go">
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the peering SKU.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tier of the peering SKU.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2230,45 +1983,40 @@ The following output properties are available:
             title="Optional">
         <span id="family_nodejs">
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The family of the peering SKU.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the peering SKU.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="size_nodejs">
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the peering SKU.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tier of the peering SKU.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2277,51 +2025,42 @@ The following output properties are available:
             title="Optional">
         <span id="family_python">
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The family of the peering SKU.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the peering SKU.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="size_python">
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The size of the peering SKU.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tier of the peering SKU.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="subresourceresponse">Sub<wbr>Resource<wbr>Response</h4>
-
 
 
 
@@ -2335,15 +2074,13 @@ The following output properties are available:
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the referenced resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2352,15 +2089,13 @@ The following output properties are available:
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the referenced resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2369,15 +2104,13 @@ The following output properties are available:
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the referenced resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2386,18 +2119,13 @@ The following output properties are available:
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier of the referenced resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

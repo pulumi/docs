@@ -13,6 +13,7 @@ Explore the resources and functions of the apimanagement module in the Azure Nex
 <ul class="api">
     <li><a href="api" title="Api"><span class="symbol resource"></span>Api</a></li>
     <li><a href="apidiagnostic" title="ApiDiagnostic"><span class="symbol resource"></span>ApiDiagnostic</a></li>
+    <li><a href="apidiagnosticlogger" title="ApiDiagnosticLogger"><span class="symbol resource"></span>ApiDiagnosticLogger</a></li>
     <li><a href="apiissue" title="ApiIssue"><span class="symbol resource"></span>ApiIssue</a></li>
     <li><a href="apiissueattachment" title="ApiIssueAttachment"><span class="symbol resource"></span>ApiIssueAttachment</a></li>
     <li><a href="apiissuecomment" title="ApiIssueComment"><span class="symbol resource"></span>ApiIssueComment</a></li>
@@ -31,16 +32,23 @@ Explore the resources and functions of the apimanagement module in the Azure Nex
     <li><a href="contentitem" title="ContentItem"><span class="symbol resource"></span>ContentItem</a></li>
     <li><a href="contenttype" title="ContentType"><span class="symbol resource"></span>ContentType</a></li>
     <li><a href="diagnostic" title="Diagnostic"><span class="symbol resource"></span>Diagnostic</a></li>
+    <li><a href="diagnosticlogger" title="DiagnosticLogger"><span class="symbol resource"></span>DiagnosticLogger</a></li>
     <li><a href="emailtemplate" title="EmailTemplate"><span class="symbol resource"></span>EmailTemplate</a></li>
     <li><a href="gateway" title="Gateway"><span class="symbol resource"></span>Gateway</a></li>
+    <li><a href="gatewayapientitytag" title="GatewayApiEntityTag"><span class="symbol resource"></span>GatewayApiEntityTag</a></li>
     <li><a href="gatewayhostnameconfiguration" title="GatewayHostnameConfiguration"><span class="symbol resource"></span>GatewayHostnameConfiguration</a></li>
     <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
+    <li><a href="groupuser" title="GroupUser"><span class="symbol resource"></span>GroupUser</a></li>
     <li><a href="identityprovider" title="IdentityProvider"><span class="symbol resource"></span>IdentityProvider</a></li>
     <li><a href="logger" title="Logger"><span class="symbol resource"></span>Logger</a></li>
     <li><a href="namedvalue" title="NamedValue"><span class="symbol resource"></span>NamedValue</a></li>
+    <li><a href="notificationrecipientemail" title="NotificationRecipientEmail"><span class="symbol resource"></span>NotificationRecipientEmail</a></li>
+    <li><a href="notificationrecipientuser" title="NotificationRecipientUser"><span class="symbol resource"></span>NotificationRecipientUser</a></li>
     <li><a href="openidconnectprovider" title="OpenIdConnectProvider"><span class="symbol resource"></span>OpenIdConnectProvider</a></li>
     <li><a href="policy" title="Policy"><span class="symbol resource"></span>Policy</a></li>
     <li><a href="product" title="Product"><span class="symbol resource"></span>Product</a></li>
+    <li><a href="productapi" title="ProductApi"><span class="symbol resource"></span>ProductApi</a></li>
+    <li><a href="productgroup" title="ProductGroup"><span class="symbol resource"></span>ProductGroup</a></li>
     <li><a href="productpolicy" title="ProductPolicy"><span class="symbol resource"></span>ProductPolicy</a></li>
     <li><a href="property" title="Property"><span class="symbol resource"></span>Property</a></li>
     <li><a href="subscription" title="Subscription"><span class="symbol resource"></span>Subscription</a></li>
@@ -110,7 +118,7 @@ Explore the resources and functions of the apimanagement module in the Azure Nex
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.3.1</dd>
 </dl>
 
 

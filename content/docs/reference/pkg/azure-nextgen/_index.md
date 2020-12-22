@@ -128,6 +128,7 @@ A Next Generation Pulumi package for creating and managing Azure resources.
     <li><a href="powerbidedicated/" title="powerbidedicated"><span class="symbol module"></span>powerbidedicated</a></li>
     <li><a href="powerplatform/" title="powerplatform"><span class="symbol module"></span>powerplatform</a></li>
     <li><a href="providerhub/" title="providerhub"><span class="symbol module"></span>providerhub</a></li>
+    <li><a href="purview/" title="purview"><span class="symbol module"></span>purview</a></li>
     <li><a href="recoveryservices/" title="recoveryservices"><span class="symbol module"></span>recoveryservices</a></li>
     <li><a href="redhatopenshift/" title="redhatopenshift"><span class="symbol module"></span>redhatopenshift</a></li>
     <li><a href="relay/" title="relay"><span class="symbol module"></span>relay</a></li>
@@ -175,7 +176,7 @@ A Next Generation Pulumi package for creating and managing Azure resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.3.0</dd>
+	<dd>0.3.1</dd>
 </dl>
 
 

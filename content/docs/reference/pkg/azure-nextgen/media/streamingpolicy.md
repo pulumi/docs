@@ -2,7 +2,7 @@
 ---
 title: "StreamingPolicy"
 title_tag: "azure-nextgen.media.StreamingPolicy"
-meta_desc: "Explore the StreamingPolicy resource of the media module, including examples, input properties, output properties, lookup functions, and supporting types. A Streaming Policy resource"
+meta_desc: "Documentation for the azure-nextgen.media.StreamingPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -11,6 +11,7 @@ meta_desc: "Explore the StreamingPolicy resource of the media module, including 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A Streaming Policy resource
+Latest API Version: 2020-05-01.
 
 
 {{% examples %}}
@@ -1044,7 +1045,7 @@ const streamingPolicy = new azure_nextgen.media.latest.StreamingPolicy("streamin
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">StreamingPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">StreamingPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">StreamingPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">StreamingPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1052,11 +1053,11 @@ const streamingPolicy = new azure_nextgen.media.latest.StreamingPolicy("streamin
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStreamingPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">StreamingPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">StreamingPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStreamingPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">StreamingPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">StreamingPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">StreamingPolicy</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">StreamingPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">StreamingPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">StreamingPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1067,7 +1068,7 @@ const streamingPolicy = new azure_nextgen.media.latest.StreamingPolicy("streamin
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -1136,7 +1137,7 @@ const streamingPolicy = new azure_nextgen.media.latest.StreamingPolicy("streamin
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -1175,7 +1176,7 @@ const streamingPolicy = new azure_nextgen.media.latest.StreamingPolicy("streamin
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -1216,7 +1217,6 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1224,85 +1224,76 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
             title="Required">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="streamingpolicyname_csharp">
 <a href="#streamingpolicyname_csharp" style="color: inherit; text-decoration: inherit;">Streaming<wbr>Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Streaming Policy name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="commonencryptioncbcs_csharp">
 <a href="#commonencryptioncbcs_csharp" style="color: inherit; text-decoration: inherit;">Common<wbr>Encryption<wbr>Cbcs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#commonencryptioncbcs">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Common<wbr>Encryption<wbr>Cbcs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of CommonEncryptionCbcs{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="commonencryptioncenc_csharp">
 <a href="#commonencryptioncenc_csharp" style="color: inherit; text-decoration: inherit;">Common<wbr>Encryption<wbr>Cenc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#commonencryptioncenc">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Common<wbr>Encryption<wbr>Cenc<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of CommonEncryptionCenc{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="defaultcontentkeypolicyname_csharp">
 <a href="#defaultcontentkeypolicyname_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Content<wbr>Key<wbr>Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default ContentKey used by current Streaming Policy{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="envelopeencryption_csharp">
 <a href="#envelopeencryption_csharp" style="color: inherit; text-decoration: inherit;">Envelope<wbr>Encryption</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#envelopeencryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Envelope<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of EnvelopeEncryption{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="noencryption_csharp">
 <a href="#noencryption_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Encryption</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#noencryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>No<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configurations of NoEncryption{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1311,85 +1302,76 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
             title="Required">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="streamingpolicyname_go">
 <a href="#streamingpolicyname_go" style="color: inherit; text-decoration: inherit;">Streaming<wbr>Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Streaming Policy name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="commonencryptioncbcs_go">
 <a href="#commonencryptioncbcs_go" style="color: inherit; text-decoration: inherit;">Common<wbr>Encryption<wbr>Cbcs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#commonencryptioncbcs">Common<wbr>Encryption<wbr>Cbcs</a></span>
     </dt>
     <dd>{{% md %}}Configuration of CommonEncryptionCbcs{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="commonencryptioncenc_go">
 <a href="#commonencryptioncenc_go" style="color: inherit; text-decoration: inherit;">Common<wbr>Encryption<wbr>Cenc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#commonencryptioncenc">Common<wbr>Encryption<wbr>Cenc</a></span>
     </dt>
     <dd>{{% md %}}Configuration of CommonEncryptionCenc{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="defaultcontentkeypolicyname_go">
 <a href="#defaultcontentkeypolicyname_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Content<wbr>Key<wbr>Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default ContentKey used by current Streaming Policy{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="envelopeencryption_go">
 <a href="#envelopeencryption_go" style="color: inherit; text-decoration: inherit;">Envelope<wbr>Encryption</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#envelopeencryption">Envelope<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Configuration of EnvelopeEncryption{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="noencryption_go">
 <a href="#noencryption_go" style="color: inherit; text-decoration: inherit;">No<wbr>Encryption</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#noencryption">No<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Configurations of NoEncryption{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1398,85 +1380,76 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
             title="Required">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="streamingpolicyname_nodejs">
 <a href="#streamingpolicyname_nodejs" style="color: inherit; text-decoration: inherit;">streaming<wbr>Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Streaming Policy name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="commonencryptioncbcs_nodejs">
 <a href="#commonencryptioncbcs_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Encryption<wbr>Cbcs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#commonencryptioncbcs">Common<wbr>Encryption<wbr>Cbcs</a></span>
     </dt>
     <dd>{{% md %}}Configuration of CommonEncryptionCbcs{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="commonencryptioncenc_nodejs">
 <a href="#commonencryptioncenc_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Encryption<wbr>Cenc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#commonencryptioncenc">Common<wbr>Encryption<wbr>Cenc</a></span>
     </dt>
     <dd>{{% md %}}Configuration of CommonEncryptionCenc{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="defaultcontentkeypolicyname_nodejs">
 <a href="#defaultcontentkeypolicyname_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Content<wbr>Key<wbr>Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default ContentKey used by current Streaming Policy{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="envelopeencryption_nodejs">
 <a href="#envelopeencryption_nodejs" style="color: inherit; text-decoration: inherit;">envelope<wbr>Encryption</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#envelopeencryption">Envelope<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Configuration of EnvelopeEncryption{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="noencryption_nodejs">
 <a href="#noencryption_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Encryption</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#noencryption">No<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Configurations of NoEncryption{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1485,94 +1458,81 @@ The StreamingPolicy resource accepts the following [input]({{< relref "/docs/int
             title="Required">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="streaming_policy_name_python">
 <a href="#streaming_policy_name_python" style="color: inherit; text-decoration: inherit;">streaming_<wbr>policy_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Streaming Policy name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="common_encryption_cbcs_python">
 <a href="#common_encryption_cbcs_python" style="color: inherit; text-decoration: inherit;">common_<wbr>encryption_<wbr>cbcs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#commonencryptioncbcs">Common<wbr>Encryption<wbr>Cbcs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of CommonEncryptionCbcs{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="common_encryption_cenc_python">
 <a href="#common_encryption_cenc_python" style="color: inherit; text-decoration: inherit;">common_<wbr>encryption_<wbr>cenc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#commonencryptioncenc">Common<wbr>Encryption<wbr>Cenc<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of CommonEncryptionCenc{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="default_content_key_policy_name_python">
 <a href="#default_content_key_policy_name_python" style="color: inherit; text-decoration: inherit;">default_<wbr>content_<wbr>key_<wbr>policy_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Default ContentKey used by current Streaming Policy{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="envelope_encryption_python">
 <a href="#envelope_encryption_python" style="color: inherit; text-decoration: inherit;">envelope_<wbr>encryption</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#envelopeencryption">Envelope<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of EnvelopeEncryption{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="no_encryption_python">
 <a href="#no_encryption_python" style="color: inherit; text-decoration: inherit;">no_<wbr>encryption</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#noencryption">No<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configurations of NoEncryption{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the StreamingPolicy resource produces the following output properties:
-
 
 
 
@@ -1583,45 +1543,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="created_csharp">
 <a href="#created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation time of Streaming Policy{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1630,45 +1585,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="created_go">
 <a href="#created_go" style="color: inherit; text-decoration: inherit;">Created</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation time of Streaming Policy{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1677,45 +1627,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="created_nodejs">
 <a href="#created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation time of Streaming Policy{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1724,48 +1669,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="created_python">
 <a href="#created_python" style="color: inherit; text-decoration: inherit;">created</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation time of Streaming Policy{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1776,13 +1713,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
 <h4 id="cbcsdrmconfiguration">Cbcs<wbr>Drm<wbr>Configuration</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1791,35 +1723,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="fairplay_csharp">
 <a href="#fairplay_csharp" style="color: inherit; text-decoration: inherit;">Fair<wbr>Play</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicyfairplayconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}FairPlay configurations{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="playready_csharp">
 <a href="#playready_csharp" style="color: inherit; text-decoration: inherit;">Play<wbr>Ready</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicyplayreadyconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="widevine_csharp">
 <a href="#widevine_csharp" style="color: inherit; text-decoration: inherit;">Widevine</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicywidevineconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1828,35 +1756,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="fairplay_go">
 <a href="#fairplay_go" style="color: inherit; text-decoration: inherit;">Fair<wbr>Play</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicyfairplayconfiguration">Streaming<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}FairPlay configurations{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="playready_go">
 <a href="#playready_go" style="color: inherit; text-decoration: inherit;">Play<wbr>Ready</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicyplayreadyconfiguration">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="widevine_go">
 <a href="#widevine_go" style="color: inherit; text-decoration: inherit;">Widevine</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicywidevineconfiguration">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1865,35 +1789,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="fairplay_nodejs">
 <a href="#fairplay_nodejs" style="color: inherit; text-decoration: inherit;">fair<wbr>Play</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicyfairplayconfiguration">Streaming<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}FairPlay configurations{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="playready_nodejs">
 <a href="#playready_nodejs" style="color: inherit; text-decoration: inherit;">play<wbr>Ready</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicyplayreadyconfiguration">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="widevine_nodejs">
 <a href="#widevine_nodejs" style="color: inherit; text-decoration: inherit;">widevine</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicywidevineconfiguration">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1902,46 +1822,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="fair_play_python">
 <a href="#fair_play_python" style="color: inherit; text-decoration: inherit;">fair_<wbr>play</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicyfairplayconfiguration">Streaming<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}FairPlay configurations{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="play_ready_python">
 <a href="#play_ready_python" style="color: inherit; text-decoration: inherit;">play_<wbr>ready</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicyplayreadyconfiguration">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="widevine_python">
 <a href="#widevine_python" style="color: inherit; text-decoration: inherit;">widevine</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicywidevineconfiguration">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="cbcsdrmconfigurationresponse">Cbcs<wbr>Drm<wbr>Configuration<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1950,35 +1857,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="fairplay_csharp">
 <a href="#fairplay_csharp" style="color: inherit; text-decoration: inherit;">Fair<wbr>Play</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicyfairplayconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}FairPlay configurations{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="playready_csharp">
 <a href="#playready_csharp" style="color: inherit; text-decoration: inherit;">Play<wbr>Ready</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicyplayreadyconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="widevine_csharp">
 <a href="#widevine_csharp" style="color: inherit; text-decoration: inherit;">Widevine</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicywidevineconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1987,35 +1890,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="fairplay_go">
 <a href="#fairplay_go" style="color: inherit; text-decoration: inherit;">Fair<wbr>Play</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicyfairplayconfigurationresponse">Streaming<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}FairPlay configurations{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="playready_go">
 <a href="#playready_go" style="color: inherit; text-decoration: inherit;">Play<wbr>Ready</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicyplayreadyconfigurationresponse">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="widevine_go">
 <a href="#widevine_go" style="color: inherit; text-decoration: inherit;">Widevine</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicywidevineconfigurationresponse">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2024,35 +1923,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="fairplay_nodejs">
 <a href="#fairplay_nodejs" style="color: inherit; text-decoration: inherit;">fair<wbr>Play</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicyfairplayconfigurationresponse">Streaming<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}FairPlay configurations{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="playready_nodejs">
 <a href="#playready_nodejs" style="color: inherit; text-decoration: inherit;">play<wbr>Ready</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicyplayreadyconfigurationresponse">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="widevine_nodejs">
 <a href="#widevine_nodejs" style="color: inherit; text-decoration: inherit;">widevine</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicywidevineconfigurationresponse">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2061,46 +1956,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="fair_play_python">
 <a href="#fair_play_python" style="color: inherit; text-decoration: inherit;">fair_<wbr>play</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicyfairplayconfigurationresponse">Streaming<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}FairPlay configurations{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="play_ready_python">
 <a href="#play_ready_python" style="color: inherit; text-decoration: inherit;">play_<wbr>ready</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicyplayreadyconfigurationresponse">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="widevine_python">
 <a href="#widevine_python" style="color: inherit; text-decoration: inherit;">widevine</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicywidevineconfigurationresponse">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="cencdrmconfiguration">Cenc<wbr>Drm<wbr>Configuration</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2109,25 +1991,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="playready_csharp">
 <a href="#playready_csharp" style="color: inherit; text-decoration: inherit;">Play<wbr>Ready</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicyplayreadyconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="widevine_csharp">
 <a href="#widevine_csharp" style="color: inherit; text-decoration: inherit;">Widevine</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicywidevineconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2136,25 +2015,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="playready_go">
 <a href="#playready_go" style="color: inherit; text-decoration: inherit;">Play<wbr>Ready</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicyplayreadyconfiguration">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="widevine_go">
 <a href="#widevine_go" style="color: inherit; text-decoration: inherit;">Widevine</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicywidevineconfiguration">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2163,25 +2039,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="playready_nodejs">
 <a href="#playready_nodejs" style="color: inherit; text-decoration: inherit;">play<wbr>Ready</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicyplayreadyconfiguration">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="widevine_nodejs">
 <a href="#widevine_nodejs" style="color: inherit; text-decoration: inherit;">widevine</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicywidevineconfiguration">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2190,36 +2063,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="play_ready_python">
 <a href="#play_ready_python" style="color: inherit; text-decoration: inherit;">play_<wbr>ready</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicyplayreadyconfiguration">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="widevine_python">
 <a href="#widevine_python" style="color: inherit; text-decoration: inherit;">widevine</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicywidevineconfiguration">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="cencdrmconfigurationresponse">Cenc<wbr>Drm<wbr>Configuration<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2228,25 +2089,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="playready_csharp">
 <a href="#playready_csharp" style="color: inherit; text-decoration: inherit;">Play<wbr>Ready</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicyplayreadyconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="widevine_csharp">
 <a href="#widevine_csharp" style="color: inherit; text-decoration: inherit;">Widevine</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicywidevineconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2255,25 +2113,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="playready_go">
 <a href="#playready_go" style="color: inherit; text-decoration: inherit;">Play<wbr>Ready</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicyplayreadyconfigurationresponse">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="widevine_go">
 <a href="#widevine_go" style="color: inherit; text-decoration: inherit;">Widevine</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicywidevineconfigurationresponse">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2282,25 +2137,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="playready_nodejs">
 <a href="#playready_nodejs" style="color: inherit; text-decoration: inherit;">play<wbr>Ready</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicyplayreadyconfigurationresponse">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="widevine_nodejs">
 <a href="#widevine_nodejs" style="color: inherit; text-decoration: inherit;">widevine</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicywidevineconfigurationresponse">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2309,36 +2161,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="play_ready_python">
 <a href="#play_ready_python" style="color: inherit; text-decoration: inherit;">play_<wbr>ready</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicyplayreadyconfigurationresponse">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}PlayReady configurations{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="widevine_python">
 <a href="#widevine_python" style="color: inherit; text-decoration: inherit;">widevine</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicywidevineconfigurationresponse">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Widevine configurations{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="commonencryptioncbcs">Common<wbr>Encryption<wbr>Cbcs</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2347,45 +2187,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="cleartracks_csharp">
 <a href="#cleartracks_csharp" style="color: inherit; text-decoration: inherit;">Clear<wbr>Tracks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trackselection">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="contentkeys_csharp">
 <a href="#contentkeys_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicycontentkeys">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="drm_csharp">
 <a href="#drm_csharp" style="color: inherit; text-decoration: inherit;">Drm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cbcsdrmconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Cbcs<wbr>Drm<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for current encryption scheme{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabledprotocols_csharp">
 <a href="#enabledprotocols_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enabledprotocols">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Enabled<wbr>Protocols<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2394,45 +2229,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="cleartracks_go">
 <a href="#cleartracks_go" style="color: inherit; text-decoration: inherit;">Clear<wbr>Tracks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trackselection">[]Track<wbr>Selection</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="contentkeys_go">
 <a href="#contentkeys_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicycontentkeys">Streaming<wbr>Policy<wbr>Content<wbr>Keys</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="drm_go">
 <a href="#drm_go" style="color: inherit; text-decoration: inherit;">Drm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cbcsdrmconfiguration">Cbcs<wbr>Drm<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for current encryption scheme{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabledprotocols_go">
 <a href="#enabledprotocols_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enabledprotocols">Enabled<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2441,45 +2271,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="cleartracks_nodejs">
 <a href="#cleartracks_nodejs" style="color: inherit; text-decoration: inherit;">clear<wbr>Tracks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trackselection">Track<wbr>Selection[]</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="contentkeys_nodejs">
 <a href="#contentkeys_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicycontentkeys">Streaming<wbr>Policy<wbr>Content<wbr>Keys</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="drm_nodejs">
 <a href="#drm_nodejs" style="color: inherit; text-decoration: inherit;">drm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cbcsdrmconfiguration">Cbcs<wbr>Drm<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for current encryption scheme{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabledprotocols_nodejs">
 <a href="#enabledprotocols_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enabledprotocols">Enabled<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2488,56 +2313,42 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="clear_tracks_python">
 <a href="#clear_tracks_python" style="color: inherit; text-decoration: inherit;">clear_<wbr>tracks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trackselection">Sequence[Track<wbr>Selection<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="content_keys_python">
 <a href="#content_keys_python" style="color: inherit; text-decoration: inherit;">content_<wbr>keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicycontentkeys">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="drm_python">
 <a href="#drm_python" style="color: inherit; text-decoration: inherit;">drm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cbcsdrmconfiguration">Cbcs<wbr>Drm<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for current encryption scheme{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_protocols_python">
 <a href="#enabled_protocols_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enabledprotocols">Enabled<wbr>Protocols<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="commonencryptioncbcsresponse">Common<wbr>Encryption<wbr>Cbcs<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2546,45 +2357,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="cleartracks_csharp">
 <a href="#cleartracks_csharp" style="color: inherit; text-decoration: inherit;">Clear<wbr>Tracks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trackselectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="contentkeys_csharp">
 <a href="#contentkeys_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="drm_csharp">
 <a href="#drm_csharp" style="color: inherit; text-decoration: inherit;">Drm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cbcsdrmconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Cbcs<wbr>Drm<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for current encryption scheme{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabledprotocols_csharp">
 <a href="#enabledprotocols_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enabledprotocolsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2593,45 +2399,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="cleartracks_go">
 <a href="#cleartracks_go" style="color: inherit; text-decoration: inherit;">Clear<wbr>Tracks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trackselectionresponse">[]Track<wbr>Selection<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="contentkeys_go">
 <a href="#contentkeys_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="drm_go">
 <a href="#drm_go" style="color: inherit; text-decoration: inherit;">Drm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cbcsdrmconfigurationresponse">Cbcs<wbr>Drm<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for current encryption scheme{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabledprotocols_go">
 <a href="#enabledprotocols_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2640,45 +2441,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="cleartracks_nodejs">
 <a href="#cleartracks_nodejs" style="color: inherit; text-decoration: inherit;">clear<wbr>Tracks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trackselectionresponse">Track<wbr>Selection<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="contentkeys_nodejs">
 <a href="#contentkeys_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="drm_nodejs">
 <a href="#drm_nodejs" style="color: inherit; text-decoration: inherit;">drm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cbcsdrmconfigurationresponse">Cbcs<wbr>Drm<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for current encryption scheme{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabledprotocols_nodejs">
 <a href="#enabledprotocols_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2687,56 +2483,42 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="clear_tracks_python">
 <a href="#clear_tracks_python" style="color: inherit; text-decoration: inherit;">clear_<wbr>tracks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trackselectionresponse">Sequence[Track<wbr>Selection<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="content_keys_python">
 <a href="#content_keys_python" style="color: inherit; text-decoration: inherit;">content_<wbr>keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="drm_python">
 <a href="#drm_python" style="color: inherit; text-decoration: inherit;">drm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cbcsdrmconfigurationresponse">Cbcs<wbr>Drm<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for current encryption scheme{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_protocols_python">
 <a href="#enabled_protocols_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="commonencryptioncenc">Common<wbr>Encryption<wbr>Cenc</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2745,45 +2527,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="cleartracks_csharp">
 <a href="#cleartracks_csharp" style="color: inherit; text-decoration: inherit;">Clear<wbr>Tracks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trackselection">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="contentkeys_csharp">
 <a href="#contentkeys_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicycontentkeys">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="drm_csharp">
 <a href="#drm_csharp" style="color: inherit; text-decoration: inherit;">Drm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cencdrmconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Cenc<wbr>Drm<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for CommonEncryptionCenc encryption scheme{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabledprotocols_csharp">
 <a href="#enabledprotocols_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enabledprotocols">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Enabled<wbr>Protocols<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2792,45 +2569,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="cleartracks_go">
 <a href="#cleartracks_go" style="color: inherit; text-decoration: inherit;">Clear<wbr>Tracks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trackselection">[]Track<wbr>Selection</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="contentkeys_go">
 <a href="#contentkeys_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicycontentkeys">Streaming<wbr>Policy<wbr>Content<wbr>Keys</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="drm_go">
 <a href="#drm_go" style="color: inherit; text-decoration: inherit;">Drm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cencdrmconfiguration">Cenc<wbr>Drm<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for CommonEncryptionCenc encryption scheme{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabledprotocols_go">
 <a href="#enabledprotocols_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enabledprotocols">Enabled<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2839,45 +2611,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="cleartracks_nodejs">
 <a href="#cleartracks_nodejs" style="color: inherit; text-decoration: inherit;">clear<wbr>Tracks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trackselection">Track<wbr>Selection[]</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="contentkeys_nodejs">
 <a href="#contentkeys_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicycontentkeys">Streaming<wbr>Policy<wbr>Content<wbr>Keys</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="drm_nodejs">
 <a href="#drm_nodejs" style="color: inherit; text-decoration: inherit;">drm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cencdrmconfiguration">Cenc<wbr>Drm<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for CommonEncryptionCenc encryption scheme{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabledprotocols_nodejs">
 <a href="#enabledprotocols_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enabledprotocols">Enabled<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2886,56 +2653,42 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="clear_tracks_python">
 <a href="#clear_tracks_python" style="color: inherit; text-decoration: inherit;">clear_<wbr>tracks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trackselection">Sequence[Track<wbr>Selection<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="content_keys_python">
 <a href="#content_keys_python" style="color: inherit; text-decoration: inherit;">content_<wbr>keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicycontentkeys">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="drm_python">
 <a href="#drm_python" style="color: inherit; text-decoration: inherit;">drm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cencdrmconfiguration">Cenc<wbr>Drm<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for CommonEncryptionCenc encryption scheme{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_protocols_python">
 <a href="#enabled_protocols_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enabledprotocols">Enabled<wbr>Protocols<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="commonencryptioncencresponse">Common<wbr>Encryption<wbr>Cenc<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2944,45 +2697,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="cleartracks_csharp">
 <a href="#cleartracks_csharp" style="color: inherit; text-decoration: inherit;">Clear<wbr>Tracks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trackselectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="contentkeys_csharp">
 <a href="#contentkeys_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="drm_csharp">
 <a href="#drm_csharp" style="color: inherit; text-decoration: inherit;">Drm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cencdrmconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Cenc<wbr>Drm<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for CommonEncryptionCenc encryption scheme{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabledprotocols_csharp">
 <a href="#enabledprotocols_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enabledprotocolsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2991,45 +2739,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="cleartracks_go">
 <a href="#cleartracks_go" style="color: inherit; text-decoration: inherit;">Clear<wbr>Tracks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trackselectionresponse">[]Track<wbr>Selection<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="contentkeys_go">
 <a href="#contentkeys_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="drm_go">
 <a href="#drm_go" style="color: inherit; text-decoration: inherit;">Drm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cencdrmconfigurationresponse">Cenc<wbr>Drm<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for CommonEncryptionCenc encryption scheme{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabledprotocols_go">
 <a href="#enabledprotocols_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3038,45 +2781,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="cleartracks_nodejs">
 <a href="#cleartracks_nodejs" style="color: inherit; text-decoration: inherit;">clear<wbr>Tracks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trackselectionresponse">Track<wbr>Selection<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="contentkeys_nodejs">
 <a href="#contentkeys_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="drm_nodejs">
 <a href="#drm_nodejs" style="color: inherit; text-decoration: inherit;">drm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cencdrmconfigurationresponse">Cenc<wbr>Drm<wbr>Configuration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for CommonEncryptionCenc encryption scheme{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabledprotocols_nodejs">
 <a href="#enabledprotocols_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3085,57 +2823,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="clear_tracks_python">
 <a href="#clear_tracks_python" style="color: inherit; text-decoration: inherit;">clear_<wbr>tracks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trackselectionresponse">Sequence[Track<wbr>Selection<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="content_keys_python">
 <a href="#content_keys_python" style="color: inherit; text-decoration: inherit;">content_<wbr>keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="drm_python">
 <a href="#drm_python" style="color: inherit; text-decoration: inherit;">drm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cencdrmconfigurationresponse">Cenc<wbr>Drm<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of DRMs for CommonEncryptionCenc encryption scheme{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_protocols_python">
 <a href="#enabled_protocols_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="defaultkey">Default<wbr>Key</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3143,25 +2867,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label can be used to specify Content Key when creating a Streaming Locator{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyname_csharp">
 <a href="#policyname_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy used by Default Key{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3170,25 +2891,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label can be used to specify Content Key when creating a Streaming Locator{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyname_go">
 <a href="#policyname_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy used by Default Key{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3197,25 +2915,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label can be used to specify Content Key when creating a Streaming Locator{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyname_nodejs">
 <a href="#policyname_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy used by Default Key{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3224,37 +2939,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Label can be used to specify Content Key when creating a Streaming Locator{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_name_python">
 <a href="#policy_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Policy used by Default Key{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="defaultkeyresponse">Default<wbr>Key<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3262,25 +2965,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label can be used to specify Content Key when creating a Streaming Locator{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyname_csharp">
 <a href="#policyname_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy used by Default Key{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3289,25 +2989,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label can be used to specify Content Key when creating a Streaming Locator{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyname_go">
 <a href="#policyname_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy used by Default Key{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3316,25 +3013,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label can be used to specify Content Key when creating a Streaming Locator{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyname_nodejs">
 <a href="#policyname_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy used by Default Key{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3343,37 +3037,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Label can be used to specify Content Key when creating a Streaming Locator{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_name_python">
 <a href="#policy_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Policy used by Default Key{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="enabledprotocols">Enabled<wbr>Protocols</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3381,45 +3063,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="dash_csharp">
 <a href="#dash_csharp" style="color: inherit; text-decoration: inherit;">Dash</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable DASH protocol or not{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="download_csharp">
 <a href="#download_csharp" style="color: inherit; text-decoration: inherit;">Download</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable Download protocol or not{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="hls_csharp">
 <a href="#hls_csharp" style="color: inherit; text-decoration: inherit;">Hls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable HLS protocol or not{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="smoothstreaming_csharp">
 <a href="#smoothstreaming_csharp" style="color: inherit; text-decoration: inherit;">Smooth<wbr>Streaming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable SmoothStreaming protocol or not{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3428,45 +3105,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="dash_go">
 <a href="#dash_go" style="color: inherit; text-decoration: inherit;">Dash</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable DASH protocol or not{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="download_go">
 <a href="#download_go" style="color: inherit; text-decoration: inherit;">Download</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable Download protocol or not{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="hls_go">
 <a href="#hls_go" style="color: inherit; text-decoration: inherit;">Hls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable HLS protocol or not{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="smoothstreaming_go">
 <a href="#smoothstreaming_go" style="color: inherit; text-decoration: inherit;">Smooth<wbr>Streaming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable SmoothStreaming protocol or not{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3475,45 +3147,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="dash_nodejs">
 <a href="#dash_nodejs" style="color: inherit; text-decoration: inherit;">dash</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable DASH protocol or not{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="download_nodejs">
 <a href="#download_nodejs" style="color: inherit; text-decoration: inherit;">download</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable Download protocol or not{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="hls_nodejs">
 <a href="#hls_nodejs" style="color: inherit; text-decoration: inherit;">hls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable HLS protocol or not{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="smoothstreaming_nodejs">
 <a href="#smoothstreaming_nodejs" style="color: inherit; text-decoration: inherit;">smooth<wbr>Streaming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable SmoothStreaming protocol or not{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3522,57 +3189,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="dash_python">
 <a href="#dash_python" style="color: inherit; text-decoration: inherit;">dash</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable DASH protocol or not{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="download_python">
 <a href="#download_python" style="color: inherit; text-decoration: inherit;">download</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable Download protocol or not{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="hls_python">
 <a href="#hls_python" style="color: inherit; text-decoration: inherit;">hls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable HLS protocol or not{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="smooth_streaming_python">
 <a href="#smooth_streaming_python" style="color: inherit; text-decoration: inherit;">smooth_<wbr>streaming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable SmoothStreaming protocol or not{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3580,45 +3233,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="dash_csharp">
 <a href="#dash_csharp" style="color: inherit; text-decoration: inherit;">Dash</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable DASH protocol or not{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="download_csharp">
 <a href="#download_csharp" style="color: inherit; text-decoration: inherit;">Download</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable Download protocol or not{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="hls_csharp">
 <a href="#hls_csharp" style="color: inherit; text-decoration: inherit;">Hls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable HLS protocol or not{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="smoothstreaming_csharp">
 <a href="#smoothstreaming_csharp" style="color: inherit; text-decoration: inherit;">Smooth<wbr>Streaming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable SmoothStreaming protocol or not{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3627,45 +3275,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="dash_go">
 <a href="#dash_go" style="color: inherit; text-decoration: inherit;">Dash</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable DASH protocol or not{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="download_go">
 <a href="#download_go" style="color: inherit; text-decoration: inherit;">Download</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable Download protocol or not{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="hls_go">
 <a href="#hls_go" style="color: inherit; text-decoration: inherit;">Hls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable HLS protocol or not{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="smoothstreaming_go">
 <a href="#smoothstreaming_go" style="color: inherit; text-decoration: inherit;">Smooth<wbr>Streaming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable SmoothStreaming protocol or not{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3674,45 +3317,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="dash_nodejs">
 <a href="#dash_nodejs" style="color: inherit; text-decoration: inherit;">dash</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable DASH protocol or not{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="download_nodejs">
 <a href="#download_nodejs" style="color: inherit; text-decoration: inherit;">download</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable Download protocol or not{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="hls_nodejs">
 <a href="#hls_nodejs" style="color: inherit; text-decoration: inherit;">hls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable HLS protocol or not{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="smoothstreaming_nodejs">
 <a href="#smoothstreaming_nodejs" style="color: inherit; text-decoration: inherit;">smooth<wbr>Streaming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable SmoothStreaming protocol or not{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3721,56 +3359,42 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="dash_python">
 <a href="#dash_python" style="color: inherit; text-decoration: inherit;">dash</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable DASH protocol or not{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="download_python">
 <a href="#download_python" style="color: inherit; text-decoration: inherit;">download</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable Download protocol or not{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="hls_python">
 <a href="#hls_python" style="color: inherit; text-decoration: inherit;">hls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable HLS protocol or not{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="smooth_streaming_python">
 <a href="#smooth_streaming_python" style="color: inherit; text-decoration: inherit;">smooth_<wbr>streaming</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable SmoothStreaming protocol or not{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="envelopeencryption">Envelope<wbr>Encryption</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3779,45 +3403,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="cleartracks_csharp">
 <a href="#cleartracks_csharp" style="color: inherit; text-decoration: inherit;">Clear<wbr>Tracks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trackselection">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="contentkeys_csharp">
 <a href="#contentkeys_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicycontentkeys">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customkeyacquisitionurltemplate_csharp">
 <a href="#customkeyacquisitionurltemplate_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Key<wbr>Acquisition<wbr>Url<wbr>Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template for the URL of the custom service delivering keys to end user players.  Not required when using Azure Media Services for issuing keys.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabledprotocols_csharp">
 <a href="#enabledprotocols_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enabledprotocols">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Enabled<wbr>Protocols<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3826,45 +3445,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="cleartracks_go">
 <a href="#cleartracks_go" style="color: inherit; text-decoration: inherit;">Clear<wbr>Tracks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trackselection">[]Track<wbr>Selection</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="contentkeys_go">
 <a href="#contentkeys_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicycontentkeys">Streaming<wbr>Policy<wbr>Content<wbr>Keys</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customkeyacquisitionurltemplate_go">
 <a href="#customkeyacquisitionurltemplate_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Key<wbr>Acquisition<wbr>Url<wbr>Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template for the URL of the custom service delivering keys to end user players.  Not required when using Azure Media Services for issuing keys.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabledprotocols_go">
 <a href="#enabledprotocols_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enabledprotocols">Enabled<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3873,45 +3487,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="cleartracks_nodejs">
 <a href="#cleartracks_nodejs" style="color: inherit; text-decoration: inherit;">clear<wbr>Tracks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trackselection">Track<wbr>Selection[]</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="contentkeys_nodejs">
 <a href="#contentkeys_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicycontentkeys">Streaming<wbr>Policy<wbr>Content<wbr>Keys</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customkeyacquisitionurltemplate_nodejs">
 <a href="#customkeyacquisitionurltemplate_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Key<wbr>Acquisition<wbr>Url<wbr>Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template for the URL of the custom service delivering keys to end user players.  Not required when using Azure Media Services for issuing keys.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabledprotocols_nodejs">
 <a href="#enabledprotocols_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enabledprotocols">Enabled<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3920,56 +3529,42 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="clear_tracks_python">
 <a href="#clear_tracks_python" style="color: inherit; text-decoration: inherit;">clear_<wbr>tracks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trackselection">Sequence[Track<wbr>Selection<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="content_keys_python">
 <a href="#content_keys_python" style="color: inherit; text-decoration: inherit;">content_<wbr>keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicycontentkeys">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="custom_key_acquisition_url_template_python">
 <a href="#custom_key_acquisition_url_template_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>key_<wbr>acquisition_<wbr>url_<wbr>template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Template for the URL of the custom service delivering keys to end user players.  Not required when using Azure Media Services for issuing keys.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_protocols_python">
 <a href="#enabled_protocols_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enabledprotocols">Enabled<wbr>Protocols<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="envelopeencryptionresponse">Envelope<wbr>Encryption<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3978,45 +3573,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="cleartracks_csharp">
 <a href="#cleartracks_csharp" style="color: inherit; text-decoration: inherit;">Clear<wbr>Tracks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trackselectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="contentkeys_csharp">
 <a href="#contentkeys_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customkeyacquisitionurltemplate_csharp">
 <a href="#customkeyacquisitionurltemplate_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Key<wbr>Acquisition<wbr>Url<wbr>Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template for the URL of the custom service delivering keys to end user players.  Not required when using Azure Media Services for issuing keys.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabledprotocols_csharp">
 <a href="#enabledprotocols_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enabledprotocolsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4025,45 +3615,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="cleartracks_go">
 <a href="#cleartracks_go" style="color: inherit; text-decoration: inherit;">Clear<wbr>Tracks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trackselectionresponse">[]Track<wbr>Selection<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="contentkeys_go">
 <a href="#contentkeys_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customkeyacquisitionurltemplate_go">
 <a href="#customkeyacquisitionurltemplate_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Key<wbr>Acquisition<wbr>Url<wbr>Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template for the URL of the custom service delivering keys to end user players.  Not required when using Azure Media Services for issuing keys.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabledprotocols_go">
 <a href="#enabledprotocols_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4072,45 +3657,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="cleartracks_nodejs">
 <a href="#cleartracks_nodejs" style="color: inherit; text-decoration: inherit;">clear<wbr>Tracks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trackselectionresponse">Track<wbr>Selection<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="contentkeys_nodejs">
 <a href="#contentkeys_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customkeyacquisitionurltemplate_nodejs">
 <a href="#customkeyacquisitionurltemplate_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Key<wbr>Acquisition<wbr>Url<wbr>Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template for the URL of the custom service delivering keys to end user players.  Not required when using Azure Media Services for issuing keys.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabledprotocols_nodejs">
 <a href="#enabledprotocols_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4119,56 +3699,42 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="clear_tracks_python">
 <a href="#clear_tracks_python" style="color: inherit; text-decoration: inherit;">clear_<wbr>tracks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trackselectionresponse">Sequence[Track<wbr>Selection<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Representing which tracks should not be encrypted{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="content_keys_python">
 <a href="#content_keys_python" style="color: inherit; text-decoration: inherit;">content_<wbr>keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicycontentkeysresponse">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing default content key for each encryption scheme and separate content keys for specific tracks{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="custom_key_acquisition_url_template_python">
 <a href="#custom_key_acquisition_url_template_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>key_<wbr>acquisition_<wbr>url_<wbr>template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Template for the URL of the custom service delivering keys to end user players.  Not required when using Azure Media Services for issuing keys.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_protocols_python">
 <a href="#enabled_protocols_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="noencryption">No<wbr>Encryption</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4177,15 +3743,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="enabledprotocols_csharp">
 <a href="#enabledprotocols_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enabledprotocols">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Enabled<wbr>Protocols<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4194,15 +3758,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="enabledprotocols_go">
 <a href="#enabledprotocols_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enabledprotocols">Enabled<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4211,15 +3773,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="enabledprotocols_nodejs">
 <a href="#enabledprotocols_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enabledprotocols">Enabled<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4228,26 +3788,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="enabled_protocols_python">
 <a href="#enabled_protocols_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enabledprotocols">Enabled<wbr>Protocols<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="noencryptionresponse">No<wbr>Encryption<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4256,15 +3805,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="enabledprotocols_csharp">
 <a href="#enabledprotocols_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enabledprotocolsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4273,15 +3820,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="enabledprotocols_go">
 <a href="#enabledprotocols_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4290,15 +3835,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="enabledprotocols_nodejs">
 <a href="#enabledprotocols_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4307,26 +3850,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="enabled_protocols_python">
 <a href="#enabled_protocols_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>protocols</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#enabledprotocolsresponse">Enabled<wbr>Protocols<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Representing supported protocols{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="streamingpolicycontentkey">Streaming<wbr>Policy<wbr>Content<wbr>Key</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4335,35 +3867,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label can be used to specify Content Key when creating a Streaming Locator{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyname_csharp">
 <a href="#policyname_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy used by Content Key{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tracks_csharp">
 <a href="#tracks_csharp" style="color: inherit; text-decoration: inherit;">Tracks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trackselection">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Tracks which use this content key{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4372,35 +3900,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label can be used to specify Content Key when creating a Streaming Locator{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyname_go">
 <a href="#policyname_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy used by Content Key{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tracks_go">
 <a href="#tracks_go" style="color: inherit; text-decoration: inherit;">Tracks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trackselection">[]Track<wbr>Selection</a></span>
     </dt>
     <dd>{{% md %}}Tracks which use this content key{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4409,35 +3933,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label can be used to specify Content Key when creating a Streaming Locator{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyname_nodejs">
 <a href="#policyname_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy used by Content Key{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tracks_nodejs">
 <a href="#tracks_nodejs" style="color: inherit; text-decoration: inherit;">tracks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trackselection">Track<wbr>Selection[]</a></span>
     </dt>
     <dd>{{% md %}}Tracks which use this content key{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4446,46 +3966,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Label can be used to specify Content Key when creating a Streaming Locator{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_name_python">
 <a href="#policy_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Policy used by Content Key{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tracks_python">
 <a href="#tracks_python" style="color: inherit; text-decoration: inherit;">tracks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trackselection">Sequence[Track<wbr>Selection<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Tracks which use this content key{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="streamingpolicycontentkeyresponse">Streaming<wbr>Policy<wbr>Content<wbr>Key<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4494,35 +4001,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label can be used to specify Content Key when creating a Streaming Locator{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyname_csharp">
 <a href="#policyname_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy used by Content Key{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tracks_csharp">
 <a href="#tracks_csharp" style="color: inherit; text-decoration: inherit;">Tracks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trackselectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Selection<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Tracks which use this content key{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4531,35 +4034,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label can be used to specify Content Key when creating a Streaming Locator{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyname_go">
 <a href="#policyname_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy used by Content Key{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tracks_go">
 <a href="#tracks_go" style="color: inherit; text-decoration: inherit;">Tracks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trackselectionresponse">[]Track<wbr>Selection<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Tracks which use this content key{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4568,35 +4067,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label can be used to specify Content Key when creating a Streaming Locator{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyname_nodejs">
 <a href="#policyname_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy used by Content Key{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tracks_nodejs">
 <a href="#tracks_nodejs" style="color: inherit; text-decoration: inherit;">tracks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trackselectionresponse">Track<wbr>Selection<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Tracks which use this content key{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4605,46 +4100,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Label can be used to specify Content Key when creating a Streaming Locator{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_name_python">
 <a href="#policy_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Policy used by Content Key{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tracks_python">
 <a href="#tracks_python" style="color: inherit; text-decoration: inherit;">tracks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trackselectionresponse">Sequence[Track<wbr>Selection<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Tracks which use this content key{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="streamingpolicycontentkeys">Streaming<wbr>Policy<wbr>Content<wbr>Keys</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4653,25 +4135,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="defaultkey_csharp">
 <a href="#defaultkey_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#defaultkey">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Default<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default content key for an encryption scheme{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keytotrackmappings_csharp">
 <a href="#keytotrackmappings_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>To<wbr>Track<wbr>Mappings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicycontentkey">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Key<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Representing tracks needs separate content key{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4680,25 +4159,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="defaultkey_go">
 <a href="#defaultkey_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#defaultkey">Default<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}Default content key for an encryption scheme{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keytotrackmappings_go">
 <a href="#keytotrackmappings_go" style="color: inherit; text-decoration: inherit;">Key<wbr>To<wbr>Track<wbr>Mappings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicycontentkey">[]Streaming<wbr>Policy<wbr>Content<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}Representing tracks needs separate content key{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4707,25 +4183,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="defaultkey_nodejs">
 <a href="#defaultkey_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#defaultkey">Default<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}Default content key for an encryption scheme{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keytotrackmappings_nodejs">
 <a href="#keytotrackmappings_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>To<wbr>Track<wbr>Mappings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicycontentkey">Streaming<wbr>Policy<wbr>Content<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}Representing tracks needs separate content key{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4734,36 +4207,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="default_key_python">
 <a href="#default_key_python" style="color: inherit; text-decoration: inherit;">default_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#defaultkey">Default<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default content key for an encryption scheme{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="key_to_track_mappings_python">
 <a href="#key_to_track_mappings_python" style="color: inherit; text-decoration: inherit;">key_<wbr>to_<wbr>track_<wbr>mappings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicycontentkey">Sequence[Streaming<wbr>Policy<wbr>Content<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Representing tracks needs separate content key{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="streamingpolicycontentkeysresponse">Streaming<wbr>Policy<wbr>Content<wbr>Keys<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4772,25 +4233,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="defaultkey_csharp">
 <a href="#defaultkey_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#defaultkeyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Default<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default content key for an encryption scheme{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keytotrackmappings_csharp">
 <a href="#keytotrackmappings_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>To<wbr>Track<wbr>Mappings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicycontentkeyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Streaming<wbr>Policy<wbr>Content<wbr>Key<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Representing tracks needs separate content key{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4799,25 +4257,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="defaultkey_go">
 <a href="#defaultkey_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#defaultkeyresponse">Default<wbr>Key<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Default content key for an encryption scheme{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keytotrackmappings_go">
 <a href="#keytotrackmappings_go" style="color: inherit; text-decoration: inherit;">Key<wbr>To<wbr>Track<wbr>Mappings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicycontentkeyresponse">[]Streaming<wbr>Policy<wbr>Content<wbr>Key<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Representing tracks needs separate content key{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4826,25 +4281,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="defaultkey_nodejs">
 <a href="#defaultkey_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#defaultkeyresponse">Default<wbr>Key<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Default content key for an encryption scheme{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keytotrackmappings_nodejs">
 <a href="#keytotrackmappings_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>To<wbr>Track<wbr>Mappings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicycontentkeyresponse">Streaming<wbr>Policy<wbr>Content<wbr>Key<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Representing tracks needs separate content key{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4853,37 +4305,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="default_key_python">
 <a href="#default_key_python" style="color: inherit; text-decoration: inherit;">default_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#defaultkeyresponse">Default<wbr>Key<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Default content key for an encryption scheme{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="key_to_track_mappings_python">
 <a href="#key_to_track_mappings_python" style="color: inherit; text-decoration: inherit;">key_<wbr>to_<wbr>track_<wbr>mappings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#streamingpolicycontentkeyresponse">Sequence[Streaming<wbr>Policy<wbr>Content<wbr>Key<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Representing tracks needs separate content key{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="streamingpolicyfairplayconfiguration">Streaming<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4891,25 +4331,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="allowpersistentlicense_csharp">
 <a href="#allowpersistentlicense_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Persistent<wbr>License</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}All license to be persistent or not{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customlicenseacquisitionurltemplate_csharp">
 <a href="#customlicenseacquisitionurltemplate_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>License<wbr>Acquisition<wbr>Url<wbr>Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template for the URL of the custom service delivering licenses to end user players.  Not required when using Azure Media Services for issuing licenses.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4918,25 +4355,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="allowpersistentlicense_go">
 <a href="#allowpersistentlicense_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Persistent<wbr>License</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}All license to be persistent or not{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customlicenseacquisitionurltemplate_go">
 <a href="#customlicenseacquisitionurltemplate_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>License<wbr>Acquisition<wbr>Url<wbr>Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template for the URL of the custom service delivering licenses to end user players.  Not required when using Azure Media Services for issuing licenses.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4945,25 +4379,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="allowpersistentlicense_nodejs">
 <a href="#allowpersistentlicense_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Persistent<wbr>License</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}All license to be persistent or not{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customlicenseacquisitionurltemplate_nodejs">
 <a href="#customlicenseacquisitionurltemplate_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>License<wbr>Acquisition<wbr>Url<wbr>Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template for the URL of the custom service delivering licenses to end user players.  Not required when using Azure Media Services for issuing licenses.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4972,37 +4403,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="allow_persistent_license_python">
 <a href="#allow_persistent_license_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>persistent_<wbr>license</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}All license to be persistent or not{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="custom_license_acquisition_url_template_python">
 <a href="#custom_license_acquisition_url_template_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>license_<wbr>acquisition_<wbr>url_<wbr>template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Template for the URL of the custom service delivering licenses to end user players.  Not required when using Azure Media Services for issuing licenses.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="streamingpolicyfairplayconfigurationresponse">Streaming<wbr>Policy<wbr>Fair<wbr>Play<wbr>Configuration<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5010,25 +4429,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="allowpersistentlicense_csharp">
 <a href="#allowpersistentlicense_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Persistent<wbr>License</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}All license to be persistent or not{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customlicenseacquisitionurltemplate_csharp">
 <a href="#customlicenseacquisitionurltemplate_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>License<wbr>Acquisition<wbr>Url<wbr>Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template for the URL of the custom service delivering licenses to end user players.  Not required when using Azure Media Services for issuing licenses.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5037,25 +4453,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="allowpersistentlicense_go">
 <a href="#allowpersistentlicense_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Persistent<wbr>License</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}All license to be persistent or not{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customlicenseacquisitionurltemplate_go">
 <a href="#customlicenseacquisitionurltemplate_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>License<wbr>Acquisition<wbr>Url<wbr>Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template for the URL of the custom service delivering licenses to end user players.  Not required when using Azure Media Services for issuing licenses.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5064,25 +4477,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="allowpersistentlicense_nodejs">
 <a href="#allowpersistentlicense_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Persistent<wbr>License</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}All license to be persistent or not{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customlicenseacquisitionurltemplate_nodejs">
 <a href="#customlicenseacquisitionurltemplate_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>License<wbr>Acquisition<wbr>Url<wbr>Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template for the URL of the custom service delivering licenses to end user players.  Not required when using Azure Media Services for issuing licenses.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5091,37 +4501,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="allow_persistent_license_python">
 <a href="#allow_persistent_license_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>persistent_<wbr>license</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}All license to be persistent or not{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="custom_license_acquisition_url_template_python">
 <a href="#custom_license_acquisition_url_template_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>license_<wbr>acquisition_<wbr>url_<wbr>template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Template for the URL of the custom service delivering licenses to end user players.  Not required when using Azure Media Services for issuing licenses.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="streamingpolicyplayreadyconfiguration">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5129,25 +4527,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="customlicenseacquisitionurltemplate_csharp">
 <a href="#customlicenseacquisitionurltemplate_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>License<wbr>Acquisition<wbr>Url<wbr>Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template for the URL of the custom service delivering licenses to end user players.  Not required when using Azure Media Services for issuing licenses.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="playreadycustomattributes_csharp">
 <a href="#playreadycustomattributes_csharp" style="color: inherit; text-decoration: inherit;">Play<wbr>Ready<wbr>Custom<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom attributes for PlayReady{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5156,25 +4551,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="customlicenseacquisitionurltemplate_go">
 <a href="#customlicenseacquisitionurltemplate_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>License<wbr>Acquisition<wbr>Url<wbr>Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template for the URL of the custom service delivering licenses to end user players.  Not required when using Azure Media Services for issuing licenses.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="playreadycustomattributes_go">
 <a href="#playreadycustomattributes_go" style="color: inherit; text-decoration: inherit;">Play<wbr>Ready<wbr>Custom<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom attributes for PlayReady{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5183,25 +4575,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="customlicenseacquisitionurltemplate_nodejs">
 <a href="#customlicenseacquisitionurltemplate_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>License<wbr>Acquisition<wbr>Url<wbr>Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template for the URL of the custom service delivering licenses to end user players.  Not required when using Azure Media Services for issuing licenses.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="playreadycustomattributes_nodejs">
 <a href="#playreadycustomattributes_nodejs" style="color: inherit; text-decoration: inherit;">play<wbr>Ready<wbr>Custom<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom attributes for PlayReady{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5210,37 +4599,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="custom_license_acquisition_url_template_python">
 <a href="#custom_license_acquisition_url_template_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>license_<wbr>acquisition_<wbr>url_<wbr>template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Template for the URL of the custom service delivering licenses to end user players.  Not required when using Azure Media Services for issuing licenses.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="play_ready_custom_attributes_python">
 <a href="#play_ready_custom_attributes_python" style="color: inherit; text-decoration: inherit;">play_<wbr>ready_<wbr>custom_<wbr>attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Custom attributes for PlayReady{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="streamingpolicyplayreadyconfigurationresponse">Streaming<wbr>Policy<wbr>Play<wbr>Ready<wbr>Configuration<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5248,25 +4625,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="customlicenseacquisitionurltemplate_csharp">
 <a href="#customlicenseacquisitionurltemplate_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>License<wbr>Acquisition<wbr>Url<wbr>Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template for the URL of the custom service delivering licenses to end user players.  Not required when using Azure Media Services for issuing licenses.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="playreadycustomattributes_csharp">
 <a href="#playreadycustomattributes_csharp" style="color: inherit; text-decoration: inherit;">Play<wbr>Ready<wbr>Custom<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom attributes for PlayReady{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5275,25 +4649,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="customlicenseacquisitionurltemplate_go">
 <a href="#customlicenseacquisitionurltemplate_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>License<wbr>Acquisition<wbr>Url<wbr>Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template for the URL of the custom service delivering licenses to end user players.  Not required when using Azure Media Services for issuing licenses.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="playreadycustomattributes_go">
 <a href="#playreadycustomattributes_go" style="color: inherit; text-decoration: inherit;">Play<wbr>Ready<wbr>Custom<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom attributes for PlayReady{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5302,25 +4673,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="customlicenseacquisitionurltemplate_nodejs">
 <a href="#customlicenseacquisitionurltemplate_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>License<wbr>Acquisition<wbr>Url<wbr>Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template for the URL of the custom service delivering licenses to end user players.  Not required when using Azure Media Services for issuing licenses.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="playreadycustomattributes_nodejs">
 <a href="#playreadycustomattributes_nodejs" style="color: inherit; text-decoration: inherit;">play<wbr>Ready<wbr>Custom<wbr>Attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom attributes for PlayReady{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5329,37 +4697,25 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="custom_license_acquisition_url_template_python">
 <a href="#custom_license_acquisition_url_template_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>license_<wbr>acquisition_<wbr>url_<wbr>template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Template for the URL of the custom service delivering licenses to end user players.  Not required when using Azure Media Services for issuing licenses.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="play_ready_custom_attributes_python">
 <a href="#play_ready_custom_attributes_python" style="color: inherit; text-decoration: inherit;">play_<wbr>ready_<wbr>custom_<wbr>attributes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Custom attributes for PlayReady{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="streamingpolicywidevineconfiguration">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5367,15 +4723,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="customlicenseacquisitionurltemplate_csharp">
 <a href="#customlicenseacquisitionurltemplate_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>License<wbr>Acquisition<wbr>Url<wbr>Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template for the URL of the custom service delivering licenses to end user players.  Not required when using Azure Media Services for issuing licenses.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5384,15 +4738,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="customlicenseacquisitionurltemplate_go">
 <a href="#customlicenseacquisitionurltemplate_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>License<wbr>Acquisition<wbr>Url<wbr>Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template for the URL of the custom service delivering licenses to end user players.  Not required when using Azure Media Services for issuing licenses.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5401,15 +4753,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="customlicenseacquisitionurltemplate_nodejs">
 <a href="#customlicenseacquisitionurltemplate_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>License<wbr>Acquisition<wbr>Url<wbr>Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template for the URL of the custom service delivering licenses to end user players.  Not required when using Azure Media Services for issuing licenses.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5418,27 +4768,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="custom_license_acquisition_url_template_python">
 <a href="#custom_license_acquisition_url_template_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>license_<wbr>acquisition_<wbr>url_<wbr>template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Template for the URL of the custom service delivering licenses to end user players.  Not required when using Azure Media Services for issuing licenses.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="streamingpolicywidevineconfigurationresponse">Streaming<wbr>Policy<wbr>Widevine<wbr>Configuration<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5446,15 +4785,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="customlicenseacquisitionurltemplate_csharp">
 <a href="#customlicenseacquisitionurltemplate_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>License<wbr>Acquisition<wbr>Url<wbr>Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template for the URL of the custom service delivering licenses to end user players.  Not required when using Azure Media Services for issuing licenses.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5463,15 +4800,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="customlicenseacquisitionurltemplate_go">
 <a href="#customlicenseacquisitionurltemplate_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>License<wbr>Acquisition<wbr>Url<wbr>Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template for the URL of the custom service delivering licenses to end user players.  Not required when using Azure Media Services for issuing licenses.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5480,15 +4815,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="customlicenseacquisitionurltemplate_nodejs">
 <a href="#customlicenseacquisitionurltemplate_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>License<wbr>Acquisition<wbr>Url<wbr>Template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template for the URL of the custom service delivering licenses to end user players.  Not required when using Azure Media Services for issuing licenses.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5497,27 +4830,54 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="custom_license_acquisition_url_template_python">
 <a href="#custom_license_acquisition_url_template_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>license_<wbr>acquisition_<wbr>url_<wbr>template</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Template for the URL of the custom service delivering licenses to end user players.  Not required when using Azure Media Services for issuing licenses.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="trackpropertycompareoperation">Track<wbr>Property<wbr>Compare<wbr>Operation</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Unknown</dt>
+    <dd>Unknown{{% md %}}Unknown track property compare operation{{% /md %}}</dd>
+    <dt>Equal</dt>
+    <dd>Equal{{% md %}}Equal operation{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Track<wbr>Property<wbr>Compare<wbr>Operation<wbr>Unknown</dt>
+    <dd>Unknown{{% md %}}Unknown track property compare operation{{% /md %}}</dd>
+    <dt>Track<wbr>Property<wbr>Compare<wbr>Operation<wbr>Equal</dt>
+    <dd>Equal{{% md %}}Equal operation{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Unknown</dt>
+    <dd>Unknown{{% md %}}Unknown track property compare operation{{% /md %}}</dd>
+    <dt>Equal</dt>
+    <dd>Equal{{% md %}}Equal operation{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>UNKNOWN</dt>
+    <dd>Unknown{{% md %}}Unknown track property compare operation{{% /md %}}</dd>
+    <dt>EQUAL</dt>
+    <dd>Equal{{% md %}}Equal operation{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="trackpropertycondition">Track<wbr>Property<wbr>Condition</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5525,35 +4885,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="operation_csharp">
 <a href="#operation_csharp" style="color: inherit; text-decoration: inherit;">Operation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Track<wbr>Property<wbr>Compare<wbr>Operation</span>
+        <span class="property-type">string | <a href="#trackpropertycompareoperation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Track<wbr>Property<wbr>Compare<wbr>Operation</a></span>
     </dt>
     <dd>{{% md %}}Track property condition operation{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="property_csharp">
 <a href="#property_csharp" style="color: inherit; text-decoration: inherit;">Property</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Track<wbr>Property<wbr>Type</span>
+        <span class="property-type">string | <a href="#trackpropertytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Track<wbr>Property<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Track property type{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Track property value{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5562,35 +4918,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="operation_go">
 <a href="#operation_go" style="color: inherit; text-decoration: inherit;">Operation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#trackpropertycompareoperation">Track<wbr>Property<wbr>Compare<wbr>Operation</a></span>
     </dt>
     <dd>{{% md %}}Track property condition operation{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="property_go">
 <a href="#property_go" style="color: inherit; text-decoration: inherit;">Property</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#trackpropertytype">Track<wbr>Property<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Track property type{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Track property value{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5599,35 +4951,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="operation_nodejs">
 <a href="#operation_nodejs" style="color: inherit; text-decoration: inherit;">operation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Track<wbr>Property<wbr>Compare<wbr>Operation</span>
+        <span class="property-type">string | <a href="#trackpropertycompareoperation">Track<wbr>Property<wbr>Compare<wbr>Operation</a></span>
     </dt>
     <dd>{{% md %}}Track property condition operation{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="property_nodejs">
 <a href="#property_nodejs" style="color: inherit; text-decoration: inherit;">property</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Track<wbr>Property<wbr>Type</span>
+        <span class="property-type">string | <a href="#trackpropertytype">Track<wbr>Property<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Track property type{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Track property value{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5636,47 +4984,34 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="operation_python">
 <a href="#operation_python" style="color: inherit; text-decoration: inherit;">operation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Track<wbr>Property<wbr>Compare<wbr>Operation</span>
+        <span class="property-type">str | <a href="#trackpropertycompareoperation">Track<wbr>Property<wbr>Compare<wbr>Operation</a></span>
     </dt>
     <dd>{{% md %}}Track property condition operation{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="property_python">
 <a href="#property_python" style="color: inherit; text-decoration: inherit;">property</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Track<wbr>Property<wbr>Type</span>
+        <span class="property-type">str | <a href="#trackpropertytype">Track<wbr>Property<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Track property type{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Track property value{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="trackpropertyconditionresponse">Track<wbr>Property<wbr>Condition<wbr>Response</h4>
 
-
-
-
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5684,35 +5019,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="operation_csharp">
 <a href="#operation_csharp" style="color: inherit; text-decoration: inherit;">Operation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Track property condition operation{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="property_csharp">
 <a href="#property_csharp" style="color: inherit; text-decoration: inherit;">Property</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Track property type{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Track property value{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5721,35 +5052,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="operation_go">
 <a href="#operation_go" style="color: inherit; text-decoration: inherit;">Operation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Track property condition operation{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="property_go">
 <a href="#property_go" style="color: inherit; text-decoration: inherit;">Property</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Track property type{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Track property value{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5758,35 +5085,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="operation_nodejs">
 <a href="#operation_nodejs" style="color: inherit; text-decoration: inherit;">operation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Track property condition operation{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="property_nodejs">
 <a href="#property_nodejs" style="color: inherit; text-decoration: inherit;">property</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Track property type{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Track property value{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5795,46 +5118,71 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="operation_python">
 <a href="#operation_python" style="color: inherit; text-decoration: inherit;">operation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Track property condition operation{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="property_python">
 <a href="#property_python" style="color: inherit; text-decoration: inherit;">property</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Track property type{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Track property value{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="trackpropertytype">Track<wbr>Property<wbr>Type</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Unknown</dt>
+    <dd>Unknown{{% md %}}Unknown track property{{% /md %}}</dd>
+    <dt>Four<wbr>CC</dt>
+    <dd>FourCC{{% md %}}Track FourCC{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Track<wbr>Property<wbr>Type<wbr>Unknown</dt>
+    <dd>Unknown{{% md %}}Unknown track property{{% /md %}}</dd>
+    <dt>Track<wbr>Property<wbr>Type<wbr>Four<wbr>CC</dt>
+    <dd>FourCC{{% md %}}Track FourCC{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Unknown</dt>
+    <dd>Unknown{{% md %}}Unknown track property{{% /md %}}</dd>
+    <dt>Four<wbr>CC</dt>
+    <dd>FourCC{{% md %}}Track FourCC{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>UNKNOWN</dt>
+    <dd>Unknown{{% md %}}Unknown track property{{% /md %}}</dd>
+    <dt>FOUR_CC</dt>
+    <dd>FourCC{{% md %}}Track FourCC{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="trackselection">Track<wbr>Selection</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5843,15 +5191,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="trackselections_csharp">
 <a href="#trackselections_csharp" style="color: inherit; text-decoration: inherit;">Track<wbr>Selections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trackpropertycondition">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Property<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}TrackSelections is a track property condition list which can specify track(s){{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5860,15 +5206,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="trackselections_go">
 <a href="#trackselections_go" style="color: inherit; text-decoration: inherit;">Track<wbr>Selections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trackpropertycondition">[]Track<wbr>Property<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}TrackSelections is a track property condition list which can specify track(s){{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5877,15 +5221,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="trackselections_nodejs">
 <a href="#trackselections_nodejs" style="color: inherit; text-decoration: inherit;">track<wbr>Selections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trackpropertycondition">Track<wbr>Property<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}TrackSelections is a track property condition list which can specify track(s){{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5894,26 +5236,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="track_selections_python">
 <a href="#track_selections_python" style="color: inherit; text-decoration: inherit;">track_<wbr>selections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trackpropertycondition">Sequence[Track<wbr>Property<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}TrackSelections is a track property condition list which can specify track(s){{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="trackselectionresponse">Track<wbr>Selection<wbr>Response</h4>
-
-
-
-
-
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5922,15 +5253,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="trackselections_csharp">
 <a href="#trackselections_csharp" style="color: inherit; text-decoration: inherit;">Track<wbr>Selections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trackpropertyconditionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Track<wbr>Property<wbr>Condition<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}TrackSelections is a track property condition list which can specify track(s){{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5939,15 +5268,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="trackselections_go">
 <a href="#trackselections_go" style="color: inherit; text-decoration: inherit;">Track<wbr>Selections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trackpropertyconditionresponse">[]Track<wbr>Property<wbr>Condition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}TrackSelections is a track property condition list which can specify track(s){{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5956,15 +5283,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="trackselections_nodejs">
 <a href="#trackselections_nodejs" style="color: inherit; text-decoration: inherit;">track<wbr>Selections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trackpropertyconditionresponse">Track<wbr>Property<wbr>Condition<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}TrackSelections is a track property condition list which can specify track(s){{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5973,23 +5298,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="track_selections_python">
 <a href="#track_selections_python" style="color: inherit; text-decoration: inherit;">track_<wbr>selections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trackpropertyconditionresponse">Sequence[Track<wbr>Property<wbr>Condition<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}TrackSelections is a track property condition list which can specify track(s){{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 
 
 <h2 id="package-details">Package Details</h2>

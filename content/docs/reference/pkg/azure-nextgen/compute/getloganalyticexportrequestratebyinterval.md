@@ -45,7 +45,6 @@ meta_desc: "Explore the GetLogAnalyticExportRequestRateByInterval function of th
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -53,105 +52,94 @@ The following arguments are supported:
             title="Required">
         <span id="blobcontainersasuri_csharp">
 <a href="#blobcontainersasuri_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Container<wbr>Sas<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SAS Uri of the logging blob container to which LogAnalytics Api writes output logs to.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="fromtime_csharp">
 <a href="#fromtime_csharp" style="color: inherit; text-decoration: inherit;">From<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}From time of the query{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="intervallength_csharp">
 <a href="#intervallength_csharp" style="color: inherit; text-decoration: inherit;">Interval<wbr>Length</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Interval<wbr>In<wbr>Mins</span>
+        <span class="property-type"><a href="#intervalinmins">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Interval<wbr>In<wbr>Mins</a></span>
     </dt>
     <dd>{{% md %}}Interval value in minutes used to create LogAnalytics call rate logs.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location upon which virtual-machine-sizes is queried.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="totime_csharp">
 <a href="#totime_csharp" style="color: inherit; text-decoration: inherit;">To<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To time of the query{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupbyclientapplicationid_csharp">
 <a href="#groupbyclientapplicationid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>By<wbr>Client<wbr>Application<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Group query result by Client Application ID.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupbyoperationname_csharp">
 <a href="#groupbyoperationname_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>By<wbr>Operation<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Group query result by Operation Name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupbyresourcename_csharp">
 <a href="#groupbyresourcename_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>By<wbr>Resource<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Group query result by Resource Name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupbythrottlepolicy_csharp">
 <a href="#groupbythrottlepolicy_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>By<wbr>Throttle<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Group query result by Throttle Policy applied.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupbyuseragent_csharp">
 <a href="#groupbyuseragent_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>By<wbr>User<wbr>Agent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Group query result by User Agent.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -160,105 +148,94 @@ The following arguments are supported:
             title="Required">
         <span id="blobcontainersasuri_go">
 <a href="#blobcontainersasuri_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Container<wbr>Sas<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SAS Uri of the logging blob container to which LogAnalytics Api writes output logs to.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="fromtime_go">
 <a href="#fromtime_go" style="color: inherit; text-decoration: inherit;">From<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}From time of the query{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="intervallength_go">
 <a href="#intervallength_go" style="color: inherit; text-decoration: inherit;">Interval<wbr>Length</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#intervalinmins">Interval<wbr>In<wbr>Mins</a></span>
     </dt>
     <dd>{{% md %}}Interval value in minutes used to create LogAnalytics call rate logs.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location upon which virtual-machine-sizes is queried.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="totime_go">
 <a href="#totime_go" style="color: inherit; text-decoration: inherit;">To<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To time of the query{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupbyclientapplicationid_go">
 <a href="#groupbyclientapplicationid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>By<wbr>Client<wbr>Application<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Group query result by Client Application ID.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupbyoperationname_go">
 <a href="#groupbyoperationname_go" style="color: inherit; text-decoration: inherit;">Group<wbr>By<wbr>Operation<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Group query result by Operation Name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupbyresourcename_go">
 <a href="#groupbyresourcename_go" style="color: inherit; text-decoration: inherit;">Group<wbr>By<wbr>Resource<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Group query result by Resource Name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupbythrottlepolicy_go">
 <a href="#groupbythrottlepolicy_go" style="color: inherit; text-decoration: inherit;">Group<wbr>By<wbr>Throttle<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Group query result by Throttle Policy applied.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupbyuseragent_go">
 <a href="#groupbyuseragent_go" style="color: inherit; text-decoration: inherit;">Group<wbr>By<wbr>User<wbr>Agent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Group query result by User Agent.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -267,105 +244,94 @@ The following arguments are supported:
             title="Required">
         <span id="blobcontainersasuri_nodejs">
 <a href="#blobcontainersasuri_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Container<wbr>Sas<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SAS Uri of the logging blob container to which LogAnalytics Api writes output logs to.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="fromtime_nodejs">
 <a href="#fromtime_nodejs" style="color: inherit; text-decoration: inherit;">from<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}From time of the query{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="intervallength_nodejs">
 <a href="#intervallength_nodejs" style="color: inherit; text-decoration: inherit;">interval<wbr>Length</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">enums.<wbr>Interval<wbr>In<wbr>Mins</span>
+        <span class="property-type"><a href="#intervalinmins">Interval<wbr>In<wbr>Mins</a></span>
     </dt>
     <dd>{{% md %}}Interval value in minutes used to create LogAnalytics call rate logs.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location upon which virtual-machine-sizes is queried.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="totime_nodejs">
 <a href="#totime_nodejs" style="color: inherit; text-decoration: inherit;">to<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To time of the query{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupbyclientapplicationid_nodejs">
 <a href="#groupbyclientapplicationid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>By<wbr>Client<wbr>Application<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Group query result by Client Application ID.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupbyoperationname_nodejs">
 <a href="#groupbyoperationname_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>By<wbr>Operation<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Group query result by Operation Name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupbyresourcename_nodejs">
 <a href="#groupbyresourcename_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>By<wbr>Resource<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Group query result by Resource Name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupbythrottlepolicy_nodejs">
 <a href="#groupbythrottlepolicy_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>By<wbr>Throttle<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Group query result by Throttle Policy applied.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupbyuseragent_nodejs">
 <a href="#groupbyuseragent_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>By<wbr>User<wbr>Agent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Group query result by User Agent.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -374,108 +340,94 @@ The following arguments are supported:
             title="Required">
         <span id="blob_container_sas_uri_python">
 <a href="#blob_container_sas_uri_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>container_<wbr>sas_<wbr>uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SAS Uri of the logging blob container to which LogAnalytics Api writes output logs to.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="from_time_python">
 <a href="#from_time_python" style="color: inherit; text-decoration: inherit;">from_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}From time of the query{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="interval_length_python">
 <a href="#interval_length_python" style="color: inherit; text-decoration: inherit;">interval_<wbr>length</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Interval<wbr>In<wbr>Mins</span>
+        <span class="property-type"><a href="#intervalinmins">Interval<wbr>In<wbr>Mins</a></span>
     </dt>
     <dd>{{% md %}}Interval value in minutes used to create LogAnalytics call rate logs.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location upon which virtual-machine-sizes is queried.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="to_time_python">
 <a href="#to_time_python" style="color: inherit; text-decoration: inherit;">to_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To time of the query{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="group_by_client_application_id_python">
 <a href="#group_by_client_application_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>by_<wbr>client_<wbr>application_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Group query result by Client Application ID.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="group_by_operation_name_python">
 <a href="#group_by_operation_name_python" style="color: inherit; text-decoration: inherit;">group_<wbr>by_<wbr>operation_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Group query result by Operation Name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="group_by_resource_name_python">
 <a href="#group_by_resource_name_python" style="color: inherit; text-decoration: inherit;">group_<wbr>by_<wbr>resource_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Group query result by Resource Name.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="group_by_throttle_policy_python">
 <a href="#group_by_throttle_policy_python" style="color: inherit; text-decoration: inherit;">group_<wbr>by_<wbr>throttle_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Group query result by Throttle Policy applied.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="group_by_user_agent_python">
 <a href="#group_by_user_agent_python" style="color: inherit; text-decoration: inherit;">group_<wbr>by_<wbr>user_<wbr>agent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Group query result by User Agent.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -486,7 +438,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -494,15 +445,13 @@ The following output properties are available:
             title="">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loganalyticsoutputresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Outputs.<wbr>Log<wbr>Analytics<wbr>Output<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}LogAnalyticsOutput{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -511,15 +460,13 @@ The following output properties are available:
             title="">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loganalyticsoutputresponse">Log<wbr>Analytics<wbr>Output<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}LogAnalyticsOutput{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -528,15 +475,13 @@ The following output properties are available:
             title="">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loganalyticsoutputresponse">Log<wbr>Analytics<wbr>Output<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}LogAnalyticsOutput{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -545,18 +490,13 @@ The following output properties are available:
             title="">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loganalyticsoutputresponse">Log<wbr>Analytics<wbr>Output<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}LogAnalyticsOutput{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -564,8 +504,14 @@ The following output properties are available:
 ## Supporting Types
 
 
-<h4 id="loganalyticsoutputresponse">Log<wbr>Analytics<wbr>Output<wbr>Response</h4>
+<h4 id="intervalinmins">Interval<wbr>In<wbr>Mins</h4>
 
+
+
+
+
+
+<h4 id="loganalyticsoutputresponse">Log<wbr>Analytics<wbr>Output<wbr>Response</h4>
 
 
 
@@ -579,15 +525,13 @@ The following output properties are available:
             title="Required">
         <span id="output_csharp">
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output file Uri path to blob container.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -596,15 +540,13 @@ The following output properties are available:
             title="Required">
         <span id="output_go">
 <a href="#output_go" style="color: inherit; text-decoration: inherit;">Output</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output file Uri path to blob container.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -613,15 +555,13 @@ The following output properties are available:
             title="Required">
         <span id="output_nodejs">
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output file Uri path to blob container.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -630,18 +570,13 @@ The following output properties are available:
             title="Required">
         <span id="output_python">
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Output file Uri path to blob container.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

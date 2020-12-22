@@ -47,7 +47,6 @@ meta_desc: "Explore the GetProtectionPolicy function of the recoveryservices mod
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -55,35 +54,31 @@ The following arguments are supported:
             title="Required">
         <span id="policyname_csharp">
 <a href="#policyname_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup policy information to be fetched.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vaultname_csharp">
 <a href="#vaultname_csharp" style="color: inherit; text-decoration: inherit;">Vault<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -92,35 +87,31 @@ The following arguments are supported:
             title="Required">
         <span id="policyname_go">
 <a href="#policyname_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup policy information to be fetched.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vaultname_go">
 <a href="#vaultname_go" style="color: inherit; text-decoration: inherit;">Vault<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -129,35 +120,31 @@ The following arguments are supported:
             title="Required">
         <span id="policyname_nodejs">
 <a href="#policyname_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Backup policy information to be fetched.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vaultname_nodejs">
 <a href="#vaultname_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -166,38 +153,31 @@ The following arguments are supported:
             title="Required">
         <span id="policy_name_python">
 <a href="#policy_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Backup policy information to be fetched.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group where the recovery services vault is present.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="vault_name_python">
 <a href="#vault_name_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the recovery services vault.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -208,7 +188,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -216,75 +195,67 @@ The following output properties are available:
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource Id represents the complete path to the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name associated with the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefileshareprotectionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Azure<wbr>File<wbr>Share<wbr>Protection<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azureiaasvmprotectionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Azure<wbr>Iaa<wbr>SVMProtection<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuresqlprotectionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Azure<wbr>Sql<wbr>Protection<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azurevmworkloadprotectionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>Protection<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#genericprotectionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Generic<wbr>Protection<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mabprotectionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Mab<wbr>Protection<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurefileshareprotectionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Azure<wbr>File<wbr>Share<wbr>Protection<wbr>Policy<wbr>Response</a> | <a href="#azureiaasvmprotectionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Azure<wbr>Iaa<wbr>SVMProtection<wbr>Policy<wbr>Response</a> | <a href="#azuresqlprotectionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Azure<wbr>Sql<wbr>Protection<wbr>Policy<wbr>Response</a> | <a href="#azurevmworkloadprotectionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>Protection<wbr>Policy<wbr>Response</a> | <a href="#genericprotectionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Generic<wbr>Protection<wbr>Policy<wbr>Response</a> | <a href="#mabprotectionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Mab<wbr>Protection<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}ProtectionPolicyResource properties{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">ETag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional ETag.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -293,75 +264,67 @@ The following output properties are available:
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource Id represents the complete path to the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name associated with the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefileshareprotectionpolicyresponse">Azure<wbr>File<wbr>Share<wbr>Protection<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azureiaasvmprotectionpolicyresponse">Azure<wbr>Iaa<wbr>SVMProtection<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuresqlprotectionpolicyresponse">Azure<wbr>Sql<wbr>Protection<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azurevmworkloadprotectionpolicyresponse">Azure<wbr>Vm<wbr>Workload<wbr>Protection<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#genericprotectionpolicyresponse">Generic<wbr>Protection<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mabprotectionpolicyresponse">Mab<wbr>Protection<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurefileshareprotectionpolicyresponse">Azure<wbr>File<wbr>Share<wbr>Protection<wbr>Policy<wbr>Response</a> | <a href="#azureiaasvmprotectionpolicyresponse">Azure<wbr>Iaa<wbr>SVMProtection<wbr>Policy<wbr>Response</a> | <a href="#azuresqlprotectionpolicyresponse">Azure<wbr>Sql<wbr>Protection<wbr>Policy<wbr>Response</a> | <a href="#azurevmworkloadprotectionpolicyresponse">Azure<wbr>Vm<wbr>Workload<wbr>Protection<wbr>Policy<wbr>Response</a> | <a href="#genericprotectionpolicyresponse">Generic<wbr>Protection<wbr>Policy<wbr>Response</a> | <a href="#mabprotectionpolicyresponse">Mab<wbr>Protection<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}ProtectionPolicyResource properties{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">ETag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional ETag.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -370,75 +333,67 @@ The following output properties are available:
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource Id represents the complete path to the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name associated with the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefileshareprotectionpolicyresponse">Azure<wbr>File<wbr>Share<wbr>Protection<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azureiaasvmprotectionpolicyresponse">Azure<wbr>Iaa<wbr>SVMProtection<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuresqlprotectionpolicyresponse">Azure<wbr>Sql<wbr>Protection<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azurevmworkloadprotectionpolicyresponse">Azure<wbr>Vm<wbr>Workload<wbr>Protection<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#genericprotectionpolicyresponse">Generic<wbr>Protection<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mabprotectionpolicyresponse">Mab<wbr>Protection<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurefileshareprotectionpolicyresponse">Azure<wbr>File<wbr>Share<wbr>Protection<wbr>Policy<wbr>Response</a> | <a href="#azureiaasvmprotectionpolicyresponse">Azure<wbr>Iaa<wbr>SVMProtection<wbr>Policy<wbr>Response</a> | <a href="#azuresqlprotectionpolicyresponse">Azure<wbr>Sql<wbr>Protection<wbr>Policy<wbr>Response</a> | <a href="#azurevmworkloadprotectionpolicyresponse">Azure<wbr>Vm<wbr>Workload<wbr>Protection<wbr>Policy<wbr>Response</a> | <a href="#genericprotectionpolicyresponse">Generic<wbr>Protection<wbr>Policy<wbr>Response</a> | <a href="#mabprotectionpolicyresponse">Mab<wbr>Protection<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}ProtectionPolicyResource properties{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">e<wbr>Tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional ETag.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -447,78 +402,67 @@ The following output properties are available:
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource Id represents the complete path to the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name associated with the resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefileshareprotectionpolicyresponse">Azure<wbr>File<wbr>Share<wbr>Protection<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azureiaasvmprotectionpolicyresponse">Azure<wbr>Iaa<wbr>SVMProtection<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azuresqlprotectionpolicyresponse">Azure<wbr>Sql<wbr>Protection<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#azurevmworkloadprotectionpolicyresponse">Azure<wbr>Vm<wbr>Workload<wbr>Protection<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#genericprotectionpolicyresponse">Generic<wbr>Protection<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#mabprotectionpolicyresponse">Mab<wbr>Protection<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurefileshareprotectionpolicyresponse">Azure<wbr>File<wbr>Share<wbr>Protection<wbr>Policy<wbr>Response</a> | <a href="#azureiaasvmprotectionpolicyresponse">Azure<wbr>Iaa<wbr>SVMProtection<wbr>Policy<wbr>Response</a> | <a href="#azuresqlprotectionpolicyresponse">Azure<wbr>Sql<wbr>Protection<wbr>Policy<wbr>Response</a> | <a href="#azurevmworkloadprotectionpolicyresponse">Azure<wbr>Vm<wbr>Workload<wbr>Protection<wbr>Policy<wbr>Response</a> | <a href="#genericprotectionpolicyresponse">Generic<wbr>Protection<wbr>Policy<wbr>Response</a> | <a href="#mabprotectionpolicyresponse">Mab<wbr>Protection<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}ProtectionPolicyResource properties{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="e_tag_python">
 <a href="#e_tag_python" style="color: inherit; text-decoration: inherit;">e_<wbr>tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional ETag.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -533,7 +477,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -541,55 +484,49 @@ The following output properties are available:
             title="Optional">
         <span id="protecteditemscount_csharp">
 <a href="#protecteditemscount_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Items<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_csharp">
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#simpleretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schedulepolicy_csharp">
 <a href="#schedulepolicy_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#longtermschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#simpleschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#logschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#longtermschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timezone_csharp">
 <a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_csharp">
 <a href="#workloadtype_csharp" style="color: inherit; text-decoration: inherit;">Work<wbr>Load<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of workload for the backup management{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -598,55 +535,49 @@ The following output properties are available:
             title="Optional">
         <span id="protecteditemscount_go">
 <a href="#protecteditemscount_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Items<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_go">
 <a href="#retentionpolicy_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schedulepolicy_go">
 <a href="#schedulepolicy_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timezone_go">
 <a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_go">
 <a href="#workloadtype_go" style="color: inherit; text-decoration: inherit;">Work<wbr>Load<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of workload for the backup management{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -655,55 +586,49 @@ The following output properties are available:
             title="Optional">
         <span id="protecteditemscount_nodejs">
 <a href="#protecteditemscount_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Items<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_nodejs">
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schedulepolicy_nodejs">
 <a href="#schedulepolicy_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timezone_nodejs">
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_nodejs">
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">work<wbr>Load<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of workload for the backup management{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -712,61 +637,51 @@ The following output properties are available:
             title="Optional">
         <span id="protected_items_count_python">
 <a href="#protected_items_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>items_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retention_policy_python">
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schedule_policy_python">
 <a href="#schedule_policy_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="time_zone_python">
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="work_load_type_python">
 <a href="#work_load_type_python" style="color: inherit; text-decoration: inherit;">work_<wbr>load_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of workload for the backup management{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="azureiaasvmprotectionpolicyresponse">Azure<wbr>Iaa<wbr>SVMProtection<wbr>Policy<wbr>Response</h4>
-
 
 
 
@@ -780,65 +695,58 @@ The following output properties are available:
             title="Optional">
         <span id="instantrpdetails_csharp">
 <a href="#instantrpdetails_csharp" style="color: inherit; text-decoration: inherit;">Instant<wbr>RPDetails</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instantrpadditionaldetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Instant<wbr>RPAdditional<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instantrpretentionrangeindays_csharp">
 <a href="#instantrpretentionrangeindays_csharp" style="color: inherit; text-decoration: inherit;">Instant<wbr>Rp<wbr>Retention<wbr>Range<wbr>In<wbr>Days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instant RP retention policy range in days{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protecteditemscount_csharp">
 <a href="#protecteditemscount_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Items<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_csharp">
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#simpleretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schedulepolicy_csharp">
 <a href="#schedulepolicy_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#longtermschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#simpleschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#logschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#longtermschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timezone_csharp">
 <a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -847,65 +755,58 @@ The following output properties are available:
             title="Optional">
         <span id="instantrpdetails_go">
 <a href="#instantrpdetails_go" style="color: inherit; text-decoration: inherit;">Instant<wbr>RPDetails</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instantrpadditionaldetailsresponse">Instant<wbr>RPAdditional<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instantrpretentionrangeindays_go">
 <a href="#instantrpretentionrangeindays_go" style="color: inherit; text-decoration: inherit;">Instant<wbr>Rp<wbr>Retention<wbr>Range<wbr>In<wbr>Days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instant RP retention policy range in days{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protecteditemscount_go">
 <a href="#protecteditemscount_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Items<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_go">
 <a href="#retentionpolicy_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schedulepolicy_go">
 <a href="#schedulepolicy_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timezone_go">
 <a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -914,65 +815,58 @@ The following output properties are available:
             title="Optional">
         <span id="instantrpdetails_nodejs">
 <a href="#instantrpdetails_nodejs" style="color: inherit; text-decoration: inherit;">instant<wbr>RPDetails</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instantrpadditionaldetailsresponse">Instant<wbr>RPAdditional<wbr>Details<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instantrpretentionrangeindays_nodejs">
 <a href="#instantrpretentionrangeindays_nodejs" style="color: inherit; text-decoration: inherit;">instant<wbr>Rp<wbr>Retention<wbr>Range<wbr>In<wbr>Days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Instant RP retention policy range in days{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protecteditemscount_nodejs">
 <a href="#protecteditemscount_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Items<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_nodejs">
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schedulepolicy_nodejs">
 <a href="#schedulepolicy_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timezone_nodejs">
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -981,71 +875,60 @@ The following output properties are available:
             title="Optional">
         <span id="instant_rp_details_python">
 <a href="#instant_rp_details_python" style="color: inherit; text-decoration: inherit;">instant_<wbr>rp_<wbr>details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instantrpadditionaldetailsresponse">Instant<wbr>RPAdditional<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instant_rp_retention_range_in_days_python">
 <a href="#instant_rp_retention_range_in_days_python" style="color: inherit; text-decoration: inherit;">instant_<wbr>rp_<wbr>retention_<wbr>range_<wbr>in_<wbr>days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instant RP retention policy range in days{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protected_items_count_python">
 <a href="#protected_items_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>items_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retention_policy_python">
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schedule_policy_python">
 <a href="#schedule_policy_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="time_zone_python">
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="azuresqlprotectionpolicyresponse">Azure<wbr>Sql<wbr>Protection<wbr>Policy<wbr>Response</h4>
-
 
 
 
@@ -1059,25 +942,22 @@ The following output properties are available:
             title="Optional">
         <span id="protecteditemscount_csharp">
 <a href="#protecteditemscount_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Items<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_csharp">
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#simpleretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention policy details.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1086,25 +966,22 @@ The following output properties are available:
             title="Optional">
         <span id="protecteditemscount_go">
 <a href="#protecteditemscount_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Items<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_go">
 <a href="#retentionpolicy_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention policy details.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1113,25 +990,22 @@ The following output properties are available:
             title="Optional">
         <span id="protecteditemscount_nodejs">
 <a href="#protecteditemscount_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Items<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_nodejs">
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention policy details.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1140,31 +1014,24 @@ The following output properties are available:
             title="Optional">
         <span id="protected_items_count_python">
 <a href="#protected_items_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>items_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retention_policy_python">
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention policy details.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="azurevmworkloadprotectionpolicyresponse">Azure<wbr>Vm<wbr>Workload<wbr>Protection<wbr>Policy<wbr>Response</h4>
-
 
 
 
@@ -1178,55 +1045,49 @@ The following output properties are available:
             title="Optional">
         <span id="makepolicyconsistent_csharp">
 <a href="#makepolicyconsistent_csharp" style="color: inherit; text-decoration: inherit;">Make<wbr>Policy<wbr>Consistent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Fix the policy inconsistency{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protecteditemscount_csharp">
 <a href="#protecteditemscount_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Items<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="settings_csharp">
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#settingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Common settings for the backup management{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subprotectionpolicy_csharp">
 <a href="#subprotectionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Sub<wbr>Protection<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subprotectionpolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Sub<wbr>Protection<wbr>Policy<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of sub-protection policies which includes schedule and retention{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_csharp">
 <a href="#workloadtype_csharp" style="color: inherit; text-decoration: inherit;">Work<wbr>Load<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of workload for the backup management{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1235,55 +1096,49 @@ The following output properties are available:
             title="Optional">
         <span id="makepolicyconsistent_go">
 <a href="#makepolicyconsistent_go" style="color: inherit; text-decoration: inherit;">Make<wbr>Policy<wbr>Consistent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Fix the policy inconsistency{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protecteditemscount_go">
 <a href="#protecteditemscount_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Items<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="settings_go">
 <a href="#settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#settingsresponse">Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Common settings for the backup management{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subprotectionpolicy_go">
 <a href="#subprotectionpolicy_go" style="color: inherit; text-decoration: inherit;">Sub<wbr>Protection<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subprotectionpolicyresponse">[]Sub<wbr>Protection<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}List of sub-protection policies which includes schedule and retention{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_go">
 <a href="#workloadtype_go" style="color: inherit; text-decoration: inherit;">Work<wbr>Load<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of workload for the backup management{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1292,55 +1147,49 @@ The following output properties are available:
             title="Optional">
         <span id="makepolicyconsistent_nodejs">
 <a href="#makepolicyconsistent_nodejs" style="color: inherit; text-decoration: inherit;">make<wbr>Policy<wbr>Consistent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Fix the policy inconsistency{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protecteditemscount_nodejs">
 <a href="#protecteditemscount_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Items<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="settings_nodejs">
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#settingsresponse">Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Common settings for the backup management{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subprotectionpolicy_nodejs">
 <a href="#subprotectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">sub<wbr>Protection<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subprotectionpolicyresponse">Sub<wbr>Protection<wbr>Policy<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of sub-protection policies which includes schedule and retention{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="workloadtype_nodejs">
 <a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">work<wbr>Load<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of workload for the backup management{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1349,61 +1198,51 @@ The following output properties are available:
             title="Optional">
         <span id="make_policy_consistent_python">
 <a href="#make_policy_consistent_python" style="color: inherit; text-decoration: inherit;">make_<wbr>policy_<wbr>consistent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Fix the policy inconsistency{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protected_items_count_python">
 <a href="#protected_items_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>items_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="settings_python">
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#settingsresponse">Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Common settings for the backup management{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sub_protection_policy_python">
 <a href="#sub_protection_policy_python" style="color: inherit; text-decoration: inherit;">sub_<wbr>protection_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subprotectionpolicyresponse">Sequence[Sub<wbr>Protection<wbr>Policy<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of sub-protection policies which includes schedule and retention{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="work_load_type_python">
 <a href="#work_load_type_python" style="color: inherit; text-decoration: inherit;">work_<wbr>load_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of workload for the backup management{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="dailyretentionformatresponse">Daily<wbr>Retention<wbr>Format<wbr>Response</h4>
-
 
 
 
@@ -1417,15 +1256,13 @@ The following output properties are available:
             title="Optional">
         <span id="daysofthemonth_csharp">
 <a href="#daysofthemonth_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>Of<wbr>The<wbr>Month</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dayresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Day<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of days of the month.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1434,15 +1271,13 @@ The following output properties are available:
             title="Optional">
         <span id="daysofthemonth_go">
 <a href="#daysofthemonth_go" style="color: inherit; text-decoration: inherit;">Days<wbr>Of<wbr>The<wbr>Month</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dayresponse">[]Day<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}List of days of the month.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1451,15 +1286,13 @@ The following output properties are available:
             title="Optional">
         <span id="daysofthemonth_nodejs">
 <a href="#daysofthemonth_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Of<wbr>The<wbr>Month</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dayresponse">Day<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of days of the month.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1468,21 +1301,15 @@ The following output properties are available:
             title="Optional">
         <span id="days_of_the_month_python">
 <a href="#days_of_the_month_python" style="color: inherit; text-decoration: inherit;">days_<wbr>of_<wbr>the_<wbr>month</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dayresponse">Sequence[Day<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of days of the month.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="dailyretentionscheduleresponse">Daily<wbr>Retention<wbr>Schedule<wbr>Response</h4>
-
 
 
 
@@ -1496,25 +1323,22 @@ The following output properties are available:
             title="Optional">
         <span id="retentionduration_csharp">
 <a href="#retentionduration_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#retentiondurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentiontimes_csharp">
 <a href="#retentiontimes_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Times</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Retention times of retention policy.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1523,25 +1347,22 @@ The following output properties are available:
             title="Optional">
         <span id="retentionduration_go">
 <a href="#retentionduration_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentiontimes_go">
 <a href="#retentiontimes_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Times</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Retention times of retention policy.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1550,25 +1371,22 @@ The following output properties are available:
             title="Optional">
         <span id="retentionduration_nodejs">
 <a href="#retentionduration_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentiontimes_nodejs">
 <a href="#retentiontimes_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Times</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Retention times of retention policy.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1577,31 +1395,24 @@ The following output properties are available:
             title="Optional">
         <span id="retention_duration_python">
 <a href="#retention_duration_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retention_times_python">
 <a href="#retention_times_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>times</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Retention times of retention policy.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="dayresponse">Day<wbr>Response</h4>
-
 
 
 
@@ -1615,25 +1426,22 @@ The following output properties are available:
             title="Optional">
         <span id="date_csharp">
 <a href="#date_csharp" style="color: inherit; text-decoration: inherit;">Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Date of the month{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="islast_csharp">
 <a href="#islast_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Last</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether Date is last date of month{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1642,25 +1450,22 @@ The following output properties are available:
             title="Optional">
         <span id="date_go">
 <a href="#date_go" style="color: inherit; text-decoration: inherit;">Date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Date of the month{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="islast_go">
 <a href="#islast_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Last</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether Date is last date of month{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1669,25 +1474,22 @@ The following output properties are available:
             title="Optional">
         <span id="date_nodejs">
 <a href="#date_nodejs" style="color: inherit; text-decoration: inherit;">date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Date of the month{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="islast_nodejs">
 <a href="#islast_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Last</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether Date is last date of month{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1696,31 +1498,24 @@ The following output properties are available:
             title="Optional">
         <span id="date_python">
 <a href="#date_python" style="color: inherit; text-decoration: inherit;">date</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Date of the month{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_last_python">
 <a href="#is_last_python" style="color: inherit; text-decoration: inherit;">is_<wbr>last</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether Date is last date of month{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="genericprotectionpolicyresponse">Generic<wbr>Protection<wbr>Policy<wbr>Response</h4>
-
 
 
 
@@ -1734,45 +1529,40 @@ The following output properties are available:
             title="Optional">
         <span id="fabricname_csharp">
 <a href="#fabricname_csharp" style="color: inherit; text-decoration: inherit;">Fabric<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of this policy's fabric.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protecteditemscount_csharp">
 <a href="#protecteditemscount_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Items<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subprotectionpolicy_csharp">
 <a href="#subprotectionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Sub<wbr>Protection<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subprotectionpolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Sub<wbr>Protection<wbr>Policy<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of sub-protection policies which includes schedule and retention{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timezone_csharp">
 <a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1781,45 +1571,40 @@ The following output properties are available:
             title="Optional">
         <span id="fabricname_go">
 <a href="#fabricname_go" style="color: inherit; text-decoration: inherit;">Fabric<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of this policy's fabric.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protecteditemscount_go">
 <a href="#protecteditemscount_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Items<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subprotectionpolicy_go">
 <a href="#subprotectionpolicy_go" style="color: inherit; text-decoration: inherit;">Sub<wbr>Protection<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subprotectionpolicyresponse">[]Sub<wbr>Protection<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}List of sub-protection policies which includes schedule and retention{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timezone_go">
 <a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1828,45 +1613,40 @@ The following output properties are available:
             title="Optional">
         <span id="fabricname_nodejs">
 <a href="#fabricname_nodejs" style="color: inherit; text-decoration: inherit;">fabric<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of this policy's fabric.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protecteditemscount_nodejs">
 <a href="#protecteditemscount_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Items<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="subprotectionpolicy_nodejs">
 <a href="#subprotectionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">sub<wbr>Protection<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subprotectionpolicyresponse">Sub<wbr>Protection<wbr>Policy<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of sub-protection policies which includes schedule and retention{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timezone_nodejs">
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1875,51 +1655,42 @@ The following output properties are available:
             title="Optional">
         <span id="fabric_name_python">
 <a href="#fabric_name_python" style="color: inherit; text-decoration: inherit;">fabric_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of this policy's fabric.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protected_items_count_python">
 <a href="#protected_items_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>items_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sub_protection_policy_python">
 <a href="#sub_protection_policy_python" style="color: inherit; text-decoration: inherit;">sub_<wbr>protection_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subprotectionpolicyresponse">Sequence[Sub<wbr>Protection<wbr>Policy<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of sub-protection policies which includes schedule and retention{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="time_zone_python">
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="instantrpadditionaldetailsresponse">Instant<wbr>RPAdditional<wbr>Details<wbr>Response</h4>
-
 
 
 
@@ -1933,25 +1704,22 @@ The following output properties are available:
             title="Optional">
         <span id="azurebackuprgnameprefix_csharp">
 <a href="#azurebackuprgnameprefix_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Backup<wbr>RGName<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="azurebackuprgnamesuffix_csharp">
 <a href="#azurebackuprgnamesuffix_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Backup<wbr>RGName<wbr>Suffix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1960,25 +1728,22 @@ The following output properties are available:
             title="Optional">
         <span id="azurebackuprgnameprefix_go">
 <a href="#azurebackuprgnameprefix_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Backup<wbr>RGName<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="azurebackuprgnamesuffix_go">
 <a href="#azurebackuprgnamesuffix_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Backup<wbr>RGName<wbr>Suffix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1987,25 +1752,22 @@ The following output properties are available:
             title="Optional">
         <span id="azurebackuprgnameprefix_nodejs">
 <a href="#azurebackuprgnameprefix_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Backup<wbr>RGName<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="azurebackuprgnamesuffix_nodejs">
 <a href="#azurebackuprgnamesuffix_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Backup<wbr>RGName<wbr>Suffix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2014,31 +1776,24 @@ The following output properties are available:
             title="Optional">
         <span id="azure_backup_rg_name_prefix_python">
 <a href="#azure_backup_rg_name_prefix_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>backup_<wbr>rg_<wbr>name_<wbr>prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="azure_backup_rg_name_suffix_python">
 <a href="#azure_backup_rg_name_suffix_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>backup_<wbr>rg_<wbr>name_<wbr>suffix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response</h4>
-
 
 
 
@@ -2052,15 +1807,13 @@ The following output properties are available:
             title="Optional">
         <span id="schedulefrequencyinmins_csharp">
 <a href="#schedulefrequencyinmins_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Frequency<wbr>In<wbr>Mins</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Frequency of the log schedule operation of this policy in minutes.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2069,15 +1822,13 @@ The following output properties are available:
             title="Optional">
         <span id="schedulefrequencyinmins_go">
 <a href="#schedulefrequencyinmins_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Frequency<wbr>In<wbr>Mins</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Frequency of the log schedule operation of this policy in minutes.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2086,15 +1837,13 @@ The following output properties are available:
             title="Optional">
         <span id="schedulefrequencyinmins_nodejs">
 <a href="#schedulefrequencyinmins_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Frequency<wbr>In<wbr>Mins</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Frequency of the log schedule operation of this policy in minutes.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2103,21 +1852,15 @@ The following output properties are available:
             title="Optional">
         <span id="schedule_frequency_in_mins_python">
 <a href="#schedule_frequency_in_mins_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>frequency_<wbr>in_<wbr>mins</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Frequency of the log schedule operation of this policy in minutes.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response</h4>
-
 
 
 
@@ -2131,45 +1874,40 @@ The following output properties are available:
             title="Optional">
         <span id="dailyschedule_csharp">
 <a href="#dailyschedule_csharp" style="color: inherit; text-decoration: inherit;">Daily<wbr>Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dailyretentionscheduleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Daily<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Daily retention schedule of the protection policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="monthlyschedule_csharp">
 <a href="#monthlyschedule_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monthlyretentionscheduleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Monthly<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Monthly retention schedule of the protection policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weeklyschedule_csharp">
 <a href="#weeklyschedule_csharp" style="color: inherit; text-decoration: inherit;">Weekly<wbr>Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#weeklyretentionscheduleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Weekly<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention schedule of the protection policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="yearlyschedule_csharp">
 <a href="#yearlyschedule_csharp" style="color: inherit; text-decoration: inherit;">Yearly<wbr>Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#yearlyretentionscheduleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Yearly<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Yearly retention schedule of the protection policy.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2178,45 +1916,40 @@ The following output properties are available:
             title="Optional">
         <span id="dailyschedule_go">
 <a href="#dailyschedule_go" style="color: inherit; text-decoration: inherit;">Daily<wbr>Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dailyretentionscheduleresponse">Daily<wbr>Retention<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Daily retention schedule of the protection policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="monthlyschedule_go">
 <a href="#monthlyschedule_go" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monthlyretentionscheduleresponse">Monthly<wbr>Retention<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Monthly retention schedule of the protection policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weeklyschedule_go">
 <a href="#weeklyschedule_go" style="color: inherit; text-decoration: inherit;">Weekly<wbr>Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#weeklyretentionscheduleresponse">Weekly<wbr>Retention<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention schedule of the protection policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="yearlyschedule_go">
 <a href="#yearlyschedule_go" style="color: inherit; text-decoration: inherit;">Yearly<wbr>Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#yearlyretentionscheduleresponse">Yearly<wbr>Retention<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Yearly retention schedule of the protection policy.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2225,45 +1958,40 @@ The following output properties are available:
             title="Optional">
         <span id="dailyschedule_nodejs">
 <a href="#dailyschedule_nodejs" style="color: inherit; text-decoration: inherit;">daily<wbr>Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dailyretentionscheduleresponse">Daily<wbr>Retention<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Daily retention schedule of the protection policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="monthlyschedule_nodejs">
 <a href="#monthlyschedule_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monthlyretentionscheduleresponse">Monthly<wbr>Retention<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Monthly retention schedule of the protection policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weeklyschedule_nodejs">
 <a href="#weeklyschedule_nodejs" style="color: inherit; text-decoration: inherit;">weekly<wbr>Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#weeklyretentionscheduleresponse">Weekly<wbr>Retention<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention schedule of the protection policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="yearlyschedule_nodejs">
 <a href="#yearlyschedule_nodejs" style="color: inherit; text-decoration: inherit;">yearly<wbr>Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#yearlyretentionscheduleresponse">Yearly<wbr>Retention<wbr>Schedule<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Yearly retention schedule of the protection policy.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2272,51 +2000,42 @@ The following output properties are available:
             title="Optional">
         <span id="daily_schedule_python">
 <a href="#daily_schedule_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dailyretentionscheduleresponse">Daily<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Daily retention schedule of the protection policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="monthly_schedule_python">
 <a href="#monthly_schedule_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monthlyretentionscheduleresponse">Monthly<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Monthly retention schedule of the protection policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weekly_schedule_python">
 <a href="#weekly_schedule_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#weeklyretentionscheduleresponse">Weekly<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention schedule of the protection policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="yearly_schedule_python">
 <a href="#yearly_schedule_python" style="color: inherit; text-decoration: inherit;">yearly_<wbr>schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#yearlyretentionscheduleresponse">Yearly<wbr>Retention<wbr>Schedule<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Yearly retention schedule of the protection policy.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response</h4>
-
 
 
 
@@ -2329,13 +2048,11 @@ The following output properties are available:
 </dl>
 {{% /choosable %}}
 
-
 {{% choosable language go %}}
 <dl class="resources-properties">
 
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2343,19 +2060,13 @@ The following output properties are available:
 </dl>
 {{% /choosable %}}
 
-
 {{% choosable language python %}}
 <dl class="resources-properties">
 
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="mabprotectionpolicyresponse">Mab<wbr>Protection<wbr>Policy<wbr>Response</h4>
-
 
 
 
@@ -2369,35 +2080,31 @@ The following output properties are available:
             title="Optional">
         <span id="protecteditemscount_csharp">
 <a href="#protecteditemscount_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Items<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_csharp">
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#simpleretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention policy details.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schedulepolicy_csharp">
 <a href="#schedulepolicy_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#longtermschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#simpleschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#logschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#longtermschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule of backup policy.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2406,35 +2113,31 @@ The following output properties are available:
             title="Optional">
         <span id="protecteditemscount_go">
 <a href="#protecteditemscount_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Items<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_go">
 <a href="#retentionpolicy_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention policy details.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schedulepolicy_go">
 <a href="#schedulepolicy_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule of backup policy.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2443,35 +2146,31 @@ The following output properties are available:
             title="Optional">
         <span id="protecteditemscount_nodejs">
 <a href="#protecteditemscount_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Items<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_nodejs">
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention policy details.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schedulepolicy_nodejs">
 <a href="#schedulepolicy_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule of backup policy.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2480,41 +2179,33 @@ The following output properties are available:
             title="Optional">
         <span id="protected_items_count_python">
 <a href="#protected_items_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>items_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of items associated with this policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retention_policy_python">
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention policy details.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schedule_policy_python">
 <a href="#schedule_policy_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule of backup policy.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="monthlyretentionscheduleresponse">Monthly<wbr>Retention<wbr>Schedule<wbr>Response</h4>
-
 
 
 
@@ -2528,55 +2219,49 @@ The following output properties are available:
             title="Optional">
         <span id="retentionduration_csharp">
 <a href="#retentionduration_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#retentiondurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionscheduledaily_csharp">
 <a href="#retentionscheduledaily_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Schedule<wbr>Daily</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dailyretentionformatresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Daily<wbr>Retention<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Daily retention format for monthly retention policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionscheduleformattype_csharp">
 <a href="#retentionscheduleformattype_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Schedule<wbr>Format<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Retention schedule format type for monthly retention policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionscheduleweekly_csharp">
 <a href="#retentionscheduleweekly_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Schedule<wbr>Weekly</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#weeklyretentionformatresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Weekly<wbr>Retention<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention format for monthly retention policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentiontimes_csharp">
 <a href="#retentiontimes_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Times</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Retention times of retention policy.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2585,55 +2270,49 @@ The following output properties are available:
             title="Optional">
         <span id="retentionduration_go">
 <a href="#retentionduration_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionscheduledaily_go">
 <a href="#retentionscheduledaily_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Schedule<wbr>Daily</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dailyretentionformatresponse">Daily<wbr>Retention<wbr>Format<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Daily retention format for monthly retention policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionscheduleformattype_go">
 <a href="#retentionscheduleformattype_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Schedule<wbr>Format<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Retention schedule format type for monthly retention policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionscheduleweekly_go">
 <a href="#retentionscheduleweekly_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Schedule<wbr>Weekly</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#weeklyretentionformatresponse">Weekly<wbr>Retention<wbr>Format<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention format for monthly retention policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentiontimes_go">
 <a href="#retentiontimes_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Times</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Retention times of retention policy.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2642,55 +2321,49 @@ The following output properties are available:
             title="Optional">
         <span id="retentionduration_nodejs">
 <a href="#retentionduration_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionscheduledaily_nodejs">
 <a href="#retentionscheduledaily_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Daily</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dailyretentionformatresponse">Daily<wbr>Retention<wbr>Format<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Daily retention format for monthly retention policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionscheduleformattype_nodejs">
 <a href="#retentionscheduleformattype_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Format<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Retention schedule format type for monthly retention policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionscheduleweekly_nodejs">
 <a href="#retentionscheduleweekly_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Weekly</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#weeklyretentionformatresponse">Weekly<wbr>Retention<wbr>Format<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention format for monthly retention policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentiontimes_nodejs">
 <a href="#retentiontimes_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Times</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Retention times of retention policy.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2699,61 +2372,51 @@ The following output properties are available:
             title="Optional">
         <span id="retention_duration_python">
 <a href="#retention_duration_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retention_schedule_daily_python">
 <a href="#retention_schedule_daily_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>schedule_<wbr>daily</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dailyretentionformatresponse">Daily<wbr>Retention<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Daily retention format for monthly retention policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retention_schedule_format_type_python">
 <a href="#retention_schedule_format_type_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>schedule_<wbr>format_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Retention schedule format type for monthly retention policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retention_schedule_weekly_python">
 <a href="#retention_schedule_weekly_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>schedule_<wbr>weekly</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#weeklyretentionformatresponse">Weekly<wbr>Retention<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention format for monthly retention policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retention_times_python">
 <a href="#retention_times_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>times</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Retention times of retention policy.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="retentiondurationresponse">Retention<wbr>Duration<wbr>Response</h4>
-
 
 
 
@@ -2767,26 +2430,23 @@ The following output properties are available:
             title="Optional">
         <span id="count_csharp">
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Count of duration types. Retention duration is obtained by the counting the duration type Count times.
 For example, when Count = 3 and DurationType = Weeks, retention duration will be three weeks.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="durationtype_csharp">
 <a href="#durationtype_csharp" style="color: inherit; text-decoration: inherit;">Duration<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Retention duration type of retention policy.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2795,26 +2455,23 @@ For example, when Count = 3 and DurationType = Weeks, retention duration will be
             title="Optional">
         <span id="count_go">
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Count of duration types. Retention duration is obtained by the counting the duration type Count times.
 For example, when Count = 3 and DurationType = Weeks, retention duration will be three weeks.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="durationtype_go">
 <a href="#durationtype_go" style="color: inherit; text-decoration: inherit;">Duration<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Retention duration type of retention policy.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2823,26 +2480,23 @@ For example, when Count = 3 and DurationType = Weeks, retention duration will be
             title="Optional">
         <span id="count_nodejs">
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Count of duration types. Retention duration is obtained by the counting the duration type Count times.
 For example, when Count = 3 and DurationType = Weeks, retention duration will be three weeks.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="durationtype_nodejs">
 <a href="#durationtype_nodejs" style="color: inherit; text-decoration: inherit;">duration<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Retention duration type of retention policy.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2851,32 +2505,25 @@ For example, when Count = 3 and DurationType = Weeks, retention duration will be
             title="Optional">
         <span id="count_python">
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Count of duration types. Retention duration is obtained by the counting the duration type Count times.
 For example, when Count = 3 and DurationType = Weeks, retention duration will be three weeks.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="duration_type_python">
 <a href="#duration_type_python" style="color: inherit; text-decoration: inherit;">duration_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Retention duration type of retention policy.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="settingsresponse">Settings<wbr>Response</h4>
-
 
 
 
@@ -2890,36 +2537,32 @@ For example, when Count = 3 and DurationType = Weeks, retention duration will be
             title="Optional">
         <span id="iscompression_csharp">
 <a href="#iscompression_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Compression</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Workload compression flag. This has been added so that 'isSqlCompression'
 will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="issqlcompression_csharp">
 <a href="#issqlcompression_csharp" style="color: inherit; text-decoration: inherit;">Issqlcompression</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}SQL compression flag{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timezone_csharp">
 <a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2928,36 +2571,32 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
             title="Optional">
         <span id="iscompression_go">
 <a href="#iscompression_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Compression</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Workload compression flag. This has been added so that 'isSqlCompression'
 will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="issqlcompression_go">
 <a href="#issqlcompression_go" style="color: inherit; text-decoration: inherit;">Issqlcompression</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}SQL compression flag{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timezone_go">
 <a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2966,36 +2605,32 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
             title="Optional">
         <span id="iscompression_nodejs">
 <a href="#iscompression_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Compression</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Workload compression flag. This has been added so that 'isSqlCompression'
 will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="issqlcompression_nodejs">
 <a href="#issqlcompression_nodejs" style="color: inherit; text-decoration: inherit;">issqlcompression</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}SQL compression flag{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timezone_nodejs">
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3004,42 +2639,34 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
             title="Optional">
         <span id="is_compression_python">
 <a href="#is_compression_python" style="color: inherit; text-decoration: inherit;">is_<wbr>compression</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Workload compression flag. This has been added so that 'isSqlCompression'
 will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="issqlcompression_python">
 <a href="#issqlcompression_python" style="color: inherit; text-decoration: inherit;">issqlcompression</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}SQL compression flag{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="time_zone_python">
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}TimeZone optional input as string. For example: TimeZone = "Pacific Standard Time".{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response</h4>
-
 
 
 
@@ -3053,15 +2680,13 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
             title="Optional">
         <span id="retentionduration_csharp">
 <a href="#retentionduration_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#retentiondurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of the protection policy.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3070,15 +2695,13 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
             title="Optional">
         <span id="retentionduration_go">
 <a href="#retentionduration_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of the protection policy.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3087,15 +2710,13 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
             title="Optional">
         <span id="retentionduration_nodejs">
 <a href="#retentionduration_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of the protection policy.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3104,21 +2725,15 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
             title="Optional">
         <span id="retention_duration_python">
 <a href="#retention_duration_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of the protection policy.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response</h4>
-
 
 
 
@@ -3132,45 +2747,40 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
             title="Optional">
         <span id="schedulerundays_csharp">
 <a href="#schedulerundays_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Run<wbr>Days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of days of week this schedule has to be run.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schedulerunfrequency_csharp">
 <a href="#schedulerunfrequency_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Run<wbr>Frequency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Frequency of the schedule operation of this policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scheduleruntimes_csharp">
 <a href="#scheduleruntimes_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Run<wbr>Times</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of times of day this schedule has to be run.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scheduleweeklyfrequency_csharp">
 <a href="#scheduleweeklyfrequency_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Weekly<wbr>Frequency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}At every number weeks this schedule has to be run.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3179,45 +2789,40 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
             title="Optional">
         <span id="schedulerundays_go">
 <a href="#schedulerundays_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Run<wbr>Days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of days of week this schedule has to be run.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schedulerunfrequency_go">
 <a href="#schedulerunfrequency_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Run<wbr>Frequency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Frequency of the schedule operation of this policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scheduleruntimes_go">
 <a href="#scheduleruntimes_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Run<wbr>Times</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of times of day this schedule has to be run.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scheduleweeklyfrequency_go">
 <a href="#scheduleweeklyfrequency_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Weekly<wbr>Frequency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}At every number weeks this schedule has to be run.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3226,45 +2831,40 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
             title="Optional">
         <span id="schedulerundays_nodejs">
 <a href="#schedulerundays_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Run<wbr>Days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of days of week this schedule has to be run.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schedulerunfrequency_nodejs">
 <a href="#schedulerunfrequency_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Run<wbr>Frequency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Frequency of the schedule operation of this policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scheduleruntimes_nodejs">
 <a href="#scheduleruntimes_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Run<wbr>Times</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of times of day this schedule has to be run.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scheduleweeklyfrequency_nodejs">
 <a href="#scheduleweeklyfrequency_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Weekly<wbr>Frequency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}At every number weeks this schedule has to be run.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3273,51 +2873,42 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
             title="Optional">
         <span id="schedule_run_days_python">
 <a href="#schedule_run_days_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>run_<wbr>days</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of days of week this schedule has to be run.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schedule_run_frequency_python">
 <a href="#schedule_run_frequency_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>run_<wbr>frequency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Frequency of the schedule operation of this policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schedule_run_times_python">
 <a href="#schedule_run_times_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>run_<wbr>times</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of times of day this schedule has to be run.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schedule_weekly_frequency_python">
 <a href="#schedule_weekly_frequency_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>weekly_<wbr>frequency</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}At every number weeks this schedule has to be run.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="subprotectionpolicyresponse">Sub<wbr>Protection<wbr>Policy<wbr>Response</h4>
-
 
 
 
@@ -3331,35 +2922,31 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
             title="Optional">
         <span id="policytype_csharp">
 <a href="#policytype_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of backup policy type{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_csharp">
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#simpleretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleretentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schedulepolicy_csharp">
 <a href="#schedulepolicy_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#longtermschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#simpleschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#logschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#longtermschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleschedulepolicyresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3368,35 +2955,31 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
             title="Optional">
         <span id="policytype_go">
 <a href="#policytype_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of backup policy type{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_go">
 <a href="#retentionpolicy_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schedulepolicy_go">
 <a href="#schedulepolicy_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3405,35 +2988,31 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
             title="Optional">
         <span id="policytype_nodejs">
 <a href="#policytype_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of backup policy type{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_nodejs">
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schedulepolicy_nodejs">
 <a href="#schedulepolicy_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response</a></span><span class="property-type"> | </span><span class="property-type"><a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response</a></span>
+        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response</a> | <a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3442,38 +3021,31 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
             title="Optional">
         <span id="policy_type_python">
 <a href="#policy_type_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of backup policy type{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retention_policy_python">
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#longtermretentionpolicyresponse">Long<wbr>Term<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleretentionpolicyresponse">Simple<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention policy with the details on backup copy retention ranges.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schedule_policy_python">
 <a href="#schedule_policy_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span><span class="property-type"> | </span><span class="property-type"><a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#logschedulepolicyresponse">Log<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#longtermschedulepolicyresponse">Long<wbr>Term<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a> | <a href="#simpleschedulepolicyresponse">Simple<wbr>Schedule<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Backup schedule specified as part of backup policy.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="weeklyretentionformatresponse">Weekly<wbr>Retention<wbr>Format<wbr>Response</h4>
 
@@ -3482,7 +3054,6 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3490,25 +3061,22 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
             title="Optional">
         <span id="daysoftheweek_csharp">
 <a href="#daysoftheweek_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>Of<wbr>The<wbr>Week</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of days of the week.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weeksofthemonth_csharp">
 <a href="#weeksofthemonth_csharp" style="color: inherit; text-decoration: inherit;">Weeks<wbr>Of<wbr>The<wbr>Month</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of weeks of month.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3517,25 +3085,22 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
             title="Optional">
         <span id="daysoftheweek_go">
 <a href="#daysoftheweek_go" style="color: inherit; text-decoration: inherit;">Days<wbr>Of<wbr>The<wbr>Week</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of days of the week.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weeksofthemonth_go">
 <a href="#weeksofthemonth_go" style="color: inherit; text-decoration: inherit;">Weeks<wbr>Of<wbr>The<wbr>Month</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of weeks of month.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3544,25 +3109,22 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
             title="Optional">
         <span id="daysoftheweek_nodejs">
 <a href="#daysoftheweek_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Of<wbr>The<wbr>Week</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of days of the week.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weeksofthemonth_nodejs">
 <a href="#weeksofthemonth_nodejs" style="color: inherit; text-decoration: inherit;">weeks<wbr>Of<wbr>The<wbr>Month</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of weeks of month.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3571,28 +3133,22 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
             title="Optional">
         <span id="days_of_the_week_python">
 <a href="#days_of_the_week_python" style="color: inherit; text-decoration: inherit;">days_<wbr>of_<wbr>the_<wbr>week</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of days of the week.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weeks_of_the_month_python">
 <a href="#weeks_of_the_month_python" style="color: inherit; text-decoration: inherit;">weeks_<wbr>of_<wbr>the_<wbr>month</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of weeks of month.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="weeklyretentionscheduleresponse">Weekly<wbr>Retention<wbr>Schedule<wbr>Response</h4>
 
@@ -3601,7 +3157,6 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3609,35 +3164,31 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
             title="Optional">
         <span id="daysoftheweek_csharp">
 <a href="#daysoftheweek_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>Of<wbr>The<wbr>Week</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of days of week for weekly retention policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionduration_csharp">
 <a href="#retentionduration_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#retentiondurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentiontimes_csharp">
 <a href="#retentiontimes_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Times</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Retention times of retention policy.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3646,35 +3197,31 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
             title="Optional">
         <span id="daysoftheweek_go">
 <a href="#daysoftheweek_go" style="color: inherit; text-decoration: inherit;">Days<wbr>Of<wbr>The<wbr>Week</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of days of week for weekly retention policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionduration_go">
 <a href="#retentionduration_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentiontimes_go">
 <a href="#retentiontimes_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Times</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Retention times of retention policy.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3683,35 +3230,31 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
             title="Optional">
         <span id="daysoftheweek_nodejs">
 <a href="#daysoftheweek_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Of<wbr>The<wbr>Week</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of days of week for weekly retention policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionduration_nodejs">
 <a href="#retentionduration_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentiontimes_nodejs">
 <a href="#retentiontimes_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Times</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Retention times of retention policy.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3720,41 +3263,33 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
             title="Optional">
         <span id="days_of_the_week_python">
 <a href="#days_of_the_week_python" style="color: inherit; text-decoration: inherit;">days_<wbr>of_<wbr>the_<wbr>week</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of days of week for weekly retention policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retention_duration_python">
 <a href="#retention_duration_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retention_times_python">
 <a href="#retention_times_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>times</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Retention times of retention policy.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
-
-
-
-
 <h4 id="yearlyretentionscheduleresponse">Yearly<wbr>Retention<wbr>Schedule<wbr>Response</h4>
-
 
 
 
@@ -3768,65 +3303,58 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
             title="Optional">
         <span id="monthsofyear_csharp">
 <a href="#monthsofyear_csharp" style="color: inherit; text-decoration: inherit;">Months<wbr>Of<wbr>Year</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of months of year of yearly retention policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionduration_csharp">
 <a href="#retentionduration_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#retentiondurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionscheduledaily_csharp">
 <a href="#retentionscheduledaily_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Schedule<wbr>Daily</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dailyretentionformatresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Daily<wbr>Retention<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Daily retention format for yearly retention policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionscheduleformattype_csharp">
 <a href="#retentionscheduleformattype_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Schedule<wbr>Format<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Retention schedule format for yearly retention policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionscheduleweekly_csharp">
 <a href="#retentionscheduleweekly_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Schedule<wbr>Weekly</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#weeklyretentionformatresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Weekly<wbr>Retention<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention format for yearly retention policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentiontimes_csharp">
 <a href="#retentiontimes_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Times</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Retention times of retention policy.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3835,65 +3363,58 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
             title="Optional">
         <span id="monthsofyear_go">
 <a href="#monthsofyear_go" style="color: inherit; text-decoration: inherit;">Months<wbr>Of<wbr>Year</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of months of year of yearly retention policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionduration_go">
 <a href="#retentionduration_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionscheduledaily_go">
 <a href="#retentionscheduledaily_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Schedule<wbr>Daily</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dailyretentionformatresponse">Daily<wbr>Retention<wbr>Format<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Daily retention format for yearly retention policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionscheduleformattype_go">
 <a href="#retentionscheduleformattype_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Schedule<wbr>Format<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Retention schedule format for yearly retention policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionscheduleweekly_go">
 <a href="#retentionscheduleweekly_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Schedule<wbr>Weekly</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#weeklyretentionformatresponse">Weekly<wbr>Retention<wbr>Format<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention format for yearly retention policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentiontimes_go">
 <a href="#retentiontimes_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Times</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Retention times of retention policy.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3902,65 +3423,58 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
             title="Optional">
         <span id="monthsofyear_nodejs">
 <a href="#monthsofyear_nodejs" style="color: inherit; text-decoration: inherit;">months<wbr>Of<wbr>Year</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of months of year of yearly retention policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionduration_nodejs">
 <a href="#retentionduration_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionscheduledaily_nodejs">
 <a href="#retentionscheduledaily_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Daily</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dailyretentionformatresponse">Daily<wbr>Retention<wbr>Format<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Daily retention format for yearly retention policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionscheduleformattype_nodejs">
 <a href="#retentionscheduleformattype_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Format<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Retention schedule format for yearly retention policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentionscheduleweekly_nodejs">
 <a href="#retentionscheduleweekly_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Schedule<wbr>Weekly</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#weeklyretentionformatresponse">Weekly<wbr>Retention<wbr>Format<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention format for yearly retention policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retentiontimes_nodejs">
 <a href="#retentiontimes_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Times</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Retention times of retention policy.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3969,68 +3483,58 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
             title="Optional">
         <span id="months_of_year_python">
 <a href="#months_of_year_python" style="color: inherit; text-decoration: inherit;">months_<wbr>of_<wbr>year</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of months of year of yearly retention policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retention_duration_python">
 <a href="#retention_duration_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#retentiondurationresponse">Retention<wbr>Duration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retention duration of retention Policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retention_schedule_daily_python">
 <a href="#retention_schedule_daily_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>schedule_<wbr>daily</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dailyretentionformatresponse">Daily<wbr>Retention<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Daily retention format for yearly retention policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retention_schedule_format_type_python">
 <a href="#retention_schedule_format_type_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>schedule_<wbr>format_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Retention schedule format for yearly retention policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retention_schedule_weekly_python">
 <a href="#retention_schedule_weekly_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>schedule_<wbr>weekly</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#weeklyretentionformatresponse">Weekly<wbr>Retention<wbr>Format<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Weekly retention format for yearly retention policy.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="retention_times_python">
 <a href="#retention_times_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>times</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Retention times of retention policy.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

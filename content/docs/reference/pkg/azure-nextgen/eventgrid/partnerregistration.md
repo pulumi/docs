@@ -2,7 +2,7 @@
 ---
 title: "PartnerRegistration"
 title_tag: "azure-nextgen.eventgrid.PartnerRegistration"
-meta_desc: "Explore the PartnerRegistration resource of the eventgrid module, including examples, input properties, output properties, lookup functions, and supporting types. Information about a partner registration."
+meta_desc: "Documentation for the azure-nextgen.eventgrid.PartnerRegistration resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -162,7 +162,7 @@ const partnerRegistration = new azure_nextgen.eventgrid.v20200401preview.Partner
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PartnerRegistration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">PartnerRegistrationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PartnerRegistration</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">PartnerRegistrationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -170,11 +170,11 @@ const partnerRegistration = new azure_nextgen.eventgrid.v20200401preview.Partner
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPartnerRegistration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">PartnerRegistrationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PartnerRegistration</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPartnerRegistration</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">PartnerRegistrationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PartnerRegistration</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PartnerRegistration</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">PartnerRegistrationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PartnerRegistration</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">PartnerRegistrationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -185,7 +185,7 @@ const partnerRegistration = new azure_nextgen.eventgrid.v20200401preview.Partner
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -254,7 +254,7 @@ const partnerRegistration = new azure_nextgen.eventgrid.v20200401preview.Partner
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -293,7 +293,7 @@ const partnerRegistration = new azure_nextgen.eventgrid.v20200401preview.Partner
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -334,7 +334,6 @@ The PartnerRegistration resource accepts the following [input]({{< relref "/docs
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -342,173 +341,156 @@ The PartnerRegistration resource accepts the following [input]({{< relref "/docs
             title="Required">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the resource.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="partnerregistrationname_csharp">
 <a href="#partnerregistrationname_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Registration<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the partner registration.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authorizedazuresubscriptionids_csharp">
 <a href="#authorizedazuresubscriptionids_csharp" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Azure<wbr>Subscription<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of Azure subscription Ids that are authorized to create a partner namespace
 associated with this partner registration. This is an optional property. Creating
 partner namespaces is always permitted under the same Azure subscription as the one used
 for creating the partner registration.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customerserviceuri_csharp">
 <a href="#customerserviceuri_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Service<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The extension of the customer service URI of the publisher.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="logouri_csharp">
 <a href="#logouri_csharp" style="color: inherit; text-decoration: inherit;">Logo<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of the logo.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="longdescription_csharp">
 <a href="#longdescription_csharp" style="color: inherit; text-decoration: inherit;">Long<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Long description for the custom scenarios and integration to be displayed in the portal if needed.
 Length of this description should not exceed 2048 characters.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="partnercustomerserviceextension_csharp">
 <a href="#partnercustomerserviceextension_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Customer<wbr>Service<wbr>Extension</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The extension of the customer service number of the publisher. Only digits are allowed and number of digits should not exceed 10.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="partnercustomerservicenumber_csharp">
 <a href="#partnercustomerservicenumber_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Customer<wbr>Service<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The customer service number of the publisher. The expected phone format should start with a '+' sign 
 followed by the country code. The remaining digits are then followed. Only digits and spaces are allowed and its
 length cannot exceed 16 digits including country code. Examples of valid phone numbers are: +1 515 123 4567 and
 +966 7 5115 2471. Examples of invalid phone numbers are: +1 (515) 123-4567, 1 515 123 4567 and +966 121 5115 24 7 551 1234 43{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="partnername_csharp">
 <a href="#partnername_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Official name of the partner name. For example: "Contoso".{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="partnerresourcetypedescription_csharp">
 <a href="#partnerresourcetypedescription_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Resource<wbr>Type<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Short description of the partner resource type. The length of this description should not exceed 256 characters.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="partnerresourcetypedisplayname_csharp">
 <a href="#partnerresourcetypedisplayname_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Resource<wbr>Type<wbr>Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name of the partner resource type.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="partnerresourcetypename_csharp">
 <a href="#partnerresourcetypename_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Resource<wbr>Type<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the partner resource type.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="setupuri_csharp">
 <a href="#setupuri_csharp" style="color: inherit; text-decoration: inherit;">Setup<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of the partner website that can be used by Azure customers to setup Event Grid
 integration on an event source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Tags of the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="visibilitystate_csharp">
 <a href="#visibilitystate_csharp" style="color: inherit; text-decoration: inherit;">Visibility<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="property-type"> | </span><span class="property-type">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Partner<wbr>Registration<wbr>Visibility<wbr>State</span>
+        <span class="property-type">string | <a href="#partnerregistrationvisibilitystate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Partner<wbr>Registration<wbr>Visibility<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Visibility state of the partner registration.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -517,173 +499,156 @@ integration on an event source.{{% /md %}}</dd>
             title="Required">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the resource.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="partnerregistrationname_go">
 <a href="#partnerregistrationname_go" style="color: inherit; text-decoration: inherit;">Partner<wbr>Registration<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the partner registration.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authorizedazuresubscriptionids_go">
 <a href="#authorizedazuresubscriptionids_go" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Azure<wbr>Subscription<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of Azure subscription Ids that are authorized to create a partner namespace
 associated with this partner registration. This is an optional property. Creating
 partner namespaces is always permitted under the same Azure subscription as the one used
 for creating the partner registration.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customerserviceuri_go">
 <a href="#customerserviceuri_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Service<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The extension of the customer service URI of the publisher.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="logouri_go">
 <a href="#logouri_go" style="color: inherit; text-decoration: inherit;">Logo<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of the logo.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="longdescription_go">
 <a href="#longdescription_go" style="color: inherit; text-decoration: inherit;">Long<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Long description for the custom scenarios and integration to be displayed in the portal if needed.
 Length of this description should not exceed 2048 characters.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="partnercustomerserviceextension_go">
 <a href="#partnercustomerserviceextension_go" style="color: inherit; text-decoration: inherit;">Partner<wbr>Customer<wbr>Service<wbr>Extension</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The extension of the customer service number of the publisher. Only digits are allowed and number of digits should not exceed 10.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="partnercustomerservicenumber_go">
 <a href="#partnercustomerservicenumber_go" style="color: inherit; text-decoration: inherit;">Partner<wbr>Customer<wbr>Service<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The customer service number of the publisher. The expected phone format should start with a '+' sign 
 followed by the country code. The remaining digits are then followed. Only digits and spaces are allowed and its
 length cannot exceed 16 digits including country code. Examples of valid phone numbers are: +1 515 123 4567 and
 +966 7 5115 2471. Examples of invalid phone numbers are: +1 (515) 123-4567, 1 515 123 4567 and +966 121 5115 24 7 551 1234 43{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="partnername_go">
 <a href="#partnername_go" style="color: inherit; text-decoration: inherit;">Partner<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Official name of the partner name. For example: "Contoso".{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="partnerresourcetypedescription_go">
 <a href="#partnerresourcetypedescription_go" style="color: inherit; text-decoration: inherit;">Partner<wbr>Resource<wbr>Type<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Short description of the partner resource type. The length of this description should not exceed 256 characters.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="partnerresourcetypedisplayname_go">
 <a href="#partnerresourcetypedisplayname_go" style="color: inherit; text-decoration: inherit;">Partner<wbr>Resource<wbr>Type<wbr>Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name of the partner resource type.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="partnerresourcetypename_go">
 <a href="#partnerresourcetypename_go" style="color: inherit; text-decoration: inherit;">Partner<wbr>Resource<wbr>Type<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the partner resource type.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="setupuri_go">
 <a href="#setupuri_go" style="color: inherit; text-decoration: inherit;">Setup<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of the partner website that can be used by Azure customers to setup Event Grid
 integration on an event source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Tags of the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="visibilitystate_go">
 <a href="#visibilitystate_go" style="color: inherit; text-decoration: inherit;">Visibility<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="property-type"> | </span><span class="property-type">string</span>
+        <span class="property-type">string | <a href="#partnerregistrationvisibilitystate">Partner<wbr>Registration<wbr>Visibility<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Visibility state of the partner registration.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -692,173 +657,156 @@ integration on an event source.{{% /md %}}</dd>
             title="Required">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the resource.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="partnerregistrationname_nodejs">
 <a href="#partnerregistrationname_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Registration<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the partner registration.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authorizedazuresubscriptionids_nodejs">
 <a href="#authorizedazuresubscriptionids_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Azure<wbr>Subscription<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Azure subscription Ids that are authorized to create a partner namespace
 associated with this partner registration. This is an optional property. Creating
 partner namespaces is always permitted under the same Azure subscription as the one used
 for creating the partner registration.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customerserviceuri_nodejs">
 <a href="#customerserviceuri_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Service<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The extension of the customer service URI of the publisher.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="logouri_nodejs">
 <a href="#logouri_nodejs" style="color: inherit; text-decoration: inherit;">logo<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of the logo.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="longdescription_nodejs">
 <a href="#longdescription_nodejs" style="color: inherit; text-decoration: inherit;">long<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Long description for the custom scenarios and integration to be displayed in the portal if needed.
 Length of this description should not exceed 2048 characters.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="partnercustomerserviceextension_nodejs">
 <a href="#partnercustomerserviceextension_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Customer<wbr>Service<wbr>Extension</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The extension of the customer service number of the publisher. Only digits are allowed and number of digits should not exceed 10.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="partnercustomerservicenumber_nodejs">
 <a href="#partnercustomerservicenumber_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Customer<wbr>Service<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The customer service number of the publisher. The expected phone format should start with a '+' sign 
 followed by the country code. The remaining digits are then followed. Only digits and spaces are allowed and its
 length cannot exceed 16 digits including country code. Examples of valid phone numbers are: +1 515 123 4567 and
 +966 7 5115 2471. Examples of invalid phone numbers are: +1 (515) 123-4567, 1 515 123 4567 and +966 121 5115 24 7 551 1234 43{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="partnername_nodejs">
 <a href="#partnername_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Official name of the partner name. For example: "Contoso".{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="partnerresourcetypedescription_nodejs">
 <a href="#partnerresourcetypedescription_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Resource<wbr>Type<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Short description of the partner resource type. The length of this description should not exceed 256 characters.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="partnerresourcetypedisplayname_nodejs">
 <a href="#partnerresourcetypedisplayname_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Resource<wbr>Type<wbr>Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name of the partner resource type.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="partnerresourcetypename_nodejs">
 <a href="#partnerresourcetypename_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Resource<wbr>Type<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the partner resource type.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="setupuri_nodejs">
 <a href="#setupuri_nodejs" style="color: inherit; text-decoration: inherit;">setup<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of the partner website that can be used by Azure customers to setup Event Grid
 integration on an event source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Tags of the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="visibilitystate_nodejs">
 <a href="#visibilitystate_nodejs" style="color: inherit; text-decoration: inherit;">visibility<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="property-type"> | </span><span class="property-type">enums.<wbr>Partner<wbr>Registration<wbr>Visibility<wbr>State</span>
+        <span class="property-type">string | <a href="#partnerregistrationvisibilitystate">Partner<wbr>Registration<wbr>Visibility<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Visibility state of the partner registration.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -867,182 +815,161 @@ integration on an event source.{{% /md %}}</dd>
             title="Required">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Location of the resource.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="partner_registration_name_python">
 <a href="#partner_registration_name_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>registration_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the partner registration.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group within the user's subscription.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authorized_azure_subscription_ids_python">
 <a href="#authorized_azure_subscription_ids_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>azure_<wbr>subscription_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of Azure subscription Ids that are authorized to create a partner namespace
 associated with this partner registration. This is an optional property. Creating
 partner namespaces is always permitted under the same Azure subscription as the one used
 for creating the partner registration.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customer_service_uri_python">
 <a href="#customer_service_uri_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>service_<wbr>uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The extension of the customer service URI of the publisher.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="logo_uri_python">
 <a href="#logo_uri_python" style="color: inherit; text-decoration: inherit;">logo_<wbr>uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI of the logo.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="long_description_python">
 <a href="#long_description_python" style="color: inherit; text-decoration: inherit;">long_<wbr>description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Long description for the custom scenarios and integration to be displayed in the portal if needed.
 Length of this description should not exceed 2048 characters.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="partner_customer_service_extension_python">
 <a href="#partner_customer_service_extension_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>customer_<wbr>service_<wbr>extension</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The extension of the customer service number of the publisher. Only digits are allowed and number of digits should not exceed 10.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="partner_customer_service_number_python">
 <a href="#partner_customer_service_number_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>customer_<wbr>service_<wbr>number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The customer service number of the publisher. The expected phone format should start with a '+' sign 
 followed by the country code. The remaining digits are then followed. Only digits and spaces are allowed and its
 length cannot exceed 16 digits including country code. Examples of valid phone numbers are: +1 515 123 4567 and
 +966 7 5115 2471. Examples of invalid phone numbers are: +1 (515) 123-4567, 1 515 123 4567 and +966 121 5115 24 7 551 1234 43{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="partner_name_python">
 <a href="#partner_name_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Official name of the partner name. For example: "Contoso".{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="partner_resource_type_description_python">
 <a href="#partner_resource_type_description_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>resource_<wbr>type_<wbr>description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Short description of the partner resource type. The length of this description should not exceed 256 characters.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="partner_resource_type_display_name_python">
 <a href="#partner_resource_type_display_name_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>resource_<wbr>type_<wbr>display_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Display name of the partner resource type.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="partner_resource_type_name_python">
 <a href="#partner_resource_type_name_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>resource_<wbr>type_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the partner resource type.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="setup_uri_python">
 <a href="#setup_uri_python" style="color: inherit; text-decoration: inherit;">setup_<wbr>uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI of the partner website that can be used by Azure customers to setup Event Grid
 integration on an event source.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Tags of the resource.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="visibility_state_python">
 <a href="#visibility_state_python" style="color: inherit; text-decoration: inherit;">visibility_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span><span class="property-type"> | </span><span class="property-type">Partner<wbr>Registration<wbr>Visibility<wbr>State</span>
+        <span class="property-type">str | <a href="#partnerregistrationvisibilitystate">Partner<wbr>Registration<wbr>Visibility<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Visibility state of the partner registration.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the PartnerRegistration resource produces the following output properties:
-
 
 
 
@@ -1053,45 +980,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the partner registration.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the resource{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1100,45 +1022,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the partner registration.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the resource{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1147,45 +1064,40 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the partner registration.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the resource{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1194,42 +1106,38 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the partner registration.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the resource{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1239,11 +1147,55 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+## Supporting Types
 
 
 
+<h4 id="partnerregistrationvisibilitystate">Partner<wbr>Registration<wbr>Visibility<wbr>State</h4>
 
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Hidden</dt>
+    <dd>Hidden</dd>
+    <dt>Public<wbr>Preview</dt>
+    <dd>PublicPreview</dd>
+    <dt>Generally<wbr>Available</dt>
+    <dd>GenerallyAvailable</dd>
+</dl>
+{{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Partner<wbr>Registration<wbr>Visibility<wbr>State<wbr>Hidden</dt>
+    <dd>Hidden</dd>
+    <dt>Partner<wbr>Registration<wbr>Visibility<wbr>State<wbr>Public<wbr>Preview</dt>
+    <dd>PublicPreview</dd>
+    <dt>Partner<wbr>Registration<wbr>Visibility<wbr>State<wbr>Generally<wbr>Available</dt>
+    <dd>GenerallyAvailable</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Hidden</dt>
+    <dd>Hidden</dd>
+    <dt>Public<wbr>Preview</dt>
+    <dd>PublicPreview</dd>
+    <dt>Generally<wbr>Available</dt>
+    <dd>GenerallyAvailable</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>HIDDEN</dt>
+    <dd>Hidden</dd>
+    <dt>PUBLIC_PREVIEW</dt>
+    <dd>PublicPreview</dd>
+    <dt>GENERALLY_AVAILABLE</dt>
+    <dd>GenerallyAvailable</dd>
+</dl>
+{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>
