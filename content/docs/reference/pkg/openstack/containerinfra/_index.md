@@ -30,7 +30,7 @@ Explore the resources and functions of the containerinfra module in the Open Sta
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
 	<dt>Version</dt>
-	<dd>2.10.0</dd>
+	<dd>2.10.1</dd>
 </dl>
 
 
