@@ -24,6 +24,8 @@ Explore the resources and functions of the monitoring module in the GCP package.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getappengineservice" title="GetAppEngineService"><span class="symbol function"></span>GetAppEngineService</a></li>
+    <li><a href="getclusteristioservice" title="GetClusterIstioService"><span class="symbol function"></span>GetClusterIstioService</a></li>
+    <li><a href="getmeshistioservice" title="GetMeshIstioService"><span class="symbol function"></span>GetMeshIstioService</a></li>
     <li><a href="getnotificationchannel" title="GetNotificationChannel"><span class="symbol function"></span>GetNotificationChannel</a></li>
     <li><a href="getsecretversion" title="GetSecretVersion"><span class="symbol function"></span>GetSecretVersion</a></li>
     <li><a href="getuptimecheckips" title="GetUptimeCheckIPs"><span class="symbol function"></span>GetUptimeCheckIPs</a></li>
@@ -38,7 +40,7 @@ Explore the resources and functions of the monitoring module in the GCP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>4.5.1</dd>
+	<dd>4.6.0</dd>
 </dl>
 
 
