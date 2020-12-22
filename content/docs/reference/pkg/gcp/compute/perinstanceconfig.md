@@ -1,8 +1,8 @@
 
 ---
 title: "PerInstanceConfig"
-title_tag: "Resource PerInstanceConfig | Module compute | Package GCP"
-meta_desc: "Explore the PerInstanceConfig resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. A config defined for a single managed instance that belongs to an instance group manager. It preserves the instance name"
+title_tag: "gcp.compute.PerInstanceConfig"
+meta_desc: "Documentation for the gcp.compute.PerInstanceConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -26,7 +26,7 @@ To get more information about PerInstanceConfig, see:
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#PerInstanceConfig">PerInstanceConfig</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#PerInstanceConfigArgs">PerInstanceConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#PerInstanceConfig">PerInstanceConfig</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#PerInstanceConfigArgs">PerInstanceConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -34,11 +34,11 @@ To get more information about PerInstanceConfig, see:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#PerInstanceConfig">NewPerInstanceConfig</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#PerInstanceConfigArgs">PerInstanceConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#PerInstanceConfig">PerInstanceConfig</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#PerInstanceConfig">NewPerInstanceConfig</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#PerInstanceConfigArgs">PerInstanceConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#PerInstanceConfig">PerInstanceConfig</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.PerInstanceConfig.html">PerInstanceConfig</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.PerInstanceConfigArgs.html">PerInstanceConfigArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.PerInstanceConfig.html">PerInstanceConfig</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.PerInstanceConfigArgs.html">PerInstanceConfigArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -49,7 +49,7 @@ To get more information about PerInstanceConfig, see:
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -118,7 +118,7 @@ To get more information about PerInstanceConfig, see:
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -157,7 +157,7 @@ To get more information about PerInstanceConfig, see:
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -198,7 +198,6 @@ The PerInstanceConfig resource accepts the following [input]({{< relref "/docs/i
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -206,31 +205,29 @@ The PerInstanceConfig resource accepts the following [input]({{< relref "/docs/i
             title="Required">
         <span id="instancegroupmanager_csharp">
 <a href="#instancegroupmanager_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Group<wbr>Manager</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance group manager this instance config is part of.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="zone_csharp">
 <a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Zone where the containing instance group manager is located
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minimalaction_csharp">
 <a href="#minimalaction_csharp" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimal action to perform on the instance during an update.
 Default is `NONE`. Possible values are:
@@ -239,14 +236,13 @@ Default is `NONE`. Possible values are:
 * REFRESH
 * NONE
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mostdisruptiveallowedaction_csharp">
 <a href="#mostdisruptiveallowedaction_csharp" style="color: inherit; text-decoration: inherit;">Most<wbr>Disruptive<wbr>Allowed<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The most disruptive action to perform on the instance during an update.
 Default is `REPLACE`. Possible values are:
@@ -255,58 +251,52 @@ Default is `REPLACE`. Possible values are:
 * REFRESH
 * NONE
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for this per-instance config and its corresponding instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="preservedstate_csharp">
 <a href="#preservedstate_csharp" style="color: inherit; text-decoration: inherit;">Preserved<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#perinstanceconfigpreservedstate">Per<wbr>Instance<wbr>Config<wbr>Preserved<wbr>State<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The preserved state for this instance.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="removeinstancestateondestroy_csharp">
 <a href="#removeinstancestateondestroy_csharp" style="color: inherit; text-decoration: inherit;">Remove<wbr>Instance<wbr>State<wbr>On<wbr>Destroy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, deleting this config will immediately remove any specified state from the underlying instance.
 When false, deleting this config will *not* immediately remove any state from the underlying instance.
 State will be removed on the next instance recreation or update.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -315,31 +305,29 @@ State will be removed on the next instance recreation or update.
             title="Required">
         <span id="instancegroupmanager_go">
 <a href="#instancegroupmanager_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Group<wbr>Manager</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance group manager this instance config is part of.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="zone_go">
 <a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Zone where the containing instance group manager is located
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minimalaction_go">
 <a href="#minimalaction_go" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimal action to perform on the instance during an update.
 Default is `NONE`. Possible values are:
@@ -348,14 +336,13 @@ Default is `NONE`. Possible values are:
 * REFRESH
 * NONE
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mostdisruptiveallowedaction_go">
 <a href="#mostdisruptiveallowedaction_go" style="color: inherit; text-decoration: inherit;">Most<wbr>Disruptive<wbr>Allowed<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The most disruptive action to perform on the instance during an update.
 Default is `REPLACE`. Possible values are:
@@ -364,58 +351,52 @@ Default is `REPLACE`. Possible values are:
 * REFRESH
 * NONE
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for this per-instance config and its corresponding instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="preservedstate_go">
 <a href="#preservedstate_go" style="color: inherit; text-decoration: inherit;">Preserved<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#perinstanceconfigpreservedstate">Per<wbr>Instance<wbr>Config<wbr>Preserved<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The preserved state for this instance.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="removeinstancestateondestroy_go">
 <a href="#removeinstancestateondestroy_go" style="color: inherit; text-decoration: inherit;">Remove<wbr>Instance<wbr>State<wbr>On<wbr>Destroy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, deleting this config will immediately remove any specified state from the underlying instance.
 When false, deleting this config will *not* immediately remove any state from the underlying instance.
 State will be removed on the next instance recreation or update.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -424,31 +405,29 @@ State will be removed on the next instance recreation or update.
             title="Required">
         <span id="instancegroupmanager_nodejs">
 <a href="#instancegroupmanager_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Group<wbr>Manager</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance group manager this instance config is part of.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="zone_nodejs">
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Zone where the containing instance group manager is located
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minimalaction_nodejs">
 <a href="#minimalaction_nodejs" style="color: inherit; text-decoration: inherit;">minimal<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimal action to perform on the instance during an update.
 Default is `NONE`. Possible values are:
@@ -457,14 +436,13 @@ Default is `NONE`. Possible values are:
 * REFRESH
 * NONE
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mostdisruptiveallowedaction_nodejs">
 <a href="#mostdisruptiveallowedaction_nodejs" style="color: inherit; text-decoration: inherit;">most<wbr>Disruptive<wbr>Allowed<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The most disruptive action to perform on the instance during an update.
 Default is `REPLACE`. Possible values are:
@@ -473,58 +451,52 @@ Default is `REPLACE`. Possible values are:
 * REFRESH
 * NONE
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for this per-instance config and its corresponding instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="preservedstate_nodejs">
 <a href="#preservedstate_nodejs" style="color: inherit; text-decoration: inherit;">preserved<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#perinstanceconfigpreservedstate">Per<wbr>Instance<wbr>Config<wbr>Preserved<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The preserved state for this instance.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="removeinstancestateondestroy_nodejs">
 <a href="#removeinstancestateondestroy_nodejs" style="color: inherit; text-decoration: inherit;">remove<wbr>Instance<wbr>State<wbr>On<wbr>Destroy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, deleting this config will immediately remove any specified state from the underlying instance.
 When false, deleting this config will *not* immediately remove any state from the underlying instance.
 State will be removed on the next instance recreation or update.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -533,31 +505,29 @@ State will be removed on the next instance recreation or update.
             title="Required">
         <span id="instance_group_manager_python">
 <a href="#instance_group_manager_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>group_<wbr>manager</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The instance group manager this instance config is part of.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="zone_python">
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Zone where the containing instance group manager is located
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minimal_action_python">
 <a href="#minimal_action_python" style="color: inherit; text-decoration: inherit;">minimal_<wbr>action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The minimal action to perform on the instance during an update.
 Default is `NONE`. Possible values are:
@@ -566,14 +536,13 @@ Default is `NONE`. Possible values are:
 * REFRESH
 * NONE
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="most_disruptive_allowed_action_python">
 <a href="#most_disruptive_allowed_action_python" style="color: inherit; text-decoration: inherit;">most_<wbr>disruptive_<wbr>allowed_<wbr>action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The most disruptive action to perform on the instance during an update.
 Default is `REPLACE`. Possible values are:
@@ -582,67 +551,57 @@ Default is `REPLACE`. Possible values are:
 * REFRESH
 * NONE
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name for this per-instance config and its corresponding instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="preserved_state_python">
 <a href="#preserved_state_python" style="color: inherit; text-decoration: inherit;">preserved_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#perinstanceconfigpreservedstate">Per<wbr>Instance<wbr>Config<wbr>Preserved<wbr>State<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The preserved state for this instance.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="remove_instance_state_on_destroy_python">
 <a href="#remove_instance_state_on_destroy_python" style="color: inherit; text-decoration: inherit;">remove_<wbr>instance_<wbr>state_<wbr>on_<wbr>destroy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, deleting this config will immediately remove any specified state from the underlying instance.
 When false, deleting this config will *not* immediately remove any state from the underlying instance.
 State will be removed on the next instance recreation or update.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the PerInstanceConfig resource produces the following output properties:
-
 
 
 
@@ -653,15 +612,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -670,15 +627,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -687,15 +642,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -704,18 +657,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -725,7 +673,7 @@ Get an existing PerInstanceConfig resource's state with the given name, ID, and 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#PerInstanceConfigState">PerInstanceConfigState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#PerInstanceConfig">PerInstanceConfig</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#PerInstanceConfigState">PerInstanceConfigState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#PerInstanceConfig">PerInstanceConfig</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -734,11 +682,11 @@ Get an existing PerInstanceConfig resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPerInstanceConfig<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#PerInstanceConfigState">PerInstanceConfigState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#PerInstanceConfig">PerInstanceConfig</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPerInstanceConfig<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#PerInstanceConfigState">PerInstanceConfigState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#PerInstanceConfig">PerInstanceConfig</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.PerInstanceConfig.html">PerInstanceConfig</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.PerInstanceConfigState.html">PerInstanceConfigState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.PerInstanceConfig.html">PerInstanceConfig</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.PerInstanceConfigState.html">PerInstanceConfigState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -840,7 +788,6 @@ Get an existing PerInstanceConfig resource's state with the given name, ID, and 
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -848,20 +795,19 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_instancegroupmanager_csharp">
 <a href="#state_instancegroupmanager_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Group<wbr>Manager</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance group manager this instance config is part of.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_minimalaction_csharp">
 <a href="#state_minimalaction_csharp" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimal action to perform on the instance during an update.
 Default is `NONE`. Possible values are:
@@ -870,14 +816,13 @@ Default is `NONE`. Possible values are:
 * REFRESH
 * NONE
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_mostdisruptiveallowedaction_csharp">
 <a href="#state_mostdisruptiveallowedaction_csharp" style="color: inherit; text-decoration: inherit;">Most<wbr>Disruptive<wbr>Allowed<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The most disruptive action to perform on the instance during an update.
 Default is `REPLACE`. Possible values are:
@@ -886,69 +831,62 @@ Default is `REPLACE`. Possible values are:
 * REFRESH
 * NONE
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for this per-instance config and its corresponding instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_preservedstate_csharp">
 <a href="#state_preservedstate_csharp" style="color: inherit; text-decoration: inherit;">Preserved<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#perinstanceconfigpreservedstate">Per<wbr>Instance<wbr>Config<wbr>Preserved<wbr>State<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The preserved state for this instance.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_removeinstancestateondestroy_csharp">
 <a href="#state_removeinstancestateondestroy_csharp" style="color: inherit; text-decoration: inherit;">Remove<wbr>Instance<wbr>State<wbr>On<wbr>Destroy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, deleting this config will immediately remove any specified state from the underlying instance.
 When false, deleting this config will *not* immediately remove any state from the underlying instance.
 State will be removed on the next instance recreation or update.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_zone_csharp">
 <a href="#state_zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Zone where the containing instance group manager is located
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -957,20 +895,19 @@ State will be removed on the next instance recreation or update.
             title="Optional">
         <span id="state_instancegroupmanager_go">
 <a href="#state_instancegroupmanager_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Group<wbr>Manager</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance group manager this instance config is part of.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_minimalaction_go">
 <a href="#state_minimalaction_go" style="color: inherit; text-decoration: inherit;">Minimal<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimal action to perform on the instance during an update.
 Default is `NONE`. Possible values are:
@@ -979,14 +916,13 @@ Default is `NONE`. Possible values are:
 * REFRESH
 * NONE
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_mostdisruptiveallowedaction_go">
 <a href="#state_mostdisruptiveallowedaction_go" style="color: inherit; text-decoration: inherit;">Most<wbr>Disruptive<wbr>Allowed<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The most disruptive action to perform on the instance during an update.
 Default is `REPLACE`. Possible values are:
@@ -995,69 +931,62 @@ Default is `REPLACE`. Possible values are:
 * REFRESH
 * NONE
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for this per-instance config and its corresponding instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_preservedstate_go">
 <a href="#state_preservedstate_go" style="color: inherit; text-decoration: inherit;">Preserved<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#perinstanceconfigpreservedstate">Per<wbr>Instance<wbr>Config<wbr>Preserved<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The preserved state for this instance.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_removeinstancestateondestroy_go">
 <a href="#state_removeinstancestateondestroy_go" style="color: inherit; text-decoration: inherit;">Remove<wbr>Instance<wbr>State<wbr>On<wbr>Destroy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, deleting this config will immediately remove any specified state from the underlying instance.
 When false, deleting this config will *not* immediately remove any state from the underlying instance.
 State will be removed on the next instance recreation or update.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_zone_go">
 <a href="#state_zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Zone where the containing instance group manager is located
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1066,20 +995,19 @@ State will be removed on the next instance recreation or update.
             title="Optional">
         <span id="state_instancegroupmanager_nodejs">
 <a href="#state_instancegroupmanager_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Group<wbr>Manager</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance group manager this instance config is part of.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_minimalaction_nodejs">
 <a href="#state_minimalaction_nodejs" style="color: inherit; text-decoration: inherit;">minimal<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimal action to perform on the instance during an update.
 Default is `NONE`. Possible values are:
@@ -1088,14 +1016,13 @@ Default is `NONE`. Possible values are:
 * REFRESH
 * NONE
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_mostdisruptiveallowedaction_nodejs">
 <a href="#state_mostdisruptiveallowedaction_nodejs" style="color: inherit; text-decoration: inherit;">most<wbr>Disruptive<wbr>Allowed<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The most disruptive action to perform on the instance during an update.
 Default is `REPLACE`. Possible values are:
@@ -1104,69 +1031,62 @@ Default is `REPLACE`. Possible values are:
 * REFRESH
 * NONE
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for this per-instance config and its corresponding instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_preservedstate_nodejs">
 <a href="#state_preservedstate_nodejs" style="color: inherit; text-decoration: inherit;">preserved<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#perinstanceconfigpreservedstate">Per<wbr>Instance<wbr>Config<wbr>Preserved<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}The preserved state for this instance.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_removeinstancestateondestroy_nodejs">
 <a href="#state_removeinstancestateondestroy_nodejs" style="color: inherit; text-decoration: inherit;">remove<wbr>Instance<wbr>State<wbr>On<wbr>Destroy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, deleting this config will immediately remove any specified state from the underlying instance.
 When false, deleting this config will *not* immediately remove any state from the underlying instance.
 State will be removed on the next instance recreation or update.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_zone_nodejs">
 <a href="#state_zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Zone where the containing instance group manager is located
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1175,20 +1095,19 @@ State will be removed on the next instance recreation or update.
             title="Optional">
         <span id="state_instance_group_manager_python">
 <a href="#state_instance_group_manager_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>group_<wbr>manager</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The instance group manager this instance config is part of.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_minimal_action_python">
 <a href="#state_minimal_action_python" style="color: inherit; text-decoration: inherit;">minimal_<wbr>action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The minimal action to perform on the instance during an update.
 Default is `NONE`. Possible values are:
@@ -1197,14 +1116,13 @@ Default is `NONE`. Possible values are:
 * REFRESH
 * NONE
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_most_disruptive_allowed_action_python">
 <a href="#state_most_disruptive_allowed_action_python" style="color: inherit; text-decoration: inherit;">most_<wbr>disruptive_<wbr>allowed_<wbr>action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The most disruptive action to perform on the instance during an update.
 Default is `REPLACE`. Possible values are:
@@ -1213,66 +1131,60 @@ Default is `REPLACE`. Possible values are:
 * REFRESH
 * NONE
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name for this per-instance config and its corresponding instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_preserved_state_python">
 <a href="#state_preserved_state_python" style="color: inherit; text-decoration: inherit;">preserved_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#perinstanceconfigpreservedstate">Per<wbr>Instance<wbr>Config<wbr>Preserved<wbr>State<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The preserved state for this instance.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_remove_instance_state_on_destroy_python">
 <a href="#state_remove_instance_state_on_destroy_python" style="color: inherit; text-decoration: inherit;">remove_<wbr>instance_<wbr>state_<wbr>on_<wbr>destroy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, deleting this config will immediately remove any specified state from the underlying instance.
 When false, deleting this config will *not* immediately remove any state from the underlying instance.
 State will be removed on the next instance recreation or update.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_zone_python">
 <a href="#state_zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Zone where the containing instance group manager is located
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1281,11 +1193,8 @@ State will be removed on the next instance recreation or update.
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="perinstanceconfigpreservedstate">Per<wbr>Instance<wbr>Config<wbr>Preserved<wbr>State</h4>
@@ -1296,11 +1205,10 @@ State will be removed on the next instance recreation or update.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#PerInstanceConfigPreservedStateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#PerInstanceConfigPreservedStateOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.PerInstanceConfigPreservedStateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.PerInstanceConfigPreservedState.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1310,28 +1218,25 @@ State will be removed on the next instance recreation or update.
             title="Optional">
         <span id="disks_csharp">
 <a href="#disks_csharp" style="color: inherit; text-decoration: inherit;">Disks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#perinstanceconfigpreservedstatedisk">List&lt;Per<wbr>Instance<wbr>Config<wbr>Preserved<wbr>State<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Stateful disks for the instance.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Preserved metadata defined for this instance. This is a list of key->value pairs.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1340,28 +1245,25 @@ Structure is documented below.
             title="Optional">
         <span id="disks_go">
 <a href="#disks_go" style="color: inherit; text-decoration: inherit;">Disks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#perinstanceconfigpreservedstatedisk">[]Per<wbr>Instance<wbr>Config<wbr>Preserved<wbr>State<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}Stateful disks for the instance.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Preserved metadata defined for this instance. This is a list of key->value pairs.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1370,28 +1272,25 @@ Structure is documented below.
             title="Optional">
         <span id="disks_nodejs">
 <a href="#disks_nodejs" style="color: inherit; text-decoration: inherit;">disks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#perinstanceconfigpreservedstatedisk">Per<wbr>Instance<wbr>Config<wbr>Preserved<wbr>State<wbr>Disk[]</a></span>
     </dt>
     <dd>{{% md %}}Stateful disks for the instance.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Preserved metadata defined for this instance. This is a list of key->value pairs.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1400,31 +1299,25 @@ Structure is documented below.
             title="Optional">
         <span id="disks_python">
 <a href="#disks_python" style="color: inherit; text-decoration: inherit;">disks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#perinstanceconfigpreservedstatedisk">Sequence[Per<wbr>Instance<wbr>Config<wbr>Preserved<wbr>State<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Stateful disks for the instance.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Preserved metadata defined for this instance. This is a list of key->value pairs.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="perinstanceconfigpreservedstatedisk">Per<wbr>Instance<wbr>Config<wbr>Preserved<wbr>State<wbr>Disk</h4>
 {{% choosable language nodejs %}}
@@ -1434,11 +1327,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#PerInstanceConfigPreservedStateDiskArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#PerInstanceConfigPreservedStateDiskOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.PerInstanceConfigPreservedStateDiskArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.PerInstanceConfigPreservedStateDisk.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1448,32 +1340,30 @@ Structure is documented below.
             title="Required">
         <span id="devicename_csharp">
 <a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique device name that is reflected into the /dev/ tree of a Linux operating system running within the instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of an existing persistent disk to attach under the specified device-name in the format
 `projects/project-id/zones/zone/disks/disk-name`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deleterule_csharp">
 <a href="#deleterule_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Rule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A value that prescribes what should happen to the stateful disk when the VM instance is deleted.
 The available options are `NEVER` and `ON_PERMANENT_INSTANCE_DELETION`.
@@ -1483,23 +1373,20 @@ deleted from the instance group.
 Default value is `NEVER`.
 Possible values are `NEVER` and `ON_PERMANENT_INSTANCE_DELETION`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mode_csharp">
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mode of the disk.
 Default value is `READ_WRITE`.
 Possible values are `READ_ONLY` and `READ_WRITE`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1508,32 +1395,30 @@ Possible values are `READ_ONLY` and `READ_WRITE`.
             title="Required">
         <span id="devicename_go">
 <a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique device name that is reflected into the /dev/ tree of a Linux operating system running within the instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of an existing persistent disk to attach under the specified device-name in the format
 `projects/project-id/zones/zone/disks/disk-name`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deleterule_go">
 <a href="#deleterule_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Rule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A value that prescribes what should happen to the stateful disk when the VM instance is deleted.
 The available options are `NEVER` and `ON_PERMANENT_INSTANCE_DELETION`.
@@ -1543,23 +1428,20 @@ deleted from the instance group.
 Default value is `NEVER`.
 Possible values are `NEVER` and `ON_PERMANENT_INSTANCE_DELETION`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mode_go">
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mode of the disk.
 Default value is `READ_WRITE`.
 Possible values are `READ_ONLY` and `READ_WRITE`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1568,32 +1450,30 @@ Possible values are `READ_ONLY` and `READ_WRITE`.
             title="Required">
         <span id="devicename_nodejs">
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique device name that is reflected into the /dev/ tree of a Linux operating system running within the instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of an existing persistent disk to attach under the specified device-name in the format
 `projects/project-id/zones/zone/disks/disk-name`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deleterule_nodejs">
 <a href="#deleterule_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Rule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A value that prescribes what should happen to the stateful disk when the VM instance is deleted.
 The available options are `NEVER` and `ON_PERMANENT_INSTANCE_DELETION`.
@@ -1603,23 +1483,20 @@ deleted from the instance group.
 Default value is `NEVER`.
 Possible values are `NEVER` and `ON_PERMANENT_INSTANCE_DELETION`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mode_nodejs">
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mode of the disk.
 Default value is `READ_WRITE`.
 Possible values are `READ_ONLY` and `READ_WRITE`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1628,32 +1505,30 @@ Possible values are `READ_ONLY` and `READ_WRITE`.
             title="Required">
         <span id="device_name_python">
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique device name that is reflected into the /dev/ tree of a Linux operating system running within the instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of an existing persistent disk to attach under the specified device-name in the format
 `projects/project-id/zones/zone/disks/disk-name`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="delete_rule_python">
 <a href="#delete_rule_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>rule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A value that prescribes what should happen to the stateful disk when the VM instance is deleted.
 The available options are `NEVER` and `ON_PERMANENT_INSTANCE_DELETION`.
@@ -1663,31 +1538,20 @@ deleted from the instance group.
 Default value is `NEVER`.
 Possible values are `NEVER` and `ON_PERMANENT_INSTANCE_DELETION`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mode_python">
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The mode of the disk.
 Default value is `READ_WRITE`.
 Possible values are `READ_ONLY` and `READ_WRITE`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 ## Import
 
 

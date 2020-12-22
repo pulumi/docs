@@ -1,8 +1,8 @@
 
 ---
 title: "WorkloadIdentityPoolProvider"
-title_tag: "Resource WorkloadIdentityPoolProvider | Module iam | Package GCP"
-meta_desc: "Explore the WorkloadIdentityPoolProvider resource of the iam module, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "gcp.iam.WorkloadIdentityPoolProvider"
+meta_desc: "Documentation for the gcp.iam.WorkloadIdentityPoolProvider resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -34,7 +34,7 @@ WorkloadIdentityPoolProvider can be imported using any of these accepted formats
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/iam/#WorkloadIdentityPoolProvider">WorkloadIdentityPoolProvider</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/iam/#WorkloadIdentityPoolProviderArgs">WorkloadIdentityPoolProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/iam/#WorkloadIdentityPoolProvider">WorkloadIdentityPoolProvider</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/iam/#WorkloadIdentityPoolProviderArgs">WorkloadIdentityPoolProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -42,11 +42,11 @@ WorkloadIdentityPoolProvider can be imported using any of these accepted formats
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iam?tab=doc#WorkloadIdentityPoolProvider">NewWorkloadIdentityPoolProvider</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iam?tab=doc#WorkloadIdentityPoolProviderArgs">WorkloadIdentityPoolProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iam?tab=doc#WorkloadIdentityPoolProvider">WorkloadIdentityPoolProvider</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iam?tab=doc#WorkloadIdentityPoolProvider">NewWorkloadIdentityPoolProvider</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iam?tab=doc#WorkloadIdentityPoolProviderArgs">WorkloadIdentityPoolProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iam?tab=doc#WorkloadIdentityPoolProvider">WorkloadIdentityPoolProvider</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iam.WorkloadIdentityPoolProvider.html">WorkloadIdentityPoolProvider</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iam.WorkloadIdentityPoolProviderArgs.html">WorkloadIdentityPoolProviderArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iam.WorkloadIdentityPoolProvider.html">WorkloadIdentityPoolProvider</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iam.WorkloadIdentityPoolProviderArgs.html">WorkloadIdentityPoolProviderArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -57,7 +57,7 @@ WorkloadIdentityPoolProvider can be imported using any of these accepted formats
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -126,7 +126,7 @@ WorkloadIdentityPoolProvider can be imported using any of these accepted formats
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -165,7 +165,7 @@ WorkloadIdentityPoolProvider can be imported using any of these accepted formats
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -206,7 +206,6 @@ The WorkloadIdentityPoolProvider resource accepts the following [input]({{< relr
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -214,35 +213,33 @@ The WorkloadIdentityPoolProvider resource accepts the following [input]({{< relr
             title="Required">
         <span id="workloadidentitypoolid_csharp">
 <a href="#workloadidentitypoolid_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Identity<wbr>Pool<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID used for the pool, which is the final component of the pool resource name. This
 value should be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 `gcp-` is reserved for use by Google, and may not be specified.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="workloadidentitypoolproviderid_csharp">
 <a href="#workloadidentitypoolproviderid_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Identity<wbr>Pool<wbr>Provider<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the provider, which becomes the final component of the resource name. This
 value must be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 `gcp-` is reserved for use by Google, and may not be specified.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="attributecondition_csharp">
 <a href="#attributecondition_csharp" style="color: inherit; text-decoration: inherit;">Attribute<wbr>Condition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[A Common Expression Language](https://opensource.google/projects/cel) expression, in
 plain text, to restrict what otherwise valid authentication credentials issued by the
@@ -287,12 +284,11 @@ func main() {
 }
 ```
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="attributemapping_csharp">
 <a href="#attributemapping_csharp" style="color: inherit; text-decoration: inherit;">Attribute<wbr>Mapping</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -394,80 +390,72 @@ func main() {
 }
 ```
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="aws_csharp">
 <a href="#aws_csharp" style="color: inherit; text-decoration: inherit;">Aws</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workloadidentitypoolprovideraws">Workload<wbr>Identity<wbr>Pool<wbr>Provider<wbr>Aws<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An Amazon Web Services identity provider. Not compatible with the property oidc.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the provider. Cannot exceed 256 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disabled_csharp">
 <a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the provider is disabled. You cannot use a disabled provider to exchange tokens.
 However, existing tokens still grant access.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A display name for the provider. Cannot exceed 32 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="oidc_csharp">
 <a href="#oidc_csharp" style="color: inherit; text-decoration: inherit;">Oidc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workloadidentitypoolprovideroidc">Workload<wbr>Identity<wbr>Pool<wbr>Provider<wbr>Oidc<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An OpenId Connect 1.0 identity provider. Not compatible with the property aws.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -476,35 +464,33 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="workloadidentitypoolid_go">
 <a href="#workloadidentitypoolid_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Identity<wbr>Pool<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID used for the pool, which is the final component of the pool resource name. This
 value should be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 `gcp-` is reserved for use by Google, and may not be specified.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="workloadidentitypoolproviderid_go">
 <a href="#workloadidentitypoolproviderid_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Identity<wbr>Pool<wbr>Provider<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the provider, which becomes the final component of the resource name. This
 value must be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 `gcp-` is reserved for use by Google, and may not be specified.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="attributecondition_go">
 <a href="#attributecondition_go" style="color: inherit; text-decoration: inherit;">Attribute<wbr>Condition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[A Common Expression Language](https://opensource.google/projects/cel) expression, in
 plain text, to restrict what otherwise valid authentication credentials issued by the
@@ -549,12 +535,11 @@ func main() {
 }
 ```
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="attributemapping_go">
 <a href="#attributemapping_go" style="color: inherit; text-decoration: inherit;">Attribute<wbr>Mapping</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -656,80 +641,72 @@ func main() {
 }
 ```
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="aws_go">
 <a href="#aws_go" style="color: inherit; text-decoration: inherit;">Aws</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workloadidentitypoolprovideraws">Workload<wbr>Identity<wbr>Pool<wbr>Provider<wbr>Aws</a></span>
     </dt>
     <dd>{{% md %}}An Amazon Web Services identity provider. Not compatible with the property oidc.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the provider. Cannot exceed 256 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disabled_go">
 <a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the provider is disabled. You cannot use a disabled provider to exchange tokens.
 However, existing tokens still grant access.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A display name for the provider. Cannot exceed 32 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="oidc_go">
 <a href="#oidc_go" style="color: inherit; text-decoration: inherit;">Oidc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workloadidentitypoolprovideroidc">Workload<wbr>Identity<wbr>Pool<wbr>Provider<wbr>Oidc</a></span>
     </dt>
     <dd>{{% md %}}An OpenId Connect 1.0 identity provider. Not compatible with the property aws.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -738,35 +715,33 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="workloadidentitypoolid_nodejs">
 <a href="#workloadidentitypoolid_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Identity<wbr>Pool<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID used for the pool, which is the final component of the pool resource name. This
 value should be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 `gcp-` is reserved for use by Google, and may not be specified.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="workloadidentitypoolproviderid_nodejs">
 <a href="#workloadidentitypoolproviderid_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Identity<wbr>Pool<wbr>Provider<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the provider, which becomes the final component of the resource name. This
 value must be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 `gcp-` is reserved for use by Google, and may not be specified.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="attributecondition_nodejs">
 <a href="#attributecondition_nodejs" style="color: inherit; text-decoration: inherit;">attribute<wbr>Condition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[A Common Expression Language](https://opensource.google/projects/cel) expression, in
 plain text, to restrict what otherwise valid authentication credentials issued by the
@@ -811,12 +786,11 @@ func main() {
 }
 ```
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="attributemapping_nodejs">
 <a href="#attributemapping_nodejs" style="color: inherit; text-decoration: inherit;">attribute<wbr>Mapping</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -918,80 +892,72 @@ func main() {
 }
 ```
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="aws_nodejs">
 <a href="#aws_nodejs" style="color: inherit; text-decoration: inherit;">aws</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workloadidentitypoolprovideraws">Workload<wbr>Identity<wbr>Pool<wbr>Provider<wbr>Aws</a></span>
     </dt>
     <dd>{{% md %}}An Amazon Web Services identity provider. Not compatible with the property oidc.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the provider. Cannot exceed 256 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disabled_nodejs">
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the provider is disabled. You cannot use a disabled provider to exchange tokens.
 However, existing tokens still grant access.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A display name for the provider. Cannot exceed 32 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="oidc_nodejs">
 <a href="#oidc_nodejs" style="color: inherit; text-decoration: inherit;">oidc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workloadidentitypoolprovideroidc">Workload<wbr>Identity<wbr>Pool<wbr>Provider<wbr>Oidc</a></span>
     </dt>
     <dd>{{% md %}}An OpenId Connect 1.0 identity provider. Not compatible with the property aws.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1000,35 +966,33 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="workload_identity_pool_id_python">
 <a href="#workload_identity_pool_id_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>identity_<wbr>pool_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID used for the pool, which is the final component of the pool resource name. This
 value should be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 `gcp-` is reserved for use by Google, and may not be specified.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="workload_identity_pool_provider_id_python">
 <a href="#workload_identity_pool_provider_id_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>identity_<wbr>pool_<wbr>provider_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID for the provider, which becomes the final component of the resource name. This
 value must be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 `gcp-` is reserved for use by Google, and may not be specified.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="attribute_condition_python">
 <a href="#attribute_condition_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>condition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[A Common Expression Language](https://opensource.google/projects/cel) expression, in
 plain text, to restrict what otherwise valid authentication credentials issued by the
@@ -1073,12 +1037,11 @@ func main() {
 }
 ```
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="attribute_mapping_python">
 <a href="#attribute_mapping_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>mapping</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
@@ -1180,89 +1143,77 @@ func main() {
 }
 ```
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="aws_python">
 <a href="#aws_python" style="color: inherit; text-decoration: inherit;">aws</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workloadidentitypoolprovideraws">Workload<wbr>Identity<wbr>Pool<wbr>Provider<wbr>Aws<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An Amazon Web Services identity provider. Not compatible with the property oidc.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description for the provider. Cannot exceed 256 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disabled_python">
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the provider is disabled. You cannot use a disabled provider to exchange tokens.
 However, existing tokens still grant access.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A display name for the provider. Cannot exceed 32 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="oidc_python">
 <a href="#oidc_python" style="color: inherit; text-decoration: inherit;">oidc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workloadidentitypoolprovideroidc">Workload<wbr>Identity<wbr>Pool<wbr>Provider<wbr>Oidc<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An OpenId Connect 1.0 identity provider. Not compatible with the property aws.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the WorkloadIdentityPoolProvider resource produces the following output properties:
-
 
 
 
@@ -1273,41 +1224,37 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the provider as
 'projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}/providers/{workload_identity_pool_provider_id}'.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the provider. * STATE_UNSPECIFIED: State unspecified. * ACTIVE: The provider is active, and may be used to
 validate authentication credentials. * DELETED: The provider is soft-deleted. Soft-deleted providers are permanently
 deleted after approximately 30 days. You can restore a soft-deleted provider using UndeleteWorkloadIdentityPoolProvider.
 You cannot reuse the ID of a soft-deleted provider until it is permanently deleted.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1316,41 +1263,37 @@ You cannot reuse the ID of a soft-deleted provider until it is permanently delet
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the provider as
 'projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}/providers/{workload_identity_pool_provider_id}'.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the provider. * STATE_UNSPECIFIED: State unspecified. * ACTIVE: The provider is active, and may be used to
 validate authentication credentials. * DELETED: The provider is soft-deleted. Soft-deleted providers are permanently
 deleted after approximately 30 days. You can restore a soft-deleted provider using UndeleteWorkloadIdentityPoolProvider.
 You cannot reuse the ID of a soft-deleted provider until it is permanently deleted.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1359,41 +1302,37 @@ You cannot reuse the ID of a soft-deleted provider until it is permanently delet
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the provider as
 'projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}/providers/{workload_identity_pool_provider_id}'.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the provider. * STATE_UNSPECIFIED: State unspecified. * ACTIVE: The provider is active, and may be used to
 validate authentication credentials. * DELETED: The provider is soft-deleted. Soft-deleted providers are permanently
 deleted after approximately 30 days. You can restore a soft-deleted provider using UndeleteWorkloadIdentityPoolProvider.
 You cannot reuse the ID of a soft-deleted provider until it is permanently deleted.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1402,44 +1341,37 @@ You cannot reuse the ID of a soft-deleted provider until it is permanently delet
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name of the provider as
 'projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}/providers/{workload_identity_pool_provider_id}'.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The state of the provider. * STATE_UNSPECIFIED: State unspecified. * ACTIVE: The provider is active, and may be used to
 validate authentication credentials. * DELETED: The provider is soft-deleted. Soft-deleted providers are permanently
 deleted after approximately 30 days. You can restore a soft-deleted provider using UndeleteWorkloadIdentityPoolProvider.
 You cannot reuse the ID of a soft-deleted provider until it is permanently deleted.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1449,7 +1381,7 @@ Get an existing WorkloadIdentityPoolProvider resource's state with the given nam
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/iam/#WorkloadIdentityPoolProviderState">WorkloadIdentityPoolProviderState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/iam/#WorkloadIdentityPoolProvider">WorkloadIdentityPoolProvider</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/iam/#WorkloadIdentityPoolProviderState">WorkloadIdentityPoolProviderState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/iam/#WorkloadIdentityPoolProvider">WorkloadIdentityPoolProvider</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1458,11 +1390,11 @@ Get an existing WorkloadIdentityPoolProvider resource's state with the given nam
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetWorkloadIdentityPoolProvider<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iam?tab=doc#WorkloadIdentityPoolProviderState">WorkloadIdentityPoolProviderState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iam?tab=doc#WorkloadIdentityPoolProvider">WorkloadIdentityPoolProvider</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetWorkloadIdentityPoolProvider<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iam?tab=doc#WorkloadIdentityPoolProviderState">WorkloadIdentityPoolProviderState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iam?tab=doc#WorkloadIdentityPoolProvider">WorkloadIdentityPoolProvider</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iam.WorkloadIdentityPoolProvider.html">WorkloadIdentityPoolProvider</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iam.WorkloadIdentityPoolProviderState.html">WorkloadIdentityPoolProviderState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iam.WorkloadIdentityPoolProvider.html">WorkloadIdentityPoolProvider</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iam.WorkloadIdentityPoolProviderState.html">WorkloadIdentityPoolProviderState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1564,7 +1496,6 @@ Get an existing WorkloadIdentityPoolProvider resource's state with the given nam
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1572,9 +1503,9 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_attributecondition_csharp">
 <a href="#state_attributecondition_csharp" style="color: inherit; text-decoration: inherit;">Attribute<wbr>Condition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[A Common Expression Language](https://opensource.google/projects/cel) expression, in
 plain text, to restrict what otherwise valid authentication credentials issued by the
@@ -1619,12 +1550,11 @@ func main() {
 }
 ```
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_attributemapping_csharp">
 <a href="#state_attributemapping_csharp" style="color: inherit; text-decoration: inherit;">Attribute<wbr>Mapping</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -1726,132 +1656,120 @@ func main() {
 }
 ```
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_aws_csharp">
 <a href="#state_aws_csharp" style="color: inherit; text-decoration: inherit;">Aws</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workloadidentitypoolprovideraws">Workload<wbr>Identity<wbr>Pool<wbr>Provider<wbr>Aws<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An Amazon Web Services identity provider. Not compatible with the property oidc.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the provider. Cannot exceed 256 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_disabled_csharp">
 <a href="#state_disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the provider is disabled. You cannot use a disabled provider to exchange tokens.
 However, existing tokens still grant access.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A display name for the provider. Cannot exceed 32 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the provider as
 'projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}/providers/{workload_identity_pool_provider_id}'.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_oidc_csharp">
 <a href="#state_oidc_csharp" style="color: inherit; text-decoration: inherit;">Oidc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workloadidentitypoolprovideroidc">Workload<wbr>Identity<wbr>Pool<wbr>Provider<wbr>Oidc<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An OpenId Connect 1.0 identity provider. Not compatible with the property aws.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_state_csharp">
 <a href="#state_state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the provider. * STATE_UNSPECIFIED: State unspecified. * ACTIVE: The provider is active, and may be used to
 validate authentication credentials. * DELETED: The provider is soft-deleted. Soft-deleted providers are permanently
 deleted after approximately 30 days. You can restore a soft-deleted provider using UndeleteWorkloadIdentityPoolProvider.
 You cannot reuse the ID of a soft-deleted provider until it is permanently deleted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_workloadidentitypoolid_csharp">
 <a href="#state_workloadidentitypoolid_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Identity<wbr>Pool<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID used for the pool, which is the final component of the pool resource name. This
 value should be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 `gcp-` is reserved for use by Google, and may not be specified.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_workloadidentitypoolproviderid_csharp">
 <a href="#state_workloadidentitypoolproviderid_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Identity<wbr>Pool<wbr>Provider<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the provider, which becomes the final component of the resource name. This
 value must be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 `gcp-` is reserved for use by Google, and may not be specified.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1860,9 +1778,9 @@ value must be 4-32 characters, and may contain the characters [a-z0-9-]. The pre
             title="Optional">
         <span id="state_attributecondition_go">
 <a href="#state_attributecondition_go" style="color: inherit; text-decoration: inherit;">Attribute<wbr>Condition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[A Common Expression Language](https://opensource.google/projects/cel) expression, in
 plain text, to restrict what otherwise valid authentication credentials issued by the
@@ -1907,12 +1825,11 @@ func main() {
 }
 ```
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_attributemapping_go">
 <a href="#state_attributemapping_go" style="color: inherit; text-decoration: inherit;">Attribute<wbr>Mapping</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -2014,132 +1931,120 @@ func main() {
 }
 ```
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_aws_go">
 <a href="#state_aws_go" style="color: inherit; text-decoration: inherit;">Aws</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workloadidentitypoolprovideraws">Workload<wbr>Identity<wbr>Pool<wbr>Provider<wbr>Aws</a></span>
     </dt>
     <dd>{{% md %}}An Amazon Web Services identity provider. Not compatible with the property oidc.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the provider. Cannot exceed 256 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_disabled_go">
 <a href="#state_disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the provider is disabled. You cannot use a disabled provider to exchange tokens.
 However, existing tokens still grant access.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A display name for the provider. Cannot exceed 32 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the provider as
 'projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}/providers/{workload_identity_pool_provider_id}'.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_oidc_go">
 <a href="#state_oidc_go" style="color: inherit; text-decoration: inherit;">Oidc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workloadidentitypoolprovideroidc">Workload<wbr>Identity<wbr>Pool<wbr>Provider<wbr>Oidc</a></span>
     </dt>
     <dd>{{% md %}}An OpenId Connect 1.0 identity provider. Not compatible with the property aws.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_state_go">
 <a href="#state_state_go" style="color: inherit; text-decoration: inherit;">State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the provider. * STATE_UNSPECIFIED: State unspecified. * ACTIVE: The provider is active, and may be used to
 validate authentication credentials. * DELETED: The provider is soft-deleted. Soft-deleted providers are permanently
 deleted after approximately 30 days. You can restore a soft-deleted provider using UndeleteWorkloadIdentityPoolProvider.
 You cannot reuse the ID of a soft-deleted provider until it is permanently deleted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_workloadidentitypoolid_go">
 <a href="#state_workloadidentitypoolid_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Identity<wbr>Pool<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID used for the pool, which is the final component of the pool resource name. This
 value should be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 `gcp-` is reserved for use by Google, and may not be specified.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_workloadidentitypoolproviderid_go">
 <a href="#state_workloadidentitypoolproviderid_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Identity<wbr>Pool<wbr>Provider<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the provider, which becomes the final component of the resource name. This
 value must be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 `gcp-` is reserved for use by Google, and may not be specified.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2148,9 +2053,9 @@ value must be 4-32 characters, and may contain the characters [a-z0-9-]. The pre
             title="Optional">
         <span id="state_attributecondition_nodejs">
 <a href="#state_attributecondition_nodejs" style="color: inherit; text-decoration: inherit;">attribute<wbr>Condition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}[A Common Expression Language](https://opensource.google/projects/cel) expression, in
 plain text, to restrict what otherwise valid authentication credentials issued by the
@@ -2195,12 +2100,11 @@ func main() {
 }
 ```
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_attributemapping_nodejs">
 <a href="#state_attributemapping_nodejs" style="color: inherit; text-decoration: inherit;">attribute<wbr>Mapping</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -2302,132 +2206,120 @@ func main() {
 }
 ```
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_aws_nodejs">
 <a href="#state_aws_nodejs" style="color: inherit; text-decoration: inherit;">aws</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workloadidentitypoolprovideraws">Workload<wbr>Identity<wbr>Pool<wbr>Provider<wbr>Aws</a></span>
     </dt>
     <dd>{{% md %}}An Amazon Web Services identity provider. Not compatible with the property oidc.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the provider. Cannot exceed 256 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_disabled_nodejs">
 <a href="#state_disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the provider is disabled. You cannot use a disabled provider to exchange tokens.
 However, existing tokens still grant access.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A display name for the provider. Cannot exceed 32 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name of the provider as
 'projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}/providers/{workload_identity_pool_provider_id}'.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_oidc_nodejs">
 <a href="#state_oidc_nodejs" style="color: inherit; text-decoration: inherit;">oidc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workloadidentitypoolprovideroidc">Workload<wbr>Identity<wbr>Pool<wbr>Provider<wbr>Oidc</a></span>
     </dt>
     <dd>{{% md %}}An OpenId Connect 1.0 identity provider. Not compatible with the property aws.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_state_nodejs">
 <a href="#state_state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the provider. * STATE_UNSPECIFIED: State unspecified. * ACTIVE: The provider is active, and may be used to
 validate authentication credentials. * DELETED: The provider is soft-deleted. Soft-deleted providers are permanently
 deleted after approximately 30 days. You can restore a soft-deleted provider using UndeleteWorkloadIdentityPoolProvider.
 You cannot reuse the ID of a soft-deleted provider until it is permanently deleted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_workloadidentitypoolid_nodejs">
 <a href="#state_workloadidentitypoolid_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Identity<wbr>Pool<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID used for the pool, which is the final component of the pool resource name. This
 value should be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 `gcp-` is reserved for use by Google, and may not be specified.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_workloadidentitypoolproviderid_nodejs">
 <a href="#state_workloadidentitypoolproviderid_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Identity<wbr>Pool<wbr>Provider<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the provider, which becomes the final component of the resource name. This
 value must be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 `gcp-` is reserved for use by Google, and may not be specified.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2436,9 +2328,9 @@ value must be 4-32 characters, and may contain the characters [a-z0-9-]. The pre
             title="Optional">
         <span id="state_attribute_condition_python">
 <a href="#state_attribute_condition_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>condition</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}[A Common Expression Language](https://opensource.google/projects/cel) expression, in
 plain text, to restrict what otherwise valid authentication credentials issued by the
@@ -2483,12 +2375,11 @@ func main() {
 }
 ```
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_attribute_mapping_python">
 <a href="#state_attribute_mapping_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>mapping</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
@@ -2590,129 +2481,118 @@ func main() {
 }
 ```
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_aws_python">
 <a href="#state_aws_python" style="color: inherit; text-decoration: inherit;">aws</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workloadidentitypoolprovideraws">Workload<wbr>Identity<wbr>Pool<wbr>Provider<wbr>Aws<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An Amazon Web Services identity provider. Not compatible with the property oidc.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description for the provider. Cannot exceed 256 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_disabled_python">
 <a href="#state_disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the provider is disabled. You cannot use a disabled provider to exchange tokens.
 However, existing tokens still grant access.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A display name for the provider. Cannot exceed 32 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name of the provider as
 'projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}/providers/{workload_identity_pool_provider_id}'.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_oidc_python">
 <a href="#state_oidc_python" style="color: inherit; text-decoration: inherit;">oidc</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workloadidentitypoolprovideroidc">Workload<wbr>Identity<wbr>Pool<wbr>Provider<wbr>Oidc<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An OpenId Connect 1.0 identity provider. Not compatible with the property aws.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_state_python">
 <a href="#state_state_python" style="color: inherit; text-decoration: inherit;">state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The state of the provider. * STATE_UNSPECIFIED: State unspecified. * ACTIVE: The provider is active, and may be used to
 validate authentication credentials. * DELETED: The provider is soft-deleted. Soft-deleted providers are permanently
 deleted after approximately 30 days. You can restore a soft-deleted provider using UndeleteWorkloadIdentityPoolProvider.
 You cannot reuse the ID of a soft-deleted provider until it is permanently deleted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_workload_identity_pool_id_python">
 <a href="#state_workload_identity_pool_id_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>identity_<wbr>pool_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID used for the pool, which is the final component of the pool resource name. This
 value should be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 `gcp-` is reserved for use by Google, and may not be specified.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_workload_identity_pool_provider_id_python">
 <a href="#state_workload_identity_pool_provider_id_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>identity_<wbr>pool_<wbr>provider_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID for the provider, which becomes the final component of the resource name. This
 value must be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix
 `gcp-` is reserved for use by Google, and may not be specified.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -2721,11 +2601,8 @@ value must be 4-32 characters, and may contain the characters [a-z0-9-]. The pre
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="workloadidentitypoolprovideraws">Workload<wbr>Identity<wbr>Pool<wbr>Provider<wbr>Aws</h4>
@@ -2736,11 +2613,10 @@ value must be 4-32 characters, and may contain the characters [a-z0-9-]. The pre
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iam?tab=doc#WorkloadIdentityPoolProviderAwsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iam?tab=doc#WorkloadIdentityPoolProviderAwsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iam.Inputs.WorkloadIdentityPoolProviderAwsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iam.Outputs.WorkloadIdentityPoolProviderAws.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2750,16 +2626,14 @@ value must be 4-32 characters, and may contain the characters [a-z0-9-]. The pre
             title="Required">
         <span id="accountid_csharp">
 <a href="#accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2768,16 +2642,14 @@ value must be 4-32 characters, and may contain the characters [a-z0-9-]. The pre
             title="Required">
         <span id="accountid_go">
 <a href="#accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2786,16 +2658,14 @@ value must be 4-32 characters, and may contain the characters [a-z0-9-]. The pre
             title="Required">
         <span id="accountid_nodejs">
 <a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2804,19 +2674,14 @@ value must be 4-32 characters, and may contain the characters [a-z0-9-]. The pre
             title="Required">
         <span id="account_id_python">
 <a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS account ID.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="workloadidentitypoolprovideroidc">Workload<wbr>Identity<wbr>Pool<wbr>Provider<wbr>Oidc</h4>
 {{% choosable language nodejs %}}
@@ -2826,11 +2691,10 @@ value must be 4-32 characters, and may contain the characters [a-z0-9-]. The pre
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iam?tab=doc#WorkloadIdentityPoolProviderOidcArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iam?tab=doc#WorkloadIdentityPoolProviderOidcOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iam.Inputs.WorkloadIdentityPoolProviderOidcArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iam.Outputs.WorkloadIdentityPoolProviderOidc.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2840,20 +2704,19 @@ value must be 4-32 characters, and may contain the characters [a-z0-9-]. The pre
             title="Required">
         <span id="issueruri_csharp">
 <a href="#issueruri_csharp" style="color: inherit; text-decoration: inherit;">Issuer<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OIDC issuer URL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedaudiences_csharp">
 <a href="#allowedaudiences_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Audiences</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Acceptable values for the `aud` field (audience) in the OIDC token. Token exchange
 requests are rejected if the token audience does not match one of the configured
@@ -2893,10 +2756,8 @@ func main() {
 }
 ```
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2905,20 +2766,19 @@ func main() {
             title="Required">
         <span id="issueruri_go">
 <a href="#issueruri_go" style="color: inherit; text-decoration: inherit;">Issuer<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OIDC issuer URL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedaudiences_go">
 <a href="#allowedaudiences_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Audiences</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Acceptable values for the `aud` field (audience) in the OIDC token. Token exchange
 requests are rejected if the token audience does not match one of the configured
@@ -2958,10 +2818,8 @@ func main() {
 }
 ```
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2970,20 +2828,19 @@ func main() {
             title="Required">
         <span id="issueruri_nodejs">
 <a href="#issueruri_nodejs" style="color: inherit; text-decoration: inherit;">issuer<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OIDC issuer URL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedaudiences_nodejs">
 <a href="#allowedaudiences_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Audiences</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Acceptable values for the `aud` field (audience) in the OIDC token. Token exchange
 requests are rejected if the token audience does not match one of the configured
@@ -3023,10 +2880,8 @@ func main() {
 }
 ```
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3035,20 +2890,19 @@ func main() {
             title="Required">
         <span id="issuer_uri_python">
 <a href="#issuer_uri_python" style="color: inherit; text-decoration: inherit;">issuer_<wbr>uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The OIDC issuer URL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowed_audiences_python">
 <a href="#allowed_audiences_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>audiences</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Acceptable values for the `aud` field (audience) in the OIDC token. Token exchange
 requests are rejected if the token audience does not match one of the configured
@@ -3088,18 +2942,8 @@ func main() {
 }
 ```
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 
 
 <h2 id="package-details">Package Details</h2>

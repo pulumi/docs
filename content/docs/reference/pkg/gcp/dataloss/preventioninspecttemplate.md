@@ -1,8 +1,8 @@
 
 ---
 title: "PreventionInspectTemplate"
-title_tag: "Resource PreventionInspectTemplate | Module dataloss | Package GCP"
-meta_desc: "Explore the PreventionInspectTemplate resource of the dataloss module, including examples, input properties, output properties, lookup functions, and supporting types. An inspect job template."
+title_tag: "gcp.dataloss.PreventionInspectTemplate"
+meta_desc: "Documentation for the gcp.dataloss.PreventionInspectTemplate resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -921,7 +921,7 @@ const custom = new gcp.dataloss.PreventionInspectTemplate("custom", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataloss/#PreventionInspectTemplate">PreventionInspectTemplate</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataloss/#PreventionInspectTemplateArgs">PreventionInspectTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataloss/#PreventionInspectTemplate">PreventionInspectTemplate</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataloss/#PreventionInspectTemplateArgs">PreventionInspectTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -929,11 +929,11 @@ const custom = new gcp.dataloss.PreventionInspectTemplate("custom", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplate">NewPreventionInspectTemplate</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateArgs">PreventionInspectTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplate">PreventionInspectTemplate</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplate">NewPreventionInspectTemplate</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateArgs">PreventionInspectTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplate">PreventionInspectTemplate</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.PreventionInspectTemplate.html">PreventionInspectTemplate</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.PreventionInspectTemplateArgs.html">PreventionInspectTemplateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.PreventionInspectTemplate.html">PreventionInspectTemplate</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.PreventionInspectTemplateArgs.html">PreventionInspectTemplateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -944,7 +944,7 @@ const custom = new gcp.dataloss.PreventionInspectTemplate("custom", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -1013,7 +1013,7 @@ const custom = new gcp.dataloss.PreventionInspectTemplate("custom", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -1052,7 +1052,7 @@ const custom = new gcp.dataloss.PreventionInspectTemplate("custom", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -1093,7 +1093,6 @@ The PreventionInspectTemplate resource accepts the following [input]({{< relref 
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1101,9 +1100,9 @@ The PreventionInspectTemplate resource accepts the following [input]({{< relref 
             title="Required">
         <span id="parent_csharp">
 <a href="#parent_csharp" style="color: inherit; text-decoration: inherit;">Parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The parent of the inspect template in any of the following formats:
 * `projects/{{project}}`
@@ -1111,44 +1110,39 @@ The PreventionInspectTemplate resource accepts the following [input]({{< relref 
 * `organizations/{{organization_id}}`
 * `organizations/{{organization_id}}/locations/{{location}}`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the inspect template.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User set display name of the inspect template.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="inspectconfig_csharp">
 <a href="#inspectconfig_csharp" style="color: inherit; text-decoration: inherit;">Inspect<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfig">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The core content of the template.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1157,9 +1151,9 @@ Structure is documented below.
             title="Required">
         <span id="parent_go">
 <a href="#parent_go" style="color: inherit; text-decoration: inherit;">Parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The parent of the inspect template in any of the following formats:
 * `projects/{{project}}`
@@ -1167,44 +1161,39 @@ Structure is documented below.
 * `organizations/{{organization_id}}`
 * `organizations/{{organization_id}}/locations/{{location}}`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the inspect template.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User set display name of the inspect template.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="inspectconfig_go">
 <a href="#inspectconfig_go" style="color: inherit; text-decoration: inherit;">Inspect<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfig">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The core content of the template.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1213,9 +1202,9 @@ Structure is documented below.
             title="Required">
         <span id="parent_nodejs">
 <a href="#parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The parent of the inspect template in any of the following formats:
 * `projects/{{project}}`
@@ -1223,44 +1212,39 @@ Structure is documented below.
 * `organizations/{{organization_id}}`
 * `organizations/{{organization_id}}/locations/{{location}}`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the inspect template.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User set display name of the inspect template.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="inspectconfig_nodejs">
 <a href="#inspectconfig_nodejs" style="color: inherit; text-decoration: inherit;">inspect<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfig">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The core content of the template.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1269,9 +1253,9 @@ Structure is documented below.
             title="Required">
         <span id="parent_python">
 <a href="#parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The parent of the inspect template in any of the following formats:
 * `projects/{{project}}`
@@ -1279,53 +1263,44 @@ Structure is documented below.
 * `organizations/{{organization_id}}`
 * `organizations/{{organization_id}}/locations/{{location}}`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the inspect template.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User set display name of the inspect template.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="inspect_config_python">
 <a href="#inspect_config_python" style="color: inherit; text-decoration: inherit;">inspect_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfig">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The core content of the template.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the PreventionInspectTemplate resource produces the following output properties:
-
 
 
 
@@ -1336,27 +1311,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1365,27 +1337,24 @@ or `projects/project-id/storedInfoTypes/432452342`.
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1394,27 +1363,24 @@ or `projects/project-id/storedInfoTypes/432452342`.
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1423,30 +1389,24 @@ or `projects/project-id/storedInfoTypes/432452342`.
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1456,7 +1416,7 @@ Get an existing PreventionInspectTemplate resource's state with the given name, 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataloss/#PreventionInspectTemplateState">PreventionInspectTemplateState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataloss/#PreventionInspectTemplate">PreventionInspectTemplate</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataloss/#PreventionInspectTemplateState">PreventionInspectTemplateState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataloss/#PreventionInspectTemplate">PreventionInspectTemplate</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1465,11 +1425,11 @@ Get an existing PreventionInspectTemplate resource's state with the given name, 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPreventionInspectTemplate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateState">PreventionInspectTemplateState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplate">PreventionInspectTemplate</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPreventionInspectTemplate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateState">PreventionInspectTemplateState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplate">PreventionInspectTemplate</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.PreventionInspectTemplate.html">PreventionInspectTemplate</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.PreventionInspectTemplateState.html">PreventionInspectTemplateState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.PreventionInspectTemplate.html">PreventionInspectTemplate</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.PreventionInspectTemplateState.html">PreventionInspectTemplateState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1571,7 +1531,6 @@ Get an existing PreventionInspectTemplate resource's state with the given name, 
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1579,55 +1538,51 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the inspect template.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User set display name of the inspect template.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_inspectconfig_csharp">
 <a href="#state_inspectconfig_csharp" style="color: inherit; text-decoration: inherit;">Inspect<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfig">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The core content of the template.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parent_csharp">
 <a href="#state_parent_csharp" style="color: inherit; text-decoration: inherit;">Parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The parent of the inspect template in any of the following formats:
 * `projects/{{project}}`
@@ -1635,10 +1590,8 @@ or `projects/project-id/storedInfoTypes/432452342`.
 * `organizations/{{organization_id}}`
 * `organizations/{{organization_id}}/locations/{{location}}`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1647,55 +1600,51 @@ or `projects/project-id/storedInfoTypes/432452342`.
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the inspect template.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User set display name of the inspect template.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_inspectconfig_go">
 <a href="#state_inspectconfig_go" style="color: inherit; text-decoration: inherit;">Inspect<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfig">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The core content of the template.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parent_go">
 <a href="#state_parent_go" style="color: inherit; text-decoration: inherit;">Parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The parent of the inspect template in any of the following formats:
 * `projects/{{project}}`
@@ -1703,10 +1652,8 @@ or `projects/project-id/storedInfoTypes/432452342`.
 * `organizations/{{organization_id}}`
 * `organizations/{{organization_id}}/locations/{{location}}`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1715,55 +1662,51 @@ or `projects/project-id/storedInfoTypes/432452342`.
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the inspect template.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User set display name of the inspect template.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_inspectconfig_nodejs">
 <a href="#state_inspectconfig_nodejs" style="color: inherit; text-decoration: inherit;">inspect<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfig">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The core content of the template.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parent_nodejs">
 <a href="#state_parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The parent of the inspect template in any of the following formats:
 * `projects/{{project}}`
@@ -1771,10 +1714,8 @@ or `projects/project-id/storedInfoTypes/432452342`.
 * `organizations/{{organization_id}}`
 * `organizations/{{organization_id}}/locations/{{location}}`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1783,55 +1724,51 @@ or `projects/project-id/storedInfoTypes/432452342`.
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the inspect template.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User set display name of the inspect template.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_inspect_config_python">
 <a href="#state_inspect_config_python" style="color: inherit; text-decoration: inherit;">inspect_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfig">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The core content of the template.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parent_python">
 <a href="#state_parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The parent of the inspect template in any of the following formats:
 * `projects/{{project}}`
@@ -1839,7 +1776,6 @@ or `projects/project-id/storedInfoTypes/432452342`.
 * `organizations/{{organization_id}}`
 * `organizations/{{organization_id}}/locations/{{location}}`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1848,11 +1784,8 @@ or `projects/project-id/storedInfoTypes/432452342`.
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="preventioninspecttemplateinspectconfig">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config</h4>
@@ -1863,11 +1796,10 @@ or `projects/project-id/storedInfoTypes/432452342`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionInspectTemplateInspectConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1877,91 +1809,84 @@ or `projects/project-id/storedInfoTypes/432452342`.
             title="Optional">
         <span id="contentoptions_csharp">
 <a href="#contentoptions_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of options defining data content to scan. If empty, text, images, and other content will be included.
 Each value may be one of `CONTENT_TEXT` and `CONTENT_IMAGE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="custominfotypes_csharp">
 <a href="#custominfotypes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Info<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotype">List&lt;Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Custom info types to be used. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="excludeinfotypes_csharp">
 <a href="#excludeinfotypes_csharp" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Info<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set of infoTypes for which findings would affect this rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="includequote_csharp">
 <a href="#includequote_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Quote</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, a contextual quote from the data that triggered a finding is included in the response.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="infotypes_csharp">
 <a href="#infotypes_csharp" style="color: inherit; text-decoration: inherit;">Info<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfiginfotype">List&lt;Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Info<wbr>Type<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="limits_csharp">
 <a href="#limits_csharp" style="color: inherit; text-decoration: inherit;">Limits</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfiglimits">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration to control the number of findings returned.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minlikelihood_csharp">
 <a href="#minlikelihood_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Likelihood</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Only returns findings equal or above this threshold. See https://cloud.google.com/dlp/docs/likelihood for more info
 Default value is `POSSIBLE`.
 Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rulesets_csharp">
 <a href="#rulesets_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Sets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigruleset">List&lt;Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Args&gt;</a></span>
     </dt>
@@ -1969,10 +1894,8 @@ Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY
 other rules are executed in the order they are specified for each info type.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1981,91 +1904,84 @@ Structure is documented below.
             title="Optional">
         <span id="contentoptions_go">
 <a href="#contentoptions_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of options defining data content to scan. If empty, text, images, and other content will be included.
 Each value may be one of `CONTENT_TEXT` and `CONTENT_IMAGE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="custominfotypes_go">
 <a href="#custominfotypes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Info<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotype">[]Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Custom info types to be used. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="excludeinfotypes_go">
 <a href="#excludeinfotypes_go" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Info<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set of infoTypes for which findings would affect this rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="includequote_go">
 <a href="#includequote_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Quote</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, a contextual quote from the data that triggered a finding is included in the response.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="infotypes_go">
 <a href="#infotypes_go" style="color: inherit; text-decoration: inherit;">Info<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfiginfotype">[]Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Info<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="limits_go">
 <a href="#limits_go" style="color: inherit; text-decoration: inherit;">Limits</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfiglimits">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits</a></span>
     </dt>
     <dd>{{% md %}}Configuration to control the number of findings returned.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minlikelihood_go">
 <a href="#minlikelihood_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Likelihood</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Only returns findings equal or above this threshold. See https://cloud.google.com/dlp/docs/likelihood for more info
 Default value is `POSSIBLE`.
 Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rulesets_go">
 <a href="#rulesets_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Sets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigruleset">[]Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set</a></span>
     </dt>
@@ -2073,10 +1989,8 @@ Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY
 other rules are executed in the order they are specified for each info type.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2085,91 +1999,84 @@ Structure is documented below.
             title="Optional">
         <span id="contentoptions_nodejs">
 <a href="#contentoptions_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of options defining data content to scan. If empty, text, images, and other content will be included.
 Each value may be one of `CONTENT_TEXT` and `CONTENT_IMAGE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="custominfotypes_nodejs">
 <a href="#custominfotypes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Info<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type[]</a></span>
     </dt>
     <dd>{{% md %}}Custom info types to be used. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="excludeinfotypes_nodejs">
 <a href="#excludeinfotypes_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>Info<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set of infoTypes for which findings would affect this rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="includequote_nodejs">
 <a href="#includequote_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Quote</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, a contextual quote from the data that triggered a finding is included in the response.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="infotypes_nodejs">
 <a href="#infotypes_nodejs" style="color: inherit; text-decoration: inherit;">info<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfiginfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Info<wbr>Type[]</a></span>
     </dt>
     <dd>{{% md %}}If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="limits_nodejs">
 <a href="#limits_nodejs" style="color: inherit; text-decoration: inherit;">limits</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfiglimits">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits</a></span>
     </dt>
     <dd>{{% md %}}Configuration to control the number of findings returned.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minlikelihood_nodejs">
 <a href="#minlikelihood_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Likelihood</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Only returns findings equal or above this threshold. See https://cloud.google.com/dlp/docs/likelihood for more info
 Default value is `POSSIBLE`.
 Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rulesets_nodejs">
 <a href="#rulesets_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Sets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigruleset">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set[]</a></span>
     </dt>
@@ -2177,10 +2084,8 @@ Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY
 other rules are executed in the order they are specified for each info type.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2189,91 +2094,84 @@ Structure is documented below.
             title="Optional">
         <span id="content_options_python">
 <a href="#content_options_python" style="color: inherit; text-decoration: inherit;">content_<wbr>options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of options defining data content to scan. If empty, text, images, and other content will be included.
 Each value may be one of `CONTENT_TEXT` and `CONTENT_IMAGE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="custom_info_types_python">
 <a href="#custom_info_types_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>info_<wbr>types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotype">Sequence[Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Custom info types to be used. See https://cloud.google.com/dlp/docs/creating-custom-infotypes to learn more.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exclude_info_types_python">
 <a href="#exclude_info_types_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>info_<wbr>types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set of infoTypes for which findings would affect this rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="include_quote_python">
 <a href="#include_quote_python" style="color: inherit; text-decoration: inherit;">include_<wbr>quote</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, a contextual quote from the data that triggered a finding is included in the response.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="info_types_python">
 <a href="#info_types_python" style="color: inherit; text-decoration: inherit;">info_<wbr>types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfiginfotype">Sequence[Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Info<wbr>Type<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="limits_python">
 <a href="#limits_python" style="color: inherit; text-decoration: inherit;">limits</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfiglimits">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration to control the number of findings returned.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="min_likelihood_python">
 <a href="#min_likelihood_python" style="color: inherit; text-decoration: inherit;">min_<wbr>likelihood</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Only returns findings equal or above this threshold. See https://cloud.google.com/dlp/docs/likelihood for more info
 Default value is `POSSIBLE`.
 Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rule_sets_python">
 <a href="#rule_sets_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>sets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigruleset">Sequence[Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Args]</a></span>
     </dt>
@@ -2281,13 +2179,8 @@ Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY
 other rules are executed in the order they are specified for each info type.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventioninspecttemplateinspectconfigcustominfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type</h4>
 {{% choosable language nodejs %}}
@@ -2297,11 +2190,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigCustomInfoTypeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigCustomInfoTypeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionInspectTemplateInspectConfigCustomInfoType.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2311,7 +2203,7 @@ Structure is documented below.
             title="Required">
         <span id="infotype_csharp">
 <a href="#infotype_csharp" style="color: inherit; text-decoration: inherit;">Info<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypeinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Info<wbr>Type<wbr>Args</a></span>
     </dt>
@@ -2321,72 +2213,65 @@ one detected by the system. If built-in info type is not specified in `info_type
 treated as a custom info type.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dictionary_csharp">
 <a href="#dictionary_csharp" style="color: inherit; text-decoration: inherit;">Dictionary</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionary">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exclusiontype_csharp">
 <a href="#exclusiontype_csharp" style="color: inherit; text-decoration: inherit;">Exclusion<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It still can be used for rules matching.
 Possible values are `EXCLUSION_TYPE_EXCLUDE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="likelihood_csharp">
 <a href="#likelihood_csharp" style="color: inherit; text-decoration: inherit;">Likelihood</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Likelihood to return for this CustomInfoType. This base value can be altered by a detection rule if the finding meets the criteria
 specified by the rule.
 Default value is `VERY_LIKELY`.
 Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="regex_csharp">
 <a href="#regex_csharp" style="color: inherit; text-decoration: inherit;">Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotyperegex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Regex<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Regular expression which defines the rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storedtype_csharp">
 <a href="#storedtype_csharp" style="color: inherit; text-decoration: inherit;">Stored<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypestoredtype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Stored<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to a StoredInfoType to use with scanning.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2395,7 +2280,7 @@ Structure is documented below.
             title="Required">
         <span id="infotype_go">
 <a href="#infotype_go" style="color: inherit; text-decoration: inherit;">Info<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypeinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Info<wbr>Type</a></span>
     </dt>
@@ -2405,72 +2290,65 @@ one detected by the system. If built-in info type is not specified in `info_type
 treated as a custom info type.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dictionary_go">
 <a href="#dictionary_go" style="color: inherit; text-decoration: inherit;">Dictionary</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionary">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary</a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exclusiontype_go">
 <a href="#exclusiontype_go" style="color: inherit; text-decoration: inherit;">Exclusion<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It still can be used for rules matching.
 Possible values are `EXCLUSION_TYPE_EXCLUDE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="likelihood_go">
 <a href="#likelihood_go" style="color: inherit; text-decoration: inherit;">Likelihood</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Likelihood to return for this CustomInfoType. This base value can be altered by a detection rule if the finding meets the criteria
 specified by the rule.
 Default value is `VERY_LIKELY`.
 Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="regex_go">
 <a href="#regex_go" style="color: inherit; text-decoration: inherit;">Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotyperegex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Regex</a></span>
     </dt>
     <dd>{{% md %}}Regular expression which defines the rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storedtype_go">
 <a href="#storedtype_go" style="color: inherit; text-decoration: inherit;">Stored<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypestoredtype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Stored<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}A reference to a StoredInfoType to use with scanning.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2479,7 +2357,7 @@ Structure is documented below.
             title="Required">
         <span id="infotype_nodejs">
 <a href="#infotype_nodejs" style="color: inherit; text-decoration: inherit;">info<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypeinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Info<wbr>Type</a></span>
     </dt>
@@ -2489,72 +2367,65 @@ one detected by the system. If built-in info type is not specified in `info_type
 treated as a custom info type.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dictionary_nodejs">
 <a href="#dictionary_nodejs" style="color: inherit; text-decoration: inherit;">dictionary</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionary">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary</a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exclusiontype_nodejs">
 <a href="#exclusiontype_nodejs" style="color: inherit; text-decoration: inherit;">exclusion<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It still can be used for rules matching.
 Possible values are `EXCLUSION_TYPE_EXCLUDE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="likelihood_nodejs">
 <a href="#likelihood_nodejs" style="color: inherit; text-decoration: inherit;">likelihood</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Likelihood to return for this CustomInfoType. This base value can be altered by a detection rule if the finding meets the criteria
 specified by the rule.
 Default value is `VERY_LIKELY`.
 Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="regex_nodejs">
 <a href="#regex_nodejs" style="color: inherit; text-decoration: inherit;">regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotyperegex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Regex</a></span>
     </dt>
     <dd>{{% md %}}Regular expression which defines the rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="storedtype_nodejs">
 <a href="#storedtype_nodejs" style="color: inherit; text-decoration: inherit;">stored<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypestoredtype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Stored<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}A reference to a StoredInfoType to use with scanning.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2563,7 +2434,7 @@ Structure is documented below.
             title="Required">
         <span id="info_type_python">
 <a href="#info_type_python" style="color: inherit; text-decoration: inherit;">info_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypeinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Info<wbr>Type<wbr>Args</a></span>
     </dt>
@@ -2573,75 +2444,65 @@ one detected by the system. If built-in info type is not specified in `info_type
 treated as a custom info type.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dictionary_python">
 <a href="#dictionary_python" style="color: inherit; text-decoration: inherit;">dictionary</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionary">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exclusion_type_python">
 <a href="#exclusion_type_python" style="color: inherit; text-decoration: inherit;">exclusion_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If set to EXCLUSION_TYPE_EXCLUDE this infoType will not cause a finding to be returned. It still can be used for rules matching.
 Possible values are `EXCLUSION_TYPE_EXCLUDE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="likelihood_python">
 <a href="#likelihood_python" style="color: inherit; text-decoration: inherit;">likelihood</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Likelihood to return for this CustomInfoType. This base value can be altered by a detection rule if the finding meets the criteria
 specified by the rule.
 Default value is `VERY_LIKELY`.
 Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="regex_python">
 <a href="#regex_python" style="color: inherit; text-decoration: inherit;">regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotyperegex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Regex<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Regular expression which defines the rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="stored_type_python">
 <a href="#stored_type_python" style="color: inherit; text-decoration: inherit;">stored_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypestoredtype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Stored<wbr>Type<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A reference to a StoredInfoType to use with scanning.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventioninspecttemplateinspectconfigcustominfotypedictionary">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary</h4>
 {{% choosable language nodejs %}}
@@ -2651,11 +2512,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionInspectTemplateInspectConfigCustomInfoTypeDictionary.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2665,29 +2525,26 @@ Structure is documented below.
             title="Optional">
         <span id="cloudstoragepath_csharp">
 <a href="#cloudstoragepath_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Storage<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionarycloudstoragepath">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="wordlist_csharp">
 <a href="#wordlist_csharp" style="color: inherit; text-decoration: inherit;">Word<wbr>List</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionarywordlist">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Word<wbr>List<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of words or phrases to search for.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2696,29 +2553,26 @@ Structure is documented below.
             title="Optional">
         <span id="cloudstoragepath_go">
 <a href="#cloudstoragepath_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Storage<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionarycloudstoragepath">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="wordlist_go">
 <a href="#wordlist_go" style="color: inherit; text-decoration: inherit;">Word<wbr>List</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionarywordlist">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Word<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}List of words or phrases to search for.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2727,29 +2581,26 @@ Structure is documented below.
             title="Optional">
         <span id="cloudstoragepath_nodejs">
 <a href="#cloudstoragepath_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Storage<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionarycloudstoragepath">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="wordlist_nodejs">
 <a href="#wordlist_nodejs" style="color: inherit; text-decoration: inherit;">word<wbr>List</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionarywordlist">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Word<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}List of words or phrases to search for.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2758,32 +2609,26 @@ Structure is documented below.
             title="Optional">
         <span id="cloud_storage_path_python">
 <a href="#cloud_storage_path_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>storage_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionarycloudstoragepath">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="word_list_python">
 <a href="#word_list_python" style="color: inherit; text-decoration: inherit;">word_<wbr>list</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigcustominfotypedictionarywordlist">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Word<wbr>List<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of words or phrases to search for.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventioninspecttemplateinspectconfigcustominfotypedictionarycloudstoragepath">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path</h4>
 {{% choosable language nodejs %}}
@@ -2793,11 +2638,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePath.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2807,16 +2651,14 @@ Structure is documented below.
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2825,16 +2667,14 @@ Structure is documented below.
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2843,16 +2683,14 @@ Structure is documented below.
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2861,19 +2699,14 @@ Structure is documented below.
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventioninspecttemplateinspectconfigcustominfotypedictionarywordlist">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Word<wbr>List</h4>
 {{% choosable language nodejs %}}
@@ -2883,11 +2716,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordList.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2897,17 +2729,15 @@ Structure is documented below.
             title="Required">
         <span id="words_csharp">
 <a href="#words_csharp" style="color: inherit; text-decoration: inherit;">Words</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Words or phrases defining the dictionary. The dictionary must contain at least one
 phrase and every phrase must contain at least 2 characters that are letters or digits.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2916,17 +2746,15 @@ phrase and every phrase must contain at least 2 characters that are letters or d
             title="Required">
         <span id="words_go">
 <a href="#words_go" style="color: inherit; text-decoration: inherit;">Words</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Words or phrases defining the dictionary. The dictionary must contain at least one
 phrase and every phrase must contain at least 2 characters that are letters or digits.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2935,17 +2763,15 @@ phrase and every phrase must contain at least 2 characters that are letters or d
             title="Required">
         <span id="words_nodejs">
 <a href="#words_nodejs" style="color: inherit; text-decoration: inherit;">words</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Words or phrases defining the dictionary. The dictionary must contain at least one
 phrase and every phrase must contain at least 2 characters that are letters or digits.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2954,20 +2780,15 @@ phrase and every phrase must contain at least 2 characters that are letters or d
             title="Required">
         <span id="words_python">
 <a href="#words_python" style="color: inherit; text-decoration: inherit;">words</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Words or phrases defining the dictionary. The dictionary must contain at least one
 phrase and every phrase must contain at least 2 characters that are letters or digits.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventioninspecttemplateinspectconfigcustominfotypeinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Info<wbr>Type</h4>
 {{% choosable language nodejs %}}
@@ -2977,11 +2798,10 @@ phrase and every phrase must contain at least 2 characters that are letters or d
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionInspectTemplateInspectConfigCustomInfoTypeInfoType.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2991,17 +2811,15 @@ phrase and every phrase must contain at least 2 characters that are letters or d
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3010,17 +2828,15 @@ or `projects/project-id/storedInfoTypes/432452342`.
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3029,17 +2845,15 @@ or `projects/project-id/storedInfoTypes/432452342`.
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3048,20 +2862,15 @@ or `projects/project-id/storedInfoTypes/432452342`.
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventioninspecttemplateinspectconfigcustominfotyperegex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Regex</h4>
 {{% choosable language nodejs %}}
@@ -3071,11 +2880,10 @@ or `projects/project-id/storedInfoTypes/432452342`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigCustomInfoTypeRegexOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionInspectTemplateInspectConfigCustomInfoTypeRegex.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3085,28 +2893,25 @@ or `projects/project-id/storedInfoTypes/432452342`.
             title="Required">
         <span id="pattern_csharp">
 <a href="#pattern_csharp" style="color: inherit; text-decoration: inherit;">Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pattern defining the regular expression.
 Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupindexes_csharp">
 <a href="#groupindexes_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Indexes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
+        <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3115,28 +2920,25 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
             title="Required">
         <span id="pattern_go">
 <a href="#pattern_go" style="color: inherit; text-decoration: inherit;">Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pattern defining the regular expression.
 Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupindexes_go">
 <a href="#groupindexes_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Indexes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
+        <span class="property-type">[]int</span>
     </dt>
     <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3145,28 +2947,25 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
             title="Required">
         <span id="pattern_nodejs">
 <a href="#pattern_nodejs" style="color: inherit; text-decoration: inherit;">pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pattern defining the regular expression.
 Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupindexes_nodejs">
 <a href="#groupindexes_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Indexes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3175,31 +2974,25 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
             title="Required">
         <span id="pattern_python">
 <a href="#pattern_python" style="color: inherit; text-decoration: inherit;">pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Pattern defining the regular expression.
 Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="group_indexes_python">
 <a href="#group_indexes_python" style="color: inherit; text-decoration: inherit;">group_<wbr>indexes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventioninspecttemplateinspectconfigcustominfotypestoredtype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Custom<wbr>Info<wbr>Type<wbr>Stored<wbr>Type</h4>
 {{% choosable language nodejs %}}
@@ -3209,11 +3002,10 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTypeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTypeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTypeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionInspectTemplateInspectConfigCustomInfoTypeStoredType.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3223,17 +3015,15 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3242,17 +3032,15 @@ or `projects/project-id/storedInfoTypes/432452342`.
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3261,17 +3049,15 @@ or `projects/project-id/storedInfoTypes/432452342`.
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3280,20 +3066,15 @@ or `projects/project-id/storedInfoTypes/432452342`.
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventioninspecttemplateinspectconfiginfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Info<wbr>Type</h4>
 {{% choosable language nodejs %}}
@@ -3303,11 +3084,10 @@ or `projects/project-id/storedInfoTypes/432452342`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigInfoTypeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigInfoTypeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigInfoTypeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionInspectTemplateInspectConfigInfoType.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3317,17 +3097,15 @@ or `projects/project-id/storedInfoTypes/432452342`.
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3336,17 +3114,15 @@ or `projects/project-id/storedInfoTypes/432452342`.
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3355,17 +3131,15 @@ or `projects/project-id/storedInfoTypes/432452342`.
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3374,20 +3148,15 @@ or `projects/project-id/storedInfoTypes/432452342`.
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventioninspecttemplateinspectconfiglimits">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits</h4>
 {{% choosable language nodejs %}}
@@ -3397,11 +3166,10 @@ or `projects/project-id/storedInfoTypes/432452342`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigLimitsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigLimitsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigLimitsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionInspectTemplateInspectConfigLimits.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3411,39 +3179,35 @@ or `projects/project-id/storedInfoTypes/432452342`.
             title="Required">
         <span id="maxfindingsperitem_csharp">
 <a href="#maxfindingsperitem_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Findings<wbr>Per<wbr>Item</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max number of findings that will be returned for each item scanned. The maximum returned is 2000.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="maxfindingsperrequest_csharp">
 <a href="#maxfindingsperrequest_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Findings<wbr>Per<wbr>Request</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max number of findings that will be returned per request/job. The maximum returned is 2000.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxfindingsperinfotypes_csharp">
 <a href="#maxfindingsperinfotypes_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Findings<wbr>Per<wbr>Info<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfiglimitsmaxfindingsperinfotype">List&lt;Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits<wbr>Max<wbr>Findings<wbr>Per<wbr>Info<wbr>Type<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration of findings limit given for specified infoTypes.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3452,39 +3216,35 @@ Structure is documented below.
             title="Required">
         <span id="maxfindingsperitem_go">
 <a href="#maxfindingsperitem_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Findings<wbr>Per<wbr>Item</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max number of findings that will be returned for each item scanned. The maximum returned is 2000.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="maxfindingsperrequest_go">
 <a href="#maxfindingsperrequest_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Findings<wbr>Per<wbr>Request</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max number of findings that will be returned per request/job. The maximum returned is 2000.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxfindingsperinfotypes_go">
 <a href="#maxfindingsperinfotypes_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Findings<wbr>Per<wbr>Info<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfiglimitsmaxfindingsperinfotype">[]Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits<wbr>Max<wbr>Findings<wbr>Per<wbr>Info<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Configuration of findings limit given for specified infoTypes.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3493,39 +3253,35 @@ Structure is documented below.
             title="Required">
         <span id="maxfindingsperitem_nodejs">
 <a href="#maxfindingsperitem_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Findings<wbr>Per<wbr>Item</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Max number of findings that will be returned for each item scanned. The maximum returned is 2000.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="maxfindingsperrequest_nodejs">
 <a href="#maxfindingsperrequest_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Findings<wbr>Per<wbr>Request</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Max number of findings that will be returned per request/job. The maximum returned is 2000.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxfindingsperinfotypes_nodejs">
 <a href="#maxfindingsperinfotypes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Findings<wbr>Per<wbr>Info<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfiglimitsmaxfindingsperinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits<wbr>Max<wbr>Findings<wbr>Per<wbr>Info<wbr>Type[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration of findings limit given for specified infoTypes.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3534,42 +3290,35 @@ Structure is documented below.
             title="Required">
         <span id="max_findings_per_item_python">
 <a href="#max_findings_per_item_python" style="color: inherit; text-decoration: inherit;">max_<wbr>findings_<wbr>per_<wbr>item</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max number of findings that will be returned for each item scanned. The maximum returned is 2000.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="max_findings_per_request_python">
 <a href="#max_findings_per_request_python" style="color: inherit; text-decoration: inherit;">max_<wbr>findings_<wbr>per_<wbr>request</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max number of findings that will be returned per request/job. The maximum returned is 2000.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_findings_per_info_types_python">
 <a href="#max_findings_per_info_types_python" style="color: inherit; text-decoration: inherit;">max_<wbr>findings_<wbr>per_<wbr>info_<wbr>types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfiglimitsmaxfindingsperinfotype">Sequence[Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits<wbr>Max<wbr>Findings<wbr>Per<wbr>Info<wbr>Type<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration of findings limit given for specified infoTypes.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventioninspecttemplateinspectconfiglimitsmaxfindingsperinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits<wbr>Max<wbr>Findings<wbr>Per<wbr>Info<wbr>Type</h4>
 {{% choosable language nodejs %}}
@@ -3579,11 +3328,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoType.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3593,7 +3341,7 @@ Structure is documented below.
             title="Required">
         <span id="infotype_csharp">
 <a href="#infotype_csharp" style="color: inherit; text-decoration: inherit;">Info<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfiglimitsmaxfindingsperinfotypeinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits<wbr>Max<wbr>Findings<wbr>Per<wbr>Info<wbr>Type<wbr>Info<wbr>Type<wbr>Args</a></span>
     </dt>
@@ -3603,21 +3351,18 @@ one detected by the system. If built-in info type is not specified in `info_type
 treated as a custom info type.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="maxfindings_csharp">
 <a href="#maxfindings_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Findings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max findings limit for the given infoType.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3626,7 +3371,7 @@ Structure is documented below.
             title="Required">
         <span id="infotype_go">
 <a href="#infotype_go" style="color: inherit; text-decoration: inherit;">Info<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfiglimitsmaxfindingsperinfotypeinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits<wbr>Max<wbr>Findings<wbr>Per<wbr>Info<wbr>Type<wbr>Info<wbr>Type</a></span>
     </dt>
@@ -3636,21 +3381,18 @@ one detected by the system. If built-in info type is not specified in `info_type
 treated as a custom info type.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="maxfindings_go">
 <a href="#maxfindings_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Findings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max findings limit for the given infoType.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3659,7 +3401,7 @@ Structure is documented below.
             title="Required">
         <span id="infotype_nodejs">
 <a href="#infotype_nodejs" style="color: inherit; text-decoration: inherit;">info<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfiglimitsmaxfindingsperinfotypeinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits<wbr>Max<wbr>Findings<wbr>Per<wbr>Info<wbr>Type<wbr>Info<wbr>Type</a></span>
     </dt>
@@ -3669,21 +3411,18 @@ one detected by the system. If built-in info type is not specified in `info_type
 treated as a custom info type.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="maxfindings_nodejs">
 <a href="#maxfindings_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Findings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Max findings limit for the given infoType.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3692,7 +3431,7 @@ Structure is documented below.
             title="Required">
         <span id="info_type_python">
 <a href="#info_type_python" style="color: inherit; text-decoration: inherit;">info_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfiglimitsmaxfindingsperinfotypeinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits<wbr>Max<wbr>Findings<wbr>Per<wbr>Info<wbr>Type<wbr>Info<wbr>Type<wbr>Args</a></span>
     </dt>
@@ -3702,24 +3441,18 @@ one detected by the system. If built-in info type is not specified in `info_type
 treated as a custom info type.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="max_findings_python">
 <a href="#max_findings_python" style="color: inherit; text-decoration: inherit;">max_<wbr>findings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max findings limit for the given infoType.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventioninspecttemplateinspectconfiglimitsmaxfindingsperinfotypeinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Limits<wbr>Max<wbr>Findings<wbr>Per<wbr>Info<wbr>Type<wbr>Info<wbr>Type</h4>
 {{% choosable language nodejs %}}
@@ -3729,11 +3462,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoType.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3743,17 +3475,15 @@ Structure is documented below.
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3762,17 +3492,15 @@ or `projects/project-id/storedInfoTypes/432452342`.
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3781,17 +3509,15 @@ or `projects/project-id/storedInfoTypes/432452342`.
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3800,20 +3526,15 @@ or `projects/project-id/storedInfoTypes/432452342`.
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventioninspecttemplateinspectconfigruleset">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set</h4>
 {{% choosable language nodejs %}}
@@ -3823,11 +3544,10 @@ or `projects/project-id/storedInfoTypes/432452342`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigRuleSetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigRuleSetOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionInspectTemplateInspectConfigRuleSet.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3837,29 +3557,26 @@ or `projects/project-id/storedInfoTypes/432452342`.
             title="Required">
         <span id="infotypes_csharp">
 <a href="#infotypes_csharp" style="color: inherit; text-decoration: inherit;">Info<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetinfotype">List&lt;Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Info<wbr>Type<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rules_csharp">
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrule">List&lt;Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of rules to be applied to infoTypes. The rules are applied in order.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3868,29 +3585,26 @@ Structure is documented below.
             title="Required">
         <span id="infotypes_go">
 <a href="#infotypes_go" style="color: inherit; text-decoration: inherit;">Info<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetinfotype">[]Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Info<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rules_go">
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrule">[]Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Set of rules to be applied to infoTypes. The rules are applied in order.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3899,29 +3613,26 @@ Structure is documented below.
             title="Required">
         <span id="infotypes_nodejs">
 <a href="#infotypes_nodejs" style="color: inherit; text-decoration: inherit;">info<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Info<wbr>Type[]</a></span>
     </dt>
     <dd>{{% md %}}If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rules_nodejs">
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrule">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}Set of rules to be applied to infoTypes. The rules are applied in order.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3930,32 +3641,26 @@ Structure is documented below.
             title="Required">
         <span id="info_types_python">
 <a href="#info_types_python" style="color: inherit; text-decoration: inherit;">info_<wbr>types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetinfotype">Sequence[Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Info<wbr>Type<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rules_python">
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrule">Sequence[Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Set of rules to be applied to infoTypes. The rules are applied in order.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventioninspecttemplateinspectconfigrulesetinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Info<wbr>Type</h4>
 {{% choosable language nodejs %}}
@@ -3965,11 +3670,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigRuleSetInfoTypeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionInspectTemplateInspectConfigRuleSetInfoType.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3979,17 +3683,15 @@ Structure is documented below.
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3998,17 +3700,15 @@ or `projects/project-id/storedInfoTypes/432452342`.
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4017,17 +3717,15 @@ or `projects/project-id/storedInfoTypes/432452342`.
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4036,20 +3734,15 @@ or `projects/project-id/storedInfoTypes/432452342`.
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventioninspecttemplateinspectconfigrulesetrule">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule</h4>
 {{% choosable language nodejs %}}
@@ -4059,11 +3752,10 @@ or `projects/project-id/storedInfoTypes/432452342`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigRuleSetRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigRuleSetRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionInspectTemplateInspectConfigRuleSetRule.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4073,29 +3765,26 @@ or `projects/project-id/storedInfoTypes/432452342`.
             title="Optional">
         <span id="exclusionrule_csharp">
 <a href="#exclusionrule_csharp" style="color: inherit; text-decoration: inherit;">Exclusion<wbr>Rule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionrule">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The rule that specifies conditions when findings of infoTypes specified in InspectionRuleSet are removed from results.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hotwordrule_csharp">
 <a href="#hotwordrule_csharp" style="color: inherit; text-decoration: inherit;">Hotword<wbr>Rule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordrule">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Hotword-based detection rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4104,29 +3793,26 @@ Structure is documented below.
             title="Optional">
         <span id="exclusionrule_go">
 <a href="#exclusionrule_go" style="color: inherit; text-decoration: inherit;">Exclusion<wbr>Rule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionrule">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The rule that specifies conditions when findings of infoTypes specified in InspectionRuleSet are removed from results.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hotwordrule_go">
 <a href="#hotwordrule_go" style="color: inherit; text-decoration: inherit;">Hotword<wbr>Rule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordrule">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Hotword-based detection rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4135,29 +3821,26 @@ Structure is documented below.
             title="Optional">
         <span id="exclusionrule_nodejs">
 <a href="#exclusionrule_nodejs" style="color: inherit; text-decoration: inherit;">exclusion<wbr>Rule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionrule">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The rule that specifies conditions when findings of infoTypes specified in InspectionRuleSet are removed from results.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hotwordrule_nodejs">
 <a href="#hotwordrule_nodejs" style="color: inherit; text-decoration: inherit;">hotword<wbr>Rule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordrule">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Hotword-based detection rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4166,32 +3849,26 @@ Structure is documented below.
             title="Optional">
         <span id="exclusion_rule_python">
 <a href="#exclusion_rule_python" style="color: inherit; text-decoration: inherit;">exclusion_<wbr>rule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionrule">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The rule that specifies conditions when findings of infoTypes specified in InspectionRuleSet are removed from results.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hotword_rule_python">
 <a href="#hotword_rule_python" style="color: inherit; text-decoration: inherit;">hotword_<wbr>rule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordrule">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Hotword-based detection rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventioninspecttemplateinspectconfigrulesetruleexclusionrule">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule</h4>
 {{% choosable language nodejs %}}
@@ -4201,11 +3878,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRule.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4215,53 +3891,48 @@ Structure is documented below.
             title="Required">
         <span id="matchingtype_csharp">
 <a href="#matchingtype_csharp" style="color: inherit; text-decoration: inherit;">Matching<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the rule is applied. See the documentation for more information: https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig#MatchingType
 Possible values are `MATCHING_TYPE_FULL_MATCH`, `MATCHING_TYPE_PARTIAL_MATCH`, and `MATCHING_TYPE_INVERSE_MATCH`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dictionary_csharp">
 <a href="#dictionary_csharp" style="color: inherit; text-decoration: inherit;">Dictionary</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruledictionary">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Dictionary<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="excludeinfotypes_csharp">
 <a href="#excludeinfotypes_csharp" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Info<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruleexcludeinfotypes">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Exclude<wbr>Info<wbr>Types<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of infoTypes for which findings would affect this rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="regex_csharp">
 <a href="#regex_csharp" style="color: inherit; text-decoration: inherit;">Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruleregex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Regex<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Regular expression which defines the rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4270,53 +3941,48 @@ Structure is documented below.
             title="Required">
         <span id="matchingtype_go">
 <a href="#matchingtype_go" style="color: inherit; text-decoration: inherit;">Matching<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the rule is applied. See the documentation for more information: https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig#MatchingType
 Possible values are `MATCHING_TYPE_FULL_MATCH`, `MATCHING_TYPE_PARTIAL_MATCH`, and `MATCHING_TYPE_INVERSE_MATCH`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dictionary_go">
 <a href="#dictionary_go" style="color: inherit; text-decoration: inherit;">Dictionary</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruledictionary">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Dictionary</a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="excludeinfotypes_go">
 <a href="#excludeinfotypes_go" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Info<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruleexcludeinfotypes">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Exclude<wbr>Info<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Set of infoTypes for which findings would affect this rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="regex_go">
 <a href="#regex_go" style="color: inherit; text-decoration: inherit;">Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruleregex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Regex</a></span>
     </dt>
     <dd>{{% md %}}Regular expression which defines the rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4325,53 +3991,48 @@ Structure is documented below.
             title="Required">
         <span id="matchingtype_nodejs">
 <a href="#matchingtype_nodejs" style="color: inherit; text-decoration: inherit;">matching<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the rule is applied. See the documentation for more information: https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig#MatchingType
 Possible values are `MATCHING_TYPE_FULL_MATCH`, `MATCHING_TYPE_PARTIAL_MATCH`, and `MATCHING_TYPE_INVERSE_MATCH`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dictionary_nodejs">
 <a href="#dictionary_nodejs" style="color: inherit; text-decoration: inherit;">dictionary</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruledictionary">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Dictionary</a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="excludeinfotypes_nodejs">
 <a href="#excludeinfotypes_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>Info<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruleexcludeinfotypes">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Exclude<wbr>Info<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Set of infoTypes for which findings would affect this rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="regex_nodejs">
 <a href="#regex_nodejs" style="color: inherit; text-decoration: inherit;">regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruleregex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Regex</a></span>
     </dt>
     <dd>{{% md %}}Regular expression which defines the rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4380,56 +4041,48 @@ Structure is documented below.
             title="Required">
         <span id="matching_type_python">
 <a href="#matching_type_python" style="color: inherit; text-decoration: inherit;">matching_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How the rule is applied. See the documentation for more information: https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig#MatchingType
 Possible values are `MATCHING_TYPE_FULL_MATCH`, `MATCHING_TYPE_PARTIAL_MATCH`, and `MATCHING_TYPE_INVERSE_MATCH`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dictionary_python">
 <a href="#dictionary_python" style="color: inherit; text-decoration: inherit;">dictionary</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruledictionary">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Dictionary<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exclude_info_types_python">
 <a href="#exclude_info_types_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>info_<wbr>types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruleexcludeinfotypes">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Exclude<wbr>Info<wbr>Types<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of infoTypes for which findings would affect this rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="regex_python">
 <a href="#regex_python" style="color: inherit; text-decoration: inherit;">regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruleregex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Regex<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Regular expression which defines the rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventioninspecttemplateinspectconfigrulesetruleexclusionruledictionary">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Dictionary</h4>
 {{% choosable language nodejs %}}
@@ -4439,11 +4092,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionary.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4453,29 +4105,26 @@ Structure is documented below.
             title="Optional">
         <span id="cloudstoragepath_csharp">
 <a href="#cloudstoragepath_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Storage<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruledictionarycloudstoragepath">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="wordlist_csharp">
 <a href="#wordlist_csharp" style="color: inherit; text-decoration: inherit;">Word<wbr>List</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruledictionarywordlist">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Dictionary<wbr>Word<wbr>List<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of words or phrases to search for.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4484,29 +4133,26 @@ Structure is documented below.
             title="Optional">
         <span id="cloudstoragepath_go">
 <a href="#cloudstoragepath_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Storage<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruledictionarycloudstoragepath">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="wordlist_go">
 <a href="#wordlist_go" style="color: inherit; text-decoration: inherit;">Word<wbr>List</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruledictionarywordlist">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Dictionary<wbr>Word<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}List of words or phrases to search for.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4515,29 +4161,26 @@ Structure is documented below.
             title="Optional">
         <span id="cloudstoragepath_nodejs">
 <a href="#cloudstoragepath_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Storage<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruledictionarycloudstoragepath">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="wordlist_nodejs">
 <a href="#wordlist_nodejs" style="color: inherit; text-decoration: inherit;">word<wbr>List</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruledictionarywordlist">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Dictionary<wbr>Word<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}List of words or phrases to search for.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4546,32 +4189,26 @@ Structure is documented below.
             title="Optional">
         <span id="cloud_storage_path_python">
 <a href="#cloud_storage_path_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>storage_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruledictionarycloudstoragepath">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="word_list_python">
 <a href="#word_list_python" style="color: inherit; text-decoration: inherit;">word_<wbr>list</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruledictionarywordlist">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Dictionary<wbr>Word<wbr>List<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of words or phrases to search for.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventioninspecttemplateinspectconfigrulesetruleexclusionruledictionarycloudstoragepath">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path</h4>
 {{% choosable language nodejs %}}
@@ -4581,11 +4218,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryCloudStoragePathArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryCloudStoragePathOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryCloudStoragePathArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryCloudStoragePath.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4595,16 +4231,14 @@ Structure is documented below.
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4613,16 +4247,14 @@ Structure is documented below.
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4631,16 +4263,14 @@ Structure is documented below.
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4649,19 +4279,14 @@ Structure is documented below.
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventioninspecttemplateinspectconfigrulesetruleexclusionruledictionarywordlist">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Dictionary<wbr>Word<wbr>List</h4>
 {{% choosable language nodejs %}}
@@ -4671,11 +4296,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryWordListArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryWordListOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryWordListArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryWordList.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4685,17 +4309,15 @@ Structure is documented below.
             title="Required">
         <span id="words_csharp">
 <a href="#words_csharp" style="color: inherit; text-decoration: inherit;">Words</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Words or phrases defining the dictionary. The dictionary must contain at least one
 phrase and every phrase must contain at least 2 characters that are letters or digits.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4704,17 +4326,15 @@ phrase and every phrase must contain at least 2 characters that are letters or d
             title="Required">
         <span id="words_go">
 <a href="#words_go" style="color: inherit; text-decoration: inherit;">Words</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Words or phrases defining the dictionary. The dictionary must contain at least one
 phrase and every phrase must contain at least 2 characters that are letters or digits.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4723,17 +4343,15 @@ phrase and every phrase must contain at least 2 characters that are letters or d
             title="Required">
         <span id="words_nodejs">
 <a href="#words_nodejs" style="color: inherit; text-decoration: inherit;">words</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Words or phrases defining the dictionary. The dictionary must contain at least one
 phrase and every phrase must contain at least 2 characters that are letters or digits.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4742,20 +4360,15 @@ phrase and every phrase must contain at least 2 characters that are letters or d
             title="Required">
         <span id="words_python">
 <a href="#words_python" style="color: inherit; text-decoration: inherit;">words</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Words or phrases defining the dictionary. The dictionary must contain at least one
 phrase and every phrase must contain at least 2 characters that are letters or digits.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventioninspecttemplateinspectconfigrulesetruleexclusionruleexcludeinfotypes">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Exclude<wbr>Info<wbr>Types</h4>
 {{% choosable language nodejs %}}
@@ -4765,11 +4378,10 @@ phrase and every phrase must contain at least 2 characters that are letters or d
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypes.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4779,17 +4391,15 @@ phrase and every phrase must contain at least 2 characters that are letters or d
             title="Required">
         <span id="infotypes_csharp">
 <a href="#infotypes_csharp" style="color: inherit; text-decoration: inherit;">Info<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruleexcludeinfotypesinfotype">List&lt;Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Exclude<wbr>Info<wbr>Types<wbr>Info<wbr>Type<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4798,17 +4408,15 @@ Structure is documented below.
             title="Required">
         <span id="infotypes_go">
 <a href="#infotypes_go" style="color: inherit; text-decoration: inherit;">Info<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruleexcludeinfotypesinfotype">[]Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Exclude<wbr>Info<wbr>Types<wbr>Info<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4817,17 +4425,15 @@ Structure is documented below.
             title="Required">
         <span id="infotypes_nodejs">
 <a href="#infotypes_nodejs" style="color: inherit; text-decoration: inherit;">info<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruleexcludeinfotypesinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Exclude<wbr>Info<wbr>Types<wbr>Info<wbr>Type[]</a></span>
     </dt>
     <dd>{{% md %}}If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4836,20 +4442,15 @@ Structure is documented below.
             title="Required">
         <span id="info_types_python">
 <a href="#info_types_python" style="color: inherit; text-decoration: inherit;">info_<wbr>types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetruleexclusionruleexcludeinfotypesinfotype">Sequence[Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Exclude<wbr>Info<wbr>Types<wbr>Info<wbr>Type<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}If a finding is matched by any of the infoType detectors listed here, the finding will be excluded from the scan results.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventioninspecttemplateinspectconfigrulesetruleexclusionruleexcludeinfotypesinfotype">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Exclude<wbr>Info<wbr>Types<wbr>Info<wbr>Type</h4>
 {{% choosable language nodejs %}}
@@ -4859,11 +4460,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoTypeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoTypeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoTypeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypesInfoType.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4873,17 +4473,15 @@ Structure is documented below.
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4892,17 +4490,15 @@ or `projects/project-id/storedInfoTypes/432452342`.
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4911,17 +4507,15 @@ or `projects/project-id/storedInfoTypes/432452342`.
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4930,20 +4524,15 @@ or `projects/project-id/storedInfoTypes/432452342`.
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
 or `projects/project-id/storedInfoTypes/432452342`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventioninspecttemplateinspectconfigrulesetruleexclusionruleregex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Exclusion<wbr>Rule<wbr>Regex</h4>
 {{% choosable language nodejs %}}
@@ -4953,11 +4542,10 @@ or `projects/project-id/storedInfoTypes/432452342`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegexArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegex.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4967,28 +4555,25 @@ or `projects/project-id/storedInfoTypes/432452342`.
             title="Required">
         <span id="pattern_csharp">
 <a href="#pattern_csharp" style="color: inherit; text-decoration: inherit;">Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pattern defining the regular expression.
 Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupindexes_csharp">
 <a href="#groupindexes_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Indexes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
+        <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4997,28 +4582,25 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
             title="Required">
         <span id="pattern_go">
 <a href="#pattern_go" style="color: inherit; text-decoration: inherit;">Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pattern defining the regular expression.
 Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupindexes_go">
 <a href="#groupindexes_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Indexes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
+        <span class="property-type">[]int</span>
     </dt>
     <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5027,28 +4609,25 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
             title="Required">
         <span id="pattern_nodejs">
 <a href="#pattern_nodejs" style="color: inherit; text-decoration: inherit;">pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pattern defining the regular expression.
 Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupindexes_nodejs">
 <a href="#groupindexes_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Indexes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5057,31 +4636,25 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
             title="Required">
         <span id="pattern_python">
 <a href="#pattern_python" style="color: inherit; text-decoration: inherit;">pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Pattern defining the regular expression.
 Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="group_indexes_python">
 <a href="#group_indexes_python" style="color: inherit; text-decoration: inherit;">group_<wbr>indexes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventioninspecttemplateinspectconfigrulesetrulehotwordrule">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule</h4>
 {{% choosable language nodejs %}}
@@ -5091,11 +4664,10 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -5105,31 +4677,29 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
             title="Required">
         <span id="hotwordregex_csharp">
 <a href="#hotwordregex_csharp" style="color: inherit; text-decoration: inherit;">Hotword<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordrulehotwordregex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Hotword<wbr>Regex<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Regular expression pattern defining what qualifies as a hotword.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="likelihoodadjustment_csharp">
 <a href="#likelihoodadjustment_csharp" style="color: inherit; text-decoration: inherit;">Likelihood<wbr>Adjustment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordrulelikelihoodadjustment">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Likelihood<wbr>Adjustment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Likelihood adjustment to apply to all matching findings.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="proximity_csharp">
 <a href="#proximity_csharp" style="color: inherit; text-decoration: inherit;">Proximity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordruleproximity">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Proximity<wbr>Args</a></span>
     </dt>
@@ -5140,10 +4710,8 @@ used to match substrings of the finding itself. For example, the certainty of a 
 office using the hotword regex `(xxx)`, where `xxx` is the area code in question.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5152,31 +4720,29 @@ Structure is documented below.
             title="Required">
         <span id="hotwordregex_go">
 <a href="#hotwordregex_go" style="color: inherit; text-decoration: inherit;">Hotword<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordrulehotwordregex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Hotword<wbr>Regex</a></span>
     </dt>
     <dd>{{% md %}}Regular expression pattern defining what qualifies as a hotword.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="likelihoodadjustment_go">
 <a href="#likelihoodadjustment_go" style="color: inherit; text-decoration: inherit;">Likelihood<wbr>Adjustment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordrulelikelihoodadjustment">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Likelihood<wbr>Adjustment</a></span>
     </dt>
     <dd>{{% md %}}Likelihood adjustment to apply to all matching findings.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="proximity_go">
 <a href="#proximity_go" style="color: inherit; text-decoration: inherit;">Proximity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordruleproximity">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Proximity</a></span>
     </dt>
@@ -5187,10 +4753,8 @@ used to match substrings of the finding itself. For example, the certainty of a 
 office using the hotword regex `(xxx)`, where `xxx` is the area code in question.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5199,31 +4763,29 @@ Structure is documented below.
             title="Required">
         <span id="hotwordregex_nodejs">
 <a href="#hotwordregex_nodejs" style="color: inherit; text-decoration: inherit;">hotword<wbr>Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordrulehotwordregex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Hotword<wbr>Regex</a></span>
     </dt>
     <dd>{{% md %}}Regular expression pattern defining what qualifies as a hotword.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="likelihoodadjustment_nodejs">
 <a href="#likelihoodadjustment_nodejs" style="color: inherit; text-decoration: inherit;">likelihood<wbr>Adjustment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordrulelikelihoodadjustment">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Likelihood<wbr>Adjustment</a></span>
     </dt>
     <dd>{{% md %}}Likelihood adjustment to apply to all matching findings.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="proximity_nodejs">
 <a href="#proximity_nodejs" style="color: inherit; text-decoration: inherit;">proximity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordruleproximity">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Proximity</a></span>
     </dt>
@@ -5234,10 +4796,8 @@ used to match substrings of the finding itself. For example, the certainty of a 
 office using the hotword regex `(xxx)`, where `xxx` is the area code in question.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5246,31 +4806,29 @@ Structure is documented below.
             title="Required">
         <span id="hotword_regex_python">
 <a href="#hotword_regex_python" style="color: inherit; text-decoration: inherit;">hotword_<wbr>regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordrulehotwordregex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Hotword<wbr>Regex<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Regular expression pattern defining what qualifies as a hotword.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="likelihood_adjustment_python">
 <a href="#likelihood_adjustment_python" style="color: inherit; text-decoration: inherit;">likelihood_<wbr>adjustment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordrulelikelihoodadjustment">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Likelihood<wbr>Adjustment<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Likelihood adjustment to apply to all matching findings.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="proximity_python">
 <a href="#proximity_python" style="color: inherit; text-decoration: inherit;">proximity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventioninspecttemplateinspectconfigrulesetrulehotwordruleproximity">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Proximity<wbr>Args</a></span>
     </dt>
@@ -5281,13 +4839,8 @@ used to match substrings of the finding itself. For example, the certainty of a 
 office using the hotword regex `(xxx)`, where `xxx` is the area code in question.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventioninspecttemplateinspectconfigrulesetrulehotwordrulehotwordregex">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Hotword<wbr>Regex</h4>
 {{% choosable language nodejs %}}
@@ -5297,11 +4850,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegex.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -5311,28 +4863,25 @@ Structure is documented below.
             title="Required">
         <span id="pattern_csharp">
 <a href="#pattern_csharp" style="color: inherit; text-decoration: inherit;">Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pattern defining the regular expression.
 Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupindexes_csharp">
 <a href="#groupindexes_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Indexes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
+        <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5341,28 +4890,25 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
             title="Required">
         <span id="pattern_go">
 <a href="#pattern_go" style="color: inherit; text-decoration: inherit;">Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pattern defining the regular expression.
 Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupindexes_go">
 <a href="#groupindexes_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Indexes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
+        <span class="property-type">[]int</span>
     </dt>
     <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5371,28 +4917,25 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
             title="Required">
         <span id="pattern_nodejs">
 <a href="#pattern_nodejs" style="color: inherit; text-decoration: inherit;">pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pattern defining the regular expression.
 Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupindexes_nodejs">
 <a href="#groupindexes_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Indexes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5401,31 +4944,25 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
             title="Required">
         <span id="pattern_python">
 <a href="#pattern_python" style="color: inherit; text-decoration: inherit;">pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Pattern defining the regular expression.
 Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="group_indexes_python">
 <a href="#group_indexes_python" style="color: inherit; text-decoration: inherit;">group_<wbr>indexes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventioninspecttemplateinspectconfigrulesetrulehotwordrulelikelihoodadjustment">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Likelihood<wbr>Adjustment</h4>
 {{% choosable language nodejs %}}
@@ -5435,11 +4972,10 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustment.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -5449,21 +4985,20 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
             title="Optional">
         <span id="fixedlikelihood_csharp">
 <a href="#fixedlikelihood_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Likelihood</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set the likelihood of a finding to a fixed value. Either this or relative_likelihood can be set.
 Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="relativelikelihood_csharp">
 <a href="#relativelikelihood_csharp" style="color: inherit; text-decoration: inherit;">Relative<wbr>Likelihood</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Increase or decrease the likelihood by the specified number of levels. For example,
 if a finding would be POSSIBLE without the detection rule and relativeLikelihood is 1,
@@ -5472,10 +5007,8 @@ Likelihood may never drop below VERY_UNLIKELY or exceed VERY_LIKELY, so applying
 adjustment of 1 followed by an adjustment of -1 when base likelihood is VERY_LIKELY
 will result in a final likelihood of LIKELY. Either this or fixed_likelihood can be set.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5484,21 +5017,20 @@ will result in a final likelihood of LIKELY. Either this or fixed_likelihood can
             title="Optional">
         <span id="fixedlikelihood_go">
 <a href="#fixedlikelihood_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Likelihood</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set the likelihood of a finding to a fixed value. Either this or relative_likelihood can be set.
 Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="relativelikelihood_go">
 <a href="#relativelikelihood_go" style="color: inherit; text-decoration: inherit;">Relative<wbr>Likelihood</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Increase or decrease the likelihood by the specified number of levels. For example,
 if a finding would be POSSIBLE without the detection rule and relativeLikelihood is 1,
@@ -5507,10 +5039,8 @@ Likelihood may never drop below VERY_UNLIKELY or exceed VERY_LIKELY, so applying
 adjustment of 1 followed by an adjustment of -1 when base likelihood is VERY_LIKELY
 will result in a final likelihood of LIKELY. Either this or fixed_likelihood can be set.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5519,21 +5049,20 @@ will result in a final likelihood of LIKELY. Either this or fixed_likelihood can
             title="Optional">
         <span id="fixedlikelihood_nodejs">
 <a href="#fixedlikelihood_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Likelihood</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set the likelihood of a finding to a fixed value. Either this or relative_likelihood can be set.
 Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="relativelikelihood_nodejs">
 <a href="#relativelikelihood_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Likelihood</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Increase or decrease the likelihood by the specified number of levels. For example,
 if a finding would be POSSIBLE without the detection rule and relativeLikelihood is 1,
@@ -5542,10 +5071,8 @@ Likelihood may never drop below VERY_UNLIKELY or exceed VERY_LIKELY, so applying
 adjustment of 1 followed by an adjustment of -1 when base likelihood is VERY_LIKELY
 will result in a final likelihood of LIKELY. Either this or fixed_likelihood can be set.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5554,21 +5081,20 @@ will result in a final likelihood of LIKELY. Either this or fixed_likelihood can
             title="Optional">
         <span id="fixed_likelihood_python">
 <a href="#fixed_likelihood_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>likelihood</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Set the likelihood of a finding to a fixed value. Either this or relative_likelihood can be set.
 Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="relative_likelihood_python">
 <a href="#relative_likelihood_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>likelihood</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Increase or decrease the likelihood by the specified number of levels. For example,
 if a finding would be POSSIBLE without the detection rule and relativeLikelihood is 1,
@@ -5577,13 +5103,8 @@ Likelihood may never drop below VERY_UNLIKELY or exceed VERY_LIKELY, so applying
 adjustment of 1 followed by an adjustment of -1 when base likelihood is VERY_LIKELY
 will result in a final likelihood of LIKELY. Either this or fixed_likelihood can be set.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventioninspecttemplateinspectconfigrulesetrulehotwordruleproximity">Prevention<wbr>Inspect<wbr>Template<wbr>Inspect<wbr>Config<wbr>Rule<wbr>Set<wbr>Rule<wbr>Hotword<wbr>Rule<wbr>Proximity</h4>
 {{% choosable language nodejs %}}
@@ -5593,11 +5114,10 @@ will result in a final likelihood of LIKELY. Either this or fixed_likelihood can
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximity.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -5607,27 +5127,24 @@ will result in a final likelihood of LIKELY. Either this or fixed_likelihood can
             title="Optional">
         <span id="windowafter_csharp">
 <a href="#windowafter_csharp" style="color: inherit; text-decoration: inherit;">Window<wbr>After</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of characters after the finding to consider. Either this or window_before must be specified
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="windowbefore_csharp">
 <a href="#windowbefore_csharp" style="color: inherit; text-decoration: inherit;">Window<wbr>Before</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of characters before the finding to consider. Either this or window_after must be specified
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5636,27 +5153,24 @@ will result in a final likelihood of LIKELY. Either this or fixed_likelihood can
             title="Optional">
         <span id="windowafter_go">
 <a href="#windowafter_go" style="color: inherit; text-decoration: inherit;">Window<wbr>After</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of characters after the finding to consider. Either this or window_before must be specified
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="windowbefore_go">
 <a href="#windowbefore_go" style="color: inherit; text-decoration: inherit;">Window<wbr>Before</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of characters before the finding to consider. Either this or window_after must be specified
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5665,27 +5179,24 @@ will result in a final likelihood of LIKELY. Either this or fixed_likelihood can
             title="Optional">
         <span id="windowafter_nodejs">
 <a href="#windowafter_nodejs" style="color: inherit; text-decoration: inherit;">window<wbr>After</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of characters after the finding to consider. Either this or window_before must be specified
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="windowbefore_nodejs">
 <a href="#windowbefore_nodejs" style="color: inherit; text-decoration: inherit;">window<wbr>Before</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of characters before the finding to consider. Either this or window_after must be specified
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5694,35 +5205,24 @@ will result in a final likelihood of LIKELY. Either this or fixed_likelihood can
             title="Optional">
         <span id="window_after_python">
 <a href="#window_after_python" style="color: inherit; text-decoration: inherit;">window_<wbr>after</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of characters after the finding to consider. Either this or window_before must be specified
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="window_before_python">
 <a href="#window_before_python" style="color: inherit; text-decoration: inherit;">window_<wbr>before</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of characters before the finding to consider. Either this or window_after must be specified
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 ## Import
 
 

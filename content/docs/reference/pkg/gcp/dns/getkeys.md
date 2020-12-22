@@ -156,7 +156,6 @@ export const fooDnsDsRecord = fooDnsKeys.keySigningKeys[0].dsRecord;
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -164,27 +163,24 @@ The following arguments are supported:
             title="Required">
         <span id="managedzone_csharp">
 <a href="#managedzone_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or id of the Cloud DNS managed zone.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If `project` is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -193,27 +189,24 @@ The following arguments are supported:
             title="Required">
         <span id="managedzone_go">
 <a href="#managedzone_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or id of the Cloud DNS managed zone.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If `project` is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -222,27 +215,24 @@ The following arguments are supported:
             title="Required">
         <span id="managedzone_nodejs">
 <a href="#managedzone_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or id of the Cloud DNS managed zone.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If `project` is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -251,30 +241,24 @@ The following arguments are supported:
             title="Required">
         <span id="managed_zone_python">
 <a href="#managed_zone_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name or id of the Cloud DNS managed zone.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If `project` is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -285,7 +269,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -293,58 +276,52 @@ The following output properties are available:
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="keysigningkeys_csharp">
 <a href="#keysigningkeys_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Signing<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkeyskeysigningkey">List&lt;Get<wbr>Keys<wbr>Key<wbr>Signing<wbr>Key&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of Key-signing key (KSK) records. Structure is documented below. Additionally, the DS record is provided:
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="managedzone_csharp">
 <a href="#managedzone_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="zonesigningkeys_csharp">
 <a href="#zonesigningkeys_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Signing<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkeyszonesigningkey">List&lt;Get<wbr>Keys<wbr>Zone<wbr>Signing<wbr>Key&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of Zone-signing key (ZSK) records. Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -353,58 +330,52 @@ The following output properties are available:
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="keysigningkeys_go">
 <a href="#keysigningkeys_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Signing<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkeyskeysigningkey">[]Get<wbr>Keys<wbr>Key<wbr>Signing<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}A list of Key-signing key (KSK) records. Structure is documented below. Additionally, the DS record is provided:
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="managedzone_go">
 <a href="#managedzone_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="zonesigningkeys_go">
 <a href="#zonesigningkeys_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Signing<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkeyszonesigningkey">[]Get<wbr>Keys<wbr>Zone<wbr>Signing<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}A list of Zone-signing key (ZSK) records. Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -413,58 +384,52 @@ The following output properties are available:
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="keysigningkeys_nodejs">
 <a href="#keysigningkeys_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Signing<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkeyskeysigningkey">Get<wbr>Keys<wbr>Key<wbr>Signing<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}A list of Key-signing key (KSK) records. Structure is documented below. Additionally, the DS record is provided:
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="managedzone_nodejs">
 <a href="#managedzone_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="zonesigningkeys_nodejs">
 <a href="#zonesigningkeys_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Signing<wbr>Keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkeyszonesigningkey">Get<wbr>Keys<wbr>Zone<wbr>Signing<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}A list of Zone-signing key (ZSK) records. Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -473,61 +438,52 @@ The following output properties are available:
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="key_signing_keys_python">
 <a href="#key_signing_keys_python" style="color: inherit; text-decoration: inherit;">key_<wbr>signing_<wbr>keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkeyskeysigningkey">Sequence[Get<wbr>Keys<wbr>Key<wbr>Signing<wbr>Key]</a></span>
     </dt>
     <dd>{{% md %}}A list of Key-signing key (KSK) records. Structure is documented below. Additionally, the DS record is provided:
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="managed_zone_python">
 <a href="#managed_zone_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="zone_signing_keys_python">
 <a href="#zone_signing_keys_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>signing_<wbr>keys</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkeyszonesigningkey">Sequence[Get<wbr>Keys<wbr>Zone<wbr>Signing<wbr>Key]</a></span>
     </dt>
     <dd>{{% md %}}A list of Zone-signing key (ZSK) records. Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -549,7 +505,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -557,115 +512,104 @@ The following output properties are available:
             title="Required">
         <span id="algorithm_csharp">
 <a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String mnemonic specifying the DNSSEC algorithm of this key. Immutable after creation time. Possible values are `ecdsap256sha256`, `ecdsap384sha384`, `rsasha1`, `rsasha256`, and `rsasha512`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="creationtime_csharp">
 <a href="#creationtime_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time that this resource was created in the control plane. This is in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A mutable string of at most 1024 characters associated with this resource for the user's convenience.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="digests_csharp">
 <a href="#digests_csharp" style="color: inherit; text-decoration: inherit;">Digests</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkeyskeysigningkeydigest">List&lt;Get<wbr>Keys<wbr>Key<wbr>Signing<wbr>Key<wbr>Digest<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of cryptographic hashes of the DNSKEY resource record associated with this DnsKey. These digests are needed to construct a DS record that points at this DNS key. Each contains:
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="dsrecord_csharp">
 <a href="#dsrecord_csharp" style="color: inherit; text-decoration: inherit;">Ds<wbr>Record</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DS record based on the KSK record. This is used when [delegating](https://cloud.google.com/dns/docs/dnssec-advanced#subdelegation) DNSSEC-signed subdomains.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the resource; defined by the server.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="isactive_csharp">
 <a href="#isactive_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Active</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Active keys will be used to sign subsequent changes to the ManagedZone. Inactive keys will still be present as DNSKEY Resource Records for the use of resolvers validating existing signatures.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="keylength_csharp">
 <a href="#keylength_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Length</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Length of the key in bits. Specified at creation time then immutable.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="keytag_csharp">
 <a href="#keytag_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The key tag is a non-cryptographic hash of the a DNSKEY resource record associated with this DnsKey. The key tag can be used to identify a DNSKEY more quickly (but it is not a unique identifier). In particular, the key tag is used in a parent zone's DS record to point at the DNSKEY in this child ManagedZone. The key tag is a number in the range [0, 65535] and the algorithm to calculate it is specified in RFC4034 Appendix B.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="publickey_csharp">
 <a href="#publickey_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64 encoded public half of this key.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -674,115 +618,104 @@ The following output properties are available:
             title="Required">
         <span id="algorithm_go">
 <a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String mnemonic specifying the DNSSEC algorithm of this key. Immutable after creation time. Possible values are `ecdsap256sha256`, `ecdsap384sha384`, `rsasha1`, `rsasha256`, and `rsasha512`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="creationtime_go">
 <a href="#creationtime_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time that this resource was created in the control plane. This is in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A mutable string of at most 1024 characters associated with this resource for the user's convenience.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="digests_go">
 <a href="#digests_go" style="color: inherit; text-decoration: inherit;">Digests</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkeyskeysigningkeydigest">[]Get<wbr>Keys<wbr>Key<wbr>Signing<wbr>Key<wbr>Digest</a></span>
     </dt>
     <dd>{{% md %}}A list of cryptographic hashes of the DNSKEY resource record associated with this DnsKey. These digests are needed to construct a DS record that points at this DNS key. Each contains:
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="dsrecord_go">
 <a href="#dsrecord_go" style="color: inherit; text-decoration: inherit;">Ds<wbr>Record</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DS record based on the KSK record. This is used when [delegating](https://cloud.google.com/dns/docs/dnssec-advanced#subdelegation) DNSSEC-signed subdomains.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the resource; defined by the server.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="isactive_go">
 <a href="#isactive_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Active</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Active keys will be used to sign subsequent changes to the ManagedZone. Inactive keys will still be present as DNSKEY Resource Records for the use of resolvers validating existing signatures.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="keylength_go">
 <a href="#keylength_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Length</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Length of the key in bits. Specified at creation time then immutable.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="keytag_go">
 <a href="#keytag_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The key tag is a non-cryptographic hash of the a DNSKEY resource record associated with this DnsKey. The key tag can be used to identify a DNSKEY more quickly (but it is not a unique identifier). In particular, the key tag is used in a parent zone's DS record to point at the DNSKEY in this child ManagedZone. The key tag is a number in the range [0, 65535] and the algorithm to calculate it is specified in RFC4034 Appendix B.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="publickey_go">
 <a href="#publickey_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64 encoded public half of this key.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -791,115 +724,104 @@ The following output properties are available:
             title="Required">
         <span id="algorithm_nodejs">
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String mnemonic specifying the DNSSEC algorithm of this key. Immutable after creation time. Possible values are `ecdsap256sha256`, `ecdsap384sha384`, `rsasha1`, `rsasha256`, and `rsasha512`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="creationtime_nodejs">
 <a href="#creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time that this resource was created in the control plane. This is in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A mutable string of at most 1024 characters associated with this resource for the user's convenience.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="digests_nodejs">
 <a href="#digests_nodejs" style="color: inherit; text-decoration: inherit;">digests</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkeyskeysigningkeydigest">Get<wbr>Keys<wbr>Key<wbr>Signing<wbr>Key<wbr>Digest[]</a></span>
     </dt>
     <dd>{{% md %}}A list of cryptographic hashes of the DNSKEY resource record associated with this DnsKey. These digests are needed to construct a DS record that points at this DNS key. Each contains:
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="dsrecord_nodejs">
 <a href="#dsrecord_nodejs" style="color: inherit; text-decoration: inherit;">ds<wbr>Record</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DS record based on the KSK record. This is used when [delegating](https://cloud.google.com/dns/docs/dnssec-advanced#subdelegation) DNSSEC-signed subdomains.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the resource; defined by the server.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="isactive_nodejs">
 <a href="#isactive_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Active</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Active keys will be used to sign subsequent changes to the ManagedZone. Inactive keys will still be present as DNSKEY Resource Records for the use of resolvers validating existing signatures.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="keylength_nodejs">
 <a href="#keylength_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Length</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Length of the key in bits. Specified at creation time then immutable.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="keytag_nodejs">
 <a href="#keytag_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The key tag is a non-cryptographic hash of the a DNSKEY resource record associated with this DnsKey. The key tag can be used to identify a DNSKEY more quickly (but it is not a unique identifier). In particular, the key tag is used in a parent zone's DS record to point at the DNSKEY in this child ManagedZone. The key tag is a number in the range [0, 65535] and the algorithm to calculate it is specified in RFC4034 Appendix B.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="publickey_nodejs">
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64 encoded public half of this key.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -908,118 +830,104 @@ The following output properties are available:
             title="Required">
         <span id="algorithm_python">
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String mnemonic specifying the DNSSEC algorithm of this key. Immutable after creation time. Possible values are `ecdsap256sha256`, `ecdsap384sha384`, `rsasha1`, `rsasha256`, and `rsasha512`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="creation_time_python">
 <a href="#creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time that this resource was created in the control plane. This is in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A mutable string of at most 1024 characters associated with this resource for the user's convenience.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="digests_python">
 <a href="#digests_python" style="color: inherit; text-decoration: inherit;">digests</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkeyskeysigningkeydigest">Sequence[Get<wbr>Keys<wbr>Key<wbr>Signing<wbr>Key<wbr>Digest<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of cryptographic hashes of the DNSKEY resource record associated with this DnsKey. These digests are needed to construct a DS record that points at this DNS key. Each contains:
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ds_record_python">
 <a href="#ds_record_python" style="color: inherit; text-decoration: inherit;">ds_<wbr>record</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DS record based on the KSK record. This is used when [delegating](https://cloud.google.com/dns/docs/dnssec-advanced#subdelegation) DNSSEC-signed subdomains.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the resource; defined by the server.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="is_active_python">
 <a href="#is_active_python" style="color: inherit; text-decoration: inherit;">is_<wbr>active</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Active keys will be used to sign subsequent changes to the ManagedZone. Inactive keys will still be present as DNSKEY Resource Records for the use of resolvers validating existing signatures.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="key_length_python">
 <a href="#key_length_python" style="color: inherit; text-decoration: inherit;">key_<wbr>length</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Length of the key in bits. Specified at creation time then immutable.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="key_tag_python">
 <a href="#key_tag_python" style="color: inherit; text-decoration: inherit;">key_<wbr>tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The key tag is a non-cryptographic hash of the a DNSKEY resource record associated with this DnsKey. The key tag can be used to identify a DNSKEY more quickly (but it is not a unique identifier). In particular, the key tag is used in a parent zone's DS record to point at the DNSKEY in this child ManagedZone. The key tag is a number in the range [0, 65535] and the algorithm to calculate it is specified in RFC4034 Appendix B.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="public_key_python">
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Base64 encoded public half of this key.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="getkeyskeysigningkeydigest">Get<wbr>Keys<wbr>Key<wbr>Signing<wbr>Key<wbr>Digest</h4>
 {{% choosable language nodejs %}}
@@ -1035,7 +943,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1043,27 +950,24 @@ The following output properties are available:
             title="Optional">
         <span id="digest_csharp">
 <a href="#digest_csharp" style="color: inherit; text-decoration: inherit;">Digest</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base-16 encoded bytes of this digest. Suitable for use in a DS resource record.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the algorithm used to calculate this digest. Possible values are `sha1`, `sha256` and `sha384`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1072,27 +976,24 @@ The following output properties are available:
             title="Optional">
         <span id="digest_go">
 <a href="#digest_go" style="color: inherit; text-decoration: inherit;">Digest</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base-16 encoded bytes of this digest. Suitable for use in a DS resource record.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the algorithm used to calculate this digest. Possible values are `sha1`, `sha256` and `sha384`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1101,27 +1002,24 @@ The following output properties are available:
             title="Optional">
         <span id="digest_nodejs">
 <a href="#digest_nodejs" style="color: inherit; text-decoration: inherit;">digest</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base-16 encoded bytes of this digest. Suitable for use in a DS resource record.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the algorithm used to calculate this digest. Possible values are `sha1`, `sha256` and `sha384`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1130,30 +1028,24 @@ The following output properties are available:
             title="Optional">
         <span id="digest_python">
 <a href="#digest_python" style="color: inherit; text-decoration: inherit;">digest</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base-16 encoded bytes of this digest. Suitable for use in a DS resource record.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the algorithm used to calculate this digest. Possible values are `sha1`, `sha256` and `sha384`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="getkeyszonesigningkey">Get<wbr>Keys<wbr>Zone<wbr>Signing<wbr>Key</h4>
 {{% choosable language nodejs %}}
@@ -1169,7 +1061,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1177,104 +1068,94 @@ The following output properties are available:
             title="Required">
         <span id="algorithm_csharp">
 <a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String mnemonic specifying the DNSSEC algorithm of this key. Immutable after creation time. Possible values are `ecdsap256sha256`, `ecdsap384sha384`, `rsasha1`, `rsasha256`, and `rsasha512`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="creationtime_csharp">
 <a href="#creationtime_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time that this resource was created in the control plane. This is in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A mutable string of at most 1024 characters associated with this resource for the user's convenience.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="digests_csharp">
 <a href="#digests_csharp" style="color: inherit; text-decoration: inherit;">Digests</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkeyszonesigningkeydigest">List&lt;Get<wbr>Keys<wbr>Zone<wbr>Signing<wbr>Key<wbr>Digest<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of cryptographic hashes of the DNSKEY resource record associated with this DnsKey. These digests are needed to construct a DS record that points at this DNS key. Each contains:
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the resource; defined by the server.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="isactive_csharp">
 <a href="#isactive_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Active</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Active keys will be used to sign subsequent changes to the ManagedZone. Inactive keys will still be present as DNSKEY Resource Records for the use of resolvers validating existing signatures.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="keylength_csharp">
 <a href="#keylength_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Length</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Length of the key in bits. Specified at creation time then immutable.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="keytag_csharp">
 <a href="#keytag_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The key tag is a non-cryptographic hash of the a DNSKEY resource record associated with this DnsKey. The key tag can be used to identify a DNSKEY more quickly (but it is not a unique identifier). In particular, the key tag is used in a parent zone's DS record to point at the DNSKEY in this child ManagedZone. The key tag is a number in the range [0, 65535] and the algorithm to calculate it is specified in RFC4034 Appendix B.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="publickey_csharp">
 <a href="#publickey_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64 encoded public half of this key.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1283,104 +1164,94 @@ The following output properties are available:
             title="Required">
         <span id="algorithm_go">
 <a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String mnemonic specifying the DNSSEC algorithm of this key. Immutable after creation time. Possible values are `ecdsap256sha256`, `ecdsap384sha384`, `rsasha1`, `rsasha256`, and `rsasha512`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="creationtime_go">
 <a href="#creationtime_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time that this resource was created in the control plane. This is in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A mutable string of at most 1024 characters associated with this resource for the user's convenience.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="digests_go">
 <a href="#digests_go" style="color: inherit; text-decoration: inherit;">Digests</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkeyszonesigningkeydigest">[]Get<wbr>Keys<wbr>Zone<wbr>Signing<wbr>Key<wbr>Digest</a></span>
     </dt>
     <dd>{{% md %}}A list of cryptographic hashes of the DNSKEY resource record associated with this DnsKey. These digests are needed to construct a DS record that points at this DNS key. Each contains:
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the resource; defined by the server.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="isactive_go">
 <a href="#isactive_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Active</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Active keys will be used to sign subsequent changes to the ManagedZone. Inactive keys will still be present as DNSKEY Resource Records for the use of resolvers validating existing signatures.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="keylength_go">
 <a href="#keylength_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Length</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Length of the key in bits. Specified at creation time then immutable.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="keytag_go">
 <a href="#keytag_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The key tag is a non-cryptographic hash of the a DNSKEY resource record associated with this DnsKey. The key tag can be used to identify a DNSKEY more quickly (but it is not a unique identifier). In particular, the key tag is used in a parent zone's DS record to point at the DNSKEY in this child ManagedZone. The key tag is a number in the range [0, 65535] and the algorithm to calculate it is specified in RFC4034 Appendix B.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="publickey_go">
 <a href="#publickey_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64 encoded public half of this key.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1389,104 +1260,94 @@ The following output properties are available:
             title="Required">
         <span id="algorithm_nodejs">
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String mnemonic specifying the DNSSEC algorithm of this key. Immutable after creation time. Possible values are `ecdsap256sha256`, `ecdsap384sha384`, `rsasha1`, `rsasha256`, and `rsasha512`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="creationtime_nodejs">
 <a href="#creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time that this resource was created in the control plane. This is in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A mutable string of at most 1024 characters associated with this resource for the user's convenience.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="digests_nodejs">
 <a href="#digests_nodejs" style="color: inherit; text-decoration: inherit;">digests</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkeyszonesigningkeydigest">Get<wbr>Keys<wbr>Zone<wbr>Signing<wbr>Key<wbr>Digest[]</a></span>
     </dt>
     <dd>{{% md %}}A list of cryptographic hashes of the DNSKEY resource record associated with this DnsKey. These digests are needed to construct a DS record that points at this DNS key. Each contains:
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the resource; defined by the server.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="isactive_nodejs">
 <a href="#isactive_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Active</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Active keys will be used to sign subsequent changes to the ManagedZone. Inactive keys will still be present as DNSKEY Resource Records for the use of resolvers validating existing signatures.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="keylength_nodejs">
 <a href="#keylength_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Length</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Length of the key in bits. Specified at creation time then immutable.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="keytag_nodejs">
 <a href="#keytag_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The key tag is a non-cryptographic hash of the a DNSKEY resource record associated with this DnsKey. The key tag can be used to identify a DNSKEY more quickly (but it is not a unique identifier). In particular, the key tag is used in a parent zone's DS record to point at the DNSKEY in this child ManagedZone. The key tag is a number in the range [0, 65535] and the algorithm to calculate it is specified in RFC4034 Appendix B.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="publickey_nodejs">
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64 encoded public half of this key.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1495,107 +1356,94 @@ The following output properties are available:
             title="Required">
         <span id="algorithm_python">
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String mnemonic specifying the DNSSEC algorithm of this key. Immutable after creation time. Possible values are `ecdsap256sha256`, `ecdsap384sha384`, `rsasha1`, `rsasha256`, and `rsasha512`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="creation_time_python">
 <a href="#creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time that this resource was created in the control plane. This is in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A mutable string of at most 1024 characters associated with this resource for the user's convenience.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="digests_python">
 <a href="#digests_python" style="color: inherit; text-decoration: inherit;">digests</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkeyszonesigningkeydigest">Sequence[Get<wbr>Keys<wbr>Zone<wbr>Signing<wbr>Key<wbr>Digest<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of cryptographic hashes of the DNSKEY resource record associated with this DnsKey. These digests are needed to construct a DS record that points at this DNS key. Each contains:
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the resource; defined by the server.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="is_active_python">
 <a href="#is_active_python" style="color: inherit; text-decoration: inherit;">is_<wbr>active</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Active keys will be used to sign subsequent changes to the ManagedZone. Inactive keys will still be present as DNSKEY Resource Records for the use of resolvers validating existing signatures.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="key_length_python">
 <a href="#key_length_python" style="color: inherit; text-decoration: inherit;">key_<wbr>length</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Length of the key in bits. Specified at creation time then immutable.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="key_tag_python">
 <a href="#key_tag_python" style="color: inherit; text-decoration: inherit;">key_<wbr>tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The key tag is a non-cryptographic hash of the a DNSKEY resource record associated with this DnsKey. The key tag can be used to identify a DNSKEY more quickly (but it is not a unique identifier). In particular, the key tag is used in a parent zone's DS record to point at the DNSKEY in this child ManagedZone. The key tag is a number in the range [0, 65535] and the algorithm to calculate it is specified in RFC4034 Appendix B.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="public_key_python">
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Base64 encoded public half of this key.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="getkeyszonesigningkeydigest">Get<wbr>Keys<wbr>Zone<wbr>Signing<wbr>Key<wbr>Digest</h4>
 {{% choosable language nodejs %}}
@@ -1611,7 +1459,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1619,27 +1466,24 @@ The following output properties are available:
             title="Optional">
         <span id="digest_csharp">
 <a href="#digest_csharp" style="color: inherit; text-decoration: inherit;">Digest</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base-16 encoded bytes of this digest. Suitable for use in a DS resource record.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the algorithm used to calculate this digest. Possible values are `sha1`, `sha256` and `sha384`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1648,27 +1492,24 @@ The following output properties are available:
             title="Optional">
         <span id="digest_go">
 <a href="#digest_go" style="color: inherit; text-decoration: inherit;">Digest</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base-16 encoded bytes of this digest. Suitable for use in a DS resource record.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the algorithm used to calculate this digest. Possible values are `sha1`, `sha256` and `sha384`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1677,27 +1518,24 @@ The following output properties are available:
             title="Optional">
         <span id="digest_nodejs">
 <a href="#digest_nodejs" style="color: inherit; text-decoration: inherit;">digest</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base-16 encoded bytes of this digest. Suitable for use in a DS resource record.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the algorithm used to calculate this digest. Possible values are `sha1`, `sha256` and `sha384`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1706,30 +1544,24 @@ The following output properties are available:
             title="Optional">
         <span id="digest_python">
 <a href="#digest_python" style="color: inherit; text-decoration: inherit;">digest</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The base-16 encoded bytes of this digest. Suitable for use in a DS resource record.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the algorithm used to calculate this digest. Possible values are `sha1`, `sha256` and `sha384`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

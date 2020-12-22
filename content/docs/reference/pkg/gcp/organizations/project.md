@@ -1,8 +1,8 @@
 
 ---
 title: "Project"
-title_tag: "Resource Project | Module organizations | Package GCP"
-meta_desc: "Explore the Project resource of the organizations module, including examples, input properties, output properties, lookup functions, and supporting types. Allows creation and management of a Google Cloud Platform project."
+title_tag: "gcp.organizations.Project"
+meta_desc: "Documentation for the gcp.organizations.Project resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -105,7 +105,7 @@ const myProject = new gcp.organizations.Project("my_project", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/organizations/#Project">Project</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/organizations/#ProjectArgs">ProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/organizations/#Project">Project</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/organizations/#ProjectArgs">ProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -113,11 +113,11 @@ const myProject = new gcp.organizations.Project("my_project", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations?tab=doc#Project">NewProject</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations?tab=doc#ProjectArgs">ProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations?tab=doc#Project">Project</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations?tab=doc#Project">NewProject</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations?tab=doc#ProjectArgs">ProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations?tab=doc#Project">Project</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Organizations.Project.html">Project</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Organizations.ProjectArgs.html">ProjectArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Organizations.Project.html">Project</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Organizations.ProjectArgs.html">ProjectArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -128,7 +128,7 @@ const myProject = new gcp.organizations.Project("my_project", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -197,7 +197,7 @@ const myProject = new gcp.organizations.Project("my_project", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -236,7 +236,7 @@ const myProject = new gcp.organizations.Project("my_project", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -277,7 +277,6 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -285,34 +284,32 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID. Changing this forces a new project to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autocreatenetwork_csharp">
 <a href="#autocreatenetwork_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Create<wbr>Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Create the 'default' network automatically.  Default `true`.
 If set to `false`, the default network will be deleted.  Note that, for quota purposes, you
 will still need to have 1 network slot available to create the project successfully, even if
 you set `auto_create_network` to `false`, since the network will exist momentarily.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="billingaccount_csharp">
 <a href="#billingaccount_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Account</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alphanumeric ID of the billing account this project
 belongs to. The user or service account performing this operation with the provider
@@ -320,14 +317,13 @@ must have Billing Account Administrator privileges (`roles/billing.admin`) in
 the organization. See [Google Cloud Billing API Access Control](https://cloud.google.com/billing/v1/how-tos/access-control)
 for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="folderid_csharp">
 <a href="#folderid_csharp" style="color: inherit; text-decoration: inherit;">Folder<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The numeric ID of the folder this project should be
 created under. Only one of `org_id` or `folder_id` may be
@@ -335,36 +331,33 @@ specified. If the `folder_id` is specified, then the project is
 created under the specified folder. Changing this forces the
 project to be migrated to the newly specified folder.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the project.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the project.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="orgid_csharp">
 <a href="#orgid_csharp" style="color: inherit; text-decoration: inherit;">Org<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization this project belongs to.
 Changing this forces a new project to be created.  Only one of
@@ -373,22 +366,19 @@ specified then the project is created at the top level. Changing
 this forces the project to be migrated to the newly specified
 organization.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="skipdelete_csharp">
 <a href="#skipdelete_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the resource can be deleted
 without deleting the Project via the Google API.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -397,34 +387,32 @@ without deleting the Project via the Google API.
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID. Changing this forces a new project to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autocreatenetwork_go">
 <a href="#autocreatenetwork_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Create<wbr>Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Create the 'default' network automatically.  Default `true`.
 If set to `false`, the default network will be deleted.  Note that, for quota purposes, you
 will still need to have 1 network slot available to create the project successfully, even if
 you set `auto_create_network` to `false`, since the network will exist momentarily.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="billingaccount_go">
 <a href="#billingaccount_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Account</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alphanumeric ID of the billing account this project
 belongs to. The user or service account performing this operation with the provider
@@ -432,14 +420,13 @@ must have Billing Account Administrator privileges (`roles/billing.admin`) in
 the organization. See [Google Cloud Billing API Access Control](https://cloud.google.com/billing/v1/how-tos/access-control)
 for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="folderid_go">
 <a href="#folderid_go" style="color: inherit; text-decoration: inherit;">Folder<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The numeric ID of the folder this project should be
 created under. Only one of `org_id` or `folder_id` may be
@@ -447,36 +434,33 @@ specified. If the `folder_id` is specified, then the project is
 created under the specified folder. Changing this forces the
 project to be migrated to the newly specified folder.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the project.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the project.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="orgid_go">
 <a href="#orgid_go" style="color: inherit; text-decoration: inherit;">Org<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization this project belongs to.
 Changing this forces a new project to be created.  Only one of
@@ -485,22 +469,19 @@ specified then the project is created at the top level. Changing
 this forces the project to be migrated to the newly specified
 organization.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="skipdelete_go">
 <a href="#skipdelete_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the resource can be deleted
 without deleting the Project via the Google API.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -509,34 +490,32 @@ without deleting the Project via the Google API.
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID. Changing this forces a new project to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autocreatenetwork_nodejs">
 <a href="#autocreatenetwork_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Create<wbr>Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Create the 'default' network automatically.  Default `true`.
 If set to `false`, the default network will be deleted.  Note that, for quota purposes, you
 will still need to have 1 network slot available to create the project successfully, even if
 you set `auto_create_network` to `false`, since the network will exist momentarily.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="billingaccount_nodejs">
 <a href="#billingaccount_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Account</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alphanumeric ID of the billing account this project
 belongs to. The user or service account performing this operation with the provider
@@ -544,14 +523,13 @@ must have Billing Account Administrator privileges (`roles/billing.admin`) in
 the organization. See [Google Cloud Billing API Access Control](https://cloud.google.com/billing/v1/how-tos/access-control)
 for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="folderid_nodejs">
 <a href="#folderid_nodejs" style="color: inherit; text-decoration: inherit;">folder<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The numeric ID of the folder this project should be
 created under. Only one of `org_id` or `folder_id` may be
@@ -559,36 +537,33 @@ specified. If the `folder_id` is specified, then the project is
 created under the specified folder. Changing this forces the
 project to be migrated to the newly specified folder.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the project.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the project.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="orgid_nodejs">
 <a href="#orgid_nodejs" style="color: inherit; text-decoration: inherit;">org<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization this project belongs to.
 Changing this forces a new project to be created.  Only one of
@@ -597,22 +572,19 @@ specified then the project is created at the top level. Changing
 this forces the project to be migrated to the newly specified
 organization.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="skipdelete_nodejs">
 <a href="#skipdelete_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, the resource can be deleted
 without deleting the Project via the Google API.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -621,34 +593,32 @@ without deleting the Project via the Google API.
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project ID. Changing this forces a new project to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="auto_create_network_python">
 <a href="#auto_create_network_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>create_<wbr>network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Create the 'default' network automatically.  Default `true`.
 If set to `false`, the default network will be deleted.  Note that, for quota purposes, you
 will still need to have 1 network slot available to create the project successfully, even if
 you set `auto_create_network` to `false`, since the network will exist momentarily.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="billing_account_python">
 <a href="#billing_account_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>account</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The alphanumeric ID of the billing account this project
 belongs to. The user or service account performing this operation with the provider
@@ -656,14 +626,13 @@ must have Billing Account Administrator privileges (`roles/billing.admin`) in
 the organization. See [Google Cloud Billing API Access Control](https://cloud.google.com/billing/v1/how-tos/access-control)
 for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="folder_id_python">
 <a href="#folder_id_python" style="color: inherit; text-decoration: inherit;">folder_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The numeric ID of the folder this project should be
 created under. Only one of `org_id` or `folder_id` may be
@@ -671,36 +640,33 @@ specified. If the `folder_id` is specified, then the project is
 created under the specified folder. Changing this forces the
 project to be migrated to the newly specified folder.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the project.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of the project.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="org_id_python">
 <a href="#org_id_python" style="color: inherit; text-decoration: inherit;">org_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization this project belongs to.
 Changing this forces a new project to be created.  Only one of
@@ -709,31 +675,24 @@ specified then the project is created at the top level. Changing
 this forces the project to be migrated to the newly specified
 organization.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="skip_delete_python">
 <a href="#skip_delete_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the resource can be deleted
 without deleting the Project via the Google API.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Project resource produces the following output properties:
-
 
 
 
@@ -744,26 +703,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="number_csharp">
 <a href="#number_csharp" style="color: inherit; text-decoration: inherit;">Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The numeric identifier of the project.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -772,26 +728,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="number_go">
 <a href="#number_go" style="color: inherit; text-decoration: inherit;">Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The numeric identifier of the project.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -800,26 +753,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="number_nodejs">
 <a href="#number_nodejs" style="color: inherit; text-decoration: inherit;">number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The numeric identifier of the project.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -828,29 +778,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="number_python">
 <a href="#number_python" style="color: inherit; text-decoration: inherit;">number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The numeric identifier of the project.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -860,7 +804,7 @@ Get an existing Project resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/organizations/#ProjectState">ProjectState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/organizations/#Project">Project</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/organizations/#ProjectState">ProjectState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/organizations/#Project">Project</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -869,11 +813,11 @@ Get an existing Project resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProject<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations?tab=doc#ProjectState">ProjectState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations?tab=doc#Project">Project</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProject<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations?tab=doc#ProjectState">ProjectState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations?tab=doc#Project">Project</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Organizations.Project.html">Project</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Organizations.ProjectState.html">ProjectState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Organizations.Project.html">Project</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Organizations.ProjectState.html">ProjectState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -975,7 +919,6 @@ Get an existing Project resource's state with the given name, ID, and optional e
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -983,23 +926,22 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_autocreatenetwork_csharp">
 <a href="#state_autocreatenetwork_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Create<wbr>Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Create the 'default' network automatically.  Default `true`.
 If set to `false`, the default network will be deleted.  Note that, for quota purposes, you
 will still need to have 1 network slot available to create the project successfully, even if
 you set `auto_create_network` to `false`, since the network will exist momentarily.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_billingaccount_csharp">
 <a href="#state_billingaccount_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Account</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alphanumeric ID of the billing account this project
 belongs to. The user or service account performing this operation with the provider
@@ -1007,14 +949,13 @@ must have Billing Account Administrator privileges (`roles/billing.admin`) in
 the organization. See [Google Cloud Billing API Access Control](https://cloud.google.com/billing/v1/how-tos/access-control)
 for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_folderid_csharp">
 <a href="#state_folderid_csharp" style="color: inherit; text-decoration: inherit;">Folder<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The numeric ID of the folder this project should be
 created under. Only one of `org_id` or `folder_id` may be
@@ -1022,47 +963,43 @@ specified. If the `folder_id` is specified, then the project is
 created under the specified folder. Changing this forces the
 project to be migrated to the newly specified folder.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the project.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the project.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_number_csharp">
 <a href="#state_number_csharp" style="color: inherit; text-decoration: inherit;">Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The numeric identifier of the project.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_orgid_csharp">
 <a href="#state_orgid_csharp" style="color: inherit; text-decoration: inherit;">Org<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization this project belongs to.
 Changing this forces a new project to be created.  Only one of
@@ -1071,33 +1008,29 @@ specified then the project is created at the top level. Changing
 this forces the project to be migrated to the newly specified
 organization.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID. Changing this forces a new project to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_skipdelete_csharp">
 <a href="#state_skipdelete_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the resource can be deleted
 without deleting the Project via the Google API.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1106,23 +1039,22 @@ without deleting the Project via the Google API.
             title="Optional">
         <span id="state_autocreatenetwork_go">
 <a href="#state_autocreatenetwork_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Create<wbr>Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Create the 'default' network automatically.  Default `true`.
 If set to `false`, the default network will be deleted.  Note that, for quota purposes, you
 will still need to have 1 network slot available to create the project successfully, even if
 you set `auto_create_network` to `false`, since the network will exist momentarily.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_billingaccount_go">
 <a href="#state_billingaccount_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Account</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alphanumeric ID of the billing account this project
 belongs to. The user or service account performing this operation with the provider
@@ -1130,14 +1062,13 @@ must have Billing Account Administrator privileges (`roles/billing.admin`) in
 the organization. See [Google Cloud Billing API Access Control](https://cloud.google.com/billing/v1/how-tos/access-control)
 for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_folderid_go">
 <a href="#state_folderid_go" style="color: inherit; text-decoration: inherit;">Folder<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The numeric ID of the folder this project should be
 created under. Only one of `org_id` or `folder_id` may be
@@ -1145,47 +1076,43 @@ specified. If the `folder_id` is specified, then the project is
 created under the specified folder. Changing this forces the
 project to be migrated to the newly specified folder.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the project.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the project.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_number_go">
 <a href="#state_number_go" style="color: inherit; text-decoration: inherit;">Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The numeric identifier of the project.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_orgid_go">
 <a href="#state_orgid_go" style="color: inherit; text-decoration: inherit;">Org<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization this project belongs to.
 Changing this forces a new project to be created.  Only one of
@@ -1194,33 +1121,29 @@ specified then the project is created at the top level. Changing
 this forces the project to be migrated to the newly specified
 organization.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID. Changing this forces a new project to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_skipdelete_go">
 <a href="#state_skipdelete_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the resource can be deleted
 without deleting the Project via the Google API.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1229,23 +1152,22 @@ without deleting the Project via the Google API.
             title="Optional">
         <span id="state_autocreatenetwork_nodejs">
 <a href="#state_autocreatenetwork_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Create<wbr>Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Create the 'default' network automatically.  Default `true`.
 If set to `false`, the default network will be deleted.  Note that, for quota purposes, you
 will still need to have 1 network slot available to create the project successfully, even if
 you set `auto_create_network` to `false`, since the network will exist momentarily.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_billingaccount_nodejs">
 <a href="#state_billingaccount_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Account</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alphanumeric ID of the billing account this project
 belongs to. The user or service account performing this operation with the provider
@@ -1253,14 +1175,13 @@ must have Billing Account Administrator privileges (`roles/billing.admin`) in
 the organization. See [Google Cloud Billing API Access Control](https://cloud.google.com/billing/v1/how-tos/access-control)
 for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_folderid_nodejs">
 <a href="#state_folderid_nodejs" style="color: inherit; text-decoration: inherit;">folder<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The numeric ID of the folder this project should be
 created under. Only one of `org_id` or `folder_id` may be
@@ -1268,47 +1189,43 @@ specified. If the `folder_id` is specified, then the project is
 created under the specified folder. Changing this forces the
 project to be migrated to the newly specified folder.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the project.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name of the project.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_number_nodejs">
 <a href="#state_number_nodejs" style="color: inherit; text-decoration: inherit;">number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The numeric identifier of the project.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_orgid_nodejs">
 <a href="#state_orgid_nodejs" style="color: inherit; text-decoration: inherit;">org<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization this project belongs to.
 Changing this forces a new project to be created.  Only one of
@@ -1317,33 +1234,29 @@ specified then the project is created at the top level. Changing
 this forces the project to be migrated to the newly specified
 organization.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID. Changing this forces a new project to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_skipdelete_nodejs">
 <a href="#state_skipdelete_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, the resource can be deleted
 without deleting the Project via the Google API.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1352,23 +1265,22 @@ without deleting the Project via the Google API.
             title="Optional">
         <span id="state_auto_create_network_python">
 <a href="#state_auto_create_network_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>create_<wbr>network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Create the 'default' network automatically.  Default `true`.
 If set to `false`, the default network will be deleted.  Note that, for quota purposes, you
 will still need to have 1 network slot available to create the project successfully, even if
 you set `auto_create_network` to `false`, since the network will exist momentarily.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_billing_account_python">
 <a href="#state_billing_account_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>account</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The alphanumeric ID of the billing account this project
 belongs to. The user or service account performing this operation with the provider
@@ -1376,14 +1288,13 @@ must have Billing Account Administrator privileges (`roles/billing.admin`) in
 the organization. See [Google Cloud Billing API Access Control](https://cloud.google.com/billing/v1/how-tos/access-control)
 for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_folder_id_python">
 <a href="#state_folder_id_python" style="color: inherit; text-decoration: inherit;">folder_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The numeric ID of the folder this project should be
 created under. Only one of `org_id` or `folder_id` may be
@@ -1391,47 +1302,43 @@ specified. If the `folder_id` is specified, then the project is
 created under the specified folder. Changing this forces the
 project to be migrated to the newly specified folder.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs to assign to the project.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name of the project.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_number_python">
 <a href="#state_number_python" style="color: inherit; text-decoration: inherit;">number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The numeric identifier of the project.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_org_id_python">
 <a href="#state_org_id_python" style="color: inherit; text-decoration: inherit;">org_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization this project belongs to.
 Changing this forces a new project to be created.  Only one of
@@ -1440,38 +1347,29 @@ specified then the project is created at the top level. Changing
 this forces the project to be migrated to the newly specified
 organization.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project ID. Changing this forces a new project to be created.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_skip_delete_python">
 <a href="#state_skip_delete_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>delete</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the resource can be deleted
 without deleting the Project via the Google API.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
 
 
 

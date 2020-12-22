@@ -1,8 +1,8 @@
 
 ---
 title: "UptimeCheckConfig"
-title_tag: "Resource UptimeCheckConfig | Module monitoring | Package GCP"
-meta_desc: "Explore the UptimeCheckConfig resource of the monitoring module, including examples, input properties, output properties, lookup functions, and supporting types. This message configures which resources and services to monitor for availability."
+title_tag: "gcp.monitoring.UptimeCheckConfig"
+meta_desc: "Documentation for the gcp.monitoring.UptimeCheckConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -451,7 +451,7 @@ const tcpGroup = new gcp.monitoring.UptimeCheckConfig("tcpGroup", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/monitoring/#UptimeCheckConfig">UptimeCheckConfig</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/monitoring/#UptimeCheckConfigArgs">UptimeCheckConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/monitoring/#UptimeCheckConfig">UptimeCheckConfig</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/monitoring/#UptimeCheckConfigArgs">UptimeCheckConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -459,11 +459,11 @@ const tcpGroup = new gcp.monitoring.UptimeCheckConfig("tcpGroup", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#UptimeCheckConfig">NewUptimeCheckConfig</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#UptimeCheckConfigArgs">UptimeCheckConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#UptimeCheckConfig">UptimeCheckConfig</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#UptimeCheckConfig">NewUptimeCheckConfig</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#UptimeCheckConfigArgs">UptimeCheckConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#UptimeCheckConfig">UptimeCheckConfig</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.UptimeCheckConfig.html">UptimeCheckConfig</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.UptimeCheckConfigArgs.html">UptimeCheckConfigArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.UptimeCheckConfig.html">UptimeCheckConfig</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.UptimeCheckConfigArgs.html">UptimeCheckConfigArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -474,7 +474,7 @@ const tcpGroup = new gcp.monitoring.UptimeCheckConfig("tcpGroup", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -543,7 +543,7 @@ const tcpGroup = new gcp.monitoring.UptimeCheckConfig("tcpGroup", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -582,7 +582,7 @@ const tcpGroup = new gcp.monitoring.UptimeCheckConfig("tcpGroup", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -623,7 +623,6 @@ The UptimeCheckConfig resource accepts the following [input]({{< relref "/docs/i
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -631,121 +630,110 @@ The UptimeCheckConfig resource accepts the following [input]({{< relref "/docs/i
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-friendly name for the uptime check configuration. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="timeout_csharp">
 <a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time to wait for the request to complete (must be between 1 and 60 seconds). Accepted formats https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.Duration
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="contentmatchers_csharp">
 <a href="#contentmatchers_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Matchers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigcontentmatcher">List&lt;Uptime<wbr>Check<wbr>Config<wbr>Content<wbr>Matcher<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response's content. This field is optional and should only be specified if a content match is required.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="httpcheck_csharp">
 <a href="#httpcheck_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Check</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfighttpcheck">Uptime<wbr>Check<wbr>Config<wbr>Http<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information needed to make an HTTP or HTTPS check.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="monitoredresource_csharp">
 <a href="#monitoredresource_csharp" style="color: inherit; text-decoration: inherit;">Monitored<wbr>Resource</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigmonitoredresource">Uptime<wbr>Check<wbr>Config<wbr>Monitored<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:  uptime_url  gce_instance  gae_app  aws_ec2_instance  aws_elb_load_balancer
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="period_csharp">
 <a href="#period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How often, in seconds, the uptime check is performed. Currently, the only supported values are 60s (1 minute), 300s (5 minutes), 600s (10 minutes), and 900s (15 minutes). Optional, defaults to 300s.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resourcegroup_csharp">
 <a href="#resourcegroup_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigresourcegroup">Uptime<wbr>Check<wbr>Config<wbr>Resource<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The group resource associated with the configuration.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="selectedregions_csharp">
 <a href="#selectedregions_csharp" style="color: inherit; text-decoration: inherit;">Selected<wbr>Regions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of regions from which the check will be run. Some regions contain one location, and others contain more than one. If this field is specified, enough regions to include a minimum of 3 locations must be provided, or an error message is returned. Not specifying this field will result in uptime checks running from all regions.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tcpcheck_csharp">
 <a href="#tcpcheck_csharp" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Check</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigtcpcheck">Uptime<wbr>Check<wbr>Config<wbr>Tcp<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information needed to make a TCP check.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -754,121 +742,110 @@ Structure is documented below.
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-friendly name for the uptime check configuration. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="timeout_go">
 <a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time to wait for the request to complete (must be between 1 and 60 seconds). Accepted formats https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.Duration
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="contentmatchers_go">
 <a href="#contentmatchers_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Matchers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigcontentmatcher">[]Uptime<wbr>Check<wbr>Config<wbr>Content<wbr>Matcher</a></span>
     </dt>
     <dd>{{% md %}}The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response's content. This field is optional and should only be specified if a content match is required.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="httpcheck_go">
 <a href="#httpcheck_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Check</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfighttpcheck">Uptime<wbr>Check<wbr>Config<wbr>Http<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}Contains information needed to make an HTTP or HTTPS check.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="monitoredresource_go">
 <a href="#monitoredresource_go" style="color: inherit; text-decoration: inherit;">Monitored<wbr>Resource</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigmonitoredresource">Uptime<wbr>Check<wbr>Config<wbr>Monitored<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:  uptime_url  gce_instance  gae_app  aws_ec2_instance  aws_elb_load_balancer
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="period_go">
 <a href="#period_go" style="color: inherit; text-decoration: inherit;">Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How often, in seconds, the uptime check is performed. Currently, the only supported values are 60s (1 minute), 300s (5 minutes), 600s (10 minutes), and 900s (15 minutes). Optional, defaults to 300s.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resourcegroup_go">
 <a href="#resourcegroup_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigresourcegroup">Uptime<wbr>Check<wbr>Config<wbr>Resource<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}The group resource associated with the configuration.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="selectedregions_go">
 <a href="#selectedregions_go" style="color: inherit; text-decoration: inherit;">Selected<wbr>Regions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of regions from which the check will be run. Some regions contain one location, and others contain more than one. If this field is specified, enough regions to include a minimum of 3 locations must be provided, or an error message is returned. Not specifying this field will result in uptime checks running from all regions.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tcpcheck_go">
 <a href="#tcpcheck_go" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Check</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigtcpcheck">Uptime<wbr>Check<wbr>Config<wbr>Tcp<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}Contains information needed to make a TCP check.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -877,121 +854,110 @@ Structure is documented below.
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-friendly name for the uptime check configuration. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="timeout_nodejs">
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time to wait for the request to complete (must be between 1 and 60 seconds). Accepted formats https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.Duration
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="contentmatchers_nodejs">
 <a href="#contentmatchers_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Matchers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigcontentmatcher">Uptime<wbr>Check<wbr>Config<wbr>Content<wbr>Matcher[]</a></span>
     </dt>
     <dd>{{% md %}}The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response's content. This field is optional and should only be specified if a content match is required.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="httpcheck_nodejs">
 <a href="#httpcheck_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Check</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfighttpcheck">Uptime<wbr>Check<wbr>Config<wbr>Http<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}Contains information needed to make an HTTP or HTTPS check.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="monitoredresource_nodejs">
 <a href="#monitoredresource_nodejs" style="color: inherit; text-decoration: inherit;">monitored<wbr>Resource</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigmonitoredresource">Uptime<wbr>Check<wbr>Config<wbr>Monitored<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:  uptime_url  gce_instance  gae_app  aws_ec2_instance  aws_elb_load_balancer
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="period_nodejs">
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How often, in seconds, the uptime check is performed. Currently, the only supported values are 60s (1 minute), 300s (5 minutes), 600s (10 minutes), and 900s (15 minutes). Optional, defaults to 300s.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resourcegroup_nodejs">
 <a href="#resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigresourcegroup">Uptime<wbr>Check<wbr>Config<wbr>Resource<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}The group resource associated with the configuration.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="selectedregions_nodejs">
 <a href="#selectedregions_nodejs" style="color: inherit; text-decoration: inherit;">selected<wbr>Regions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of regions from which the check will be run. Some regions contain one location, and others contain more than one. If this field is specified, enough regions to include a minimum of 3 locations must be provided, or an error message is returned. Not specifying this field will result in uptime checks running from all regions.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tcpcheck_nodejs">
 <a href="#tcpcheck_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Check</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigtcpcheck">Uptime<wbr>Check<wbr>Config<wbr>Tcp<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}Contains information needed to make a TCP check.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1000,130 +966,115 @@ Structure is documented below.
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A human-friendly name for the uptime check configuration. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="timeout_python">
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time to wait for the request to complete (must be between 1 and 60 seconds). Accepted formats https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.Duration
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="content_matchers_python">
 <a href="#content_matchers_python" style="color: inherit; text-decoration: inherit;">content_<wbr>matchers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigcontentmatcher">Sequence[Uptime<wbr>Check<wbr>Config<wbr>Content<wbr>Matcher<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response's content. This field is optional and should only be specified if a content match is required.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="http_check_python">
 <a href="#http_check_python" style="color: inherit; text-decoration: inherit;">http_<wbr>check</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfighttpcheck">Uptime<wbr>Check<wbr>Config<wbr>Http<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information needed to make an HTTP or HTTPS check.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="monitored_resource_python">
 <a href="#monitored_resource_python" style="color: inherit; text-decoration: inherit;">monitored_<wbr>resource</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigmonitoredresource">Uptime<wbr>Check<wbr>Config<wbr>Monitored<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:  uptime_url  gce_instance  gae_app  aws_ec2_instance  aws_elb_load_balancer
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="period_python">
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How often, in seconds, the uptime check is performed. Currently, the only supported values are 60s (1 minute), 300s (5 minutes), 600s (10 minutes), and 900s (15 minutes). Optional, defaults to 300s.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resource_group_python">
 <a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigresourcegroup">Uptime<wbr>Check<wbr>Config<wbr>Resource<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The group resource associated with the configuration.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="selected_regions_python">
 <a href="#selected_regions_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>regions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of regions from which the check will be run. Some regions contain one location, and others contain more than one. If this field is specified, enough regions to include a minimum of 3 locations must be provided, or an error message is returned. Not specifying this field will result in uptime checks running from all regions.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tcp_check_python">
 <a href="#tcp_check_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>check</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigtcpcheck">Uptime<wbr>Check<wbr>Config<wbr>Tcp<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information needed to make a TCP check.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the UptimeCheckConfig resource produces the following output properties:
-
 
 
 
@@ -1134,38 +1085,34 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique resource name for this UptimeCheckConfig. The format is
 projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="uptimecheckid_csharp">
 <a href="#uptimecheckid_csharp" style="color: inherit; text-decoration: inherit;">Uptime<wbr>Check<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the uptime check
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1174,38 +1121,34 @@ projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique resource name for this UptimeCheckConfig. The format is
 projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="uptimecheckid_go">
 <a href="#uptimecheckid_go" style="color: inherit; text-decoration: inherit;">Uptime<wbr>Check<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the uptime check
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1214,38 +1157,34 @@ projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique resource name for this UptimeCheckConfig. The format is
 projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="uptimecheckid_nodejs">
 <a href="#uptimecheckid_nodejs" style="color: inherit; text-decoration: inherit;">uptime<wbr>Check<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the uptime check
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1254,41 +1193,34 @@ projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique resource name for this UptimeCheckConfig. The format is
 projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="uptime_check_id_python">
 <a href="#uptime_check_id_python" style="color: inherit; text-decoration: inherit;">uptime_<wbr>check_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the uptime check
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1298,7 +1230,7 @@ Get an existing UptimeCheckConfig resource's state with the given name, ID, and 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/monitoring/#UptimeCheckConfigState">UptimeCheckConfigState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/monitoring/#UptimeCheckConfig">UptimeCheckConfig</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/monitoring/#UptimeCheckConfigState">UptimeCheckConfigState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/monitoring/#UptimeCheckConfig">UptimeCheckConfig</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1307,11 +1239,11 @@ Get an existing UptimeCheckConfig resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUptimeCheckConfig<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#UptimeCheckConfigState">UptimeCheckConfigState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#UptimeCheckConfig">UptimeCheckConfig</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUptimeCheckConfig<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#UptimeCheckConfigState">UptimeCheckConfigState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#UptimeCheckConfig">UptimeCheckConfig</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.UptimeCheckConfig.html">UptimeCheckConfig</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.UptimeCheckConfigState.html">UptimeCheckConfigState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.UptimeCheckConfig.html">UptimeCheckConfig</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.UptimeCheckConfigState.html">UptimeCheckConfigState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1413,7 +1345,6 @@ Get an existing UptimeCheckConfig resource's state with the given name, ID, and 
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1421,144 +1352,131 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_contentmatchers_csharp">
 <a href="#state_contentmatchers_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Matchers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigcontentmatcher">List&lt;Uptime<wbr>Check<wbr>Config<wbr>Content<wbr>Matcher<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response's content. This field is optional and should only be specified if a content match is required.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-friendly name for the uptime check configuration. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_httpcheck_csharp">
 <a href="#state_httpcheck_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Check</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfighttpcheck">Uptime<wbr>Check<wbr>Config<wbr>Http<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information needed to make an HTTP or HTTPS check.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_monitoredresource_csharp">
 <a href="#state_monitoredresource_csharp" style="color: inherit; text-decoration: inherit;">Monitored<wbr>Resource</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigmonitoredresource">Uptime<wbr>Check<wbr>Config<wbr>Monitored<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:  uptime_url  gce_instance  gae_app  aws_ec2_instance  aws_elb_load_balancer
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique resource name for this UptimeCheckConfig. The format is
 projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_period_csharp">
 <a href="#state_period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How often, in seconds, the uptime check is performed. Currently, the only supported values are 60s (1 minute), 300s (5 minutes), 600s (10 minutes), and 900s (15 minutes). Optional, defaults to 300s.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroup_csharp">
 <a href="#state_resourcegroup_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigresourcegroup">Uptime<wbr>Check<wbr>Config<wbr>Resource<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The group resource associated with the configuration.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_selectedregions_csharp">
 <a href="#state_selectedregions_csharp" style="color: inherit; text-decoration: inherit;">Selected<wbr>Regions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of regions from which the check will be run. Some regions contain one location, and others contain more than one. If this field is specified, enough regions to include a minimum of 3 locations must be provided, or an error message is returned. Not specifying this field will result in uptime checks running from all regions.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tcpcheck_csharp">
 <a href="#state_tcpcheck_csharp" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Check</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigtcpcheck">Uptime<wbr>Check<wbr>Config<wbr>Tcp<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information needed to make a TCP check.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_timeout_csharp">
 <a href="#state_timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time to wait for the request to complete (must be between 1 and 60 seconds). Accepted formats https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.Duration
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_uptimecheckid_csharp">
 <a href="#state_uptimecheckid_csharp" style="color: inherit; text-decoration: inherit;">Uptime<wbr>Check<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the uptime check
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1567,144 +1485,131 @@ Structure is documented below.
             title="Optional">
         <span id="state_contentmatchers_go">
 <a href="#state_contentmatchers_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Matchers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigcontentmatcher">[]Uptime<wbr>Check<wbr>Config<wbr>Content<wbr>Matcher</a></span>
     </dt>
     <dd>{{% md %}}The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response's content. This field is optional and should only be specified if a content match is required.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-friendly name for the uptime check configuration. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_httpcheck_go">
 <a href="#state_httpcheck_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Check</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfighttpcheck">Uptime<wbr>Check<wbr>Config<wbr>Http<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}Contains information needed to make an HTTP or HTTPS check.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_monitoredresource_go">
 <a href="#state_monitoredresource_go" style="color: inherit; text-decoration: inherit;">Monitored<wbr>Resource</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigmonitoredresource">Uptime<wbr>Check<wbr>Config<wbr>Monitored<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:  uptime_url  gce_instance  gae_app  aws_ec2_instance  aws_elb_load_balancer
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique resource name for this UptimeCheckConfig. The format is
 projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_period_go">
 <a href="#state_period_go" style="color: inherit; text-decoration: inherit;">Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How often, in seconds, the uptime check is performed. Currently, the only supported values are 60s (1 minute), 300s (5 minutes), 600s (10 minutes), and 900s (15 minutes). Optional, defaults to 300s.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroup_go">
 <a href="#state_resourcegroup_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigresourcegroup">Uptime<wbr>Check<wbr>Config<wbr>Resource<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}The group resource associated with the configuration.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_selectedregions_go">
 <a href="#state_selectedregions_go" style="color: inherit; text-decoration: inherit;">Selected<wbr>Regions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of regions from which the check will be run. Some regions contain one location, and others contain more than one. If this field is specified, enough regions to include a minimum of 3 locations must be provided, or an error message is returned. Not specifying this field will result in uptime checks running from all regions.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tcpcheck_go">
 <a href="#state_tcpcheck_go" style="color: inherit; text-decoration: inherit;">Tcp<wbr>Check</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigtcpcheck">Uptime<wbr>Check<wbr>Config<wbr>Tcp<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}Contains information needed to make a TCP check.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_timeout_go">
 <a href="#state_timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time to wait for the request to complete (must be between 1 and 60 seconds). Accepted formats https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.Duration
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_uptimecheckid_go">
 <a href="#state_uptimecheckid_go" style="color: inherit; text-decoration: inherit;">Uptime<wbr>Check<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the uptime check
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1713,144 +1618,131 @@ Structure is documented below.
             title="Optional">
         <span id="state_contentmatchers_nodejs">
 <a href="#state_contentmatchers_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Matchers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigcontentmatcher">Uptime<wbr>Check<wbr>Config<wbr>Content<wbr>Matcher[]</a></span>
     </dt>
     <dd>{{% md %}}The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response's content. This field is optional and should only be specified if a content match is required.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-friendly name for the uptime check configuration. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_httpcheck_nodejs">
 <a href="#state_httpcheck_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Check</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfighttpcheck">Uptime<wbr>Check<wbr>Config<wbr>Http<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}Contains information needed to make an HTTP or HTTPS check.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_monitoredresource_nodejs">
 <a href="#state_monitoredresource_nodejs" style="color: inherit; text-decoration: inherit;">monitored<wbr>Resource</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigmonitoredresource">Uptime<wbr>Check<wbr>Config<wbr>Monitored<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:  uptime_url  gce_instance  gae_app  aws_ec2_instance  aws_elb_load_balancer
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique resource name for this UptimeCheckConfig. The format is
 projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_period_nodejs">
 <a href="#state_period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How often, in seconds, the uptime check is performed. Currently, the only supported values are 60s (1 minute), 300s (5 minutes), 600s (10 minutes), and 900s (15 minutes). Optional, defaults to 300s.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroup_nodejs">
 <a href="#state_resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigresourcegroup">Uptime<wbr>Check<wbr>Config<wbr>Resource<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}The group resource associated with the configuration.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_selectedregions_nodejs">
 <a href="#state_selectedregions_nodejs" style="color: inherit; text-decoration: inherit;">selected<wbr>Regions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of regions from which the check will be run. Some regions contain one location, and others contain more than one. If this field is specified, enough regions to include a minimum of 3 locations must be provided, or an error message is returned. Not specifying this field will result in uptime checks running from all regions.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tcpcheck_nodejs">
 <a href="#state_tcpcheck_nodejs" style="color: inherit; text-decoration: inherit;">tcp<wbr>Check</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigtcpcheck">Uptime<wbr>Check<wbr>Config<wbr>Tcp<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}Contains information needed to make a TCP check.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_timeout_nodejs">
 <a href="#state_timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time to wait for the request to complete (must be between 1 and 60 seconds). Accepted formats https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.Duration
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_uptimecheckid_nodejs">
 <a href="#state_uptimecheckid_nodejs" style="color: inherit; text-decoration: inherit;">uptime<wbr>Check<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the uptime check
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1859,141 +1751,129 @@ Structure is documented below.
             title="Optional">
         <span id="state_content_matchers_python">
 <a href="#state_content_matchers_python" style="color: inherit; text-decoration: inherit;">content_<wbr>matchers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigcontentmatcher">Sequence[Uptime<wbr>Check<wbr>Config<wbr>Content<wbr>Matcher<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The expected content on the page the check is run against. Currently, only the first entry in the list is supported, and other entries will be ignored. The server will look for an exact match of the string in the page response's content. This field is optional and should only be specified if a content match is required.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A human-friendly name for the uptime check configuration. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_http_check_python">
 <a href="#state_http_check_python" style="color: inherit; text-decoration: inherit;">http_<wbr>check</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfighttpcheck">Uptime<wbr>Check<wbr>Config<wbr>Http<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information needed to make an HTTP or HTTPS check.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_monitored_resource_python">
 <a href="#state_monitored_resource_python" style="color: inherit; text-decoration: inherit;">monitored_<wbr>resource</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigmonitoredresource">Uptime<wbr>Check<wbr>Config<wbr>Monitored<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The monitored resource (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:  uptime_url  gce_instance  gae_app  aws_ec2_instance  aws_elb_load_balancer
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique resource name for this UptimeCheckConfig. The format is
 projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_period_python">
 <a href="#state_period_python" style="color: inherit; text-decoration: inherit;">period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How often, in seconds, the uptime check is performed. Currently, the only supported values are 60s (1 minute), 300s (5 minutes), 600s (10 minutes), and 900s (15 minutes). Optional, defaults to 300s.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_python">
 <a href="#state_resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigresourcegroup">Uptime<wbr>Check<wbr>Config<wbr>Resource<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The group resource associated with the configuration.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_selected_regions_python">
 <a href="#state_selected_regions_python" style="color: inherit; text-decoration: inherit;">selected_<wbr>regions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of regions from which the check will be run. Some regions contain one location, and others contain more than one. If this field is specified, enough regions to include a minimum of 3 locations must be provided, or an error message is returned. Not specifying this field will result in uptime checks running from all regions.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tcp_check_python">
 <a href="#state_tcp_check_python" style="color: inherit; text-decoration: inherit;">tcp_<wbr>check</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfigtcpcheck">Uptime<wbr>Check<wbr>Config<wbr>Tcp<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains information needed to make a TCP check.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_timeout_python">
 <a href="#state_timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time to wait for the request to complete (must be between 1 and 60 seconds). Accepted formats https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.Duration
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_uptime_check_id_python">
 <a href="#state_uptime_check_id_python" style="color: inherit; text-decoration: inherit;">uptime_<wbr>check_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the uptime check
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -2002,11 +1882,8 @@ Structure is documented below.
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="uptimecheckconfigcontentmatcher">Uptime<wbr>Check<wbr>Config<wbr>Content<wbr>Matcher</h4>
@@ -2017,11 +1894,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#UptimeCheckConfigContentMatcherArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#UptimeCheckConfigContentMatcherOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.UptimeCheckConfigContentMatcherArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.UptimeCheckConfigContentMatcher.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2031,29 +1907,26 @@ Structure is documented below.
             title="Required">
         <span id="content_csharp">
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String or regex content to match (max 1024 bytes)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="matcher_csharp">
 <a href="#matcher_csharp" style="color: inherit; text-decoration: inherit;">Matcher</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of content matcher that will be applied to the server output, compared to the content string when the check is run.
 Default value is `CONTAINS_STRING`.
 Possible values are `CONTAINS_STRING`, `NOT_CONTAINS_STRING`, `MATCHES_REGEX`, and `NON_MATCHES_REGEX`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2062,29 +1935,26 @@ Possible values are `CONTAINS_STRING`, `NOT_CONTAINS_STRING`, `MATCHES_REGEX`, a
             title="Required">
         <span id="content_go">
 <a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String or regex content to match (max 1024 bytes)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="matcher_go">
 <a href="#matcher_go" style="color: inherit; text-decoration: inherit;">Matcher</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of content matcher that will be applied to the server output, compared to the content string when the check is run.
 Default value is `CONTAINS_STRING`.
 Possible values are `CONTAINS_STRING`, `NOT_CONTAINS_STRING`, `MATCHES_REGEX`, and `NON_MATCHES_REGEX`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2093,29 +1963,26 @@ Possible values are `CONTAINS_STRING`, `NOT_CONTAINS_STRING`, `MATCHES_REGEX`, a
             title="Required">
         <span id="content_nodejs">
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String or regex content to match (max 1024 bytes)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="matcher_nodejs">
 <a href="#matcher_nodejs" style="color: inherit; text-decoration: inherit;">matcher</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of content matcher that will be applied to the server output, compared to the content string when the check is run.
 Default value is `CONTAINS_STRING`.
 Possible values are `CONTAINS_STRING`, `NOT_CONTAINS_STRING`, `MATCHES_REGEX`, and `NON_MATCHES_REGEX`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2124,32 +1991,26 @@ Possible values are `CONTAINS_STRING`, `NOT_CONTAINS_STRING`, `MATCHES_REGEX`, a
             title="Required">
         <span id="content_python">
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String or regex content to match (max 1024 bytes)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="matcher_python">
 <a href="#matcher_python" style="color: inherit; text-decoration: inherit;">matcher</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of content matcher that will be applied to the server output, compared to the content string when the check is run.
 Default value is `CONTAINS_STRING`.
 Possible values are `CONTAINS_STRING`, `NOT_CONTAINS_STRING`, `MATCHES_REGEX`, and `NON_MATCHES_REGEX`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="uptimecheckconfighttpcheck">Uptime<wbr>Check<wbr>Config<wbr>Http<wbr>Check</h4>
 {{% choosable language nodejs %}}
@@ -2159,11 +2020,10 @@ Possible values are `CONTAINS_STRING`, `NOT_CONTAINS_STRING`, `MATCHES_REGEX`, a
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#UptimeCheckConfigHttpCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#UptimeCheckConfigHttpCheckOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.UptimeCheckConfigHttpCheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.UptimeCheckConfigHttpCheck.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2173,119 +2033,108 @@ Possible values are `CONTAINS_STRING`, `NOT_CONTAINS_STRING`, `MATCHES_REGEX`, a
             title="Optional">
         <span id="authinfo_csharp">
 <a href="#authinfo_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfighttpcheckauthinfo">Uptime<wbr>Check<wbr>Config<wbr>Http<wbr>Check<wbr>Auth<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication information. Optional when creating an HTTP check; defaults to empty.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="body_csharp">
 <a href="#body_csharp" style="color: inherit; text-decoration: inherit;">Body</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The request body associated with the HTTP POST request. If contentType is URL_ENCODED, the body passed in must be URL-encoded. Users can provide a Content-Length header via the headers field or the API will do so. If the requestMethod is GET and body is not empty, the API will return an error. The maximum byte size is 1 megabyte. Note - As with all bytes fields JSON representations are base64 encoded. e.g. "foo=bar" in URL-encoded form is "foo%3Dbar" and in base64 encoding is "Zm9vJTI1M0RiYXI=".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="contenttype_csharp">
 <a href="#contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content type to use for the check.
 Possible values are `TYPE_UNSPECIFIED` and `URL_ENCODED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="headers_csharp">
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of headers to send as part of the uptime check request. If two headers have the same key and different values, they should be entered as a single header, with the value being a comma-separated list of all the desired values as described at https://www.w3.org/Protocols/rfc2616/rfc2616.txt (page 31). Entering two separate headers with the same key in a Create call will cause the first to be overwritten by the second. The maximum number of headers allowed is 100.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maskheaders_csharp">
 <a href="#maskheaders_csharp" style="color: inherit; text-decoration: inherit;">Mask<wbr>Headers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean specifying whether to encrypt the header information. Encryption should be specified for any headers related to authentication that you do not wish to be seen when retrieving the configuration. The server will be responsible for encrypting the headers. On Get/List calls, if mask_headers is set to True then the headers will be obscured with ******.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the page to run the check against. Will be combined with the host (specified within the MonitoredResource) and port to construct the full URL. Optional (defaults to "/").
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port to the page to run the check against. Will be combined with host (specified within the MonitoredResource) to construct the full URL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requestmethod_csharp">
 <a href="#requestmethod_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP request method to use for the check. If set to METHOD_UNSPECIFIED then requestMethod defaults to GET.
 Default value is `GET`.
 Possible values are `METHOD_UNSPECIFIED`, `GET`, and `POST`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="usessl_csharp">
 <a href="#usessl_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Ssl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, use HTTPS instead of HTTP to run the check.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="validatessl_csharp">
 <a href="#validatessl_csharp" style="color: inherit; text-decoration: inherit;">Validate<wbr>Ssl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean specifying whether to include SSL certificate validation as a part of the Uptime check. Only applies to checks where monitoredResource is set to uptime_url. If useSsl is false, setting validateSsl to true has no effect.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2294,119 +2143,108 @@ Possible values are `METHOD_UNSPECIFIED`, `GET`, and `POST`.
             title="Optional">
         <span id="authinfo_go">
 <a href="#authinfo_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfighttpcheckauthinfo">Uptime<wbr>Check<wbr>Config<wbr>Http<wbr>Check<wbr>Auth<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The authentication information. Optional when creating an HTTP check; defaults to empty.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="body_go">
 <a href="#body_go" style="color: inherit; text-decoration: inherit;">Body</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The request body associated with the HTTP POST request. If contentType is URL_ENCODED, the body passed in must be URL-encoded. Users can provide a Content-Length header via the headers field or the API will do so. If the requestMethod is GET and body is not empty, the API will return an error. The maximum byte size is 1 megabyte. Note - As with all bytes fields JSON representations are base64 encoded. e.g. "foo=bar" in URL-encoded form is "foo%3Dbar" and in base64 encoding is "Zm9vJTI1M0RiYXI=".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="contenttype_go">
 <a href="#contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content type to use for the check.
 Possible values are `TYPE_UNSPECIFIED` and `URL_ENCODED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="headers_go">
 <a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The list of headers to send as part of the uptime check request. If two headers have the same key and different values, they should be entered as a single header, with the value being a comma-separated list of all the desired values as described at https://www.w3.org/Protocols/rfc2616/rfc2616.txt (page 31). Entering two separate headers with the same key in a Create call will cause the first to be overwritten by the second. The maximum number of headers allowed is 100.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maskheaders_go">
 <a href="#maskheaders_go" style="color: inherit; text-decoration: inherit;">Mask<wbr>Headers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean specifying whether to encrypt the header information. Encryption should be specified for any headers related to authentication that you do not wish to be seen when retrieving the configuration. The server will be responsible for encrypting the headers. On Get/List calls, if mask_headers is set to True then the headers will be obscured with ******.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the page to run the check against. Will be combined with the host (specified within the MonitoredResource) and port to construct the full URL. Optional (defaults to "/").
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port to the page to run the check against. Will be combined with host (specified within the MonitoredResource) to construct the full URL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requestmethod_go">
 <a href="#requestmethod_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP request method to use for the check. If set to METHOD_UNSPECIFIED then requestMethod defaults to GET.
 Default value is `GET`.
 Possible values are `METHOD_UNSPECIFIED`, `GET`, and `POST`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="usessl_go">
 <a href="#usessl_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Ssl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, use HTTPS instead of HTTP to run the check.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="validatessl_go">
 <a href="#validatessl_go" style="color: inherit; text-decoration: inherit;">Validate<wbr>Ssl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean specifying whether to include SSL certificate validation as a part of the Uptime check. Only applies to checks where monitoredResource is set to uptime_url. If useSsl is false, setting validateSsl to true has no effect.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2415,119 +2253,108 @@ Possible values are `METHOD_UNSPECIFIED`, `GET`, and `POST`.
             title="Optional">
         <span id="authinfo_nodejs">
 <a href="#authinfo_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfighttpcheckauthinfo">Uptime<wbr>Check<wbr>Config<wbr>Http<wbr>Check<wbr>Auth<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}The authentication information. Optional when creating an HTTP check; defaults to empty.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="body_nodejs">
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The request body associated with the HTTP POST request. If contentType is URL_ENCODED, the body passed in must be URL-encoded. Users can provide a Content-Length header via the headers field or the API will do so. If the requestMethod is GET and body is not empty, the API will return an error. The maximum byte size is 1 megabyte. Note - As with all bytes fields JSON representations are base64 encoded. e.g. "foo=bar" in URL-encoded form is "foo%3Dbar" and in base64 encoding is "Zm9vJTI1M0RiYXI=".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="contenttype_nodejs">
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content type to use for the check.
 Possible values are `TYPE_UNSPECIFIED` and `URL_ENCODED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="headers_nodejs">
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The list of headers to send as part of the uptime check request. If two headers have the same key and different values, they should be entered as a single header, with the value being a comma-separated list of all the desired values as described at https://www.w3.org/Protocols/rfc2616/rfc2616.txt (page 31). Entering two separate headers with the same key in a Create call will cause the first to be overwritten by the second. The maximum number of headers allowed is 100.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maskheaders_nodejs">
 <a href="#maskheaders_nodejs" style="color: inherit; text-decoration: inherit;">mask<wbr>Headers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean specifying whether to encrypt the header information. Encryption should be specified for any headers related to authentication that you do not wish to be seen when retrieving the configuration. The server will be responsible for encrypting the headers. On Get/List calls, if mask_headers is set to True then the headers will be obscured with ******.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the page to run the check against. Will be combined with the host (specified within the MonitoredResource) and port to construct the full URL. Optional (defaults to "/").
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port to the page to run the check against. Will be combined with host (specified within the MonitoredResource) to construct the full URL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requestmethod_nodejs">
 <a href="#requestmethod_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP request method to use for the check. If set to METHOD_UNSPECIFIED then requestMethod defaults to GET.
 Default value is `GET`.
 Possible values are `METHOD_UNSPECIFIED`, `GET`, and `POST`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="usessl_nodejs">
 <a href="#usessl_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Ssl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, use HTTPS instead of HTTP to run the check.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="validatessl_nodejs">
 <a href="#validatessl_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>Ssl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean specifying whether to include SSL certificate validation as a part of the Uptime check. Only applies to checks where monitoredResource is set to uptime_url. If useSsl is false, setting validateSsl to true has no effect.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2536,122 +2363,108 @@ Possible values are `METHOD_UNSPECIFIED`, `GET`, and `POST`.
             title="Optional">
         <span id="auth_info_python">
 <a href="#auth_info_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>info</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#uptimecheckconfighttpcheckauthinfo">Uptime<wbr>Check<wbr>Config<wbr>Http<wbr>Check<wbr>Auth<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication information. Optional when creating an HTTP check; defaults to empty.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="body_python">
 <a href="#body_python" style="color: inherit; text-decoration: inherit;">body</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The request body associated with the HTTP POST request. If contentType is URL_ENCODED, the body passed in must be URL-encoded. Users can provide a Content-Length header via the headers field or the API will do so. If the requestMethod is GET and body is not empty, the API will return an error. The maximum byte size is 1 megabyte. Note - As with all bytes fields JSON representations are base64 encoded. e.g. "foo=bar" in URL-encoded form is "foo%3Dbar" and in base64 encoding is "Zm9vJTI1M0RiYXI=".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="content_type_python">
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The content type to use for the check.
 Possible values are `TYPE_UNSPECIFIED` and `URL_ENCODED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="headers_python">
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The list of headers to send as part of the uptime check request. If two headers have the same key and different values, they should be entered as a single header, with the value being a comma-separated list of all the desired values as described at https://www.w3.org/Protocols/rfc2616/rfc2616.txt (page 31). Entering two separate headers with the same key in a Create call will cause the first to be overwritten by the second. The maximum number of headers allowed is 100.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mask_headers_python">
 <a href="#mask_headers_python" style="color: inherit; text-decoration: inherit;">mask_<wbr>headers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean specifying whether to encrypt the header information. Encryption should be specified for any headers related to authentication that you do not wish to be seen when retrieving the configuration. The server will be responsible for encrypting the headers. On Get/List calls, if mask_headers is set to True then the headers will be obscured with ******.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the page to run the check against. Will be combined with the host (specified within the MonitoredResource) and port to construct the full URL. Optional (defaults to "/").
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port to the page to run the check against. Will be combined with host (specified within the MonitoredResource) to construct the full URL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="request_method_python">
 <a href="#request_method_python" style="color: inherit; text-decoration: inherit;">request_<wbr>method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP request method to use for the check. If set to METHOD_UNSPECIFIED then requestMethod defaults to GET.
 Default value is `GET`.
 Possible values are `METHOD_UNSPECIFIED`, `GET`, and `POST`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="use_ssl_python">
 <a href="#use_ssl_python" style="color: inherit; text-decoration: inherit;">use_<wbr>ssl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, use HTTPS instead of HTTP to run the check.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="validate_ssl_python">
 <a href="#validate_ssl_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>ssl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean specifying whether to include SSL certificate validation as a part of the Uptime check. Only applies to checks where monitoredResource is set to uptime_url. If useSsl is false, setting validateSsl to true has no effect.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="uptimecheckconfighttpcheckauthinfo">Uptime<wbr>Check<wbr>Config<wbr>Http<wbr>Check<wbr>Auth<wbr>Info</h4>
 {{% choosable language nodejs %}}
@@ -2661,11 +2474,10 @@ Possible values are `METHOD_UNSPECIFIED`, `GET`, and `POST`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#UptimeCheckConfigHttpCheckAuthInfoArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#UptimeCheckConfigHttpCheckAuthInfoOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.UptimeCheckConfigHttpCheckAuthInfoArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.UptimeCheckConfigHttpCheckAuthInfo.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2675,28 +2487,25 @@ Possible values are `METHOD_UNSPECIFIED`, `GET`, and `POST`.
             title="Required">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password to authenticate.
 **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username to authenticate.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2705,28 +2514,25 @@ Possible values are `METHOD_UNSPECIFIED`, `GET`, and `POST`.
             title="Required">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password to authenticate.
 **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username to authenticate.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2735,28 +2541,25 @@ Possible values are `METHOD_UNSPECIFIED`, `GET`, and `POST`.
             title="Required">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password to authenticate.
 **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username to authenticate.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2765,31 +2568,25 @@ Possible values are `METHOD_UNSPECIFIED`, `GET`, and `POST`.
             title="Required">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password to authenticate.
 **Note**: This property is sensitive and will not be displayed in the plan.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The username to authenticate.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="uptimecheckconfigmonitoredresource">Uptime<wbr>Check<wbr>Config<wbr>Monitored<wbr>Resource</h4>
 {{% choosable language nodejs %}}
@@ -2799,11 +2596,10 @@ Possible values are `METHOD_UNSPECIFIED`, `GET`, and `POST`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#UptimeCheckConfigMonitoredResourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#UptimeCheckConfigMonitoredResourceOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.UptimeCheckConfigMonitoredResourceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.UptimeCheckConfigMonitoredResource.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2813,27 +2609,24 @@ Possible values are `METHOD_UNSPECIFIED`, `GET`, and `POST`.
             title="Required">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Values for all of the labels listed in the associated monitored resource descriptor. For example, Compute Engine VM instances use the labels "project_id", "instance_id", and "zone".
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The monitored resource type. This field must match the type field of a MonitoredResourceDescriptor (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.monitoredResourceDescriptors#MonitoredResourceDescriptor) object. For example, the type of a Compute Engine VM instance is gce_instance. For a list of types, see Monitoring resource types (https://cloud.google.com/monitoring/api/resources) and Logging resource types (https://cloud.google.com/logging/docs/api/v2/resource-list).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2842,27 +2635,24 @@ Possible values are `METHOD_UNSPECIFIED`, `GET`, and `POST`.
             title="Required">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Values for all of the labels listed in the associated monitored resource descriptor. For example, Compute Engine VM instances use the labels "project_id", "instance_id", and "zone".
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The monitored resource type. This field must match the type field of a MonitoredResourceDescriptor (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.monitoredResourceDescriptors#MonitoredResourceDescriptor) object. For example, the type of a Compute Engine VM instance is gce_instance. For a list of types, see Monitoring resource types (https://cloud.google.com/monitoring/api/resources) and Logging resource types (https://cloud.google.com/logging/docs/api/v2/resource-list).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2871,27 +2661,24 @@ Possible values are `METHOD_UNSPECIFIED`, `GET`, and `POST`.
             title="Required">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Values for all of the labels listed in the associated monitored resource descriptor. For example, Compute Engine VM instances use the labels "project_id", "instance_id", and "zone".
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The monitored resource type. This field must match the type field of a MonitoredResourceDescriptor (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.monitoredResourceDescriptors#MonitoredResourceDescriptor) object. For example, the type of a Compute Engine VM instance is gce_instance. For a list of types, see Monitoring resource types (https://cloud.google.com/monitoring/api/resources) and Logging resource types (https://cloud.google.com/logging/docs/api/v2/resource-list).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2900,30 +2687,24 @@ Possible values are `METHOD_UNSPECIFIED`, `GET`, and `POST`.
             title="Required">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Values for all of the labels listed in the associated monitored resource descriptor. For example, Compute Engine VM instances use the labels "project_id", "instance_id", and "zone".
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The monitored resource type. This field must match the type field of a MonitoredResourceDescriptor (https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.monitoredResourceDescriptors#MonitoredResourceDescriptor) object. For example, the type of a Compute Engine VM instance is gce_instance. For a list of types, see Monitoring resource types (https://cloud.google.com/monitoring/api/resources) and Logging resource types (https://cloud.google.com/logging/docs/api/v2/resource-list).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="uptimecheckconfigresourcegroup">Uptime<wbr>Check<wbr>Config<wbr>Resource<wbr>Group</h4>
 {{% choosable language nodejs %}}
@@ -2933,11 +2714,10 @@ Possible values are `METHOD_UNSPECIFIED`, `GET`, and `POST`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#UptimeCheckConfigResourceGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#UptimeCheckConfigResourceGroupOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.UptimeCheckConfigResourceGroupArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.UptimeCheckConfigResourceGroup.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2947,28 +2727,25 @@ Possible values are `METHOD_UNSPECIFIED`, `GET`, and `POST`.
             title="Optional">
         <span id="groupid_csharp">
 <a href="#groupid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The group of resources being monitored. Should be the `name` of a group
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resourcetype_csharp">
 <a href="#resourcetype_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource type of the group members.
 Possible values are `RESOURCE_TYPE_UNSPECIFIED`, `INSTANCE`, and `AWS_ELB_LOAD_BALANCER`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2977,28 +2754,25 @@ Possible values are `RESOURCE_TYPE_UNSPECIFIED`, `INSTANCE`, and `AWS_ELB_LOAD_B
             title="Optional">
         <span id="groupid_go">
 <a href="#groupid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The group of resources being monitored. Should be the `name` of a group
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resourcetype_go">
 <a href="#resourcetype_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource type of the group members.
 Possible values are `RESOURCE_TYPE_UNSPECIFIED`, `INSTANCE`, and `AWS_ELB_LOAD_BALANCER`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3007,28 +2781,25 @@ Possible values are `RESOURCE_TYPE_UNSPECIFIED`, `INSTANCE`, and `AWS_ELB_LOAD_B
             title="Optional">
         <span id="groupid_nodejs">
 <a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The group of resources being monitored. Should be the `name` of a group
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resourcetype_nodejs">
 <a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource type of the group members.
 Possible values are `RESOURCE_TYPE_UNSPECIFIED`, `INSTANCE`, and `AWS_ELB_LOAD_BALANCER`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3037,31 +2808,25 @@ Possible values are `RESOURCE_TYPE_UNSPECIFIED`, `INSTANCE`, and `AWS_ELB_LOAD_B
             title="Optional">
         <span id="group_id_python">
 <a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The group of resources being monitored. Should be the `name` of a group
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resource_type_python">
 <a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource type of the group members.
 Possible values are `RESOURCE_TYPE_UNSPECIFIED`, `INSTANCE`, and `AWS_ELB_LOAD_BALANCER`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="uptimecheckconfigtcpcheck">Uptime<wbr>Check<wbr>Config<wbr>Tcp<wbr>Check</h4>
 {{% choosable language nodejs %}}
@@ -3071,11 +2836,10 @@ Possible values are `RESOURCE_TYPE_UNSPECIFIED`, `INSTANCE`, and `AWS_ELB_LOAD_B
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#UptimeCheckConfigTcpCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#UptimeCheckConfigTcpCheckOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.UptimeCheckConfigTcpCheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.UptimeCheckConfigTcpCheck.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3085,16 +2849,14 @@ Possible values are `RESOURCE_TYPE_UNSPECIFIED`, `INSTANCE`, and `AWS_ELB_LOAD_B
             title="Required">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port to the page to run the check against. Will be combined with host (specified within the MonitoredResource) to construct the full URL.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3103,16 +2865,14 @@ Possible values are `RESOURCE_TYPE_UNSPECIFIED`, `INSTANCE`, and `AWS_ELB_LOAD_B
             title="Required">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port to the page to run the check against. Will be combined with host (specified within the MonitoredResource) to construct the full URL.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3121,16 +2881,14 @@ Possible values are `RESOURCE_TYPE_UNSPECIFIED`, `INSTANCE`, and `AWS_ELB_LOAD_B
             title="Required">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port to the page to run the check against. Will be combined with host (specified within the MonitoredResource) to construct the full URL.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3139,24 +2897,14 @@ Possible values are `RESOURCE_TYPE_UNSPECIFIED`, `INSTANCE`, and `AWS_ELB_LOAD_B
             title="Required">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port to the page to run the check against. Will be combined with host (specified within the MonitoredResource) to construct the full URL.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 ## Import
 
 

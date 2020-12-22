@@ -16,6 +16,7 @@ Explore the resources and functions of the composer module in the GCP package.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getenvironment" title="GetEnvironment"><span class="symbol function"></span>GetEnvironment</a></li>
     <li><a href="getimageversions" title="GetImageVersions"><span class="symbol function"></span>GetImageVersions</a></li>
 </ul>
 
@@ -28,7 +29,7 @@ Explore the resources and functions of the composer module in the GCP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>4.5.1</dd>
+	<dd>4.6.0</dd>
 </dl>
 
 

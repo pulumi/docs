@@ -1,8 +1,8 @@
 
 ---
 title: "Reservation"
-title_tag: "Resource Reservation | Module compute | Package GCP"
-meta_desc: "Explore the Reservation resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a reservation resource. A reservation ensures that capacity is"
+title_tag: "gcp.compute.Reservation"
+meta_desc: "Documentation for the gcp.compute.Reservation resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -136,7 +136,7 @@ const gceReservation = new gcp.compute.Reservation("gce_reservation", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#Reservation">Reservation</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#ReservationArgs">ReservationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#Reservation">Reservation</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#ReservationArgs">ReservationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -144,11 +144,11 @@ const gceReservation = new gcp.compute.Reservation("gce_reservation", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#Reservation">NewReservation</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#ReservationArgs">ReservationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#Reservation">Reservation</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#Reservation">NewReservation</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#ReservationArgs">ReservationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#Reservation">Reservation</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Reservation.html">Reservation</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.ReservationArgs.html">ReservationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Reservation.html">Reservation</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.ReservationArgs.html">ReservationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -159,7 +159,7 @@ const gceReservation = new gcp.compute.Reservation("gce_reservation", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -228,7 +228,7 @@ const gceReservation = new gcp.compute.Reservation("gce_reservation", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -267,7 +267,7 @@ const gceReservation = new gcp.compute.Reservation("gce_reservation", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -308,7 +308,6 @@ The Reservation resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -316,43 +315,40 @@ The Reservation resource accepts the following [input]({{< relref "/docs/intro/c
             title="Required">
         <span id="specificreservation_csharp">
 <a href="#specificreservation_csharp" style="color: inherit; text-decoration: inherit;">Specific<wbr>Reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservation">Reservation<wbr>Specific<wbr>Reservation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reservation for instances with specific machine shapes.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="zone_csharp">
 <a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone where the reservation is made.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -362,35 +358,31 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="specificreservationrequired_csharp">
 <a href="#specificreservationrequired_csharp" style="color: inherit; text-decoration: inherit;">Specific<wbr>Reservation<wbr>Required</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When set to true, only VMs that target this reservation by name can
 consume this reservation. Otherwise, it can be consumed by VMs with
 affinity for any reservation. Defaults to false.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -399,43 +391,40 @@ affinity for any reservation. Defaults to false.
             title="Required">
         <span id="specificreservation_go">
 <a href="#specificreservation_go" style="color: inherit; text-decoration: inherit;">Specific<wbr>Reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservation">Reservation<wbr>Specific<wbr>Reservation</a></span>
     </dt>
     <dd>{{% md %}}Reservation for instances with specific machine shapes.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="zone_go">
 <a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone where the reservation is made.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -445,35 +434,31 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="specificreservationrequired_go">
 <a href="#specificreservationrequired_go" style="color: inherit; text-decoration: inherit;">Specific<wbr>Reservation<wbr>Required</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When set to true, only VMs that target this reservation by name can
 consume this reservation. Otherwise, it can be consumed by VMs with
 affinity for any reservation. Defaults to false.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -482,43 +467,40 @@ affinity for any reservation. Defaults to false.
             title="Required">
         <span id="specificreservation_nodejs">
 <a href="#specificreservation_nodejs" style="color: inherit; text-decoration: inherit;">specific<wbr>Reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservation">Reservation<wbr>Specific<wbr>Reservation</a></span>
     </dt>
     <dd>{{% md %}}Reservation for instances with specific machine shapes.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="zone_nodejs">
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone where the reservation is made.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -528,35 +510,31 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="specificreservationrequired_nodejs">
 <a href="#specificreservationrequired_nodejs" style="color: inherit; text-decoration: inherit;">specific<wbr>Reservation<wbr>Required</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When set to true, only VMs that target this reservation by name can
 consume this reservation. Otherwise, it can be consumed by VMs with
 affinity for any reservation. Defaults to false.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -565,43 +543,40 @@ affinity for any reservation. Defaults to false.
             title="Required">
         <span id="specific_reservation_python">
 <a href="#specific_reservation_python" style="color: inherit; text-decoration: inherit;">specific_<wbr>reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservation">Reservation<wbr>Specific<wbr>Reservation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reservation for instances with specific machine shapes.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="zone_python">
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The zone where the reservation is made.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -611,44 +586,36 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="specific_reservation_required_python">
 <a href="#specific_reservation_required_python" style="color: inherit; text-decoration: inherit;">specific_<wbr>reservation_<wbr>required</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When set to true, only VMs that target this reservation by name can
 consume this reservation. Otherwise, it can be consumed by VMs with
 affinity for any reservation. Defaults to false.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Reservation resource produces the following output properties:
-
 
 
 
@@ -659,59 +626,53 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="commitment_csharp">
 <a href="#commitment_csharp" style="color: inherit; text-decoration: inherit;">Commitment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="creationtimestamp_csharp">
 <a href="#creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the reservation.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -720,59 +681,53 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="commitment_go">
 <a href="#commitment_go" style="color: inherit; text-decoration: inherit;">Commitment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="creationtimestamp_go">
 <a href="#creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the reservation.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -781,59 +736,53 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="commitment_nodejs">
 <a href="#commitment_nodejs" style="color: inherit; text-decoration: inherit;">commitment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="creationtimestamp_nodejs">
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the reservation.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -842,62 +791,53 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="commitment_python">
 <a href="#commitment_python" style="color: inherit; text-decoration: inherit;">commitment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="creation_timestamp_python">
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the reservation.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -907,7 +847,7 @@ Get an existing Reservation resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#ReservationState">ReservationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#Reservation">Reservation</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#ReservationState">ReservationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#Reservation">Reservation</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -916,11 +856,11 @@ Get an existing Reservation resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetReservation<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#ReservationState">ReservationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#Reservation">Reservation</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetReservation<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#ReservationState">ReservationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#Reservation">Reservation</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Reservation.html">Reservation</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.ReservationState.html">ReservationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Reservation.html">Reservation</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.ReservationState.html">ReservationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1022,7 +962,6 @@ Get an existing Reservation resource's state with the given name, ID, and option
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1030,42 +969,39 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_commitment_csharp">
 <a href="#state_commitment_csharp" style="color: inherit; text-decoration: inherit;">Commitment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_csharp">
 <a href="#state_creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -1075,80 +1011,72 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
 <a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_specificreservation_csharp">
 <a href="#state_specificreservation_csharp" style="color: inherit; text-decoration: inherit;">Specific<wbr>Reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservation">Reservation<wbr>Specific<wbr>Reservation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reservation for instances with specific machine shapes.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_specificreservationrequired_csharp">
 <a href="#state_specificreservationrequired_csharp" style="color: inherit; text-decoration: inherit;">Specific<wbr>Reservation<wbr>Required</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When set to true, only VMs that target this reservation by name can
 consume this reservation. Otherwise, it can be consumed by VMs with
 affinity for any reservation. Defaults to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the reservation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_zone_csharp">
 <a href="#state_zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone where the reservation is made.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1157,42 +1085,39 @@ affinity for any reservation. Defaults to false.
             title="Optional">
         <span id="state_commitment_go">
 <a href="#state_commitment_go" style="color: inherit; text-decoration: inherit;">Commitment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_go">
 <a href="#state_creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -1202,80 +1127,72 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
 <a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_specificreservation_go">
 <a href="#state_specificreservation_go" style="color: inherit; text-decoration: inherit;">Specific<wbr>Reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservation">Reservation<wbr>Specific<wbr>Reservation</a></span>
     </dt>
     <dd>{{% md %}}Reservation for instances with specific machine shapes.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_specificreservationrequired_go">
 <a href="#state_specificreservationrequired_go" style="color: inherit; text-decoration: inherit;">Specific<wbr>Reservation<wbr>Required</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When set to true, only VMs that target this reservation by name can
 consume this reservation. Otherwise, it can be consumed by VMs with
 affinity for any reservation. Defaults to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the reservation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_zone_go">
 <a href="#state_zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone where the reservation is made.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1284,42 +1201,39 @@ affinity for any reservation. Defaults to false.
             title="Optional">
         <span id="state_commitment_nodejs">
 <a href="#state_commitment_nodejs" style="color: inherit; text-decoration: inherit;">commitment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_nodejs">
 <a href="#state_creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -1329,80 +1243,72 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_specificreservation_nodejs">
 <a href="#state_specificreservation_nodejs" style="color: inherit; text-decoration: inherit;">specific<wbr>Reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservation">Reservation<wbr>Specific<wbr>Reservation</a></span>
     </dt>
     <dd>{{% md %}}Reservation for instances with specific machine shapes.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_specificreservationrequired_nodejs">
 <a href="#state_specificreservationrequired_nodejs" style="color: inherit; text-decoration: inherit;">specific<wbr>Reservation<wbr>Required</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When set to true, only VMs that target this reservation by name can
 consume this reservation. Otherwise, it can be consumed by VMs with
 affinity for any reservation. Defaults to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the reservation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_zone_nodejs">
 <a href="#state_zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone where the reservation is made.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1411,42 +1317,39 @@ affinity for any reservation. Defaults to false.
             title="Optional">
         <span id="state_commitment_python">
 <a href="#state_commitment_python" style="color: inherit; text-decoration: inherit;">commitment</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_creation_timestamp_python">
 <a href="#state_creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -1456,77 +1359,70 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_specific_reservation_python">
 <a href="#state_specific_reservation_python" style="color: inherit; text-decoration: inherit;">specific_<wbr>reservation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservation">Reservation<wbr>Specific<wbr>Reservation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Reservation for instances with specific machine shapes.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_specific_reservation_required_python">
 <a href="#state_specific_reservation_required_python" style="color: inherit; text-decoration: inherit;">specific_<wbr>reservation_<wbr>required</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When set to true, only VMs that target this reservation by name can
 consume this reservation. Otherwise, it can be consumed by VMs with
 affinity for any reservation. Defaults to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the reservation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_zone_python">
 <a href="#state_zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The zone where the reservation is made.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1535,11 +1431,8 @@ affinity for any reservation. Defaults to false.
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="reservationspecificreservation">Reservation<wbr>Specific<wbr>Reservation</h4>
@@ -1550,11 +1443,10 @@ affinity for any reservation. Defaults to false.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#ReservationSpecificReservationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#ReservationSpecificReservationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.ReservationSpecificReservationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.ReservationSpecificReservation.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1564,40 +1456,36 @@ affinity for any reservation. Defaults to false.
             title="Required">
         <span id="count_csharp">
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of resources that are allocated.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instanceproperties_csharp">
 <a href="#instanceproperties_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservationinstanceproperties">Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The instance properties for the reservation.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="inusecount_csharp">
 <a href="#inusecount_csharp" style="color: inherit; text-decoration: inherit;">In<wbr>Use<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}-
 How many instances are in use.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1606,40 +1494,36 @@ How many instances are in use.
             title="Required">
         <span id="count_go">
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of resources that are allocated.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instanceproperties_go">
 <a href="#instanceproperties_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservationinstanceproperties">Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The instance properties for the reservation.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="inusecount_go">
 <a href="#inusecount_go" style="color: inherit; text-decoration: inherit;">In<wbr>Use<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}-
 How many instances are in use.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1648,40 +1532,36 @@ How many instances are in use.
             title="Required">
         <span id="count_nodejs">
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of resources that are allocated.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instanceproperties_nodejs">
 <a href="#instanceproperties_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservationinstanceproperties">Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}The instance properties for the reservation.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="inusecount_nodejs">
 <a href="#inusecount_nodejs" style="color: inherit; text-decoration: inherit;">in<wbr>Use<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}-
 How many instances are in use.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1690,43 +1570,36 @@ How many instances are in use.
             title="Required">
         <span id="count_python">
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of resources that are allocated.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="instance_properties_python">
 <a href="#instance_properties_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>properties</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservationinstanceproperties">Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The instance properties for the reservation.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="in_use_count_python">
 <a href="#in_use_count_python" style="color: inherit; text-decoration: inherit;">in_<wbr>use_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}-
 How many instances are in use.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="reservationspecificreservationinstanceproperties">Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties</h4>
 {{% choosable language nodejs %}}
@@ -1736,11 +1609,10 @@ How many instances are in use.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#ReservationSpecificReservationInstancePropertiesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#ReservationSpecificReservationInstancePropertiesOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.ReservationSpecificReservationInstancePropertiesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.ReservationSpecificReservationInstanceProperties.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1750,30 +1622,28 @@ How many instances are in use.
             title="Required">
         <span id="machinetype_csharp">
 <a href="#machinetype_csharp" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the machine type to reserve.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="guestaccelerators_csharp">
 <a href="#guestaccelerators_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>Accelerators</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservationinstancepropertiesguestaccelerator">List&lt;Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Guest<wbr>Accelerator<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Guest accelerator type and count.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="localssds_csharp">
 <a href="#localssds_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Ssds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservationinstancepropertieslocalssd">List&lt;Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Local<wbr>Ssd<wbr>Args&gt;</a></span>
     </dt>
@@ -1781,24 +1651,21 @@ Structure is documented below.
 reserves disks of type `local-ssd`.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mincpuplatform_csharp">
 <a href="#mincpuplatform_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Cpu<wbr>Platform</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum CPU platform for the reservation. For example,
 `"Intel Skylake"`. See
 the CPU platform availability reference](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform#availablezones)
 for information on available CPU platforms.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1807,30 +1674,28 @@ for information on available CPU platforms.
             title="Required">
         <span id="machinetype_go">
 <a href="#machinetype_go" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the machine type to reserve.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="guestaccelerators_go">
 <a href="#guestaccelerators_go" style="color: inherit; text-decoration: inherit;">Guest<wbr>Accelerators</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservationinstancepropertiesguestaccelerator">[]Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Guest<wbr>Accelerator</a></span>
     </dt>
     <dd>{{% md %}}Guest accelerator type and count.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="localssds_go">
 <a href="#localssds_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Ssds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservationinstancepropertieslocalssd">[]Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Local<wbr>Ssd</a></span>
     </dt>
@@ -1838,24 +1703,21 @@ Structure is documented below.
 reserves disks of type `local-ssd`.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mincpuplatform_go">
 <a href="#mincpuplatform_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Cpu<wbr>Platform</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum CPU platform for the reservation. For example,
 `"Intel Skylake"`. See
 the CPU platform availability reference](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform#availablezones)
 for information on available CPU platforms.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1864,30 +1726,28 @@ for information on available CPU platforms.
             title="Required">
         <span id="machinetype_nodejs">
 <a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the machine type to reserve.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="guestaccelerators_nodejs">
 <a href="#guestaccelerators_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Accelerators</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservationinstancepropertiesguestaccelerator">Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Guest<wbr>Accelerator[]</a></span>
     </dt>
     <dd>{{% md %}}Guest accelerator type and count.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="localssds_nodejs">
 <a href="#localssds_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Ssds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservationinstancepropertieslocalssd">Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Local<wbr>Ssd[]</a></span>
     </dt>
@@ -1895,24 +1755,21 @@ Structure is documented below.
 reserves disks of type `local-ssd`.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mincpuplatform_nodejs">
 <a href="#mincpuplatform_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Cpu<wbr>Platform</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum CPU platform for the reservation. For example,
 `"Intel Skylake"`. See
 the CPU platform availability reference](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform#availablezones)
 for information on available CPU platforms.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1921,30 +1778,28 @@ for information on available CPU platforms.
             title="Required">
         <span id="machine_type_python">
 <a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the machine type to reserve.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="guest_accelerators_python">
 <a href="#guest_accelerators_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>accelerators</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservationinstancepropertiesguestaccelerator">Sequence[Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Guest<wbr>Accelerator<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Guest accelerator type and count.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="local_ssds_python">
 <a href="#local_ssds_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ssds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reservationspecificreservationinstancepropertieslocalssd">Sequence[Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Local<wbr>Ssd<wbr>Args]</a></span>
     </dt>
@@ -1952,27 +1807,21 @@ Structure is documented below.
 reserves disks of type `local-ssd`.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="min_cpu_platform_python">
 <a href="#min_cpu_platform_python" style="color: inherit; text-decoration: inherit;">min_<wbr>cpu_<wbr>platform</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The minimum CPU platform for the reservation. For example,
 `"Intel Skylake"`. See
 the CPU platform availability reference](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform#availablezones)
 for information on available CPU platforms.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="reservationspecificreservationinstancepropertiesguestaccelerator">Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Guest<wbr>Accelerator</h4>
 {{% choosable language nodejs %}}
@@ -1982,11 +1831,10 @@ for information on available CPU platforms.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#ReservationSpecificReservationInstancePropertiesGuestAcceleratorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#ReservationSpecificReservationInstancePropertiesGuestAcceleratorOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.ReservationSpecificReservationInstancePropertiesGuestAcceleratorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.ReservationSpecificReservationInstancePropertiesGuestAccelerator.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1996,31 +1844,28 @@ for information on available CPU platforms.
             title="Required">
         <span id="acceleratorcount_csharp">
 <a href="#acceleratorcount_csharp" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of the guest accelerator cards exposed to
 this instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="acceleratortype_csharp">
 <a href="#acceleratortype_csharp" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL of the accelerator type to
 attach to this instance. For example:
 `projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100`
 If you are creating an instance template, specify only the accelerator name.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2029,31 +1874,28 @@ If you are creating an instance template, specify only the accelerator name.
             title="Required">
         <span id="acceleratorcount_go">
 <a href="#acceleratorcount_go" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of the guest accelerator cards exposed to
 this instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="acceleratortype_go">
 <a href="#acceleratortype_go" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL of the accelerator type to
 attach to this instance. For example:
 `projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100`
 If you are creating an instance template, specify only the accelerator name.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2062,31 +1904,28 @@ If you are creating an instance template, specify only the accelerator name.
             title="Required">
         <span id="acceleratorcount_nodejs">
 <a href="#acceleratorcount_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of the guest accelerator cards exposed to
 this instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="acceleratortype_nodejs">
 <a href="#acceleratortype_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full or partial URL of the accelerator type to
 attach to this instance. For example:
 `projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100`
 If you are creating an instance template, specify only the accelerator name.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2095,34 +1934,28 @@ If you are creating an instance template, specify only the accelerator name.
             title="Required">
         <span id="accelerator_count_python">
 <a href="#accelerator_count_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of the guest accelerator cards exposed to
 this instance.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="accelerator_type_python">
 <a href="#accelerator_type_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full or partial URL of the accelerator type to
 attach to this instance. For example:
 `projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100`
 If you are creating an instance template, specify only the accelerator name.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="reservationspecificreservationinstancepropertieslocalssd">Reservation<wbr>Specific<wbr>Reservation<wbr>Instance<wbr>Properties<wbr>Local<wbr>Ssd</h4>
 {{% choosable language nodejs %}}
@@ -2132,11 +1965,10 @@ If you are creating an instance template, specify only the accelerator name.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#ReservationSpecificReservationInstancePropertiesLocalSsdArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#ReservationSpecificReservationInstancePropertiesLocalSsdOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.ReservationSpecificReservationInstancePropertiesLocalSsdArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.ReservationSpecificReservationInstancePropertiesLocalSsd.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2146,29 +1978,26 @@ If you are creating an instance template, specify only the accelerator name.
             title="Required">
         <span id="disksizegb_csharp">
 <a href="#disksizegb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the disk in base-2 GB.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interface_csharp">
 <a href="#interface_csharp" style="color: inherit; text-decoration: inherit;">Interface</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The disk interface to use for attaching this disk.
 Default value is `SCSI`.
 Possible values are `SCSI` and `NVME`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2177,29 +2006,26 @@ Possible values are `SCSI` and `NVME`.
             title="Required">
         <span id="disksizegb_go">
 <a href="#disksizegb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the disk in base-2 GB.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interface_go">
 <a href="#interface_go" style="color: inherit; text-decoration: inherit;">Interface</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The disk interface to use for attaching this disk.
 Default value is `SCSI`.
 Possible values are `SCSI` and `NVME`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2208,29 +2034,26 @@ Possible values are `SCSI` and `NVME`.
             title="Required">
         <span id="disksizegb_nodejs">
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the disk in base-2 GB.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interface_nodejs">
 <a href="#interface_nodejs" style="color: inherit; text-decoration: inherit;">interface</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The disk interface to use for attaching this disk.
 Default value is `SCSI`.
 Possible values are `SCSI` and `NVME`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2239,37 +2062,26 @@ Possible values are `SCSI` and `NVME`.
             title="Required">
         <span id="disk_size_gb_python">
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the disk in base-2 GB.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interface_python">
 <a href="#interface_python" style="color: inherit; text-decoration: inherit;">interface</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The disk interface to use for attaching this disk.
 Default value is `SCSI`.
 Possible values are `SCSI` and `NVME`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 ## Import
 
 

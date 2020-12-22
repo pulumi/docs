@@ -1,8 +1,8 @@
 
 ---
 title: "ConsentStore"
-title_tag: "Resource ConsentStore | Module healthcare | Package GCP"
-meta_desc: "Explore the ConsentStore resource of the healthcare module, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "gcp.healthcare.ConsentStore"
+meta_desc: "Documentation for the gcp.healthcare.ConsentStore resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -34,7 +34,7 @@ ConsentStore can be imported using any of these accepted formats
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/healthcare/#ConsentStore">ConsentStore</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/healthcare/#ConsentStoreArgs">ConsentStoreArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/healthcare/#ConsentStore">ConsentStore</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/healthcare/#ConsentStoreArgs">ConsentStoreArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -42,11 +42,11 @@ ConsentStore can be imported using any of these accepted formats
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/healthcare?tab=doc#ConsentStore">NewConsentStore</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/healthcare?tab=doc#ConsentStoreArgs">ConsentStoreArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/healthcare?tab=doc#ConsentStore">ConsentStore</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/healthcare?tab=doc#ConsentStore">NewConsentStore</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/healthcare?tab=doc#ConsentStoreArgs">ConsentStoreArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/healthcare?tab=doc#ConsentStore">ConsentStore</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.ConsentStore.html">ConsentStore</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.ConsentStoreArgs.html">ConsentStoreArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.ConsentStore.html">ConsentStore</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.ConsentStoreArgs.html">ConsentStoreArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -57,7 +57,7 @@ ConsentStore can be imported using any of these accepted formats
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -126,7 +126,7 @@ ConsentStore can be imported using any of these accepted formats
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -165,7 +165,7 @@ ConsentStore can be imported using any of these accepted formats
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -206,7 +206,6 @@ The ConsentStore resource accepts the following [input]({{< relref "/docs/intro/
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -214,42 +213,39 @@ The ConsentStore resource accepts the following [input]({{< relref "/docs/intro/
             title="Required">
         <span id="dataset_csharp">
 <a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="defaultconsentttl_csharp">
 <a href="#defaultconsentttl_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Consent<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default time to live for consents in this store. Must be at least 24 hours. Updating this field will not affect the expiration time of existing consents.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enableconsentcreateonupdate_csharp">
 <a href="#enableconsentcreateonupdate_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Consent<wbr>Create<wbr>On<wbr>Update</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, [consents.patch] [google.cloud.healthcare.v1beta1.consent.UpdateConsent] creates the consent if it does not already exist.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -262,22 +258,19 @@ No more than 64 labels can be associated with a given store.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this ConsentStore, for example:
 "consent1"
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -286,42 +279,39 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
             title="Required">
         <span id="dataset_go">
 <a href="#dataset_go" style="color: inherit; text-decoration: inherit;">Dataset</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="defaultconsentttl_go">
 <a href="#defaultconsentttl_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Consent<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default time to live for consents in this store. Must be at least 24 hours. Updating this field will not affect the expiration time of existing consents.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enableconsentcreateonupdate_go">
 <a href="#enableconsentcreateonupdate_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Consent<wbr>Create<wbr>On<wbr>Update</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, [consents.patch] [google.cloud.healthcare.v1beta1.consent.UpdateConsent] creates the consent if it does not already exist.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -334,22 +324,19 @@ No more than 64 labels can be associated with a given store.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this ConsentStore, for example:
 "consent1"
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -358,42 +345,39 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
             title="Required">
         <span id="dataset_nodejs">
 <a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="defaultconsentttl_nodejs">
 <a href="#defaultconsentttl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Consent<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default time to live for consents in this store. Must be at least 24 hours. Updating this field will not affect the expiration time of existing consents.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enableconsentcreateonupdate_nodejs">
 <a href="#enableconsentcreateonupdate_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Consent<wbr>Create<wbr>On<wbr>Update</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, [consents.patch] [google.cloud.healthcare.v1beta1.consent.UpdateConsent] creates the consent if it does not already exist.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -406,22 +390,19 @@ No more than 64 labels can be associated with a given store.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this ConsentStore, for example:
 "consent1"
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -430,42 +411,39 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
             title="Required">
         <span id="dataset_python">
 <a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="default_consent_ttl_python">
 <a href="#default_consent_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>consent_<wbr>ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Default time to live for consents in this store. Must be at least 24 hours. Updating this field will not affect the expiration time of existing consents.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enable_consent_create_on_update_python">
 <a href="#enable_consent_create_on_update_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>consent_<wbr>create_<wbr>on_<wbr>update</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, [consents.patch] [google.cloud.healthcare.v1beta1.consent.UpdateConsent] creates the consent if it does not already exist.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
@@ -478,31 +456,24 @@ No more than 64 labels can be associated with a given store.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of this ConsentStore, for example:
 "consent1"
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the ConsentStore resource produces the following output properties:
-
 
 
 
@@ -513,15 +484,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -530,15 +499,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -547,15 +514,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -564,18 +529,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -585,7 +545,7 @@ Get an existing ConsentStore resource's state with the given name, ID, and optio
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/healthcare/#ConsentStoreState">ConsentStoreState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/healthcare/#ConsentStore">ConsentStore</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/healthcare/#ConsentStoreState">ConsentStoreState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/healthcare/#ConsentStore">ConsentStore</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -594,11 +554,11 @@ Get an existing ConsentStore resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetConsentStore<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/healthcare?tab=doc#ConsentStoreState">ConsentStoreState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/healthcare?tab=doc#ConsentStore">ConsentStore</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetConsentStore<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/healthcare?tab=doc#ConsentStoreState">ConsentStoreState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/healthcare?tab=doc#ConsentStore">ConsentStore</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.ConsentStore.html">ConsentStore</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.ConsentStoreState.html">ConsentStoreState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.ConsentStore.html">ConsentStore</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Healthcare.ConsentStoreState.html">ConsentStoreState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -700,7 +660,6 @@ Get an existing ConsentStore resource's state with the given name, ID, and optio
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -708,42 +667,39 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_dataset_csharp">
 <a href="#state_dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_defaultconsentttl_csharp">
 <a href="#state_defaultconsentttl_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Consent<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default time to live for consents in this store. Must be at least 24 hours. Updating this field will not affect the expiration time of existing consents.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enableconsentcreateonupdate_csharp">
 <a href="#state_enableconsentcreateonupdate_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Consent<wbr>Create<wbr>On<wbr>Update</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, [consents.patch] [google.cloud.healthcare.v1beta1.consent.UpdateConsent] creates the consent if it does not already exist.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -756,22 +712,19 @@ No more than 64 labels can be associated with a given store.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this ConsentStore, for example:
 "consent1"
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -780,42 +733,39 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
             title="Optional">
         <span id="state_dataset_go">
 <a href="#state_dataset_go" style="color: inherit; text-decoration: inherit;">Dataset</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_defaultconsentttl_go">
 <a href="#state_defaultconsentttl_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Consent<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default time to live for consents in this store. Must be at least 24 hours. Updating this field will not affect the expiration time of existing consents.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enableconsentcreateonupdate_go">
 <a href="#state_enableconsentcreateonupdate_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Consent<wbr>Create<wbr>On<wbr>Update</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, [consents.patch] [google.cloud.healthcare.v1beta1.consent.UpdateConsent] creates the consent if it does not already exist.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -828,22 +778,19 @@ No more than 64 labels can be associated with a given store.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this ConsentStore, for example:
 "consent1"
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -852,42 +799,39 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
             title="Optional">
         <span id="state_dataset_nodejs">
 <a href="#state_dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_defaultconsentttl_nodejs">
 <a href="#state_defaultconsentttl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Consent<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default time to live for consents in this store. Must be at least 24 hours. Updating this field will not affect the expiration time of existing consents.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enableconsentcreateonupdate_nodejs">
 <a href="#state_enableconsentcreateonupdate_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Consent<wbr>Create<wbr>On<wbr>Update</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, [consents.patch] [google.cloud.healthcare.v1beta1.consent.UpdateConsent] creates the consent if it does not already exist.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -900,22 +844,19 @@ No more than 64 labels can be associated with a given store.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this ConsentStore, for example:
 "consent1"
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -924,42 +865,39 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
             title="Optional">
         <span id="state_dataset_python">
 <a href="#state_dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_default_consent_ttl_python">
 <a href="#state_default_consent_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>consent_<wbr>ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Default time to live for consents in this store. Must be at least 24 hours. Updating this field will not affect the expiration time of existing consents.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enable_consent_create_on_update_python">
 <a href="#state_enable_consent_create_on_update_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>consent_<wbr>create_<wbr>on_<wbr>update</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, [consents.patch] [google.cloud.healthcare.v1beta1.consent.UpdateConsent] creates the consent if it does not already exist.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
@@ -972,27 +910,19 @@ No more than 64 labels can be associated with a given store.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of this ConsentStore, for example:
 "consent1"
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
 
 
 

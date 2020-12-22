@@ -1,8 +1,8 @@
 
 ---
 title: "RegionNetworkEndpointGroup"
-title_tag: "Resource RegionNetworkEndpointGroup | Module compute | Package GCP"
-meta_desc: "Explore the RegionNetworkEndpointGroup resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. A regional NEG that can support Serverless Products."
+title_tag: "gcp.compute.RegionNetworkEndpointGroup"
+meta_desc: "Documentation for the gcp.compute.RegionNetworkEndpointGroup resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -663,7 +663,7 @@ const appengineNegRegionNetworkEndpointGroup = new gcp.compute.RegionNetworkEndp
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RegionNetworkEndpointGroup">RegionNetworkEndpointGroup</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RegionNetworkEndpointGroupArgs">RegionNetworkEndpointGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RegionNetworkEndpointGroup">RegionNetworkEndpointGroup</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RegionNetworkEndpointGroupArgs">RegionNetworkEndpointGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -671,11 +671,11 @@ const appengineNegRegionNetworkEndpointGroup = new gcp.compute.RegionNetworkEndp
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionNetworkEndpointGroup">NewRegionNetworkEndpointGroup</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionNetworkEndpointGroupArgs">RegionNetworkEndpointGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionNetworkEndpointGroup">RegionNetworkEndpointGroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionNetworkEndpointGroup">NewRegionNetworkEndpointGroup</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionNetworkEndpointGroupArgs">RegionNetworkEndpointGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionNetworkEndpointGroup">RegionNetworkEndpointGroup</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionNetworkEndpointGroup.html">RegionNetworkEndpointGroup</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionNetworkEndpointGroupArgs.html">RegionNetworkEndpointGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionNetworkEndpointGroup.html">RegionNetworkEndpointGroup</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionNetworkEndpointGroupArgs.html">RegionNetworkEndpointGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -686,7 +686,7 @@ const appengineNegRegionNetworkEndpointGroup = new gcp.compute.RegionNetworkEndp
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -755,7 +755,7 @@ const appengineNegRegionNetworkEndpointGroup = new gcp.compute.RegionNetworkEndp
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -794,7 +794,7 @@ const appengineNegRegionNetworkEndpointGroup = new gcp.compute.RegionNetworkEndp
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -835,7 +835,6 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -843,18 +842,17 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
             title="Required">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the region where the Serverless NEGs Reside.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="appengine_csharp">
 <a href="#appengine_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Engine</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionnetworkendpointgroupappengine">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>App<wbr>Engine<wbr>Args</a></span>
     </dt>
@@ -862,12 +860,11 @@ The RegionNetworkEndpointGroup resource accepts the following [input]({{< relref
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloudfunction_csharp">
 <a href="#cloudfunction_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Function</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionnetworkendpointgroupcloudfunction">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Cloud<wbr>Function<wbr>Args</a></span>
     </dt>
@@ -875,12 +872,11 @@ Structure is documented below.
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloudrun_csharp">
 <a href="#cloudrun_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Run</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionnetworkendpointgroupcloudrun">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Cloud<wbr>Run<wbr>Args</a></span>
     </dt>
@@ -888,26 +884,24 @@ Structure is documented below.
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource; provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -917,35 +911,31 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkendpointtype_csharp">
 <a href="#networkendpointtype_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Endpoint<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of network endpoints in this network endpoint group. Defaults to SERVERLESS
 Default value is `SERVERLESS`.
 Possible values are `SERVERLESS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -954,18 +944,17 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the region where the Serverless NEGs Reside.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="appengine_go">
 <a href="#appengine_go" style="color: inherit; text-decoration: inherit;">App<wbr>Engine</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionnetworkendpointgroupappengine">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>App<wbr>Engine</a></span>
     </dt>
@@ -973,12 +962,11 @@ If it is not provided, the provider project is used.
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloudfunction_go">
 <a href="#cloudfunction_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Function</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionnetworkendpointgroupcloudfunction">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Cloud<wbr>Function</a></span>
     </dt>
@@ -986,12 +974,11 @@ Structure is documented below.
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloudrun_go">
 <a href="#cloudrun_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Run</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionnetworkendpointgroupcloudrun">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Cloud<wbr>Run</a></span>
     </dt>
@@ -999,26 +986,24 @@ Structure is documented below.
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource; provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -1028,35 +1013,31 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkendpointtype_go">
 <a href="#networkendpointtype_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Endpoint<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of network endpoints in this network endpoint group. Defaults to SERVERLESS
 Default value is `SERVERLESS`.
 Possible values are `SERVERLESS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1065,18 +1046,17 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the region where the Serverless NEGs Reside.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="appengine_nodejs">
 <a href="#appengine_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Engine</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionnetworkendpointgroupappengine">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>App<wbr>Engine</a></span>
     </dt>
@@ -1084,12 +1064,11 @@ If it is not provided, the provider project is used.
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloudfunction_nodejs">
 <a href="#cloudfunction_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Function</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionnetworkendpointgroupcloudfunction">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Cloud<wbr>Function</a></span>
     </dt>
@@ -1097,12 +1076,11 @@ Structure is documented below.
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloudrun_nodejs">
 <a href="#cloudrun_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Run</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionnetworkendpointgroupcloudrun">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Cloud<wbr>Run</a></span>
     </dt>
@@ -1110,26 +1088,24 @@ Structure is documented below.
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource; provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -1139,35 +1115,31 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkendpointtype_nodejs">
 <a href="#networkendpointtype_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Endpoint<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of network endpoints in this network endpoint group. Defaults to SERVERLESS
 Default value is `SERVERLESS`.
 Possible values are `SERVERLESS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1176,18 +1148,17 @@ If it is not provided, the provider project is used.
             title="Required">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A reference to the region where the Serverless NEGs Reside.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="app_engine_python">
 <a href="#app_engine_python" style="color: inherit; text-decoration: inherit;">app_<wbr>engine</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionnetworkendpointgroupappengine">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>App<wbr>Engine<wbr>Args</a></span>
     </dt>
@@ -1195,12 +1166,11 @@ If it is not provided, the provider project is used.
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloud_function_python">
 <a href="#cloud_function_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>function</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionnetworkendpointgroupcloudfunction">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Cloud<wbr>Function<wbr>Args</a></span>
     </dt>
@@ -1208,12 +1178,11 @@ Structure is documented below.
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloud_run_python">
 <a href="#cloud_run_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>run</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionnetworkendpointgroupcloudrun">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Cloud<wbr>Run<wbr>Args</a></span>
     </dt>
@@ -1221,26 +1190,24 @@ Structure is documented below.
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource; provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -1250,44 +1217,36 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="network_endpoint_type_python">
 <a href="#network_endpoint_type_python" style="color: inherit; text-decoration: inherit;">network_<wbr>endpoint_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of network endpoints in this network endpoint group. Defaults to SERVERLESS
 Default value is `SERVERLESS`.
 Possible values are `SERVERLESS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the RegionNetworkEndpointGroup resource produces the following output properties:
-
 
 
 
@@ -1298,26 +1257,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1326,26 +1282,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1354,26 +1307,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1382,29 +1332,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1414,7 +1358,7 @@ Get an existing RegionNetworkEndpointGroup resource's state with the given name,
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RegionNetworkEndpointGroupState">RegionNetworkEndpointGroupState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RegionNetworkEndpointGroup">RegionNetworkEndpointGroup</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RegionNetworkEndpointGroupState">RegionNetworkEndpointGroupState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RegionNetworkEndpointGroup">RegionNetworkEndpointGroup</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1423,11 +1367,11 @@ Get an existing RegionNetworkEndpointGroup resource's state with the given name,
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRegionNetworkEndpointGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionNetworkEndpointGroupState">RegionNetworkEndpointGroupState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionNetworkEndpointGroup">RegionNetworkEndpointGroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRegionNetworkEndpointGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionNetworkEndpointGroupState">RegionNetworkEndpointGroupState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionNetworkEndpointGroup">RegionNetworkEndpointGroup</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionNetworkEndpointGroup.html">RegionNetworkEndpointGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionNetworkEndpointGroupState.html">RegionNetworkEndpointGroupState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionNetworkEndpointGroup.html">RegionNetworkEndpointGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionNetworkEndpointGroupState.html">RegionNetworkEndpointGroupState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1529,7 +1473,6 @@ Get an existing RegionNetworkEndpointGroup resource's state with the given name,
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1537,7 +1480,7 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_appengine_csharp">
 <a href="#state_appengine_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Engine</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionnetworkendpointgroupappengine">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>App<wbr>Engine<wbr>Args</a></span>
     </dt>
@@ -1545,12 +1488,11 @@ The following state arguments are supported:
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cloudfunction_csharp">
 <a href="#state_cloudfunction_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Function</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionnetworkendpointgroupcloudfunction">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Cloud<wbr>Function<wbr>Args</a></span>
     </dt>
@@ -1558,12 +1500,11 @@ Structure is documented below.
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cloudrun_csharp">
 <a href="#state_cloudrun_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Run</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionnetworkendpointgroupcloudrun">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Cloud<wbr>Run<wbr>Args</a></span>
     </dt>
@@ -1571,26 +1512,24 @@ Structure is documented below.
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource; provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -1600,57 +1539,51 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_networkendpointtype_csharp">
 <a href="#state_networkendpointtype_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Endpoint<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of network endpoints in this network endpoint group. Defaults to SERVERLESS
 Default value is `SERVERLESS`.
 Possible values are `SERVERLESS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the region where the Serverless NEGs Reside.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
 <a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1659,7 +1592,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span id="state_appengine_go">
 <a href="#state_appengine_go" style="color: inherit; text-decoration: inherit;">App<wbr>Engine</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionnetworkendpointgroupappengine">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>App<wbr>Engine</a></span>
     </dt>
@@ -1667,12 +1600,11 @@ If it is not provided, the provider project is used.
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cloudfunction_go">
 <a href="#state_cloudfunction_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Function</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionnetworkendpointgroupcloudfunction">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Cloud<wbr>Function</a></span>
     </dt>
@@ -1680,12 +1612,11 @@ Structure is documented below.
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cloudrun_go">
 <a href="#state_cloudrun_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Run</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionnetworkendpointgroupcloudrun">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Cloud<wbr>Run</a></span>
     </dt>
@@ -1693,26 +1624,24 @@ Structure is documented below.
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource; provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -1722,57 +1651,51 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_networkendpointtype_go">
 <a href="#state_networkendpointtype_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Endpoint<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of network endpoints in this network endpoint group. Defaults to SERVERLESS
 Default value is `SERVERLESS`.
 Possible values are `SERVERLESS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the region where the Serverless NEGs Reside.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
 <a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1781,7 +1704,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span id="state_appengine_nodejs">
 <a href="#state_appengine_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Engine</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionnetworkendpointgroupappengine">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>App<wbr>Engine</a></span>
     </dt>
@@ -1789,12 +1712,11 @@ If it is not provided, the provider project is used.
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cloudfunction_nodejs">
 <a href="#state_cloudfunction_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Function</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionnetworkendpointgroupcloudfunction">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Cloud<wbr>Function</a></span>
     </dt>
@@ -1802,12 +1724,11 @@ Structure is documented below.
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cloudrun_nodejs">
 <a href="#state_cloudrun_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Run</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionnetworkendpointgroupcloudrun">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Cloud<wbr>Run</a></span>
     </dt>
@@ -1815,26 +1736,24 @@ Structure is documented below.
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource; provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -1844,57 +1763,51 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_networkendpointtype_nodejs">
 <a href="#state_networkendpointtype_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Endpoint<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of network endpoints in this network endpoint group. Defaults to SERVERLESS
 Default value is `SERVERLESS`.
 Possible values are `SERVERLESS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the region where the Serverless NEGs Reside.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1903,7 +1816,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span id="state_app_engine_python">
 <a href="#state_app_engine_python" style="color: inherit; text-decoration: inherit;">app_<wbr>engine</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionnetworkendpointgroupappengine">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>App<wbr>Engine<wbr>Args</a></span>
     </dt>
@@ -1911,12 +1824,11 @@ If it is not provided, the provider project is used.
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cloud_function_python">
 <a href="#state_cloud_function_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>function</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionnetworkendpointgroupcloudfunction">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Cloud<wbr>Function<wbr>Args</a></span>
     </dt>
@@ -1924,12 +1836,11 @@ Structure is documented below.
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cloud_run_python">
 <a href="#state_cloud_run_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>run</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionnetworkendpointgroupcloudrun">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Cloud<wbr>Run<wbr>Args</a></span>
     </dt>
@@ -1937,26 +1848,24 @@ Structure is documented below.
 Only one of cloud_run, app_engine or cloud_function may be set.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource; provided by the client when the resource is
 created. The name must be 1-63 characters long, and comply with
@@ -1966,54 +1875,49 @@ first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_network_endpoint_type_python">
 <a href="#state_network_endpoint_type_python" style="color: inherit; text-decoration: inherit;">network_<wbr>endpoint_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of network endpoints in this network endpoint group. Defaults to SERVERLESS
 Default value is `SERVERLESS`.
 Possible values are `SERVERLESS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A reference to the region where the Serverless NEGs Reside.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -2022,11 +1926,8 @@ If it is not provided, the provider project is used.
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="regionnetworkendpointgroupappengine">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>App<wbr>Engine</h4>
@@ -2037,11 +1938,10 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionNetworkEndpointGroupAppEngineArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionNetworkEndpointGroupAppEngineOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.RegionNetworkEndpointGroupAppEngineArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.RegionNetworkEndpointGroupAppEngine.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2051,22 +1951,21 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span id="service_csharp">
 <a href="#service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional serving service.
 The service name must be 1-63 characters long, and comply with RFC1035.
 Example value: "default", "my-service".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="urlmask_csharp">
 <a href="#urlmask_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Mask</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A template to parse function field from a request URL. URL mask allows
 for routing to multiple Cloud Functions without having to create
@@ -2075,23 +1974,20 @@ For example, request URLs "mydomain.com/function1" and "mydomain.com/function2"
 can be backed by the same Serverless NEG with URL mask "/". The URL mask
 will parse them to { function = "function1" } and { function = "function2" } respectively.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional serving version.
 The version must be 1-63 characters long, and comply with RFC1035.
 Example value: "v1", "v2".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2100,22 +1996,21 @@ Example value: "v1", "v2".
             title="Optional">
         <span id="service_go">
 <a href="#service_go" style="color: inherit; text-decoration: inherit;">Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional serving service.
 The service name must be 1-63 characters long, and comply with RFC1035.
 Example value: "default", "my-service".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="urlmask_go">
 <a href="#urlmask_go" style="color: inherit; text-decoration: inherit;">Url<wbr>Mask</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A template to parse function field from a request URL. URL mask allows
 for routing to multiple Cloud Functions without having to create
@@ -2124,23 +2019,20 @@ For example, request URLs "mydomain.com/function1" and "mydomain.com/function2"
 can be backed by the same Serverless NEG with URL mask "/". The URL mask
 will parse them to { function = "function1" } and { function = "function2" } respectively.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional serving version.
 The version must be 1-63 characters long, and comply with RFC1035.
 Example value: "v1", "v2".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2149,22 +2041,21 @@ Example value: "v1", "v2".
             title="Optional">
         <span id="service_nodejs">
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional serving service.
 The service name must be 1-63 characters long, and comply with RFC1035.
 Example value: "default", "my-service".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="urlmask_nodejs">
 <a href="#urlmask_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Mask</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A template to parse function field from a request URL. URL mask allows
 for routing to multiple Cloud Functions without having to create
@@ -2173,23 +2064,20 @@ For example, request URLs "mydomain.com/function1" and "mydomain.com/function2"
 can be backed by the same Serverless NEG with URL mask "/". The URL mask
 will parse them to { function = "function1" } and { function = "function2" } respectively.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional serving version.
 The version must be 1-63 characters long, and comply with RFC1035.
 Example value: "v1", "v2".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2198,22 +2086,21 @@ Example value: "v1", "v2".
             title="Optional">
         <span id="service_python">
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional serving service.
 The service name must be 1-63 characters long, and comply with RFC1035.
 Example value: "default", "my-service".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="url_mask_python">
 <a href="#url_mask_python" style="color: inherit; text-decoration: inherit;">url_<wbr>mask</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A template to parse function field from a request URL. URL mask allows
 for routing to multiple Cloud Functions without having to create
@@ -2222,26 +2109,20 @@ For example, request URLs "mydomain.com/function1" and "mydomain.com/function2"
 can be backed by the same Serverless NEG with URL mask "/". The URL mask
 will parse them to { function = "function1" } and { function = "function2" } respectively.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional serving version.
 The version must be 1-63 characters long, and comply with RFC1035.
 Example value: "v1", "v2".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="regionnetworkendpointgroupcloudfunction">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Cloud<wbr>Function</h4>
 {{% choosable language nodejs %}}
@@ -2251,11 +2132,10 @@ Example value: "v1", "v2".
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionNetworkEndpointGroupCloudFunctionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionNetworkEndpointGroupCloudFunctionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.RegionNetworkEndpointGroupCloudFunctionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.RegionNetworkEndpointGroupCloudFunction.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2265,22 +2145,21 @@ Example value: "v1", "v2".
             title="Optional">
         <span id="function_csharp">
 <a href="#function_csharp" style="color: inherit; text-decoration: inherit;">Function</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-defined name of the Cloud Function.
 The function name is case-sensitive and must be 1-63 characters long.
 Example value: "func1".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="urlmask_csharp">
 <a href="#urlmask_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Mask</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A template to parse function field from a request URL. URL mask allows
 for routing to multiple Cloud Functions without having to create
@@ -2289,10 +2168,8 @@ For example, request URLs "mydomain.com/function1" and "mydomain.com/function2"
 can be backed by the same Serverless NEG with URL mask "/". The URL mask
 will parse them to { function = "function1" } and { function = "function2" } respectively.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2301,22 +2178,21 @@ will parse them to { function = "function1" } and { function = "function2" } res
             title="Optional">
         <span id="function_go">
 <a href="#function_go" style="color: inherit; text-decoration: inherit;">Function</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-defined name of the Cloud Function.
 The function name is case-sensitive and must be 1-63 characters long.
 Example value: "func1".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="urlmask_go">
 <a href="#urlmask_go" style="color: inherit; text-decoration: inherit;">Url<wbr>Mask</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A template to parse function field from a request URL. URL mask allows
 for routing to multiple Cloud Functions without having to create
@@ -2325,10 +2201,8 @@ For example, request URLs "mydomain.com/function1" and "mydomain.com/function2"
 can be backed by the same Serverless NEG with URL mask "/". The URL mask
 will parse them to { function = "function1" } and { function = "function2" } respectively.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2337,22 +2211,21 @@ will parse them to { function = "function1" } and { function = "function2" } res
             title="Optional">
         <span id="function_nodejs">
 <a href="#function_nodejs" style="color: inherit; text-decoration: inherit;">function</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A user-defined name of the Cloud Function.
 The function name is case-sensitive and must be 1-63 characters long.
 Example value: "func1".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="urlmask_nodejs">
 <a href="#urlmask_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Mask</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A template to parse function field from a request URL. URL mask allows
 for routing to multiple Cloud Functions without having to create
@@ -2361,10 +2234,8 @@ For example, request URLs "mydomain.com/function1" and "mydomain.com/function2"
 can be backed by the same Serverless NEG with URL mask "/". The URL mask
 will parse them to { function = "function1" } and { function = "function2" } respectively.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2373,22 +2244,21 @@ will parse them to { function = "function1" } and { function = "function2" } res
             title="Optional">
         <span id="function_python">
 <a href="#function_python" style="color: inherit; text-decoration: inherit;">function</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A user-defined name of the Cloud Function.
 The function name is case-sensitive and must be 1-63 characters long.
 Example value: "func1".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="url_mask_python">
 <a href="#url_mask_python" style="color: inherit; text-decoration: inherit;">url_<wbr>mask</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A template to parse function field from a request URL. URL mask allows
 for routing to multiple Cloud Functions without having to create
@@ -2397,13 +2267,8 @@ For example, request URLs "mydomain.com/function1" and "mydomain.com/function2"
 can be backed by the same Serverless NEG with URL mask "/". The URL mask
 will parse them to { function = "function1" } and { function = "function2" } respectively.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="regionnetworkendpointgroupcloudrun">Region<wbr>Network<wbr>Endpoint<wbr>Group<wbr>Cloud<wbr>Run</h4>
 {{% choosable language nodejs %}}
@@ -2413,11 +2278,10 @@ will parse them to { function = "function1" } and { function = "function2" } res
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionNetworkEndpointGroupCloudRunArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionNetworkEndpointGroupCloudRunOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.RegionNetworkEndpointGroupCloudRunArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.RegionNetworkEndpointGroupCloudRun.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2427,36 +2291,34 @@ will parse them to { function = "function1" } and { function = "function2" } res
             title="Optional">
         <span id="service_csharp">
 <a href="#service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional serving service.
 The service name must be 1-63 characters long, and comply with RFC1035.
 Example value: "default", "my-service".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tag_csharp">
 <a href="#tag_csharp" style="color: inherit; text-decoration: inherit;">Tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Run tag represents the "named-revision" to provide
 additional fine-grained traffic routing information.
 The tag must be 1-63 characters long, and comply with RFC1035.
 Example value: "revision-0010".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="urlmask_csharp">
 <a href="#urlmask_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Mask</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A template to parse function field from a request URL. URL mask allows
 for routing to multiple Cloud Functions without having to create
@@ -2465,10 +2327,8 @@ For example, request URLs "mydomain.com/function1" and "mydomain.com/function2"
 can be backed by the same Serverless NEG with URL mask "/". The URL mask
 will parse them to { function = "function1" } and { function = "function2" } respectively.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2477,36 +2337,34 @@ will parse them to { function = "function1" } and { function = "function2" } res
             title="Optional">
         <span id="service_go">
 <a href="#service_go" style="color: inherit; text-decoration: inherit;">Service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional serving service.
 The service name must be 1-63 characters long, and comply with RFC1035.
 Example value: "default", "my-service".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tag_go">
 <a href="#tag_go" style="color: inherit; text-decoration: inherit;">Tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Run tag represents the "named-revision" to provide
 additional fine-grained traffic routing information.
 The tag must be 1-63 characters long, and comply with RFC1035.
 Example value: "revision-0010".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="urlmask_go">
 <a href="#urlmask_go" style="color: inherit; text-decoration: inherit;">Url<wbr>Mask</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A template to parse function field from a request URL. URL mask allows
 for routing to multiple Cloud Functions without having to create
@@ -2515,10 +2373,8 @@ For example, request URLs "mydomain.com/function1" and "mydomain.com/function2"
 can be backed by the same Serverless NEG with URL mask "/". The URL mask
 will parse them to { function = "function1" } and { function = "function2" } respectively.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2527,36 +2383,34 @@ will parse them to { function = "function1" } and { function = "function2" } res
             title="Optional">
         <span id="service_nodejs">
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional serving service.
 The service name must be 1-63 characters long, and comply with RFC1035.
 Example value: "default", "my-service".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tag_nodejs">
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud Run tag represents the "named-revision" to provide
 additional fine-grained traffic routing information.
 The tag must be 1-63 characters long, and comply with RFC1035.
 Example value: "revision-0010".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="urlmask_nodejs">
 <a href="#urlmask_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Mask</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A template to parse function field from a request URL. URL mask allows
 for routing to multiple Cloud Functions without having to create
@@ -2565,10 +2419,8 @@ For example, request URLs "mydomain.com/function1" and "mydomain.com/function2"
 can be backed by the same Serverless NEG with URL mask "/". The URL mask
 will parse them to { function = "function1" } and { function = "function2" } respectively.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2577,36 +2429,34 @@ will parse them to { function = "function1" } and { function = "function2" } res
             title="Optional">
         <span id="service_python">
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional serving service.
 The service name must be 1-63 characters long, and comply with RFC1035.
 Example value: "default", "my-service".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tag_python">
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud Run tag represents the "named-revision" to provide
 additional fine-grained traffic routing information.
 The tag must be 1-63 characters long, and comply with RFC1035.
 Example value: "revision-0010".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="url_mask_python">
 <a href="#url_mask_python" style="color: inherit; text-decoration: inherit;">url_<wbr>mask</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A template to parse function field from a request URL. URL mask allows
 for routing to multiple Cloud Functions without having to create
@@ -2615,18 +2465,8 @@ For example, request URLs "mydomain.com/function1" and "mydomain.com/function2"
 can be backed by the same Serverless NEG with URL mask "/". The URL mask
 will parse them to { function = "function1" } and { function = "function2" } respectively.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 ## Import
 
 

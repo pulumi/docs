@@ -1,8 +1,8 @@
 
 ---
 title: "Intent"
-title_tag: "Resource Intent | Module diagflow | Package GCP"
-meta_desc: "Explore the Intent resource of the diagflow module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a Dialogflow intent. Intents convert a number of user expressions or patterns into an action. An action"
+title_tag: "gcp.diagflow.Intent"
+meta_desc: "Documentation for the gcp.diagflow.Intent resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -131,7 +131,7 @@ const basicIntent = new gcp.diagflow.Intent("basicIntent", {displayName: "basic-
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/diagflow/#Intent">Intent</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/diagflow/#IntentArgs">IntentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/diagflow/#Intent">Intent</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/diagflow/#IntentArgs">IntentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -139,11 +139,11 @@ const basicIntent = new gcp.diagflow.Intent("basicIntent", {displayName: "basic-
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/diagflow?tab=doc#Intent">NewIntent</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/diagflow?tab=doc#IntentArgs">IntentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/diagflow?tab=doc#Intent">Intent</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/diagflow?tab=doc#Intent">NewIntent</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/diagflow?tab=doc#IntentArgs">IntentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/diagflow?tab=doc#Intent">Intent</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Diagflow.Intent.html">Intent</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Diagflow.IntentArgs.html">IntentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Diagflow.Intent.html">Intent</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Diagflow.IntentArgs.html">IntentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -154,7 +154,7 @@ const basicIntent = new gcp.diagflow.Intent("basicIntent", {displayName: "basic-
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -223,7 +223,7 @@ const basicIntent = new gcp.diagflow.Intent("basicIntent", {displayName: "basic-
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -262,7 +262,7 @@ const basicIntent = new gcp.diagflow.Intent("basicIntent", {displayName: "basic-
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -303,7 +303,6 @@ The Intent resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -311,143 +310,132 @@ The Intent resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this intent to be displayed on the console.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the action associated with the intent.
 Note: The action name must not contain whitespaces.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="defaultresponseplatforms_csharp">
 <a href="#defaultresponseplatforms_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Response<wbr>Platforms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of platforms for which the first responses will be copied from the messages in PLATFORM_UNSPECIFIED
 (i.e. default platform).
 Each value may be one of `FACEBOOK`, `SLACK`, `TELEGRAM`, `KIK`, `SKYPE`, `LINE`, `VIBER`, `ACTIONS_ON_GOOGLE`, and `GOOGLE_HANGOUTS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="events_csharp">
 <a href="#events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The collection of event names that trigger the intent. If the collection of input contexts is not empty, all of
 the contexts must be present in the active user session for an event to trigger this intent. See the
 [events reference](https://cloud.google.com/dialogflow/docs/events-overview) for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="inputcontextnames_csharp">
 <a href="#inputcontextnames_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Context<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of context names required for this intent to be triggered.
 Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isfallback_csharp">
 <a href="#isfallback_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Fallback</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this is a fallback intent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mldisabled_csharp">
 <a href="#mldisabled_csharp" style="color: inherit; text-decoration: inherit;">Ml<wbr>Disabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether Machine Learning is disabled for the intent.
 Note: If mlDisabled setting is set to true, then this intent is not taken into account during inference in ML
 ONLY match mode. Also, auto-markup in the UI is turned off.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parentfollowupintentname_csharp">
 <a href="#parentfollowupintentname_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Followup<wbr>Intent<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the parent intent in the chain of followup intents.
 Format: projects/<Project ID>/agent/intents/<Intent ID>.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of this intent. Higher numbers represent higher priorities.
 - If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds
 to the Normal priority in the console.
 - If the supplied value is negative, the intent is ignored in runtime detect intent requests.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resetcontexts_csharp">
 <a href="#resetcontexts_csharp" style="color: inherit; text-decoration: inherit;">Reset<wbr>Contexts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to delete all contexts in the current session when this intent is matched.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="webhookstate_csharp">
 <a href="#webhookstate_csharp" style="color: inherit; text-decoration: inherit;">Webhook<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether webhooks are enabled for the intent.
 * WEBHOOK_STATE_ENABLED: Webhook is enabled in the agent and in the intent.
@@ -455,10 +443,8 @@ If it is not provided, the provider project is used.
 filling prompt is forwarded to the webhook.
 Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -467,143 +453,132 @@ Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this intent to be displayed on the console.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the action associated with the intent.
 Note: The action name must not contain whitespaces.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="defaultresponseplatforms_go">
 <a href="#defaultresponseplatforms_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Response<wbr>Platforms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of platforms for which the first responses will be copied from the messages in PLATFORM_UNSPECIFIED
 (i.e. default platform).
 Each value may be one of `FACEBOOK`, `SLACK`, `TELEGRAM`, `KIK`, `SKYPE`, `LINE`, `VIBER`, `ACTIONS_ON_GOOGLE`, and `GOOGLE_HANGOUTS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="events_go">
 <a href="#events_go" style="color: inherit; text-decoration: inherit;">Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The collection of event names that trigger the intent. If the collection of input contexts is not empty, all of
 the contexts must be present in the active user session for an event to trigger this intent. See the
 [events reference](https://cloud.google.com/dialogflow/docs/events-overview) for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="inputcontextnames_go">
 <a href="#inputcontextnames_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Context<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of context names required for this intent to be triggered.
 Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isfallback_go">
 <a href="#isfallback_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Fallback</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this is a fallback intent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mldisabled_go">
 <a href="#mldisabled_go" style="color: inherit; text-decoration: inherit;">Ml<wbr>Disabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether Machine Learning is disabled for the intent.
 Note: If mlDisabled setting is set to true, then this intent is not taken into account during inference in ML
 ONLY match mode. Also, auto-markup in the UI is turned off.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parentfollowupintentname_go">
 <a href="#parentfollowupintentname_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Followup<wbr>Intent<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the parent intent in the chain of followup intents.
 Format: projects/<Project ID>/agent/intents/<Intent ID>.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of this intent. Higher numbers represent higher priorities.
 - If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds
 to the Normal priority in the console.
 - If the supplied value is negative, the intent is ignored in runtime detect intent requests.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resetcontexts_go">
 <a href="#resetcontexts_go" style="color: inherit; text-decoration: inherit;">Reset<wbr>Contexts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to delete all contexts in the current session when this intent is matched.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="webhookstate_go">
 <a href="#webhookstate_go" style="color: inherit; text-decoration: inherit;">Webhook<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether webhooks are enabled for the intent.
 * WEBHOOK_STATE_ENABLED: Webhook is enabled in the agent and in the intent.
@@ -611,10 +586,8 @@ If it is not provided, the provider project is used.
 filling prompt is forwarded to the webhook.
 Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -623,143 +596,132 @@ Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this intent to be displayed on the console.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the action associated with the intent.
 Note: The action name must not contain whitespaces.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="defaultresponseplatforms_nodejs">
 <a href="#defaultresponseplatforms_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Response<wbr>Platforms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of platforms for which the first responses will be copied from the messages in PLATFORM_UNSPECIFIED
 (i.e. default platform).
 Each value may be one of `FACEBOOK`, `SLACK`, `TELEGRAM`, `KIK`, `SKYPE`, `LINE`, `VIBER`, `ACTIONS_ON_GOOGLE`, and `GOOGLE_HANGOUTS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="events_nodejs">
 <a href="#events_nodejs" style="color: inherit; text-decoration: inherit;">events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The collection of event names that trigger the intent. If the collection of input contexts is not empty, all of
 the contexts must be present in the active user session for an event to trigger this intent. See the
 [events reference](https://cloud.google.com/dialogflow/docs/events-overview) for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="inputcontextnames_nodejs">
 <a href="#inputcontextnames_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Context<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of context names required for this intent to be triggered.
 Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="isfallback_nodejs">
 <a href="#isfallback_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Fallback</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether this is a fallback intent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mldisabled_nodejs">
 <a href="#mldisabled_nodejs" style="color: inherit; text-decoration: inherit;">ml<wbr>Disabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether Machine Learning is disabled for the intent.
 Note: If mlDisabled setting is set to true, then this intent is not taken into account during inference in ML
 ONLY match mode. Also, auto-markup in the UI is turned off.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parentfollowupintentname_nodejs">
 <a href="#parentfollowupintentname_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Followup<wbr>Intent<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the parent intent in the chain of followup intents.
 Format: projects/<Project ID>/agent/intents/<Intent ID>.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The priority of this intent. Higher numbers represent higher priorities.
 - If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds
 to the Normal priority in the console.
 - If the supplied value is negative, the intent is ignored in runtime detect intent requests.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resetcontexts_nodejs">
 <a href="#resetcontexts_nodejs" style="color: inherit; text-decoration: inherit;">reset<wbr>Contexts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether to delete all contexts in the current session when this intent is matched.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="webhookstate_nodejs">
 <a href="#webhookstate_nodejs" style="color: inherit; text-decoration: inherit;">webhook<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether webhooks are enabled for the intent.
 * WEBHOOK_STATE_ENABLED: Webhook is enabled in the agent and in the intent.
@@ -767,10 +729,8 @@ If it is not provided, the provider project is used.
 filling prompt is forwarded to the webhook.
 Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -779,143 +739,132 @@ Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of this intent to be displayed on the console.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the action associated with the intent.
 Note: The action name must not contain whitespaces.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="default_response_platforms_python">
 <a href="#default_response_platforms_python" style="color: inherit; text-decoration: inherit;">default_<wbr>response_<wbr>platforms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of platforms for which the first responses will be copied from the messages in PLATFORM_UNSPECIFIED
 (i.e. default platform).
 Each value may be one of `FACEBOOK`, `SLACK`, `TELEGRAM`, `KIK`, `SKYPE`, `LINE`, `VIBER`, `ACTIONS_ON_GOOGLE`, and `GOOGLE_HANGOUTS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="events_python">
 <a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The collection of event names that trigger the intent. If the collection of input contexts is not empty, all of
 the contexts must be present in the active user session for an event to trigger this intent. See the
 [events reference](https://cloud.google.com/dialogflow/docs/events-overview) for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="input_context_names_python">
 <a href="#input_context_names_python" style="color: inherit; text-decoration: inherit;">input_<wbr>context_<wbr>names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of context names required for this intent to be triggered.
 Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_fallback_python">
 <a href="#is_fallback_python" style="color: inherit; text-decoration: inherit;">is_<wbr>fallback</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this is a fallback intent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ml_disabled_python">
 <a href="#ml_disabled_python" style="color: inherit; text-decoration: inherit;">ml_<wbr>disabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether Machine Learning is disabled for the intent.
 Note: If mlDisabled setting is set to true, then this intent is not taken into account during inference in ML
 ONLY match mode. Also, auto-markup in the UI is turned off.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parent_followup_intent_name_python">
 <a href="#parent_followup_intent_name_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>followup_<wbr>intent_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the parent intent in the chain of followup intents.
 Format: projects/<Project ID>/agent/intents/<Intent ID>.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of this intent. Higher numbers represent higher priorities.
 - If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds
 to the Normal priority in the console.
 - If the supplied value is negative, the intent is ignored in runtime detect intent requests.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="reset_contexts_python">
 <a href="#reset_contexts_python" style="color: inherit; text-decoration: inherit;">reset_<wbr>contexts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to delete all contexts in the current session when this intent is matched.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="webhook_state_python">
 <a href="#webhook_state_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether webhooks are enabled for the intent.
 * WEBHOOK_STATE_ENABLED: Webhook is enabled in the agent and in the intent.
@@ -923,19 +872,13 @@ If it is not provided, the provider project is used.
 filling prompt is forwarded to the webhook.
 Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Intent resource produces the following output properties:
-
 
 
 
@@ -946,50 +889,45 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="followupintentinfos_csharp">
 <a href="#followupintentinfos_csharp" style="color: inherit; text-decoration: inherit;">Followup<wbr>Intent<wbr>Infos</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfollowupintentinfo">List&lt;Intent<wbr>Followup<wbr>Intent<wbr>Info&gt;</a></span>
     </dt>
     <dd>{{% md %}}Information about all followup intents that have this intent as a direct or indirect parent. We populate this field only
 in the output.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rootfollowupintentname_csharp">
 <a href="#rootfollowupintentname_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Followup<wbr>Intent<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the root intent in the chain of followup intents. It identifies the correct followup intents
 chain for this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -998,50 +936,45 @@ chain for this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
             title="">
         <span id="followupintentinfos_go">
 <a href="#followupintentinfos_go" style="color: inherit; text-decoration: inherit;">Followup<wbr>Intent<wbr>Infos</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfollowupintentinfo">[]Intent<wbr>Followup<wbr>Intent<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information about all followup intents that have this intent as a direct or indirect parent. We populate this field only
 in the output.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rootfollowupintentname_go">
 <a href="#rootfollowupintentname_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Followup<wbr>Intent<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the root intent in the chain of followup intents. It identifies the correct followup intents
 chain for this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1050,50 +983,45 @@ chain for this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
             title="">
         <span id="followupintentinfos_nodejs">
 <a href="#followupintentinfos_nodejs" style="color: inherit; text-decoration: inherit;">followup<wbr>Intent<wbr>Infos</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfollowupintentinfo">Intent<wbr>Followup<wbr>Intent<wbr>Info[]</a></span>
     </dt>
     <dd>{{% md %}}Information about all followup intents that have this intent as a direct or indirect parent. We populate this field only
 in the output.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rootfollowupintentname_nodejs">
 <a href="#rootfollowupintentname_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Followup<wbr>Intent<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the root intent in the chain of followup intents. It identifies the correct followup intents
 chain for this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1102,53 +1030,45 @@ chain for this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
             title="">
         <span id="followup_intent_infos_python">
 <a href="#followup_intent_infos_python" style="color: inherit; text-decoration: inherit;">followup_<wbr>intent_<wbr>infos</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfollowupintentinfo">Sequence[Intent<wbr>Followup<wbr>Intent<wbr>Info]</a></span>
     </dt>
     <dd>{{% md %}}Information about all followup intents that have this intent as a direct or indirect parent. We populate this field only
 in the output.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="root_followup_intent_name_python">
 <a href="#root_followup_intent_name_python" style="color: inherit; text-decoration: inherit;">root_<wbr>followup_<wbr>intent_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the root intent in the chain of followup intents. It identifies the correct followup intents
 chain for this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1158,7 +1078,7 @@ Get an existing Intent resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/diagflow/#IntentState">IntentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/diagflow/#Intent">Intent</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/diagflow/#IntentState">IntentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/diagflow/#Intent">Intent</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1167,11 +1087,11 @@ Get an existing Intent resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIntent<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/diagflow?tab=doc#IntentState">IntentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/diagflow?tab=doc#Intent">Intent</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIntent<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/diagflow?tab=doc#IntentState">IntentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/diagflow?tab=doc#Intent">Intent</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Diagflow.Intent.html">Intent</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Diagflow.IntentState.html">IntentState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Diagflow.Intent.html">Intent</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Diagflow.IntentState.html">IntentState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1273,7 +1193,6 @@ Get an existing Intent resource's state with the given name, ID, and optional ex
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1281,178 +1200,164 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_action_csharp">
 <a href="#state_action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the action associated with the intent.
 Note: The action name must not contain whitespaces.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_defaultresponseplatforms_csharp">
 <a href="#state_defaultresponseplatforms_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Response<wbr>Platforms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of platforms for which the first responses will be copied from the messages in PLATFORM_UNSPECIFIED
 (i.e. default platform).
 Each value may be one of `FACEBOOK`, `SLACK`, `TELEGRAM`, `KIK`, `SKYPE`, `LINE`, `VIBER`, `ACTIONS_ON_GOOGLE`, and `GOOGLE_HANGOUTS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this intent to be displayed on the console.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_events_csharp">
 <a href="#state_events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The collection of event names that trigger the intent. If the collection of input contexts is not empty, all of
 the contexts must be present in the active user session for an event to trigger this intent. See the
 [events reference](https://cloud.google.com/dialogflow/docs/events-overview) for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_followupintentinfos_csharp">
 <a href="#state_followupintentinfos_csharp" style="color: inherit; text-decoration: inherit;">Followup<wbr>Intent<wbr>Infos</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfollowupintentinfo">List&lt;Intent<wbr>Followup<wbr>Intent<wbr>Info<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Information about all followup intents that have this intent as a direct or indirect parent. We populate this field only
 in the output.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_inputcontextnames_csharp">
 <a href="#state_inputcontextnames_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Context<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of context names required for this intent to be triggered.
 Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_isfallback_csharp">
 <a href="#state_isfallback_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Fallback</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this is a fallback intent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_mldisabled_csharp">
 <a href="#state_mldisabled_csharp" style="color: inherit; text-decoration: inherit;">Ml<wbr>Disabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether Machine Learning is disabled for the intent.
 Note: If mlDisabled setting is set to true, then this intent is not taken into account during inference in ML
 ONLY match mode. Also, auto-markup in the UI is turned off.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parentfollowupintentname_csharp">
 <a href="#state_parentfollowupintentname_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Followup<wbr>Intent<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the parent intent in the chain of followup intents.
 Format: projects/<Project ID>/agent/intents/<Intent ID>.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_priority_csharp">
 <a href="#state_priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of this intent. Higher numbers represent higher priorities.
 - If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds
 to the Normal priority in the console.
 - If the supplied value is negative, the intent is ignored in runtime detect intent requests.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resetcontexts_csharp">
 <a href="#state_resetcontexts_csharp" style="color: inherit; text-decoration: inherit;">Reset<wbr>Contexts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to delete all contexts in the current session when this intent is matched.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rootfollowupintentname_csharp">
 <a href="#state_rootfollowupintentname_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Followup<wbr>Intent<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the root intent in the chain of followup intents. It identifies the correct followup intents
 chain for this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_webhookstate_csharp">
 <a href="#state_webhookstate_csharp" style="color: inherit; text-decoration: inherit;">Webhook<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether webhooks are enabled for the intent.
 * WEBHOOK_STATE_ENABLED: Webhook is enabled in the agent and in the intent.
@@ -1460,10 +1365,8 @@ chain for this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
 filling prompt is forwarded to the webhook.
 Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1472,178 +1375,164 @@ Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_
             title="Optional">
         <span id="state_action_go">
 <a href="#state_action_go" style="color: inherit; text-decoration: inherit;">Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the action associated with the intent.
 Note: The action name must not contain whitespaces.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_defaultresponseplatforms_go">
 <a href="#state_defaultresponseplatforms_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Response<wbr>Platforms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of platforms for which the first responses will be copied from the messages in PLATFORM_UNSPECIFIED
 (i.e. default platform).
 Each value may be one of `FACEBOOK`, `SLACK`, `TELEGRAM`, `KIK`, `SKYPE`, `LINE`, `VIBER`, `ACTIONS_ON_GOOGLE`, and `GOOGLE_HANGOUTS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this intent to be displayed on the console.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_events_go">
 <a href="#state_events_go" style="color: inherit; text-decoration: inherit;">Events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The collection of event names that trigger the intent. If the collection of input contexts is not empty, all of
 the contexts must be present in the active user session for an event to trigger this intent. See the
 [events reference](https://cloud.google.com/dialogflow/docs/events-overview) for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_followupintentinfos_go">
 <a href="#state_followupintentinfos_go" style="color: inherit; text-decoration: inherit;">Followup<wbr>Intent<wbr>Infos</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfollowupintentinfo">[]Intent<wbr>Followup<wbr>Intent<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information about all followup intents that have this intent as a direct or indirect parent. We populate this field only
 in the output.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_inputcontextnames_go">
 <a href="#state_inputcontextnames_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Context<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of context names required for this intent to be triggered.
 Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_isfallback_go">
 <a href="#state_isfallback_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Fallback</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this is a fallback intent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_mldisabled_go">
 <a href="#state_mldisabled_go" style="color: inherit; text-decoration: inherit;">Ml<wbr>Disabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether Machine Learning is disabled for the intent.
 Note: If mlDisabled setting is set to true, then this intent is not taken into account during inference in ML
 ONLY match mode. Also, auto-markup in the UI is turned off.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parentfollowupintentname_go">
 <a href="#state_parentfollowupintentname_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Followup<wbr>Intent<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the parent intent in the chain of followup intents.
 Format: projects/<Project ID>/agent/intents/<Intent ID>.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_priority_go">
 <a href="#state_priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of this intent. Higher numbers represent higher priorities.
 - If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds
 to the Normal priority in the console.
 - If the supplied value is negative, the intent is ignored in runtime detect intent requests.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resetcontexts_go">
 <a href="#state_resetcontexts_go" style="color: inherit; text-decoration: inherit;">Reset<wbr>Contexts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to delete all contexts in the current session when this intent is matched.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rootfollowupintentname_go">
 <a href="#state_rootfollowupintentname_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Followup<wbr>Intent<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the root intent in the chain of followup intents. It identifies the correct followup intents
 chain for this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_webhookstate_go">
 <a href="#state_webhookstate_go" style="color: inherit; text-decoration: inherit;">Webhook<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether webhooks are enabled for the intent.
 * WEBHOOK_STATE_ENABLED: Webhook is enabled in the agent and in the intent.
@@ -1651,10 +1540,8 @@ chain for this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
 filling prompt is forwarded to the webhook.
 Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1663,178 +1550,164 @@ Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_
             title="Optional">
         <span id="state_action_nodejs">
 <a href="#state_action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the action associated with the intent.
 Note: The action name must not contain whitespaces.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_defaultresponseplatforms_nodejs">
 <a href="#state_defaultresponseplatforms_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Response<wbr>Platforms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of platforms for which the first responses will be copied from the messages in PLATFORM_UNSPECIFIED
 (i.e. default platform).
 Each value may be one of `FACEBOOK`, `SLACK`, `TELEGRAM`, `KIK`, `SKYPE`, `LINE`, `VIBER`, `ACTIONS_ON_GOOGLE`, and `GOOGLE_HANGOUTS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this intent to be displayed on the console.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_events_nodejs">
 <a href="#state_events_nodejs" style="color: inherit; text-decoration: inherit;">events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The collection of event names that trigger the intent. If the collection of input contexts is not empty, all of
 the contexts must be present in the active user session for an event to trigger this intent. See the
 [events reference](https://cloud.google.com/dialogflow/docs/events-overview) for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_followupintentinfos_nodejs">
 <a href="#state_followupintentinfos_nodejs" style="color: inherit; text-decoration: inherit;">followup<wbr>Intent<wbr>Infos</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfollowupintentinfo">Intent<wbr>Followup<wbr>Intent<wbr>Info[]</a></span>
     </dt>
     <dd>{{% md %}}Information about all followup intents that have this intent as a direct or indirect parent. We populate this field only
 in the output.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_inputcontextnames_nodejs">
 <a href="#state_inputcontextnames_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Context<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of context names required for this intent to be triggered.
 Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_isfallback_nodejs">
 <a href="#state_isfallback_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Fallback</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether this is a fallback intent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_mldisabled_nodejs">
 <a href="#state_mldisabled_nodejs" style="color: inherit; text-decoration: inherit;">ml<wbr>Disabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether Machine Learning is disabled for the intent.
 Note: If mlDisabled setting is set to true, then this intent is not taken into account during inference in ML
 ONLY match mode. Also, auto-markup in the UI is turned off.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parentfollowupintentname_nodejs">
 <a href="#state_parentfollowupintentname_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Followup<wbr>Intent<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the parent intent in the chain of followup intents.
 Format: projects/<Project ID>/agent/intents/<Intent ID>.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_priority_nodejs">
 <a href="#state_priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The priority of this intent. Higher numbers represent higher priorities.
 - If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds
 to the Normal priority in the console.
 - If the supplied value is negative, the intent is ignored in runtime detect intent requests.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resetcontexts_nodejs">
 <a href="#state_resetcontexts_nodejs" style="color: inherit; text-decoration: inherit;">reset<wbr>Contexts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether to delete all contexts in the current session when this intent is matched.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rootfollowupintentname_nodejs">
 <a href="#state_rootfollowupintentname_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Followup<wbr>Intent<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the root intent in the chain of followup intents. It identifies the correct followup intents
 chain for this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_webhookstate_nodejs">
 <a href="#state_webhookstate_nodejs" style="color: inherit; text-decoration: inherit;">webhook<wbr>State</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether webhooks are enabled for the intent.
 * WEBHOOK_STATE_ENABLED: Webhook is enabled in the agent and in the intent.
@@ -1842,10 +1715,8 @@ chain for this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
 filling prompt is forwarded to the webhook.
 Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1854,178 +1725,164 @@ Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_
             title="Optional">
         <span id="state_action_python">
 <a href="#state_action_python" style="color: inherit; text-decoration: inherit;">action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the action associated with the intent.
 Note: The action name must not contain whitespaces.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_default_response_platforms_python">
 <a href="#state_default_response_platforms_python" style="color: inherit; text-decoration: inherit;">default_<wbr>response_<wbr>platforms</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of platforms for which the first responses will be copied from the messages in PLATFORM_UNSPECIFIED
 (i.e. default platform).
 Each value may be one of `FACEBOOK`, `SLACK`, `TELEGRAM`, `KIK`, `SKYPE`, `LINE`, `VIBER`, `ACTIONS_ON_GOOGLE`, and `GOOGLE_HANGOUTS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of this intent to be displayed on the console.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_events_python">
 <a href="#state_events_python" style="color: inherit; text-decoration: inherit;">events</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The collection of event names that trigger the intent. If the collection of input contexts is not empty, all of
 the contexts must be present in the active user session for an event to trigger this intent. See the
 [events reference](https://cloud.google.com/dialogflow/docs/events-overview) for more details.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_followup_intent_infos_python">
 <a href="#state_followup_intent_infos_python" style="color: inherit; text-decoration: inherit;">followup_<wbr>intent_<wbr>infos</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#intentfollowupintentinfo">Sequence[Intent<wbr>Followup<wbr>Intent<wbr>Info<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Information about all followup intents that have this intent as a direct or indirect parent. We populate this field only
 in the output.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_input_context_names_python">
 <a href="#state_input_context_names_python" style="color: inherit; text-decoration: inherit;">input_<wbr>context_<wbr>names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of context names required for this intent to be triggered.
 Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_is_fallback_python">
 <a href="#state_is_fallback_python" style="color: inherit; text-decoration: inherit;">is_<wbr>fallback</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this is a fallback intent.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ml_disabled_python">
 <a href="#state_ml_disabled_python" style="color: inherit; text-decoration: inherit;">ml_<wbr>disabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether Machine Learning is disabled for the intent.
 Note: If mlDisabled setting is set to true, then this intent is not taken into account during inference in ML
 ONLY match mode. Also, auto-markup in the UI is turned off.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parent_followup_intent_name_python">
 <a href="#state_parent_followup_intent_name_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>followup_<wbr>intent_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the parent intent in the chain of followup intents.
 Format: projects/<Project ID>/agent/intents/<Intent ID>.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_priority_python">
 <a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of this intent. Higher numbers represent higher priorities.
 - If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds
 to the Normal priority in the console.
 - If the supplied value is negative, the intent is ignored in runtime detect intent requests.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_reset_contexts_python">
 <a href="#state_reset_contexts_python" style="color: inherit; text-decoration: inherit;">reset_<wbr>contexts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to delete all contexts in the current session when this intent is matched.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_root_followup_intent_name_python">
 <a href="#state_root_followup_intent_name_python" style="color: inherit; text-decoration: inherit;">root_<wbr>followup_<wbr>intent_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the root intent in the chain of followup intents. It identifies the correct followup intents
 chain for this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_webhook_state_python">
 <a href="#state_webhook_state_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>state</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether webhooks are enabled for the intent.
 * WEBHOOK_STATE_ENABLED: Webhook is enabled in the agent and in the intent.
@@ -2033,7 +1890,6 @@ chain for this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
 filling prompt is forwarded to the webhook.
 Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -2042,11 +1898,8 @@ Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="intentfollowupintentinfo">Intent<wbr>Followup<wbr>Intent<wbr>Info</h4>
@@ -2057,11 +1910,10 @@ Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/diagflow?tab=doc#IntentFollowupIntentInfoOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Diagflow.Outputs.IntentFollowupIntentInfo.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2071,27 +1923,24 @@ Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_
             title="Optional">
         <span id="followupintentname_csharp">
 <a href="#followupintentname_csharp" style="color: inherit; text-decoration: inherit;">Followup<wbr>Intent<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parentfollowupintentname_csharp">
 <a href="#parentfollowupintentname_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Followup<wbr>Intent<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the parent intent in the chain of followup intents.
 Format: projects/<Project ID>/agent/intents/<Intent ID>.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2100,27 +1949,24 @@ Format: projects/<Project ID>/agent/intents/<Intent ID>.
             title="Optional">
         <span id="followupintentname_go">
 <a href="#followupintentname_go" style="color: inherit; text-decoration: inherit;">Followup<wbr>Intent<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parentfollowupintentname_go">
 <a href="#parentfollowupintentname_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Followup<wbr>Intent<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the parent intent in the chain of followup intents.
 Format: projects/<Project ID>/agent/intents/<Intent ID>.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2129,27 +1975,24 @@ Format: projects/<Project ID>/agent/intents/<Intent ID>.
             title="Optional">
         <span id="followupintentname_nodejs">
 <a href="#followupintentname_nodejs" style="color: inherit; text-decoration: inherit;">followup<wbr>Intent<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parentfollowupintentname_nodejs">
 <a href="#parentfollowupintentname_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Followup<wbr>Intent<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the parent intent in the chain of followup intents.
 Format: projects/<Project ID>/agent/intents/<Intent ID>.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2158,35 +2001,24 @@ Format: projects/<Project ID>/agent/intents/<Intent ID>.
             title="Optional">
         <span id="followup_intent_name_python">
 <a href="#followup_intent_name_python" style="color: inherit; text-decoration: inherit;">followup_<wbr>intent_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parent_followup_intent_name_python">
 <a href="#parent_followup_intent_name_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>followup_<wbr>intent_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the parent intent in the chain of followup intents.
 Format: projects/<Project ID>/agent/intents/<Intent ID>.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 ## Import
 
 

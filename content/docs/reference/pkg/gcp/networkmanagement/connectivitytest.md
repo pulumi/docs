@@ -1,8 +1,8 @@
 
 ---
 title: "ConnectivityTest"
-title_tag: "Resource ConnectivityTest | Module networkmanagement | Package GCP"
-meta_desc: "Explore the ConnectivityTest resource of the networkmanagement module, including examples, input properties, output properties, lookup functions, and supporting types. A connectivity test are a static analysis of your resource configurations"
+title_tag: "gcp.networkmanagement.ConnectivityTest"
+meta_desc: "Documentation for the gcp.networkmanagement.ConnectivityTest resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -487,7 +487,7 @@ const address_test = new gcp.networkmanagement.ConnectivityTest("address-test", 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/networkmanagement/#ConnectivityTest">ConnectivityTest</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/networkmanagement/#ConnectivityTestArgs">ConnectivityTestArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/networkmanagement/#ConnectivityTest">ConnectivityTest</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/networkmanagement/#ConnectivityTestArgs">ConnectivityTestArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -495,11 +495,11 @@ const address_test = new gcp.networkmanagement.ConnectivityTest("address-test", 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/networkmanagement?tab=doc#ConnectivityTest">NewConnectivityTest</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/networkmanagement?tab=doc#ConnectivityTestArgs">ConnectivityTestArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/networkmanagement?tab=doc#ConnectivityTest">ConnectivityTest</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/networkmanagement?tab=doc#ConnectivityTest">NewConnectivityTest</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/networkmanagement?tab=doc#ConnectivityTestArgs">ConnectivityTestArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/networkmanagement?tab=doc#ConnectivityTest">ConnectivityTest</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.NetworkManagement.ConnectivityTest.html">ConnectivityTest</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.NetworkManagement.ConnectivityTestArgs.html">ConnectivityTestArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.NetworkManagement.ConnectivityTest.html">ConnectivityTest</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.NetworkManagement.ConnectivityTestArgs.html">ConnectivityTestArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -510,7 +510,7 @@ const address_test = new gcp.networkmanagement.ConnectivityTest("address-test", 
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -579,7 +579,7 @@ const address_test = new gcp.networkmanagement.ConnectivityTest("address-test", 
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -618,7 +618,7 @@ const address_test = new gcp.networkmanagement.ConnectivityTest("address-test", 
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -659,7 +659,6 @@ The ConnectivityTest resource accepts the following [input]({{< relref "/docs/in
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -667,7 +666,7 @@ The ConnectivityTest resource accepts the following [input]({{< relref "/docs/in
             title="Required">
         <span id="destination_csharp">
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectivitytestdestination">Connectivity<wbr>Test<wbr>Destination<wbr>Args</a></span>
     </dt>
@@ -687,12 +686,11 @@ is ambiguous. However, the result can include endpoints that you
 don't intend to test.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectivitytestsource">Connectivity<wbr>Test<wbr>Source<wbr>Args</a></span>
     </dt>
@@ -716,80 +714,72 @@ ambiguous. However, the test result may include endpoints that
 you don't intend to test.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user-supplied description of the Connectivity Test.
 Maximum of 512 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name for the connectivity test.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP Protocol of the test. When not provided, "TCP" is assumed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="relatedprojects_csharp">
 <a href="#relatedprojects_csharp" style="color: inherit; text-decoration: inherit;">Related<wbr>Projects</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Other projects that may be relevant for reachability analysis.
 This is applicable to scenarios where a test can cross project
 boundaries.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -798,7 +788,7 @@ boundaries.
             title="Required">
         <span id="destination_go">
 <a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectivitytestdestination">Connectivity<wbr>Test<wbr>Destination</a></span>
     </dt>
@@ -818,12 +808,11 @@ is ambiguous. However, the result can include endpoints that you
 don't intend to test.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectivitytestsource">Connectivity<wbr>Test<wbr>Source</a></span>
     </dt>
@@ -847,80 +836,72 @@ ambiguous. However, the test result may include endpoints that
 you don't intend to test.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user-supplied description of the Connectivity Test.
 Maximum of 512 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name for the connectivity test.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP Protocol of the test. When not provided, "TCP" is assumed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="relatedprojects_go">
 <a href="#relatedprojects_go" style="color: inherit; text-decoration: inherit;">Related<wbr>Projects</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Other projects that may be relevant for reachability analysis.
 This is applicable to scenarios where a test can cross project
 boundaries.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -929,7 +910,7 @@ boundaries.
             title="Required">
         <span id="destination_nodejs">
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectivitytestdestination">Connectivity<wbr>Test<wbr>Destination</a></span>
     </dt>
@@ -949,12 +930,11 @@ is ambiguous. However, the result can include endpoints that you
 don't intend to test.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectivitytestsource">Connectivity<wbr>Test<wbr>Source</a></span>
     </dt>
@@ -978,80 +958,72 @@ ambiguous. However, the test result may include endpoints that
 you don't intend to test.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user-supplied description of the Connectivity Test.
 Maximum of 512 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name for the connectivity test.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP Protocol of the test. When not provided, "TCP" is assumed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="relatedprojects_nodejs">
 <a href="#relatedprojects_nodejs" style="color: inherit; text-decoration: inherit;">related<wbr>Projects</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Other projects that may be relevant for reachability analysis.
 This is applicable to scenarios where a test can cross project
 boundaries.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1060,7 +1032,7 @@ boundaries.
             title="Required">
         <span id="destination_python">
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectivitytestdestination">Connectivity<wbr>Test<wbr>Destination<wbr>Args</a></span>
     </dt>
@@ -1080,12 +1052,11 @@ is ambiguous. However, the result can include endpoints that you
 don't intend to test.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectivitytestsource">Connectivity<wbr>Test<wbr>Source<wbr>Args</a></span>
     </dt>
@@ -1109,89 +1080,77 @@ ambiguous. However, the test result may include endpoints that
 you don't intend to test.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user-supplied description of the Connectivity Test.
 Maximum of 512 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name for the connectivity test.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP Protocol of the test. When not provided, "TCP" is assumed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="related_projects_python">
 <a href="#related_projects_python" style="color: inherit; text-decoration: inherit;">related_<wbr>projects</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Other projects that may be relevant for reachability analysis.
 This is applicable to scenarios where a test can cross project
 boundaries.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the ConnectivityTest resource produces the following output properties:
-
 
 
 
@@ -1202,15 +1161,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1219,15 +1176,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1236,15 +1191,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1253,18 +1206,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1274,7 +1222,7 @@ Get an existing ConnectivityTest resource's state with the given name, ID, and o
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/networkmanagement/#ConnectivityTestState">ConnectivityTestState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/networkmanagement/#ConnectivityTest">ConnectivityTest</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/networkmanagement/#ConnectivityTestState">ConnectivityTestState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/networkmanagement/#ConnectivityTest">ConnectivityTest</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1283,11 +1231,11 @@ Get an existing ConnectivityTest resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetConnectivityTest<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/networkmanagement?tab=doc#ConnectivityTestState">ConnectivityTestState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/networkmanagement?tab=doc#ConnectivityTest">ConnectivityTest</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetConnectivityTest<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/networkmanagement?tab=doc#ConnectivityTestState">ConnectivityTestState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/networkmanagement?tab=doc#ConnectivityTest">ConnectivityTest</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.NetworkManagement.ConnectivityTest.html">ConnectivityTest</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.NetworkManagement.ConnectivityTestState.html">ConnectivityTestState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.NetworkManagement.ConnectivityTest.html">ConnectivityTest</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.NetworkManagement.ConnectivityTestState.html">ConnectivityTestState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1389,7 +1337,6 @@ Get an existing ConnectivityTest resource's state with the given name, ID, and o
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1397,19 +1344,18 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user-supplied description of the Connectivity Test.
 Maximum of 512 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_destination_csharp">
 <a href="#state_destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectivitytestdestination">Connectivity<wbr>Test<wbr>Destination<wbr>Args</a></span>
     </dt>
@@ -1429,70 +1375,64 @@ is ambiguous. However, the result can include endpoints that you
 don't intend to test.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name for the connectivity test.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_protocol_csharp">
 <a href="#state_protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP Protocol of the test. When not provided, "TCP" is assumed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_relatedprojects_csharp">
 <a href="#state_relatedprojects_csharp" style="color: inherit; text-decoration: inherit;">Related<wbr>Projects</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Other projects that may be relevant for reachability analysis.
 This is applicable to scenarios where a test can cross project
 boundaries.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_source_csharp">
 <a href="#state_source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectivitytestsource">Connectivity<wbr>Test<wbr>Source<wbr>Args</a></span>
     </dt>
@@ -1516,10 +1456,8 @@ ambiguous. However, the test result may include endpoints that
 you don't intend to test.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1528,19 +1466,18 @@ Structure is documented below.
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user-supplied description of the Connectivity Test.
 Maximum of 512 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_destination_go">
 <a href="#state_destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectivitytestdestination">Connectivity<wbr>Test<wbr>Destination</a></span>
     </dt>
@@ -1560,70 +1497,64 @@ is ambiguous. However, the result can include endpoints that you
 don't intend to test.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name for the connectivity test.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_protocol_go">
 <a href="#state_protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP Protocol of the test. When not provided, "TCP" is assumed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_relatedprojects_go">
 <a href="#state_relatedprojects_go" style="color: inherit; text-decoration: inherit;">Related<wbr>Projects</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Other projects that may be relevant for reachability analysis.
 This is applicable to scenarios where a test can cross project
 boundaries.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_source_go">
 <a href="#state_source_go" style="color: inherit; text-decoration: inherit;">Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectivitytestsource">Connectivity<wbr>Test<wbr>Source</a></span>
     </dt>
@@ -1647,10 +1578,8 @@ ambiguous. However, the test result may include endpoints that
 you don't intend to test.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1659,19 +1588,18 @@ Structure is documented below.
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user-supplied description of the Connectivity Test.
 Maximum of 512 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_destination_nodejs">
 <a href="#state_destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectivitytestdestination">Connectivity<wbr>Test<wbr>Destination</a></span>
     </dt>
@@ -1691,70 +1619,64 @@ is ambiguous. However, the result can include endpoints that you
 don't intend to test.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name for the connectivity test.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_protocol_nodejs">
 <a href="#state_protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP Protocol of the test. When not provided, "TCP" is assumed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_relatedprojects_nodejs">
 <a href="#state_relatedprojects_nodejs" style="color: inherit; text-decoration: inherit;">related<wbr>Projects</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Other projects that may be relevant for reachability analysis.
 This is applicable to scenarios where a test can cross project
 boundaries.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_source_nodejs">
 <a href="#state_source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectivitytestsource">Connectivity<wbr>Test<wbr>Source</a></span>
     </dt>
@@ -1778,10 +1700,8 @@ ambiguous. However, the test result may include endpoints that
 you don't intend to test.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1790,19 +1710,18 @@ Structure is documented below.
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user-supplied description of the Connectivity Test.
 Maximum of 512 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_destination_python">
 <a href="#state_destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectivitytestdestination">Connectivity<wbr>Test<wbr>Destination<wbr>Args</a></span>
     </dt>
@@ -1822,70 +1741,64 @@ is ambiguous. However, the result can include endpoints that you
 don't intend to test.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name for the connectivity test.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_protocol_python">
 <a href="#state_protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP Protocol of the test. When not provided, "TCP" is assumed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_related_projects_python">
 <a href="#state_related_projects_python" style="color: inherit; text-decoration: inherit;">related_<wbr>projects</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Other projects that may be relevant for reachability analysis.
 This is applicable to scenarios where a test can cross project
 boundaries.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_source_python">
 <a href="#state_source_python" style="color: inherit; text-decoration: inherit;">source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#connectivitytestsource">Connectivity<wbr>Test<wbr>Source<wbr>Args</a></span>
     </dt>
@@ -1909,7 +1822,6 @@ ambiguous. However, the test result may include endpoints that
 you don't intend to test.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1918,11 +1830,8 @@ Structure is documented below.
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="connectivitytestdestination">Connectivity<wbr>Test<wbr>Destination</h4>
@@ -1933,11 +1842,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/networkmanagement?tab=doc#ConnectivityTestDestinationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/networkmanagement?tab=doc#ConnectivityTestDestinationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.NetworkManagement.Inputs.ConnectivityTestDestinationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.NetworkManagement.Outputs.ConnectivityTestDestination.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1947,56 +1855,52 @@ Structure is documented below.
             title="Optional">
         <span id="instance_csharp">
 <a href="#instance_csharp" style="color: inherit; text-decoration: inherit;">Instance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A Compute Engine instance URI.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipaddress_csharp">
 <a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address of the endpoint, which can be an external or
 internal IP. An IPv6 address is only allowed when the test's
 destination is a global load balancer VIP.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="network_csharp">
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A Compute Engine network URI.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IP protocol port of the endpoint. Only applicable when
 protocol is TCP or UDP.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Project ID where the endpoint is located. The Project ID can be
 derived from the URI if you provide a VM instance or network URI.
@@ -2007,10 +1911,8 @@ that you provide is from the service project. In this case, the
 network that the IP address resides in is defined in the host
 project.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2019,56 +1921,52 @@ project.
             title="Optional">
         <span id="instance_go">
 <a href="#instance_go" style="color: inherit; text-decoration: inherit;">Instance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A Compute Engine instance URI.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipaddress_go">
 <a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address of the endpoint, which can be an external or
 internal IP. An IPv6 address is only allowed when the test's
 destination is a global load balancer VIP.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="network_go">
 <a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A Compute Engine network URI.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IP protocol port of the endpoint. Only applicable when
 protocol is TCP or UDP.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Project ID where the endpoint is located. The Project ID can be
 derived from the URI if you provide a VM instance or network URI.
@@ -2079,10 +1977,8 @@ that you provide is from the service project. In this case, the
 network that the IP address resides in is defined in the host
 project.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2091,56 +1987,52 @@ project.
             title="Optional">
         <span id="instance_nodejs">
 <a href="#instance_nodejs" style="color: inherit; text-decoration: inherit;">instance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A Compute Engine instance URI.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipaddress_nodejs">
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address of the endpoint, which can be an external or
 internal IP. An IPv6 address is only allowed when the test's
 destination is a global load balancer VIP.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="network_nodejs">
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A Compute Engine network URI.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The IP protocol port of the endpoint. Only applicable when
 protocol is TCP or UDP.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Project ID where the endpoint is located. The Project ID can be
 derived from the URI if you provide a VM instance or network URI.
@@ -2151,10 +2043,8 @@ that you provide is from the service project. In this case, the
 network that the IP address resides in is defined in the host
 project.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2163,56 +2053,52 @@ project.
             title="Optional">
         <span id="instance_python">
 <a href="#instance_python" style="color: inherit; text-decoration: inherit;">instance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A Compute Engine instance URI.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ip_address_python">
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address of the endpoint, which can be an external or
 internal IP. An IPv6 address is only allowed when the test's
 destination is a global load balancer VIP.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="network_python">
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A Compute Engine network URI.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IP protocol port of the endpoint. Only applicable when
 protocol is TCP or UDP.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Project ID where the endpoint is located. The Project ID can be
 derived from the URI if you provide a VM instance or network URI.
@@ -2223,13 +2109,8 @@ that you provide is from the service project. In this case, the
 network that the IP address resides in is defined in the host
 project.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="connectivitytestsource">Connectivity<wbr>Test<wbr>Source</h4>
 {{% choosable language nodejs %}}
@@ -2239,11 +2120,10 @@ project.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/networkmanagement?tab=doc#ConnectivityTestSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/networkmanagement?tab=doc#ConnectivityTestSourceOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.NetworkManagement.Inputs.ConnectivityTestSourceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.NetworkManagement.Outputs.ConnectivityTestSource.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2253,68 +2133,63 @@ project.
             title="Optional">
         <span id="instance_csharp">
 <a href="#instance_csharp" style="color: inherit; text-decoration: inherit;">Instance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A Compute Engine instance URI.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipaddress_csharp">
 <a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address of the endpoint, which can be an external or
 internal IP. An IPv6 address is only allowed when the test's
 destination is a global load balancer VIP.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="network_csharp">
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A Compute Engine network URI.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networktype_csharp">
 <a href="#networktype_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the network where the endpoint is located.
 Possible values are `GCP_NETWORK` and `NON_GCP_NETWORK`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IP protocol port of the endpoint. Only applicable when
 protocol is TCP or UDP.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Project ID where the endpoint is located. The Project ID can be
 derived from the URI if you provide a VM instance or network URI.
@@ -2325,10 +2200,8 @@ that you provide is from the service project. In this case, the
 network that the IP address resides in is defined in the host
 project.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2337,68 +2210,63 @@ project.
             title="Optional">
         <span id="instance_go">
 <a href="#instance_go" style="color: inherit; text-decoration: inherit;">Instance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A Compute Engine instance URI.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipaddress_go">
 <a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address of the endpoint, which can be an external or
 internal IP. An IPv6 address is only allowed when the test's
 destination is a global load balancer VIP.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="network_go">
 <a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A Compute Engine network URI.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networktype_go">
 <a href="#networktype_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the network where the endpoint is located.
 Possible values are `GCP_NETWORK` and `NON_GCP_NETWORK`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IP protocol port of the endpoint. Only applicable when
 protocol is TCP or UDP.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Project ID where the endpoint is located. The Project ID can be
 derived from the URI if you provide a VM instance or network URI.
@@ -2409,10 +2277,8 @@ that you provide is from the service project. In this case, the
 network that the IP address resides in is defined in the host
 project.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2421,68 +2287,63 @@ project.
             title="Optional">
         <span id="instance_nodejs">
 <a href="#instance_nodejs" style="color: inherit; text-decoration: inherit;">instance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A Compute Engine instance URI.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipaddress_nodejs">
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address of the endpoint, which can be an external or
 internal IP. An IPv6 address is only allowed when the test's
 destination is a global load balancer VIP.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="network_nodejs">
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A Compute Engine network URI.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networktype_nodejs">
 <a href="#networktype_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the network where the endpoint is located.
 Possible values are `GCP_NETWORK` and `NON_GCP_NETWORK`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The IP protocol port of the endpoint. Only applicable when
 protocol is TCP or UDP.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Project ID where the endpoint is located. The Project ID can be
 derived from the URI if you provide a VM instance or network URI.
@@ -2493,10 +2354,8 @@ that you provide is from the service project. In this case, the
 network that the IP address resides in is defined in the host
 project.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2505,68 +2364,63 @@ project.
             title="Optional">
         <span id="instance_python">
 <a href="#instance_python" style="color: inherit; text-decoration: inherit;">instance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A Compute Engine instance URI.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ip_address_python">
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address of the endpoint, which can be an external or
 internal IP. An IPv6 address is only allowed when the test's
 destination is a global load balancer VIP.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="network_python">
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A Compute Engine network URI.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="network_type_python">
 <a href="#network_type_python" style="color: inherit; text-decoration: inherit;">network_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the network where the endpoint is located.
 Possible values are `GCP_NETWORK` and `NON_GCP_NETWORK`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IP protocol port of the endpoint. Only applicable when
 protocol is TCP or UDP.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Project ID where the endpoint is located. The Project ID can be
 derived from the URI if you provide a VM instance or network URI.
@@ -2577,18 +2431,8 @@ that you provide is from the service project. In this case, the
 network that the IP address resides in is defined in the host
 project.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 ## Import
 
 

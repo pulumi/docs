@@ -1,8 +1,8 @@
 
 ---
 title: "Lien"
-title_tag: "Resource Lien | Module resourcemanager | Package GCP"
-meta_desc: "Explore the Lien resource of the resourcemanager module, including examples, input properties, output properties, lookup functions, and supporting types. A Lien represents an encumbrance on the actions that can be performed on a resource."
+title_tag: "gcp.resourcemanager.Lien"
+meta_desc: "Documentation for the gcp.resourcemanager.Lien resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -129,7 +129,7 @@ const lien = new gcp.resourcemanager.Lien("lien", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/resourcemanager/#Lien">Lien</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/resourcemanager/#LienArgs">LienArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/resourcemanager/#Lien">Lien</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/resourcemanager/#LienArgs">LienArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -137,11 +137,11 @@ const lien = new gcp.resourcemanager.Lien("lien", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/resourcemanager?tab=doc#Lien">NewLien</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/resourcemanager?tab=doc#LienArgs">LienArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/resourcemanager?tab=doc#Lien">Lien</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/resourcemanager?tab=doc#Lien">NewLien</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/resourcemanager?tab=doc#LienArgs">LienArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/resourcemanager?tab=doc#Lien">Lien</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ResourceManager.Lien.html">Lien</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ResourceManager.LienArgs.html">LienArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ResourceManager.Lien.html">Lien</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ResourceManager.LienArgs.html">LienArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -152,7 +152,7 @@ const lien = new gcp.resourcemanager.Lien("lien", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -221,7 +221,7 @@ const lien = new gcp.resourcemanager.Lien("lien", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -260,7 +260,7 @@ const lien = new gcp.resourcemanager.Lien("lien", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -301,7 +301,6 @@ The Lien resource accepts the following [input]({{< relref "/docs/intro/concepts
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -309,48 +308,45 @@ The Lien resource accepts the following [input]({{< relref "/docs/intro/concepts
             title="Required">
         <span id="origin_csharp">
 <a href="#origin_csharp" style="color: inherit; text-decoration: inherit;">Origin</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A stable, user-visible/meaningful string identifying the origin
 of the Lien, intended to be inspected programmatically. Maximum length of
 200 characters.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="parent_csharp">
 <a href="#parent_csharp" style="color: inherit; text-decoration: inherit;">Parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the resource this Lien is attached to.
 The server will validate the parent against those for which Liens are supported.
 Since a variety of objects can have Liens against them, you must provide the type
 prefix (e.g. "projects/my-project-name").
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="reason_csharp">
 <a href="#reason_csharp" style="color: inherit; text-decoration: inherit;">Reason</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Concise user-visible strings indicating why an action cannot be performed
 on a resource. Maximum length of 200 characters.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="restrictions_csharp">
 <a href="#restrictions_csharp" style="color: inherit; text-decoration: inherit;">Restrictions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The types of operations which should be blocked as a result of this Lien.
 Each value should correspond to an IAM permission. The server will validate
@@ -358,10 +354,8 @@ the permissions against those for which Liens are supported.  An empty
 list is meaningless and will be rejected.
 e.g. ['resourcemanager.projects.delete']
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -370,48 +364,45 @@ e.g. ['resourcemanager.projects.delete']
             title="Required">
         <span id="origin_go">
 <a href="#origin_go" style="color: inherit; text-decoration: inherit;">Origin</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A stable, user-visible/meaningful string identifying the origin
 of the Lien, intended to be inspected programmatically. Maximum length of
 200 characters.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="parent_go">
 <a href="#parent_go" style="color: inherit; text-decoration: inherit;">Parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the resource this Lien is attached to.
 The server will validate the parent against those for which Liens are supported.
 Since a variety of objects can have Liens against them, you must provide the type
 prefix (e.g. "projects/my-project-name").
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="reason_go">
 <a href="#reason_go" style="color: inherit; text-decoration: inherit;">Reason</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Concise user-visible strings indicating why an action cannot be performed
 on a resource. Maximum length of 200 characters.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="restrictions_go">
 <a href="#restrictions_go" style="color: inherit; text-decoration: inherit;">Restrictions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The types of operations which should be blocked as a result of this Lien.
 Each value should correspond to an IAM permission. The server will validate
@@ -419,10 +410,8 @@ the permissions against those for which Liens are supported.  An empty
 list is meaningless and will be rejected.
 e.g. ['resourcemanager.projects.delete']
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -431,48 +420,45 @@ e.g. ['resourcemanager.projects.delete']
             title="Required">
         <span id="origin_nodejs">
 <a href="#origin_nodejs" style="color: inherit; text-decoration: inherit;">origin</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A stable, user-visible/meaningful string identifying the origin
 of the Lien, intended to be inspected programmatically. Maximum length of
 200 characters.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="parent_nodejs">
 <a href="#parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the resource this Lien is attached to.
 The server will validate the parent against those for which Liens are supported.
 Since a variety of objects can have Liens against them, you must provide the type
 prefix (e.g. "projects/my-project-name").
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="reason_nodejs">
 <a href="#reason_nodejs" style="color: inherit; text-decoration: inherit;">reason</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Concise user-visible strings indicating why an action cannot be performed
 on a resource. Maximum length of 200 characters.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="restrictions_nodejs">
 <a href="#restrictions_nodejs" style="color: inherit; text-decoration: inherit;">restrictions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The types of operations which should be blocked as a result of this Lien.
 Each value should correspond to an IAM permission. The server will validate
@@ -480,10 +466,8 @@ the permissions against those for which Liens are supported.  An empty
 list is meaningless and will be rejected.
 e.g. ['resourcemanager.projects.delete']
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -492,48 +476,45 @@ e.g. ['resourcemanager.projects.delete']
             title="Required">
         <span id="origin_python">
 <a href="#origin_python" style="color: inherit; text-decoration: inherit;">origin</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A stable, user-visible/meaningful string identifying the origin
 of the Lien, intended to be inspected programmatically. Maximum length of
 200 characters.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="parent_python">
 <a href="#parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A reference to the resource this Lien is attached to.
 The server will validate the parent against those for which Liens are supported.
 Since a variety of objects can have Liens against them, you must provide the type
 prefix (e.g. "projects/my-project-name").
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="reason_python">
 <a href="#reason_python" style="color: inherit; text-decoration: inherit;">reason</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Concise user-visible strings indicating why an action cannot be performed
 on a resource. Maximum length of 200 characters.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="restrictions_python">
 <a href="#restrictions_python" style="color: inherit; text-decoration: inherit;">restrictions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The types of operations which should be blocked as a result of this Lien.
 Each value should correspond to an IAM permission. The server will validate
@@ -541,19 +522,13 @@ the permissions against those for which Liens are supported.  An empty
 list is meaningless and will be rejected.
 e.g. ['resourcemanager.projects.delete']
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Lien resource produces the following output properties:
-
 
 
 
@@ -564,37 +539,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="createtime_csharp">
 <a href="#createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time of creation
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A system-generated unique identifier for this Lien.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -603,37 +574,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="createtime_go">
 <a href="#createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time of creation
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A system-generated unique identifier for this Lien.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -642,37 +609,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="createtime_nodejs">
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time of creation
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A system-generated unique identifier for this Lien.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -681,40 +644,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="create_time_python">
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time of creation
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A system-generated unique identifier for this Lien.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -724,7 +680,7 @@ Get an existing Lien resource's state with the given name, ID, and optional extr
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/resourcemanager/#LienState">LienState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/resourcemanager/#Lien">Lien</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/resourcemanager/#LienState">LienState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/resourcemanager/#Lien">Lien</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -733,11 +689,11 @@ Get an existing Lien resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLien<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/resourcemanager?tab=doc#LienState">LienState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/resourcemanager?tab=doc#Lien">Lien</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLien<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/resourcemanager?tab=doc#LienState">LienState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/resourcemanager?tab=doc#Lien">Lien</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ResourceManager.Lien.html">Lien</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ResourceManager.LienState.html">LienState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ResourceManager.Lien.html">Lien</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.ResourceManager.LienState.html">LienState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -839,7 +795,6 @@ Get an existing Lien resource's state with the given name, ID, and optional extr
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -847,70 +802,65 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_createtime_csharp">
 <a href="#state_createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time of creation
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A system-generated unique identifier for this Lien.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_origin_csharp">
 <a href="#state_origin_csharp" style="color: inherit; text-decoration: inherit;">Origin</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A stable, user-visible/meaningful string identifying the origin
 of the Lien, intended to be inspected programmatically. Maximum length of
 200 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parent_csharp">
 <a href="#state_parent_csharp" style="color: inherit; text-decoration: inherit;">Parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the resource this Lien is attached to.
 The server will validate the parent against those for which Liens are supported.
 Since a variety of objects can have Liens against them, you must provide the type
 prefix (e.g. "projects/my-project-name").
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_reason_csharp">
 <a href="#state_reason_csharp" style="color: inherit; text-decoration: inherit;">Reason</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Concise user-visible strings indicating why an action cannot be performed
 on a resource. Maximum length of 200 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_restrictions_csharp">
 <a href="#state_restrictions_csharp" style="color: inherit; text-decoration: inherit;">Restrictions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The types of operations which should be blocked as a result of this Lien.
 Each value should correspond to an IAM permission. The server will validate
@@ -918,10 +868,8 @@ the permissions against those for which Liens are supported.  An empty
 list is meaningless and will be rejected.
 e.g. ['resourcemanager.projects.delete']
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -930,70 +878,65 @@ e.g. ['resourcemanager.projects.delete']
             title="Optional">
         <span id="state_createtime_go">
 <a href="#state_createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time of creation
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A system-generated unique identifier for this Lien.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_origin_go">
 <a href="#state_origin_go" style="color: inherit; text-decoration: inherit;">Origin</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A stable, user-visible/meaningful string identifying the origin
 of the Lien, intended to be inspected programmatically. Maximum length of
 200 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parent_go">
 <a href="#state_parent_go" style="color: inherit; text-decoration: inherit;">Parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the resource this Lien is attached to.
 The server will validate the parent against those for which Liens are supported.
 Since a variety of objects can have Liens against them, you must provide the type
 prefix (e.g. "projects/my-project-name").
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_reason_go">
 <a href="#state_reason_go" style="color: inherit; text-decoration: inherit;">Reason</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Concise user-visible strings indicating why an action cannot be performed
 on a resource. Maximum length of 200 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_restrictions_go">
 <a href="#state_restrictions_go" style="color: inherit; text-decoration: inherit;">Restrictions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The types of operations which should be blocked as a result of this Lien.
 Each value should correspond to an IAM permission. The server will validate
@@ -1001,10 +944,8 @@ the permissions against those for which Liens are supported.  An empty
 list is meaningless and will be rejected.
 e.g. ['resourcemanager.projects.delete']
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1013,70 +954,65 @@ e.g. ['resourcemanager.projects.delete']
             title="Optional">
         <span id="state_createtime_nodejs">
 <a href="#state_createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time of creation
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A system-generated unique identifier for this Lien.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_origin_nodejs">
 <a href="#state_origin_nodejs" style="color: inherit; text-decoration: inherit;">origin</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A stable, user-visible/meaningful string identifying the origin
 of the Lien, intended to be inspected programmatically. Maximum length of
 200 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parent_nodejs">
 <a href="#state_parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the resource this Lien is attached to.
 The server will validate the parent against those for which Liens are supported.
 Since a variety of objects can have Liens against them, you must provide the type
 prefix (e.g. "projects/my-project-name").
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_reason_nodejs">
 <a href="#state_reason_nodejs" style="color: inherit; text-decoration: inherit;">reason</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Concise user-visible strings indicating why an action cannot be performed
 on a resource. Maximum length of 200 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_restrictions_nodejs">
 <a href="#state_restrictions_nodejs" style="color: inherit; text-decoration: inherit;">restrictions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The types of operations which should be blocked as a result of this Lien.
 Each value should correspond to an IAM permission. The server will validate
@@ -1084,10 +1020,8 @@ the permissions against those for which Liens are supported.  An empty
 list is meaningless and will be rejected.
 e.g. ['resourcemanager.projects.delete']
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1096,70 +1030,65 @@ e.g. ['resourcemanager.projects.delete']
             title="Optional">
         <span id="state_create_time_python">
 <a href="#state_create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time of creation
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A system-generated unique identifier for this Lien.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_origin_python">
 <a href="#state_origin_python" style="color: inherit; text-decoration: inherit;">origin</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A stable, user-visible/meaningful string identifying the origin
 of the Lien, intended to be inspected programmatically. Maximum length of
 200 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parent_python">
 <a href="#state_parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A reference to the resource this Lien is attached to.
 The server will validate the parent against those for which Liens are supported.
 Since a variety of objects can have Liens against them, you must provide the type
 prefix (e.g. "projects/my-project-name").
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_reason_python">
 <a href="#state_reason_python" style="color: inherit; text-decoration: inherit;">reason</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Concise user-visible strings indicating why an action cannot be performed
 on a resource. Maximum length of 200 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_restrictions_python">
 <a href="#state_restrictions_python" style="color: inherit; text-decoration: inherit;">restrictions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The types of operations which should be blocked as a result of this Lien.
 Each value should correspond to an IAM permission. The server will validate
@@ -1167,15 +1096,8 @@ the permissions against those for which Liens are supported.  An empty
 list is meaningless and will be rejected.
 e.g. ['resourcemanager.projects.delete']
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
 
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "Instance"
-title_tag: "Resource Instance | Module redis | Package GCP"
-meta_desc: "Explore the Instance resource of the redis module, including examples, input properties, output properties, lookup functions, and supporting types. A Google Cloud Redis instance."
+title_tag: "gcp.redis.Instance"
+meta_desc: "Documentation for the gcp.redis.Instance resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -227,7 +227,7 @@ const cache = new gcp.redis.Instance("cache", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/redis/#Instance">Instance</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/redis/#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/redis/#Instance">Instance</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/redis/#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -235,11 +235,11 @@ const cache = new gcp.redis.Instance("cache", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/redis?tab=doc#Instance">NewInstance</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/redis?tab=doc#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/redis?tab=doc#Instance">Instance</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/redis?tab=doc#Instance">NewInstance</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/redis?tab=doc#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/redis?tab=doc#Instance">Instance</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Redis.Instance.html">Instance</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Redis.InstanceArgs.html">InstanceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Redis.Instance.html">Instance</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Redis.InstanceArgs.html">InstanceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -250,7 +250,7 @@ const cache = new gcp.redis.Instance("cache", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -319,7 +319,7 @@ const cache = new gcp.redis.Instance("cache", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -358,7 +358,7 @@ const cache = new gcp.redis.Instance("cache", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -399,7 +399,6 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -407,94 +406,87 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Required">
         <span id="memorysizegb_csharp">
 <a href="#memorysizegb_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Size<wbr>Gb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Redis memory size in GiB.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="alternativelocationid_csharp">
 <a href="#alternativelocationid_csharp" style="color: inherit; text-decoration: inherit;">Alternative<wbr>Location<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Only applicable to STANDARD_HA tier which protects the instance
 against zonal failures by provisioning it across two zones.
 If provided, it must be a different zone from the one provided in
 [locationId].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authenabled_csharp">
 <a href="#authenabled_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. Indicates whether OSS Redis AUTH is enabled for the instance. If set to "true" AUTH is enabled on the
 instance. Default value is "false" meaning AUTH is disabled.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authorizednetwork_csharp">
 <a href="#authorizednetwork_csharp" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full name of the Google Compute Engine network to which the
 instance is connected. If left unspecified, the default network
 will be used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="connectmode_csharp">
 <a href="#connectmode_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection mode of the Redis instance.
 Default value is `DIRECT_PEERING`.
 Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An arbitrary and optional user-provided name for the instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user provided metadata.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="locationid_csharp">
 <a href="#locationid_csharp" style="color: inherit; text-decoration: inherit;">Location<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone where the instance will be provisioned. If not provided,
 the service will choose a zone for the instance. For STANDARD_HA tier,
@@ -502,35 +494,32 @@ instances will be created across two zones for protection against
 zonal failures. If [alternativeLocationId] is also provided, it must
 be different from [locationId].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the instance or a fully qualified identifier for the instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="redisconfigs_csharp">
 <a href="#redisconfigs_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -538,14 +527,13 @@ If it is not provided, the provider project is used.
 Please check Memorystore documentation for the list of supported parameters:
 https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="redisversion_csharp">
 <a href="#redisversion_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of Redis software. If not provided, latest supported
 version will be used. Currently, the supported values are:
@@ -553,25 +541,23 @@ version will be used. Currently, the supported values are:
 - REDIS_4_0 for Redis 4.0 compatibility
 - REDIS_3_2 for Redis 3.2 compatibility
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Redis region of the instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="reservediprange_csharp">
 <a href="#reservediprange_csharp" style="color: inherit; text-decoration: inherit;">Reserved<wbr>Ip<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR range of internal addresses that are reserved for this
 instance. If not provided, the service will choose an unused /29
@@ -579,14 +565,13 @@ block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be
 unique and non-overlapping with existing subnets in an authorized
 network.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service tier of the instance. Must be one of these values:
 - BASIC: standalone instance
@@ -594,10 +579,8 @@ network.
 Default value is `BASIC`.
 Possible values are `BASIC` and `STANDARD_HA`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -606,94 +589,87 @@ Possible values are `BASIC` and `STANDARD_HA`.
             title="Required">
         <span id="memorysizegb_go">
 <a href="#memorysizegb_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Size<wbr>Gb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Redis memory size in GiB.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="alternativelocationid_go">
 <a href="#alternativelocationid_go" style="color: inherit; text-decoration: inherit;">Alternative<wbr>Location<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Only applicable to STANDARD_HA tier which protects the instance
 against zonal failures by provisioning it across two zones.
 If provided, it must be a different zone from the one provided in
 [locationId].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authenabled_go">
 <a href="#authenabled_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. Indicates whether OSS Redis AUTH is enabled for the instance. If set to "true" AUTH is enabled on the
 instance. Default value is "false" meaning AUTH is disabled.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authorizednetwork_go">
 <a href="#authorizednetwork_go" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full name of the Google Compute Engine network to which the
 instance is connected. If left unspecified, the default network
 will be used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="connectmode_go">
 <a href="#connectmode_go" style="color: inherit; text-decoration: inherit;">Connect<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection mode of the Redis instance.
 Default value is `DIRECT_PEERING`.
 Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An arbitrary and optional user-provided name for the instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user provided metadata.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="locationid_go">
 <a href="#locationid_go" style="color: inherit; text-decoration: inherit;">Location<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone where the instance will be provisioned. If not provided,
 the service will choose a zone for the instance. For STANDARD_HA tier,
@@ -701,35 +677,32 @@ instances will be created across two zones for protection against
 zonal failures. If [alternativeLocationId] is also provided, it must
 be different from [locationId].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the instance or a fully qualified identifier for the instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="redisconfigs_go">
 <a href="#redisconfigs_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -737,14 +710,13 @@ If it is not provided, the provider project is used.
 Please check Memorystore documentation for the list of supported parameters:
 https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="redisversion_go">
 <a href="#redisversion_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of Redis software. If not provided, latest supported
 version will be used. Currently, the supported values are:
@@ -752,25 +724,23 @@ version will be used. Currently, the supported values are:
 - REDIS_4_0 for Redis 4.0 compatibility
 - REDIS_3_2 for Redis 3.2 compatibility
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Redis region of the instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="reservediprange_go">
 <a href="#reservediprange_go" style="color: inherit; text-decoration: inherit;">Reserved<wbr>Ip<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR range of internal addresses that are reserved for this
 instance. If not provided, the service will choose an unused /29
@@ -778,14 +748,13 @@ block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be
 unique and non-overlapping with existing subnets in an authorized
 network.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service tier of the instance. Must be one of these values:
 - BASIC: standalone instance
@@ -793,10 +762,8 @@ network.
 Default value is `BASIC`.
 Possible values are `BASIC` and `STANDARD_HA`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -805,94 +772,87 @@ Possible values are `BASIC` and `STANDARD_HA`.
             title="Required">
         <span id="memorysizegb_nodejs">
 <a href="#memorysizegb_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Size<wbr>Gb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Redis memory size in GiB.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="alternativelocationid_nodejs">
 <a href="#alternativelocationid_nodejs" style="color: inherit; text-decoration: inherit;">alternative<wbr>Location<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Only applicable to STANDARD_HA tier which protects the instance
 against zonal failures by provisioning it across two zones.
 If provided, it must be a different zone from the one provided in
 [locationId].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authenabled_nodejs">
 <a href="#authenabled_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. Indicates whether OSS Redis AUTH is enabled for the instance. If set to "true" AUTH is enabled on the
 instance. Default value is "false" meaning AUTH is disabled.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authorizednetwork_nodejs">
 <a href="#authorizednetwork_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full name of the Google Compute Engine network to which the
 instance is connected. If left unspecified, the default network
 will be used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="connectmode_nodejs">
 <a href="#connectmode_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection mode of the Redis instance.
 Default value is `DIRECT_PEERING`.
 Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An arbitrary and optional user-provided name for the instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user provided metadata.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="locationid_nodejs">
 <a href="#locationid_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone where the instance will be provisioned. If not provided,
 the service will choose a zone for the instance. For STANDARD_HA tier,
@@ -900,35 +860,32 @@ instances will be created across two zones for protection against
 zonal failures. If [alternativeLocationId] is also provided, it must
 be different from [locationId].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the instance or a fully qualified identifier for the instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="redisconfigs_nodejs">
 <a href="#redisconfigs_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -936,14 +893,13 @@ If it is not provided, the provider project is used.
 Please check Memorystore documentation for the list of supported parameters:
 https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="redisversion_nodejs">
 <a href="#redisversion_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of Redis software. If not provided, latest supported
 version will be used. Currently, the supported values are:
@@ -951,25 +907,23 @@ version will be used. Currently, the supported values are:
 - REDIS_4_0 for Redis 4.0 compatibility
 - REDIS_3_2 for Redis 3.2 compatibility
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Redis region of the instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="reservediprange_nodejs">
 <a href="#reservediprange_nodejs" style="color: inherit; text-decoration: inherit;">reserved<wbr>Ip<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR range of internal addresses that are reserved for this
 instance. If not provided, the service will choose an unused /29
@@ -977,14 +931,13 @@ block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be
 unique and non-overlapping with existing subnets in an authorized
 network.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service tier of the instance. Must be one of these values:
 - BASIC: standalone instance
@@ -992,10 +945,8 @@ network.
 Default value is `BASIC`.
 Possible values are `BASIC` and `STANDARD_HA`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1004,94 +955,87 @@ Possible values are `BASIC` and `STANDARD_HA`.
             title="Required">
         <span id="memory_size_gb_python">
 <a href="#memory_size_gb_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>size_<wbr>gb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Redis memory size in GiB.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="alternative_location_id_python">
 <a href="#alternative_location_id_python" style="color: inherit; text-decoration: inherit;">alternative_<wbr>location_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Only applicable to STANDARD_HA tier which protects the instance
 against zonal failures by provisioning it across two zones.
 If provided, it must be a different zone from the one provided in
 [locationId].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="auth_enabled_python">
 <a href="#auth_enabled_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. Indicates whether OSS Redis AUTH is enabled for the instance. If set to "true" AUTH is enabled on the
 instance. Default value is "false" meaning AUTH is disabled.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authorized_network_python">
 <a href="#authorized_network_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full name of the Google Compute Engine network to which the
 instance is connected. If left unspecified, the default network
 will be used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="connect_mode_python">
 <a href="#connect_mode_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The connection mode of the Redis instance.
 Default value is `DIRECT_PEERING`.
 Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An arbitrary and optional user-provided name for the instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user provided metadata.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_id_python">
 <a href="#location_id_python" style="color: inherit; text-decoration: inherit;">location_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The zone where the instance will be provisioned. If not provided,
 the service will choose a zone for the instance. For STANDARD_HA tier,
@@ -1099,35 +1043,32 @@ instances will be created across two zones for protection against
 zonal failures. If [alternativeLocationId] is also provided, it must
 be different from [locationId].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the instance or a fully qualified identifier for the instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="redis_configs_python">
 <a href="#redis_configs_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
@@ -1135,14 +1076,13 @@ If it is not provided, the provider project is used.
 Please check Memorystore documentation for the list of supported parameters:
 https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="redis_version_python">
 <a href="#redis_version_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of Redis software. If not provided, latest supported
 version will be used. Currently, the supported values are:
@@ -1150,25 +1090,23 @@ version will be used. Currently, the supported values are:
 - REDIS_4_0 for Redis 4.0 compatibility
 - REDIS_3_2 for Redis 3.2 compatibility
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Redis region of the instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="reserved_ip_range_python">
 <a href="#reserved_ip_range_python" style="color: inherit; text-decoration: inherit;">reserved_<wbr>ip_<wbr>range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CIDR range of internal addresses that are reserved for this
 instance. If not provided, the service will choose an unused /29
@@ -1176,14 +1114,13 @@ block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be
 unique and non-overlapping with existing subnets in an authorized
 network.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service tier of the instance. Must be one of these values:
 - BASIC: standalone instance
@@ -1191,19 +1128,13 @@ network.
 Default value is `BASIC`.
 Possible values are `BASIC` and `STANDARD_HA`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Instance resource produces the following output properties:
-
 
 
 
@@ -1214,74 +1145,67 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="createtime_csharp">
 <a href="#createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="currentlocationid_csharp">
 <a href="#currentlocationid_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Location<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current zone where the Redis endpoint is placed. For Basic Tier instances, this will always be the same as the
 [locationId] provided by the user at creation time. For Standard Tier instances, this can be either [locationId] or
 [alternativeLocationId] and can change after a failover event.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname or IP address of the exposed Redis endpoint used by clients to connect to the service.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="persistenceiamidentity_csharp">
 <a href="#persistenceiamidentity_csharp" style="color: inherit; text-decoration: inherit;">Persistence<wbr>Iam<wbr>Identity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. Cloud IAM identity used by import / export operations to transfer data to/from Cloud Storage. Format is
 "serviceAccount:". The value may change over time for a given instance so should be checked before each import/export
 operation.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number of the exposed Redis endpoint.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1290,74 +1214,67 @@ operation.
             title="">
         <span id="createtime_go">
 <a href="#createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="currentlocationid_go">
 <a href="#currentlocationid_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Location<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current zone where the Redis endpoint is placed. For Basic Tier instances, this will always be the same as the
 [locationId] provided by the user at creation time. For Standard Tier instances, this can be either [locationId] or
 [alternativeLocationId] and can change after a failover event.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname or IP address of the exposed Redis endpoint used by clients to connect to the service.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="persistenceiamidentity_go">
 <a href="#persistenceiamidentity_go" style="color: inherit; text-decoration: inherit;">Persistence<wbr>Iam<wbr>Identity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. Cloud IAM identity used by import / export operations to transfer data to/from Cloud Storage. Format is
 "serviceAccount:". The value may change over time for a given instance so should be checked before each import/export
 operation.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number of the exposed Redis endpoint.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1366,74 +1283,67 @@ operation.
             title="">
         <span id="createtime_nodejs">
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="currentlocationid_nodejs">
 <a href="#currentlocationid_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Location<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current zone where the Redis endpoint is placed. For Basic Tier instances, this will always be the same as the
 [locationId] provided by the user at creation time. For Standard Tier instances, this can be either [locationId] or
 [alternativeLocationId] and can change after a failover event.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname or IP address of the exposed Redis endpoint used by clients to connect to the service.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="persistenceiamidentity_nodejs">
 <a href="#persistenceiamidentity_nodejs" style="color: inherit; text-decoration: inherit;">persistence<wbr>Iam<wbr>Identity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. Cloud IAM identity used by import / export operations to transfer data to/from Cloud Storage. Format is
 "serviceAccount:". The value may change over time for a given instance so should be checked before each import/export
 operation.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port number of the exposed Redis endpoint.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1442,77 +1352,67 @@ operation.
             title="">
         <span id="create_time_python">
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="current_location_id_python">
 <a href="#current_location_id_python" style="color: inherit; text-decoration: inherit;">current_<wbr>location_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current zone where the Redis endpoint is placed. For Basic Tier instances, this will always be the same as the
 [locationId] provided by the user at creation time. For Standard Tier instances, this can be either [locationId] or
 [alternativeLocationId] and can change after a failover event.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Hostname or IP address of the exposed Redis endpoint used by clients to connect to the service.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="persistence_iam_identity_python">
 <a href="#persistence_iam_identity_python" style="color: inherit; text-decoration: inherit;">persistence_<wbr>iam_<wbr>identity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Output only. Cloud IAM identity used by import / export operations to transfer data to/from Cloud Storage. Format is
 "serviceAccount:". The value may change over time for a given instance so should be checked before each import/export
 operation.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number of the exposed Redis endpoint.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1522,7 +1422,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/redis/#InstanceState">InstanceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/redis/#Instance">Instance</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/redis/#InstanceState">InstanceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/redis/#Instance">Instance</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1531,11 +1431,11 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/redis?tab=doc#InstanceState">InstanceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/redis?tab=doc#Instance">Instance</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/redis?tab=doc#InstanceState">InstanceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/redis?tab=doc#Instance">Instance</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Redis.Instance.html">Instance</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Redis.InstanceState.html">InstanceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Redis.Instance.html">Instance</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Redis.InstanceState.html">InstanceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1637,7 +1537,6 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1645,118 +1544,109 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_alternativelocationid_csharp">
 <a href="#state_alternativelocationid_csharp" style="color: inherit; text-decoration: inherit;">Alternative<wbr>Location<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Only applicable to STANDARD_HA tier which protects the instance
 against zonal failures by provisioning it across two zones.
 If provided, it must be a different zone from the one provided in
 [locationId].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_authenabled_csharp">
 <a href="#state_authenabled_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. Indicates whether OSS Redis AUTH is enabled for the instance. If set to "true" AUTH is enabled on the
 instance. Default value is "false" meaning AUTH is disabled.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_authorizednetwork_csharp">
 <a href="#state_authorizednetwork_csharp" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full name of the Google Compute Engine network to which the
 instance is connected. If left unspecified, the default network
 will be used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_connectmode_csharp">
 <a href="#state_connectmode_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection mode of the Redis instance.
 Default value is `DIRECT_PEERING`.
 Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_createtime_csharp">
 <a href="#state_createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_currentlocationid_csharp">
 <a href="#state_currentlocationid_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Location<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current zone where the Redis endpoint is placed. For Basic Tier instances, this will always be the same as the
 [locationId] provided by the user at creation time. For Standard Tier instances, this can be either [locationId] or
 [alternativeLocationId] and can change after a failover event.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An arbitrary and optional user-provided name for the instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_host_csharp">
 <a href="#state_host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname or IP address of the exposed Redis endpoint used by clients to connect to the service.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user provided metadata.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_locationid_csharp">
 <a href="#state_locationid_csharp" style="color: inherit; text-decoration: inherit;">Location<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone where the instance will be provisioned. If not provided,
 the service will choose a zone for the instance. For STANDARD_HA tier,
@@ -1764,70 +1654,64 @@ instances will be created across two zones for protection against
 zonal failures. If [alternativeLocationId] is also provided, it must
 be different from [locationId].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memorysizegb_csharp">
 <a href="#state_memorysizegb_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Size<wbr>Gb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Redis memory size in GiB.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the instance or a fully qualified identifier for the instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_persistenceiamidentity_csharp">
 <a href="#state_persistenceiamidentity_csharp" style="color: inherit; text-decoration: inherit;">Persistence<wbr>Iam<wbr>Identity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. Cloud IAM identity used by import / export operations to transfer data to/from Cloud Storage. Format is
 "serviceAccount:". The value may change over time for a given instance so should be checked before each import/export
 operation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_port_csharp">
 <a href="#state_port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number of the exposed Redis endpoint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_redisconfigs_csharp">
 <a href="#state_redisconfigs_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -1835,14 +1719,13 @@ If it is not provided, the provider project is used.
 Please check Memorystore documentation for the list of supported parameters:
 https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_redisversion_csharp">
 <a href="#state_redisversion_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of Redis software. If not provided, latest supported
 version will be used. Currently, the supported values are:
@@ -1850,25 +1733,23 @@ version will be used. Currently, the supported values are:
 - REDIS_4_0 for Redis 4.0 compatibility
 - REDIS_3_2 for Redis 3.2 compatibility
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Redis region of the instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_reservediprange_csharp">
 <a href="#state_reservediprange_csharp" style="color: inherit; text-decoration: inherit;">Reserved<wbr>Ip<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR range of internal addresses that are reserved for this
 instance. If not provided, the service will choose an unused /29
@@ -1876,14 +1757,13 @@ block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be
 unique and non-overlapping with existing subnets in an authorized
 network.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tier_csharp">
 <a href="#state_tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service tier of the instance. Must be one of these values:
 - BASIC: standalone instance
@@ -1891,10 +1771,8 @@ network.
 Default value is `BASIC`.
 Possible values are `BASIC` and `STANDARD_HA`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1903,118 +1781,109 @@ Possible values are `BASIC` and `STANDARD_HA`.
             title="Optional">
         <span id="state_alternativelocationid_go">
 <a href="#state_alternativelocationid_go" style="color: inherit; text-decoration: inherit;">Alternative<wbr>Location<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Only applicable to STANDARD_HA tier which protects the instance
 against zonal failures by provisioning it across two zones.
 If provided, it must be a different zone from the one provided in
 [locationId].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_authenabled_go">
 <a href="#state_authenabled_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. Indicates whether OSS Redis AUTH is enabled for the instance. If set to "true" AUTH is enabled on the
 instance. Default value is "false" meaning AUTH is disabled.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_authorizednetwork_go">
 <a href="#state_authorizednetwork_go" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full name of the Google Compute Engine network to which the
 instance is connected. If left unspecified, the default network
 will be used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_connectmode_go">
 <a href="#state_connectmode_go" style="color: inherit; text-decoration: inherit;">Connect<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection mode of the Redis instance.
 Default value is `DIRECT_PEERING`.
 Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_createtime_go">
 <a href="#state_createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_currentlocationid_go">
 <a href="#state_currentlocationid_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Location<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current zone where the Redis endpoint is placed. For Basic Tier instances, this will always be the same as the
 [locationId] provided by the user at creation time. For Standard Tier instances, this can be either [locationId] or
 [alternativeLocationId] and can change after a failover event.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An arbitrary and optional user-provided name for the instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_host_go">
 <a href="#state_host_go" style="color: inherit; text-decoration: inherit;">Host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname or IP address of the exposed Redis endpoint used by clients to connect to the service.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user provided metadata.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_locationid_go">
 <a href="#state_locationid_go" style="color: inherit; text-decoration: inherit;">Location<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone where the instance will be provisioned. If not provided,
 the service will choose a zone for the instance. For STANDARD_HA tier,
@@ -2022,70 +1891,64 @@ instances will be created across two zones for protection against
 zonal failures. If [alternativeLocationId] is also provided, it must
 be different from [locationId].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memorysizegb_go">
 <a href="#state_memorysizegb_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Size<wbr>Gb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Redis memory size in GiB.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the instance or a fully qualified identifier for the instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_persistenceiamidentity_go">
 <a href="#state_persistenceiamidentity_go" style="color: inherit; text-decoration: inherit;">Persistence<wbr>Iam<wbr>Identity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. Cloud IAM identity used by import / export operations to transfer data to/from Cloud Storage. Format is
 "serviceAccount:". The value may change over time for a given instance so should be checked before each import/export
 operation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_port_go">
 <a href="#state_port_go" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number of the exposed Redis endpoint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_redisconfigs_go">
 <a href="#state_redisconfigs_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -2093,14 +1956,13 @@ If it is not provided, the provider project is used.
 Please check Memorystore documentation for the list of supported parameters:
 https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_redisversion_go">
 <a href="#state_redisversion_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of Redis software. If not provided, latest supported
 version will be used. Currently, the supported values are:
@@ -2108,25 +1970,23 @@ version will be used. Currently, the supported values are:
 - REDIS_4_0 for Redis 4.0 compatibility
 - REDIS_3_2 for Redis 3.2 compatibility
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Redis region of the instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_reservediprange_go">
 <a href="#state_reservediprange_go" style="color: inherit; text-decoration: inherit;">Reserved<wbr>Ip<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR range of internal addresses that are reserved for this
 instance. If not provided, the service will choose an unused /29
@@ -2134,14 +1994,13 @@ block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be
 unique and non-overlapping with existing subnets in an authorized
 network.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tier_go">
 <a href="#state_tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service tier of the instance. Must be one of these values:
 - BASIC: standalone instance
@@ -2149,10 +2008,8 @@ network.
 Default value is `BASIC`.
 Possible values are `BASIC` and `STANDARD_HA`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2161,118 +2018,109 @@ Possible values are `BASIC` and `STANDARD_HA`.
             title="Optional">
         <span id="state_alternativelocationid_nodejs">
 <a href="#state_alternativelocationid_nodejs" style="color: inherit; text-decoration: inherit;">alternative<wbr>Location<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Only applicable to STANDARD_HA tier which protects the instance
 against zonal failures by provisioning it across two zones.
 If provided, it must be a different zone from the one provided in
 [locationId].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_authenabled_nodejs">
 <a href="#state_authenabled_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Optional. Indicates whether OSS Redis AUTH is enabled for the instance. If set to "true" AUTH is enabled on the
 instance. Default value is "false" meaning AUTH is disabled.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_authorizednetwork_nodejs">
 <a href="#state_authorizednetwork_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full name of the Google Compute Engine network to which the
 instance is connected. If left unspecified, the default network
 will be used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_connectmode_nodejs">
 <a href="#state_connectmode_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection mode of the Redis instance.
 Default value is `DIRECT_PEERING`.
 Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_createtime_nodejs">
 <a href="#state_createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_currentlocationid_nodejs">
 <a href="#state_currentlocationid_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Location<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current zone where the Redis endpoint is placed. For Basic Tier instances, this will always be the same as the
 [locationId] provided by the user at creation time. For Standard Tier instances, this can be either [locationId] or
 [alternativeLocationId] and can change after a failover event.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An arbitrary and optional user-provided name for the instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_host_nodejs">
 <a href="#state_host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname or IP address of the exposed Redis endpoint used by clients to connect to the service.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user provided metadata.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_locationid_nodejs">
 <a href="#state_locationid_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone where the instance will be provisioned. If not provided,
 the service will choose a zone for the instance. For STANDARD_HA tier,
@@ -2280,70 +2128,64 @@ instances will be created across two zones for protection against
 zonal failures. If [alternativeLocationId] is also provided, it must
 be different from [locationId].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memorysizegb_nodejs">
 <a href="#state_memorysizegb_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Size<wbr>Gb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Redis memory size in GiB.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the instance or a fully qualified identifier for the instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_persistenceiamidentity_nodejs">
 <a href="#state_persistenceiamidentity_nodejs" style="color: inherit; text-decoration: inherit;">persistence<wbr>Iam<wbr>Identity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. Cloud IAM identity used by import / export operations to transfer data to/from Cloud Storage. Format is
 "serviceAccount:". The value may change over time for a given instance so should be checked before each import/export
 operation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_port_nodejs">
 <a href="#state_port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port number of the exposed Redis endpoint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_redisconfigs_nodejs">
 <a href="#state_redisconfigs_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -2351,14 +2193,13 @@ If it is not provided, the provider project is used.
 Please check Memorystore documentation for the list of supported parameters:
 https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_redisversion_nodejs">
 <a href="#state_redisversion_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of Redis software. If not provided, latest supported
 version will be used. Currently, the supported values are:
@@ -2366,25 +2207,23 @@ version will be used. Currently, the supported values are:
 - REDIS_4_0 for Redis 4.0 compatibility
 - REDIS_3_2 for Redis 3.2 compatibility
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Redis region of the instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_reservediprange_nodejs">
 <a href="#state_reservediprange_nodejs" style="color: inherit; text-decoration: inherit;">reserved<wbr>Ip<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR range of internal addresses that are reserved for this
 instance. If not provided, the service will choose an unused /29
@@ -2392,14 +2231,13 @@ block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be
 unique and non-overlapping with existing subnets in an authorized
 network.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tier_nodejs">
 <a href="#state_tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service tier of the instance. Must be one of these values:
 - BASIC: standalone instance
@@ -2407,10 +2245,8 @@ network.
 Default value is `BASIC`.
 Possible values are `BASIC` and `STANDARD_HA`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2419,118 +2255,109 @@ Possible values are `BASIC` and `STANDARD_HA`.
             title="Optional">
         <span id="state_alternative_location_id_python">
 <a href="#state_alternative_location_id_python" style="color: inherit; text-decoration: inherit;">alternative_<wbr>location_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Only applicable to STANDARD_HA tier which protects the instance
 against zonal failures by provisioning it across two zones.
 If provided, it must be a different zone from the one provided in
 [locationId].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_auth_enabled_python">
 <a href="#state_auth_enabled_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Optional. Indicates whether OSS Redis AUTH is enabled for the instance. If set to "true" AUTH is enabled on the
 instance. Default value is "false" meaning AUTH is disabled.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_authorized_network_python">
 <a href="#state_authorized_network_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full name of the Google Compute Engine network to which the
 instance is connected. If left unspecified, the default network
 will be used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_connect_mode_python">
 <a href="#state_connect_mode_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The connection mode of the Redis instance.
 Default value is `DIRECT_PEERING`.
 Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_create_time_python">
 <a href="#state_create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_current_location_id_python">
 <a href="#state_current_location_id_python" style="color: inherit; text-decoration: inherit;">current_<wbr>location_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current zone where the Redis endpoint is placed. For Basic Tier instances, this will always be the same as the
 [locationId] provided by the user at creation time. For Standard Tier instances, this can be either [locationId] or
 [alternativeLocationId] and can change after a failover event.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An arbitrary and optional user-provided name for the instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_host_python">
 <a href="#state_host_python" style="color: inherit; text-decoration: inherit;">host</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Hostname or IP address of the exposed Redis endpoint used by clients to connect to the service.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user provided metadata.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_location_id_python">
 <a href="#state_location_id_python" style="color: inherit; text-decoration: inherit;">location_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The zone where the instance will be provisioned. If not provided,
 the service will choose a zone for the instance. For STANDARD_HA tier,
@@ -2538,70 +2365,64 @@ instances will be created across two zones for protection against
 zonal failures. If [alternativeLocationId] is also provided, it must
 be different from [locationId].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_memory_size_gb_python">
 <a href="#state_memory_size_gb_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>size_<wbr>gb</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Redis memory size in GiB.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the instance or a fully qualified identifier for the instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_persistence_iam_identity_python">
 <a href="#state_persistence_iam_identity_python" style="color: inherit; text-decoration: inherit;">persistence_<wbr>iam_<wbr>identity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Output only. Cloud IAM identity used by import / export operations to transfer data to/from Cloud Storage. Format is
 "serviceAccount:". The value may change over time for a given instance so should be checked before each import/export
 operation.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_port_python">
 <a href="#state_port_python" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number of the exposed Redis endpoint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_redis_configs_python">
 <a href="#state_redis_configs_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
@@ -2609,14 +2430,13 @@ If it is not provided, the provider project is used.
 Please check Memorystore documentation for the list of supported parameters:
 https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_redis_version_python">
 <a href="#state_redis_version_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of Redis software. If not provided, latest supported
 version will be used. Currently, the supported values are:
@@ -2624,25 +2444,23 @@ version will be used. Currently, the supported values are:
 - REDIS_4_0 for Redis 4.0 compatibility
 - REDIS_3_2 for Redis 3.2 compatibility
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Redis region of the instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_reserved_ip_range_python">
 <a href="#state_reserved_ip_range_python" style="color: inherit; text-decoration: inherit;">reserved_<wbr>ip_<wbr>range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CIDR range of internal addresses that are reserved for this
 instance. If not provided, the service will choose an unused /29
@@ -2650,14 +2468,13 @@ block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be
 unique and non-overlapping with existing subnets in an authorized
 network.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tier_python">
 <a href="#state_tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service tier of the instance. Must be one of these values:
 - BASIC: standalone instance
@@ -2665,15 +2482,8 @@ network.
 Default value is `BASIC`.
 Possible values are `BASIC` and `STANDARD_HA`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
 
 
 

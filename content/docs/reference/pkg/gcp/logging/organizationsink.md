@@ -1,8 +1,8 @@
 
 ---
 title: "OrganizationSink"
-title_tag: "Resource OrganizationSink | Module logging | Package GCP"
-meta_desc: "Explore the OrganizationSink resource of the logging module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a organization-level logging sink. For more information see"
+title_tag: "gcp.logging.OrganizationSink"
+meta_desc: "Documentation for the gcp.logging.OrganizationSink resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -144,7 +144,7 @@ const log_writer = new gcp.projects.IAMMember("log-writer", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/logging/#OrganizationSink">OrganizationSink</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/logging/#OrganizationSinkArgs">OrganizationSinkArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/logging/#OrganizationSink">OrganizationSink</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/logging/#OrganizationSinkArgs">OrganizationSinkArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -152,11 +152,11 @@ const log_writer = new gcp.projects.IAMMember("log-writer", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/logging?tab=doc#OrganizationSink">NewOrganizationSink</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/logging?tab=doc#OrganizationSinkArgs">OrganizationSinkArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/logging?tab=doc#OrganizationSink">OrganizationSink</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/logging?tab=doc#OrganizationSink">NewOrganizationSink</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/logging?tab=doc#OrganizationSinkArgs">OrganizationSinkArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/logging?tab=doc#OrganizationSink">OrganizationSink</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.OrganizationSink.html">OrganizationSink</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.OrganizationSinkArgs.html">OrganizationSinkArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.OrganizationSink.html">OrganizationSink</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.OrganizationSinkArgs.html">OrganizationSinkArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -167,7 +167,7 @@ const log_writer = new gcp.projects.IAMMember("log-writer", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -236,7 +236,7 @@ const log_writer = new gcp.projects.IAMMember("log-writer", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -275,7 +275,7 @@ const log_writer = new gcp.projects.IAMMember("log-writer", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -316,7 +316,6 @@ The OrganizationSink resource accepts the following [input]({{< relref "/docs/in
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -324,9 +323,9 @@ The OrganizationSink resource accepts the following [input]({{< relref "/docs/in
             title="Required">
         <span id="destination_csharp">
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, a BigQuery dataset or a Cloud Logging bucket. Examples:
@@ -362,102 +361,92 @@ func main() {
 ```
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="orgid_csharp">
 <a href="#orgid_csharp" style="color: inherit; text-decoration: inherit;">Org<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization to be exported to the sink.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bigqueryoptions_csharp">
 <a href="#bigqueryoptions_csharp" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationsinkbigqueryoptions">Organization<wbr>Sink<wbr>Bigquery<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options that affect sinks exporting data to BigQuery. Structure documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of this sink. The maximum length of the description is 8000 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disabled_csharp">
 <a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to True, then this sink is disabled and it does not export any log entries.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exclusions_csharp">
 <a href="#exclusions_csharp" style="color: inherit; text-decoration: inherit;">Exclusions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationsinkexclusion">List&lt;Organization<wbr>Sink<wbr>Exclusion<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and
 one of exclusion_filters it will not be exported.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The filter to apply when exporting logs. Only log entries that match the filter are exported.
 See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
 write a filter.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="includechildren_csharp">
 <a href="#includechildren_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Children</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not to include children organizations in the sink export. If true, logs
 associated with child projects are also exported; otherwise only logs relating to the provided organization are included.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the logging sink.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -466,9 +455,9 @@ associated with child projects are also exported; otherwise only logs relating t
             title="Required">
         <span id="destination_go">
 <a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, a BigQuery dataset or a Cloud Logging bucket. Examples:
@@ -504,102 +493,92 @@ func main() {
 ```
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="orgid_go">
 <a href="#orgid_go" style="color: inherit; text-decoration: inherit;">Org<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization to be exported to the sink.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bigqueryoptions_go">
 <a href="#bigqueryoptions_go" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationsinkbigqueryoptions">Organization<wbr>Sink<wbr>Bigquery<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Options that affect sinks exporting data to BigQuery. Structure documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of this sink. The maximum length of the description is 8000 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disabled_go">
 <a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to True, then this sink is disabled and it does not export any log entries.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exclusions_go">
 <a href="#exclusions_go" style="color: inherit; text-decoration: inherit;">Exclusions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationsinkexclusion">[]Organization<wbr>Sink<wbr>Exclusion</a></span>
     </dt>
     <dd>{{% md %}}Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and
 one of exclusion_filters it will not be exported.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The filter to apply when exporting logs. Only log entries that match the filter are exported.
 See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
 write a filter.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="includechildren_go">
 <a href="#includechildren_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Children</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not to include children organizations in the sink export. If true, logs
 associated with child projects are also exported; otherwise only logs relating to the provided organization are included.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the logging sink.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -608,9 +587,9 @@ associated with child projects are also exported; otherwise only logs relating t
             title="Required">
         <span id="destination_nodejs">
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, a BigQuery dataset or a Cloud Logging bucket. Examples:
@@ -646,102 +625,92 @@ func main() {
 ```
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="orgid_nodejs">
 <a href="#orgid_nodejs" style="color: inherit; text-decoration: inherit;">org<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization to be exported to the sink.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bigqueryoptions_nodejs">
 <a href="#bigqueryoptions_nodejs" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationsinkbigqueryoptions">Organization<wbr>Sink<wbr>Bigquery<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Options that affect sinks exporting data to BigQuery. Structure documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of this sink. The maximum length of the description is 8000 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disabled_nodejs">
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to True, then this sink is disabled and it does not export any log entries.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exclusions_nodejs">
 <a href="#exclusions_nodejs" style="color: inherit; text-decoration: inherit;">exclusions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationsinkexclusion">Organization<wbr>Sink<wbr>Exclusion[]</a></span>
     </dt>
     <dd>{{% md %}}Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and
 one of exclusion_filters it will not be exported.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The filter to apply when exporting logs. Only log entries that match the filter are exported.
 See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
 write a filter.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="includechildren_nodejs">
 <a href="#includechildren_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Children</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not to include children organizations in the sink export. If true, logs
 associated with child projects are also exported; otherwise only logs relating to the provided organization are included.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the logging sink.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -750,9 +719,9 @@ associated with child projects are also exported; otherwise only logs relating t
             title="Required">
         <span id="destination_python">
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, a BigQuery dataset or a Cloud Logging bucket. Examples:
@@ -788,111 +757,97 @@ func main() {
 ```
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="org_id_python">
 <a href="#org_id_python" style="color: inherit; text-decoration: inherit;">org_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization to be exported to the sink.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bigquery_options_python">
 <a href="#bigquery_options_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationsinkbigqueryoptions">Organization<wbr>Sink<wbr>Bigquery<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options that affect sinks exporting data to BigQuery. Structure documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of this sink. The maximum length of the description is 8000 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disabled_python">
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to True, then this sink is disabled and it does not export any log entries.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exclusions_python">
 <a href="#exclusions_python" style="color: inherit; text-decoration: inherit;">exclusions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationsinkexclusion">Sequence[Organization<wbr>Sink<wbr>Exclusion<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and
 one of exclusion_filters it will not be exported.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The filter to apply when exporting logs. Only log entries that match the filter are exported.
 See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
 write a filter.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="include_children_python">
 <a href="#include_children_python" style="color: inherit; text-decoration: inherit;">include_<wbr>children</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not to include children organizations in the sink export. If true, logs
 associated with child projects are also exported; otherwise only logs relating to the provided organization are included.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the logging sink.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the OrganizationSink resource produces the following output properties:
-
 
 
 
@@ -903,27 +858,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="writeridentity_csharp">
 <a href="#writeridentity_csharp" style="color: inherit; text-decoration: inherit;">Writer<wbr>Identity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity associated with this sink. This identity must be granted write access to the
 configured `destination`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -932,27 +884,24 @@ configured `destination`.
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="writeridentity_go">
 <a href="#writeridentity_go" style="color: inherit; text-decoration: inherit;">Writer<wbr>Identity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity associated with this sink. This identity must be granted write access to the
 configured `destination`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -961,27 +910,24 @@ configured `destination`.
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="writeridentity_nodejs">
 <a href="#writeridentity_nodejs" style="color: inherit; text-decoration: inherit;">writer<wbr>Identity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity associated with this sink. This identity must be granted write access to the
 configured `destination`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -990,30 +936,24 @@ configured `destination`.
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="writer_identity_python">
 <a href="#writer_identity_python" style="color: inherit; text-decoration: inherit;">writer_<wbr>identity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identity associated with this sink. This identity must be granted write access to the
 configured `destination`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1023,7 +963,7 @@ Get an existing OrganizationSink resource's state with the given name, ID, and o
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/logging/#OrganizationSinkState">OrganizationSinkState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/logging/#OrganizationSink">OrganizationSink</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/logging/#OrganizationSinkState">OrganizationSinkState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/logging/#OrganizationSink">OrganizationSink</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1032,11 +972,11 @@ Get an existing OrganizationSink resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetOrganizationSink<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/logging?tab=doc#OrganizationSinkState">OrganizationSinkState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/logging?tab=doc#OrganizationSink">OrganizationSink</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetOrganizationSink<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/logging?tab=doc#OrganizationSinkState">OrganizationSinkState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/logging?tab=doc#OrganizationSink">OrganizationSink</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.OrganizationSink.html">OrganizationSink</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.OrganizationSinkState.html">OrganizationSinkState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.OrganizationSink.html">OrganizationSink</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.OrganizationSinkState.html">OrganizationSinkState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1138,7 +1078,6 @@ Get an existing OrganizationSink resource's state with the given name, ID, and o
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1146,31 +1085,29 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_bigqueryoptions_csharp">
 <a href="#state_bigqueryoptions_csharp" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationsinkbigqueryoptions">Organization<wbr>Sink<wbr>Bigquery<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options that affect sinks exporting data to BigQuery. Structure documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of this sink. The maximum length of the description is 8000 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_destination_csharp">
 <a href="#state_destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, a BigQuery dataset or a Cloud Logging bucket. Examples:
@@ -1206,92 +1143,83 @@ func main() {
 ```
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_disabled_csharp">
 <a href="#state_disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to True, then this sink is disabled and it does not export any log entries.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_exclusions_csharp">
 <a href="#state_exclusions_csharp" style="color: inherit; text-decoration: inherit;">Exclusions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationsinkexclusion">List&lt;Organization<wbr>Sink<wbr>Exclusion<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and
 one of exclusion_filters it will not be exported.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_filter_csharp">
 <a href="#state_filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The filter to apply when exporting logs. Only log entries that match the filter are exported.
 See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
 write a filter.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_includechildren_csharp">
 <a href="#state_includechildren_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Children</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not to include children organizations in the sink export. If true, logs
 associated with child projects are also exported; otherwise only logs relating to the provided organization are included.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the logging sink.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_orgid_csharp">
 <a href="#state_orgid_csharp" style="color: inherit; text-decoration: inherit;">Org<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization to be exported to the sink.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_writeridentity_csharp">
 <a href="#state_writeridentity_csharp" style="color: inherit; text-decoration: inherit;">Writer<wbr>Identity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity associated with this sink. This identity must be granted write access to the
 configured `destination`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1300,31 +1228,29 @@ configured `destination`.
             title="Optional">
         <span id="state_bigqueryoptions_go">
 <a href="#state_bigqueryoptions_go" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationsinkbigqueryoptions">Organization<wbr>Sink<wbr>Bigquery<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Options that affect sinks exporting data to BigQuery. Structure documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of this sink. The maximum length of the description is 8000 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_destination_go">
 <a href="#state_destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, a BigQuery dataset or a Cloud Logging bucket. Examples:
@@ -1360,92 +1286,83 @@ func main() {
 ```
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_disabled_go">
 <a href="#state_disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to True, then this sink is disabled and it does not export any log entries.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_exclusions_go">
 <a href="#state_exclusions_go" style="color: inherit; text-decoration: inherit;">Exclusions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationsinkexclusion">[]Organization<wbr>Sink<wbr>Exclusion</a></span>
     </dt>
     <dd>{{% md %}}Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and
 one of exclusion_filters it will not be exported.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_filter_go">
 <a href="#state_filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The filter to apply when exporting logs. Only log entries that match the filter are exported.
 See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
 write a filter.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_includechildren_go">
 <a href="#state_includechildren_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Children</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not to include children organizations in the sink export. If true, logs
 associated with child projects are also exported; otherwise only logs relating to the provided organization are included.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the logging sink.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_orgid_go">
 <a href="#state_orgid_go" style="color: inherit; text-decoration: inherit;">Org<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization to be exported to the sink.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_writeridentity_go">
 <a href="#state_writeridentity_go" style="color: inherit; text-decoration: inherit;">Writer<wbr>Identity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity associated with this sink. This identity must be granted write access to the
 configured `destination`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1454,31 +1371,29 @@ configured `destination`.
             title="Optional">
         <span id="state_bigqueryoptions_nodejs">
 <a href="#state_bigqueryoptions_nodejs" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationsinkbigqueryoptions">Organization<wbr>Sink<wbr>Bigquery<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Options that affect sinks exporting data to BigQuery. Structure documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of this sink. The maximum length of the description is 8000 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_destination_nodejs">
 <a href="#state_destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, a BigQuery dataset or a Cloud Logging bucket. Examples:
@@ -1514,92 +1429,83 @@ func main() {
 ```
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_disabled_nodejs">
 <a href="#state_disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to True, then this sink is disabled and it does not export any log entries.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_exclusions_nodejs">
 <a href="#state_exclusions_nodejs" style="color: inherit; text-decoration: inherit;">exclusions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationsinkexclusion">Organization<wbr>Sink<wbr>Exclusion[]</a></span>
     </dt>
     <dd>{{% md %}}Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and
 one of exclusion_filters it will not be exported.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_filter_nodejs">
 <a href="#state_filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The filter to apply when exporting logs. Only log entries that match the filter are exported.
 See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
 write a filter.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_includechildren_nodejs">
 <a href="#state_includechildren_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Children</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not to include children organizations in the sink export. If true, logs
 associated with child projects are also exported; otherwise only logs relating to the provided organization are included.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the logging sink.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_orgid_nodejs">
 <a href="#state_orgid_nodejs" style="color: inherit; text-decoration: inherit;">org<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization to be exported to the sink.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_writeridentity_nodejs">
 <a href="#state_writeridentity_nodejs" style="color: inherit; text-decoration: inherit;">writer<wbr>Identity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identity associated with this sink. This identity must be granted write access to the
 configured `destination`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1608,31 +1514,29 @@ configured `destination`.
             title="Optional">
         <span id="state_bigquery_options_python">
 <a href="#state_bigquery_options_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationsinkbigqueryoptions">Organization<wbr>Sink<wbr>Bigquery<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options that affect sinks exporting data to BigQuery. Structure documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of this sink. The maximum length of the description is 8000 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_destination_python">
 <a href="#state_destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The destination of the sink (or, in other words, where logs are written to). Can be a
 Cloud Storage bucket, a PubSub topic, a BigQuery dataset or a Cloud Logging bucket. Examples:
@@ -1668,89 +1572,81 @@ func main() {
 ```
 The writer associated with the sink must have access to write to the above resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_disabled_python">
 <a href="#state_disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to True, then this sink is disabled and it does not export any log entries.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_exclusions_python">
 <a href="#state_exclusions_python" style="color: inherit; text-decoration: inherit;">exclusions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#organizationsinkexclusion">Sequence[Organization<wbr>Sink<wbr>Exclusion<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and
 one of exclusion_filters it will not be exported.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_filter_python">
 <a href="#state_filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The filter to apply when exporting logs. Only log entries that match the filter are exported.
 See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
 write a filter.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_include_children_python">
 <a href="#state_include_children_python" style="color: inherit; text-decoration: inherit;">include_<wbr>children</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not to include children organizations in the sink export. If true, logs
 associated with child projects are also exported; otherwise only logs relating to the provided organization are included.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the logging sink.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_org_id_python">
 <a href="#state_org_id_python" style="color: inherit; text-decoration: inherit;">org_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The numeric ID of the organization to be exported to the sink.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_writer_identity_python">
 <a href="#state_writer_identity_python" style="color: inherit; text-decoration: inherit;">writer_<wbr>identity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identity associated with this sink. This identity must be granted write access to the
 configured `destination`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1759,11 +1655,8 @@ configured `destination`.
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="organizationsinkbigqueryoptions">Organization<wbr>Sink<wbr>Bigquery<wbr>Options</h4>
@@ -1774,11 +1667,10 @@ configured `destination`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/logging?tab=doc#OrganizationSinkBigqueryOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/logging?tab=doc#OrganizationSinkBigqueryOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.Inputs.OrganizationSinkBigqueryOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.Outputs.OrganizationSinkBigqueryOptions.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1788,19 +1680,17 @@ configured `destination`.
             title="Required">
         <span id="usepartitionedtables_csharp">
 <a href="#usepartitionedtables_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Partitioned<wbr>Tables</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use [BigQuery's partition tables](https://cloud.google.com/bigquery/docs/partitioned-tables).
 By default, Logging creates dated tables based on the log entries' timestamps, e.g. syslog_20170523. With partitioned
 tables the date suffix is no longer present and [special query syntax](https://cloud.google.com/bigquery/docs/querying-partitioned-tables)
 has to be used instead. In both cases, tables are sharded based on UTC timezone.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1809,19 +1699,17 @@ has to be used instead. In both cases, tables are sharded based on UTC timezone.
             title="Required">
         <span id="usepartitionedtables_go">
 <a href="#usepartitionedtables_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Partitioned<wbr>Tables</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use [BigQuery's partition tables](https://cloud.google.com/bigquery/docs/partitioned-tables).
 By default, Logging creates dated tables based on the log entries' timestamps, e.g. syslog_20170523. With partitioned
 tables the date suffix is no longer present and [special query syntax](https://cloud.google.com/bigquery/docs/querying-partitioned-tables)
 has to be used instead. In both cases, tables are sharded based on UTC timezone.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1830,19 +1718,17 @@ has to be used instead. In both cases, tables are sharded based on UTC timezone.
             title="Required">
         <span id="usepartitionedtables_nodejs">
 <a href="#usepartitionedtables_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Partitioned<wbr>Tables</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to use [BigQuery's partition tables](https://cloud.google.com/bigquery/docs/partitioned-tables).
 By default, Logging creates dated tables based on the log entries' timestamps, e.g. syslog_20170523. With partitioned
 tables the date suffix is no longer present and [special query syntax](https://cloud.google.com/bigquery/docs/querying-partitioned-tables)
 has to be used instead. In both cases, tables are sharded based on UTC timezone.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1851,22 +1737,17 @@ has to be used instead. In both cases, tables are sharded based on UTC timezone.
             title="Required">
         <span id="use_partitioned_tables_python">
 <a href="#use_partitioned_tables_python" style="color: inherit; text-decoration: inherit;">use_<wbr>partitioned_<wbr>tables</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use [BigQuery's partition tables](https://cloud.google.com/bigquery/docs/partitioned-tables).
 By default, Logging creates dated tables based on the log entries' timestamps, e.g. syslog_20170523. With partitioned
 tables the date suffix is no longer present and [special query syntax](https://cloud.google.com/bigquery/docs/querying-partitioned-tables)
 has to be used instead. In both cases, tables are sharded based on UTC timezone.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="organizationsinkexclusion">Organization<wbr>Sink<wbr>Exclusion</h4>
 {{% choosable language nodejs %}}
@@ -1876,11 +1757,10 @@ has to be used instead. In both cases, tables are sharded based on UTC timezone.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/logging?tab=doc#OrganizationSinkExclusionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/logging?tab=doc#OrganizationSinkExclusionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.Inputs.OrganizationSinkExclusionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Logging.Outputs.OrganizationSinkExclusion.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1890,51 +1770,46 @@ has to be used instead. In both cases, tables are sharded based on UTC timezone.
             title="Required">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The filter to apply when exporting logs. Only log entries that match the filter are exported.
 See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
 write a filter.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the logging sink.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of this sink. The maximum length of the description is 8000 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disabled_csharp">
 <a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to True, then this sink is disabled and it does not export any log entries.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1943,51 +1818,46 @@ write a filter.
             title="Required">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The filter to apply when exporting logs. Only log entries that match the filter are exported.
 See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
 write a filter.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the logging sink.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of this sink. The maximum length of the description is 8000 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disabled_go">
 <a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to True, then this sink is disabled and it does not export any log entries.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1996,51 +1866,46 @@ write a filter.
             title="Required">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The filter to apply when exporting logs. Only log entries that match the filter are exported.
 See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
 write a filter.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the logging sink.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of this sink. The maximum length of the description is 8000 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disabled_nodejs">
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to True, then this sink is disabled and it does not export any log entries.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2049,59 +1914,46 @@ write a filter.
             title="Required">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The filter to apply when exporting logs. Only log entries that match the filter are exported.
 See [Advanced Log Filters](https://cloud.google.com/logging/docs/view/advanced_filters) for information on how to
 write a filter.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the logging sink.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of this sink. The maximum length of the description is 8000 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disabled_python">
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to True, then this sink is disabled and it does not export any log entries.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 ## Import
 
 

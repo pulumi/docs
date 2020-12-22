@@ -11,6 +11,7 @@ Explore the resources and functions of the firestore module in the GCP package.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="document" title="Document"><span class="symbol resource"></span>Document</a></li>
     <li><a href="index" title="Index"><span class="symbol resource"></span>Index</a></li>
 </ul>
 
@@ -23,7 +24,7 @@ Explore the resources and functions of the firestore module in the GCP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>4.5.1</dd>
+	<dd>4.6.0</dd>
 </dl>
 
 

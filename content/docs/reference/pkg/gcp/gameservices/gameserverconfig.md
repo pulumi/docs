@@ -1,8 +1,8 @@
 
 ---
 title: "GameServerConfig"
-title_tag: "Resource GameServerConfig | Module gameservices | Package GCP"
-meta_desc: "Explore the GameServerConfig resource of the gameservices module, including examples, input properties, output properties, lookup functions, and supporting types. A game server config resource. Configs are global and immutable."
+title_tag: "gcp.gameservices.GameServerConfig"
+meta_desc: "Documentation for the gcp.gameservices.GameServerConfig resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -293,7 +293,7 @@ const defaultGameServerConfig = new gcp.gameservices.GameServerConfig("defaultGa
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/gameservices/#GameServerConfig">GameServerConfig</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/gameservices/#GameServerConfigArgs">GameServerConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/gameservices/#GameServerConfig">GameServerConfig</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/gameservices/#GameServerConfigArgs">GameServerConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -301,11 +301,11 @@ const defaultGameServerConfig = new gcp.gameservices.GameServerConfig("defaultGa
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/gameservices?tab=doc#GameServerConfig">NewGameServerConfig</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/gameservices?tab=doc#GameServerConfigArgs">GameServerConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/gameservices?tab=doc#GameServerConfig">GameServerConfig</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/gameservices?tab=doc#GameServerConfig">NewGameServerConfig</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/gameservices?tab=doc#GameServerConfigArgs">GameServerConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/gameservices?tab=doc#GameServerConfig">GameServerConfig</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.GameServerConfig.html">GameServerConfig</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.GameServerConfigArgs.html">GameServerConfigArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.GameServerConfig.html">GameServerConfig</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.GameServerConfigArgs.html">GameServerConfigArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -316,7 +316,7 @@ const defaultGameServerConfig = new gcp.gameservices.GameServerConfig("defaultGa
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -385,7 +385,7 @@ const defaultGameServerConfig = new gcp.gameservices.GameServerConfig("defaultGa
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -424,7 +424,7 @@ const defaultGameServerConfig = new gcp.gameservices.GameServerConfig("defaultGa
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -465,7 +465,6 @@ The GameServerConfig resource accepts the following [input]({{< relref "/docs/in
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -473,29 +472,27 @@ The GameServerConfig resource accepts the following [input]({{< relref "/docs/in
             title="Required">
         <span id="configid_csharp">
 <a href="#configid_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment config.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="deploymentid_csharp">
 <a href="#deploymentid_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="fleetconfigs_csharp">
 <a href="#fleetconfigs_csharp" style="color: inherit; text-decoration: inherit;">Fleet<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigfleetconfig">List&lt;Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
@@ -503,67 +500,60 @@ The GameServerConfig resource accepts the following [input]({{< relref "/docs/in
 will be only one.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the game server config.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of labels to group by.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the Deployment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scalingconfigs_csharp">
 <a href="#scalingconfigs_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigscalingconfig">List&lt;Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Optional. This contains the autoscaling settings.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -572,29 +562,27 @@ Structure is documented below.
             title="Required">
         <span id="configid_go">
 <a href="#configid_go" style="color: inherit; text-decoration: inherit;">Config<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment config.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="deploymentid_go">
 <a href="#deploymentid_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="fleetconfigs_go">
 <a href="#fleetconfigs_go" style="color: inherit; text-decoration: inherit;">Fleet<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigfleetconfig">[]Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config</a></span>
     </dt>
@@ -602,67 +590,60 @@ Structure is documented below.
 will be only one.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the game server config.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Set of labels to group by.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the Deployment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scalingconfigs_go">
 <a href="#scalingconfigs_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigscalingconfig">[]Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. This contains the autoscaling settings.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -671,29 +652,27 @@ Structure is documented below.
             title="Required">
         <span id="configid_nodejs">
 <a href="#configid_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment config.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="deploymentid_nodejs">
 <a href="#deploymentid_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="fleetconfigs_nodejs">
 <a href="#fleetconfigs_nodejs" style="color: inherit; text-decoration: inherit;">fleet<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigfleetconfig">Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config[]</a></span>
     </dt>
@@ -701,67 +680,60 @@ Structure is documented below.
 will be only one.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the game server config.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Set of labels to group by.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the Deployment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scalingconfigs_nodejs">
 <a href="#scalingconfigs_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigscalingconfig">Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. This contains the autoscaling settings.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -770,29 +742,27 @@ Structure is documented below.
             title="Required">
         <span id="config_id_python">
 <a href="#config_id_python" style="color: inherit; text-decoration: inherit;">config_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment config.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="deployment_id_python">
 <a href="#deployment_id_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="fleet_configs_python">
 <a href="#fleet_configs_python" style="color: inherit; text-decoration: inherit;">fleet_<wbr>configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigfleetconfig">Sequence[Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config<wbr>Args]</a></span>
     </dt>
@@ -800,76 +770,65 @@ Structure is documented below.
 will be only one.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the game server config.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Set of labels to group by.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Location of the Deployment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scaling_configs_python">
 <a href="#scaling_configs_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigscalingconfig">Sequence[Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional. This contains the autoscaling settings.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the GameServerConfig resource produces the following output properties:
-
 
 
 
@@ -880,26 +839,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ScalingConfig
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -908,26 +864,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ScalingConfig
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -936,26 +889,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ScalingConfig
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -964,29 +914,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the ScalingConfig
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -996,7 +940,7 @@ Get an existing GameServerConfig resource's state with the given name, ID, and o
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/gameservices/#GameServerConfigState">GameServerConfigState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/gameservices/#GameServerConfig">GameServerConfig</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/gameservices/#GameServerConfigState">GameServerConfigState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/gameservices/#GameServerConfig">GameServerConfig</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1005,11 +949,11 @@ Get an existing GameServerConfig resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGameServerConfig<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/gameservices?tab=doc#GameServerConfigState">GameServerConfigState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/gameservices?tab=doc#GameServerConfig">GameServerConfig</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGameServerConfig<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/gameservices?tab=doc#GameServerConfigState">GameServerConfigState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/gameservices?tab=doc#GameServerConfig">GameServerConfig</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.GameServerConfig.html">GameServerConfig</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.GameServerConfigState.html">GameServerConfigState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.GameServerConfig.html">GameServerConfig</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.GameServerConfigState.html">GameServerConfigState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1111,7 +1055,6 @@ Get an existing GameServerConfig resource's state with the given name, ID, and o
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1119,40 +1062,37 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_configid_csharp">
 <a href="#state_configid_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment config.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_deploymentid_csharp">
 <a href="#state_deploymentid_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the game server config.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_fleetconfigs_csharp">
 <a href="#state_fleetconfigs_csharp" style="color: inherit; text-decoration: inherit;">Fleet<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigfleetconfig">List&lt;Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
@@ -1160,67 +1100,60 @@ The following state arguments are supported:
 will be only one.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of labels to group by.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the Deployment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ScalingConfig
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_scalingconfigs_csharp">
 <a href="#state_scalingconfigs_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigscalingconfig">List&lt;Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Optional. This contains the autoscaling settings.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1229,40 +1162,37 @@ Structure is documented below.
             title="Optional">
         <span id="state_configid_go">
 <a href="#state_configid_go" style="color: inherit; text-decoration: inherit;">Config<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment config.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_deploymentid_go">
 <a href="#state_deploymentid_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the game server config.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_fleetconfigs_go">
 <a href="#state_fleetconfigs_go" style="color: inherit; text-decoration: inherit;">Fleet<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigfleetconfig">[]Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config</a></span>
     </dt>
@@ -1270,67 +1200,60 @@ Structure is documented below.
 will be only one.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Set of labels to group by.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the Deployment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ScalingConfig
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_scalingconfigs_go">
 <a href="#state_scalingconfigs_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigscalingconfig">[]Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Optional. This contains the autoscaling settings.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1339,40 +1262,37 @@ Structure is documented below.
             title="Optional">
         <span id="state_configid_nodejs">
 <a href="#state_configid_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment config.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_deploymentid_nodejs">
 <a href="#state_deploymentid_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the game server config.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_fleetconfigs_nodejs">
 <a href="#state_fleetconfigs_nodejs" style="color: inherit; text-decoration: inherit;">fleet<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigfleetconfig">Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config[]</a></span>
     </dt>
@@ -1380,67 +1300,60 @@ Structure is documented below.
 will be only one.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Set of labels to group by.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the Deployment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ScalingConfig
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_scalingconfigs_nodejs">
 <a href="#state_scalingconfigs_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigscalingconfig">Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}Optional. This contains the autoscaling settings.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1449,40 +1362,37 @@ Structure is documented below.
             title="Optional">
         <span id="state_config_id_python">
 <a href="#state_config_id_python" style="color: inherit; text-decoration: inherit;">config_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment config.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_deployment_id_python">
 <a href="#state_deployment_id_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the game server config.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_fleet_configs_python">
 <a href="#state_fleet_configs_python" style="color: inherit; text-decoration: inherit;">fleet_<wbr>configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigfleetconfig">Sequence[Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config<wbr>Args]</a></span>
     </dt>
@@ -1490,64 +1400,58 @@ Structure is documented below.
 will be only one.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Set of labels to group by.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Location of the Deployment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the ScalingConfig
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_scaling_configs_python">
 <a href="#state_scaling_configs_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>configs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigscalingconfig">Sequence[Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Optional. This contains the autoscaling settings.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1556,11 +1460,8 @@ Structure is documented below.
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="gameserverconfigfleetconfig">Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config</h4>
@@ -1571,11 +1472,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/gameservices?tab=doc#GameServerConfigFleetConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/gameservices?tab=doc#GameServerConfigFleetConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.Inputs.GameServerConfigFleetConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.Outputs.GameServerConfigFleetConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1585,9 +1485,9 @@ Structure is documented below.
             title="Required">
         <span id="fleetspec_csharp">
 <a href="#fleetspec_csharp" style="color: inherit; text-decoration: inherit;">Fleet<wbr>Spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fleet spec, which is sent to Agones to configure fleet.
 The spec can be passed as inline json but it is recommended to use a file reference
@@ -1597,21 +1497,18 @@ instead. File references can contain the json or yaml format of the fleet spec. 
 The format of the spec can be found :
 `https://agones.dev/site/docs/reference/fleet/`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ScalingConfig
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1620,9 +1517,9 @@ The format of the spec can be found :
             title="Required">
         <span id="fleetspec_go">
 <a href="#fleetspec_go" style="color: inherit; text-decoration: inherit;">Fleet<wbr>Spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fleet spec, which is sent to Agones to configure fleet.
 The spec can be passed as inline json but it is recommended to use a file reference
@@ -1632,21 +1529,18 @@ instead. File references can contain the json or yaml format of the fleet spec. 
 The format of the spec can be found :
 `https://agones.dev/site/docs/reference/fleet/`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ScalingConfig
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1655,9 +1549,9 @@ The format of the spec can be found :
             title="Required">
         <span id="fleetspec_nodejs">
 <a href="#fleetspec_nodejs" style="color: inherit; text-decoration: inherit;">fleet<wbr>Spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fleet spec, which is sent to Agones to configure fleet.
 The spec can be passed as inline json but it is recommended to use a file reference
@@ -1667,21 +1561,18 @@ instead. File references can contain the json or yaml format of the fleet spec. 
 The format of the spec can be found :
 `https://agones.dev/site/docs/reference/fleet/`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ScalingConfig
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1690,9 +1581,9 @@ The format of the spec can be found :
             title="Required">
         <span id="fleet_spec_python">
 <a href="#fleet_spec_python" style="color: inherit; text-decoration: inherit;">fleet_<wbr>spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fleet spec, which is sent to Agones to configure fleet.
 The spec can be passed as inline json but it is recommended to use a file reference
@@ -1702,24 +1593,18 @@ instead. File references can contain the json or yaml format of the fleet spec. 
 The format of the spec can be found :
 `https://agones.dev/site/docs/reference/fleet/`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the ScalingConfig
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="gameserverconfigscalingconfig">Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config</h4>
 {{% choosable language nodejs %}}
@@ -1729,11 +1614,10 @@ The format of the spec can be found :
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/gameservices?tab=doc#GameServerConfigScalingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/gameservices?tab=doc#GameServerConfigScalingConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.Inputs.GameServerConfigScalingConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.Outputs.GameServerConfigScalingConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1743,43 +1627,40 @@ The format of the spec can be found :
             title="Required">
         <span id="fleetautoscalerspec_csharp">
 <a href="#fleetautoscalerspec_csharp" style="color: inherit; text-decoration: inherit;">Fleet<wbr>Autoscaler<wbr>Spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fleet autoscaler spec, which is sent to Agones.
 Example spec can be found :
 https://agones.dev/site/docs/reference/fleetautoscaler/
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ScalingConfig
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schedules_csharp">
 <a href="#schedules_csharp" style="color: inherit; text-decoration: inherit;">Schedules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigscalingconfigschedule">List&lt;Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Schedule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The schedules to which this scaling config applies.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="selectors_csharp">
 <a href="#selectors_csharp" style="color: inherit; text-decoration: inherit;">Selectors</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigscalingconfigselector">List&lt;Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Selector<wbr>Args&gt;</a></span>
     </dt>
@@ -1788,10 +1669,8 @@ applies. A cluster is subject to this scaling config if its labels match
 any of the selector entries.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1800,43 +1679,40 @@ Structure is documented below.
             title="Required">
         <span id="fleetautoscalerspec_go">
 <a href="#fleetautoscalerspec_go" style="color: inherit; text-decoration: inherit;">Fleet<wbr>Autoscaler<wbr>Spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fleet autoscaler spec, which is sent to Agones.
 Example spec can be found :
 https://agones.dev/site/docs/reference/fleetautoscaler/
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ScalingConfig
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schedules_go">
 <a href="#schedules_go" style="color: inherit; text-decoration: inherit;">Schedules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigscalingconfigschedule">[]Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}The schedules to which this scaling config applies.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="selectors_go">
 <a href="#selectors_go" style="color: inherit; text-decoration: inherit;">Selectors</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigscalingconfigselector">[]Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Selector</a></span>
     </dt>
@@ -1845,10 +1721,8 @@ applies. A cluster is subject to this scaling config if its labels match
 any of the selector entries.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1857,43 +1731,40 @@ Structure is documented below.
             title="Required">
         <span id="fleetautoscalerspec_nodejs">
 <a href="#fleetautoscalerspec_nodejs" style="color: inherit; text-decoration: inherit;">fleet<wbr>Autoscaler<wbr>Spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fleet autoscaler spec, which is sent to Agones.
 Example spec can be found :
 https://agones.dev/site/docs/reference/fleetautoscaler/
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ScalingConfig
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schedules_nodejs">
 <a href="#schedules_nodejs" style="color: inherit; text-decoration: inherit;">schedules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigscalingconfigschedule">Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Schedule[]</a></span>
     </dt>
     <dd>{{% md %}}The schedules to which this scaling config applies.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="selectors_nodejs">
 <a href="#selectors_nodejs" style="color: inherit; text-decoration: inherit;">selectors</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigscalingconfigselector">Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Selector[]</a></span>
     </dt>
@@ -1902,10 +1773,8 @@ applies. A cluster is subject to this scaling config if its labels match
 any of the selector entries.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1914,43 +1783,40 @@ Structure is documented below.
             title="Required">
         <span id="fleet_autoscaler_spec_python">
 <a href="#fleet_autoscaler_spec_python" style="color: inherit; text-decoration: inherit;">fleet_<wbr>autoscaler_<wbr>spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fleet autoscaler spec, which is sent to Agones.
 Example spec can be found :
 https://agones.dev/site/docs/reference/fleetautoscaler/
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the ScalingConfig
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="schedules_python">
 <a href="#schedules_python" style="color: inherit; text-decoration: inherit;">schedules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigscalingconfigschedule">Sequence[Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Schedule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The schedules to which this scaling config applies.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="selectors_python">
 <a href="#selectors_python" style="color: inherit; text-decoration: inherit;">selectors</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gameserverconfigscalingconfigselector">Sequence[Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Selector<wbr>Args]</a></span>
     </dt>
@@ -1959,13 +1825,8 @@ applies. A cluster is subject to this scaling config if its labels match
 any of the selector entries.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="gameserverconfigscalingconfigschedule">Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Schedule</h4>
 {{% choosable language nodejs %}}
@@ -1975,11 +1836,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/gameservices?tab=doc#GameServerConfigScalingConfigScheduleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/gameservices?tab=doc#GameServerConfigScalingConfigScheduleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.Inputs.GameServerConfigScalingConfigScheduleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.Outputs.GameServerConfigScalingConfigSchedule.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1989,55 +1849,50 @@ Structure is documented below.
             title="Optional">
         <span id="cronjobduration_csharp">
 <a href="#cronjobduration_csharp" style="color: inherit; text-decoration: inherit;">Cron<wbr>Job<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The duration for the cron job event. The duration of the event is effective
 after the cron job's start time.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cronspec_csharp">
 <a href="#cronspec_csharp" style="color: inherit; text-decoration: inherit;">Cron<wbr>Spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cron definition of the scheduled event. See
 https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as
 defined by the realm.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="endtime_csharp">
 <a href="#endtime_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end time of the event.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start time of the event.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2046,55 +1901,50 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
             title="Optional">
         <span id="cronjobduration_go">
 <a href="#cronjobduration_go" style="color: inherit; text-decoration: inherit;">Cron<wbr>Job<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The duration for the cron job event. The duration of the event is effective
 after the cron job's start time.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cronspec_go">
 <a href="#cronspec_go" style="color: inherit; text-decoration: inherit;">Cron<wbr>Spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cron definition of the scheduled event. See
 https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as
 defined by the realm.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="endtime_go">
 <a href="#endtime_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end time of the event.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start time of the event.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2103,55 +1953,50 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
             title="Optional">
         <span id="cronjobduration_nodejs">
 <a href="#cronjobduration_nodejs" style="color: inherit; text-decoration: inherit;">cron<wbr>Job<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The duration for the cron job event. The duration of the event is effective
 after the cron job's start time.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cronspec_nodejs">
 <a href="#cronspec_nodejs" style="color: inherit; text-decoration: inherit;">cron<wbr>Spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cron definition of the scheduled event. See
 https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as
 defined by the realm.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="endtime_nodejs">
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end time of the event.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start time of the event.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2160,58 +2005,50 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
             title="Optional">
         <span id="cron_job_duration_python">
 <a href="#cron_job_duration_python" style="color: inherit; text-decoration: inherit;">cron_<wbr>job_<wbr>duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The duration for the cron job event. The duration of the event is effective
 after the cron job's start time.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cron_spec_python">
 <a href="#cron_spec_python" style="color: inherit; text-decoration: inherit;">cron_<wbr>spec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The cron definition of the scheduled event. See
 https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as
 defined by the realm.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="end_time_python">
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The end time of the event.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The start time of the event.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="gameserverconfigscalingconfigselector">Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Selector</h4>
 {{% choosable language nodejs %}}
@@ -2221,11 +2058,10 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/gameservices?tab=doc#GameServerConfigScalingConfigSelectorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/gameservices?tab=doc#GameServerConfigScalingConfigSelectorOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.Inputs.GameServerConfigScalingConfigSelectorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.Outputs.GameServerConfigScalingConfigSelector.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2235,16 +2071,14 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of labels to group by.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2253,16 +2087,14 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Set of labels to group by.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2271,16 +2103,14 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Set of labels to group by.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2289,24 +2119,14 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Set of labels to group by.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 ## Import
 
 
