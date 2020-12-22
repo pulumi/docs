@@ -306,6 +306,12 @@
       "package_name": "pulumi_venafi",
       "pulumi_provider_name": "venafi",
       "terraform_provider_name": "venafi"
+    },
+    {
+      "name": "Pulumi Splunk",
+      "package_name": "pulumi_splunk",
+      "pulumi_provider_name": "splunk",
+      "terraform_provider_name": "splunk"
     }
   ]
 }

@@ -124,6 +124,7 @@ REPOS=(
     "rancher2,pulumi-rancher2,sdk/nodejs"
     "random,pulumi-random,sdk/nodejs"
     "signalfx,pulumi-signalfx,sdk/nodejs"
+    "splunk,pulumi-splunk,sdk/nodejs"
     "spotinst,pulumi-spotinst,sdk/nodejs"
     "terraform,pulumi-terraform,sdk/nodejs"
     "tls,pulumi-tls,sdk/nodejs"
