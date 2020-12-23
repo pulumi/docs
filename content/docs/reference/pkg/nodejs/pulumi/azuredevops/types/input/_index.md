@@ -3,7 +3,7 @@ title: "Module types/input"
 title_tag: "Module types/input | Package @pulumi/azuredevops | Node.js SDK"
 linktitle: "input"
 meta_desc: "Explore members of the input module in the @pulumi/azuredevops package."
-git_sha: "f8413512df804b703ebdd0da23b385c99bbe4500"
+git_sha: "5a2704baa4eadd2446006775047639ffb3cd5575"
 block_external_search_index: true
 ---
 
@@ -56,17 +56,50 @@ block_external_search_index: true
 
 
 
+<h3>APIs</h3>
+<ul class="api">
+    <li><a href="#BranchPolicyAutoReviewersSettings"><span class="symbol api"></span>BranchPolicyAutoReviewersSettings</a></li>
+    <li><a href="#BranchPolicyAutoReviewersSettingsScope"><span class="symbol api"></span>BranchPolicyAutoReviewersSettingsScope</a></li>
+    <li><a href="#BranchPolicyBuildValidationSettings"><span class="symbol api"></span>BranchPolicyBuildValidationSettings</a></li>
+    <li><a href="#BranchPolicyBuildValidationSettingsScope"><span class="symbol api"></span>BranchPolicyBuildValidationSettingsScope</a></li>
+    <li><a href="#BranchPolicyCommentResolutionSettings"><span class="symbol api"></span>BranchPolicyCommentResolutionSettings</a></li>
+    <li><a href="#BranchPolicyCommentResolutionSettingsScope"><span class="symbol api"></span>BranchPolicyCommentResolutionSettingsScope</a></li>
+    <li><a href="#BranchPolicyMinReviewersSettings"><span class="symbol api"></span>BranchPolicyMinReviewersSettings</a></li>
+    <li><a href="#BranchPolicyMinReviewersSettingsScope"><span class="symbol api"></span>BranchPolicyMinReviewersSettingsScope</a></li>
+    <li><a href="#BranchPolicyWorkItemLinkingSettings"><span class="symbol api"></span>BranchPolicyWorkItemLinkingSettings</a></li>
+    <li><a href="#BranchPolicyWorkItemLinkingSettingsScope"><span class="symbol api"></span>BranchPolicyWorkItemLinkingSettingsScope</a></li>
+    <li><a href="#BuildDefinitionCiTrigger"><span class="symbol api"></span>BuildDefinitionCiTrigger</a></li>
+    <li><a href="#BuildDefinitionCiTriggerOverride"><span class="symbol api"></span>BuildDefinitionCiTriggerOverride</a></li>
+    <li><a href="#BuildDefinitionCiTriggerOverrideBranchFilter"><span class="symbol api"></span>BuildDefinitionCiTriggerOverrideBranchFilter</a></li>
+    <li><a href="#BuildDefinitionCiTriggerOverridePathFilter"><span class="symbol api"></span>BuildDefinitionCiTriggerOverridePathFilter</a></li>
+    <li><a href="#BuildDefinitionPullRequestTrigger"><span class="symbol api"></span>BuildDefinitionPullRequestTrigger</a></li>
+    <li><a href="#BuildDefinitionPullRequestTriggerForks"><span class="symbol api"></span>BuildDefinitionPullRequestTriggerForks</a></li>
+    <li><a href="#BuildDefinitionPullRequestTriggerOverride"><span class="symbol api"></span>BuildDefinitionPullRequestTriggerOverride</a></li>
+    <li><a href="#BuildDefinitionPullRequestTriggerOverrideBranchFilter"><span class="symbol api"></span>BuildDefinitionPullRequestTriggerOverrideBranchFilter</a></li>
+    <li><a href="#BuildDefinitionPullRequestTriggerOverridePathFilter"><span class="symbol api"></span>BuildDefinitionPullRequestTriggerOverridePathFilter</a></li>
+    <li><a href="#BuildDefinitionRepository"><span class="symbol api"></span>BuildDefinitionRepository</a></li>
+    <li><a href="#BuildDefinitionVariable"><span class="symbol api"></span>BuildDefinitionVariable</a></li>
+    <li><a href="#GitInitialization"><span class="symbol api"></span>GitInitialization</a></li>
+    <li><a href="#ServiceEndpointAzureRMCredentials"><span class="symbol api"></span>ServiceEndpointAzureRMCredentials</a></li>
+    <li><a href="#ServiceEndpointGitHubAuthOauth"><span class="symbol api"></span>ServiceEndpointGitHubAuthOauth</a></li>
+    <li><a href="#ServiceEndpointGitHubAuthPersonal"><span class="symbol api"></span>ServiceEndpointGitHubAuthPersonal</a></li>
+    <li><a href="#ServiceEndpointKubernetesAzureSubscription"><span class="symbol api"></span>ServiceEndpointKubernetesAzureSubscription</a></li>
+    <li><a href="#ServiceEndpointKubernetesKubeconfig"><span class="symbol api"></span>ServiceEndpointKubernetesKubeconfig</a></li>
+    <li><a href="#ServiceEndpointKubernetesServiceAccount"><span class="symbol api"></span>ServiceEndpointKubernetesServiceAccount</a></li>
+    <li><a href="#VariableGroupKeyVault"><span class="symbol api"></span>VariableGroupKeyVault</a></li>
+    <li><a href="#VariableGroupVariable"><span class="symbol api"></span>VariableGroupVariable</a></li>
+</ul>
 
 <h2 id="Build" data-link-title="Build">namespace <strong>Build</strong></h2>
 <h3 class="pdoc-module-header" id="BuildDefinitionCiTrigger" data-link-title="BuildDefinitionCiTrigger">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L476">
         interface <strong>BuildDefinitionCiTrigger</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BuildDefinitionCiTrigger</span></code></pre>
 <h4 class="pdoc-member-header" id="BuildDefinitionCiTrigger-override">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L16">property <b>override</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L480">property <b>override</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>override?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#BuildDefinitionCiTriggerOverride'>BuildDefinitionCiTriggerOverride</a>&gt;;</code></pre>
@@ -74,7 +107,7 @@ block_external_search_index: true
 Override the azure-pipeline file and use a this configuration for all builds.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionCiTrigger-useYaml">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L20">property <b>useYaml</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L484">property <b>useYaml</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useYaml?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -82,14 +115,14 @@ Override the azure-pipeline file and use a this configuration for all builds.
 Use the azure-pipeline file for the build configuration. Defaults to `false`.
 
 <h3 class="pdoc-module-header" id="BuildDefinitionCiTriggerOverride" data-link-title="BuildDefinitionCiTriggerOverride">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L487">
         interface <strong>BuildDefinitionCiTriggerOverride</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BuildDefinitionCiTriggerOverride</span></code></pre>
 <h4 class="pdoc-member-header" id="BuildDefinitionCiTriggerOverride-batch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L27">property <b>batch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L491">property <b>batch</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>batch?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -97,7 +130,7 @@ Use the azure-pipeline file for the build configuration. Defaults to `false`.
 If you set batch to true, when a pipeline is running, the system waits until the run is completed, then starts another run with all changes that have not yet been built. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionCiTriggerOverride-branchFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L31">property <b>branchFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L495">property <b>branchFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>branchFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#BuildDefinitionCiTriggerOverrideBranchFilter'>BuildDefinitionCiTriggerOverrideBranchFilter</a>&gt;[]&gt;;</code></pre>
@@ -105,7 +138,7 @@ If you set batch to true, when a pipeline is running, the system waits until the
 The branches to include and exclude from the trigger.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionCiTriggerOverride-maxConcurrentBuildsPerBranch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L35">property <b>maxConcurrentBuildsPerBranch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L499">property <b>maxConcurrentBuildsPerBranch</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxConcurrentBuildsPerBranch?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -113,7 +146,7 @@ The branches to include and exclude from the trigger.
 The number of max builds per branch. Defaults to `1`.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionCiTriggerOverride-pathFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L39">property <b>pathFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L503">property <b>pathFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pathFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#BuildDefinitionCiTriggerOverridePathFilter'>BuildDefinitionCiTriggerOverridePathFilter</a>&gt;[]&gt;;</code></pre>
@@ -121,7 +154,7 @@ The number of max builds per branch. Defaults to `1`.
 Specify file paths to include or exclude. Note that the wildcard syntax is different between branches/tags and file paths.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionCiTriggerOverride-pollingInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L43">property <b>pollingInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L507">property <b>pollingInterval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pollingInterval?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -129,7 +162,7 @@ Specify file paths to include or exclude. Note that the wildcard syntax is diffe
 How often the external repository is polled. Defaults to `0`.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionCiTriggerOverride-pollingJobId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L47">property <b>pollingJobId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L511">property <b>pollingJobId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pollingJobId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -137,14 +170,14 @@ How often the external repository is polled. Defaults to `0`.
 This is the ID of the polling job that polls the external repository. Once the build definition is saved/updated, this value is set.
 
 <h3 class="pdoc-module-header" id="BuildDefinitionCiTriggerOverrideBranchFilter" data-link-title="BuildDefinitionCiTriggerOverrideBranchFilter">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L50">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L514">
         interface <strong>BuildDefinitionCiTriggerOverrideBranchFilter</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BuildDefinitionCiTriggerOverrideBranchFilter</span></code></pre>
 <h4 class="pdoc-member-header" id="BuildDefinitionCiTriggerOverrideBranchFilter-excludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L54">property <b>excludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L518">property <b>excludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>excludes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -152,7 +185,7 @@ This is the ID of the polling job that polls the external repository. Once the b
 List of branch patterns to exclude.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionCiTriggerOverrideBranchFilter-includes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L58">property <b>includes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L522">property <b>includes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -160,14 +193,14 @@ List of branch patterns to exclude.
 List of branch patterns to include.
 
 <h3 class="pdoc-module-header" id="BuildDefinitionCiTriggerOverridePathFilter" data-link-title="BuildDefinitionCiTriggerOverridePathFilter">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L61">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L525">
         interface <strong>BuildDefinitionCiTriggerOverridePathFilter</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BuildDefinitionCiTriggerOverridePathFilter</span></code></pre>
 <h4 class="pdoc-member-header" id="BuildDefinitionCiTriggerOverridePathFilter-excludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L65">property <b>excludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L529">property <b>excludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>excludes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -175,7 +208,7 @@ List of branch patterns to include.
 List of branch patterns to exclude.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionCiTriggerOverridePathFilter-includes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L69">property <b>includes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L533">property <b>includes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -183,19 +216,19 @@ List of branch patterns to exclude.
 List of branch patterns to include.
 
 <h3 class="pdoc-module-header" id="BuildDefinitionPullRequestTrigger" data-link-title="BuildDefinitionPullRequestTrigger">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L72">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L536">
         interface <strong>BuildDefinitionPullRequestTrigger</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BuildDefinitionPullRequestTrigger</span></code></pre>
 <h4 class="pdoc-member-header" id="BuildDefinitionPullRequestTrigger-commentRequired">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L73">property <b>commentRequired</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L537">property <b>commentRequired</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>commentRequired?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BuildDefinitionPullRequestTrigger-forks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L77">property <b>forks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L541">property <b>forks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#BuildDefinitionPullRequestTriggerForks'>BuildDefinitionPullRequestTriggerForks</a>&gt;;</code></pre>
@@ -203,20 +236,20 @@ List of branch patterns to include.
 Set permissions for Forked repositories.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionPullRequestTrigger-initialBranch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L78">property <b>initialBranch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L542">property <b>initialBranch</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>initialBranch?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BuildDefinitionPullRequestTrigger-override">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L82">property <b>override</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L546">property <b>override</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>override?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#BuildDefinitionPullRequestTriggerOverride'>BuildDefinitionPullRequestTriggerOverride</a>&gt;;</code></pre>
 
-Override the azure-pipeline file and use a this configuration for all builds.
+Override the azure-pipeline file and use this configuration for all builds.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionPullRequestTrigger-useYaml">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L86">property <b>useYaml</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L550">property <b>useYaml</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useYaml?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -224,14 +257,14 @@ Override the azure-pipeline file and use a this configuration for all builds.
 Use the azure-pipeline file for the build configuration. Defaults to `false`.
 
 <h3 class="pdoc-module-header" id="BuildDefinitionPullRequestTriggerForks" data-link-title="BuildDefinitionPullRequestTriggerForks">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L89">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L553">
         interface <strong>BuildDefinitionPullRequestTriggerForks</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BuildDefinitionPullRequestTriggerForks</span></code></pre>
 <h4 class="pdoc-member-header" id="BuildDefinitionPullRequestTriggerForks-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L93">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L557">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -239,7 +272,7 @@ Use the azure-pipeline file for the build configuration. Defaults to `false`.
 Build pull requests form forms of this repository.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionPullRequestTriggerForks-shareSecrets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L97">property <b>shareSecrets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L561">property <b>shareSecrets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shareSecrets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -247,14 +280,14 @@ Build pull requests form forms of this repository.
 Make secrets available to builds of forks.
 
 <h3 class="pdoc-module-header" id="BuildDefinitionPullRequestTriggerOverride" data-link-title="BuildDefinitionPullRequestTriggerOverride">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L100">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L564">
         interface <strong>BuildDefinitionPullRequestTriggerOverride</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BuildDefinitionPullRequestTriggerOverride</span></code></pre>
 <h4 class="pdoc-member-header" id="BuildDefinitionPullRequestTriggerOverride-autoCancel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L104">property <b>autoCancel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L568">property <b>autoCancel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoCancel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -262,7 +295,7 @@ Make secrets available to builds of forks.
 . Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionPullRequestTriggerOverride-branchFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L108">property <b>branchFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L572">property <b>branchFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>branchFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#BuildDefinitionPullRequestTriggerOverrideBranchFilter'>BuildDefinitionPullRequestTriggerOverrideBranchFilter</a>&gt;[]&gt;;</code></pre>
@@ -270,7 +303,7 @@ Make secrets available to builds of forks.
 The branches to include and exclude from the trigger.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionPullRequestTriggerOverride-pathFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L112">property <b>pathFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L576">property <b>pathFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pathFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#BuildDefinitionPullRequestTriggerOverridePathFilter'>BuildDefinitionPullRequestTriggerOverridePathFilter</a>&gt;[]&gt;;</code></pre>
@@ -278,14 +311,14 @@ The branches to include and exclude from the trigger.
 Specify file paths to include or exclude. Note that the wildcard syntax is different between branches/tags and file paths.
 
 <h3 class="pdoc-module-header" id="BuildDefinitionPullRequestTriggerOverrideBranchFilter" data-link-title="BuildDefinitionPullRequestTriggerOverrideBranchFilter">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L115">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L579">
         interface <strong>BuildDefinitionPullRequestTriggerOverrideBranchFilter</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BuildDefinitionPullRequestTriggerOverrideBranchFilter</span></code></pre>
 <h4 class="pdoc-member-header" id="BuildDefinitionPullRequestTriggerOverrideBranchFilter-excludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L119">property <b>excludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L583">property <b>excludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>excludes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -293,7 +326,7 @@ Specify file paths to include or exclude. Note that the wildcard syntax is diffe
 List of branch patterns to exclude.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionPullRequestTriggerOverrideBranchFilter-includes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L123">property <b>includes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L587">property <b>includes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -301,14 +334,14 @@ List of branch patterns to exclude.
 List of branch patterns to include.
 
 <h3 class="pdoc-module-header" id="BuildDefinitionPullRequestTriggerOverridePathFilter" data-link-title="BuildDefinitionPullRequestTriggerOverridePathFilter">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L126">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L590">
         interface <strong>BuildDefinitionPullRequestTriggerOverridePathFilter</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BuildDefinitionPullRequestTriggerOverridePathFilter</span></code></pre>
 <h4 class="pdoc-member-header" id="BuildDefinitionPullRequestTriggerOverridePathFilter-excludes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L130">property <b>excludes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L594">property <b>excludes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>excludes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -316,7 +349,7 @@ List of branch patterns to include.
 List of branch patterns to exclude.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionPullRequestTriggerOverridePathFilter-includes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L134">property <b>includes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L598">property <b>includes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -324,22 +357,30 @@ List of branch patterns to exclude.
 List of branch patterns to include.
 
 <h3 class="pdoc-module-header" id="BuildDefinitionRepository" data-link-title="BuildDefinitionRepository">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L137">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L601">
         interface <strong>BuildDefinitionRepository</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BuildDefinitionRepository</span></code></pre>
 <h4 class="pdoc-member-header" id="BuildDefinitionRepository-branchName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L141">property <b>branchName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L605">property <b>branchName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>branchName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The branch name for which builds are triggered. Defaults to `master`.
 
+<h4 class="pdoc-member-header" id="BuildDefinitionRepository-githubEnterpriseUrl">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L609">property <b>githubEnterpriseUrl</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>githubEnterpriseUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The Github Enterprise URL. Used if `repoType` is `GithubEnterprise`.
+
 <h4 class="pdoc-member-header" id="BuildDefinitionRepository-repoId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L145">property <b>repoId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L613">property <b>repoId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repoId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -347,23 +388,31 @@ The branch name for which builds are triggered. Defaults to `master`.
 The id of the repository. For `TfsGit` repos, this is simply the ID of the repository. For `Github` repos, this will take the form of `<GitHub Org>/<Repo Name>`. For `Bitbucket` repos, this will take the form of `<Workspace ID>/<Repo Name>`.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionRepository-repoType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L149">property <b>repoType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L617">property <b>repoType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repoType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The repository type. Valid values: `GitHub` or `TfsGit` or `Bitbucket`. Defaults to `Github`.
+The repository type. Valid values: `GitHub` or `TfsGit` or `Bitbucket` or `GitHub Enterprise`. Defaults to `Github`. If `repoType` is `GitHubEnterprise`, must use existing project and GitHub Enterprise service connection.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionRepository-reportBuildStatus">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L621">property <b>reportBuildStatus</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>reportBuildStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Report build status. Default is true.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionRepository-serviceConnectionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L153">property <b>serviceConnectionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L625">property <b>serviceConnectionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceConnectionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The service connection ID. Used if the `repoType` is `GitHub`.
+The service connection ID. Used if the `repoType` is `GitHub` or `GitHubEnterprise`.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionRepository-ymlPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L157">property <b>ymlPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L629">property <b>ymlPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ymlPath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -371,14 +420,14 @@ The service connection ID. Used if the `repoType` is `GitHub`.
 The path of the Yaml file describing the build definition.
 
 <h3 class="pdoc-module-header" id="BuildDefinitionVariable" data-link-title="BuildDefinitionVariable">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L160">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L632">
         interface <strong>BuildDefinitionVariable</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BuildDefinitionVariable</span></code></pre>
 <h4 class="pdoc-member-header" id="BuildDefinitionVariable-allowOverride">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L164">property <b>allowOverride</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L636">property <b>allowOverride</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowOverride?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -386,7 +435,7 @@ The path of the Yaml file describing the build definition.
 True if the variable can be overridden. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionVariable-isSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L168">property <b>isSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L640">property <b>isSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -394,7 +443,7 @@ True if the variable can be overridden. Defaults to `true`.
 True if the variable is a secret. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionVariable-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L172">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L644">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -402,7 +451,7 @@ True if the variable is a secret. Defaults to `false`.
 The name of the variable.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionVariable-secretValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L176">property <b>secretValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L648">property <b>secretValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretValue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -410,7 +459,7 @@ The name of the variable.
 The secret value of the variable. Used when `isSecret` set to `true`.
 
 <h4 class="pdoc-member-header" id="BuildDefinitionVariable-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L180">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L652">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -419,14 +468,14 @@ The value of the variable.
 
 <h2 id="Pipeline" data-link-title="Pipeline">namespace <strong>Pipeline</strong></h2>
 <h3 class="pdoc-module-header" id="VariableGroupKeyVault" data-link-title="VariableGroupKeyVault">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L191">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L663">
         interface <strong>VariableGroupKeyVault</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>VariableGroupKeyVault</span></code></pre>
 <h4 class="pdoc-member-header" id="VariableGroupKeyVault-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L195">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L667">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -434,34 +483,34 @@ The value of the variable.
 The name of the Variable Group.
 
 <h4 class="pdoc-member-header" id="VariableGroupKeyVault-serviceEndpointId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L196">property <b>serviceEndpointId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L668">property <b>serviceEndpointId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceEndpointId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="VariableGroupVariable" data-link-title="VariableGroupVariable">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L199">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L671">
         interface <strong>VariableGroupVariable</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>VariableGroupVariable</span></code></pre>
 <h4 class="pdoc-member-header" id="VariableGroupVariable-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L200">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L672">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="VariableGroupVariable-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L201">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L673">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="VariableGroupVariable-expires">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L202">property <b>expires</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L674">property <b>expires</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expires?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="VariableGroupVariable-isSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L206">property <b>isSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L678">property <b>isSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -469,7 +518,7 @@ The name of the Variable Group.
 A boolean flag describing if the variable value is sensitive. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="VariableGroupVariable-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L210">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L682">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -477,7 +526,7 @@ A boolean flag describing if the variable value is sensitive. Defaults to `false
 The key value used for the variable. Must be unique within the Variable Group.
 
 <h4 class="pdoc-member-header" id="VariableGroupVariable-secretValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L214">property <b>secretValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L686">property <b>secretValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretValue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -485,7 +534,7 @@ The key value used for the variable. Must be unique within the Variable Group.
 The secret value of the variable. If omitted, it will default to empty string. Used when `isSecret` set to `true`.
 
 <h4 class="pdoc-member-header" id="VariableGroupVariable-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L218">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L690">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -494,14 +543,14 @@ The value of the variable. If omitted, it will default to empty string.
 
 <h2 id="Policy" data-link-title="Policy">namespace <strong>Policy</strong></h2>
 <h3 class="pdoc-module-header" id="BranchPolicyBuildValidationSettings" data-link-title="BranchPolicyBuildValidationSettings">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L223">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L695">
         interface <strong>BranchPolicyBuildValidationSettings</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BranchPolicyBuildValidationSettings</span></code></pre>
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidationSettings-buildDefinitionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L227">property <b>buildDefinitionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L699">property <b>buildDefinitionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>buildDefinitionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -509,15 +558,23 @@ The value of the variable. If omitted, it will default to empty string.
 The ID of the build to monitor for the policy.
 
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidationSettings-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L231">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L703">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The display name for the policy.
 
+<h4 class="pdoc-member-header" id="BranchPolicyBuildValidationSettings-filenamePatterns">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L707">property <b>filenamePatterns</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>filenamePatterns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+
+If a path filter is set, the policy wil only apply when files which match the filter are changes. Not setting this field means that the policy will always apply. You can specify absolute paths and wildcards. Example: `["/WebApp/Models/Data.cs", "/WebApp/*", "*.cs"]`. Paths prefixed with "!" are excluded. Example: `["/WebApp/*", "!/WebApp/Tests/*"]`. Order is significant.
+
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidationSettings-manualQueueOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L235">property <b>manualQueueOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L711">property <b>manualQueueOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>manualQueueOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -525,7 +582,7 @@ The display name for the policy.
 If set to true, the build will need to be manually queued. Defaults to `false`
 
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidationSettings-queueOnSourceUpdateOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L239">property <b>queueOnSourceUpdateOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L715">property <b>queueOnSourceUpdateOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>queueOnSourceUpdateOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -533,7 +590,7 @@ If set to true, the build will need to be manually queued. Defaults to `false`
 True if the build should queue on source updates only. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidationSettings-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L243">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L719">property <b>scopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#BranchPolicyBuildValidationSettingsScope'>BranchPolicyBuildValidationSettingsScope</a>&gt;[]&gt;;</code></pre>
@@ -541,7 +598,7 @@ True if the build should queue on source updates only. Defaults to `true`.
 Controls which repositories and branches the policy will be enabled for. This block must be defined at least once.
 
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidationSettings-validDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L247">property <b>validDuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L723">property <b>validDuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>validDuration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -549,14 +606,14 @@ Controls which repositories and branches the policy will be enabled for. This bl
 The number of minutes for which the build is valid. If `0`, the build will not expire. Defaults to `720` (12 hours).
 
 <h3 class="pdoc-module-header" id="BranchPolicyBuildValidationSettingsScope" data-link-title="BranchPolicyBuildValidationSettingsScope">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L250">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L726">
         interface <strong>BranchPolicyBuildValidationSettingsScope</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BranchPolicyBuildValidationSettingsScope</span></code></pre>
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidationSettingsScope-matchType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L254">property <b>matchType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L730">property <b>matchType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>matchType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -564,7 +621,7 @@ The number of minutes for which the build is valid. If `0`, the build will not e
 The match type to use when applying the policy. Supported values are `Exact` (default) or `Prefix`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidationSettingsScope-repositoryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L258">property <b>repositoryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L734">property <b>repositoryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repositoryId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -572,7 +629,7 @@ The match type to use when applying the policy. Supported values are `Exact` (de
 The repository ID. Needed only if the scope of the policy will be limited to a single repository.
 
 <h4 class="pdoc-member-header" id="BranchPolicyBuildValidationSettingsScope-repositoryRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L262">property <b>repositoryRef</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L738">property <b>repositoryRef</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repositoryRef?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -580,14 +637,14 @@ The repository ID. Needed only if the scope of the policy will be limited to a s
 The ref pattern to use for the match. If `matchType` is `Exact`, this should be a qualified ref such as `refs/heads/master`. If `matchType` is `Prefix`, this should be a ref path such as `refs/heads/releases`.
 
 <h3 class="pdoc-module-header" id="BranchPolicyMinReviewersSettings" data-link-title="BranchPolicyMinReviewersSettings">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L265">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L741">
         interface <strong>BranchPolicyMinReviewersSettings</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BranchPolicyMinReviewersSettings</span></code></pre>
 <h4 class="pdoc-member-header" id="BranchPolicyMinReviewersSettings-reviewerCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L269">property <b>reviewerCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L745">property <b>reviewerCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reviewerCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -595,7 +652,7 @@ The ref pattern to use for the match. If `matchType` is `Exact`, this should be 
 The number of reviewrs needed to approve.
 
 <h4 class="pdoc-member-header" id="BranchPolicyMinReviewersSettings-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L273">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L749">property <b>scopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#BranchPolicyMinReviewersSettingsScope'>BranchPolicyMinReviewersSettingsScope</a>&gt;[]&gt;;</code></pre>
@@ -603,7 +660,7 @@ The number of reviewrs needed to approve.
 Controls which repositories and branches the policy will be enabled for. This block must be defined at least once.
 
 <h4 class="pdoc-member-header" id="BranchPolicyMinReviewersSettings-submitterCanVote">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L277">property <b>submitterCanVote</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L753">property <b>submitterCanVote</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>submitterCanVote?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -611,14 +668,14 @@ Controls which repositories and branches the policy will be enabled for. This bl
 Controls whether or not the submitter's vote counts. Defaults to `false`.
 
 <h3 class="pdoc-module-header" id="BranchPolicyMinReviewersSettingsScope" data-link-title="BranchPolicyMinReviewersSettingsScope">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L280">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L756">
         interface <strong>BranchPolicyMinReviewersSettingsScope</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BranchPolicyMinReviewersSettingsScope</span></code></pre>
 <h4 class="pdoc-member-header" id="BranchPolicyMinReviewersSettingsScope-matchType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L284">property <b>matchType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L760">property <b>matchType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>matchType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -626,7 +683,7 @@ Controls whether or not the submitter's vote counts. Defaults to `false`.
 The match type to use when applying the policy. Supported values are `Exact` (default) or `Prefix`.
 
 <h4 class="pdoc-member-header" id="BranchPolicyMinReviewersSettingsScope-repositoryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L288">property <b>repositoryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L764">property <b>repositoryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repositoryId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -634,7 +691,7 @@ The match type to use when applying the policy. Supported values are `Exact` (de
 The repository ID. Needed only if the scope of the policy will be limited to a single repository.
 
 <h4 class="pdoc-member-header" id="BranchPolicyMinReviewersSettingsScope-repositoryRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L292">property <b>repositoryRef</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L768">property <b>repositoryRef</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repositoryRef?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -643,30 +700,30 @@ The ref pattern to use for the match. If `matchType` is `Exact`, this should be 
 
 <h2 id="Repository" data-link-title="Repository">namespace <strong>Repository</strong></h2>
 <h3 class="pdoc-module-header" id="GitInitialization" data-link-title="GitInitialization">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L297">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L773">
         interface <strong>GitInitialization</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GitInitialization</span></code></pre>
 <h4 class="pdoc-member-header" id="GitInitialization-initType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L301">property <b>initType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L777">property <b>initType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>initType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The type of repository to create. Valid values: `Uninitialized`, `Clean`, or `Import`. Defaults to `Uninitialized`.
+The type of repository to create. Valid values: `Uninitialized`, `Clean` or `Import`. Defaults to `Uninitialized`.
 
 <h4 class="pdoc-member-header" id="GitInitialization-sourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L305">property <b>sourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L781">property <b>sourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Type type of the source repository. Used if the `initType` is `Import`.
+Type of the source repository. Used if the `initType` is `Import`. Valid values: `Git`. Defaults to `Git`.
 
 <h4 class="pdoc-member-header" id="GitInitialization-sourceUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L309">property <b>sourceUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L785">property <b>sourceUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -675,14 +732,14 @@ The URL of the source repository. Used if the `initType` is `Import`.
 
 <h2 id="ServiceEndpoint" data-link-title="ServiceEndpoint">namespace <strong>ServiceEndpoint</strong></h2>
 <h3 class="pdoc-module-header" id="AzureRMCredentials" data-link-title="AzureRMCredentials">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L314">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L790">
         interface <strong>AzureRMCredentials</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>AzureRMCredentials</span></code></pre>
 <h4 class="pdoc-member-header" id="AzureRMCredentials-serviceprincipalid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L318">property <b>serviceprincipalid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L794">property <b>serviceprincipalid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceprincipalid: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -690,7 +747,7 @@ The URL of the source repository. Used if the `initType` is `Import`.
 The service principal application Id
 
 <h4 class="pdoc-member-header" id="AzureRMCredentials-serviceprincipalkey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L322">property <b>serviceprincipalkey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L798">property <b>serviceprincipalkey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceprincipalkey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -698,31 +755,31 @@ The service principal application Id
 The service principal secret.
 
 <h4 class="pdoc-member-header" id="AzureRMCredentials-serviceprincipalkeyHash">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L323">property <b>serviceprincipalkeyHash</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L799">property <b>serviceprincipalkeyHash</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceprincipalkeyHash?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="GitHubAuthOauth" data-link-title="GitHubAuthOauth">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L326">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L802">
         interface <strong>GitHubAuthOauth</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GitHubAuthOauth</span></code></pre>
 <h4 class="pdoc-member-header" id="GitHubAuthOauth-oauthConfigurationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L327">property <b>oauthConfigurationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L803">property <b>oauthConfigurationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>oauthConfigurationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="GitHubAuthPersonal" data-link-title="GitHubAuthPersonal">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L330">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L806">
         interface <strong>GitHubAuthPersonal</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GitHubAuthPersonal</span></code></pre>
 <h4 class="pdoc-member-header" id="GitHubAuthPersonal-personalAccessToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L334">property <b>personalAccessToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L810">property <b>personalAccessToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>personalAccessToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -730,19 +787,19 @@ The service principal secret.
 The Personal Access Token for Github.
 
 <h4 class="pdoc-member-header" id="GitHubAuthPersonal-personalAccessTokenHash">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L335">property <b>personalAccessTokenHash</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L811">property <b>personalAccessTokenHash</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>personalAccessTokenHash?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="KubernetesAzureSubscription" data-link-title="KubernetesAzureSubscription">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L338">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L814">
         interface <strong>KubernetesAzureSubscription</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>KubernetesAzureSubscription</span></code></pre>
 <h4 class="pdoc-member-header" id="KubernetesAzureSubscription-azureEnvironment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L342">property <b>azureEnvironment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L818">property <b>azureEnvironment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azureEnvironment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -750,7 +807,7 @@ The Personal Access Token for Github.
 Azure environment refers to whether the public cloud offering or domestic (government) clouds are being used. Currently, only the public cloud is supported. The value must be AzureCloud. This is also the default-value.
 
 <h4 class="pdoc-member-header" id="KubernetesAzureSubscription-clusterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L346">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L822">property <b>clusterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -758,7 +815,7 @@ Azure environment refers to whether the public cloud offering or domestic (gover
 The name of the Kubernetes cluster.
 
 <h4 class="pdoc-member-header" id="KubernetesAzureSubscription-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L350">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L826">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -766,15 +823,15 @@ The name of the Kubernetes cluster.
 The Kubernetes namespace. Default value is "default".
 
 <h4 class="pdoc-member-header" id="KubernetesAzureSubscription-resourcegroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L354">property <b>resourcegroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L830">property <b>resourcegroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourcegroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The resource group id, to which the Kubernetes cluster is deployed.
+The resource group name, to which the Kubernetes cluster is deployed.
 
 <h4 class="pdoc-member-header" id="KubernetesAzureSubscription-subscriptionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L358">property <b>subscriptionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L834">property <b>subscriptionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subscriptionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -782,7 +839,7 @@ The resource group id, to which the Kubernetes cluster is deployed.
 The id of the Azure subscription.
 
 <h4 class="pdoc-member-header" id="KubernetesAzureSubscription-subscriptionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L362">property <b>subscriptionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L838">property <b>subscriptionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subscriptionName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -790,7 +847,7 @@ The id of the Azure subscription.
 The name of the Azure subscription.
 
 <h4 class="pdoc-member-header" id="KubernetesAzureSubscription-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L366">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L842">property <b>tenantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -798,14 +855,14 @@ The name of the Azure subscription.
 The id of the tenant used by the subscription.
 
 <h3 class="pdoc-module-header" id="KubernetesKubeconfig" data-link-title="KubernetesKubeconfig">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L369">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L845">
         interface <strong>KubernetesKubeconfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>KubernetesKubeconfig</span></code></pre>
 <h4 class="pdoc-member-header" id="KubernetesKubeconfig-acceptUntrustedCerts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L373">property <b>acceptUntrustedCerts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L849">property <b>acceptUntrustedCerts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>acceptUntrustedCerts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -813,7 +870,7 @@ The id of the tenant used by the subscription.
 Set this option to allow clients to accept a self-signed certificate.
 
 <h4 class="pdoc-member-header" id="KubernetesKubeconfig-clusterContext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L377">property <b>clusterContext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L853">property <b>clusterContext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterContext?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -821,7 +878,7 @@ Set this option to allow clients to accept a self-signed certificate.
 Context within the kubeconfig file that is to be used for identifying the cluster. Default value is the current-context set in kubeconfig.
 
 <h4 class="pdoc-member-header" id="KubernetesKubeconfig-kubeConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L381">property <b>kubeConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L857">property <b>kubeConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kubeConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -829,19 +886,19 @@ Context within the kubeconfig file that is to be used for identifying the cluste
 The content of the kubeconfig in yaml notation to be used to communicate with the API-Server of Kubernetes.
 
 <h4 class="pdoc-member-header" id="KubernetesKubeconfig-kubeConfigHash">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L382">property <b>kubeConfigHash</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L858">property <b>kubeConfigHash</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kubeConfigHash?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="KubernetesServiceAccount" data-link-title="KubernetesServiceAccount">
-    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L385">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L861">
         interface <strong>KubernetesServiceAccount</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>KubernetesServiceAccount</span></code></pre>
 <h4 class="pdoc-member-header" id="KubernetesServiceAccount-caCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L389">property <b>caCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L865">property <b>caCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>caCert: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -849,12 +906,12 @@ The content of the kubeconfig in yaml notation to be used to communicate with th
 The certificate from a Kubernetes secret object.
 
 <h4 class="pdoc-member-header" id="KubernetesServiceAccount-caCertHash">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L390">property <b>caCertHash</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L866">property <b>caCertHash</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>caCertHash?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesServiceAccount-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L394">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L870">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -862,10 +919,1009 @@ The certificate from a Kubernetes secret object.
 The token from a Kubernetes secret object.
 
 <h4 class="pdoc-member-header" id="KubernetesServiceAccount-tokenHash">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/f8413512df804b703ebdd0da23b385c99bbe4500/sdk/nodejs/types/input.ts#L395">property <b>tokenHash</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L871">property <b>tokenHash</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenHash?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 
+
+<h2 id="apis">APIs</h2>
+<h3 class="pdoc-module-header" id="BranchPolicyAutoReviewersSettings" data-link-title="BranchPolicyAutoReviewersSettings">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L7">
+        interface <strong>BranchPolicyAutoReviewersSettings</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BranchPolicyAutoReviewersSettings</span></code></pre>
+<h4 class="pdoc-member-header" id="BranchPolicyAutoReviewersSettings-autoReviewerIds">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L11">property <b>autoReviewerIds</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>autoReviewerIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+
+Required reviewers ids. Supports multiples user Ids.
+
+<h4 class="pdoc-member-header" id="BranchPolicyAutoReviewersSettings-message">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L15">property <b>message</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>message?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Activity feed message, Message will appear in the activity feed of pull requests with automatically added reviewers.
+
+<h4 class="pdoc-member-header" id="BranchPolicyAutoReviewersSettings-pathFilters">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L19">property <b>pathFilters</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>pathFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+
+Filter path(s) on which the policy is applied. Supports absolute paths, wildcards and multiple paths. Example: /WebApp/Models/Data.cs, /WebApp/* or *.cs,/WebApp/Models/Data.cs;ClientApp/Models/Data.cs.
+
+<h4 class="pdoc-member-header" id="BranchPolicyAutoReviewersSettings-scopes">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L23">property <b>scopes</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>scopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#BranchPolicyAutoReviewersSettingsScope'>BranchPolicyAutoReviewersSettingsScope</a>&gt;[]&gt;;</code></pre>
+
+Controls which repositories and branches the policy will be enabled for. This block must be defined at least once.
+
+<h4 class="pdoc-member-header" id="BranchPolicyAutoReviewersSettings-submitterCanVote">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L27">property <b>submitterCanVote</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>submitterCanVote?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Controls whether or not the submitter's vote counts. Defaults to `false`.
+
+<h3 class="pdoc-module-header" id="BranchPolicyAutoReviewersSettingsScope" data-link-title="BranchPolicyAutoReviewersSettingsScope">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L30">
+        interface <strong>BranchPolicyAutoReviewersSettingsScope</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BranchPolicyAutoReviewersSettingsScope</span></code></pre>
+<h4 class="pdoc-member-header" id="BranchPolicyAutoReviewersSettingsScope-matchType">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L34">property <b>matchType</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>matchType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The match type to use when applying the policy. Supported values are `Exact` (default) or `Prefix`.
+
+<h4 class="pdoc-member-header" id="BranchPolicyAutoReviewersSettingsScope-repositoryId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L38">property <b>repositoryId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>repositoryId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The repository ID. Needed only if the scope of the policy will be limited to a single repository.
+
+<h4 class="pdoc-member-header" id="BranchPolicyAutoReviewersSettingsScope-repositoryRef">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L42">property <b>repositoryRef</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>repositoryRef?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ref pattern to use for the match. If `matchType` is `Exact`, this should be a qualified ref such as `refs/heads/master`. If `matchType` is `Prefix`, this should be a ref path such as `refs/heads/releases`.
+
+<h3 class="pdoc-module-header" id="BranchPolicyBuildValidationSettings" data-link-title="BranchPolicyBuildValidationSettings">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L45">
+        interface <strong>BranchPolicyBuildValidationSettings</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BranchPolicyBuildValidationSettings</span></code></pre>
+<h4 class="pdoc-member-header" id="BranchPolicyBuildValidationSettings-buildDefinitionId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L49">property <b>buildDefinitionId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>buildDefinitionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+
+The ID of the build to monitor for the policy.
+
+<h4 class="pdoc-member-header" id="BranchPolicyBuildValidationSettings-displayName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L53">property <b>displayName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The display name for the policy.
+
+<h4 class="pdoc-member-header" id="BranchPolicyBuildValidationSettings-filenamePatterns">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L57">property <b>filenamePatterns</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>filenamePatterns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+
+If a path filter is set, the policy wil only apply when files which match the filter are changes. Not setting this field means that the policy will always apply. You can specify absolute paths and wildcards. Example: `["/WebApp/Models/Data.cs", "/WebApp/*", "*.cs"]`. Paths prefixed with "!" are excluded. Example: `["/WebApp/*", "!/WebApp/Tests/*"]`. Order is significant.
+
+<h4 class="pdoc-member-header" id="BranchPolicyBuildValidationSettings-manualQueueOnly">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L61">property <b>manualQueueOnly</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>manualQueueOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+If set to true, the build will need to be manually queued. Defaults to `false`
+
+<h4 class="pdoc-member-header" id="BranchPolicyBuildValidationSettings-queueOnSourceUpdateOnly">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L65">property <b>queueOnSourceUpdateOnly</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>queueOnSourceUpdateOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+True if the build should queue on source updates only. Defaults to `true`.
+
+<h4 class="pdoc-member-header" id="BranchPolicyBuildValidationSettings-scopes">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L69">property <b>scopes</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>scopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#BranchPolicyBuildValidationSettingsScope'>BranchPolicyBuildValidationSettingsScope</a>&gt;[]&gt;;</code></pre>
+
+Controls which repositories and branches the policy will be enabled for. This block must be defined at least once.
+
+<h4 class="pdoc-member-header" id="BranchPolicyBuildValidationSettings-validDuration">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L73">property <b>validDuration</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>validDuration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+
+The number of minutes for which the build is valid. If `0`, the build will not expire. Defaults to `720` (12 hours).
+
+<h3 class="pdoc-module-header" id="BranchPolicyBuildValidationSettingsScope" data-link-title="BranchPolicyBuildValidationSettingsScope">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L76">
+        interface <strong>BranchPolicyBuildValidationSettingsScope</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BranchPolicyBuildValidationSettingsScope</span></code></pre>
+<h4 class="pdoc-member-header" id="BranchPolicyBuildValidationSettingsScope-matchType">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L80">property <b>matchType</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>matchType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The match type to use when applying the policy. Supported values are `Exact` (default) or `Prefix`.
+
+<h4 class="pdoc-member-header" id="BranchPolicyBuildValidationSettingsScope-repositoryId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L84">property <b>repositoryId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>repositoryId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The repository ID. Needed only if the scope of the policy will be limited to a single repository.
+
+<h4 class="pdoc-member-header" id="BranchPolicyBuildValidationSettingsScope-repositoryRef">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L88">property <b>repositoryRef</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>repositoryRef?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ref pattern to use for the match. If `matchType` is `Exact`, this should be a qualified ref such as `refs/heads/master`. If `matchType` is `Prefix`, this should be a ref path such as `refs/heads/releases`.
+
+<h3 class="pdoc-module-header" id="BranchPolicyCommentResolutionSettings" data-link-title="BranchPolicyCommentResolutionSettings">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L91">
+        interface <strong>BranchPolicyCommentResolutionSettings</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BranchPolicyCommentResolutionSettings</span></code></pre>
+<h4 class="pdoc-member-header" id="BranchPolicyCommentResolutionSettings-scopes">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L95">property <b>scopes</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>scopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#BranchPolicyCommentResolutionSettingsScope'>BranchPolicyCommentResolutionSettingsScope</a>&gt;[]&gt;;</code></pre>
+
+Controls which repositories and branches the policy will be enabled for. This block must be defined at least once.
+
+<h3 class="pdoc-module-header" id="BranchPolicyCommentResolutionSettingsScope" data-link-title="BranchPolicyCommentResolutionSettingsScope">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L98">
+        interface <strong>BranchPolicyCommentResolutionSettingsScope</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BranchPolicyCommentResolutionSettingsScope</span></code></pre>
+<h4 class="pdoc-member-header" id="BranchPolicyCommentResolutionSettingsScope-matchType">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L102">property <b>matchType</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>matchType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The match type to use when applying the policy. Supported values are `Exact` (default) or `Prefix`.
+
+<h4 class="pdoc-member-header" id="BranchPolicyCommentResolutionSettingsScope-repositoryId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L106">property <b>repositoryId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>repositoryId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The repository ID. Needed only if the scope of the policy will be limited to a single repository.
+
+<h4 class="pdoc-member-header" id="BranchPolicyCommentResolutionSettingsScope-repositoryRef">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L110">property <b>repositoryRef</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>repositoryRef?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ref pattern to use for the match. If `matchType` is `Exact`, this should be a qualified ref such as `refs/heads/master`. If `matchType` is `Prefix`, this should be a ref path such as `refs/heads/releases`.
+
+<h3 class="pdoc-module-header" id="BranchPolicyMinReviewersSettings" data-link-title="BranchPolicyMinReviewersSettings">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L113">
+        interface <strong>BranchPolicyMinReviewersSettings</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BranchPolicyMinReviewersSettings</span></code></pre>
+<h4 class="pdoc-member-header" id="BranchPolicyMinReviewersSettings-reviewerCount">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L117">property <b>reviewerCount</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>reviewerCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+
+The number of reviewrs needed to approve.
+
+<h4 class="pdoc-member-header" id="BranchPolicyMinReviewersSettings-scopes">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L121">property <b>scopes</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>scopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#BranchPolicyMinReviewersSettingsScope'>BranchPolicyMinReviewersSettingsScope</a>&gt;[]&gt;;</code></pre>
+
+Controls which repositories and branches the policy will be enabled for. This block must be defined at least once.
+
+<h4 class="pdoc-member-header" id="BranchPolicyMinReviewersSettings-submitterCanVote">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L125">property <b>submitterCanVote</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>submitterCanVote?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Controls whether or not the submitter's vote counts. Defaults to `false`.
+
+<h3 class="pdoc-module-header" id="BranchPolicyMinReviewersSettingsScope" data-link-title="BranchPolicyMinReviewersSettingsScope">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L128">
+        interface <strong>BranchPolicyMinReviewersSettingsScope</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BranchPolicyMinReviewersSettingsScope</span></code></pre>
+<h4 class="pdoc-member-header" id="BranchPolicyMinReviewersSettingsScope-matchType">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L132">property <b>matchType</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>matchType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The match type to use when applying the policy. Supported values are `Exact` (default) or `Prefix`.
+
+<h4 class="pdoc-member-header" id="BranchPolicyMinReviewersSettingsScope-repositoryId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L136">property <b>repositoryId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>repositoryId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The repository ID. Needed only if the scope of the policy will be limited to a single repository.
+
+<h4 class="pdoc-member-header" id="BranchPolicyMinReviewersSettingsScope-repositoryRef">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L140">property <b>repositoryRef</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>repositoryRef?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ref pattern to use for the match. If `matchType` is `Exact`, this should be a qualified ref such as `refs/heads/master`. If `matchType` is `Prefix`, this should be a ref path such as `refs/heads/releases`.
+
+<h3 class="pdoc-module-header" id="BranchPolicyWorkItemLinkingSettings" data-link-title="BranchPolicyWorkItemLinkingSettings">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L143">
+        interface <strong>BranchPolicyWorkItemLinkingSettings</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BranchPolicyWorkItemLinkingSettings</span></code></pre>
+<h4 class="pdoc-member-header" id="BranchPolicyWorkItemLinkingSettings-scopes">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L147">property <b>scopes</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>scopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#BranchPolicyWorkItemLinkingSettingsScope'>BranchPolicyWorkItemLinkingSettingsScope</a>&gt;[]&gt;;</code></pre>
+
+Controls which repositories and branches the policy will be enabled for. This block must be defined at least once.
+
+<h3 class="pdoc-module-header" id="BranchPolicyWorkItemLinkingSettingsScope" data-link-title="BranchPolicyWorkItemLinkingSettingsScope">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L150">
+        interface <strong>BranchPolicyWorkItemLinkingSettingsScope</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BranchPolicyWorkItemLinkingSettingsScope</span></code></pre>
+<h4 class="pdoc-member-header" id="BranchPolicyWorkItemLinkingSettingsScope-matchType">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L154">property <b>matchType</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>matchType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The match type to use when applying the policy. Supported values are `Exact` (default) or `Prefix`.
+
+<h4 class="pdoc-member-header" id="BranchPolicyWorkItemLinkingSettingsScope-repositoryId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L158">property <b>repositoryId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>repositoryId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The repository ID. Needed only if the scope of the policy will be limited to a single repository.
+
+<h4 class="pdoc-member-header" id="BranchPolicyWorkItemLinkingSettingsScope-repositoryRef">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L162">property <b>repositoryRef</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>repositoryRef?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ref pattern to use for the match. If `matchType` is `Exact`, this should be a qualified ref such as `refs/heads/master`. If `matchType` is `Prefix`, this should be a ref path such as `refs/heads/releases`.
+
+<h3 class="pdoc-module-header" id="BuildDefinitionCiTrigger" data-link-title="BuildDefinitionCiTrigger">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L165">
+        interface <strong>BuildDefinitionCiTrigger</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BuildDefinitionCiTrigger</span></code></pre>
+<h4 class="pdoc-member-header" id="BuildDefinitionCiTrigger-override">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L169">property <b>override</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>override?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#BuildDefinitionCiTriggerOverride'>BuildDefinitionCiTriggerOverride</a>&gt;;</code></pre>
+
+Override the azure-pipeline file and use a this configuration for all builds.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionCiTrigger-useYaml">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L173">property <b>useYaml</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>useYaml?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Use the azure-pipeline file for the build configuration. Defaults to `false`.
+
+<h3 class="pdoc-module-header" id="BuildDefinitionCiTriggerOverride" data-link-title="BuildDefinitionCiTriggerOverride">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L176">
+        interface <strong>BuildDefinitionCiTriggerOverride</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BuildDefinitionCiTriggerOverride</span></code></pre>
+<h4 class="pdoc-member-header" id="BuildDefinitionCiTriggerOverride-batch">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L180">property <b>batch</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>batch?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+If you set batch to true, when a pipeline is running, the system waits until the run is completed, then starts another run with all changes that have not yet been built. Defaults to `true`.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionCiTriggerOverride-branchFilters">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L184">property <b>branchFilters</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>branchFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#BuildDefinitionCiTriggerOverrideBranchFilter'>BuildDefinitionCiTriggerOverrideBranchFilter</a>&gt;[]&gt;;</code></pre>
+
+The branches to include and exclude from the trigger.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionCiTriggerOverride-maxConcurrentBuildsPerBranch">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L188">property <b>maxConcurrentBuildsPerBranch</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>maxConcurrentBuildsPerBranch?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+
+The number of max builds per branch. Defaults to `1`.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionCiTriggerOverride-pathFilters">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L192">property <b>pathFilters</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>pathFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#BuildDefinitionCiTriggerOverridePathFilter'>BuildDefinitionCiTriggerOverridePathFilter</a>&gt;[]&gt;;</code></pre>
+
+Specify file paths to include or exclude. Note that the wildcard syntax is different between branches/tags and file paths.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionCiTriggerOverride-pollingInterval">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L196">property <b>pollingInterval</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>pollingInterval?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+
+How often the external repository is polled. Defaults to `0`.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionCiTriggerOverride-pollingJobId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L200">property <b>pollingJobId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>pollingJobId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+This is the ID of the polling job that polls the external repository. Once the build definition is saved/updated, this value is set.
+
+<h3 class="pdoc-module-header" id="BuildDefinitionCiTriggerOverrideBranchFilter" data-link-title="BuildDefinitionCiTriggerOverrideBranchFilter">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L203">
+        interface <strong>BuildDefinitionCiTriggerOverrideBranchFilter</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BuildDefinitionCiTriggerOverrideBranchFilter</span></code></pre>
+<h4 class="pdoc-member-header" id="BuildDefinitionCiTriggerOverrideBranchFilter-excludes">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L207">property <b>excludes</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>excludes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+
+List of branch patterns to exclude.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionCiTriggerOverrideBranchFilter-includes">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L211">property <b>includes</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>includes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+
+List of branch patterns to include.
+
+<h3 class="pdoc-module-header" id="BuildDefinitionCiTriggerOverridePathFilter" data-link-title="BuildDefinitionCiTriggerOverridePathFilter">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L214">
+        interface <strong>BuildDefinitionCiTriggerOverridePathFilter</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BuildDefinitionCiTriggerOverridePathFilter</span></code></pre>
+<h4 class="pdoc-member-header" id="BuildDefinitionCiTriggerOverridePathFilter-excludes">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L218">property <b>excludes</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>excludes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+
+List of branch patterns to exclude.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionCiTriggerOverridePathFilter-includes">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L222">property <b>includes</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>includes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+
+List of branch patterns to include.
+
+<h3 class="pdoc-module-header" id="BuildDefinitionPullRequestTrigger" data-link-title="BuildDefinitionPullRequestTrigger">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L225">
+        interface <strong>BuildDefinitionPullRequestTrigger</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BuildDefinitionPullRequestTrigger</span></code></pre>
+<h4 class="pdoc-member-header" id="BuildDefinitionPullRequestTrigger-commentRequired">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L226">property <b>commentRequired</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>commentRequired?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="BuildDefinitionPullRequestTrigger-forks">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L230">property <b>forks</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>forks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#BuildDefinitionPullRequestTriggerForks'>BuildDefinitionPullRequestTriggerForks</a>&gt;;</code></pre>
+
+Set permissions for Forked repositories.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionPullRequestTrigger-initialBranch">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L231">property <b>initialBranch</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>initialBranch?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="BuildDefinitionPullRequestTrigger-override">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L235">property <b>override</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>override?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#BuildDefinitionPullRequestTriggerOverride'>BuildDefinitionPullRequestTriggerOverride</a>&gt;;</code></pre>
+
+Override the azure-pipeline file and use this configuration for all builds.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionPullRequestTrigger-useYaml">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L239">property <b>useYaml</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>useYaml?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Use the azure-pipeline file for the build configuration. Defaults to `false`.
+
+<h3 class="pdoc-module-header" id="BuildDefinitionPullRequestTriggerForks" data-link-title="BuildDefinitionPullRequestTriggerForks">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L242">
+        interface <strong>BuildDefinitionPullRequestTriggerForks</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BuildDefinitionPullRequestTriggerForks</span></code></pre>
+<h4 class="pdoc-member-header" id="BuildDefinitionPullRequestTriggerForks-enabled">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L246">property <b>enabled</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Build pull requests form forms of this repository.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionPullRequestTriggerForks-shareSecrets">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L250">property <b>shareSecrets</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>shareSecrets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Make secrets available to builds of forks.
+
+<h3 class="pdoc-module-header" id="BuildDefinitionPullRequestTriggerOverride" data-link-title="BuildDefinitionPullRequestTriggerOverride">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L253">
+        interface <strong>BuildDefinitionPullRequestTriggerOverride</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BuildDefinitionPullRequestTriggerOverride</span></code></pre>
+<h4 class="pdoc-member-header" id="BuildDefinitionPullRequestTriggerOverride-autoCancel">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L257">property <b>autoCancel</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>autoCancel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+. Defaults to `true`.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionPullRequestTriggerOverride-branchFilters">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L261">property <b>branchFilters</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>branchFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#BuildDefinitionPullRequestTriggerOverrideBranchFilter'>BuildDefinitionPullRequestTriggerOverrideBranchFilter</a>&gt;[]&gt;;</code></pre>
+
+The branches to include and exclude from the trigger.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionPullRequestTriggerOverride-pathFilters">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L265">property <b>pathFilters</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>pathFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#BuildDefinitionPullRequestTriggerOverridePathFilter'>BuildDefinitionPullRequestTriggerOverridePathFilter</a>&gt;[]&gt;;</code></pre>
+
+Specify file paths to include or exclude. Note that the wildcard syntax is different between branches/tags and file paths.
+
+<h3 class="pdoc-module-header" id="BuildDefinitionPullRequestTriggerOverrideBranchFilter" data-link-title="BuildDefinitionPullRequestTriggerOverrideBranchFilter">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L268">
+        interface <strong>BuildDefinitionPullRequestTriggerOverrideBranchFilter</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BuildDefinitionPullRequestTriggerOverrideBranchFilter</span></code></pre>
+<h4 class="pdoc-member-header" id="BuildDefinitionPullRequestTriggerOverrideBranchFilter-excludes">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L272">property <b>excludes</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>excludes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+
+List of branch patterns to exclude.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionPullRequestTriggerOverrideBranchFilter-includes">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L276">property <b>includes</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>includes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+
+List of branch patterns to include.
+
+<h3 class="pdoc-module-header" id="BuildDefinitionPullRequestTriggerOverridePathFilter" data-link-title="BuildDefinitionPullRequestTriggerOverridePathFilter">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L279">
+        interface <strong>BuildDefinitionPullRequestTriggerOverridePathFilter</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BuildDefinitionPullRequestTriggerOverridePathFilter</span></code></pre>
+<h4 class="pdoc-member-header" id="BuildDefinitionPullRequestTriggerOverridePathFilter-excludes">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L283">property <b>excludes</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>excludes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+
+List of branch patterns to exclude.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionPullRequestTriggerOverridePathFilter-includes">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L287">property <b>includes</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>includes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+
+List of branch patterns to include.
+
+<h3 class="pdoc-module-header" id="BuildDefinitionRepository" data-link-title="BuildDefinitionRepository">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L290">
+        interface <strong>BuildDefinitionRepository</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BuildDefinitionRepository</span></code></pre>
+<h4 class="pdoc-member-header" id="BuildDefinitionRepository-branchName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L294">property <b>branchName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>branchName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The branch name for which builds are triggered. Defaults to `master`.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionRepository-githubEnterpriseUrl">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L298">property <b>githubEnterpriseUrl</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>githubEnterpriseUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The Github Enterprise URL. Used if `repoType` is `GithubEnterprise`.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionRepository-repoId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L302">property <b>repoId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>repoId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The id of the repository. For `TfsGit` repos, this is simply the ID of the repository. For `Github` repos, this will take the form of `<GitHub Org>/<Repo Name>`. For `Bitbucket` repos, this will take the form of `<Workspace ID>/<Repo Name>`.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionRepository-repoType">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L306">property <b>repoType</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>repoType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The repository type. Valid values: `GitHub` or `TfsGit` or `Bitbucket` or `GitHub Enterprise`. Defaults to `Github`. If `repoType` is `GitHubEnterprise`, must use existing project and GitHub Enterprise service connection.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionRepository-reportBuildStatus">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L310">property <b>reportBuildStatus</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>reportBuildStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Report build status. Default is true.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionRepository-serviceConnectionId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L314">property <b>serviceConnectionId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>serviceConnectionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The service connection ID. Used if the `repoType` is `GitHub` or `GitHubEnterprise`.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionRepository-ymlPath">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L318">property <b>ymlPath</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>ymlPath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The path of the Yaml file describing the build definition.
+
+<h3 class="pdoc-module-header" id="BuildDefinitionVariable" data-link-title="BuildDefinitionVariable">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L321">
+        interface <strong>BuildDefinitionVariable</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BuildDefinitionVariable</span></code></pre>
+<h4 class="pdoc-member-header" id="BuildDefinitionVariable-allowOverride">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L325">property <b>allowOverride</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>allowOverride?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+True if the variable can be overridden. Defaults to `true`.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionVariable-isSecret">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L329">property <b>isSecret</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>isSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+True if the variable is a secret. Defaults to `false`.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionVariable-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L333">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the variable.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionVariable-secretValue">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L337">property <b>secretValue</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>secretValue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The secret value of the variable. Used when `isSecret` set to `true`.
+
+<h4 class="pdoc-member-header" id="BuildDefinitionVariable-value">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L341">property <b>value</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The value of the variable.
+
+<h3 class="pdoc-module-header" id="GitInitialization" data-link-title="GitInitialization">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L344">
+        interface <strong>GitInitialization</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GitInitialization</span></code></pre>
+<h4 class="pdoc-member-header" id="GitInitialization-initType">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L348">property <b>initType</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>initType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The type of repository to create. Valid values: `Uninitialized`, `Clean` or `Import`. Defaults to `Uninitialized`.
+
+<h4 class="pdoc-member-header" id="GitInitialization-sourceType">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L352">property <b>sourceType</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>sourceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Type of the source repository. Used if the `initType` is `Import`. Valid values: `Git`. Defaults to `Git`.
+
+<h4 class="pdoc-member-header" id="GitInitialization-sourceUrl">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L356">property <b>sourceUrl</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>sourceUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The URL of the source repository. Used if the `initType` is `Import`.
+
+<h3 class="pdoc-module-header" id="ServiceEndpointAzureRMCredentials" data-link-title="ServiceEndpointAzureRMCredentials">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L359">
+        interface <strong>ServiceEndpointAzureRMCredentials</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceEndpointAzureRMCredentials</span></code></pre>
+<h4 class="pdoc-member-header" id="ServiceEndpointAzureRMCredentials-serviceprincipalid">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L363">property <b>serviceprincipalid</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>serviceprincipalid: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The service principal application Id
+
+<h4 class="pdoc-member-header" id="ServiceEndpointAzureRMCredentials-serviceprincipalkey">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L367">property <b>serviceprincipalkey</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>serviceprincipalkey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The service principal secret.
+
+<h4 class="pdoc-member-header" id="ServiceEndpointAzureRMCredentials-serviceprincipalkeyHash">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L368">property <b>serviceprincipalkeyHash</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>serviceprincipalkeyHash?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h3 class="pdoc-module-header" id="ServiceEndpointGitHubAuthOauth" data-link-title="ServiceEndpointGitHubAuthOauth">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L371">
+        interface <strong>ServiceEndpointGitHubAuthOauth</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceEndpointGitHubAuthOauth</span></code></pre>
+<h4 class="pdoc-member-header" id="ServiceEndpointGitHubAuthOauth-oauthConfigurationId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L372">property <b>oauthConfigurationId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>oauthConfigurationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h3 class="pdoc-module-header" id="ServiceEndpointGitHubAuthPersonal" data-link-title="ServiceEndpointGitHubAuthPersonal">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L375">
+        interface <strong>ServiceEndpointGitHubAuthPersonal</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceEndpointGitHubAuthPersonal</span></code></pre>
+<h4 class="pdoc-member-header" id="ServiceEndpointGitHubAuthPersonal-personalAccessToken">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L379">property <b>personalAccessToken</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>personalAccessToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The Personal Access Token for Github.
+
+<h4 class="pdoc-member-header" id="ServiceEndpointGitHubAuthPersonal-personalAccessTokenHash">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L380">property <b>personalAccessTokenHash</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>personalAccessTokenHash?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h3 class="pdoc-module-header" id="ServiceEndpointKubernetesAzureSubscription" data-link-title="ServiceEndpointKubernetesAzureSubscription">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L383">
+        interface <strong>ServiceEndpointKubernetesAzureSubscription</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceEndpointKubernetesAzureSubscription</span></code></pre>
+<h4 class="pdoc-member-header" id="ServiceEndpointKubernetesAzureSubscription-azureEnvironment">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L387">property <b>azureEnvironment</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>azureEnvironment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Azure environment refers to whether the public cloud offering or domestic (government) clouds are being used. Currently, only the public cloud is supported. The value must be AzureCloud. This is also the default-value.
+
+<h4 class="pdoc-member-header" id="ServiceEndpointKubernetesAzureSubscription-clusterName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L391">property <b>clusterName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>clusterName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the Kubernetes cluster.
+
+<h4 class="pdoc-member-header" id="ServiceEndpointKubernetesAzureSubscription-namespace">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L395">property <b>namespace</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>namespace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The Kubernetes namespace. Default value is "default".
+
+<h4 class="pdoc-member-header" id="ServiceEndpointKubernetesAzureSubscription-resourcegroupId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L399">property <b>resourcegroupId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>resourcegroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The resource group name, to which the Kubernetes cluster is deployed.
+
+<h4 class="pdoc-member-header" id="ServiceEndpointKubernetesAzureSubscription-subscriptionId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L403">property <b>subscriptionId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>subscriptionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The id of the Azure subscription.
+
+<h4 class="pdoc-member-header" id="ServiceEndpointKubernetesAzureSubscription-subscriptionName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L407">property <b>subscriptionName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>subscriptionName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the Azure subscription.
+
+<h4 class="pdoc-member-header" id="ServiceEndpointKubernetesAzureSubscription-tenantId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L411">property <b>tenantId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The id of the tenant used by the subscription.
+
+<h3 class="pdoc-module-header" id="ServiceEndpointKubernetesKubeconfig" data-link-title="ServiceEndpointKubernetesKubeconfig">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L414">
+        interface <strong>ServiceEndpointKubernetesKubeconfig</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceEndpointKubernetesKubeconfig</span></code></pre>
+<h4 class="pdoc-member-header" id="ServiceEndpointKubernetesKubeconfig-acceptUntrustedCerts">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L418">property <b>acceptUntrustedCerts</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>acceptUntrustedCerts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Set this option to allow clients to accept a self-signed certificate.
+
+<h4 class="pdoc-member-header" id="ServiceEndpointKubernetesKubeconfig-clusterContext">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L422">property <b>clusterContext</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>clusterContext?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Context within the kubeconfig file that is to be used for identifying the cluster. Default value is the current-context set in kubeconfig.
+
+<h4 class="pdoc-member-header" id="ServiceEndpointKubernetesKubeconfig-kubeConfig">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L426">property <b>kubeConfig</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>kubeConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The content of the kubeconfig in yaml notation to be used to communicate with the API-Server of Kubernetes.
+
+<h4 class="pdoc-member-header" id="ServiceEndpointKubernetesKubeconfig-kubeConfigHash">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L427">property <b>kubeConfigHash</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>kubeConfigHash?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h3 class="pdoc-module-header" id="ServiceEndpointKubernetesServiceAccount" data-link-title="ServiceEndpointKubernetesServiceAccount">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L430">
+        interface <strong>ServiceEndpointKubernetesServiceAccount</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceEndpointKubernetesServiceAccount</span></code></pre>
+<h4 class="pdoc-member-header" id="ServiceEndpointKubernetesServiceAccount-caCert">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L434">property <b>caCert</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>caCert: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The certificate from a Kubernetes secret object.
+
+<h4 class="pdoc-member-header" id="ServiceEndpointKubernetesServiceAccount-caCertHash">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L435">property <b>caCertHash</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>caCertHash?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="ServiceEndpointKubernetesServiceAccount-token">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L439">property <b>token</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>token: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The token from a Kubernetes secret object.
+
+<h4 class="pdoc-member-header" id="ServiceEndpointKubernetesServiceAccount-tokenHash">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L440">property <b>tokenHash</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>tokenHash?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h3 class="pdoc-module-header" id="VariableGroupKeyVault" data-link-title="VariableGroupKeyVault">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L443">
+        interface <strong>VariableGroupKeyVault</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>VariableGroupKeyVault</span></code></pre>
+<h4 class="pdoc-member-header" id="VariableGroupKeyVault-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L447">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The name of the Variable Group.
+
+<h4 class="pdoc-member-header" id="VariableGroupKeyVault-serviceEndpointId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L448">property <b>serviceEndpointId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>serviceEndpointId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h3 class="pdoc-module-header" id="VariableGroupVariable" data-link-title="VariableGroupVariable">
+    <a href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L451">
+        interface <strong>VariableGroupVariable</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>VariableGroupVariable</span></code></pre>
+<h4 class="pdoc-member-header" id="VariableGroupVariable-contentType">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L452">property <b>contentType</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>contentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="VariableGroupVariable-enabled">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L453">property <b>enabled</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="VariableGroupVariable-expires">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L454">property <b>expires</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>expires?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="VariableGroupVariable-isSecret">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L458">property <b>isSecret</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>isSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+A boolean flag describing if the variable value is sensitive. Defaults to `false`.
+
+<h4 class="pdoc-member-header" id="VariableGroupVariable-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L462">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The key value used for the variable. Must be unique within the Variable Group.
+
+<h4 class="pdoc-member-header" id="VariableGroupVariable-secretValue">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L466">property <b>secretValue</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>secretValue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The secret value of the variable. If omitted, it will default to empty string. Used when `isSecret` set to `true`.
+
+<h4 class="pdoc-member-header" id="VariableGroupVariable-value">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuredevops/blob/5a2704baa4eadd2446006775047639ffb3cd5575/sdk/nodejs/types/input.ts#L470">property <b>value</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The value of the variable. If omitted, it will default to empty string.
 
