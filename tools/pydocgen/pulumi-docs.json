@@ -206,10 +206,10 @@
       "terraform_provider_name": "fastly"
     },
     {
-      "name": "Pulumi Packet",
-      "package_name": "pulumi_packet",
-      "pulumi_provider_name": "packet",
-      "terraform_provider_name": "packet"
+      "name": "Pulumi Equinix Metal",
+      "package_name": "pulumi_equinix_metal",
+      "pulumi_provider_name": "equinix-metal",
+      "terraform_provider_name": ""
     },
     {
       "name": "Pulumi Pagerduty",
