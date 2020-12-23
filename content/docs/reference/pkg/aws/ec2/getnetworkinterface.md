@@ -1093,6 +1093,26 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="carrierip_csharp">
+<a href="#carrierip_csharp" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The carrier IP address associated with the network interface. This attribute is only set when the network interface is in a subnet which is associated with a Wavelength Zone.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="customerownedip_csharp">
+<a href="#customerownedip_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Owned<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The customer-owned IP address.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="ipownerid_csharp">
 <a href="#ipownerid_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Owner<wbr>Id</a>
 </span>
@@ -1146,6 +1166,26 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The association ID.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="carrierip_go">
+<a href="#carrierip_go" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The carrier IP address associated with the network interface. This attribute is only set when the network interface is in a subnet which is associated with a Wavelength Zone.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="customerownedip_go">
+<a href="#customerownedip_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Owned<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The customer-owned IP address.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1205,6 +1245,26 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="carrierip_nodejs">
+<a href="#carrierip_nodejs" style="color: inherit; text-decoration: inherit;">carrier<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The carrier IP address associated with the network interface. This attribute is only set when the network interface is in a subnet which is associated with a Wavelength Zone.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="customerownedip_nodejs">
+<a href="#customerownedip_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Owned<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The customer-owned IP address.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="ipownerid_nodejs">
 <a href="#ipownerid_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Owner<wbr>Id</a>
 </span>
@@ -1258,6 +1318,26 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The association ID.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="carrier_ip_python">
+<a href="#carrier_ip_python" style="color: inherit; text-decoration: inherit;">carrier_<wbr>ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The carrier IP address associated with the network interface. This attribute is only set when the network interface is in a subnet which is associated with a Wavelength Zone.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="customer_owned_ip_python">
+<a href="#customer_owned_ip_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>owned_<wbr>ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The customer-owned IP address.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">

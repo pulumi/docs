@@ -655,6 +655,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="carrierip_csharp">
+<a href="#carrierip_csharp" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The carrier IP address.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="customerownedip_csharp">
 <a href="#customerownedip_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Owned<wbr>Ip</a>
 </span>
@@ -746,6 +756,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="carrierip_go">
+<a href="#carrierip_go" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The carrier IP address.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="customerownedip_go">
@@ -841,6 +861,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="carrierip_nodejs">
+<a href="#carrierip_nodejs" style="color: inherit; text-decoration: inherit;">carrier<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The carrier IP address.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="customerownedip_nodejs">
 <a href="#customerownedip_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Owned<wbr>Ip</a>
 </span>
@@ -934,6 +964,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="carrier_ip_python">
+<a href="#carrier_ip_python" style="color: inherit; text-decoration: inherit;">carrier_<wbr>ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The carrier IP address.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="customer_owned_ip_python">
 <a href="#customer_owned_ip_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>owned_<wbr>ip</a>
 </span>
@@ -1017,7 +1057,7 @@ Get an existing Eip resource's state with the given name, ID, and optional extra
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allocation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">associate_with_private_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">association_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">customer_owned_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">customer_owned_ipv4_pool</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_border_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interface</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_dns</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_dns</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_ipv4_pool</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Eip</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allocation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">associate_with_private_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">association_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">carrier_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">customer_owned_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">customer_owned_ipv4_pool</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_border_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interface</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_dns</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_dns</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_ipv4_pool</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Eip</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1160,6 +1200,16 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_carrierip_csharp">
+<a href="#state_carrierip_csharp" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The carrier IP address.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_customerownedip_csharp">
@@ -1328,6 +1378,16 @@ the Elastic IP address is associated with the primary private IP address.
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_carrierip_go">
+<a href="#state_carrierip_go" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The carrier IP address.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_customerownedip_go">
 <a href="#state_customerownedip_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Owned<wbr>Ip</a>
 </span>
@@ -1494,6 +1554,16 @@ the Elastic IP address is associated with the primary private IP address.
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_carrierip_nodejs">
+<a href="#state_carrierip_nodejs" style="color: inherit; text-decoration: inherit;">carrier<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The carrier IP address.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_customerownedip_nodejs">
 <a href="#state_customerownedip_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Owned<wbr>Ip</a>
 </span>
@@ -1658,6 +1728,16 @@ the Elastic IP address is associated with the primary private IP address.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_carrier_ip_python">
+<a href="#state_carrier_ip_python" style="color: inherit; text-decoration: inherit;">carrier_<wbr>ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The carrier IP address.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_customer_owned_ip_python">

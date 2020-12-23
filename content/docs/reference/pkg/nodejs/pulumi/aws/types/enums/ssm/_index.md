@@ -3,7 +3,7 @@ title: "Module types/enums/ssm"
 title_tag: "Module types/enums/ssm | Package @pulumi/aws | Node.js SDK"
 linktitle: "enums/ssm"
 meta_desc: "Explore members of the enums/ssm module in the @pulumi/aws package."
-git_sha: "c792157014dadb460b668684ac4e00d494728aaf"
+git_sha: "98ba143bfec550327011ab801cebaef71cd235a7"
 block_external_search_index: true
 ---
 
@@ -27,7 +27,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="ParameterType" data-link-title="ParameterType">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/c792157014dadb460b668684ac4e00d494728aaf/sdk/nodejs/types/enums/ssm/index.ts#L11">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/types/enums/ssm/index.ts#L11">
         type <strong>ParameterType</strong>
     </a>
 </h3>

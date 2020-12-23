@@ -271,7 +271,7 @@ const main = new aws.ec2.VpnConnection("main", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.VpnConnection">VpnConnection</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">customer_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">static_routes_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">transit_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel1_inside_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel1_preshared_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel2_inside_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel2_preshared_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.VpnConnection">VpnConnection</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">customer_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_acceleration</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">local_ipv4_network_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">local_ipv6_network_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remote_ipv4_network_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remote_ipv6_network_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">static_routes_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">transit_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel1_dpd_timeout_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel1_dpd_timeout_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel1_ike_versions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tunnel1_inside_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel1_inside_ipv6_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel1_phase1_dh_group_numbers</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">, </span><span class="nx">tunnel1_phase1_encryption_algorithms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tunnel1_phase1_integrity_algorithms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tunnel1_phase1_lifetime_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel1_phase2_dh_group_numbers</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">, </span><span class="nx">tunnel1_phase2_encryption_algorithms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tunnel1_phase2_integrity_algorithms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tunnel1_phase2_lifetime_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel1_preshared_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel1_rekey_fuzz_percentage</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel1_rekey_margin_time_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel1_replay_window_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel1_startup_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel2_dpd_timeout_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel2_dpd_timeout_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel2_ike_versions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tunnel2_inside_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel2_inside_ipv6_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel2_phase1_dh_group_numbers</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">, </span><span class="nx">tunnel2_phase1_encryption_algorithms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tunnel2_phase1_integrity_algorithms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tunnel2_phase1_lifetime_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel2_phase2_dh_group_numbers</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">, </span><span class="nx">tunnel2_phase2_encryption_algorithms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tunnel2_phase2_integrity_algorithms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tunnel2_phase2_lifetime_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel2_preshared_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel2_rekey_fuzz_percentage</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel2_rekey_margin_time_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel2_replay_window_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel2_startup_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel_inside_ip_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpn_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -464,6 +464,56 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="enableacceleration_csharp">
+<a href="#enableacceleration_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Acceleration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicate whether to enable acceleration for the VPN connection. Supports only EC2 Transit Gateway.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="localipv4networkcidr_csharp">
+<a href="#localipv4networkcidr_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Ipv4Network<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR on the customer gateway (on-premises) side of the VPN connection.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="localipv6networkcidr_csharp">
+<a href="#localipv6networkcidr_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Ipv6Network<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IPv6 CIDR on the customer gateway (on-premises) side of the VPN connection.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="remoteipv4networkcidr_csharp">
+<a href="#remoteipv4networkcidr_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Ipv4Network<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR on the AWS side of the VPN connection.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="remoteipv6networkcidr_csharp">
+<a href="#remoteipv6networkcidr_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Ipv6Network<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IPv6 CIDR on the customer gateway (on-premises) side of the VPN connection.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="staticroutesonly_csharp">
 <a href="#staticroutesonly_csharp" style="color: inherit; text-decoration: inherit;">Static<wbr>Routes<wbr>Only</a>
 </span>
@@ -494,13 +544,133 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="tunnel1dpdtimeoutaction_csharp">
+<a href="#tunnel1dpdtimeoutaction_csharp" style="color: inherit; text-decoration: inherit;">Tunnel1Dpd<wbr>Timeout<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The action to take after DPD timeout occurs for the first VPN tunnel. Specify restart to restart the IKE initiation. Specify clear to end the IKE session. Valid values are `clear | none | restart`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1dpdtimeoutseconds_csharp">
+<a href="#tunnel1dpdtimeoutseconds_csharp" style="color: inherit; text-decoration: inherit;">Tunnel1Dpd<wbr>Timeout<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of seconds after which a DPD timeout occurs for the first VPN tunnel. Valid value is equal or higher than `30`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1ikeversions_csharp">
+<a href="#tunnel1ikeversions_csharp" style="color: inherit; text-decoration: inherit;">Tunnel1Ike<wbr>Versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The IKE versions that are permitted for the first VPN tunnel. Valid values are `ikev1 | ikev2`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tunnel1insidecidr_csharp">
 <a href="#tunnel1insidecidr_csharp" style="color: inherit; text-decoration: inherit;">Tunnel1Inside<wbr>Cidr</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CIDR block of the inside IP addresses for the first VPN tunnel.
+    <dd>{{% md %}}The CIDR block of the inside IP addresses for the first VPN tunnel. Valid value is a size /30 CIDR block from the 169.254.0.0/16 range.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1insideipv6cidr_csharp">
+<a href="#tunnel1insideipv6cidr_csharp" style="color: inherit; text-decoration: inherit;">Tunnel1Inside<wbr>Ipv6Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The range of inside IPv6 addresses for the first VPN tunnel. Supports only EC2 Transit Gateway. Valid value is a size /126 CIDR block from the local fd00::/8 range.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1phase1dhgroupnumbers_csharp">
+<a href="#tunnel1phase1dhgroupnumbers_csharp" style="color: inherit; text-decoration: inherit;">Tunnel1Phase1Dh<wbr>Group<wbr>Numbers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;int&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are ` 2 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1phase1encryptionalgorithms_csharp">
+<a href="#tunnel1phase1encryptionalgorithms_csharp" style="color: inherit; text-decoration: inherit;">Tunnel1Phase1Encryption<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1phase1integrityalgorithms_csharp">
+<a href="#tunnel1phase1integrityalgorithms_csharp" style="color: inherit; text-decoration: inherit;">Tunnel1Phase1Integrity<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}One or more integrity algorithms that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1phase1lifetimeseconds_csharp">
+<a href="#tunnel1phase1lifetimeseconds_csharp" style="color: inherit; text-decoration: inherit;">Tunnel1Phase1Lifetime<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The lifetime for phase 1 of the IKE negotiation for the first VPN tunnel, in seconds. Valid value is between `900` and `28800`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1phase2dhgroupnumbers_csharp">
+<a href="#tunnel1phase2dhgroupnumbers_csharp" style="color: inherit; text-decoration: inherit;">Tunnel1Phase2Dh<wbr>Group<wbr>Numbers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;int&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `2 | 5 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1phase2encryptionalgorithms_csharp">
+<a href="#tunnel1phase2encryptionalgorithms_csharp" style="color: inherit; text-decoration: inherit;">Tunnel1Phase2Encryption<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1phase2integrityalgorithms_csharp">
+<a href="#tunnel1phase2integrityalgorithms_csharp" style="color: inherit; text-decoration: inherit;">Tunnel1Phase2Integrity<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of one or more integrity algorithms that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1phase2lifetimeseconds_csharp">
+<a href="#tunnel1phase2lifetimeseconds_csharp" style="color: inherit; text-decoration: inherit;">Tunnel1Phase2Lifetime<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The lifetime for phase 2 of the IKE negotiation for the first VPN tunnel, in seconds. Valid value is between `900` and `3600`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -510,7 +680,77 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The preshared key of the first VPN tunnel.
+    <dd>{{% md %}}The preshared key of the first VPN tunnel. The preshared key must be between 8 and 64 characters in length and cannot start with zero(0). Allowed characters are alphanumeric characters, periods(.) and underscores(_).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1rekeyfuzzpercentage_csharp">
+<a href="#tunnel1rekeyfuzzpercentage_csharp" style="color: inherit; text-decoration: inherit;">Tunnel1Rekey<wbr>Fuzz<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The percentage of the rekey window for the first VPN tunnel (determined by `tunnel1_rekey_margin_time_seconds`) during which the rekey time is randomly selected. Valid value is between `0` and `100`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1rekeymargintimeseconds_csharp">
+<a href="#tunnel1rekeymargintimeseconds_csharp" style="color: inherit; text-decoration: inherit;">Tunnel1Rekey<wbr>Margin<wbr>Time<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The margin time, in seconds, before the phase 2 lifetime expires, during which the AWS side of the first VPN connection performs an IKE rekey. The exact time of the rekey is randomly selected based on the value for `tunnel1_rekey_fuzz_percentage`. Valid value is between `60` and half of `tunnel1_phase2_lifetime_seconds`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1replaywindowsize_csharp">
+<a href="#tunnel1replaywindowsize_csharp" style="color: inherit; text-decoration: inherit;">Tunnel1Replay<wbr>Window<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of packets in an IKE replay window for the first VPN tunnel. Valid value is between `64` and `2048`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1startupaction_csharp">
+<a href="#tunnel1startupaction_csharp" style="color: inherit; text-decoration: inherit;">Tunnel1Startup<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The action to take when the establishing the tunnel for the first VPN connection. By default, your customer gateway device must initiate the IKE negotiation and bring up the tunnel. Specify start for AWS to initiate the IKE negotiation. Valid values are `add | start`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2dpdtimeoutaction_csharp">
+<a href="#tunnel2dpdtimeoutaction_csharp" style="color: inherit; text-decoration: inherit;">Tunnel2Dpd<wbr>Timeout<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The action to take after DPD timeout occurs for the second VPN tunnel. Specify restart to restart the IKE initiation. Specify clear to end the IKE session. Valid values are `clear | none | restart`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2dpdtimeoutseconds_csharp">
+<a href="#tunnel2dpdtimeoutseconds_csharp" style="color: inherit; text-decoration: inherit;">Tunnel2Dpd<wbr>Timeout<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of seconds after which a DPD timeout occurs for the second VPN tunnel. Valid value is equal or higher than `30`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2ikeversions_csharp">
+<a href="#tunnel2ikeversions_csharp" style="color: inherit; text-decoration: inherit;">Tunnel2Ike<wbr>Versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The IKE versions that are permitted for the second VPN tunnel. Valid values are `ikev1 | ikev2`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -520,7 +760,97 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CIDR block of the inside IP addresses for the second VPN tunnel.
+    <dd>{{% md %}}The CIDR block of the inside IP addresses for the second VPN tunnel. Valid value is a size /30 CIDR block from the 169.254.0.0/16 range.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2insideipv6cidr_csharp">
+<a href="#tunnel2insideipv6cidr_csharp" style="color: inherit; text-decoration: inherit;">Tunnel2Inside<wbr>Ipv6Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The range of inside IPv6 addresses for the second VPN tunnel. Supports only EC2 Transit Gateway. Valid value is a size /126 CIDR block from the local fd00::/8 range.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2phase1dhgroupnumbers_csharp">
+<a href="#tunnel2phase1dhgroupnumbers_csharp" style="color: inherit; text-decoration: inherit;">Tunnel2Phase1Dh<wbr>Group<wbr>Numbers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;int&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are ` 2 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2phase1encryptionalgorithms_csharp">
+<a href="#tunnel2phase1encryptionalgorithms_csharp" style="color: inherit; text-decoration: inherit;">Tunnel2Phase1Encryption<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2phase1integrityalgorithms_csharp">
+<a href="#tunnel2phase1integrityalgorithms_csharp" style="color: inherit; text-decoration: inherit;">Tunnel2Phase1Integrity<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}One or more integrity algorithms that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2phase1lifetimeseconds_csharp">
+<a href="#tunnel2phase1lifetimeseconds_csharp" style="color: inherit; text-decoration: inherit;">Tunnel2Phase1Lifetime<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The lifetime for phase 1 of the IKE negotiation for the second VPN tunnel, in seconds. Valid value is between `900` and `28800`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2phase2dhgroupnumbers_csharp">
+<a href="#tunnel2phase2dhgroupnumbers_csharp" style="color: inherit; text-decoration: inherit;">Tunnel2Phase2Dh<wbr>Group<wbr>Numbers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;int&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `2 | 5 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2phase2encryptionalgorithms_csharp">
+<a href="#tunnel2phase2encryptionalgorithms_csharp" style="color: inherit; text-decoration: inherit;">Tunnel2Phase2Encryption<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2phase2integrityalgorithms_csharp">
+<a href="#tunnel2phase2integrityalgorithms_csharp" style="color: inherit; text-decoration: inherit;">Tunnel2Phase2Integrity<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of one or more integrity algorithms that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2phase2lifetimeseconds_csharp">
+<a href="#tunnel2phase2lifetimeseconds_csharp" style="color: inherit; text-decoration: inherit;">Tunnel2Phase2Lifetime<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The lifetime for phase 2 of the IKE negotiation for the second VPN tunnel, in seconds. Valid value is between `900` and `3600`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -530,7 +860,57 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The preshared key of the second VPN tunnel.
+    <dd>{{% md %}}The preshared key of the second VPN tunnel. The preshared key must be between 8 and 64 characters in length and cannot start with zero(0). Allowed characters are alphanumeric characters, periods(.) and underscores(_).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2rekeyfuzzpercentage_csharp">
+<a href="#tunnel2rekeyfuzzpercentage_csharp" style="color: inherit; text-decoration: inherit;">Tunnel2Rekey<wbr>Fuzz<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The percentage of the rekey window for the second VPN tunnel (determined by `tunnel2_rekey_margin_time_seconds`) during which the rekey time is randomly selected. Valid value is between `0` and `100`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2rekeymargintimeseconds_csharp">
+<a href="#tunnel2rekeymargintimeseconds_csharp" style="color: inherit; text-decoration: inherit;">Tunnel2Rekey<wbr>Margin<wbr>Time<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The margin time, in seconds, before the phase 2 lifetime expires, during which the AWS side of the second VPN connection performs an IKE rekey. The exact time of the rekey is randomly selected based on the value for `tunnel2_rekey_fuzz_percentage`. Valid value is between `60` and half of `tunnel2_phase2_lifetime_seconds`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2replaywindowsize_csharp">
+<a href="#tunnel2replaywindowsize_csharp" style="color: inherit; text-decoration: inherit;">Tunnel2Replay<wbr>Window<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of packets in an IKE replay window for the second VPN tunnel. Valid value is between `64` and `2048`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2startupaction_csharp">
+<a href="#tunnel2startupaction_csharp" style="color: inherit; text-decoration: inherit;">Tunnel2Startup<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The action to take when the establishing the tunnel for the second VPN connection. By default, your customer gateway device must initiate the IKE negotiation and bring up the tunnel. Specify start for AWS to initiate the IKE negotiation. Valid values are `add | start`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnelinsideipversion_csharp">
+<a href="#tunnelinsideipversion_csharp" style="color: inherit; text-decoration: inherit;">Tunnel<wbr>Inside<wbr>Ip<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicate whether the VPN tunnels process IPv4 or IPv6 traffic. Valid values are `ipv4 | ipv6`. `ipv6` Supports only EC2 Transit Gateway.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -570,6 +950,56 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="enableacceleration_go">
+<a href="#enableacceleration_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Acceleration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicate whether to enable acceleration for the VPN connection. Supports only EC2 Transit Gateway.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="localipv4networkcidr_go">
+<a href="#localipv4networkcidr_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Ipv4Network<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR on the customer gateway (on-premises) side of the VPN connection.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="localipv6networkcidr_go">
+<a href="#localipv6networkcidr_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Ipv6Network<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IPv6 CIDR on the customer gateway (on-premises) side of the VPN connection.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="remoteipv4networkcidr_go">
+<a href="#remoteipv4networkcidr_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Ipv4Network<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR on the AWS side of the VPN connection.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="remoteipv6networkcidr_go">
+<a href="#remoteipv6networkcidr_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Ipv6Network<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IPv6 CIDR on the customer gateway (on-premises) side of the VPN connection.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="staticroutesonly_go">
 <a href="#staticroutesonly_go" style="color: inherit; text-decoration: inherit;">Static<wbr>Routes<wbr>Only</a>
 </span>
@@ -600,13 +1030,133 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="tunnel1dpdtimeoutaction_go">
+<a href="#tunnel1dpdtimeoutaction_go" style="color: inherit; text-decoration: inherit;">Tunnel1Dpd<wbr>Timeout<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The action to take after DPD timeout occurs for the first VPN tunnel. Specify restart to restart the IKE initiation. Specify clear to end the IKE session. Valid values are `clear | none | restart`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1dpdtimeoutseconds_go">
+<a href="#tunnel1dpdtimeoutseconds_go" style="color: inherit; text-decoration: inherit;">Tunnel1Dpd<wbr>Timeout<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of seconds after which a DPD timeout occurs for the first VPN tunnel. Valid value is equal or higher than `30`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1ikeversions_go">
+<a href="#tunnel1ikeversions_go" style="color: inherit; text-decoration: inherit;">Tunnel1Ike<wbr>Versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The IKE versions that are permitted for the first VPN tunnel. Valid values are `ikev1 | ikev2`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tunnel1insidecidr_go">
 <a href="#tunnel1insidecidr_go" style="color: inherit; text-decoration: inherit;">Tunnel1Inside<wbr>Cidr</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CIDR block of the inside IP addresses for the first VPN tunnel.
+    <dd>{{% md %}}The CIDR block of the inside IP addresses for the first VPN tunnel. Valid value is a size /30 CIDR block from the 169.254.0.0/16 range.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1insideipv6cidr_go">
+<a href="#tunnel1insideipv6cidr_go" style="color: inherit; text-decoration: inherit;">Tunnel1Inside<wbr>Ipv6Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The range of inside IPv6 addresses for the first VPN tunnel. Supports only EC2 Transit Gateway. Valid value is a size /126 CIDR block from the local fd00::/8 range.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1phase1dhgroupnumbers_go">
+<a href="#tunnel1phase1dhgroupnumbers_go" style="color: inherit; text-decoration: inherit;">Tunnel1Phase1Dh<wbr>Group<wbr>Numbers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]int</span>
+    </dt>
+    <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are ` 2 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1phase1encryptionalgorithms_go">
+<a href="#tunnel1phase1encryptionalgorithms_go" style="color: inherit; text-decoration: inherit;">Tunnel1Phase1Encryption<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1phase1integrityalgorithms_go">
+<a href="#tunnel1phase1integrityalgorithms_go" style="color: inherit; text-decoration: inherit;">Tunnel1Phase1Integrity<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}One or more integrity algorithms that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1phase1lifetimeseconds_go">
+<a href="#tunnel1phase1lifetimeseconds_go" style="color: inherit; text-decoration: inherit;">Tunnel1Phase1Lifetime<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The lifetime for phase 1 of the IKE negotiation for the first VPN tunnel, in seconds. Valid value is between `900` and `28800`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1phase2dhgroupnumbers_go">
+<a href="#tunnel1phase2dhgroupnumbers_go" style="color: inherit; text-decoration: inherit;">Tunnel1Phase2Dh<wbr>Group<wbr>Numbers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]int</span>
+    </dt>
+    <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `2 | 5 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1phase2encryptionalgorithms_go">
+<a href="#tunnel1phase2encryptionalgorithms_go" style="color: inherit; text-decoration: inherit;">Tunnel1Phase2Encryption<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1phase2integrityalgorithms_go">
+<a href="#tunnel1phase2integrityalgorithms_go" style="color: inherit; text-decoration: inherit;">Tunnel1Phase2Integrity<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of one or more integrity algorithms that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1phase2lifetimeseconds_go">
+<a href="#tunnel1phase2lifetimeseconds_go" style="color: inherit; text-decoration: inherit;">Tunnel1Phase2Lifetime<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The lifetime for phase 2 of the IKE negotiation for the first VPN tunnel, in seconds. Valid value is between `900` and `3600`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -616,7 +1166,77 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The preshared key of the first VPN tunnel.
+    <dd>{{% md %}}The preshared key of the first VPN tunnel. The preshared key must be between 8 and 64 characters in length and cannot start with zero(0). Allowed characters are alphanumeric characters, periods(.) and underscores(_).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1rekeyfuzzpercentage_go">
+<a href="#tunnel1rekeyfuzzpercentage_go" style="color: inherit; text-decoration: inherit;">Tunnel1Rekey<wbr>Fuzz<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The percentage of the rekey window for the first VPN tunnel (determined by `tunnel1_rekey_margin_time_seconds`) during which the rekey time is randomly selected. Valid value is between `0` and `100`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1rekeymargintimeseconds_go">
+<a href="#tunnel1rekeymargintimeseconds_go" style="color: inherit; text-decoration: inherit;">Tunnel1Rekey<wbr>Margin<wbr>Time<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The margin time, in seconds, before the phase 2 lifetime expires, during which the AWS side of the first VPN connection performs an IKE rekey. The exact time of the rekey is randomly selected based on the value for `tunnel1_rekey_fuzz_percentage`. Valid value is between `60` and half of `tunnel1_phase2_lifetime_seconds`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1replaywindowsize_go">
+<a href="#tunnel1replaywindowsize_go" style="color: inherit; text-decoration: inherit;">Tunnel1Replay<wbr>Window<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of packets in an IKE replay window for the first VPN tunnel. Valid value is between `64` and `2048`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1startupaction_go">
+<a href="#tunnel1startupaction_go" style="color: inherit; text-decoration: inherit;">Tunnel1Startup<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The action to take when the establishing the tunnel for the first VPN connection. By default, your customer gateway device must initiate the IKE negotiation and bring up the tunnel. Specify start for AWS to initiate the IKE negotiation. Valid values are `add | start`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2dpdtimeoutaction_go">
+<a href="#tunnel2dpdtimeoutaction_go" style="color: inherit; text-decoration: inherit;">Tunnel2Dpd<wbr>Timeout<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The action to take after DPD timeout occurs for the second VPN tunnel. Specify restart to restart the IKE initiation. Specify clear to end the IKE session. Valid values are `clear | none | restart`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2dpdtimeoutseconds_go">
+<a href="#tunnel2dpdtimeoutseconds_go" style="color: inherit; text-decoration: inherit;">Tunnel2Dpd<wbr>Timeout<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of seconds after which a DPD timeout occurs for the second VPN tunnel. Valid value is equal or higher than `30`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2ikeversions_go">
+<a href="#tunnel2ikeversions_go" style="color: inherit; text-decoration: inherit;">Tunnel2Ike<wbr>Versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The IKE versions that are permitted for the second VPN tunnel. Valid values are `ikev1 | ikev2`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -626,7 +1246,97 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CIDR block of the inside IP addresses for the second VPN tunnel.
+    <dd>{{% md %}}The CIDR block of the inside IP addresses for the second VPN tunnel. Valid value is a size /30 CIDR block from the 169.254.0.0/16 range.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2insideipv6cidr_go">
+<a href="#tunnel2insideipv6cidr_go" style="color: inherit; text-decoration: inherit;">Tunnel2Inside<wbr>Ipv6Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The range of inside IPv6 addresses for the second VPN tunnel. Supports only EC2 Transit Gateway. Valid value is a size /126 CIDR block from the local fd00::/8 range.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2phase1dhgroupnumbers_go">
+<a href="#tunnel2phase1dhgroupnumbers_go" style="color: inherit; text-decoration: inherit;">Tunnel2Phase1Dh<wbr>Group<wbr>Numbers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]int</span>
+    </dt>
+    <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are ` 2 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2phase1encryptionalgorithms_go">
+<a href="#tunnel2phase1encryptionalgorithms_go" style="color: inherit; text-decoration: inherit;">Tunnel2Phase1Encryption<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2phase1integrityalgorithms_go">
+<a href="#tunnel2phase1integrityalgorithms_go" style="color: inherit; text-decoration: inherit;">Tunnel2Phase1Integrity<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}One or more integrity algorithms that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2phase1lifetimeseconds_go">
+<a href="#tunnel2phase1lifetimeseconds_go" style="color: inherit; text-decoration: inherit;">Tunnel2Phase1Lifetime<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The lifetime for phase 1 of the IKE negotiation for the second VPN tunnel, in seconds. Valid value is between `900` and `28800`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2phase2dhgroupnumbers_go">
+<a href="#tunnel2phase2dhgroupnumbers_go" style="color: inherit; text-decoration: inherit;">Tunnel2Phase2Dh<wbr>Group<wbr>Numbers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]int</span>
+    </dt>
+    <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `2 | 5 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2phase2encryptionalgorithms_go">
+<a href="#tunnel2phase2encryptionalgorithms_go" style="color: inherit; text-decoration: inherit;">Tunnel2Phase2Encryption<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2phase2integrityalgorithms_go">
+<a href="#tunnel2phase2integrityalgorithms_go" style="color: inherit; text-decoration: inherit;">Tunnel2Phase2Integrity<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of one or more integrity algorithms that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2phase2lifetimeseconds_go">
+<a href="#tunnel2phase2lifetimeseconds_go" style="color: inherit; text-decoration: inherit;">Tunnel2Phase2Lifetime<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The lifetime for phase 2 of the IKE negotiation for the second VPN tunnel, in seconds. Valid value is between `900` and `3600`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -636,7 +1346,57 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The preshared key of the second VPN tunnel.
+    <dd>{{% md %}}The preshared key of the second VPN tunnel. The preshared key must be between 8 and 64 characters in length and cannot start with zero(0). Allowed characters are alphanumeric characters, periods(.) and underscores(_).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2rekeyfuzzpercentage_go">
+<a href="#tunnel2rekeyfuzzpercentage_go" style="color: inherit; text-decoration: inherit;">Tunnel2Rekey<wbr>Fuzz<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The percentage of the rekey window for the second VPN tunnel (determined by `tunnel2_rekey_margin_time_seconds`) during which the rekey time is randomly selected. Valid value is between `0` and `100`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2rekeymargintimeseconds_go">
+<a href="#tunnel2rekeymargintimeseconds_go" style="color: inherit; text-decoration: inherit;">Tunnel2Rekey<wbr>Margin<wbr>Time<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The margin time, in seconds, before the phase 2 lifetime expires, during which the AWS side of the second VPN connection performs an IKE rekey. The exact time of the rekey is randomly selected based on the value for `tunnel2_rekey_fuzz_percentage`. Valid value is between `60` and half of `tunnel2_phase2_lifetime_seconds`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2replaywindowsize_go">
+<a href="#tunnel2replaywindowsize_go" style="color: inherit; text-decoration: inherit;">Tunnel2Replay<wbr>Window<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of packets in an IKE replay window for the second VPN tunnel. Valid value is between `64` and `2048`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2startupaction_go">
+<a href="#tunnel2startupaction_go" style="color: inherit; text-decoration: inherit;">Tunnel2Startup<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The action to take when the establishing the tunnel for the second VPN connection. By default, your customer gateway device must initiate the IKE negotiation and bring up the tunnel. Specify start for AWS to initiate the IKE negotiation. Valid values are `add | start`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnelinsideipversion_go">
+<a href="#tunnelinsideipversion_go" style="color: inherit; text-decoration: inherit;">Tunnel<wbr>Inside<wbr>Ip<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicate whether the VPN tunnels process IPv4 or IPv6 traffic. Valid values are `ipv4 | ipv6`. `ipv6` Supports only EC2 Transit Gateway.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -676,6 +1436,56 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="enableacceleration_nodejs">
+<a href="#enableacceleration_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Acceleration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicate whether to enable acceleration for the VPN connection. Supports only EC2 Transit Gateway.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="localipv4networkcidr_nodejs">
+<a href="#localipv4networkcidr_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Ipv4Network<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR on the customer gateway (on-premises) side of the VPN connection.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="localipv6networkcidr_nodejs">
+<a href="#localipv6networkcidr_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Ipv6Network<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IPv6 CIDR on the customer gateway (on-premises) side of the VPN connection.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="remoteipv4networkcidr_nodejs">
+<a href="#remoteipv4networkcidr_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Ipv4Network<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR on the AWS side of the VPN connection.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="remoteipv6networkcidr_nodejs">
+<a href="#remoteipv6networkcidr_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Ipv6Network<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IPv6 CIDR on the customer gateway (on-premises) side of the VPN connection.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="staticroutesonly_nodejs">
 <a href="#staticroutesonly_nodejs" style="color: inherit; text-decoration: inherit;">static<wbr>Routes<wbr>Only</a>
 </span>
@@ -706,13 +1516,133 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="tunnel1dpdtimeoutaction_nodejs">
+<a href="#tunnel1dpdtimeoutaction_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Dpd<wbr>Timeout<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The action to take after DPD timeout occurs for the first VPN tunnel. Specify restart to restart the IKE initiation. Specify clear to end the IKE session. Valid values are `clear | none | restart`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1dpdtimeoutseconds_nodejs">
+<a href="#tunnel1dpdtimeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Dpd<wbr>Timeout<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of seconds after which a DPD timeout occurs for the first VPN tunnel. Valid value is equal or higher than `30`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1ikeversions_nodejs">
+<a href="#tunnel1ikeversions_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Ike<wbr>Versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The IKE versions that are permitted for the first VPN tunnel. Valid values are `ikev1 | ikev2`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tunnel1insidecidr_nodejs">
 <a href="#tunnel1insidecidr_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Inside<wbr>Cidr</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CIDR block of the inside IP addresses for the first VPN tunnel.
+    <dd>{{% md %}}The CIDR block of the inside IP addresses for the first VPN tunnel. Valid value is a size /30 CIDR block from the 169.254.0.0/16 range.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1insideipv6cidr_nodejs">
+<a href="#tunnel1insideipv6cidr_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Inside<wbr>Ipv6Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The range of inside IPv6 addresses for the first VPN tunnel. Supports only EC2 Transit Gateway. Valid value is a size /126 CIDR block from the local fd00::/8 range.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1phase1dhgroupnumbers_nodejs">
+<a href="#tunnel1phase1dhgroupnumbers_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Phase1Dh<wbr>Group<wbr>Numbers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number[]</span>
+    </dt>
+    <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are ` 2 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1phase1encryptionalgorithms_nodejs">
+<a href="#tunnel1phase1encryptionalgorithms_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Phase1Encryption<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1phase1integrityalgorithms_nodejs">
+<a href="#tunnel1phase1integrityalgorithms_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Phase1Integrity<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}One or more integrity algorithms that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1phase1lifetimeseconds_nodejs">
+<a href="#tunnel1phase1lifetimeseconds_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Phase1Lifetime<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The lifetime for phase 1 of the IKE negotiation for the first VPN tunnel, in seconds. Valid value is between `900` and `28800`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1phase2dhgroupnumbers_nodejs">
+<a href="#tunnel1phase2dhgroupnumbers_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Phase2Dh<wbr>Group<wbr>Numbers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number[]</span>
+    </dt>
+    <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `2 | 5 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1phase2encryptionalgorithms_nodejs">
+<a href="#tunnel1phase2encryptionalgorithms_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Phase2Encryption<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1phase2integrityalgorithms_nodejs">
+<a href="#tunnel1phase2integrityalgorithms_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Phase2Integrity<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of one or more integrity algorithms that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1phase2lifetimeseconds_nodejs">
+<a href="#tunnel1phase2lifetimeseconds_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Phase2Lifetime<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The lifetime for phase 2 of the IKE negotiation for the first VPN tunnel, in seconds. Valid value is between `900` and `3600`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -722,7 +1652,77 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The preshared key of the first VPN tunnel.
+    <dd>{{% md %}}The preshared key of the first VPN tunnel. The preshared key must be between 8 and 64 characters in length and cannot start with zero(0). Allowed characters are alphanumeric characters, periods(.) and underscores(_).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1rekeyfuzzpercentage_nodejs">
+<a href="#tunnel1rekeyfuzzpercentage_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Rekey<wbr>Fuzz<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The percentage of the rekey window for the first VPN tunnel (determined by `tunnel1_rekey_margin_time_seconds`) during which the rekey time is randomly selected. Valid value is between `0` and `100`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1rekeymargintimeseconds_nodejs">
+<a href="#tunnel1rekeymargintimeseconds_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Rekey<wbr>Margin<wbr>Time<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The margin time, in seconds, before the phase 2 lifetime expires, during which the AWS side of the first VPN connection performs an IKE rekey. The exact time of the rekey is randomly selected based on the value for `tunnel1_rekey_fuzz_percentage`. Valid value is between `60` and half of `tunnel1_phase2_lifetime_seconds`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1replaywindowsize_nodejs">
+<a href="#tunnel1replaywindowsize_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Replay<wbr>Window<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of packets in an IKE replay window for the first VPN tunnel. Valid value is between `64` and `2048`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1startupaction_nodejs">
+<a href="#tunnel1startupaction_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Startup<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The action to take when the establishing the tunnel for the first VPN connection. By default, your customer gateway device must initiate the IKE negotiation and bring up the tunnel. Specify start for AWS to initiate the IKE negotiation. Valid values are `add | start`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2dpdtimeoutaction_nodejs">
+<a href="#tunnel2dpdtimeoutaction_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Dpd<wbr>Timeout<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The action to take after DPD timeout occurs for the second VPN tunnel. Specify restart to restart the IKE initiation. Specify clear to end the IKE session. Valid values are `clear | none | restart`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2dpdtimeoutseconds_nodejs">
+<a href="#tunnel2dpdtimeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Dpd<wbr>Timeout<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of seconds after which a DPD timeout occurs for the second VPN tunnel. Valid value is equal or higher than `30`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2ikeversions_nodejs">
+<a href="#tunnel2ikeversions_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Ike<wbr>Versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The IKE versions that are permitted for the second VPN tunnel. Valid values are `ikev1 | ikev2`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -732,7 +1732,97 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CIDR block of the inside IP addresses for the second VPN tunnel.
+    <dd>{{% md %}}The CIDR block of the inside IP addresses for the second VPN tunnel. Valid value is a size /30 CIDR block from the 169.254.0.0/16 range.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2insideipv6cidr_nodejs">
+<a href="#tunnel2insideipv6cidr_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Inside<wbr>Ipv6Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The range of inside IPv6 addresses for the second VPN tunnel. Supports only EC2 Transit Gateway. Valid value is a size /126 CIDR block from the local fd00::/8 range.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2phase1dhgroupnumbers_nodejs">
+<a href="#tunnel2phase1dhgroupnumbers_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Phase1Dh<wbr>Group<wbr>Numbers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number[]</span>
+    </dt>
+    <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are ` 2 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2phase1encryptionalgorithms_nodejs">
+<a href="#tunnel2phase1encryptionalgorithms_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Phase1Encryption<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2phase1integrityalgorithms_nodejs">
+<a href="#tunnel2phase1integrityalgorithms_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Phase1Integrity<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}One or more integrity algorithms that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2phase1lifetimeseconds_nodejs">
+<a href="#tunnel2phase1lifetimeseconds_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Phase1Lifetime<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The lifetime for phase 1 of the IKE negotiation for the second VPN tunnel, in seconds. Valid value is between `900` and `28800`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2phase2dhgroupnumbers_nodejs">
+<a href="#tunnel2phase2dhgroupnumbers_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Phase2Dh<wbr>Group<wbr>Numbers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number[]</span>
+    </dt>
+    <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `2 | 5 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2phase2encryptionalgorithms_nodejs">
+<a href="#tunnel2phase2encryptionalgorithms_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Phase2Encryption<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2phase2integrityalgorithms_nodejs">
+<a href="#tunnel2phase2integrityalgorithms_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Phase2Integrity<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of one or more integrity algorithms that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2phase2lifetimeseconds_nodejs">
+<a href="#tunnel2phase2lifetimeseconds_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Phase2Lifetime<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The lifetime for phase 2 of the IKE negotiation for the second VPN tunnel, in seconds. Valid value is between `900` and `3600`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -742,7 +1832,57 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The preshared key of the second VPN tunnel.
+    <dd>{{% md %}}The preshared key of the second VPN tunnel. The preshared key must be between 8 and 64 characters in length and cannot start with zero(0). Allowed characters are alphanumeric characters, periods(.) and underscores(_).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2rekeyfuzzpercentage_nodejs">
+<a href="#tunnel2rekeyfuzzpercentage_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Rekey<wbr>Fuzz<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The percentage of the rekey window for the second VPN tunnel (determined by `tunnel2_rekey_margin_time_seconds`) during which the rekey time is randomly selected. Valid value is between `0` and `100`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2rekeymargintimeseconds_nodejs">
+<a href="#tunnel2rekeymargintimeseconds_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Rekey<wbr>Margin<wbr>Time<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The margin time, in seconds, before the phase 2 lifetime expires, during which the AWS side of the second VPN connection performs an IKE rekey. The exact time of the rekey is randomly selected based on the value for `tunnel2_rekey_fuzz_percentage`. Valid value is between `60` and half of `tunnel2_phase2_lifetime_seconds`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2replaywindowsize_nodejs">
+<a href="#tunnel2replaywindowsize_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Replay<wbr>Window<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of packets in an IKE replay window for the second VPN tunnel. Valid value is between `64` and `2048`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2startupaction_nodejs">
+<a href="#tunnel2startupaction_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Startup<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The action to take when the establishing the tunnel for the second VPN connection. By default, your customer gateway device must initiate the IKE negotiation and bring up the tunnel. Specify start for AWS to initiate the IKE negotiation. Valid values are `add | start`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnelinsideipversion_nodejs">
+<a href="#tunnelinsideipversion_nodejs" style="color: inherit; text-decoration: inherit;">tunnel<wbr>Inside<wbr>Ip<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicate whether the VPN tunnels process IPv4 or IPv6 traffic. Valid values are `ipv4 | ipv6`. `ipv6` Supports only EC2 Transit Gateway.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -782,6 +1922,56 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="enable_acceleration_python">
+<a href="#enable_acceleration_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>acceleration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicate whether to enable acceleration for the VPN connection. Supports only EC2 Transit Gateway.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="local_ipv4_network_cidr_python">
+<a href="#local_ipv4_network_cidr_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ipv4_<wbr>network_<wbr>cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR on the customer gateway (on-premises) side of the VPN connection.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="local_ipv6_network_cidr_python">
+<a href="#local_ipv6_network_cidr_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ipv6_<wbr>network_<wbr>cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The IPv6 CIDR on the customer gateway (on-premises) side of the VPN connection.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="remote_ipv4_network_cidr_python">
+<a href="#remote_ipv4_network_cidr_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>ipv4_<wbr>network_<wbr>cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR on the AWS side of the VPN connection.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="remote_ipv6_network_cidr_python">
+<a href="#remote_ipv6_network_cidr_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>ipv6_<wbr>network_<wbr>cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The IPv6 CIDR on the customer gateway (on-premises) side of the VPN connection.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="static_routes_only_python">
 <a href="#static_routes_only_python" style="color: inherit; text-decoration: inherit;">static_<wbr>routes_<wbr>only</a>
 </span>
@@ -812,13 +2002,133 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="tunnel1_dpd_timeout_action_python">
+<a href="#tunnel1_dpd_timeout_action_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>dpd_<wbr>timeout_<wbr>action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The action to take after DPD timeout occurs for the first VPN tunnel. Specify restart to restart the IKE initiation. Specify clear to end the IKE session. Valid values are `clear | none | restart`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1_dpd_timeout_seconds_python">
+<a href="#tunnel1_dpd_timeout_seconds_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>dpd_<wbr>timeout_<wbr>seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of seconds after which a DPD timeout occurs for the first VPN tunnel. Valid value is equal or higher than `30`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1_ike_versions_python">
+<a href="#tunnel1_ike_versions_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>ike_<wbr>versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The IKE versions that are permitted for the first VPN tunnel. Valid values are `ikev1 | ikev2`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tunnel1_inside_cidr_python">
 <a href="#tunnel1_inside_cidr_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>inside_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The CIDR block of the inside IP addresses for the first VPN tunnel.
+    <dd>{{% md %}}The CIDR block of the inside IP addresses for the first VPN tunnel. Valid value is a size /30 CIDR block from the 169.254.0.0/16 range.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1_inside_ipv6_cidr_python">
+<a href="#tunnel1_inside_ipv6_cidr_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>inside_<wbr>ipv6_<wbr>cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The range of inside IPv6 addresses for the first VPN tunnel. Supports only EC2 Transit Gateway. Valid value is a size /126 CIDR block from the local fd00::/8 range.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1_phase1_dh_group_numbers_python">
+<a href="#tunnel1_phase1_dh_group_numbers_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>phase1_<wbr>dh_<wbr>group_<wbr>numbers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[int]</span>
+    </dt>
+    <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are ` 2 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1_phase1_encryption_algorithms_python">
+<a href="#tunnel1_phase1_encryption_algorithms_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>phase1_<wbr>encryption_<wbr>algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1_phase1_integrity_algorithms_python">
+<a href="#tunnel1_phase1_integrity_algorithms_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>phase1_<wbr>integrity_<wbr>algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}One or more integrity algorithms that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1_phase1_lifetime_seconds_python">
+<a href="#tunnel1_phase1_lifetime_seconds_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>phase1_<wbr>lifetime_<wbr>seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The lifetime for phase 1 of the IKE negotiation for the first VPN tunnel, in seconds. Valid value is between `900` and `28800`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1_phase2_dh_group_numbers_python">
+<a href="#tunnel1_phase2_dh_group_numbers_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>phase2_<wbr>dh_<wbr>group_<wbr>numbers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[int]</span>
+    </dt>
+    <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `2 | 5 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1_phase2_encryption_algorithms_python">
+<a href="#tunnel1_phase2_encryption_algorithms_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>phase2_<wbr>encryption_<wbr>algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1_phase2_integrity_algorithms_python">
+<a href="#tunnel1_phase2_integrity_algorithms_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>phase2_<wbr>integrity_<wbr>algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of one or more integrity algorithms that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1_phase2_lifetime_seconds_python">
+<a href="#tunnel1_phase2_lifetime_seconds_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>phase2_<wbr>lifetime_<wbr>seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The lifetime for phase 2 of the IKE negotiation for the first VPN tunnel, in seconds. Valid value is between `900` and `3600`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -828,7 +2138,77 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The preshared key of the first VPN tunnel.
+    <dd>{{% md %}}The preshared key of the first VPN tunnel. The preshared key must be between 8 and 64 characters in length and cannot start with zero(0). Allowed characters are alphanumeric characters, periods(.) and underscores(_).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1_rekey_fuzz_percentage_python">
+<a href="#tunnel1_rekey_fuzz_percentage_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>rekey_<wbr>fuzz_<wbr>percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The percentage of the rekey window for the first VPN tunnel (determined by `tunnel1_rekey_margin_time_seconds`) during which the rekey time is randomly selected. Valid value is between `0` and `100`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1_rekey_margin_time_seconds_python">
+<a href="#tunnel1_rekey_margin_time_seconds_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>rekey_<wbr>margin_<wbr>time_<wbr>seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The margin time, in seconds, before the phase 2 lifetime expires, during which the AWS side of the first VPN connection performs an IKE rekey. The exact time of the rekey is randomly selected based on the value for `tunnel1_rekey_fuzz_percentage`. Valid value is between `60` and half of `tunnel1_phase2_lifetime_seconds`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1_replay_window_size_python">
+<a href="#tunnel1_replay_window_size_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>replay_<wbr>window_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of packets in an IKE replay window for the first VPN tunnel. Valid value is between `64` and `2048`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel1_startup_action_python">
+<a href="#tunnel1_startup_action_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>startup_<wbr>action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The action to take when the establishing the tunnel for the first VPN connection. By default, your customer gateway device must initiate the IKE negotiation and bring up the tunnel. Specify start for AWS to initiate the IKE negotiation. Valid values are `add | start`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2_dpd_timeout_action_python">
+<a href="#tunnel2_dpd_timeout_action_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>dpd_<wbr>timeout_<wbr>action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The action to take after DPD timeout occurs for the second VPN tunnel. Specify restart to restart the IKE initiation. Specify clear to end the IKE session. Valid values are `clear | none | restart`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2_dpd_timeout_seconds_python">
+<a href="#tunnel2_dpd_timeout_seconds_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>dpd_<wbr>timeout_<wbr>seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of seconds after which a DPD timeout occurs for the second VPN tunnel. Valid value is equal or higher than `30`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2_ike_versions_python">
+<a href="#tunnel2_ike_versions_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>ike_<wbr>versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The IKE versions that are permitted for the second VPN tunnel. Valid values are `ikev1 | ikev2`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -838,7 +2218,97 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The CIDR block of the inside IP addresses for the second VPN tunnel.
+    <dd>{{% md %}}The CIDR block of the inside IP addresses for the second VPN tunnel. Valid value is a size /30 CIDR block from the 169.254.0.0/16 range.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2_inside_ipv6_cidr_python">
+<a href="#tunnel2_inside_ipv6_cidr_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>inside_<wbr>ipv6_<wbr>cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The range of inside IPv6 addresses for the second VPN tunnel. Supports only EC2 Transit Gateway. Valid value is a size /126 CIDR block from the local fd00::/8 range.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2_phase1_dh_group_numbers_python">
+<a href="#tunnel2_phase1_dh_group_numbers_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>phase1_<wbr>dh_<wbr>group_<wbr>numbers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[int]</span>
+    </dt>
+    <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are ` 2 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2_phase1_encryption_algorithms_python">
+<a href="#tunnel2_phase1_encryption_algorithms_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>phase1_<wbr>encryption_<wbr>algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2_phase1_integrity_algorithms_python">
+<a href="#tunnel2_phase1_integrity_algorithms_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>phase1_<wbr>integrity_<wbr>algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}One or more integrity algorithms that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2_phase1_lifetime_seconds_python">
+<a href="#tunnel2_phase1_lifetime_seconds_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>phase1_<wbr>lifetime_<wbr>seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The lifetime for phase 1 of the IKE negotiation for the second VPN tunnel, in seconds. Valid value is between `900` and `28800`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2_phase2_dh_group_numbers_python">
+<a href="#tunnel2_phase2_dh_group_numbers_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>phase2_<wbr>dh_<wbr>group_<wbr>numbers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[int]</span>
+    </dt>
+    <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `2 | 5 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2_phase2_encryption_algorithms_python">
+<a href="#tunnel2_phase2_encryption_algorithms_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>phase2_<wbr>encryption_<wbr>algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2_phase2_integrity_algorithms_python">
+<a href="#tunnel2_phase2_integrity_algorithms_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>phase2_<wbr>integrity_<wbr>algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of one or more integrity algorithms that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2_phase2_lifetime_seconds_python">
+<a href="#tunnel2_phase2_lifetime_seconds_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>phase2_<wbr>lifetime_<wbr>seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The lifetime for phase 2 of the IKE negotiation for the second VPN tunnel, in seconds. Valid value is between `900` and `3600`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -848,7 +2318,57 @@ The VpnConnection resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The preshared key of the second VPN tunnel.
+    <dd>{{% md %}}The preshared key of the second VPN tunnel. The preshared key must be between 8 and 64 characters in length and cannot start with zero(0). Allowed characters are alphanumeric characters, periods(.) and underscores(_).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2_rekey_fuzz_percentage_python">
+<a href="#tunnel2_rekey_fuzz_percentage_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>rekey_<wbr>fuzz_<wbr>percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The percentage of the rekey window for the second VPN tunnel (determined by `tunnel2_rekey_margin_time_seconds`) during which the rekey time is randomly selected. Valid value is between `0` and `100`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2_rekey_margin_time_seconds_python">
+<a href="#tunnel2_rekey_margin_time_seconds_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>rekey_<wbr>margin_<wbr>time_<wbr>seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The margin time, in seconds, before the phase 2 lifetime expires, during which the AWS side of the second VPN connection performs an IKE rekey. The exact time of the rekey is randomly selected based on the value for `tunnel2_rekey_fuzz_percentage`. Valid value is between `60` and half of `tunnel2_phase2_lifetime_seconds`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2_replay_window_size_python">
+<a href="#tunnel2_replay_window_size_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>replay_<wbr>window_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of packets in an IKE replay window for the second VPN tunnel. Valid value is between `64` and `2048`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel2_startup_action_python">
+<a href="#tunnel2_startup_action_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>startup_<wbr>action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The action to take when the establishing the tunnel for the second VPN connection. By default, your customer gateway device must initiate the IKE negotiation and bring up the tunnel. Specify start for AWS to initiate the IKE negotiation. Valid values are `add | start`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel_inside_ip_version_python">
+<a href="#tunnel_inside_ip_version_python" style="color: inherit; text-decoration: inherit;">tunnel_<wbr>inside_<wbr>ip_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Indicate whether the VPN tunnels process IPv4 or IPv6 traffic. Valid values are `ipv4 | ipv6`. `ipv6` Supports only EC2 Transit Gateway.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1535,7 +3055,7 @@ Get an existing VpnConnection resource's state with the given name, ID, and opti
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">customer_gateway_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">customer_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routes</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnConnectionRouteArgs]]</span> = None<span class="p">, </span><span class="nx">static_routes_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">transit_gateway_attachment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">transit_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel1_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel1_bgp_asn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel1_bgp_holdtime</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel1_cgw_inside_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel1_inside_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel1_preshared_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel1_vgw_inside_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel2_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel2_bgp_asn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel2_bgp_holdtime</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel2_cgw_inside_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel2_inside_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel2_preshared_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel2_vgw_inside_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vgw_telemetries</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnConnectionVgwTelemetryArgs]]</span> = None<span class="p">, </span><span class="nx">vpn_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> VpnConnection</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">customer_gateway_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">customer_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_acceleration</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">local_ipv4_network_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">local_ipv6_network_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remote_ipv4_network_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remote_ipv6_network_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routes</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnConnectionRouteArgs]]</span> = None<span class="p">, </span><span class="nx">static_routes_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">transit_gateway_attachment_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">transit_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel1_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel1_bgp_asn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel1_bgp_holdtime</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel1_cgw_inside_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel1_dpd_timeout_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel1_dpd_timeout_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel1_ike_versions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tunnel1_inside_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel1_inside_ipv6_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel1_phase1_dh_group_numbers</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">, </span><span class="nx">tunnel1_phase1_encryption_algorithms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tunnel1_phase1_integrity_algorithms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tunnel1_phase1_lifetime_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel1_phase2_dh_group_numbers</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">, </span><span class="nx">tunnel1_phase2_encryption_algorithms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tunnel1_phase2_integrity_algorithms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tunnel1_phase2_lifetime_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel1_preshared_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel1_rekey_fuzz_percentage</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel1_rekey_margin_time_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel1_replay_window_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel1_startup_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel1_vgw_inside_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel2_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel2_bgp_asn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel2_bgp_holdtime</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel2_cgw_inside_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel2_dpd_timeout_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel2_dpd_timeout_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel2_ike_versions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tunnel2_inside_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel2_inside_ipv6_cidr</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel2_phase1_dh_group_numbers</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">, </span><span class="nx">tunnel2_phase1_encryption_algorithms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tunnel2_phase1_integrity_algorithms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tunnel2_phase1_lifetime_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel2_phase2_dh_group_numbers</span><span class="p">:</span> <span class="nx">Optional[Sequence[int]]</span> = None<span class="p">, </span><span class="nx">tunnel2_phase2_encryption_algorithms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tunnel2_phase2_integrity_algorithms</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tunnel2_phase2_lifetime_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel2_preshared_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel2_rekey_fuzz_percentage</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel2_rekey_margin_time_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel2_replay_window_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">tunnel2_startup_action</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel2_vgw_inside_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tunnel_inside_ip_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vgw_telemetries</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnConnectionVgwTelemetryArgs]]</span> = None<span class="p">, </span><span class="nx">vpn_gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> VpnConnection</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1680,6 +3200,56 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_enableacceleration_csharp">
+<a href="#state_enableacceleration_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Acceleration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicate whether to enable acceleration for the VPN connection. Supports only EC2 Transit Gateway.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_localipv4networkcidr_csharp">
+<a href="#state_localipv4networkcidr_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Ipv4Network<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR on the customer gateway (on-premises) side of the VPN connection.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_localipv6networkcidr_csharp">
+<a href="#state_localipv6networkcidr_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Ipv6Network<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IPv6 CIDR on the customer gateway (on-premises) side of the VPN connection.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_remoteipv4networkcidr_csharp">
+<a href="#state_remoteipv4networkcidr_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Ipv4Network<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR on the AWS side of the VPN connection.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_remoteipv6networkcidr_csharp">
+<a href="#state_remoteipv6networkcidr_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Ipv6Network<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IPv6 CIDR on the customer gateway (on-premises) side of the VPN connection.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_routes_csharp">
 <a href="#state_routes_csharp" style="color: inherit; text-decoration: inherit;">Routes</a>
 </span>
@@ -1769,13 +3339,133 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_tunnel1dpdtimeoutaction_csharp">
+<a href="#state_tunnel1dpdtimeoutaction_csharp" style="color: inherit; text-decoration: inherit;">Tunnel1Dpd<wbr>Timeout<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The action to take after DPD timeout occurs for the first VPN tunnel. Specify restart to restart the IKE initiation. Specify clear to end the IKE session. Valid values are `clear | none | restart`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1dpdtimeoutseconds_csharp">
+<a href="#state_tunnel1dpdtimeoutseconds_csharp" style="color: inherit; text-decoration: inherit;">Tunnel1Dpd<wbr>Timeout<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of seconds after which a DPD timeout occurs for the first VPN tunnel. Valid value is equal or higher than `30`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1ikeversions_csharp">
+<a href="#state_tunnel1ikeversions_csharp" style="color: inherit; text-decoration: inherit;">Tunnel1Ike<wbr>Versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The IKE versions that are permitted for the first VPN tunnel. Valid values are `ikev1 | ikev2`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tunnel1insidecidr_csharp">
 <a href="#state_tunnel1insidecidr_csharp" style="color: inherit; text-decoration: inherit;">Tunnel1Inside<wbr>Cidr</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CIDR block of the inside IP addresses for the first VPN tunnel.
+    <dd>{{% md %}}The CIDR block of the inside IP addresses for the first VPN tunnel. Valid value is a size /30 CIDR block from the 169.254.0.0/16 range.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1insideipv6cidr_csharp">
+<a href="#state_tunnel1insideipv6cidr_csharp" style="color: inherit; text-decoration: inherit;">Tunnel1Inside<wbr>Ipv6Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The range of inside IPv6 addresses for the first VPN tunnel. Supports only EC2 Transit Gateway. Valid value is a size /126 CIDR block from the local fd00::/8 range.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1phase1dhgroupnumbers_csharp">
+<a href="#state_tunnel1phase1dhgroupnumbers_csharp" style="color: inherit; text-decoration: inherit;">Tunnel1Phase1Dh<wbr>Group<wbr>Numbers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;int&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are ` 2 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1phase1encryptionalgorithms_csharp">
+<a href="#state_tunnel1phase1encryptionalgorithms_csharp" style="color: inherit; text-decoration: inherit;">Tunnel1Phase1Encryption<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1phase1integrityalgorithms_csharp">
+<a href="#state_tunnel1phase1integrityalgorithms_csharp" style="color: inherit; text-decoration: inherit;">Tunnel1Phase1Integrity<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}One or more integrity algorithms that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1phase1lifetimeseconds_csharp">
+<a href="#state_tunnel1phase1lifetimeseconds_csharp" style="color: inherit; text-decoration: inherit;">Tunnel1Phase1Lifetime<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The lifetime for phase 1 of the IKE negotiation for the first VPN tunnel, in seconds. Valid value is between `900` and `28800`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1phase2dhgroupnumbers_csharp">
+<a href="#state_tunnel1phase2dhgroupnumbers_csharp" style="color: inherit; text-decoration: inherit;">Tunnel1Phase2Dh<wbr>Group<wbr>Numbers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;int&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `2 | 5 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1phase2encryptionalgorithms_csharp">
+<a href="#state_tunnel1phase2encryptionalgorithms_csharp" style="color: inherit; text-decoration: inherit;">Tunnel1Phase2Encryption<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1phase2integrityalgorithms_csharp">
+<a href="#state_tunnel1phase2integrityalgorithms_csharp" style="color: inherit; text-decoration: inherit;">Tunnel1Phase2Integrity<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of one or more integrity algorithms that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1phase2lifetimeseconds_csharp">
+<a href="#state_tunnel1phase2lifetimeseconds_csharp" style="color: inherit; text-decoration: inherit;">Tunnel1Phase2Lifetime<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The lifetime for phase 2 of the IKE negotiation for the first VPN tunnel, in seconds. Valid value is between `900` and `3600`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1785,7 +3475,47 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The preshared key of the first VPN tunnel.
+    <dd>{{% md %}}The preshared key of the first VPN tunnel. The preshared key must be between 8 and 64 characters in length and cannot start with zero(0). Allowed characters are alphanumeric characters, periods(.) and underscores(_).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1rekeyfuzzpercentage_csharp">
+<a href="#state_tunnel1rekeyfuzzpercentage_csharp" style="color: inherit; text-decoration: inherit;">Tunnel1Rekey<wbr>Fuzz<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The percentage of the rekey window for the first VPN tunnel (determined by `tunnel1_rekey_margin_time_seconds`) during which the rekey time is randomly selected. Valid value is between `0` and `100`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1rekeymargintimeseconds_csharp">
+<a href="#state_tunnel1rekeymargintimeseconds_csharp" style="color: inherit; text-decoration: inherit;">Tunnel1Rekey<wbr>Margin<wbr>Time<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The margin time, in seconds, before the phase 2 lifetime expires, during which the AWS side of the first VPN connection performs an IKE rekey. The exact time of the rekey is randomly selected based on the value for `tunnel1_rekey_fuzz_percentage`. Valid value is between `60` and half of `tunnel1_phase2_lifetime_seconds`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1replaywindowsize_csharp">
+<a href="#state_tunnel1replaywindowsize_csharp" style="color: inherit; text-decoration: inherit;">Tunnel1Replay<wbr>Window<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of packets in an IKE replay window for the first VPN tunnel. Valid value is between `64` and `2048`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1startupaction_csharp">
+<a href="#state_tunnel1startupaction_csharp" style="color: inherit; text-decoration: inherit;">Tunnel1Startup<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The action to take when the establishing the tunnel for the first VPN connection. By default, your customer gateway device must initiate the IKE negotiation and bring up the tunnel. Specify start for AWS to initiate the IKE negotiation. Valid values are `add | start`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1839,13 +3569,133 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_tunnel2dpdtimeoutaction_csharp">
+<a href="#state_tunnel2dpdtimeoutaction_csharp" style="color: inherit; text-decoration: inherit;">Tunnel2Dpd<wbr>Timeout<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The action to take after DPD timeout occurs for the second VPN tunnel. Specify restart to restart the IKE initiation. Specify clear to end the IKE session. Valid values are `clear | none | restart`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2dpdtimeoutseconds_csharp">
+<a href="#state_tunnel2dpdtimeoutseconds_csharp" style="color: inherit; text-decoration: inherit;">Tunnel2Dpd<wbr>Timeout<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of seconds after which a DPD timeout occurs for the second VPN tunnel. Valid value is equal or higher than `30`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2ikeversions_csharp">
+<a href="#state_tunnel2ikeversions_csharp" style="color: inherit; text-decoration: inherit;">Tunnel2Ike<wbr>Versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The IKE versions that are permitted for the second VPN tunnel. Valid values are `ikev1 | ikev2`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tunnel2insidecidr_csharp">
 <a href="#state_tunnel2insidecidr_csharp" style="color: inherit; text-decoration: inherit;">Tunnel2Inside<wbr>Cidr</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CIDR block of the inside IP addresses for the second VPN tunnel.
+    <dd>{{% md %}}The CIDR block of the inside IP addresses for the second VPN tunnel. Valid value is a size /30 CIDR block from the 169.254.0.0/16 range.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2insideipv6cidr_csharp">
+<a href="#state_tunnel2insideipv6cidr_csharp" style="color: inherit; text-decoration: inherit;">Tunnel2Inside<wbr>Ipv6Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The range of inside IPv6 addresses for the second VPN tunnel. Supports only EC2 Transit Gateway. Valid value is a size /126 CIDR block from the local fd00::/8 range.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2phase1dhgroupnumbers_csharp">
+<a href="#state_tunnel2phase1dhgroupnumbers_csharp" style="color: inherit; text-decoration: inherit;">Tunnel2Phase1Dh<wbr>Group<wbr>Numbers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;int&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are ` 2 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2phase1encryptionalgorithms_csharp">
+<a href="#state_tunnel2phase1encryptionalgorithms_csharp" style="color: inherit; text-decoration: inherit;">Tunnel2Phase1Encryption<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2phase1integrityalgorithms_csharp">
+<a href="#state_tunnel2phase1integrityalgorithms_csharp" style="color: inherit; text-decoration: inherit;">Tunnel2Phase1Integrity<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}One or more integrity algorithms that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2phase1lifetimeseconds_csharp">
+<a href="#state_tunnel2phase1lifetimeseconds_csharp" style="color: inherit; text-decoration: inherit;">Tunnel2Phase1Lifetime<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The lifetime for phase 1 of the IKE negotiation for the second VPN tunnel, in seconds. Valid value is between `900` and `28800`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2phase2dhgroupnumbers_csharp">
+<a href="#state_tunnel2phase2dhgroupnumbers_csharp" style="color: inherit; text-decoration: inherit;">Tunnel2Phase2Dh<wbr>Group<wbr>Numbers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;int&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `2 | 5 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2phase2encryptionalgorithms_csharp">
+<a href="#state_tunnel2phase2encryptionalgorithms_csharp" style="color: inherit; text-decoration: inherit;">Tunnel2Phase2Encryption<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2phase2integrityalgorithms_csharp">
+<a href="#state_tunnel2phase2integrityalgorithms_csharp" style="color: inherit; text-decoration: inherit;">Tunnel2Phase2Integrity<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of one or more integrity algorithms that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2phase2lifetimeseconds_csharp">
+<a href="#state_tunnel2phase2lifetimeseconds_csharp" style="color: inherit; text-decoration: inherit;">Tunnel2Phase2Lifetime<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The lifetime for phase 2 of the IKE negotiation for the second VPN tunnel, in seconds. Valid value is between `900` and `3600`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1855,7 +3705,47 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The preshared key of the second VPN tunnel.
+    <dd>{{% md %}}The preshared key of the second VPN tunnel. The preshared key must be between 8 and 64 characters in length and cannot start with zero(0). Allowed characters are alphanumeric characters, periods(.) and underscores(_).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2rekeyfuzzpercentage_csharp">
+<a href="#state_tunnel2rekeyfuzzpercentage_csharp" style="color: inherit; text-decoration: inherit;">Tunnel2Rekey<wbr>Fuzz<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The percentage of the rekey window for the second VPN tunnel (determined by `tunnel2_rekey_margin_time_seconds`) during which the rekey time is randomly selected. Valid value is between `0` and `100`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2rekeymargintimeseconds_csharp">
+<a href="#state_tunnel2rekeymargintimeseconds_csharp" style="color: inherit; text-decoration: inherit;">Tunnel2Rekey<wbr>Margin<wbr>Time<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The margin time, in seconds, before the phase 2 lifetime expires, during which the AWS side of the second VPN connection performs an IKE rekey. The exact time of the rekey is randomly selected based on the value for `tunnel2_rekey_fuzz_percentage`. Valid value is between `60` and half of `tunnel2_phase2_lifetime_seconds`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2replaywindowsize_csharp">
+<a href="#state_tunnel2replaywindowsize_csharp" style="color: inherit; text-decoration: inherit;">Tunnel2Replay<wbr>Window<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of packets in an IKE replay window for the second VPN tunnel. Valid value is between `64` and `2048`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2startupaction_csharp">
+<a href="#state_tunnel2startupaction_csharp" style="color: inherit; text-decoration: inherit;">Tunnel2Startup<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The action to take when the establishing the tunnel for the second VPN connection. By default, your customer gateway device must initiate the IKE negotiation and bring up the tunnel. Specify start for AWS to initiate the IKE negotiation. Valid values are `add | start`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1866,6 +3756,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RFC 6890 link-local address of the second VPN tunnel (VPN Gateway Side).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnelinsideipversion_csharp">
+<a href="#state_tunnelinsideipversion_csharp" style="color: inherit; text-decoration: inherit;">Tunnel<wbr>Inside<wbr>Ip<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicate whether the VPN tunnels process IPv4 or IPv6 traffic. Valid values are `ipv4 | ipv6`. `ipv6` Supports only EC2 Transit Gateway.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1931,6 +3831,56 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the customer gateway.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_enableacceleration_go">
+<a href="#state_enableacceleration_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Acceleration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicate whether to enable acceleration for the VPN connection. Supports only EC2 Transit Gateway.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_localipv4networkcidr_go">
+<a href="#state_localipv4networkcidr_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Ipv4Network<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR on the customer gateway (on-premises) side of the VPN connection.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_localipv6networkcidr_go">
+<a href="#state_localipv6networkcidr_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Ipv6Network<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IPv6 CIDR on the customer gateway (on-premises) side of the VPN connection.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_remoteipv4networkcidr_go">
+<a href="#state_remoteipv4networkcidr_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Ipv4Network<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR on the AWS side of the VPN connection.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_remoteipv6networkcidr_go">
+<a href="#state_remoteipv6networkcidr_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Ipv6Network<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IPv6 CIDR on the customer gateway (on-premises) side of the VPN connection.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2023,13 +3973,133 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_tunnel1dpdtimeoutaction_go">
+<a href="#state_tunnel1dpdtimeoutaction_go" style="color: inherit; text-decoration: inherit;">Tunnel1Dpd<wbr>Timeout<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The action to take after DPD timeout occurs for the first VPN tunnel. Specify restart to restart the IKE initiation. Specify clear to end the IKE session. Valid values are `clear | none | restart`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1dpdtimeoutseconds_go">
+<a href="#state_tunnel1dpdtimeoutseconds_go" style="color: inherit; text-decoration: inherit;">Tunnel1Dpd<wbr>Timeout<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of seconds after which a DPD timeout occurs for the first VPN tunnel. Valid value is equal or higher than `30`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1ikeversions_go">
+<a href="#state_tunnel1ikeversions_go" style="color: inherit; text-decoration: inherit;">Tunnel1Ike<wbr>Versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The IKE versions that are permitted for the first VPN tunnel. Valid values are `ikev1 | ikev2`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tunnel1insidecidr_go">
 <a href="#state_tunnel1insidecidr_go" style="color: inherit; text-decoration: inherit;">Tunnel1Inside<wbr>Cidr</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CIDR block of the inside IP addresses for the first VPN tunnel.
+    <dd>{{% md %}}The CIDR block of the inside IP addresses for the first VPN tunnel. Valid value is a size /30 CIDR block from the 169.254.0.0/16 range.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1insideipv6cidr_go">
+<a href="#state_tunnel1insideipv6cidr_go" style="color: inherit; text-decoration: inherit;">Tunnel1Inside<wbr>Ipv6Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The range of inside IPv6 addresses for the first VPN tunnel. Supports only EC2 Transit Gateway. Valid value is a size /126 CIDR block from the local fd00::/8 range.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1phase1dhgroupnumbers_go">
+<a href="#state_tunnel1phase1dhgroupnumbers_go" style="color: inherit; text-decoration: inherit;">Tunnel1Phase1Dh<wbr>Group<wbr>Numbers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]int</span>
+    </dt>
+    <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are ` 2 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1phase1encryptionalgorithms_go">
+<a href="#state_tunnel1phase1encryptionalgorithms_go" style="color: inherit; text-decoration: inherit;">Tunnel1Phase1Encryption<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1phase1integrityalgorithms_go">
+<a href="#state_tunnel1phase1integrityalgorithms_go" style="color: inherit; text-decoration: inherit;">Tunnel1Phase1Integrity<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}One or more integrity algorithms that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1phase1lifetimeseconds_go">
+<a href="#state_tunnel1phase1lifetimeseconds_go" style="color: inherit; text-decoration: inherit;">Tunnel1Phase1Lifetime<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The lifetime for phase 1 of the IKE negotiation for the first VPN tunnel, in seconds. Valid value is between `900` and `28800`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1phase2dhgroupnumbers_go">
+<a href="#state_tunnel1phase2dhgroupnumbers_go" style="color: inherit; text-decoration: inherit;">Tunnel1Phase2Dh<wbr>Group<wbr>Numbers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]int</span>
+    </dt>
+    <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `2 | 5 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1phase2encryptionalgorithms_go">
+<a href="#state_tunnel1phase2encryptionalgorithms_go" style="color: inherit; text-decoration: inherit;">Tunnel1Phase2Encryption<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1phase2integrityalgorithms_go">
+<a href="#state_tunnel1phase2integrityalgorithms_go" style="color: inherit; text-decoration: inherit;">Tunnel1Phase2Integrity<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of one or more integrity algorithms that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1phase2lifetimeseconds_go">
+<a href="#state_tunnel1phase2lifetimeseconds_go" style="color: inherit; text-decoration: inherit;">Tunnel1Phase2Lifetime<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The lifetime for phase 2 of the IKE negotiation for the first VPN tunnel, in seconds. Valid value is between `900` and `3600`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2039,7 +4109,47 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The preshared key of the first VPN tunnel.
+    <dd>{{% md %}}The preshared key of the first VPN tunnel. The preshared key must be between 8 and 64 characters in length and cannot start with zero(0). Allowed characters are alphanumeric characters, periods(.) and underscores(_).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1rekeyfuzzpercentage_go">
+<a href="#state_tunnel1rekeyfuzzpercentage_go" style="color: inherit; text-decoration: inherit;">Tunnel1Rekey<wbr>Fuzz<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The percentage of the rekey window for the first VPN tunnel (determined by `tunnel1_rekey_margin_time_seconds`) during which the rekey time is randomly selected. Valid value is between `0` and `100`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1rekeymargintimeseconds_go">
+<a href="#state_tunnel1rekeymargintimeseconds_go" style="color: inherit; text-decoration: inherit;">Tunnel1Rekey<wbr>Margin<wbr>Time<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The margin time, in seconds, before the phase 2 lifetime expires, during which the AWS side of the first VPN connection performs an IKE rekey. The exact time of the rekey is randomly selected based on the value for `tunnel1_rekey_fuzz_percentage`. Valid value is between `60` and half of `tunnel1_phase2_lifetime_seconds`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1replaywindowsize_go">
+<a href="#state_tunnel1replaywindowsize_go" style="color: inherit; text-decoration: inherit;">Tunnel1Replay<wbr>Window<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of packets in an IKE replay window for the first VPN tunnel. Valid value is between `64` and `2048`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1startupaction_go">
+<a href="#state_tunnel1startupaction_go" style="color: inherit; text-decoration: inherit;">Tunnel1Startup<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The action to take when the establishing the tunnel for the first VPN connection. By default, your customer gateway device must initiate the IKE negotiation and bring up the tunnel. Specify start for AWS to initiate the IKE negotiation. Valid values are `add | start`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2093,13 +4203,133 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_tunnel2dpdtimeoutaction_go">
+<a href="#state_tunnel2dpdtimeoutaction_go" style="color: inherit; text-decoration: inherit;">Tunnel2Dpd<wbr>Timeout<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The action to take after DPD timeout occurs for the second VPN tunnel. Specify restart to restart the IKE initiation. Specify clear to end the IKE session. Valid values are `clear | none | restart`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2dpdtimeoutseconds_go">
+<a href="#state_tunnel2dpdtimeoutseconds_go" style="color: inherit; text-decoration: inherit;">Tunnel2Dpd<wbr>Timeout<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of seconds after which a DPD timeout occurs for the second VPN tunnel. Valid value is equal or higher than `30`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2ikeversions_go">
+<a href="#state_tunnel2ikeversions_go" style="color: inherit; text-decoration: inherit;">Tunnel2Ike<wbr>Versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The IKE versions that are permitted for the second VPN tunnel. Valid values are `ikev1 | ikev2`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tunnel2insidecidr_go">
 <a href="#state_tunnel2insidecidr_go" style="color: inherit; text-decoration: inherit;">Tunnel2Inside<wbr>Cidr</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CIDR block of the inside IP addresses for the second VPN tunnel.
+    <dd>{{% md %}}The CIDR block of the inside IP addresses for the second VPN tunnel. Valid value is a size /30 CIDR block from the 169.254.0.0/16 range.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2insideipv6cidr_go">
+<a href="#state_tunnel2insideipv6cidr_go" style="color: inherit; text-decoration: inherit;">Tunnel2Inside<wbr>Ipv6Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The range of inside IPv6 addresses for the second VPN tunnel. Supports only EC2 Transit Gateway. Valid value is a size /126 CIDR block from the local fd00::/8 range.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2phase1dhgroupnumbers_go">
+<a href="#state_tunnel2phase1dhgroupnumbers_go" style="color: inherit; text-decoration: inherit;">Tunnel2Phase1Dh<wbr>Group<wbr>Numbers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]int</span>
+    </dt>
+    <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are ` 2 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2phase1encryptionalgorithms_go">
+<a href="#state_tunnel2phase1encryptionalgorithms_go" style="color: inherit; text-decoration: inherit;">Tunnel2Phase1Encryption<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2phase1integrityalgorithms_go">
+<a href="#state_tunnel2phase1integrityalgorithms_go" style="color: inherit; text-decoration: inherit;">Tunnel2Phase1Integrity<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}One or more integrity algorithms that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2phase1lifetimeseconds_go">
+<a href="#state_tunnel2phase1lifetimeseconds_go" style="color: inherit; text-decoration: inherit;">Tunnel2Phase1Lifetime<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The lifetime for phase 1 of the IKE negotiation for the second VPN tunnel, in seconds. Valid value is between `900` and `28800`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2phase2dhgroupnumbers_go">
+<a href="#state_tunnel2phase2dhgroupnumbers_go" style="color: inherit; text-decoration: inherit;">Tunnel2Phase2Dh<wbr>Group<wbr>Numbers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]int</span>
+    </dt>
+    <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `2 | 5 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2phase2encryptionalgorithms_go">
+<a href="#state_tunnel2phase2encryptionalgorithms_go" style="color: inherit; text-decoration: inherit;">Tunnel2Phase2Encryption<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2phase2integrityalgorithms_go">
+<a href="#state_tunnel2phase2integrityalgorithms_go" style="color: inherit; text-decoration: inherit;">Tunnel2Phase2Integrity<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of one or more integrity algorithms that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2phase2lifetimeseconds_go">
+<a href="#state_tunnel2phase2lifetimeseconds_go" style="color: inherit; text-decoration: inherit;">Tunnel2Phase2Lifetime<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The lifetime for phase 2 of the IKE negotiation for the second VPN tunnel, in seconds. Valid value is between `900` and `3600`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2109,7 +4339,47 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The preshared key of the second VPN tunnel.
+    <dd>{{% md %}}The preshared key of the second VPN tunnel. The preshared key must be between 8 and 64 characters in length and cannot start with zero(0). Allowed characters are alphanumeric characters, periods(.) and underscores(_).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2rekeyfuzzpercentage_go">
+<a href="#state_tunnel2rekeyfuzzpercentage_go" style="color: inherit; text-decoration: inherit;">Tunnel2Rekey<wbr>Fuzz<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The percentage of the rekey window for the second VPN tunnel (determined by `tunnel2_rekey_margin_time_seconds`) during which the rekey time is randomly selected. Valid value is between `0` and `100`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2rekeymargintimeseconds_go">
+<a href="#state_tunnel2rekeymargintimeseconds_go" style="color: inherit; text-decoration: inherit;">Tunnel2Rekey<wbr>Margin<wbr>Time<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The margin time, in seconds, before the phase 2 lifetime expires, during which the AWS side of the second VPN connection performs an IKE rekey. The exact time of the rekey is randomly selected based on the value for `tunnel2_rekey_fuzz_percentage`. Valid value is between `60` and half of `tunnel2_phase2_lifetime_seconds`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2replaywindowsize_go">
+<a href="#state_tunnel2replaywindowsize_go" style="color: inherit; text-decoration: inherit;">Tunnel2Replay<wbr>Window<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of packets in an IKE replay window for the second VPN tunnel. Valid value is between `64` and `2048`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2startupaction_go">
+<a href="#state_tunnel2startupaction_go" style="color: inherit; text-decoration: inherit;">Tunnel2Startup<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The action to take when the establishing the tunnel for the second VPN connection. By default, your customer gateway device must initiate the IKE negotiation and bring up the tunnel. Specify start for AWS to initiate the IKE negotiation. Valid values are `add | start`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2120,6 +4390,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RFC 6890 link-local address of the second VPN tunnel (VPN Gateway Side).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnelinsideipversion_go">
+<a href="#state_tunnelinsideipversion_go" style="color: inherit; text-decoration: inherit;">Tunnel<wbr>Inside<wbr>Ip<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicate whether the VPN tunnels process IPv4 or IPv6 traffic. Valid values are `ipv4 | ipv6`. `ipv6` Supports only EC2 Transit Gateway.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2185,6 +4465,56 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the customer gateway.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_enableacceleration_nodejs">
+<a href="#state_enableacceleration_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Acceleration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicate whether to enable acceleration for the VPN connection. Supports only EC2 Transit Gateway.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_localipv4networkcidr_nodejs">
+<a href="#state_localipv4networkcidr_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Ipv4Network<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR on the customer gateway (on-premises) side of the VPN connection.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_localipv6networkcidr_nodejs">
+<a href="#state_localipv6networkcidr_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Ipv6Network<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IPv6 CIDR on the customer gateway (on-premises) side of the VPN connection.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_remoteipv4networkcidr_nodejs">
+<a href="#state_remoteipv4networkcidr_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Ipv4Network<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR on the AWS side of the VPN connection.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_remoteipv6networkcidr_nodejs">
+<a href="#state_remoteipv6networkcidr_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Ipv6Network<wbr>Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IPv6 CIDR on the customer gateway (on-premises) side of the VPN connection.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2277,13 +4607,133 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_tunnel1dpdtimeoutaction_nodejs">
+<a href="#state_tunnel1dpdtimeoutaction_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Dpd<wbr>Timeout<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The action to take after DPD timeout occurs for the first VPN tunnel. Specify restart to restart the IKE initiation. Specify clear to end the IKE session. Valid values are `clear | none | restart`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1dpdtimeoutseconds_nodejs">
+<a href="#state_tunnel1dpdtimeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Dpd<wbr>Timeout<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of seconds after which a DPD timeout occurs for the first VPN tunnel. Valid value is equal or higher than `30`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1ikeversions_nodejs">
+<a href="#state_tunnel1ikeversions_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Ike<wbr>Versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The IKE versions that are permitted for the first VPN tunnel. Valid values are `ikev1 | ikev2`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tunnel1insidecidr_nodejs">
 <a href="#state_tunnel1insidecidr_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Inside<wbr>Cidr</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CIDR block of the inside IP addresses for the first VPN tunnel.
+    <dd>{{% md %}}The CIDR block of the inside IP addresses for the first VPN tunnel. Valid value is a size /30 CIDR block from the 169.254.0.0/16 range.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1insideipv6cidr_nodejs">
+<a href="#state_tunnel1insideipv6cidr_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Inside<wbr>Ipv6Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The range of inside IPv6 addresses for the first VPN tunnel. Supports only EC2 Transit Gateway. Valid value is a size /126 CIDR block from the local fd00::/8 range.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1phase1dhgroupnumbers_nodejs">
+<a href="#state_tunnel1phase1dhgroupnumbers_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Phase1Dh<wbr>Group<wbr>Numbers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number[]</span>
+    </dt>
+    <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are ` 2 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1phase1encryptionalgorithms_nodejs">
+<a href="#state_tunnel1phase1encryptionalgorithms_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Phase1Encryption<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1phase1integrityalgorithms_nodejs">
+<a href="#state_tunnel1phase1integrityalgorithms_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Phase1Integrity<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}One or more integrity algorithms that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1phase1lifetimeseconds_nodejs">
+<a href="#state_tunnel1phase1lifetimeseconds_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Phase1Lifetime<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The lifetime for phase 1 of the IKE negotiation for the first VPN tunnel, in seconds. Valid value is between `900` and `28800`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1phase2dhgroupnumbers_nodejs">
+<a href="#state_tunnel1phase2dhgroupnumbers_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Phase2Dh<wbr>Group<wbr>Numbers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number[]</span>
+    </dt>
+    <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `2 | 5 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1phase2encryptionalgorithms_nodejs">
+<a href="#state_tunnel1phase2encryptionalgorithms_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Phase2Encryption<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1phase2integrityalgorithms_nodejs">
+<a href="#state_tunnel1phase2integrityalgorithms_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Phase2Integrity<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of one or more integrity algorithms that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1phase2lifetimeseconds_nodejs">
+<a href="#state_tunnel1phase2lifetimeseconds_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Phase2Lifetime<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The lifetime for phase 2 of the IKE negotiation for the first VPN tunnel, in seconds. Valid value is between `900` and `3600`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2293,7 +4743,47 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The preshared key of the first VPN tunnel.
+    <dd>{{% md %}}The preshared key of the first VPN tunnel. The preshared key must be between 8 and 64 characters in length and cannot start with zero(0). Allowed characters are alphanumeric characters, periods(.) and underscores(_).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1rekeyfuzzpercentage_nodejs">
+<a href="#state_tunnel1rekeyfuzzpercentage_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Rekey<wbr>Fuzz<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The percentage of the rekey window for the first VPN tunnel (determined by `tunnel1_rekey_margin_time_seconds`) during which the rekey time is randomly selected. Valid value is between `0` and `100`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1rekeymargintimeseconds_nodejs">
+<a href="#state_tunnel1rekeymargintimeseconds_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Rekey<wbr>Margin<wbr>Time<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The margin time, in seconds, before the phase 2 lifetime expires, during which the AWS side of the first VPN connection performs an IKE rekey. The exact time of the rekey is randomly selected based on the value for `tunnel1_rekey_fuzz_percentage`. Valid value is between `60` and half of `tunnel1_phase2_lifetime_seconds`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1replaywindowsize_nodejs">
+<a href="#state_tunnel1replaywindowsize_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Replay<wbr>Window<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of packets in an IKE replay window for the first VPN tunnel. Valid value is between `64` and `2048`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1startupaction_nodejs">
+<a href="#state_tunnel1startupaction_nodejs" style="color: inherit; text-decoration: inherit;">tunnel1Startup<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The action to take when the establishing the tunnel for the first VPN connection. By default, your customer gateway device must initiate the IKE negotiation and bring up the tunnel. Specify start for AWS to initiate the IKE negotiation. Valid values are `add | start`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2347,13 +4837,133 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_tunnel2dpdtimeoutaction_nodejs">
+<a href="#state_tunnel2dpdtimeoutaction_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Dpd<wbr>Timeout<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The action to take after DPD timeout occurs for the second VPN tunnel. Specify restart to restart the IKE initiation. Specify clear to end the IKE session. Valid values are `clear | none | restart`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2dpdtimeoutseconds_nodejs">
+<a href="#state_tunnel2dpdtimeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Dpd<wbr>Timeout<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of seconds after which a DPD timeout occurs for the second VPN tunnel. Valid value is equal or higher than `30`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2ikeversions_nodejs">
+<a href="#state_tunnel2ikeversions_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Ike<wbr>Versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The IKE versions that are permitted for the second VPN tunnel. Valid values are `ikev1 | ikev2`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tunnel2insidecidr_nodejs">
 <a href="#state_tunnel2insidecidr_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Inside<wbr>Cidr</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CIDR block of the inside IP addresses for the second VPN tunnel.
+    <dd>{{% md %}}The CIDR block of the inside IP addresses for the second VPN tunnel. Valid value is a size /30 CIDR block from the 169.254.0.0/16 range.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2insideipv6cidr_nodejs">
+<a href="#state_tunnel2insideipv6cidr_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Inside<wbr>Ipv6Cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The range of inside IPv6 addresses for the second VPN tunnel. Supports only EC2 Transit Gateway. Valid value is a size /126 CIDR block from the local fd00::/8 range.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2phase1dhgroupnumbers_nodejs">
+<a href="#state_tunnel2phase1dhgroupnumbers_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Phase1Dh<wbr>Group<wbr>Numbers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number[]</span>
+    </dt>
+    <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are ` 2 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2phase1encryptionalgorithms_nodejs">
+<a href="#state_tunnel2phase1encryptionalgorithms_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Phase1Encryption<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2phase1integrityalgorithms_nodejs">
+<a href="#state_tunnel2phase1integrityalgorithms_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Phase1Integrity<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}One or more integrity algorithms that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2phase1lifetimeseconds_nodejs">
+<a href="#state_tunnel2phase1lifetimeseconds_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Phase1Lifetime<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The lifetime for phase 1 of the IKE negotiation for the second VPN tunnel, in seconds. Valid value is between `900` and `28800`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2phase2dhgroupnumbers_nodejs">
+<a href="#state_tunnel2phase2dhgroupnumbers_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Phase2Dh<wbr>Group<wbr>Numbers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number[]</span>
+    </dt>
+    <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `2 | 5 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2phase2encryptionalgorithms_nodejs">
+<a href="#state_tunnel2phase2encryptionalgorithms_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Phase2Encryption<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2phase2integrityalgorithms_nodejs">
+<a href="#state_tunnel2phase2integrityalgorithms_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Phase2Integrity<wbr>Algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of one or more integrity algorithms that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2phase2lifetimeseconds_nodejs">
+<a href="#state_tunnel2phase2lifetimeseconds_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Phase2Lifetime<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The lifetime for phase 2 of the IKE negotiation for the second VPN tunnel, in seconds. Valid value is between `900` and `3600`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2363,7 +4973,47 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The preshared key of the second VPN tunnel.
+    <dd>{{% md %}}The preshared key of the second VPN tunnel. The preshared key must be between 8 and 64 characters in length and cannot start with zero(0). Allowed characters are alphanumeric characters, periods(.) and underscores(_).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2rekeyfuzzpercentage_nodejs">
+<a href="#state_tunnel2rekeyfuzzpercentage_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Rekey<wbr>Fuzz<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The percentage of the rekey window for the second VPN tunnel (determined by `tunnel2_rekey_margin_time_seconds`) during which the rekey time is randomly selected. Valid value is between `0` and `100`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2rekeymargintimeseconds_nodejs">
+<a href="#state_tunnel2rekeymargintimeseconds_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Rekey<wbr>Margin<wbr>Time<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The margin time, in seconds, before the phase 2 lifetime expires, during which the AWS side of the second VPN connection performs an IKE rekey. The exact time of the rekey is randomly selected based on the value for `tunnel2_rekey_fuzz_percentage`. Valid value is between `60` and half of `tunnel2_phase2_lifetime_seconds`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2replaywindowsize_nodejs">
+<a href="#state_tunnel2replaywindowsize_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Replay<wbr>Window<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of packets in an IKE replay window for the second VPN tunnel. Valid value is between `64` and `2048`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2startupaction_nodejs">
+<a href="#state_tunnel2startupaction_nodejs" style="color: inherit; text-decoration: inherit;">tunnel2Startup<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The action to take when the establishing the tunnel for the second VPN connection. By default, your customer gateway device must initiate the IKE negotiation and bring up the tunnel. Specify start for AWS to initiate the IKE negotiation. Valid values are `add | start`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2374,6 +5024,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RFC 6890 link-local address of the second VPN tunnel (VPN Gateway Side).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnelinsideipversion_nodejs">
+<a href="#state_tunnelinsideipversion_nodejs" style="color: inherit; text-decoration: inherit;">tunnel<wbr>Inside<wbr>Ip<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicate whether the VPN tunnels process IPv4 or IPv6 traffic. Valid values are `ipv4 | ipv6`. `ipv6` Supports only EC2 Transit Gateway.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2439,6 +5099,56 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the customer gateway.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_enable_acceleration_python">
+<a href="#state_enable_acceleration_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>acceleration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicate whether to enable acceleration for the VPN connection. Supports only EC2 Transit Gateway.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_local_ipv4_network_cidr_python">
+<a href="#state_local_ipv4_network_cidr_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ipv4_<wbr>network_<wbr>cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR on the customer gateway (on-premises) side of the VPN connection.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_local_ipv6_network_cidr_python">
+<a href="#state_local_ipv6_network_cidr_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ipv6_<wbr>network_<wbr>cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The IPv6 CIDR on the customer gateway (on-premises) side of the VPN connection.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_remote_ipv4_network_cidr_python">
+<a href="#state_remote_ipv4_network_cidr_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>ipv4_<wbr>network_<wbr>cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR on the AWS side of the VPN connection.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_remote_ipv6_network_cidr_python">
+<a href="#state_remote_ipv6_network_cidr_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>ipv6_<wbr>network_<wbr>cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The IPv6 CIDR on the customer gateway (on-premises) side of the VPN connection.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2531,13 +5241,133 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_tunnel1_dpd_timeout_action_python">
+<a href="#state_tunnel1_dpd_timeout_action_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>dpd_<wbr>timeout_<wbr>action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The action to take after DPD timeout occurs for the first VPN tunnel. Specify restart to restart the IKE initiation. Specify clear to end the IKE session. Valid values are `clear | none | restart`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1_dpd_timeout_seconds_python">
+<a href="#state_tunnel1_dpd_timeout_seconds_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>dpd_<wbr>timeout_<wbr>seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of seconds after which a DPD timeout occurs for the first VPN tunnel. Valid value is equal or higher than `30`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1_ike_versions_python">
+<a href="#state_tunnel1_ike_versions_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>ike_<wbr>versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The IKE versions that are permitted for the first VPN tunnel. Valid values are `ikev1 | ikev2`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tunnel1_inside_cidr_python">
 <a href="#state_tunnel1_inside_cidr_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>inside_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The CIDR block of the inside IP addresses for the first VPN tunnel.
+    <dd>{{% md %}}The CIDR block of the inside IP addresses for the first VPN tunnel. Valid value is a size /30 CIDR block from the 169.254.0.0/16 range.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1_inside_ipv6_cidr_python">
+<a href="#state_tunnel1_inside_ipv6_cidr_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>inside_<wbr>ipv6_<wbr>cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The range of inside IPv6 addresses for the first VPN tunnel. Supports only EC2 Transit Gateway. Valid value is a size /126 CIDR block from the local fd00::/8 range.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1_phase1_dh_group_numbers_python">
+<a href="#state_tunnel1_phase1_dh_group_numbers_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>phase1_<wbr>dh_<wbr>group_<wbr>numbers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[int]</span>
+    </dt>
+    <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are ` 2 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1_phase1_encryption_algorithms_python">
+<a href="#state_tunnel1_phase1_encryption_algorithms_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>phase1_<wbr>encryption_<wbr>algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1_phase1_integrity_algorithms_python">
+<a href="#state_tunnel1_phase1_integrity_algorithms_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>phase1_<wbr>integrity_<wbr>algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}One or more integrity algorithms that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1_phase1_lifetime_seconds_python">
+<a href="#state_tunnel1_phase1_lifetime_seconds_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>phase1_<wbr>lifetime_<wbr>seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The lifetime for phase 1 of the IKE negotiation for the first VPN tunnel, in seconds. Valid value is between `900` and `28800`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1_phase2_dh_group_numbers_python">
+<a href="#state_tunnel1_phase2_dh_group_numbers_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>phase2_<wbr>dh_<wbr>group_<wbr>numbers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[int]</span>
+    </dt>
+    <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `2 | 5 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1_phase2_encryption_algorithms_python">
+<a href="#state_tunnel1_phase2_encryption_algorithms_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>phase2_<wbr>encryption_<wbr>algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1_phase2_integrity_algorithms_python">
+<a href="#state_tunnel1_phase2_integrity_algorithms_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>phase2_<wbr>integrity_<wbr>algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of one or more integrity algorithms that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1_phase2_lifetime_seconds_python">
+<a href="#state_tunnel1_phase2_lifetime_seconds_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>phase2_<wbr>lifetime_<wbr>seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The lifetime for phase 2 of the IKE negotiation for the first VPN tunnel, in seconds. Valid value is between `900` and `3600`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2547,7 +5377,47 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The preshared key of the first VPN tunnel.
+    <dd>{{% md %}}The preshared key of the first VPN tunnel. The preshared key must be between 8 and 64 characters in length and cannot start with zero(0). Allowed characters are alphanumeric characters, periods(.) and underscores(_).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1_rekey_fuzz_percentage_python">
+<a href="#state_tunnel1_rekey_fuzz_percentage_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>rekey_<wbr>fuzz_<wbr>percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The percentage of the rekey window for the first VPN tunnel (determined by `tunnel1_rekey_margin_time_seconds`) during which the rekey time is randomly selected. Valid value is between `0` and `100`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1_rekey_margin_time_seconds_python">
+<a href="#state_tunnel1_rekey_margin_time_seconds_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>rekey_<wbr>margin_<wbr>time_<wbr>seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The margin time, in seconds, before the phase 2 lifetime expires, during which the AWS side of the first VPN connection performs an IKE rekey. The exact time of the rekey is randomly selected based on the value for `tunnel1_rekey_fuzz_percentage`. Valid value is between `60` and half of `tunnel1_phase2_lifetime_seconds`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1_replay_window_size_python">
+<a href="#state_tunnel1_replay_window_size_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>replay_<wbr>window_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of packets in an IKE replay window for the first VPN tunnel. Valid value is between `64` and `2048`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel1_startup_action_python">
+<a href="#state_tunnel1_startup_action_python" style="color: inherit; text-decoration: inherit;">tunnel1_<wbr>startup_<wbr>action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The action to take when the establishing the tunnel for the first VPN connection. By default, your customer gateway device must initiate the IKE negotiation and bring up the tunnel. Specify start for AWS to initiate the IKE negotiation. Valid values are `add | start`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2601,13 +5471,133 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_tunnel2_dpd_timeout_action_python">
+<a href="#state_tunnel2_dpd_timeout_action_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>dpd_<wbr>timeout_<wbr>action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The action to take after DPD timeout occurs for the second VPN tunnel. Specify restart to restart the IKE initiation. Specify clear to end the IKE session. Valid values are `clear | none | restart`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2_dpd_timeout_seconds_python">
+<a href="#state_tunnel2_dpd_timeout_seconds_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>dpd_<wbr>timeout_<wbr>seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of seconds after which a DPD timeout occurs for the second VPN tunnel. Valid value is equal or higher than `30`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2_ike_versions_python">
+<a href="#state_tunnel2_ike_versions_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>ike_<wbr>versions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The IKE versions that are permitted for the second VPN tunnel. Valid values are `ikev1 | ikev2`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tunnel2_inside_cidr_python">
 <a href="#state_tunnel2_inside_cidr_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>inside_<wbr>cidr</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The CIDR block of the inside IP addresses for the second VPN tunnel.
+    <dd>{{% md %}}The CIDR block of the inside IP addresses for the second VPN tunnel. Valid value is a size /30 CIDR block from the 169.254.0.0/16 range.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2_inside_ipv6_cidr_python">
+<a href="#state_tunnel2_inside_ipv6_cidr_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>inside_<wbr>ipv6_<wbr>cidr</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The range of inside IPv6 addresses for the second VPN tunnel. Supports only EC2 Transit Gateway. Valid value is a size /126 CIDR block from the local fd00::/8 range.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2_phase1_dh_group_numbers_python">
+<a href="#state_tunnel2_phase1_dh_group_numbers_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>phase1_<wbr>dh_<wbr>group_<wbr>numbers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[int]</span>
+    </dt>
+    <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are ` 2 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2_phase1_encryption_algorithms_python">
+<a href="#state_tunnel2_phase1_encryption_algorithms_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>phase1_<wbr>encryption_<wbr>algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2_phase1_integrity_algorithms_python">
+<a href="#state_tunnel2_phase1_integrity_algorithms_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>phase1_<wbr>integrity_<wbr>algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}One or more integrity algorithms that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2_phase1_lifetime_seconds_python">
+<a href="#state_tunnel2_phase1_lifetime_seconds_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>phase1_<wbr>lifetime_<wbr>seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The lifetime for phase 1 of the IKE negotiation for the second VPN tunnel, in seconds. Valid value is between `900` and `28800`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2_phase2_dh_group_numbers_python">
+<a href="#state_tunnel2_phase2_dh_group_numbers_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>phase2_<wbr>dh_<wbr>group_<wbr>numbers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[int]</span>
+    </dt>
+    <dd>{{% md %}}List of one or more Diffie-Hellman group numbers that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `2 | 5 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2_phase2_encryption_algorithms_python">
+<a href="#state_tunnel2_phase2_encryption_algorithms_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>phase2_<wbr>encryption_<wbr>algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of one or more encryption algorithms that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2_phase2_integrity_algorithms_python">
+<a href="#state_tunnel2_phase2_integrity_algorithms_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>phase2_<wbr>integrity_<wbr>algorithms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of one or more integrity algorithms that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2_phase2_lifetime_seconds_python">
+<a href="#state_tunnel2_phase2_lifetime_seconds_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>phase2_<wbr>lifetime_<wbr>seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The lifetime for phase 2 of the IKE negotiation for the second VPN tunnel, in seconds. Valid value is between `900` and `3600`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2617,7 +5607,47 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The preshared key of the second VPN tunnel.
+    <dd>{{% md %}}The preshared key of the second VPN tunnel. The preshared key must be between 8 and 64 characters in length and cannot start with zero(0). Allowed characters are alphanumeric characters, periods(.) and underscores(_).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2_rekey_fuzz_percentage_python">
+<a href="#state_tunnel2_rekey_fuzz_percentage_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>rekey_<wbr>fuzz_<wbr>percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The percentage of the rekey window for the second VPN tunnel (determined by `tunnel2_rekey_margin_time_seconds`) during which the rekey time is randomly selected. Valid value is between `0` and `100`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2_rekey_margin_time_seconds_python">
+<a href="#state_tunnel2_rekey_margin_time_seconds_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>rekey_<wbr>margin_<wbr>time_<wbr>seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The margin time, in seconds, before the phase 2 lifetime expires, during which the AWS side of the second VPN connection performs an IKE rekey. The exact time of the rekey is randomly selected based on the value for `tunnel2_rekey_fuzz_percentage`. Valid value is between `60` and half of `tunnel2_phase2_lifetime_seconds`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2_replay_window_size_python">
+<a href="#state_tunnel2_replay_window_size_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>replay_<wbr>window_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of packets in an IKE replay window for the second VPN tunnel. Valid value is between `64` and `2048`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel2_startup_action_python">
+<a href="#state_tunnel2_startup_action_python" style="color: inherit; text-decoration: inherit;">tunnel2_<wbr>startup_<wbr>action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The action to take when the establishing the tunnel for the second VPN connection. By default, your customer gateway device must initiate the IKE negotiation and bring up the tunnel. Specify start for AWS to initiate the IKE negotiation. Valid values are `add | start`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2628,6 +5658,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The RFC 6890 link-local address of the second VPN tunnel (VPN Gateway Side).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tunnel_inside_ip_version_python">
+<a href="#state_tunnel_inside_ip_version_python" style="color: inherit; text-decoration: inherit;">tunnel_<wbr>inside_<wbr>ip_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Indicate whether the VPN tunnels process IPv4 or IPv6 traffic. Valid values are `ipv4 | ipv6`. `ipv6` Supports only EC2 Transit Gateway.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

@@ -25,8 +25,10 @@ a conflict of rule settings and will overwrite rules.
 > **NOTE:** Referencing Security Groups across VPC peering has certain restrictions. More information is available in the [VPC Peering User Guide](https://docs.aws.amazon.com/vpc/latest/peering/vpc-peering-security-groups.html).
 ## Usage with prefix list IDs
 
-Prefix list IDs are managed by AWS internally. Prefix list IDs
-are associated with a prefix list name, or service name, that is linked to a specific region.
+Prefix Lists are either managed by AWS internally, or created by the customer using a
+Managed Prefix List resource. Prefix Lists provided by
+AWS are associated with a prefix list name, or service name, that is linked to a specific region.
+
 Prefix list IDs are exported on VPC Endpoints, so you can use this format:
 
 ```typescript
@@ -120,6 +122,8 @@ func main() {
 	})
 }
 ```
+
+You can also find a specific Prefix List using the `aws.getPrefixList` data source.
 
 {{% examples %}}
 ## Example Usage
@@ -464,8 +468,7 @@ or `egress` (outbound).
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of prefix list IDs (for allowing access to VPC endpoints).
-Only valid with `egress`.
+    <dd>{{% md %}}List of Prefix List IDs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -584,8 +587,7 @@ or `egress` (outbound).
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of prefix list IDs (for allowing access to VPC endpoints).
-Only valid with `egress`.
+    <dd>{{% md %}}List of Prefix List IDs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -704,8 +706,7 @@ or `egress` (outbound).
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of prefix list IDs (for allowing access to VPC endpoints).
-Only valid with `egress`.
+    <dd>{{% md %}}List of Prefix List IDs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -824,8 +825,7 @@ or `egress` (outbound).
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of prefix list IDs (for allowing access to VPC endpoints).
-Only valid with `egress`.
+    <dd>{{% md %}}List of Prefix List IDs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1093,8 +1093,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of prefix list IDs (for allowing access to VPC endpoints).
-Only valid with `egress`.
+    <dd>{{% md %}}List of Prefix List IDs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1213,8 +1212,7 @@ or `egress` (outbound).
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of prefix list IDs (for allowing access to VPC endpoints).
-Only valid with `egress`.
+    <dd>{{% md %}}List of Prefix List IDs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1333,8 +1331,7 @@ or `egress` (outbound).
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of prefix list IDs (for allowing access to VPC endpoints).
-Only valid with `egress`.
+    <dd>{{% md %}}List of Prefix List IDs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1453,8 +1450,7 @@ or `egress` (outbound).
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of prefix list IDs (for allowing access to VPC endpoints).
-Only valid with `egress`.
+    <dd>{{% md %}}List of Prefix List IDs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

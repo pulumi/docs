@@ -310,6 +310,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="metadataoptions_csharp">
+<a href="#metadataoptions_csharp" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getlaunchconfigurationmetadataoption">List&lt;Get<wbr>Launch<wbr>Configuration<wbr>Metadata<wbr>Option&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The metadata options for the instance.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -503,6 +513,16 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Key Name that should be used for the instance.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="metadataoptions_go">
+<a href="#metadataoptions_go" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getlaunchconfigurationmetadataoption">[]Get<wbr>Launch<wbr>Configuration<wbr>Metadata<wbr>Option</a></span>
+    </dt>
+    <dd>{{% md %}}The metadata options for the instance.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -702,6 +722,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="metadataoptions_nodejs">
+<a href="#metadataoptions_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getlaunchconfigurationmetadataoption">Get<wbr>Launch<wbr>Configuration<wbr>Metadata<wbr>Option[]</a></span>
+    </dt>
+    <dd>{{% md %}}The metadata options for the instance.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -895,6 +925,16 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Key Name that should be used for the instance.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="metadata_options_python">
+<a href="#metadata_options_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getlaunchconfigurationmetadataoption">Sequence[Get<wbr>Launch<wbr>Configuration<wbr>Metadata<wbr>Option]</a></span>
+    </dt>
+    <dd>{{% md %}}The metadata options for the instance.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1457,6 +1497,164 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Virtual Name of the device.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="getlaunchconfigurationmetadataoption">Get<wbr>Launch<wbr>Configuration<wbr>Metadata<wbr>Option</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchConfigurationMetadataOption">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetLaunchConfigurationMetadataOption">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchConfigurationMetadataOption.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="httpendpoint_csharp">
+<a href="#httpendpoint_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The state of the metadata service: `enabled`, `disabled`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="httpputresponsehoplimit_csharp">
+<a href="#httpputresponsehoplimit_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The desired HTTP PUT response hop limit for instance metadata requests.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="httptokens_csharp">
+<a href="#httptokens_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Tokens</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If session tokens are required: `optional`, `required`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="httpendpoint_go">
+<a href="#httpendpoint_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The state of the metadata service: `enabled`, `disabled`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="httpputresponsehoplimit_go">
+<a href="#httpputresponsehoplimit_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The desired HTTP PUT response hop limit for instance metadata requests.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="httptokens_go">
+<a href="#httptokens_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Tokens</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If session tokens are required: `optional`, `required`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="httpendpoint_nodejs">
+<a href="#httpendpoint_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The state of the metadata service: `enabled`, `disabled`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="httpputresponsehoplimit_nodejs">
+<a href="#httpputresponsehoplimit_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The desired HTTP PUT response hop limit for instance metadata requests.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="httptokens_nodejs">
+<a href="#httptokens_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Tokens</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If session tokens are required: `optional`, `required`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="http_endpoint_python">
+<a href="#http_endpoint_python" style="color: inherit; text-decoration: inherit;">http_<wbr>endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The state of the metadata service: `enabled`, `disabled`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="http_put_response_hop_limit_python">
+<a href="#http_put_response_hop_limit_python" style="color: inherit; text-decoration: inherit;">http_<wbr>put_<wbr>response_<wbr>hop_<wbr>limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The desired HTTP PUT response hop limit for instance metadata requests.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="http_tokens_python">
+<a href="#http_tokens_python" style="color: inherit; text-decoration: inherit;">http_<wbr>tokens</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}If session tokens are required: `optional`, `required`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

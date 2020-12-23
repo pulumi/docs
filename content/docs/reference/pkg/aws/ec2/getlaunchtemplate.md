@@ -495,6 +495,16 @@ below for more details.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="enclaveoptions_csharp">
+<a href="#enclaveoptions_csharp" style="color: inherit; text-decoration: inherit;">Enclave<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getlaunchtemplateenclaveoption">List&lt;Get<wbr>Launch<wbr>Template<wbr>Enclave<wbr>Option&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The enclave options of the Instance.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="hibernationoptions_csharp">
 <a href="#hibernationoptions_csharp" style="color: inherit; text-decoration: inherit;">Hibernation<wbr>Options</a>
 </span>
@@ -804,6 +814,16 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
     </dt>
     <dd>{{% md %}}The elastic GPU to attach to the instance. See Elastic GPU
 below for more details.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="enclaveoptions_go">
+<a href="#enclaveoptions_go" style="color: inherit; text-decoration: inherit;">Enclave<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getlaunchtemplateenclaveoption">[]Get<wbr>Launch<wbr>Template<wbr>Enclave<wbr>Option</a></span>
+    </dt>
+    <dd>{{% md %}}The enclave options of the Instance.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1119,6 +1139,16 @@ below for more details.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="enclaveoptions_nodejs">
+<a href="#enclaveoptions_nodejs" style="color: inherit; text-decoration: inherit;">enclave<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getlaunchtemplateenclaveoption">Get<wbr>Launch<wbr>Template<wbr>Enclave<wbr>Option[]</a></span>
+    </dt>
+    <dd>{{% md %}}The enclave options of the Instance.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="hibernationoptions_nodejs">
 <a href="#hibernationoptions_nodejs" style="color: inherit; text-decoration: inherit;">hibernation<wbr>Options</a>
 </span>
@@ -1428,6 +1458,16 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
     </dt>
     <dd>{{% md %}}The elastic GPU to attach to the instance. See Elastic GPU
 below for more details.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="enclave_options_python">
+<a href="#enclave_options_python" style="color: inherit; text-decoration: inherit;">enclave_<wbr>options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getlaunchtemplateenclaveoption">Sequence[Get<wbr>Launch<wbr>Template<wbr>Enclave<wbr>Option]</a></span>
+    </dt>
+    <dd>{{% md %}}The enclave options of the Instance.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -2317,6 +2357,84 @@ Interfaces below for more details.
 </dl>
 {{% /choosable %}}
 
+<h4 id="getlaunchtemplateenclaveoption">Get<wbr>Launch<wbr>Template<wbr>Enclave<wbr>Option</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateEnclaveOption">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetLaunchTemplateEnclaveOption">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateEnclaveOption.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether Nitro Enclaves are enabled.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether Nitro Enclaves are enabled.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether Nitro Enclaves are enabled.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether Nitro Enclaves are enabled.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="getlaunchtemplatefilter">Get<wbr>Launch<wbr>Template<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetLaunchTemplateFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateFilter">output</a> API doc for this type.
@@ -3138,7 +3256,8 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether Nitro Enclaves are enabled.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3153,7 +3272,8 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether Nitro Enclaves are enabled.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3168,7 +3288,8 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether Nitro Enclaves are enabled.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3183,7 +3304,8 @@ Interfaces below for more details.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether Nitro Enclaves are enabled.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

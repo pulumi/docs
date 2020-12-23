@@ -23,7 +23,7 @@ Provides an EC2 launch template resource. Can be used to create instances or aut
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.LaunchTemplate">LaunchTemplate</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">block_device_mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[LaunchTemplateBlockDeviceMappingArgs]]</span> = None<span class="p">, </span><span class="nx">capacity_reservation_specification</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateCapacityReservationSpecificationArgs]</span> = None<span class="p">, </span><span class="nx">cpu_options</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateCpuOptionsArgs]</span> = None<span class="p">, </span><span class="nx">credit_specification</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateCreditSpecificationArgs]</span> = None<span class="p">, </span><span class="nx">default_version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disable_api_termination</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">elastic_gpu_specifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[LaunchTemplateElasticGpuSpecificationArgs]]</span> = None<span class="p">, </span><span class="nx">elastic_inference_accelerator</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateElasticInferenceAcceleratorArgs]</span> = None<span class="p">, </span><span class="nx">hibernation_options</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateHibernationOptionsArgs]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateIamInstanceProfileArgs]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_initiated_shutdown_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_market_options</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateInstanceMarketOptionsArgs]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kernel_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">license_specifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[LaunchTemplateLicenseSpecificationArgs]]</span> = None<span class="p">, </span><span class="nx">metadata_options</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateMetadataOptionsArgs]</span> = None<span class="p">, </span><span class="nx">monitoring</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateMonitoringArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[LaunchTemplateNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">placement</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplatePlacementArgs]</span> = None<span class="p">, </span><span class="nx">ram_disk_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tag_specifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[LaunchTemplateTagSpecificationArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">update_default_version</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.LaunchTemplate">LaunchTemplate</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">block_device_mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[LaunchTemplateBlockDeviceMappingArgs]]</span> = None<span class="p">, </span><span class="nx">capacity_reservation_specification</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateCapacityReservationSpecificationArgs]</span> = None<span class="p">, </span><span class="nx">cpu_options</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateCpuOptionsArgs]</span> = None<span class="p">, </span><span class="nx">credit_specification</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateCreditSpecificationArgs]</span> = None<span class="p">, </span><span class="nx">default_version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disable_api_termination</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">elastic_gpu_specifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[LaunchTemplateElasticGpuSpecificationArgs]]</span> = None<span class="p">, </span><span class="nx">elastic_inference_accelerator</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateElasticInferenceAcceleratorArgs]</span> = None<span class="p">, </span><span class="nx">enclave_options</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateEnclaveOptionsArgs]</span> = None<span class="p">, </span><span class="nx">hibernation_options</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateHibernationOptionsArgs]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateIamInstanceProfileArgs]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_initiated_shutdown_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_market_options</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateInstanceMarketOptionsArgs]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kernel_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">license_specifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[LaunchTemplateLicenseSpecificationArgs]]</span> = None<span class="p">, </span><span class="nx">metadata_options</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateMetadataOptionsArgs]</span> = None<span class="p">, </span><span class="nx">monitoring</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateMonitoringArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[LaunchTemplateNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">placement</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplatePlacementArgs]</span> = None<span class="p">, </span><span class="nx">ram_disk_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tag_specifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[LaunchTemplateTagSpecificationArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">update_default_version</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -297,6 +297,16 @@ below for more details.
         <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enclaveoptions_csharp">
+<a href="#enclaveoptions_csharp" style="color: inherit; text-decoration: inherit;">Enclave<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchtemplateenclaveoptions">Launch<wbr>Template<wbr>Enclave<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -635,6 +645,16 @@ below for more details.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="enclaveoptions_go">
+<a href="#enclaveoptions_go" style="color: inherit; text-decoration: inherit;">Enclave<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchtemplateenclaveoptions">Launch<wbr>Template<wbr>Enclave<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="hibernationoptions_go">
 <a href="#hibernationoptions_go" style="color: inherit; text-decoration: inherit;">Hibernation<wbr>Options</a>
 </span>
@@ -970,6 +990,16 @@ below for more details.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="enclaveoptions_nodejs">
+<a href="#enclaveoptions_nodejs" style="color: inherit; text-decoration: inherit;">enclave<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchtemplateenclaveoptions">Launch<wbr>Template<wbr>Enclave<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="hibernationoptions_nodejs">
 <a href="#hibernationoptions_nodejs" style="color: inherit; text-decoration: inherit;">hibernation<wbr>Options</a>
 </span>
@@ -1302,6 +1332,16 @@ below for more details.
         <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enclave_options_python">
+<a href="#enclave_options_python" style="color: inherit; text-decoration: inherit;">enclave_<wbr>options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchtemplateenclaveoptions">Launch<wbr>Template<wbr>Enclave<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1691,7 +1731,7 @@ Get an existing LaunchTemplate resource's state with the given name, ID, and opt
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">block_device_mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[LaunchTemplateBlockDeviceMappingArgs]]</span> = None<span class="p">, </span><span class="nx">capacity_reservation_specification</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateCapacityReservationSpecificationArgs]</span> = None<span class="p">, </span><span class="nx">cpu_options</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateCpuOptionsArgs]</span> = None<span class="p">, </span><span class="nx">credit_specification</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateCreditSpecificationArgs]</span> = None<span class="p">, </span><span class="nx">default_version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disable_api_termination</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">elastic_gpu_specifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[LaunchTemplateElasticGpuSpecificationArgs]]</span> = None<span class="p">, </span><span class="nx">elastic_inference_accelerator</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateElasticInferenceAcceleratorArgs]</span> = None<span class="p">, </span><span class="nx">hibernation_options</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateHibernationOptionsArgs]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateIamInstanceProfileArgs]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_initiated_shutdown_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_market_options</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateInstanceMarketOptionsArgs]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kernel_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">latest_version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">license_specifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[LaunchTemplateLicenseSpecificationArgs]]</span> = None<span class="p">, </span><span class="nx">metadata_options</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateMetadataOptionsArgs]</span> = None<span class="p">, </span><span class="nx">monitoring</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateMonitoringArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[LaunchTemplateNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">placement</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplatePlacementArgs]</span> = None<span class="p">, </span><span class="nx">ram_disk_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tag_specifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[LaunchTemplateTagSpecificationArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">update_default_version</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> LaunchTemplate</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">block_device_mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[LaunchTemplateBlockDeviceMappingArgs]]</span> = None<span class="p">, </span><span class="nx">capacity_reservation_specification</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateCapacityReservationSpecificationArgs]</span> = None<span class="p">, </span><span class="nx">cpu_options</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateCpuOptionsArgs]</span> = None<span class="p">, </span><span class="nx">credit_specification</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateCreditSpecificationArgs]</span> = None<span class="p">, </span><span class="nx">default_version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disable_api_termination</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">elastic_gpu_specifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[LaunchTemplateElasticGpuSpecificationArgs]]</span> = None<span class="p">, </span><span class="nx">elastic_inference_accelerator</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateElasticInferenceAcceleratorArgs]</span> = None<span class="p">, </span><span class="nx">enclave_options</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateEnclaveOptionsArgs]</span> = None<span class="p">, </span><span class="nx">hibernation_options</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateHibernationOptionsArgs]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateIamInstanceProfileArgs]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_initiated_shutdown_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_market_options</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateInstanceMarketOptionsArgs]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kernel_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">latest_version</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">license_specifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[LaunchTemplateLicenseSpecificationArgs]]</span> = None<span class="p">, </span><span class="nx">metadata_options</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateMetadataOptionsArgs]</span> = None<span class="p">, </span><span class="nx">monitoring</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplateMonitoringArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[LaunchTemplateNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">placement</span><span class="p">:</span> <span class="nx">Optional[LaunchTemplatePlacementArgs]</span> = None<span class="p">, </span><span class="nx">ram_disk_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tag_specifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[LaunchTemplateTagSpecificationArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">update_default_version</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> LaunchTemplate</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1917,6 +1957,16 @@ below for more details.
         <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_enclaveoptions_csharp">
+<a href="#state_enclaveoptions_csharp" style="color: inherit; text-decoration: inherit;">Enclave<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchtemplateenclaveoptions">Launch<wbr>Template<wbr>Enclave<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2275,6 +2325,16 @@ below for more details.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_enclaveoptions_go">
+<a href="#state_enclaveoptions_go" style="color: inherit; text-decoration: inherit;">Enclave<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchtemplateenclaveoptions">Launch<wbr>Template<wbr>Enclave<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_hibernationoptions_go">
 <a href="#state_hibernationoptions_go" style="color: inherit; text-decoration: inherit;">Hibernation<wbr>Options</a>
 </span>
@@ -2630,6 +2690,16 @@ below for more details.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_enclaveoptions_nodejs">
+<a href="#state_enclaveoptions_nodejs" style="color: inherit; text-decoration: inherit;">enclave<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchtemplateenclaveoptions">Launch<wbr>Template<wbr>Enclave<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_hibernationoptions_nodejs">
 <a href="#state_hibernationoptions_nodejs" style="color: inherit; text-decoration: inherit;">hibernation<wbr>Options</a>
 </span>
@@ -2982,6 +3052,16 @@ below for more details.
         <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_enclave_options_python">
+<a href="#state_enclave_options_python" style="color: inherit; text-decoration: inherit;">enclave_<wbr>options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchtemplateenclaveoptions">Launch<wbr>Template<wbr>Enclave<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3515,7 +3595,8 @@ This must be set with a `volume_type` of `"io1/io2"`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The throughput to provision for a `gp3` volume, with a maximum of 1,000 MiB/s.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="volumesize_csharp">
@@ -3604,7 +3685,8 @@ This must be set with a `volume_type` of `"io1/io2"`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The throughput to provision for a `gp3` volume, with a maximum of 1,000 MiB/s.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="volumesize_go">
@@ -3693,7 +3775,8 @@ This must be set with a `volume_type` of `"io1/io2"`.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The throughput to provision for a `gp3` volume, with a maximum of 1,000 MiB/s.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="volumesize_nodejs">
@@ -3782,7 +3865,8 @@ This must be set with a `volume_type` of `"io1/io2"`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The throughput to provision for a `gp3` volume, with a maximum of 1,000 MiB/s.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="volume_size_python">
@@ -4354,6 +4438,84 @@ Otherwise, specify the default value of 2.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Accelerator type.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="launchtemplateenclaveoptions">Launch<wbr>Template<wbr>Enclave<wbr>Options</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateEnclaveOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplateEnclaveOptions">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#LaunchTemplateEnclaveOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#LaunchTemplateEnclaveOptionsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.LaunchTemplateEnclaveOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.LaunchTemplateEnclaveOptions.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to `true`, Nitro Enclaves will be enabled on the instance.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to `true`, Nitro Enclaves will be enabled on the instance.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If set to `true`, Nitro Enclaves will be enabled on the instance.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to `true`, Nitro Enclaves will be enabled on the instance.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

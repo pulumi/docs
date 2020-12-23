@@ -37,7 +37,14 @@ class MyStack : Stack
                     {
                         new Dictionary<string, object?>
                         {
-                            { "Action", "network-firewall:ListFirewallPolicies" },
+                            { "Action", new[]
+                                {
+                                    "network-firewall:ListFirewallPolicies",
+                                    "network-firewall:CreateFirewall",
+                                    "network-firewall:UpdateFirewall",
+                                    "network-firewall:AssociateFirewallPolicy",
+                                }
+                             },
                             { "Effect", "Allow" },
                             { "Resource", aws_networkfirewall_firewall_policy.Example.Arn },
                             { "Principal", new Dictionary<string, object?>
@@ -73,7 +80,12 @@ func main() {
 		tmpJSON0, err := json.Marshal(map[string]interface{}{
 			"Statement": []map[string]interface{}{
 				map[string]interface{}{
-					"Action":   "network-firewall:ListFirewallPolicies",
+					"Action": []string{
+						"network-firewall:ListFirewallPolicies",
+						"network-firewall:CreateFirewall",
+						"network-firewall:UpdateFirewall",
+						"network-firewall:AssociateFirewallPolicy",
+					},
 					"Effect":   "Allow",
 					"Resource": aws_networkfirewall_firewall_policy.Example.Arn,
 					"Principal": map[string]interface{}{
@@ -111,7 +123,12 @@ example = aws.networkfirewall.ResourcePolicy("example",
     resource_arn=aws_networkfirewall_firewall_policy["example"]["arn"],
     policy=json.dumps({
         "Statement": [{
-            "Action": "network-firewall:ListFirewallPolicies",
+            "Action": [
+                "network-firewall:ListFirewallPolicies",
+                "network-firewall:CreateFirewall",
+                "network-firewall:UpdateFirewall",
+                "network-firewall:AssociateFirewallPolicy",
+            ],
             "Effect": "Allow",
             "Resource": aws_networkfirewall_firewall_policy["example"]["arn"],
             "Principal": {
@@ -134,7 +151,12 @@ const example = new aws.networkfirewall.ResourcePolicy("example", {
     resourceArn: aws_networkfirewall_firewall_policy.example.arn,
     policy: JSON.stringify({
         Statement: [{
-            Action: "network-firewall:ListFirewallPolicies",
+            Action: [
+                "network-firewall:ListFirewallPolicies",
+                "network-firewall:CreateFirewall",
+                "network-firewall:UpdateFirewall",
+                "network-firewall:AssociateFirewallPolicy",
+            ],
             Effect: "Allow",
             Resource: aws_networkfirewall_firewall_policy.example.arn,
             Principal: {
@@ -169,7 +191,13 @@ class MyStack : Stack
                     {
                         new Dictionary<string, object?>
                         {
-                            { "Action", "network-firewall:ListRuleGroups" },
+                            { "Action", new[]
+                                {
+                                    "network-firewall:ListRuleGroups",
+                                    "network-firewall:CreateFirewallPolicy",
+                                    "network-firewall:UpdateFirewallPolicy",
+                                }
+                             },
                             { "Effect", "Allow" },
                             { "Resource", aws_networkfirewall_rule_group.Example.Arn },
                             { "Principal", new Dictionary<string, object?>
@@ -205,7 +233,11 @@ func main() {
 		tmpJSON0, err := json.Marshal(map[string]interface{}{
 			"Statement": []map[string]interface{}{
 				map[string]interface{}{
-					"Action":   "network-firewall:ListRuleGroups",
+					"Action": []string{
+						"network-firewall:ListRuleGroups",
+						"network-firewall:CreateFirewallPolicy",
+						"network-firewall:UpdateFirewallPolicy",
+					},
 					"Effect":   "Allow",
 					"Resource": aws_networkfirewall_rule_group.Example.Arn,
 					"Principal": map[string]interface{}{
@@ -243,7 +275,11 @@ example = aws.networkfirewall.ResourcePolicy("example",
     resource_arn=aws_networkfirewall_rule_group["example"]["arn"],
     policy=json.dumps({
         "Statement": [{
-            "Action": "network-firewall:ListRuleGroups",
+            "Action": [
+                "network-firewall:ListRuleGroups",
+                "network-firewall:CreateFirewallPolicy",
+                "network-firewall:UpdateFirewallPolicy",
+            ],
             "Effect": "Allow",
             "Resource": aws_networkfirewall_rule_group["example"]["arn"],
             "Principal": {
@@ -266,7 +302,11 @@ const example = new aws.networkfirewall.ResourcePolicy("example", {
     resourceArn: aws_networkfirewall_rule_group.example.arn,
     policy: JSON.stringify({
         Statement: [{
-            Action: "network-firewall:ListRuleGroups",
+            Action: [
+                "network-firewall:ListRuleGroups",
+                "network-firewall:CreateFirewallPolicy",
+                "network-firewall:UpdateFirewallPolicy",
+            ],
             Effect: "Allow",
             Resource: aws_networkfirewall_rule_group.example.arn,
             Principal: {
