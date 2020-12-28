@@ -953,6 +953,24 @@ var res = new MyResource("res",
 
 You would use the `ignoreChanges` option to avoid changes in properties leading to diffs or to change defaults for a property without forcing all existing deployed stacks to update or replace the affected resource. This is common after you've imported existing infrastructure provisioned by another method into Pulumi, where there may be historical drift that you'd prefer to retain than have to replace and reconstruct some critical parts of your infrastructure.
 
+In addition to passing simple property names, nested properties can also be supplied to ignore changes to a more targeted nested part of the resource's inputs.  Here are examples of legal paths that can be passed to specify nested properties of objects and arrays, as well as to escape object keys that contain special characters:
+
+* `root`
+* `root.nested`
+* `root["nested"]`
+* `root.double.nest`
+* `root["double"].nest`
+* `root["double"]["nest"]`
+* `root.array[0]`
+* `root.array[100]`
+* `root.array[0].nested`
+* `root.array[0][1].nested`
+* `root.nested.array[0].double[1]`
+* `root["key with \"escaped\" quotes"]`
+* `root["key with a ."]`
+* `["root key with \"escaped\" quotes"].nested`
+* `["root key with a ."][100]`
+
 > **Note:** The property names passed to `ignoreChanges` should always be the "camelCase" version of
 > the property name as used in the core Pulumi resource model.
 
