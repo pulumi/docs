@@ -1,5 +1,5 @@
 import { Component, Prop, h, State } from '@stencil/core';
-import { waitForWindowPropertyToExist, parseCookie, parseUTMCookieString } from "../../util/util";
+import { waitForWindowPropertyToExist, parseCookie, parseUTMCookieString, waitForElementToExist } from "../../util/util";
 
 @Component({
     tag: 'pulumi-hubspot-form',
@@ -32,7 +32,7 @@ export class HubspotForm {
     windowEventHandler: (this: Window, ev: MessageEvent) => any;
 
     // When the component loads we need to wait for the 'hbspt' property to
-    // propogate up to the global window object. Then once it is available
+    // propagate up to the global window object. Then once it is available
     // we should create the HubSpot form.
     componentDidLoad() {
         waitForWindowPropertyToExist("hbspt").then((hbspt: any) => {
@@ -46,6 +46,39 @@ export class HubspotForm {
             });
             this.isLoading = false;
             this.didLoad = true;
+
+            // Hidden form fields from HubSpot created forms causes gaps to appear in
+            // the form which is less then desireable. So we need to find the hidden
+            // form fields and then hide the parent <fieldset> for it. We will also need
+            // to populate those fields with the correct values.
+            waitForElementToExist(`#hubspotForm_${this.formId} form fieldset div`).then(() => {
+                const fieldSets = document.querySelectorAll(`#hubspotForm_${this.formId} form fieldset div[style*="display:none"]`);
+                fieldSets.forEach((fieldset) => {
+                    fieldset.parentElement.style.display = "none";
+                });
+
+                // Populate the UTM parameter fields.
+                const cookies = parseCookie();
+                const utmCookie: any = parseUTMCookieString(cookies["__utmzz"]);
+                const utmCampaign = utmCookie.utmccn || "(not set)";
+                const utmSource = utmCookie.utmcsr || "(direct)";
+                const utmMedium = utmCookie.utmcmd || "(none)";
+
+                const utmCampaignInput = document.querySelector<HTMLInputElement>(`input[name="last_utm_campaign"]`);
+                if (utmCampaignInput) {
+                    utmCampaignInput.value = utmCampaign;
+                }
+
+                const utmSourceInput = document.querySelector<HTMLInputElement>(`input[name="last_utm_source"]`);
+                if (utmSourceInput) {
+                    utmCampaignInput.value = utmSource;
+                }
+
+                const utmMediumInput = document.querySelector<HTMLInputElement>(`input[name="last_utm_medium"]`);
+                if (utmMediumInput) {
+                    utmMediumInput.value = utmMedium;
+                }
+            });
         }).catch((err) => {
             this.isLoading = false;
             console.log("Unable to load HubSpot form.");
@@ -68,7 +101,7 @@ export class HubspotForm {
         }
     }
 
-    // When the form is submiited we also send an event to segment with the relevant UTM tags.
+    // When the form is submitted we also send an event to segment with the relevant UTM tags.
     private handleFormSubmission(formId: string) {
         const analytics = (window as any).analytics;
         const analyticsAvailable = analytics && analytics.track && (typeof analytics.track === "function");
