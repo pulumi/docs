@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.blueprint.Assignment resource wi
 
 Represents a blueprint assignment.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3344,6 +3343,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Azure Active Directory principal ID associated with this Identity.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:blueprint/v20181101preview:Assignment assignSimpleBlueprint /subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Blueprint/blueprintAssignments/assignSimpleBlueprint 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

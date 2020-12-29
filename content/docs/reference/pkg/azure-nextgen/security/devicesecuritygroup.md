@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.security.DeviceSecurityGroup res
 The device security group resource
 Latest API Version: 2019-08-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2015,6 +2014,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The time window size in iso8601 format.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:security/latest:DeviceSecurityGroup default /subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/MyGroup/providers/Microsoft.Security/Locations/eastus/IoTSecuritySolutions/default 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

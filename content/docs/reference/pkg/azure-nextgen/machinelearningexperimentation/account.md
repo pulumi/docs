@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.machinelearningexperimentation.A
 
 An object that represents a machine learning team account.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1190,6 +1189,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The fully qualified arm Id of the storage account.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:machinelearningexperimentation/v20170501preview:Account accountcrud5678 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/accountcrud-1234/providers/Microsoft.MachineLearningExperimentation/accounts/accountcrud5678 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.authorization.PolicyAssignment r
 The policy assignment.
 Latest API Version: 2020-09-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1875,6 +1874,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>None{{% md %}}Indicates that no identity is associated with the resource or that the existing identity should be removed.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:authorization/latest:PolicyAssignment EnforceNaming /subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policyAssignments/EnforceNaming 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

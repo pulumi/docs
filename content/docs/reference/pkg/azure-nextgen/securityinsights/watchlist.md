@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.securityinsights.Watchlist resou
 
 Represents a Watchlist in Azure Security Insights.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1554,6 +1553,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The object id of the user.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:securityinsights/v20190101preview:Watchlist highValueAsset /subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalIinsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/watchlists/highValueAsset 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

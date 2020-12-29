@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.blockchain.BlockchainMember reso
 
 Payload of the blockchain member which is exposed in the request/response of the resource provider.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1807,6 +1806,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Gets or sets Sku tier{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:blockchain/v20180601preview:BlockchainMember contosemember1 /subscriptions/51766542-3ed7-4a72-a187-0c8ab644ddab/resourceGroups/mygroup/providers/Microsoft.Blockchain/blockchainMembers/contosemember1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

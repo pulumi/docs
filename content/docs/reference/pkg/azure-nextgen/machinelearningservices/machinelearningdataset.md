@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.machinelearningservices.MachineL
 
 Machine Learning dataset object wrapped into ARM resource envelope.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -4486,6 +4485,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}A user or service principal's tenant ID.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:machinelearningservices/v20200501preview:MachineLearningDataset datasetName123 /subscriptions/35f16a99-532a-4a47-9e93-00305f6c40f2/resourceGroups/acjain-mleastUS2/providers/Microsoft.MachineLearningServices/workspaces/acjain-mleastUS2/datasets/datasetName123 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

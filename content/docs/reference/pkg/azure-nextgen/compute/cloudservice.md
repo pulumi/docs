@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.compute.CloudService resource wi
 
 Describes the cloud service.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -5891,6 +5890,16 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
     <dd>{{% md %}}Resource Id{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:compute/v20201001preview:CloudService {cs-name} /subscriptions/{subscription-id}/resourceGroups/ConstosoRG/providers/Microsoft.Compute/cloudServices/{cs-name} 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

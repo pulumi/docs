@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.hanaonazure.HanaInstance resourc
 
 HANA instance info on Azure (ARM properties and HANA properties)
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2050,6 +2049,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies information about the operating system disk used by the hana instance.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:hanaonazure/v20171103preview:HanaInstance myHanaInstance /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.HanaOnAzure/hanaInstances/myHanaInstance 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

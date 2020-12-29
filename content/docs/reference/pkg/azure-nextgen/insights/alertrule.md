@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.insights.AlertRule resource with
 The alert rule resource.
 Latest API Version: 2016-03-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3550,6 +3549,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Last</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:insights/latest:AlertRule chiricutin /subscriptions/b67f7fec-69fc-4974-9099-a26bd6ffeda3/resourceGroups/Rac46PostSwapRG/providers/microsoft.insights/alertrules/chiricutin 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

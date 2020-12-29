@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.servicefabric.Application resour
 The application resource.
 Latest API Version: 2020-03-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -4051,6 +4050,16 @@ The computation rounds up to tolerate one failure on small numbers of nodes. Def
     <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:servicefabric/latest:Application myCluster /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/clusters/myCluster/applications/myApp 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

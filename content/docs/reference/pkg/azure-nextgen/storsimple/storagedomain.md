@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.storsimple.StorageDomain resourc
 The storage domain.
 Latest API Version: 2016-10-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1034,6 +1033,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Disabled</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:storsimple/latest:StorageDomain sd-fs-HSDK-4XY4FI2IVG /subscriptions/9eb689cd-7243-43b4-b6f6-5c65cb296641/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/hAzureSDKOperations/storageDomains/sd-fs-HSDK-4XY4FI2IVG 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

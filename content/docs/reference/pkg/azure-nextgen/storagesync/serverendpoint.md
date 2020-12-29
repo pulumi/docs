@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.storagesync.ServerEndpoint resou
 Server Endpoint object.
 Latest API Version: 2020-09-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -4255,6 +4254,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Upload Status{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:storagesync/latest:ServerEndpoint SampleServerEndpoint_1 /subscriptions/52b8da2f-61e0-4a1f-8dde-336911f367fb/resourceGroups/SampleResourceGroup_1/providers/Microsoft.StorageSync/storageSyncServices/SampleStorageSyncService_1/syncGroups/SampleSyncGroup_1/serverEndpoints/SampleServerEndpoint_1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.azurestackhci.Cluster resource w
 Cluster details.
 Latest API Version: 2020-10-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1557,6 +1556,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}List of nodes reported by the cluster.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:azurestackhci/latest:Cluster myCluster /subscriptions/fd3c3665-1729-4b7b-9a38-238e83b0f98b/resourceGroups/test-rg/providers/Microsoft.AzureStackHCI/clusters/myCluster 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

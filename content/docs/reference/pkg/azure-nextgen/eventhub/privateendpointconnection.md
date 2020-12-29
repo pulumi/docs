@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.eventhub.PrivateEndpointConnecti
 
 Properties of the PrivateEndpointConnection.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1146,6 +1145,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Disconnected</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:eventhub/v20180101preview:PrivateEndpointConnection 928c44d5-b7c6-423b-b6fa-811e0c27b3e0 /subscriptions/dbedb4e0-40e6-4145-81f3-f1314c150774/resourceGroups/SDK-EventHub-4794/providers/Microsoft.EventHub/namespaces/sdk-Namespace-5828/privateEndpointConnections/928c44d5-b7c6-423b-b6fa-811e0c27b3e0 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

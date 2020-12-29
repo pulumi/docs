@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.avs.WorkloadNetworkSegment resou
 
 NSX Segment
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1104,6 +1103,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Gateway address.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:avs/v20200717preview:WorkloadNetworkSegment segment1 /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/workloadNetworks/default/segments/segment1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

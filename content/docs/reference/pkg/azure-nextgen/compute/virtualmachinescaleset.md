@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.compute.VirtualMachineScaleSet r
 Describes a Virtual Machine Scale Set.
 Latest API Version: 2020-06-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2528,7 +2527,83 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachineScaleSet(ctx, "virtualMachineScaleSet", &compute.VirtualMachineScaleSetArgs{
+			AutomaticRepairsPolicy: &compute.AutomaticRepairsPolicyArgs{
+				Enabled:     pulumi.Bool(true),
+				GracePeriod: pulumi.String("PT30M"),
+			},
+			Location:          pulumi.String("westus"),
+			Overprovision:     pulumi.Bool(true),
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			Sku: &compute.SkuArgs{
+				Capacity: pulumi.Int(3),
+				Name:     pulumi.String("Standard_D1_v2"),
+				Tier:     pulumi.String("Standard"),
+			},
+			UpgradePolicy: &compute.UpgradePolicyArgs{
+				Mode: "Manual",
+			},
+			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
+				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
+					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
+						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
+							EnableIPForwarding: pulumi.Bool(true),
+							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+									Name: pulumi.String("{vmss-name}"),
+									Subnet: &compute.ApiEntityReferenceArgs{
+										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+									},
+								},
+							},
+							Name:    pulumi.String("{vmss-name}"),
+							Primary: pulumi.Bool(true),
+						},
+					},
+				},
+				OsProfile: &compute.VirtualMachineScaleSetOSProfileArgs{
+					AdminPassword:      pulumi.String("{your-password}"),
+					AdminUsername:      pulumi.String("{your-username}"),
+					ComputerNamePrefix: pulumi.String("{vmss-name}"),
+				},
+				StorageProfile: &compute.VirtualMachineScaleSetStorageProfileArgs{
+					ImageReference: &compute.ImageReferenceArgs{
+						Offer:     pulumi.String("WindowsServer"),
+						Publisher: pulumi.String("MicrosoftWindowsServer"),
+						Sku:       pulumi.String("2016-Datacenter"),
+						Version:   pulumi.String("latest"),
+					},
+					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
+						Caching:      "ReadWrite",
+						CreateOption: pulumi.String("FromImage"),
+						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
+							StorageAccountType: pulumi.String("Standard_LRS"),
+						},
+					},
+				},
+			},
+			VmScaleSetName: pulumi.String("{vmss-name}"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -21383,6 +21458,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies the Windows Remote Management listeners. This enables remote Windows PowerShell.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:compute/latest:VirtualMachineScaleSet {vmss-name} /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachineScaleSets/{vmss-name} 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

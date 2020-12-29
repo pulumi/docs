@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.delegatednetwork.ControllerDetai
 
 Represents an instance of a DNC controller.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -770,6 +769,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:delegatednetwork/v20200808preview:ControllerDetails testcontroller /subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.DelegatedNetwork/controller/testcontroller 
+```
 
 
 

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.iotcentral.App resource with exa
 The IoT Central application.
 Latest API Version: 2018-09-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -988,6 +987,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The name of the SKU.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:iotcentral/latest:App myIoTCentralApp /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.IoTCentral/IoTApps/myIoTCentralApp 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.maps.PrivateAtlase resource with
 
 An Azure resource which represents which will provision the ability to create private location data.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -747,6 +746,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The state of the resource provisioning, terminal states: Succeeded, Failed, Canceled{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:maps/v20200201preview:PrivateAtlase myPrivateAtlas /subscriptions/21a9967a-e8a9-4656-a70b-96ff1c4d05a0/resourceGroups/myResourceGroup/providers/Microsoft.Maps/accounts/myMapsAccount/privateAtlases/myPrivateAtlas 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.cdn.Rule resource with examples,
 Friendly Rules name mapping to the any Rules or secret related information.
 Latest API Version: 2020-09-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -13754,6 +13753,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Parameter name{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:cdn/latest:Rule rule1 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/ruleSets/ruleSet1/rules/rule1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

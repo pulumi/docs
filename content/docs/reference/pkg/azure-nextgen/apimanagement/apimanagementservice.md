@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.ApiManagementServi
 A single API Management service resource in List or Get response.
 Latest API Version: 2019-12-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -5171,6 +5170,16 @@ dictionary key references will be ARM resource ids in the form:
     <dd>Internal{{% md %}}The service is part of Virtual Network and it is only accessible from within the virtual network.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:apimanagement/latest:ApiManagementService apimService1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

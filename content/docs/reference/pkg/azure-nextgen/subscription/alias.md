@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.subscription.Alias resource with
 Subscription Information with the alias.
 Latest API Version: 2020-09-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -880,6 +879,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>DevTest</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:subscription/latest:Alias aliasForNewSub /providers/Microsoft.Subscription/aliases/aliasForNewSub 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

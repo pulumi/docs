@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.eventgrid.Topic resource with ex
 EventGrid Topic
 Latest API Version: 2020-06-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3031,6 +3030,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Failed</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:eventgrid/latest:Topic exampletopic1 /subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

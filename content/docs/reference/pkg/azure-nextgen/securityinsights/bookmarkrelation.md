@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.securityinsights.BookmarkRelatio
 
 Represents a relation between two resources
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -818,6 +817,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:securityinsights/v20190101preview:BookmarkRelation 4bb36b7b-26ff-4d1c-9cbe-0d8ab3da0014 /subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalIinsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/bookmarks/2216d0e1-91e3-4902-89fd-d2df8c535096/relations/4bb36b7b-26ff-4d1c-9cbe-0d8ab3da0014 
+```
 
 
 

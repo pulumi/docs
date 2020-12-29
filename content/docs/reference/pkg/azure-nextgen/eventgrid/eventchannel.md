@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.eventgrid.EventChannel resource 
 
 Event Channel.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3746,6 +3745,16 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:eventgrid/v20200401preview:EventChannel exampleEventChannelName1 /subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/partnerNamespaces/partnerNamespace123/eventChannels/exampleEventChannelName1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

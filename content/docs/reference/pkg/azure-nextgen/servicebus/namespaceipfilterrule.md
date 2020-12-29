@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.servicebus.NamespaceIpFilterRule
 
 Single item in a List or Get IpFilterRules operation
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -718,6 +717,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Reject</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:servicebus/v20180101preview:NamespaceIpFilterRule sdk-IPFilterRules-7337 /subscriptions/Subscription/resourceGroups/ResourceGroup/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-5232/ipfilterrules/sdk-IPFilterRules-7337 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

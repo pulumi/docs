@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.insights.WorkbookTemplate resour
 
 An Application Insights workbook template definition.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1430,6 +1429,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Valid JSON object containing workbook template payload.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:insights/v20191017preview:WorkbookTemplate testtemplate2 /subscriptions/50359d91-7b9d-4823-85af-eb298a61ba95/resourceGroups/testrg/providers/microsoft.insights/workbooktemplates/testtemplate2 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

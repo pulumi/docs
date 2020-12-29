@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.storage.BlobContainerImmutabilit
 The ImmutabilityPolicy property of a blob container, including Id, resource name, resource type, Etag.
 Latest API Version: 2019-06-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -747,6 +746,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:storage/latest:BlobContainerImmutabilityPolicy default /subscriptions/{subscription-id}/resourceGroups/res1782/providers/Microsoft.Storage/storageAccounts/sto7069/blobServices/default/containers/container6397/immutabilityPolicies/default 
+```
 
 
 

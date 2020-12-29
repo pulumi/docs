@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.synapse.SqlPoolSensitivityLabel 
 
 A sensitivity label.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -910,6 +909,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:synapse/v20190601preview:SqlPoolSensitivityLabel current /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/myRG/providers/Microsoft.Synapse/workspaces/myServer/sqlPools/myDatabase/schemas/dbo/tables/myTable/columns/myColumn/sensitivityLabels/current 
+```
 
 
 

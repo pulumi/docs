@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.recoveryservices.ReplicationReco
 Recovery plan details.
 Latest API Version: 2018-07-10.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3266,6 +3265,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>CompleteMigration</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:recoveryservices/latest:ReplicationRecoveryPlan RPtest1 /Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationRecoveryPlans/RPtest1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

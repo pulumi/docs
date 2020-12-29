@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.aad.DomainService resource with 
 Domain service.
 Latest API Version: 2020-01-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -223,7 +222,7 @@ const domainService = new azure_nextgen.aad.latest.DomainService("domainService"
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DomainService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">domain_configuration_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_security_settings</span><span class="p">:</span> <span class="nx">Optional[DomainSecuritySettingsArgs]</span> = None<span class="p">, </span><span class="nx">domain_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filtered_sync</span><span class="p">:</span> <span class="nx">Optional[Union[str, FilteredSync]]</span> = None<span class="p">, </span><span class="nx">ldaps_settings</span><span class="p">:</span> <span class="nx">Optional[LdapsSettingsArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">migration_properties</span><span class="p">:</span> <span class="nx">Optional[MigrationPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">notification_settings</span><span class="p">:</span> <span class="nx">Optional[NotificationSettingsArgs]</span> = None<span class="p">, </span><span class="nx">replica_sets</span><span class="p">:</span> <span class="nx">Optional[Sequence[ReplicaSetArgs]]</span> = None<span class="p">, </span><span class="nx">resource_forest_settings</span><span class="p">:</span> <span class="nx">Optional[ResourceForestSettingsArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DomainService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">domain_configuration_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_security_settings</span><span class="p">:</span> <span class="nx">Optional[DomainSecuritySettingsArgs]</span> = None<span class="p">, </span><span class="nx">domain_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">filtered_sync</span><span class="p">:</span> <span class="nx">Optional[Union[str, FilteredSync]]</span> = None<span class="p">, </span><span class="nx">ldaps_settings</span><span class="p">:</span> <span class="nx">Optional[LdapsSettingsArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_settings</span><span class="p">:</span> <span class="nx">Optional[NotificationSettingsArgs]</span> = None<span class="p">, </span><span class="nx">replica_sets</span><span class="p">:</span> <span class="nx">Optional[Sequence[ReplicaSetArgs]]</span> = None<span class="p">, </span><span class="nx">resource_forest_settings</span><span class="p">:</span> <span class="nx">Optional[ResourceForestSettingsArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -477,15 +476,6 @@ The DomainService resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="migrationproperties_csharp">
-<a href="#migrationproperties_csharp" style="color: inherit; text-decoration: inherit;">Migration<wbr>Properties</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Inputs.<wbr>Migration<wbr>Properties<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Migration Properties{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="notificationsettings_csharp">
 <a href="#notificationsettings_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Settings</a>
 </span>
@@ -616,15 +606,6 @@ The DomainService resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="migrationproperties_go">
-<a href="#migrationproperties_go" style="color: inherit; text-decoration: inherit;">Migration<wbr>Properties</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationproperties">Migration<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}Migration Properties{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="notificationsettings_go">
@@ -759,15 +740,6 @@ The DomainService resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="migrationproperties_nodejs">
-<a href="#migrationproperties_nodejs" style="color: inherit; text-decoration: inherit;">migration<wbr>Properties</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationproperties">Migration<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}Migration Properties{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="notificationsettings_nodejs">
 <a href="#notificationsettings_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Settings</a>
 </span>
@@ -900,15 +872,6 @@ The DomainService resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="migration_properties_python">
-<a href="#migration_properties_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>properties</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationproperties">Migration<wbr>Properties<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Migration Properties{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="notification_settings_python">
 <a href="#notification_settings_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>settings</a>
 </span>
@@ -983,6 +946,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="migrationproperties_csharp">
+<a href="#migrationproperties_csharp" style="color: inherit; text-decoration: inherit;">Migration<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#migrationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Outputs.<wbr>Migration<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Migration Properties{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="name_csharp">
@@ -1063,6 +1035,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="migrationproperties_go">
+<a href="#migrationproperties_go" style="color: inherit; text-decoration: inherit;">Migration<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#migrationpropertiesresponse">Migration<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Migration Properties{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -1141,6 +1122,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="migrationproperties_nodejs">
+<a href="#migrationproperties_nodejs" style="color: inherit; text-decoration: inherit;">migration<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#migrationpropertiesresponse">Migration<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Migration Properties{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -1217,6 +1207,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="migration_properties_python">
+<a href="#migration_properties_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#migrationpropertiesresponse">Migration<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Migration Properties{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="name_python">
@@ -3082,104 +3081,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </dl>
 {{% /choosable %}}
 
-<h4 id="migrationprogress">Migration<wbr>Progress</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="completionpercentage_csharp">
-<a href="#completionpercentage_csharp" style="color: inherit; text-decoration: inherit;">Completion<wbr>Percentage</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">double</span>
-    </dt>
-    <dd>{{% md %}}Completion Percentage{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="progressmessage_csharp">
-<a href="#progressmessage_csharp" style="color: inherit; text-decoration: inherit;">Progress<wbr>Message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Progress Message{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="completionpercentage_go">
-<a href="#completionpercentage_go" style="color: inherit; text-decoration: inherit;">Completion<wbr>Percentage</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float64</span>
-    </dt>
-    <dd>{{% md %}}Completion Percentage{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="progressmessage_go">
-<a href="#progressmessage_go" style="color: inherit; text-decoration: inherit;">Progress<wbr>Message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Progress Message{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="completionpercentage_nodejs">
-<a href="#completionpercentage_nodejs" style="color: inherit; text-decoration: inherit;">completion<wbr>Percentage</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Completion Percentage{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="progressmessage_nodejs">
-<a href="#progressmessage_nodejs" style="color: inherit; text-decoration: inherit;">progress<wbr>Message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Progress Message{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="completion_percentage_python">
-<a href="#completion_percentage_python" style="color: inherit; text-decoration: inherit;">completion_<wbr>percentage</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Completion Percentage{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="progress_message_python">
-<a href="#progress_message_python" style="color: inherit; text-decoration: inherit;">progress_<wbr>message</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Progress Message{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
 <h4 id="migrationprogressresponse">Migration<wbr>Progress<wbr>Response</h4>
 
 {{% choosable language csharp %}}
@@ -3278,147 +3179,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </dl>
 {{% /choosable %}}
 
-<h4 id="migrationproperties">Migration<wbr>Properties</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="migrationprogress_csharp">
-<a href="#migrationprogress_csharp" style="color: inherit; text-decoration: inherit;">Migration<wbr>Progress</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationprogress">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Inputs.<wbr>Migration<wbr>Progress<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Migration Progress{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="oldsubnetid_csharp">
-<a href="#oldsubnetid_csharp" style="color: inherit; text-decoration: inherit;">Old<wbr>Subnet<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Old Subnet Id{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="oldvnetsiteid_csharp">
-<a href="#oldvnetsiteid_csharp" style="color: inherit; text-decoration: inherit;">Old<wbr>Vnet<wbr>Site<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Old Vnet Site Id{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="migrationprogress_go">
-<a href="#migrationprogress_go" style="color: inherit; text-decoration: inherit;">Migration<wbr>Progress</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationprogress">Migration<wbr>Progress</a></span>
-    </dt>
-    <dd>{{% md %}}Migration Progress{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="oldsubnetid_go">
-<a href="#oldsubnetid_go" style="color: inherit; text-decoration: inherit;">Old<wbr>Subnet<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Old Subnet Id{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="oldvnetsiteid_go">
-<a href="#oldvnetsiteid_go" style="color: inherit; text-decoration: inherit;">Old<wbr>Vnet<wbr>Site<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Old Vnet Site Id{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="migrationprogress_nodejs">
-<a href="#migrationprogress_nodejs" style="color: inherit; text-decoration: inherit;">migration<wbr>Progress</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationprogress">Migration<wbr>Progress</a></span>
-    </dt>
-    <dd>{{% md %}}Migration Progress{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="oldsubnetid_nodejs">
-<a href="#oldsubnetid_nodejs" style="color: inherit; text-decoration: inherit;">old<wbr>Subnet<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Old Subnet Id{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="oldvnetsiteid_nodejs">
-<a href="#oldvnetsiteid_nodejs" style="color: inherit; text-decoration: inherit;">old<wbr>Vnet<wbr>Site<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Old Vnet Site Id{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="migration_progress_python">
-<a href="#migration_progress_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>progress</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationprogress">Migration<wbr>Progress<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Migration Progress{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="old_subnet_id_python">
-<a href="#old_subnet_id_python" style="color: inherit; text-decoration: inherit;">old_<wbr>subnet_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Old Subnet Id{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="old_vnet_site_id_python">
-<a href="#old_vnet_site_id_python" style="color: inherit; text-decoration: inherit;">old_<wbr>vnet_<wbr>site_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Old Vnet Site Id{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
 <h4 id="migrationpropertiesresponse">Migration<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="migrationprogress_csharp">
 <a href="#migrationprogress_csharp" style="color: inherit; text-decoration: inherit;">Migration<wbr>Progress</a>
 </span>
@@ -3426,8 +3193,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#migrationprogressresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Inputs.<wbr>Migration<wbr>Progress<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Migration Progress{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="oldsubnetid_csharp">
 <a href="#oldsubnetid_csharp" style="color: inherit; text-decoration: inherit;">Old<wbr>Subnet<wbr>Id</a>
 </span>
@@ -3435,8 +3202,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Old Subnet Id{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="oldvnetsiteid_csharp">
 <a href="#oldvnetsiteid_csharp" style="color: inherit; text-decoration: inherit;">Old<wbr>Vnet<wbr>Site<wbr>Id</a>
 </span>
@@ -3450,8 +3217,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="migrationprogress_go">
 <a href="#migrationprogress_go" style="color: inherit; text-decoration: inherit;">Migration<wbr>Progress</a>
 </span>
@@ -3459,8 +3226,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#migrationprogressresponse">Migration<wbr>Progress<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Migration Progress{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="oldsubnetid_go">
 <a href="#oldsubnetid_go" style="color: inherit; text-decoration: inherit;">Old<wbr>Subnet<wbr>Id</a>
 </span>
@@ -3468,8 +3235,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Old Subnet Id{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="oldvnetsiteid_go">
 <a href="#oldvnetsiteid_go" style="color: inherit; text-decoration: inherit;">Old<wbr>Vnet<wbr>Site<wbr>Id</a>
 </span>
@@ -3483,8 +3250,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="migrationprogress_nodejs">
 <a href="#migrationprogress_nodejs" style="color: inherit; text-decoration: inherit;">migration<wbr>Progress</a>
 </span>
@@ -3492,8 +3259,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#migrationprogressresponse">Migration<wbr>Progress<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Migration Progress{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="oldsubnetid_nodejs">
 <a href="#oldsubnetid_nodejs" style="color: inherit; text-decoration: inherit;">old<wbr>Subnet<wbr>Id</a>
 </span>
@@ -3501,8 +3268,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Old Subnet Id{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="oldvnetsiteid_nodejs">
 <a href="#oldvnetsiteid_nodejs" style="color: inherit; text-decoration: inherit;">old<wbr>Vnet<wbr>Site<wbr>Id</a>
 </span>
@@ -3516,8 +3283,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="migration_progress_python">
 <a href="#migration_progress_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>progress</a>
 </span>
@@ -3525,8 +3292,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#migrationprogressresponse">Migration<wbr>Progress<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Migration Progress{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="old_subnet_id_python">
 <a href="#old_subnet_id_python" style="color: inherit; text-decoration: inherit;">old_<wbr>subnet_<wbr>id</a>
 </span>
@@ -3534,8 +3301,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Old Subnet Id{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="old_vnet_site_id_python">
 <a href="#old_vnet_site_id_python" style="color: inherit; text-decoration: inherit;">old_<wbr>vnet_<wbr>site_<wbr>id</a>
 </span>
@@ -4759,6 +4526,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Disabled</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:aad/latest:DomainService TestDomainService.com /subscriptions/1639790a-76a2-4ac4-98d9-8562f5dfcb4d/resourceGroups/TestResourceGroup/providers/Microsoft.AAD/DomainServices/TestDomainService.com 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

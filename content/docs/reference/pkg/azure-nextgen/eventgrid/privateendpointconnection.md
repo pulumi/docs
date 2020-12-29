@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.eventgrid.PrivateEndpointConnect
 
 Latest API Version: 2020-06-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1281,6 +1280,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Failed</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:eventgrid/latest:PrivateEndpointConnection BMTPE5.8A30D251-4C61-489D-A1AA-B37C4A329B8B /subscriptions/5B4B650E-28B9-4790-B3AB-DDBD88D727C4/resourceGroups/examplerg/providers/Microsoft.EventGrid/topics/exampletopic1/privateEndpointConnections/BMTPE5.8A30D251-4C61-489D-A1AA-B37C4A329B8B 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

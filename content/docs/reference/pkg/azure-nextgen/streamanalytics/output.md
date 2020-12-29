@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.streamanalytics.Output resource 
 An output object, containing all information associated with the named output. All outputs are contained under a streaming job.
 Latest API Version: 2016-03-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -6707,6 +6706,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The name of the Azure Storage account. Required on PUT (CreateOrReplace) requests.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:streamanalytics/latest:Output output5195 /subscriptions/56b5e0a9-b645-407d-99b0-c64f86013e3d/resourceGroups/sjrg6912/providers/Microsoft.StreamAnalytics/streamingjobs/sj3310/outputs/output5195 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

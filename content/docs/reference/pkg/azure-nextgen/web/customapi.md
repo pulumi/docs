@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.web.CustomApi resource with exam
 A custom API
 Latest API Version: 2016-06-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3685,6 +3684,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}List of the endpoints' qualified names{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:web/latest:CustomApi testCustomApi /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testResourceGroup/providers/Microsoft.Web/customApis/testCustomApi 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.documentdb.DatabaseAccountTable 
 An Azure Cosmos DB Table.
 Latest API Version: 2016-03-31.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -784,6 +783,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Name of the Cosmos DB table{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:documentdb/latest:DatabaseAccountTable tableName tableName 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

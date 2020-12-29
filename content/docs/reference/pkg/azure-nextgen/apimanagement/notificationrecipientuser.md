@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.NotificationRecipi
 Recipient User details.
 Latest API Version: 2019-12-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -595,6 +594,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:apimanagement/latest:NotificationRecipientUser 576823d0a40f7e74ec07d642 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/notifications/RequestPublisherNotificationMessage/recipientUsers/576823d0a40f7e74ec07d642 
+```
 
 
 

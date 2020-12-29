@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.insights.ComponentLinkedStorageA
 
 An Application Insights component linked storage accounts
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -594,6 +593,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:insights/v20200301preview:ComponentLinkedStorageAccount serviceprofile /subscriptions/86dc51d3-92ed-4d7e-947a-775ea79b4918/resourceGroups/someResourceGroupNameproviders/microsoft.insights/components/myComponent/linkedStorageAccounts/serviceprofiler 
+```
 
 
 

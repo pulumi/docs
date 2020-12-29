@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.containerregistry.PipelineRun re
 
 An object that represents a pipeline run for a container registry.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2894,6 +2893,16 @@ Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').{
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:containerregistry/v20201101preview:PipelineRun myPipelineRun /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/pipelineRuns/myPipelineRun 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.aadiam.DiagnosticSetting resourc
 The diagnostic setting resource.
 Latest API Version: 2017-04-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1218,6 +1217,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}A value indicating whether the retention policy is enabled.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:aadiam/latest:DiagnosticSetting mysetting providers/microsoft.aadiam/diagnosticSettings/mysetting 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

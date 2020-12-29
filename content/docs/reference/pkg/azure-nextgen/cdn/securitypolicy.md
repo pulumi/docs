@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.cdn.SecurityPolicy resource with
 SecurityPolicy association for AzureFrontDoor profile
 Latest API Version: 2020-09-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1555,6 +1554,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:cdn/latest:SecurityPolicy securityPolicy1 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/securityPolicies/securityPolicy1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

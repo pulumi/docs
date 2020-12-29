@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.automanage.ConfigurationProfileP
 
 Definition of the configuration profile preference.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1814,6 +1813,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Full</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:automanage/v20200630preview:ConfigurationProfilePreference defaultProfilePreference /subscriptions/subscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.Automanage/configurationProfilePreferences/defaultProfilePreference 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

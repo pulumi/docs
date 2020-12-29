@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.alertsmanagement.HealthAlert res
 
 The health alert resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1757,6 +1756,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Names of health monitor type on which to define alert{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:alertsmanagement/v20200804preview:HealthAlert MyName /subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourceGroups/gigtest/providers/providers/Microsoft.AlertsManagement/resourceHealthAlerts/highcpu 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

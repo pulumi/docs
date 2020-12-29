@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.providerhub.DefaultRollout resou
 Default rollout definition.
 Latest API Version: 2020-11-20.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -7987,6 +7986,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:providerhub/latest:DefaultRollout Microsoft.Contoso/2020week10 /subscriptions/ab7a8701-f7ef-471a-a2f4-d0ebbf494f77providers/Microsoft.ProviderHub/providerRegistrations/Microsoft.Contoso/defaultRollouts/2020week10 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

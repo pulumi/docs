@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.compute.ConfigurationProfileAssi
 
 Configuration profile assignment is an association between a VM and automanage profile configuration.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1129,6 +1128,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The target VM resource URI{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:compute/v20200630preview:ConfigurationProfileAssignment default /subscriptions/subscriptionId/resourceGroups/myResourceGroupName/providers/Microsoft.Compute/virtualMachines/myvm/providers/Microsoft.Automanage/AutomanageAssignments/default 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.cache.PatchSchedule resource wit
 Response to put/get patch schedules for Redis cache.
 Latest API Version: 2020-06-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -970,6 +969,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}ISO8601 timespan specifying how much time cache patching can take. {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:cache/latest:PatchSchedule default /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/cache1/patchSchedules/default 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

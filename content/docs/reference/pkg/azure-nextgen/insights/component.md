@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.insights.Component resource with
 An Application Insights component definition.
 Latest API Version: 2015-05-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1643,6 +1642,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>rest</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:insights/latest:Component my-component /subscriptions/subid/resourceGroups/my-resource-group/providers/Microsoft.Insights/components/my-component 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

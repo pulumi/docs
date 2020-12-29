@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.azureactivedirectory.GuestUsage 
 
 Guest Usages Resource
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -622,6 +621,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:azureactivedirectory/v20200501preview:GuestUsage contoso.onmicrosoft.com /subscriptions/c80fb759-c965-4c6a-9110-9b2b2d038882/resourceGroups/contosoResourceGroup/providers/Microsoft.AzureActiveDirectory/guestUsages/contoso.onmicrosoft.com 
+```
 
 
 

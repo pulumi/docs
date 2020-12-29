@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.ContentItem resour
 Content type contract details.
 Latest API Version: 2019-12-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -631,6 +630,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:apimanagement/latest:ContentItem 4e3cf6a5-574a-ba08-1f23-2e7a38faa6d8 /contentTypes/page/contentItems/4e3cf6a5-574a-ba08-1f23-2e7a38faa6d8 
+```
 
 
 

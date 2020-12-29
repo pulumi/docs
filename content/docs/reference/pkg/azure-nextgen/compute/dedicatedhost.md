@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.compute.DedicatedHost resource w
 Specifies information about the Dedicated host.
 Latest API Version: 2020-06-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1867,6 +1866,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Resource Id{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:compute/latest:DedicatedHost myDedicatedHost /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/HostGroups/myDedicatedHostGroup/hosts/myDedicatedHost 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

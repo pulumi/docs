@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.operationalinsights.Cluster reso
 The top level Log Analytics cluster resource container.
 Latest API Version: 2020-10-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2379,6 +2378,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:operationalinsights/latest:Cluster oiautorest6685 /subscriptions/594038b5-1093-476e-a366-482775671c11/resourcegroups/oiautorest6685/providers/microsoft.operationalinsights/clusters/oiautorest6685 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

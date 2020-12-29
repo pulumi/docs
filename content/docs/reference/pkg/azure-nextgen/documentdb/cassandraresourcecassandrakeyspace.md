@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.documentdb.CassandraResourceCass
 An Azure Cosmos DB Cassandra keyspace.
 Latest API Version: 2020-09-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1282,6 +1281,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Request Units per second. For example, "throughput": 10000.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:documentdb/latest:CassandraResourceCassandraKeyspace keyspaceName /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/ddb1/cassandraKeyspaces/keyspaceName 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

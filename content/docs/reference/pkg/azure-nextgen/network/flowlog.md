@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.network.FlowLog resource with ex
 A flow log resource.
 Latest API Version: 2020-07-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1984,6 +1983,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Parameters that define the configuration of traffic analytics.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:network/latest:FlowLog Microsoft.Networkdesmond-rgdesmondcentral-nsg /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/networkWatchers/nw/FlowLogs/fl 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

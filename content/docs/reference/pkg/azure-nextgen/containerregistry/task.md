@@ -14,7 +14,6 @@ The task that has the ARM resource and task properties.
 The task will have all information to schedule a run against it.
 Latest API Version: 2019-04-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -7514,6 +7513,16 @@ the source registry during the run.{{% /md %}}</dd>
     <dd>v8</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:containerregistry/latest:Task myTask /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/tasks/myTask 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

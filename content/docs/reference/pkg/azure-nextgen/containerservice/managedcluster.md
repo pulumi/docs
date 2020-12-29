@@ -11,13 +11,331 @@ meta_desc: "Documentation for the azure-nextgen.containerservice.ManagedCluster 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Managed cluster.
-Latest API Version: 2020-11-01.
-
+Latest API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+### Create Managed Cluster with EncryptionAtHost enabled
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var managedCluster = new AzureNextGen.ContainerService.Latest.ManagedCluster("managedCluster", new AzureNextGen.ContainerService.Latest.ManagedClusterArgs
+        {
+            AddonProfiles = ,
+            AgentPoolProfiles = 
+            {
+                new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterAgentPoolProfileArgs
+                {
+                    Count = 3,
+                    EnableEncryptionAtHost = true,
+                    EnableNodePublicIP = true,
+                    Mode = "System",
+                    Name = "nodepool1",
+                    OsType = "Linux",
+                    Type = "VirtualMachineScaleSets",
+                    VmSize = "Standard_DS2_v2",
+                },
+            },
+            AutoScalerProfile = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterPropertiesAutoScalerProfileArgs
+            {
+                ScaleDownDelayAfterAdd = "15m",
+                ScanInterval = "20s",
+            },
+            DiskEncryptionSetID = "/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des",
+            DnsPrefix = "dnsprefix1",
+            EnablePodSecurityPolicy = true,
+            EnableRBAC = true,
+            KubernetesVersion = "",
+            LinuxProfile = new AzureNextGen.ContainerService.Latest.Inputs.ContainerServiceLinuxProfileArgs
+            {
+                AdminUsername = "azureuser",
+                Ssh = new AzureNextGen.ContainerService.Latest.Inputs.ContainerServiceSshConfigurationArgs
+                {
+                    PublicKeys = 
+                    {
+                        new AzureNextGen.ContainerService.Latest.Inputs.ContainerServiceSshPublicKeyArgs
+                        {
+                            KeyData = "keydata",
+                        },
+                    },
+                },
+            },
+            Location = "location1",
+            NetworkProfile = new AzureNextGen.ContainerService.Latest.Inputs.ContainerServiceNetworkProfileArgs
+            {
+                LoadBalancerProfile = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterLoadBalancerProfileArgs
+                {
+                    ManagedOutboundIPs = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs
+                    {
+                        Count = 2,
+                    },
+                },
+                LoadBalancerSku = "standard",
+                OutboundType = "loadBalancer",
+            },
+            ResourceGroupName = "rg1",
+            ResourceName = "clustername1",
+            ServicePrincipalProfile = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterServicePrincipalProfileArgs
+            {
+                ClientId = "clientid",
+                Secret = "secret",
+            },
+            Sku = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterSKUArgs
+            {
+                Name = "Basic",
+                Tier = "Free",
+            },
+            Tags = 
+            {
+                { "archv2", "" },
+                { "tier", "production" },
+            },
+            WindowsProfile = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterWindowsProfileArgs
+            {
+                AdminPassword = "replacePassword1234$",
+                AdminUsername = "azureuser",
+            },
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	"fmt"
+
+	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := containerservice.NewManagedCluster(ctx, "managedCluster", &containerservice.ManagedClusterArgs{
+			AddonProfiles: nil,
+			AgentPoolProfiles: containerservice.ManagedClusterAgentPoolProfileArray{
+				&containerservice.ManagedClusterAgentPoolProfileArgs{
+					Count:                  pulumi.Int(3),
+					EnableEncryptionAtHost: pulumi.Bool(true),
+					EnableNodePublicIP:     pulumi.Bool(true),
+					Mode:                   pulumi.String("System"),
+					Name:                   pulumi.String("nodepool1"),
+					OsType:                 pulumi.String("Linux"),
+					Type:                   pulumi.String("VirtualMachineScaleSets"),
+					VmSize:                 pulumi.String("Standard_DS2_v2"),
+				},
+			},
+			AutoScalerProfile: &containerservice.ManagedClusterPropertiesAutoScalerProfileArgs{
+				ScaleDownDelayAfterAdd: pulumi.String("15m"),
+				ScanInterval:           pulumi.String("20s"),
+			},
+			DiskEncryptionSetID:     pulumi.String("/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des"),
+			DnsPrefix:               pulumi.String("dnsprefix1"),
+			EnablePodSecurityPolicy: pulumi.Bool(true),
+			EnableRBAC:              pulumi.Bool(true),
+			KubernetesVersion:       pulumi.String(""),
+			LinuxProfile: &containerservice.ContainerServiceLinuxProfileArgs{
+				AdminUsername: pulumi.String("azureuser"),
+				Ssh: &containerservice.ContainerServiceSshConfigurationArgs{
+					PublicKeys: containerservice.ContainerServiceSshPublicKeyArray{
+						&containerservice.ContainerServiceSshPublicKeyArgs{
+							KeyData: pulumi.String("keydata"),
+						},
+					},
+				},
+			},
+			Location: pulumi.String("location1"),
+			NetworkProfile: &containerservice.ContainerServiceNetworkProfileArgs{
+				LoadBalancerProfile: &containerservice.ManagedClusterLoadBalancerProfileArgs{
+					ManagedOutboundIPs: &containerservice.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs{
+						Count: pulumi.Int(2),
+					},
+				},
+				LoadBalancerSku: pulumi.String("standard"),
+				OutboundType:    pulumi.String("loadBalancer"),
+			},
+			ResourceGroupName: pulumi.String("rg1"),
+			ResourceName:      pulumi.String("clustername1"),
+			ServicePrincipalProfile: &containerservice.ManagedClusterServicePrincipalProfileArgs{
+				ClientId: pulumi.String("clientid"),
+				Secret:   pulumi.String("secret"),
+			},
+			Sku: &containerservice.ManagedClusterSKUArgs{
+				Name: pulumi.String("Basic"),
+				Tier: pulumi.String("Free"),
+			},
+			Tags: pulumi.StringMap{
+				"archv2": pulumi.String(""),
+				"tier":   pulumi.String("production"),
+			},
+			WindowsProfile: &containerservice.ManagedClusterWindowsProfileArgs{
+				AdminPassword: pulumi.String(fmt.Sprintf("%v%v", "replacePassword1234", "$")),
+				AdminUsername: pulumi.String("azureuser"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+managed_cluster = azure_nextgen.containerservice.latest.ManagedCluster("managedCluster",
+    addon_profiles={},
+    agent_pool_profiles=[azure_nextgen.containerservice.latest.ManagedClusterAgentPoolProfileArgs(
+        count=3,
+        enable_encryption_at_host=True,
+        enable_node_public_ip=True,
+        mode="System",
+        name="nodepool1",
+        os_type="Linux",
+        type="VirtualMachineScaleSets",
+        vm_size="Standard_DS2_v2",
+    )],
+    auto_scaler_profile=azure_nextgen.containerservice.latest.ManagedClusterPropertiesAutoScalerProfileArgs(
+        scale_down_delay_after_add="15m",
+        scan_interval="20s",
+    ),
+    disk_encryption_set_id="/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des",
+    dns_prefix="dnsprefix1",
+    enable_pod_security_policy=True,
+    enable_rbac=True,
+    kubernetes_version="",
+    linux_profile=azure_nextgen.containerservice.latest.ContainerServiceLinuxProfileArgs(
+        admin_username="azureuser",
+        ssh=azure_nextgen.containerservice.latest.ContainerServiceSshConfigurationArgs(
+            public_keys=[azure_nextgen.containerservice.latest.ContainerServiceSshPublicKeyArgs(
+                key_data="keydata",
+            )],
+        ),
+    ),
+    location="location1",
+    network_profile=azure_nextgen.containerservice.latest.ContainerServiceNetworkProfileArgs(
+        load_balancer_profile=azure_nextgen.containerservice.latest.ManagedClusterLoadBalancerProfileArgs(
+            managed_outbound_ips=azure_nextgen.containerservice.latest.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs(
+                count=2,
+            ),
+        ),
+        load_balancer_sku="standard",
+        outbound_type="loadBalancer",
+    ),
+    resource_group_name="rg1",
+    resource_name="clustername1",
+    service_principal_profile=azure_nextgen.containerservice.latest.ManagedClusterServicePrincipalProfileArgs(
+        client_id="clientid",
+        secret="secret",
+    ),
+    sku=azure_nextgen.containerservice.latest.ManagedClusterSKUArgs(
+        name="Basic",
+        tier="Free",
+    ),
+    tags={
+        "archv2": "",
+        "tier": "production",
+    },
+    windows_profile=azure_nextgen.containerservice.latest.ManagedClusterWindowsProfileArgs(
+        admin_password="replacePassword1234$",
+        admin_username="azureuser",
+    ))
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const managedCluster = new azure_nextgen.containerservice.latest.ManagedCluster("managedCluster", {
+    addonProfiles: {},
+    agentPoolProfiles: [{
+        count: 3,
+        enableEncryptionAtHost: true,
+        enableNodePublicIP: true,
+        mode: "System",
+        name: "nodepool1",
+        osType: "Linux",
+        type: "VirtualMachineScaleSets",
+        vmSize: "Standard_DS2_v2",
+    }],
+    autoScalerProfile: {
+        scaleDownDelayAfterAdd: "15m",
+        scanInterval: "20s",
+    },
+    diskEncryptionSetID: "/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des",
+    dnsPrefix: "dnsprefix1",
+    enablePodSecurityPolicy: true,
+    enableRBAC: true,
+    kubernetesVersion: "",
+    linuxProfile: {
+        adminUsername: "azureuser",
+        ssh: {
+            publicKeys: [{
+                keyData: "keydata",
+            }],
+        },
+    },
+    location: "location1",
+    networkProfile: {
+        loadBalancerProfile: {
+            managedOutboundIPs: {
+                count: 2,
+            },
+        },
+        loadBalancerSku: "standard",
+        outboundType: "loadBalancer",
+    },
+    resourceGroupName: "rg1",
+    resourceName: "clustername1",
+    servicePrincipalProfile: {
+        clientId: "clientid",
+        secret: "secret",
+    },
+    sku: {
+        name: "Basic",
+        tier: "Free",
+    },
+    tags: {
+        archv2: "",
+        tier: "production",
+    },
+    windowsProfile: {
+        adminPassword: `replacePassword1234$`,
+        adminUsername: "azureuser",
+    },
+});
+
+```
+
+{{% /example %}}
+
 ### Create Managed Cluster with PPG
 {{% example csharp %}}
 ```csharp
@@ -114,90 +432,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-package main
-
-import (
-	"fmt"
-
-	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := containerservice.NewManagedCluster(ctx, "managedCluster", &containerservice.ManagedClusterArgs{
-			AddonProfiles: nil,
-			AgentPoolProfiles: containerservice.ManagedClusterAgentPoolProfileArray{
-				&containerservice.ManagedClusterAgentPoolProfileArgs{
-					Count:                     pulumi.Int(3),
-					EnableNodePublicIP:        pulumi.Bool(true),
-					Mode:                      pulumi.String("System"),
-					Name:                      pulumi.String("nodepool1"),
-					OsType:                    pulumi.String("Linux"),
-					ProximityPlacementGroupID: pulumi.String("/subscriptions/subid1/resourcegroups/rg1/providers//Microsoft.Compute/proximityPlacementGroups/ppg1"),
-					Type:                      pulumi.String("VirtualMachineScaleSets"),
-					VmSize:                    pulumi.String("Standard_DS2_v2"),
-				},
-			},
-			AutoScalerProfile: &containerservice.ManagedClusterPropertiesAutoScalerProfileArgs{
-				ScaleDownDelayAfterAdd: pulumi.String("15m"),
-				ScanInterval:           pulumi.String("20s"),
-			},
-			DiskEncryptionSetID:     pulumi.String("/subscriptions/subid1/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/des"),
-			DnsPrefix:               pulumi.String("dnsprefix1"),
-			EnablePodSecurityPolicy: pulumi.Bool(true),
-			EnableRBAC:              pulumi.Bool(true),
-			KubernetesVersion:       pulumi.String(""),
-			LinuxProfile: &containerservice.ContainerServiceLinuxProfileArgs{
-				AdminUsername: pulumi.String("azureuser"),
-				Ssh: &containerservice.ContainerServiceSshConfigurationArgs{
-					PublicKeys: containerservice.ContainerServiceSshPublicKeyArray{
-						&containerservice.ContainerServiceSshPublicKeyArgs{
-							KeyData: pulumi.String("keydata"),
-						},
-					},
-				},
-			},
-			Location: pulumi.String("location1"),
-			NetworkProfile: &containerservice.ContainerServiceNetworkProfileArgs{
-				LoadBalancerProfile: &containerservice.ManagedClusterLoadBalancerProfileArgs{
-					ManagedOutboundIPs: &containerservice.ManagedClusterLoadBalancerProfileManagedOutboundIPsArgs{
-						Count: pulumi.Int(2),
-					},
-				},
-				LoadBalancerSku: pulumi.String("standard"),
-				OutboundType:    pulumi.String("loadBalancer"),
-			},
-			ResourceGroupName: pulumi.String("rg1"),
-			ResourceName:      pulumi.String("clustername1"),
-			ServicePrincipalProfile: &containerservice.ManagedClusterServicePrincipalProfileArgs{
-				ClientId: pulumi.String("clientid"),
-				Secret:   pulumi.String("secret"),
-			},
-			Sku: &containerservice.ManagedClusterSKUArgs{
-				Name: pulumi.String("Basic"),
-				Tier: pulumi.String("Free"),
-			},
-			Tags: pulumi.StringMap{
-				"archv2": pulumi.String(""),
-				"tier":   pulumi.String("production"),
-			},
-			WindowsProfile: &containerservice.ManagedClusterWindowsProfileArgs{
-				AdminPassword: pulumi.String(fmt.Sprintf("%v%v", "replacePassword1234", "$")),
-				AdminUsername: pulumi.String("azureuser"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -725,7 +960,8 @@ class MyStack : Stack
             AutoScalerProfile = new AzureNextGen.ContainerService.Latest.Inputs.ManagedClusterPropertiesAutoScalerProfileArgs
             {
                 BalanceSimilarNodeGroups = "true",
-                Expander = "most-pods",
+                Expander = "priority",
+                MaxNodeProvisionTime = "15m",
                 NewPodScaleUpDelay = "1m",
                 ScaleDownDelayAfterAdd = "15m",
                 ScanInterval = "20s",
@@ -836,7 +1072,8 @@ func main() {
 			},
 			AutoScalerProfile: &containerservice.ManagedClusterPropertiesAutoScalerProfileArgs{
 				BalanceSimilarNodeGroups: pulumi.String("true"),
-				Expander:                 pulumi.String("most-pods"),
+				Expander:                 pulumi.String("priority"),
+				MaxNodeProvisionTime:     pulumi.String("15m"),
 				NewPodScaleUpDelay:       pulumi.String("1m"),
 				ScaleDownDelayAfterAdd:   pulumi.String("15m"),
 				ScanInterval:             pulumi.String("20s"),
@@ -927,7 +1164,8 @@ managed_cluster = azure_nextgen.containerservice.latest.ManagedCluster("managedC
     )],
     auto_scaler_profile=azure_nextgen.containerservice.latest.ManagedClusterPropertiesAutoScalerProfileArgs(
         balance_similar_node_groups="true",
-        expander="most-pods",
+        expander="priority",
+        max_node_provision_time="15m",
         new_pod_scale_up_delay="1m",
         scale_down_delay_after_add="15m",
         scan_interval="20s",
@@ -1009,7 +1247,8 @@ const managedCluster = new azure_nextgen.containerservice.latest.ManagedCluster(
     }],
     autoScalerProfile: {
         balanceSimilarNodeGroups: "true",
-        expander: "most-pods",
+        expander: "priority",
+        maxNodeProvisionTime: "15m",
         newPodScaleUpDelay: "1m",
         scaleDownDelayAfterAdd: "15m",
         scanInterval: "20s",
@@ -5901,6 +6140,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>least-waste</dd>
     <dt>Most_<wbr>pods</dt>
     <dd>most-pods</dd>
+    <dt>Priority</dt>
+    <dd>priority</dd>
     <dt>Random</dt>
     <dd>random</dd>
 </dl>
@@ -5912,6 +6153,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>least-waste</dd>
     <dt>Expander_Most_<wbr>pods</dt>
     <dd>most-pods</dd>
+    <dt>Expander<wbr>Priority</dt>
+    <dd>priority</dd>
     <dt>Expander<wbr>Random</dt>
     <dd>random</dd>
 </dl>
@@ -5923,6 +6166,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>least-waste</dd>
     <dt>Most_<wbr>pods</dt>
     <dd>most-pods</dd>
+    <dt>Priority</dt>
+    <dd>priority</dd>
     <dt>Random</dt>
     <dd>random</dd>
 </dl>
@@ -5934,6 +6179,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>least-waste</dd>
     <dt>MOST_PODS</dt>
     <dd>most-pods</dd>
+    <dt>PRIORITY</dt>
+    <dd>priority</dd>
     <dt>RANDOM</dt>
     <dd>random</dd>
 </dl>
@@ -5953,6 +6200,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containerlogmaxfiles_csharp">
+<a href="#containerlogmaxfiles_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Log<wbr>Max<wbr>Files</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of container log files that can be present for a container. The number must be ≥ 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containerlogmaxsizemb_csharp">
+<a href="#containerlogmaxsizemb_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Log<wbr>Max<wbr>Size<wbr>MB</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum size (e.g. 10Mi) of container log file before it is rotated.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cpucfsquota_csharp">
@@ -6009,6 +6274,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The percent of disk usage before which image garbage collection is never run.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="podmaxpids_csharp">
+<a href="#podmaxpids_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Max<wbr>Pids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of processes per pod.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="topologymanagerpolicy_csharp">
 <a href="#topologymanagerpolicy_csharp" style="color: inherit; text-decoration: inherit;">Topology<wbr>Manager<wbr>Policy</a>
 </span>
@@ -6031,6 +6305,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containerlogmaxfiles_go">
+<a href="#containerlogmaxfiles_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Log<wbr>Max<wbr>Files</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of container log files that can be present for a container. The number must be ≥ 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containerlogmaxsizemb_go">
+<a href="#containerlogmaxsizemb_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Log<wbr>Max<wbr>Size<wbr>MB</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum size (e.g. 10Mi) of container log file before it is rotated.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cpucfsquota_go">
@@ -6087,6 +6379,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The percent of disk usage before which image garbage collection is never run.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="podmaxpids_go">
+<a href="#podmaxpids_go" style="color: inherit; text-decoration: inherit;">Pod<wbr>Max<wbr>Pids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of processes per pod.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="topologymanagerpolicy_go">
 <a href="#topologymanagerpolicy_go" style="color: inherit; text-decoration: inherit;">Topology<wbr>Manager<wbr>Policy</a>
 </span>
@@ -6109,6 +6410,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containerlogmaxfiles_nodejs">
+<a href="#containerlogmaxfiles_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Log<wbr>Max<wbr>Files</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of container log files that can be present for a container. The number must be ≥ 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containerlogmaxsizemb_nodejs">
+<a href="#containerlogmaxsizemb_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Log<wbr>Max<wbr>Size<wbr>MB</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The maximum size (e.g. 10Mi) of container log file before it is rotated.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cpucfsquota_nodejs">
@@ -6165,6 +6484,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The percent of disk usage before which image garbage collection is never run.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="podmaxpids_nodejs">
+<a href="#podmaxpids_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Max<wbr>Pids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of processes per pod.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="topologymanagerpolicy_nodejs">
 <a href="#topologymanagerpolicy_nodejs" style="color: inherit; text-decoration: inherit;">topology<wbr>Manager<wbr>Policy</a>
 </span>
@@ -6187,6 +6515,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="container_log_max_files_python">
+<a href="#container_log_max_files_python" style="color: inherit; text-decoration: inherit;">container_<wbr>log_<wbr>max_<wbr>files</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of container log files that can be present for a container. The number must be ≥ 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="container_log_max_size_mb_python">
+<a href="#container_log_max_size_mb_python" style="color: inherit; text-decoration: inherit;">container_<wbr>log_<wbr>max_<wbr>size_<wbr>mb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum size (e.g. 10Mi) of container log file before it is rotated.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cpu_cfs_quota_python">
@@ -6241,6 +6587,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percent of disk usage before which image garbage collection is never run.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pod_max_pids_python">
+<a href="#pod_max_pids_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>max_<wbr>pids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of processes per pod.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="topology_manager_policy_python">
@@ -6269,6 +6624,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="containerlogmaxfiles_csharp">
+<a href="#containerlogmaxfiles_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Log<wbr>Max<wbr>Files</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of container log files that can be present for a container. The number must be ≥ 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containerlogmaxsizemb_csharp">
+<a href="#containerlogmaxsizemb_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Log<wbr>Max<wbr>Size<wbr>MB</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum size (e.g. 10Mi) of container log file before it is rotated.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="cpucfsquota_csharp">
 <a href="#cpucfsquota_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Cfs<wbr>Quota</a>
 </span>
@@ -6323,6 +6696,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The percent of disk usage before which image garbage collection is never run.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="podmaxpids_csharp">
+<a href="#podmaxpids_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Max<wbr>Pids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of processes per pod.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="topologymanagerpolicy_csharp">
 <a href="#topologymanagerpolicy_csharp" style="color: inherit; text-decoration: inherit;">Topology<wbr>Manager<wbr>Policy</a>
 </span>
@@ -6345,6 +6727,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containerlogmaxfiles_go">
+<a href="#containerlogmaxfiles_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Log<wbr>Max<wbr>Files</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of container log files that can be present for a container. The number must be ≥ 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containerlogmaxsizemb_go">
+<a href="#containerlogmaxsizemb_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Log<wbr>Max<wbr>Size<wbr>MB</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum size (e.g. 10Mi) of container log file before it is rotated.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cpucfsquota_go">
@@ -6401,6 +6801,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The percent of disk usage before which image garbage collection is never run.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="podmaxpids_go">
+<a href="#podmaxpids_go" style="color: inherit; text-decoration: inherit;">Pod<wbr>Max<wbr>Pids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of processes per pod.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="topologymanagerpolicy_go">
 <a href="#topologymanagerpolicy_go" style="color: inherit; text-decoration: inherit;">Topology<wbr>Manager<wbr>Policy</a>
 </span>
@@ -6423,6 +6832,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containerlogmaxfiles_nodejs">
+<a href="#containerlogmaxfiles_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Log<wbr>Max<wbr>Files</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of container log files that can be present for a container. The number must be ≥ 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containerlogmaxsizemb_nodejs">
+<a href="#containerlogmaxsizemb_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Log<wbr>Max<wbr>Size<wbr>MB</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The maximum size (e.g. 10Mi) of container log file before it is rotated.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cpucfsquota_nodejs">
@@ -6479,6 +6906,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The percent of disk usage before which image garbage collection is never run.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="podmaxpids_nodejs">
+<a href="#podmaxpids_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Max<wbr>Pids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of processes per pod.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="topologymanagerpolicy_nodejs">
 <a href="#topologymanagerpolicy_nodejs" style="color: inherit; text-decoration: inherit;">topology<wbr>Manager<wbr>Policy</a>
 </span>
@@ -6501,6 +6937,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="container_log_max_files_python">
+<a href="#container_log_max_files_python" style="color: inherit; text-decoration: inherit;">container_<wbr>log_<wbr>max_<wbr>files</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of container log files that can be present for a container. The number must be ≥ 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="container_log_max_size_mb_python">
+<a href="#container_log_max_size_mb_python" style="color: inherit; text-decoration: inherit;">container_<wbr>log_<wbr>max_<wbr>size_<wbr>mb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum size (e.g. 10Mi) of container log file before it is rotated.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cpu_cfs_quota_python">
@@ -6557,6 +7011,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The percent of disk usage before which image garbage collection is never run.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="pod_max_pids_python">
+<a href="#pod_max_pids_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>max_<wbr>pids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of processes per pod.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="topology_manager_policy_python">
 <a href="#topology_manager_policy_python" style="color: inherit; text-decoration: inherit;">topology_<wbr>manager_<wbr>policy</a>
 </span>
@@ -6564,6 +7027,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Topology Manager policy to use.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="kubeletdisktype">Kubelet<wbr>Disk<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>OS</dt>
+    <dd>OS</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Kubelet<wbr>Disk<wbr>Type<wbr>OS</dt>
+    <dd>OS</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>OS</dt>
+    <dd>OS</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>OS</dt>
+    <dd>OS</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8216,6 +8709,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Whether to enable auto-scaler{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="enableencryptionathost_csharp">
+<a href="#enableencryptionathost_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Encryption<wbr>At<wbr>Host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable EncryptionAtHost{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="enablenodepublicip_csharp">
 <a href="#enablenodepublicip_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Node<wbr>Public<wbr>IP</a>
 </span>
@@ -8232,6 +8734,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#kubeletconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Kubelet<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kubeletdisktype_csharp">
+<a href="#kubeletdisktype_csharp" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Disk<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#kubeletdisktype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Kubelet<wbr>Disk<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="linuxosconfig_csharp">
@@ -8465,6 +8976,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Whether to enable auto-scaler{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="enableencryptionathost_go">
+<a href="#enableencryptionathost_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Encryption<wbr>At<wbr>Host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable EncryptionAtHost{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="enablenodepublicip_go">
 <a href="#enablenodepublicip_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Node<wbr>Public<wbr>IP</a>
 </span>
@@ -8481,6 +9001,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#kubeletconfig">Kubelet<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kubeletdisktype_go">
+<a href="#kubeletdisktype_go" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Disk<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#kubeletdisktype">Kubelet<wbr>Disk<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="linuxosconfig_go">
@@ -8714,6 +9243,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Whether to enable auto-scaler{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="enableencryptionathost_nodejs">
+<a href="#enableencryptionathost_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Encryption<wbr>At<wbr>Host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable EncryptionAtHost{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="enablenodepublicip_nodejs">
 <a href="#enablenodepublicip_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Node<wbr>Public<wbr>IP</a>
 </span>
@@ -8730,6 +9268,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#kubeletconfig">Kubelet<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kubeletdisktype_nodejs">
+<a href="#kubeletdisktype_nodejs" style="color: inherit; text-decoration: inherit;">kubelet<wbr>Disk<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#kubeletdisktype">Kubelet<wbr>Disk<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="linuxosconfig_nodejs">
@@ -8963,6 +9510,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Whether to enable auto-scaler{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="enable_encryption_at_host_python">
+<a href="#enable_encryption_at_host_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>encryption_<wbr>at_<wbr>host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable EncryptionAtHost{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="enable_node_public_ip_python">
 <a href="#enable_node_public_ip_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>node_<wbr>public_<wbr>ip</a>
 </span>
@@ -8979,6 +9535,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#kubeletconfig">Kubelet<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kubelet_disk_type_python">
+<a href="#kubelet_disk_type_python" style="color: inherit; text-decoration: inherit;">kubelet_<wbr>disk_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#kubeletdisktype">Kubelet<wbr>Disk<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="linux_os_config_python">
@@ -9241,6 +9806,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Whether to enable auto-scaler{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="enableencryptionathost_csharp">
+<a href="#enableencryptionathost_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Encryption<wbr>At<wbr>Host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable EncryptionAtHost{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="enablenodepublicip_csharp">
 <a href="#enablenodepublicip_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Node<wbr>Public<wbr>IP</a>
 </span>
@@ -9257,6 +9831,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#kubeletconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Kubelet<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kubeletdisktype_csharp">
+<a href="#kubeletdisktype_csharp" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Disk<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="linuxosconfig_csharp">
@@ -9517,6 +10100,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Whether to enable auto-scaler{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="enableencryptionathost_go">
+<a href="#enableencryptionathost_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Encryption<wbr>At<wbr>Host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable EncryptionAtHost{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="enablenodepublicip_go">
 <a href="#enablenodepublicip_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Node<wbr>Public<wbr>IP</a>
 </span>
@@ -9533,6 +10125,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#kubeletconfigresponse">Kubelet<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kubeletdisktype_go">
+<a href="#kubeletdisktype_go" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Disk<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="linuxosconfig_go">
@@ -9793,6 +10394,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Whether to enable auto-scaler{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="enableencryptionathost_nodejs">
+<a href="#enableencryptionathost_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Encryption<wbr>At<wbr>Host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable EncryptionAtHost{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="enablenodepublicip_nodejs">
 <a href="#enablenodepublicip_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Node<wbr>Public<wbr>IP</a>
 </span>
@@ -9809,6 +10419,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#kubeletconfigresponse">Kubelet<wbr>Config<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kubeletdisktype_nodejs">
+<a href="#kubeletdisktype_nodejs" style="color: inherit; text-decoration: inherit;">kubelet<wbr>Disk<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="linuxosconfig_nodejs">
@@ -10069,6 +10688,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Whether to enable auto-scaler{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="enable_encryption_at_host_python">
+<a href="#enable_encryption_at_host_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>encryption_<wbr>at_<wbr>host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable EncryptionAtHost{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="enable_node_public_ip_python">
 <a href="#enable_node_public_ip_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>node_<wbr>public_<wbr>ip</a>
 </span>
@@ -10085,6 +10713,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#kubeletconfigresponse">Kubelet<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kubelet_disk_type_python">
+<a href="#kubelet_disk_type_python" style="color: inherit; text-decoration: inherit;">kubelet_<wbr>disk_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="linux_os_config_python">
@@ -12604,6 +13241,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="maxnodeprovisiontime_csharp">
+<a href="#maxnodeprovisiontime_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Node<wbr>Provision<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="maxtotalunreadypercentage_csharp">
 <a href="#maxtotalunreadypercentage_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Total<wbr>Unready<wbr>Percentage</a>
 </span>
@@ -12747,6 +13393,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="maxgracefulterminationsec_go">
 <a href="#maxgracefulterminationsec_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Graceful<wbr>Termination<wbr>Sec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxnodeprovisiontime_go">
+<a href="#maxnodeprovisiontime_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Node<wbr>Provision<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -12904,6 +13559,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="maxnodeprovisiontime_nodejs">
+<a href="#maxnodeprovisiontime_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Node<wbr>Provision<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="maxtotalunreadypercentage_nodejs">
 <a href="#maxtotalunreadypercentage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Total<wbr>Unready<wbr>Percentage</a>
 </span>
@@ -13047,6 +13711,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="max_graceful_termination_sec_python">
 <a href="#max_graceful_termination_sec_python" style="color: inherit; text-decoration: inherit;">max_<wbr>graceful_<wbr>termination_<wbr>sec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_node_provision_time_python">
+<a href="#max_node_provision_time_python" style="color: inherit; text-decoration: inherit;">max_<wbr>node_<wbr>provision_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -13340,6 +14013,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="maxnodeprovisiontime_csharp">
+<a href="#maxnodeprovisiontime_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Node<wbr>Provision<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="maxtotalunreadypercentage_csharp">
 <a href="#maxtotalunreadypercentage_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Total<wbr>Unready<wbr>Percentage</a>
 </span>
@@ -13483,6 +14165,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="maxgracefulterminationsec_go">
 <a href="#maxgracefulterminationsec_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Graceful<wbr>Termination<wbr>Sec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxnodeprovisiontime_go">
+<a href="#maxnodeprovisiontime_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Node<wbr>Provision<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -13640,6 +14331,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="maxnodeprovisiontime_nodejs">
+<a href="#maxnodeprovisiontime_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Node<wbr>Provision<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="maxtotalunreadypercentage_nodejs">
 <a href="#maxtotalunreadypercentage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Total<wbr>Unready<wbr>Percentage</a>
 </span>
@@ -13783,6 +14483,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="max_graceful_termination_sec_python">
 <a href="#max_graceful_termination_sec_python" style="color: inherit; text-decoration: inherit;">max_<wbr>graceful_<wbr>termination_<wbr>sec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_node_provision_time_python">
+<a href="#max_node_provision_time_python" style="color: inherit; text-decoration: inherit;">max_<wbr>node_<wbr>provision_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -15367,6 +16076,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Sysctl setting net.core.optmem_max.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="netcorermemdefault_csharp">
+<a href="#netcorermemdefault_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Rmem<wbr>Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.rmem_default.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="netcorermemmax_csharp">
 <a href="#netcorermemmax_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Rmem<wbr>Max</a>
 </span>
@@ -15383,6 +16101,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sysctl setting net.core.somaxconn.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netcorewmemdefault_csharp">
+<a href="#netcorewmemdefault_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Wmem<wbr>Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.wmem_default.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="netcorewmemmax_csharp">
@@ -15475,15 +16202,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_tw_buckets.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="netipv4tcprmem_csharp">
-<a href="#netipv4tcprmem_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Rmem</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_rmem.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="netipv4tcptwreuse_csharp">
 <a href="#netipv4tcptwreuse_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Tw<wbr>Reuse</a>
 </span>
@@ -15491,15 +16209,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Sysctl setting net.ipv4.tcp_tw_reuse.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="netipv4tcpwmem_csharp">
-<a href="#netipv4tcpwmem_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Wmem</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_wmem.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpkeepaliveintvl_csharp">
@@ -15625,6 +16334,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Sysctl setting net.core.optmem_max.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="netcorermemdefault_go">
+<a href="#netcorermemdefault_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Rmem<wbr>Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.rmem_default.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="netcorermemmax_go">
 <a href="#netcorermemmax_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Rmem<wbr>Max</a>
 </span>
@@ -15641,6 +16359,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sysctl setting net.core.somaxconn.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netcorewmemdefault_go">
+<a href="#netcorewmemdefault_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Wmem<wbr>Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.wmem_default.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="netcorewmemmax_go">
@@ -15733,15 +16460,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_tw_buckets.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="netipv4tcprmem_go">
-<a href="#netipv4tcprmem_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Rmem</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_rmem.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="netipv4tcptwreuse_go">
 <a href="#netipv4tcptwreuse_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Tw<wbr>Reuse</a>
 </span>
@@ -15749,15 +16467,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Sysctl setting net.ipv4.tcp_tw_reuse.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="netipv4tcpwmem_go">
-<a href="#netipv4tcpwmem_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Wmem</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_wmem.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpkeepaliveintvl_go">
@@ -15883,6 +16592,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Sysctl setting net.core.optmem_max.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="netcorermemdefault_nodejs">
+<a href="#netcorermemdefault_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Rmem<wbr>Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.rmem_default.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="netcorermemmax_nodejs">
 <a href="#netcorermemmax_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Rmem<wbr>Max</a>
 </span>
@@ -15899,6 +16617,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Sysctl setting net.core.somaxconn.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netcorewmemdefault_nodejs">
+<a href="#netcorewmemdefault_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Wmem<wbr>Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.wmem_default.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="netcorewmemmax_nodejs">
@@ -15991,15 +16718,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_tw_buckets.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="netipv4tcprmem_nodejs">
-<a href="#netipv4tcprmem_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Rmem</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_rmem.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="netipv4tcptwreuse_nodejs">
 <a href="#netipv4tcptwreuse_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Tw<wbr>Reuse</a>
 </span>
@@ -16007,15 +16725,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Sysctl setting net.ipv4.tcp_tw_reuse.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="netipv4tcpwmem_nodejs">
-<a href="#netipv4tcpwmem_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Wmem</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_wmem.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpkeepaliveintvl_nodejs">
@@ -16141,6 +16850,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Sysctl setting net.core.optmem_max.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="net_core_rmem_default_python">
+<a href="#net_core_rmem_default_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>rmem_<wbr>default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.rmem_default.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="net_core_rmem_max_python">
 <a href="#net_core_rmem_max_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>rmem_<wbr>max</a>
 </span>
@@ -16157,6 +16875,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sysctl setting net.core.somaxconn.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_core_wmem_default_python">
+<a href="#net_core_wmem_default_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>wmem_<wbr>default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.wmem_default.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="net_core_wmem_max_python">
@@ -16249,15 +16976,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_tw_buckets.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="net_ipv4_tcp_rmem_python">
-<a href="#net_ipv4_tcp_rmem_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>rmem</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_rmem.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="net_ipv4_tcp_tw_reuse_python">
 <a href="#net_ipv4_tcp_tw_reuse_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>tw_<wbr>reuse</a>
 </span>
@@ -16265,15 +16983,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Sysctl setting net.ipv4.tcp_tw_reuse.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="net_ipv4_tcp_wmem_python">
-<a href="#net_ipv4_tcp_wmem_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>wmem</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_wmem.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="net_ipv4_tcpkeepalive_intvl_python">
@@ -16401,6 +17110,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Sysctl setting net.core.optmem_max.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="netcorermemdefault_csharp">
+<a href="#netcorermemdefault_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Rmem<wbr>Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.rmem_default.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="netcorermemmax_csharp">
 <a href="#netcorermemmax_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Rmem<wbr>Max</a>
 </span>
@@ -16417,6 +17135,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sysctl setting net.core.somaxconn.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netcorewmemdefault_csharp">
+<a href="#netcorewmemdefault_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Wmem<wbr>Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.wmem_default.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="netcorewmemmax_csharp">
@@ -16509,15 +17236,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_tw_buckets.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="netipv4tcprmem_csharp">
-<a href="#netipv4tcprmem_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Rmem</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_rmem.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="netipv4tcptwreuse_csharp">
 <a href="#netipv4tcptwreuse_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Tw<wbr>Reuse</a>
 </span>
@@ -16525,15 +17243,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Sysctl setting net.ipv4.tcp_tw_reuse.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="netipv4tcpwmem_csharp">
-<a href="#netipv4tcpwmem_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Wmem</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_wmem.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpkeepaliveintvl_csharp">
@@ -16659,6 +17368,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Sysctl setting net.core.optmem_max.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="netcorermemdefault_go">
+<a href="#netcorermemdefault_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Rmem<wbr>Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.rmem_default.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="netcorermemmax_go">
 <a href="#netcorermemmax_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Rmem<wbr>Max</a>
 </span>
@@ -16675,6 +17393,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sysctl setting net.core.somaxconn.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netcorewmemdefault_go">
+<a href="#netcorewmemdefault_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Wmem<wbr>Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.wmem_default.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="netcorewmemmax_go">
@@ -16767,15 +17494,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_tw_buckets.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="netipv4tcprmem_go">
-<a href="#netipv4tcprmem_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Rmem</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_rmem.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="netipv4tcptwreuse_go">
 <a href="#netipv4tcptwreuse_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Tw<wbr>Reuse</a>
 </span>
@@ -16783,15 +17501,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Sysctl setting net.ipv4.tcp_tw_reuse.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="netipv4tcpwmem_go">
-<a href="#netipv4tcpwmem_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Wmem</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_wmem.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpkeepaliveintvl_go">
@@ -16917,6 +17626,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Sysctl setting net.core.optmem_max.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="netcorermemdefault_nodejs">
+<a href="#netcorermemdefault_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Rmem<wbr>Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.rmem_default.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="netcorermemmax_nodejs">
 <a href="#netcorermemmax_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Rmem<wbr>Max</a>
 </span>
@@ -16933,6 +17651,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Sysctl setting net.core.somaxconn.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netcorewmemdefault_nodejs">
+<a href="#netcorewmemdefault_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Wmem<wbr>Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.wmem_default.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="netcorewmemmax_nodejs">
@@ -17025,15 +17752,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_tw_buckets.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="netipv4tcprmem_nodejs">
-<a href="#netipv4tcprmem_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Rmem</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_rmem.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="netipv4tcptwreuse_nodejs">
 <a href="#netipv4tcptwreuse_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Tw<wbr>Reuse</a>
 </span>
@@ -17041,15 +17759,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Sysctl setting net.ipv4.tcp_tw_reuse.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="netipv4tcpwmem_nodejs">
-<a href="#netipv4tcpwmem_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Wmem</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_wmem.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpkeepaliveintvl_nodejs">
@@ -17175,6 +17884,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Sysctl setting net.core.optmem_max.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="net_core_rmem_default_python">
+<a href="#net_core_rmem_default_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>rmem_<wbr>default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.rmem_default.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="net_core_rmem_max_python">
 <a href="#net_core_rmem_max_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>rmem_<wbr>max</a>
 </span>
@@ -17191,6 +17909,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sysctl setting net.core.somaxconn.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_core_wmem_default_python">
+<a href="#net_core_wmem_default_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>wmem_<wbr>default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.wmem_default.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="net_core_wmem_max_python">
@@ -17283,15 +18010,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_tw_buckets.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="net_ipv4_tcp_rmem_python">
-<a href="#net_ipv4_tcp_rmem_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>rmem</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_rmem.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="net_ipv4_tcp_tw_reuse_python">
 <a href="#net_ipv4_tcp_tw_reuse_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>tw_<wbr>reuse</a>
 </span>
@@ -17299,15 +18017,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Sysctl setting net.ipv4.tcp_tw_reuse.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="net_ipv4_tcp_wmem_python">
-<a href="#net_ipv4_tcp_wmem_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>wmem</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_wmem.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="net_ipv4_tcpkeepalive_intvl_python">
@@ -17686,6 +18395,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The resource id of the user assigned identity.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:containerservice/latest:ManagedCluster clustername1 /subscriptions/subid1/resourcegroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

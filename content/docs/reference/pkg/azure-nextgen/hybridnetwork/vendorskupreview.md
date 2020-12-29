@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.hybridnetwork.VendorSkuPreview r
 
 Customer subscription which can use a sku.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -554,6 +553,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:hybridnetwork/v20200101preview:VendorSkuPreview previewSub /subscriptions/subid/providers/Microsoft.HybridNetwork/vendors/TestVendor/vendorskus/TestSku/previewsubscriptions/previewSub 
+```
 
 
 

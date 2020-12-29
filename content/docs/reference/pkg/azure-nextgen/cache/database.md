@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.cache.Database resource with exa
 
 Describes a database on the RedisEnterprise cluster
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1278,6 +1277,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Plaintext</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:cache/v20201001preview:Database cache1/default /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/redisEnterprise/cache1/databases/default 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

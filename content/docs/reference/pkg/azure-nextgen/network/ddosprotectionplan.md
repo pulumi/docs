@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.network.DdosProtectionPlan resou
 A DDoS protection plan in a resource group.
 Latest API Version: 2020-07-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -803,6 +802,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:network/latest:DdosProtectionPlan test-plan /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/ddosProtectionPlans/test-plan 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

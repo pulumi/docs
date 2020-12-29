@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.insights.LogProfile resource wit
 The log profile resource.
 Latest API Version: 2016-03-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -992,6 +991,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}a value indicating whether the retention policy is enabled.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:insights/latest:LogProfile default /subscriptions/df602c9c-7aa0-407d-a6fb-eb20c8bd1192/providers/microsoft.insights/logprofiles/default 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

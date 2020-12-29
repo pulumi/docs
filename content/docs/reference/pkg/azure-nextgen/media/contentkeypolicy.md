@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.media.ContentKeyPolicy resource 
 A Content Key Policy resource.
 Latest API Version: 2020-05-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -6319,6 +6318,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The raw data field of a certificate in PKCS 12 format (X509Certificate2 in .NET){{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:media/latest:ContentKeyPolicy PolicyCreatedWithMultipleOptions /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contoso/providers/Microsoft.Media/mediaservices/contosomedia/contentKeyPolicies/PolicyCreatedWithMultipleOptions 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

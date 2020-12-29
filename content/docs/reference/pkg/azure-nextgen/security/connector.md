@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.security.Connector resource with
 
 The connector setting
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3291,6 +3290,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}A secret string that the application uses to prove its identity, also can be referred to as application password (write only).{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:security/v20200101preview:Connector gcp_dev /subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/providers/Microsoft.Security/connectors/gcp_dev 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

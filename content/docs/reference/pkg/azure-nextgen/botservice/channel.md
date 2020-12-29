@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.botservice.Channel resource with
 Bot channel resource definition
 Latest API Version: 2020-06-02.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -8763,6 +8762,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Site name{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:botservice/latest:Channel MyName <Azure resource ID> 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

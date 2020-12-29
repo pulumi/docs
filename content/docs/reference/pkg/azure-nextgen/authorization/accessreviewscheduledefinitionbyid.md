@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.authorization.AccessReviewSchedu
 
 Access Review Schedule Definition.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1969,6 +1968,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Recommendation</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:authorization/v20180501preview:AccessReviewScheduleDefinitionById fa73e90b-5bf1-45fd-a182-35ce5fc0674d /subscriptions/fa73e90b-5bf1-45fd-a182-35ce5fc0674d/providers/Microsoft.Authorization/accessReviewScheduleDefinitions/fa73e90b-5bf1-45fd-a182-35ce5fc0674d 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

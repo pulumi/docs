@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.engagementfabric.Account resourc
 
 The EngagementFabric account
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -841,6 +840,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The price tier of the SKU{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:engagementfabric/v20180901preview:Account ExampleAccount subscriptions/EDBF0095-A524-4A84-95FB-F72DA41AA6A1/resourceGroups/ExampleRg/providers/Microsoft.EngagementFabric/Accounts/ExampleAccount 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

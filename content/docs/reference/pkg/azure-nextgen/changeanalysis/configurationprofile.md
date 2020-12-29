@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.changeanalysis.ConfigurationProf
 
 A profile object that contains change analysis configuration, such as notification settings, for this subscription
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1695,6 +1694,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The type of identity that last modified the resource: user, application, managedIdentity, key{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:changeanalysis/v20200401preview:ConfigurationProfile default /subscriptions/c80fb759-c965-4c6a-9110-9b2b2d038882/providers/Microsoft.ChangeAnalysis/profile/default 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

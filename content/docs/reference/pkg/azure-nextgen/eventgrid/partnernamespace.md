@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.eventgrid.PartnerNamespace resou
 
 EventGrid Partner Namespace.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -723,6 +722,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:eventgrid/v20200401preview:PartnerNamespace examplePartnerNamespaceName1 /subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/partnerNamespaces/examplePartnerNamespaceName1 
+```
 
 
 

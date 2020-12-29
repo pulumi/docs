@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.containerregistry.PrivateEndpoin
 
 An object that represents a private endpoint connection for a container registry.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1447,6 +1446,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:containerregistry/v20201101preview:PrivateEndpointConnection myConnection /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/privateEndpointConnections/myConnection 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

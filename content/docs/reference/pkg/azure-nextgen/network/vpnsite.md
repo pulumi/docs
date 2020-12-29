@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.network.VpnSite resource with ex
 VpnSite Resource.
 Latest API Version: 2020-07-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3667,6 +3666,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:network/latest:VpnSite vpnSite1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnSites/vpnSite1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

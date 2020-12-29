@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.avs.WorkloadNetworkVMGroup resou
 
 NSX VM Group
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -751,6 +750,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:avs/v20200717preview:WorkloadNetworkVMGroup vmGroup1 /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/workloadNetworks/default/vmGroups/vmGroup1 
+```
 
 
 

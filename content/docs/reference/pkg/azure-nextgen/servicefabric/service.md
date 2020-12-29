@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.servicefabric.Service resource w
 The service resource.
 Latest API Version: 2020-03-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2817,6 +2816,16 @@ should be split between the partition ‘count’
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:servicefabric/latest:Service myCluster /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/clusters/myCluster/applications/myApp/services/myService 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

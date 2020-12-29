@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.advisor.Suppression resource wit
 The details of the snoozed or dismissed rule; for example, the duration, name, and GUID associated with the rule.
 Latest API Version: 2020-01-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -631,6 +630,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:advisor/latest:Suppression suppressionName1 /resourceUri/providers/Microsoft.Advisor/recommendations/recommendationId/suppressions/suppressionName1 
+```
 
 
 

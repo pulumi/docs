@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.resources.ResourceGroup resource
 Resource group information.
 Latest API Version: 2020-08-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -691,6 +690,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The provisioning state. {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:resources/latest:ResourceGroup my-resource-group /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/my-resource-group 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

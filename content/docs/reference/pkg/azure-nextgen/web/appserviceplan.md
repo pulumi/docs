@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.web.AppServicePlan resource with
 App Service plan.
 Latest API Version: 2020-09-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3064,6 +3063,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:web/latest:AppServicePlan testsf6141 /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testrg123/providers/Microsoft.Web/serverfarms/testsf6141 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

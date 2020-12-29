@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.logic.RosettaNetProcessConfigura
 The integration account RosettaNet process configuration.
 Latest API Version: 2016-06-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3382,6 +3381,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Async</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:logic/latest:RosettaNetProcessConfiguration 3A4 /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testrg123/providers/Microsoft.Logic/integrationAccounts/testia123/rosettaNetProcessConfigurations/3A4 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

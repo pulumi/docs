@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.datafactory.Dataset resource wit
 Dataset resource type.
 Latest API Version: 2018-06-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -71471,6 +71470,16 @@ request-header-name-n:request-header-value-n Type: string (or Expression with re
     <dd>{{% md %}}The table name. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:datafactory/latest:Dataset exampleDataset /subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.DataFactory/factories/exampleFactoryName/datasets/exampleDataset 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

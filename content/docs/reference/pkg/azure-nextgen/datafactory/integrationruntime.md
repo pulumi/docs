@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.datafactory.IntegrationRuntime r
 Integration runtime resource type.
 Latest API Version: 2018-06-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -5800,6 +5799,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The base definition of a linked integration runtime.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:datafactory/latest:IntegrationRuntime exampleIntegrationRuntime /subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.DataFactory/factories/exampleFactoryName/integrationruntimes/exampleIntegrationRuntime 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

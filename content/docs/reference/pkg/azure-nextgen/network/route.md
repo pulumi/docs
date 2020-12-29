@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.network.Route resource with exam
 Route resource.
 Latest API Version: 2020-07-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -811,6 +810,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>None</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:network/latest:Route route1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/routeTables/testrt/routes/route1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

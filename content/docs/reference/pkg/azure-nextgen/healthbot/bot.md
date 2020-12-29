@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.healthbot.Bot resource with exam
 HealthBot resource definition
 Latest API Version: 2020-12-08.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -324,8 +323,8 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Bot resource group in the user subscription.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
@@ -375,8 +374,8 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Bot resource group in the user subscription.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
@@ -426,8 +425,8 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Bot resource group in the user subscription.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
@@ -477,8 +476,8 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Bot resource group in the user subscription.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
@@ -534,7 +533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthbotpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Health<wbr>Bot.<wbr>Outputs.<wbr>Health<wbr>Bot<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to healthcare bot resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The set of properties specific to Healthbot resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="systemdata_csharp">
@@ -585,7 +584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthbotpropertiesresponse">Health<wbr>Bot<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to healthcare bot resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The set of properties specific to Healthbot resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="systemdata_go">
@@ -636,7 +635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthbotpropertiesresponse">Health<wbr>Bot<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to healthcare bot resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The set of properties specific to Healthbot resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="systemdata_nodejs">
@@ -687,7 +686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthbotpropertiesresponse">Health<wbr>Bot<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The set of properties specific to healthcare bot resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The set of properties specific to Healthbot resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="system_data_python">
@@ -741,7 +740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the Healthcare bot resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The provisioning state of the Healthbot resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -765,7 +764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the Healthcare bot resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The provisioning state of the Healthbot resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -789,7 +788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the Healthcare bot resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The provisioning state of the Healthbot resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -813,7 +812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the Healthcare bot resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The provisioning state of the Healthbot resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -831,42 +830,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Health<wbr>Bot.<wbr>Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The name of the HealthBot SKU{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="capacity_csharp">
-<a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="family_csharp">
-<a href="#family_csharp" style="color: inherit; text-decoration: inherit;">Family</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="size_csharp">
-<a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code. {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tier_csharp">
-<a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skutier">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Health<wbr>Bot.<wbr>Sku<wbr>Tier</a></span>
-    </dt>
-    <dd>{{% md %}}This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -882,42 +845,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#skuname">Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The name of the HealthBot SKU{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="capacity_go">
-<a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="family_go">
-<a href="#family_go" style="color: inherit; text-decoration: inherit;">Family</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="size_go">
-<a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code. {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tier_go">
-<a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skutier">Sku<wbr>Tier</a></span>
-    </dt>
-    <dd>{{% md %}}This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -933,42 +860,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#skuname">Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The name of the HealthBot SKU{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="capacity_nodejs">
-<a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="family_nodejs">
-<a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="size_nodejs">
-<a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code. {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tier_nodejs">
-<a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skutier">Sku<wbr>Tier</a></span>
-    </dt>
-    <dd>{{% md %}}This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -984,42 +875,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#skuname">Sku<wbr>Name</a></span>
     </dt>
     <dd>{{% md %}}The name of the HealthBot SKU{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="capacity_python">
-<a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="family_python">
-<a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="size_python">
-<a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code. {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tier_python">
-<a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skutier">Sku<wbr>Tier</a></span>
-    </dt>
-    <dd>{{% md %}}This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1083,42 +938,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the HealthBot SKU{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="capacity_csharp">
-<a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="family_csharp">
-<a href="#family_csharp" style="color: inherit; text-decoration: inherit;">Family</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="size_csharp">
-<a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code. {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tier_csharp">
-<a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1134,42 +953,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the HealthBot SKU{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="capacity_go">
-<a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="family_go">
-<a href="#family_go" style="color: inherit; text-decoration: inherit;">Family</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="size_go">
-<a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code. {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tier_go">
-<a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1185,42 +968,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the HealthBot SKU{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="capacity_nodejs">
-<a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="family_nodejs">
-<a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="size_nodejs">
-<a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code. {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tier_nodejs">
-<a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1236,80 +983,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the HealthBot SKU{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="capacity_python">
-<a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="family_python">
-<a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="size_python">
-<a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code. {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tier_python">
-<a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-<h4 id="skutier">Sku<wbr>Tier</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Free</dt>
-    <dd>Free</dd>
-    <dt>Standard</dt>
-    <dd>Standard</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular">
-    <dt>Sku<wbr>Tier<wbr>Free</dt>
-    <dd>Free</dd>
-    <dt>Sku<wbr>Tier<wbr>Standard</dt>
-    <dd>Standard</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Free</dt>
-    <dd>Free</dd>
-    <dt>Standard</dt>
-    <dd>Standard</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular">
-    <dt>FREE</dt>
-    <dd>Free</dd>
-    <dt>STANDARD</dt>
-    <dd>Standard</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1554,6 +1227,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:healthbot/latest:Bot samplebotname /subscriptions/subscription-id/resourceGroups/OneResourceGroupName/providers/Microsoft.HealthBot/healthBots/samplebotname 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

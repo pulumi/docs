@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.synapse.SqlDatabase resource wit
 
 A sql database resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1071,6 +1070,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The type of identity that last modified the resource: <User|Application|ManagedIdentity|Key>{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:synapse/v20200401preview:SqlDatabase 73164535-f22d-4daa-b014-1f23bbe361b7 /subscriptions/d9e39bed-00e1-4f5e-883e-6d94be335056/resourceGroups/rg_88eed28c-5243-4f02-8251-bfa1e69e7057/providers/Microsoft.Synapse/workspaces/srv_85d31a1e-718b-4bda-9e53-a91230dd4ce5/sqlDatabases/73164535-f22d-4daa-b014-1f23bbe361b7 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

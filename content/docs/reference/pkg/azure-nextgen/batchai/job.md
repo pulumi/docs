@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.batchai.Job resource with exampl
 Information about a Job.
 Latest API Version: 2018-05-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -9531,6 +9530,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The relative path on the compute node where the unmanaged file system will be mounted. Note that all cluster level unmanaged file systems will be mounted under $AZ_BATCHAI_MOUNT_ROOT location and all job level unmanaged file systems will be mounted under $AZ_BATCHAI_JOB_MOUNT_ROOT.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:batchai/latest:Job demo_job /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspaces/demo_workspace/experiments/demo_experiment/jobs/demo_job 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -11,13 +11,115 @@ meta_desc: "Documentation for the azure-nextgen.containerservice.AgentPool resou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Agent Pool.
-Latest API Version: 2020-11-01.
-
+Latest API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+### Create Agent Pool with EncryptionAtHost enabled
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var agentPool = new AzureNextGen.ContainerService.Latest.AgentPool("agentPool", new AzureNextGen.ContainerService.Latest.AgentPoolArgs
+        {
+            AgentPoolName = "agentpool1",
+            Count = 3,
+            EnableEncryptionAtHost = true,
+            OrchestratorVersion = "",
+            OsType = "Linux",
+            ResourceGroupName = "rg1",
+            ResourceName = "clustername1",
+            VmSize = "Standard_DS2_v2",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := containerservice.NewAgentPool(ctx, "agentPool", &containerservice.AgentPoolArgs{
+			AgentPoolName:          pulumi.String("agentpool1"),
+			Count:                  pulumi.Int(3),
+			EnableEncryptionAtHost: pulumi.Bool(true),
+			OrchestratorVersion:    pulumi.String(""),
+			OsType:                 pulumi.String("Linux"),
+			ResourceGroupName:      pulumi.String("rg1"),
+			ResourceName:           pulumi.String("clustername1"),
+			VmSize:                 pulumi.String("Standard_DS2_v2"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+agent_pool = azure_nextgen.containerservice.latest.AgentPool("agentPool",
+    agent_pool_name="agentpool1",
+    count=3,
+    enable_encryption_at_host=True,
+    orchestrator_version="",
+    os_type="Linux",
+    resource_group_name="rg1",
+    resource_name="clustername1",
+    vm_size="Standard_DS2_v2")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const agentPool = new azure_nextgen.containerservice.latest.AgentPool("agentPool", {
+    agentPoolName: "agentpool1",
+    count: 3,
+    enableEncryptionAtHost: true,
+    orchestratorVersion: "",
+    osType: "Linux",
+    resourceGroupName: "rg1",
+    resourceName: "clustername1",
+    vmSize: "Standard_DS2_v2",
+});
+
+```
+
+{{% /example %}}
+
 ### Create Agent Pool with Ephemeral OS Disk
 {{% example csharp %}}
 ```csharp
@@ -160,9 +262,9 @@ class MyStack : Stack
                 Sysctls = new AzureNextGen.ContainerService.Latest.Inputs.SysctlConfigArgs
                 {
                     KernelThreadsMax = 99999,
+                    NetCoreWmemDefault = 12345,
                     NetIpv4IpLocalPortRange = "20000 60000",
                     NetIpv4TcpTwReuse = true,
-                    NetIpv4TcpWmem = 12345,
                 },
                 TransparentHugePageDefrag = "madvise",
                 TransparentHugePageEnabled = "always",
@@ -213,9 +315,9 @@ func main() {
 				SwapFileSizeMB: pulumi.Int(1500),
 				Sysctls: &containerservice.SysctlConfigArgs{
 					KernelThreadsMax:        pulumi.Int(99999),
+					NetCoreWmemDefault:      pulumi.Int(12345),
 					NetIpv4IpLocalPortRange: pulumi.String("20000 60000"),
 					NetIpv4TcpTwReuse:       pulumi.Bool(true),
-					NetIpv4TcpWmem:          pulumi.Int(12345),
 				},
 				TransparentHugePageDefrag:  pulumi.String("madvise"),
 				TransparentHugePageEnabled: pulumi.String("always"),
@@ -263,9 +365,9 @@ agent_pool = azure_nextgen.containerservice.latest.AgentPool("agentPool",
         swap_file_size_mb=1500,
         sysctls=azure_nextgen.containerservice.latest.SysctlConfigArgs(
             kernel_threads_max=99999,
+            net_core_wmem_default=12345,
             net_ipv4_ip_local_port_range="20000 60000",
             net_ipv4_tcp_tw_reuse=True,
-            net_ipv4_tcp_wmem=12345,
         ),
         transparent_huge_page_defrag="madvise",
         transparent_huge_page_enabled="always",
@@ -306,9 +408,9 @@ const agentPool = new azure_nextgen.containerservice.latest.AgentPool("agentPool
         swapFileSizeMB: 1500,
         sysctls: {
             kernelThreadsMax: 99999,
+            netCoreWmemDefault: 12345,
             netIpv4IpLocalPortRange: "20000 60000",
             netIpv4TcpTwReuse: true,
-            netIpv4TcpWmem: 12345,
         },
         transparentHugePageDefrag: "madvise",
         transparentHugePageEnabled: "always",
@@ -855,7 +957,7 @@ const agentPool = new azure_nextgen.containerservice.latest.AgentPool("agentPool
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AgentPool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">agent_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">enable_auto_scaling</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_node_public_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kubelet_config</span><span class="p">:</span> <span class="nx">Optional[KubeletConfigArgs]</span> = None<span class="p">, </span><span class="nx">linux_os_config</span><span class="p">:</span> <span class="nx">Optional[LinuxOSConfigArgs]</span> = None<span class="p">, </span><span class="nx">max_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">max_pods</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[Union[str, AgentPoolMode]]</span> = None<span class="p">, </span><span class="nx">node_labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">node_taints</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">orchestrator_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">os_disk_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, OSDiskType]]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, OSType]]</span> = None<span class="p">, </span><span class="nx">pod_subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proximity_placement_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_set_eviction_policy</span><span class="p">:</span> <span class="nx">Optional[Union[str, ScaleSetEvictionPolicy]]</span> = None<span class="p">, </span><span class="nx">scale_set_priority</span><span class="p">:</span> <span class="nx">Optional[Union[str, ScaleSetPriority]]</span> = None<span class="p">, </span><span class="nx">spot_max_price</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[Union[str, AgentPoolType]]</span> = None<span class="p">, </span><span class="nx">upgrade_settings</span><span class="p">:</span> <span class="nx">Optional[AgentPoolUpgradeSettingsArgs]</span> = None<span class="p">, </span><span class="nx">vm_size</span><span class="p">:</span> <span class="nx">Optional[Union[str, ContainerServiceVMSizeTypes]]</span> = None<span class="p">, </span><span class="nx">vnet_subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AgentPool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">agent_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">enable_auto_scaling</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_encryption_at_host</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_node_public_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kubelet_config</span><span class="p">:</span> <span class="nx">Optional[KubeletConfigArgs]</span> = None<span class="p">, </span><span class="nx">kubelet_disk_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, KubeletDiskType]]</span> = None<span class="p">, </span><span class="nx">linux_os_config</span><span class="p">:</span> <span class="nx">Optional[LinuxOSConfigArgs]</span> = None<span class="p">, </span><span class="nx">max_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">max_pods</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[Union[str, AgentPoolMode]]</span> = None<span class="p">, </span><span class="nx">node_labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">node_taints</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">orchestrator_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">os_disk_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, OSDiskType]]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, OSType]]</span> = None<span class="p">, </span><span class="nx">pod_subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proximity_placement_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_set_eviction_policy</span><span class="p">:</span> <span class="nx">Optional[Union[str, ScaleSetEvictionPolicy]]</span> = None<span class="p">, </span><span class="nx">scale_set_priority</span><span class="p">:</span> <span class="nx">Optional[Union[str, ScaleSetPriority]]</span> = None<span class="p">, </span><span class="nx">spot_max_price</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[Union[str, AgentPoolType]]</span> = None<span class="p">, </span><span class="nx">upgrade_settings</span><span class="p">:</span> <span class="nx">Optional[AgentPoolUpgradeSettingsArgs]</span> = None<span class="p">, </span><span class="nx">vm_size</span><span class="p">:</span> <span class="nx">Optional[Union[str, ContainerServiceVMSizeTypes]]</span> = None<span class="p">, </span><span class="nx">vnet_subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1082,6 +1184,15 @@ The AgentPool resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}Whether to enable auto-scaler{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="enableencryptionathost_csharp">
+<a href="#enableencryptionathost_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Encryption<wbr>At<wbr>Host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable EncryptionAtHost{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="enablenodepublicip_csharp">
 <a href="#enablenodepublicip_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Node<wbr>Public<wbr>IP</a>
 </span>
@@ -1098,6 +1209,15 @@ The AgentPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#kubeletconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Kubelet<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kubeletdisktype_csharp">
+<a href="#kubeletdisktype_csharp" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Disk<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#kubeletdisktype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Kubelet<wbr>Disk<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="linuxosconfig_csharp">
@@ -1349,6 +1469,15 @@ The AgentPool resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}Whether to enable auto-scaler{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="enableencryptionathost_go">
+<a href="#enableencryptionathost_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Encryption<wbr>At<wbr>Host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable EncryptionAtHost{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="enablenodepublicip_go">
 <a href="#enablenodepublicip_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Node<wbr>Public<wbr>IP</a>
 </span>
@@ -1365,6 +1494,15 @@ The AgentPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#kubeletconfig">Kubelet<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kubeletdisktype_go">
+<a href="#kubeletdisktype_go" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Disk<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#kubeletdisktype">Kubelet<wbr>Disk<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="linuxosconfig_go">
@@ -1616,6 +1754,15 @@ The AgentPool resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}Whether to enable auto-scaler{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="enableencryptionathost_nodejs">
+<a href="#enableencryptionathost_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Encryption<wbr>At<wbr>Host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable EncryptionAtHost{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="enablenodepublicip_nodejs">
 <a href="#enablenodepublicip_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Node<wbr>Public<wbr>IP</a>
 </span>
@@ -1632,6 +1779,15 @@ The AgentPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#kubeletconfig">Kubelet<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kubeletdisktype_nodejs">
+<a href="#kubeletdisktype_nodejs" style="color: inherit; text-decoration: inherit;">kubelet<wbr>Disk<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#kubeletdisktype">Kubelet<wbr>Disk<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="linuxosconfig_nodejs">
@@ -1883,6 +2039,15 @@ The AgentPool resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}Whether to enable auto-scaler{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="enable_encryption_at_host_python">
+<a href="#enable_encryption_at_host_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>encryption_<wbr>at_<wbr>host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable EncryptionAtHost{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="enable_node_public_ip_python">
 <a href="#enable_node_public_ip_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>node_<wbr>public_<wbr>ip</a>
 </span>
@@ -1899,6 +2064,15 @@ The AgentPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#kubeletconfig">Kubelet<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kubelet_disk_type_python">
+<a href="#kubelet_disk_type_python" style="color: inherit; text-decoration: inherit;">kubelet_<wbr>disk_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#kubeletdisktype">Kubelet<wbr>Disk<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="linux_os_config_python">
@@ -3942,6 +4116,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="containerlogmaxfiles_csharp">
+<a href="#containerlogmaxfiles_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Log<wbr>Max<wbr>Files</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of container log files that can be present for a container. The number must be ≥ 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containerlogmaxsizemb_csharp">
+<a href="#containerlogmaxsizemb_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Log<wbr>Max<wbr>Size<wbr>MB</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum size (e.g. 10Mi) of container log file before it is rotated.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="cpucfsquota_csharp">
 <a href="#cpucfsquota_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Cfs<wbr>Quota</a>
 </span>
@@ -3996,6 +4188,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The percent of disk usage before which image garbage collection is never run.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="podmaxpids_csharp">
+<a href="#podmaxpids_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Max<wbr>Pids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of processes per pod.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="topologymanagerpolicy_csharp">
 <a href="#topologymanagerpolicy_csharp" style="color: inherit; text-decoration: inherit;">Topology<wbr>Manager<wbr>Policy</a>
 </span>
@@ -4018,6 +4219,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containerlogmaxfiles_go">
+<a href="#containerlogmaxfiles_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Log<wbr>Max<wbr>Files</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of container log files that can be present for a container. The number must be ≥ 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containerlogmaxsizemb_go">
+<a href="#containerlogmaxsizemb_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Log<wbr>Max<wbr>Size<wbr>MB</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum size (e.g. 10Mi) of container log file before it is rotated.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cpucfsquota_go">
@@ -4074,6 +4293,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The percent of disk usage before which image garbage collection is never run.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="podmaxpids_go">
+<a href="#podmaxpids_go" style="color: inherit; text-decoration: inherit;">Pod<wbr>Max<wbr>Pids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of processes per pod.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="topologymanagerpolicy_go">
 <a href="#topologymanagerpolicy_go" style="color: inherit; text-decoration: inherit;">Topology<wbr>Manager<wbr>Policy</a>
 </span>
@@ -4096,6 +4324,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containerlogmaxfiles_nodejs">
+<a href="#containerlogmaxfiles_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Log<wbr>Max<wbr>Files</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of container log files that can be present for a container. The number must be ≥ 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containerlogmaxsizemb_nodejs">
+<a href="#containerlogmaxsizemb_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Log<wbr>Max<wbr>Size<wbr>MB</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The maximum size (e.g. 10Mi) of container log file before it is rotated.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cpucfsquota_nodejs">
@@ -4152,6 +4398,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The percent of disk usage before which image garbage collection is never run.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="podmaxpids_nodejs">
+<a href="#podmaxpids_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Max<wbr>Pids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of processes per pod.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="topologymanagerpolicy_nodejs">
 <a href="#topologymanagerpolicy_nodejs" style="color: inherit; text-decoration: inherit;">topology<wbr>Manager<wbr>Policy</a>
 </span>
@@ -4174,6 +4429,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="container_log_max_files_python">
+<a href="#container_log_max_files_python" style="color: inherit; text-decoration: inherit;">container_<wbr>log_<wbr>max_<wbr>files</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of container log files that can be present for a container. The number must be ≥ 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="container_log_max_size_mb_python">
+<a href="#container_log_max_size_mb_python" style="color: inherit; text-decoration: inherit;">container_<wbr>log_<wbr>max_<wbr>size_<wbr>mb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum size (e.g. 10Mi) of container log file before it is rotated.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cpu_cfs_quota_python">
@@ -4228,6 +4501,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percent of disk usage before which image garbage collection is never run.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pod_max_pids_python">
+<a href="#pod_max_pids_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>max_<wbr>pids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of processes per pod.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="topology_manager_policy_python">
@@ -4256,6 +4538,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="containerlogmaxfiles_csharp">
+<a href="#containerlogmaxfiles_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Log<wbr>Max<wbr>Files</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of container log files that can be present for a container. The number must be ≥ 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containerlogmaxsizemb_csharp">
+<a href="#containerlogmaxsizemb_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Log<wbr>Max<wbr>Size<wbr>MB</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum size (e.g. 10Mi) of container log file before it is rotated.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="cpucfsquota_csharp">
 <a href="#cpucfsquota_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Cfs<wbr>Quota</a>
 </span>
@@ -4310,6 +4610,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The percent of disk usage before which image garbage collection is never run.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="podmaxpids_csharp">
+<a href="#podmaxpids_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Max<wbr>Pids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of processes per pod.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="topologymanagerpolicy_csharp">
 <a href="#topologymanagerpolicy_csharp" style="color: inherit; text-decoration: inherit;">Topology<wbr>Manager<wbr>Policy</a>
 </span>
@@ -4332,6 +4641,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containerlogmaxfiles_go">
+<a href="#containerlogmaxfiles_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Log<wbr>Max<wbr>Files</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of container log files that can be present for a container. The number must be ≥ 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containerlogmaxsizemb_go">
+<a href="#containerlogmaxsizemb_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Log<wbr>Max<wbr>Size<wbr>MB</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum size (e.g. 10Mi) of container log file before it is rotated.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cpucfsquota_go">
@@ -4388,6 +4715,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The percent of disk usage before which image garbage collection is never run.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="podmaxpids_go">
+<a href="#podmaxpids_go" style="color: inherit; text-decoration: inherit;">Pod<wbr>Max<wbr>Pids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of processes per pod.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="topologymanagerpolicy_go">
 <a href="#topologymanagerpolicy_go" style="color: inherit; text-decoration: inherit;">Topology<wbr>Manager<wbr>Policy</a>
 </span>
@@ -4410,6 +4746,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containerlogmaxfiles_nodejs">
+<a href="#containerlogmaxfiles_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Log<wbr>Max<wbr>Files</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of container log files that can be present for a container. The number must be ≥ 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containerlogmaxsizemb_nodejs">
+<a href="#containerlogmaxsizemb_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Log<wbr>Max<wbr>Size<wbr>MB</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The maximum size (e.g. 10Mi) of container log file before it is rotated.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cpucfsquota_nodejs">
@@ -4466,6 +4820,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The percent of disk usage before which image garbage collection is never run.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="podmaxpids_nodejs">
+<a href="#podmaxpids_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Max<wbr>Pids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of processes per pod.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="topologymanagerpolicy_nodejs">
 <a href="#topologymanagerpolicy_nodejs" style="color: inherit; text-decoration: inherit;">topology<wbr>Manager<wbr>Policy</a>
 </span>
@@ -4488,6 +4851,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="container_log_max_files_python">
+<a href="#container_log_max_files_python" style="color: inherit; text-decoration: inherit;">container_<wbr>log_<wbr>max_<wbr>files</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of container log files that can be present for a container. The number must be ≥ 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="container_log_max_size_mb_python">
+<a href="#container_log_max_size_mb_python" style="color: inherit; text-decoration: inherit;">container_<wbr>log_<wbr>max_<wbr>size_<wbr>mb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum size (e.g. 10Mi) of container log file before it is rotated.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cpu_cfs_quota_python">
@@ -4544,6 +4925,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The percent of disk usage before which image garbage collection is never run.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="pod_max_pids_python">
+<a href="#pod_max_pids_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>max_<wbr>pids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of processes per pod.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="topology_manager_policy_python">
 <a href="#topology_manager_policy_python" style="color: inherit; text-decoration: inherit;">topology_<wbr>manager_<wbr>policy</a>
 </span>
@@ -4551,6 +4941,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Topology Manager policy to use.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="kubeletdisktype">Kubelet<wbr>Disk<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>OS</dt>
+    <dd>OS</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Kubelet<wbr>Disk<wbr>Type<wbr>OS</dt>
+    <dd>OS</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>OS</dt>
+    <dd>OS</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>OS</dt>
+    <dd>OS</dd>
 </dl>
 {{% /choosable %}}
 
@@ -5178,6 +5598,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Sysctl setting net.core.optmem_max.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="netcorermemdefault_csharp">
+<a href="#netcorermemdefault_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Rmem<wbr>Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.rmem_default.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="netcorermemmax_csharp">
 <a href="#netcorermemmax_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Rmem<wbr>Max</a>
 </span>
@@ -5194,6 +5623,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sysctl setting net.core.somaxconn.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netcorewmemdefault_csharp">
+<a href="#netcorewmemdefault_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Wmem<wbr>Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.wmem_default.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="netcorewmemmax_csharp">
@@ -5286,15 +5724,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_tw_buckets.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="netipv4tcprmem_csharp">
-<a href="#netipv4tcprmem_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Rmem</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_rmem.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="netipv4tcptwreuse_csharp">
 <a href="#netipv4tcptwreuse_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Tw<wbr>Reuse</a>
 </span>
@@ -5302,15 +5731,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Sysctl setting net.ipv4.tcp_tw_reuse.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="netipv4tcpwmem_csharp">
-<a href="#netipv4tcpwmem_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Wmem</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_wmem.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpkeepaliveintvl_csharp">
@@ -5436,6 +5856,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Sysctl setting net.core.optmem_max.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="netcorermemdefault_go">
+<a href="#netcorermemdefault_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Rmem<wbr>Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.rmem_default.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="netcorermemmax_go">
 <a href="#netcorermemmax_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Rmem<wbr>Max</a>
 </span>
@@ -5452,6 +5881,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sysctl setting net.core.somaxconn.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netcorewmemdefault_go">
+<a href="#netcorewmemdefault_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Wmem<wbr>Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.wmem_default.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="netcorewmemmax_go">
@@ -5544,15 +5982,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_tw_buckets.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="netipv4tcprmem_go">
-<a href="#netipv4tcprmem_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Rmem</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_rmem.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="netipv4tcptwreuse_go">
 <a href="#netipv4tcptwreuse_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Tw<wbr>Reuse</a>
 </span>
@@ -5560,15 +5989,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Sysctl setting net.ipv4.tcp_tw_reuse.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="netipv4tcpwmem_go">
-<a href="#netipv4tcpwmem_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Wmem</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_wmem.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpkeepaliveintvl_go">
@@ -5694,6 +6114,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Sysctl setting net.core.optmem_max.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="netcorermemdefault_nodejs">
+<a href="#netcorermemdefault_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Rmem<wbr>Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.rmem_default.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="netcorermemmax_nodejs">
 <a href="#netcorermemmax_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Rmem<wbr>Max</a>
 </span>
@@ -5710,6 +6139,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Sysctl setting net.core.somaxconn.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netcorewmemdefault_nodejs">
+<a href="#netcorewmemdefault_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Wmem<wbr>Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.wmem_default.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="netcorewmemmax_nodejs">
@@ -5802,15 +6240,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_tw_buckets.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="netipv4tcprmem_nodejs">
-<a href="#netipv4tcprmem_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Rmem</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_rmem.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="netipv4tcptwreuse_nodejs">
 <a href="#netipv4tcptwreuse_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Tw<wbr>Reuse</a>
 </span>
@@ -5818,15 +6247,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Sysctl setting net.ipv4.tcp_tw_reuse.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="netipv4tcpwmem_nodejs">
-<a href="#netipv4tcpwmem_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Wmem</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_wmem.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpkeepaliveintvl_nodejs">
@@ -5952,6 +6372,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Sysctl setting net.core.optmem_max.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="net_core_rmem_default_python">
+<a href="#net_core_rmem_default_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>rmem_<wbr>default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.rmem_default.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="net_core_rmem_max_python">
 <a href="#net_core_rmem_max_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>rmem_<wbr>max</a>
 </span>
@@ -5968,6 +6397,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sysctl setting net.core.somaxconn.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_core_wmem_default_python">
+<a href="#net_core_wmem_default_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>wmem_<wbr>default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.wmem_default.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="net_core_wmem_max_python">
@@ -6060,15 +6498,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_tw_buckets.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="net_ipv4_tcp_rmem_python">
-<a href="#net_ipv4_tcp_rmem_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>rmem</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_rmem.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="net_ipv4_tcp_tw_reuse_python">
 <a href="#net_ipv4_tcp_tw_reuse_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>tw_<wbr>reuse</a>
 </span>
@@ -6076,15 +6505,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Sysctl setting net.ipv4.tcp_tw_reuse.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="net_ipv4_tcp_wmem_python">
-<a href="#net_ipv4_tcp_wmem_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>wmem</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_wmem.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="net_ipv4_tcpkeepalive_intvl_python">
@@ -6212,6 +6632,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Sysctl setting net.core.optmem_max.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="netcorermemdefault_csharp">
+<a href="#netcorermemdefault_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Rmem<wbr>Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.rmem_default.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="netcorermemmax_csharp">
 <a href="#netcorermemmax_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Rmem<wbr>Max</a>
 </span>
@@ -6228,6 +6657,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sysctl setting net.core.somaxconn.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netcorewmemdefault_csharp">
+<a href="#netcorewmemdefault_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Wmem<wbr>Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.wmem_default.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="netcorewmemmax_csharp">
@@ -6320,15 +6758,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_tw_buckets.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="netipv4tcprmem_csharp">
-<a href="#netipv4tcprmem_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Rmem</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_rmem.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="netipv4tcptwreuse_csharp">
 <a href="#netipv4tcptwreuse_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Tw<wbr>Reuse</a>
 </span>
@@ -6336,15 +6765,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Sysctl setting net.ipv4.tcp_tw_reuse.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="netipv4tcpwmem_csharp">
-<a href="#netipv4tcpwmem_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Wmem</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_wmem.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpkeepaliveintvl_csharp">
@@ -6470,6 +6890,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Sysctl setting net.core.optmem_max.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="netcorermemdefault_go">
+<a href="#netcorermemdefault_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Rmem<wbr>Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.rmem_default.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="netcorermemmax_go">
 <a href="#netcorermemmax_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Rmem<wbr>Max</a>
 </span>
@@ -6486,6 +6915,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sysctl setting net.core.somaxconn.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netcorewmemdefault_go">
+<a href="#netcorewmemdefault_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Wmem<wbr>Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.wmem_default.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="netcorewmemmax_go">
@@ -6578,15 +7016,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_tw_buckets.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="netipv4tcprmem_go">
-<a href="#netipv4tcprmem_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Rmem</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_rmem.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="netipv4tcptwreuse_go">
 <a href="#netipv4tcptwreuse_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Tw<wbr>Reuse</a>
 </span>
@@ -6594,15 +7023,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Sysctl setting net.ipv4.tcp_tw_reuse.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="netipv4tcpwmem_go">
-<a href="#netipv4tcpwmem_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Wmem</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_wmem.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpkeepaliveintvl_go">
@@ -6728,6 +7148,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Sysctl setting net.core.optmem_max.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="netcorermemdefault_nodejs">
+<a href="#netcorermemdefault_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Rmem<wbr>Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.rmem_default.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="netcorermemmax_nodejs">
 <a href="#netcorermemmax_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Rmem<wbr>Max</a>
 </span>
@@ -6744,6 +7173,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Sysctl setting net.core.somaxconn.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netcorewmemdefault_nodejs">
+<a href="#netcorewmemdefault_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Wmem<wbr>Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.wmem_default.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="netcorewmemmax_nodejs">
@@ -6836,15 +7274,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_tw_buckets.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="netipv4tcprmem_nodejs">
-<a href="#netipv4tcprmem_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Rmem</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_rmem.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="netipv4tcptwreuse_nodejs">
 <a href="#netipv4tcptwreuse_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Tw<wbr>Reuse</a>
 </span>
@@ -6852,15 +7281,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Sysctl setting net.ipv4.tcp_tw_reuse.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="netipv4tcpwmem_nodejs">
-<a href="#netipv4tcpwmem_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Wmem</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_wmem.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="netipv4tcpkeepaliveintvl_nodejs">
@@ -6986,6 +7406,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Sysctl setting net.core.optmem_max.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="net_core_rmem_default_python">
+<a href="#net_core_rmem_default_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>rmem_<wbr>default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.rmem_default.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="net_core_rmem_max_python">
 <a href="#net_core_rmem_max_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>rmem_<wbr>max</a>
 </span>
@@ -7002,6 +7431,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sysctl setting net.core.somaxconn.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_core_wmem_default_python">
+<a href="#net_core_wmem_default_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>wmem_<wbr>default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.wmem_default.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="net_core_wmem_max_python">
@@ -7094,15 +7532,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_tw_buckets.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="net_ipv4_tcp_rmem_python">
-<a href="#net_ipv4_tcp_rmem_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>rmem</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_rmem.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="net_ipv4_tcp_tw_reuse_python">
 <a href="#net_ipv4_tcp_tw_reuse_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>tw_<wbr>reuse</a>
 </span>
@@ -7110,15 +7539,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Sysctl setting net.ipv4.tcp_tw_reuse.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="net_ipv4_tcp_wmem_python">
-<a href="#net_ipv4_tcp_wmem_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>wmem</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_wmem.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="net_ipv4_tcpkeepalive_intvl_python">
@@ -7175,6 +7595,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Sysctl setting vm.vfs_cache_pressure.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:containerservice/latest:AgentPool agentpool1 /subscriptions/subid1/resourcegroups/rg1/providers/Microsoft.ContainerService/managedClusters/clustername1/agentPools/agentpool1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

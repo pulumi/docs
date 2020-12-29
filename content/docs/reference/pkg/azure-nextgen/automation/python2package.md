@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.automation.Python2Package resour
 Definition of the module type.
 Latest API Version: 2018-06-30.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1665,6 +1664,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Gets or sets the error message.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:automation/latest:Python2Package OmsCompositeResources /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/myAutomationAccount33/python2Packages/OmsCompositeResources 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

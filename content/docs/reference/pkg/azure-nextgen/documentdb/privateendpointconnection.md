@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.documentdb.PrivateEndpointConnec
 
 A private endpoint connection
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1077,6 +1076,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The private link service connection status.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:documentdb/v20190801preview:PrivateEndpointConnection privateEndpointConnectionName /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/rg1/providers/Microsoft.DocumentDb/databaseAccounts/ddb1/privateEndpointConnections/privateEndpointConnectionName 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

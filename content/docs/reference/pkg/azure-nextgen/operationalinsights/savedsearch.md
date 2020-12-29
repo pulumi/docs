@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.operationalinsights.SavedSearch 
 Value object for saved search results.
 Latest API Version: 2020-08-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1091,6 +1090,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The tag value.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:operationalinsights/latest:SavedSearch MyName subscriptions/00000000-0000-0000-0000-000000000005/resourceGroups/mms-eus/providers/Microsoft.OperationalInsights/workspaces/AtlantisDemo/savedSearches/test-new-saved-search-id-2015 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.mixedreality.SpatialAnchorsAccou
 SpatialAnchorsAccount Response.
 Latest API Version: 2020-05-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -663,6 +662,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:mixedreality/latest:SpatialAnchorsAccount MyAccount /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/MyResourceGroup/providers/Microsoft.MixedReality/spatialAnchorsAccounts/MyAccount 
+```
 
 
 

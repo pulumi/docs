@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.logic.IntegrationAccountMap reso
 The integration account map.
 Latest API Version: 2019-05-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1586,6 +1585,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Liquid</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:logic/latest:IntegrationAccountMap IntegrationAccountMap291 /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/<resourceGroup>/providers/Microsoft.Logic/integrationAccounts/<IntegrationAccount>/maps/testMap 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

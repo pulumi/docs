@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.sql.ManagedDatabase resource wit
 
 A managed database resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1856,6 +1855,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>RestoreLongTermRetentionBackup</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:sql/v20200801preview:ManagedDatabase testdb1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/managedInstances/testsvr/databases/testdb1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

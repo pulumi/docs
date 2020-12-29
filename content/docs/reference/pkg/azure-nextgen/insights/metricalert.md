@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.insights.MetricAlert resource wi
 The metric alert resource.
 Latest API Version: 2018-03-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -4841,6 +4840,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The Application Insights web test Id.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:insights/latest:MetricAlert webtest-name-example /subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourceGroups/gigtest/providers/providers/microsoft.insights/metricalerts/MetricAlertAtSubscriptionLevel 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

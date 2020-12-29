@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.eventhub.NamespaceNetworkRuleSet
 Description of NetworkRuleSet resource.
 Latest API Version: 2017-04-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1398,6 +1397,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Resource ID of Virtual Network Subnet{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:eventhub/latest:NamespaceNetworkRuleSet default /subscriptions/854d368f-1828-428f-8f3c-f2affa9b2f7d/resourceGroups/resourcegroupid/providers/Microsoft.EventHub/namespaces/sdk-Namespace-9659/networkrulesets/default 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

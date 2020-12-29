@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.securityinsights.IncidentComment
 
 Represents an incident comment
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -994,6 +993,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The user principal name of the client.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:securityinsights/v20190101preview:IncidentComment 4bb36b7b-26ff-4d1c-9cbe-0d8ab3da0014 /subscriptions/d0cfe6b2-9ac0-4464-9919-dccaee2e48c0/resourceGroups/myRg/providers/Microsoft.OperationalIinsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/incidents/73e01a99-5cd7-4139-a149-9f2736ff2ab5/comments/4bb36b7b-26ff-4d1c-9cbe-0d8ab3da0014 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.insights.DataCollectionRuleAssoc
 
 Definition of generic ARM proxy resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -662,6 +661,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:insights/v20191101preview:DataCollectionRuleAssociation myAssociation /subscriptions/703362b3-f278-4e4b-9179-c76eaf41ffc2/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachines/myVm/providers/Microsoft.Insights/dataCollectionRuleAssociations/myAssociation 
+```
 
 
 

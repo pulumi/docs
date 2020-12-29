@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.network.RecordSet resource with 
 Describes a DNS record set (a collection of DNS records with the same name and type) in a Private DNS zone.
 Latest API Version: 2020-06-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3713,6 +3712,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The text value of this TXT record.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:network/latest:RecordSet recordtxt /subscriptions/subscriptionId/resourceGroups/resourceGroup1/providers/Microsoft.Network/privateDnsZones/privatezone1.com/TXT/recordtxt 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

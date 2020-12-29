@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.customerinsights.Relationship re
 The relationship resource format.
 Latest API Version: 2017-04-26.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2971,6 +2970,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Maps a profile property with the StrongId of related profile. This is an array to support StrongIds that are composite key as well.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:customerinsights/latest:Relationship sdkTestHub/testProfile2326994 /subscriptions/c909e979-ef71-4def-a970-bc7c154db8c5/resourceGroups/TestHubRG/providers/Microsoft.CustomerInsights/hubs/sdkTestHub/relationships/SomeRelationship 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

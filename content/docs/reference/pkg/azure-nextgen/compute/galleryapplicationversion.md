@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.compute.GalleryApplicationVersio
 Specifies information about the gallery Application Version that you want to create or update.
 Latest API Version: 2020-09-30.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3160,6 +3159,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Optional. The defaultConfigurationLink of the artifact, must be a readable storage page blob.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:compute/latest:GalleryApplicationVersion 1.0.0 /subscriptions/01523d7c-60da-455e-adef-521b547922c4/resourceGroups/galleryPsTestRg98/providers/Microsoft.Compute/galleries/galleryPsTestGallery6165/applications/galleryPsTestGalleryApplication7825/versions/1.0.0 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

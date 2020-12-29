@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.devices.DpsCertificate resource 
 The X509 Certificate.
 Latest API Version: 2020-03-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -915,6 +914,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The certificate's last update date and time.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:devices/latest:DpsCertificate cert /subscriptions/91d12660-3dec-467a-be2a-213b5544ddc0/resourceGroups/myResourceGroup/providers/Microsoft.Devices/ProvisioningServives/myFirstProvisioningService/certificates/cert 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

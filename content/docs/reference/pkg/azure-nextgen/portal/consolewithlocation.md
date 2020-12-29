@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.portal.ConsoleWithLocation resou
 Cloud shell console
 Latest API Version: 2018-10-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -619,6 +618,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Uri of the console.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:portal/latest:ConsoleWithLocation MyName <Azure resource ID> 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

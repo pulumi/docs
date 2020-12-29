@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.resources.TemplateSpec resource 
 
 Template Spec object.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1120,6 +1119,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The timestamp of when the version was last modified.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:resources/v20190601preview:TemplateSpec simpleTemplateSpec /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/templateSpecRG/providers/Microsoft.Resources/templateSpecs/simpleTemplateSpec 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

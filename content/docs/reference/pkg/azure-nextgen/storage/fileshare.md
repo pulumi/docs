@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.storage.FileShare resource with 
 Properties of the file share, including Id, resource name, resource type, Etag.
 Latest API Version: 2019-06-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1377,6 +1376,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Premium</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:storage/latest:FileShare share1235 /subscriptions/{subscription-id}/resourceGroups/res346/providers/Microsoft.Storage/storageAccounts/sto666/fileServices/default/shares/share1235 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.peering.Prefix resource with exa
 The peering service prefix class.
 Latest API Version: 2020-10-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1027,6 +1026,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The type of the event associated with a prefix.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:peering/latest:Prefix peeringServicePrefixName /subscriptions/subId/resourceGroups/rgName/providers/Microsoft.Peering/peeringServices/peeringServiceName/prefixes/peeringServicePrefixName 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

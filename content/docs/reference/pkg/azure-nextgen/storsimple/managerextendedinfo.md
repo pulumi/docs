@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.storsimple.ManagerExtendedInfo r
 The extended info of the manager.
 Latest API Version: 2017-06-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -847,6 +846,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Series8000</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:storsimple/latest:ManagerExtendedInfo vaultExtendedInfo /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/Managers/ManagerForSDKTest2extendedInformation/vaultExtendedInfo 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

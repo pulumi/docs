@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.network.P2sVpnGateway resource w
 P2SVpnGateway Resource.
 Latest API Version: 2020-07-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2928,6 +2927,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The total of p2s vpn clients connected at this time to this P2SVpnGateway.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:network/latest:P2sVpnGateway p2sVpnGateway1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/P2SvpnGateways/p2sVpnGateway1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

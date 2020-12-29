@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.offazure.MasterSite resource wit
 Site REST Resource.
 Latest API Version: 2020-07-07.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -935,6 +934,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}List of sites that are a part of Master Site.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:offazure/latest:MasterSite masterSite1 /subscriptions/4bd2aa0f-2bd2-4d67-91a8-5a4533d58600/resourceGroups/poshukla/providers/Microsoft.OffAzure/MasterSites/masterSite1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

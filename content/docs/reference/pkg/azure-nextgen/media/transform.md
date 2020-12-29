@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.media.Transform resource with ex
 A Transform encapsulates the rules or instructions for generating desired outputs from input media, such as by transcoding or by extracting insights. After the Transform is created, it can be applied to input media by creating Jobs.
 Latest API Version: 2020-05-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -5787,6 +5786,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Vfr{{% md %}}Similar to the Passthrough mode, but if the input has frames that have duplicate timestamps, then only one frame is passed through to the output, and others are dropped. Recommended when the number of output frames is expected to be equal to the number of input frames. For example, the output is used to calculate a quality metric like PSNR against the input{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:media/latest:Transform createdTransform /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contosoresources/providers/Microsoft.Media/mediaservices/contosomedia/transforms/createdTransform 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

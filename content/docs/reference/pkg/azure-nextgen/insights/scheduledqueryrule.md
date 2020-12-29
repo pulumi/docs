@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.insights.ScheduledQueryRule reso
 The Log Search Rule resource.
 Latest API Version: 2018-04-16.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3764,6 +3763,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Trigger condition for metric query rule{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:insights/latest:ScheduledQueryRule logtometricfoo /subscriptions/af52d502-a447-4bc6-8cb7-4780fbb00490/resourceGroups/alertsweu/providers/microsoft.insights/scheduledqueryrules/logtometricfoo 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

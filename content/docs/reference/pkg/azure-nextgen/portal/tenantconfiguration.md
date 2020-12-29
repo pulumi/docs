@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.portal.TenantConfiguration resou
 
 Tenant configuration.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -514,6 +513,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:portal/v20200901preview:TenantConfiguration default /providers/Microsoft.Portal/tenantConfigurations/default 
+```
 
 
 

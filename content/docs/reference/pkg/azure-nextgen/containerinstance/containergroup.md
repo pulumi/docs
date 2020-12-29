@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.containerinstance.ContainerGroup
 A container group.
 Latest API Version: 2020-11-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -10073,6 +10072,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The secret volume.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:containerinstance/latest:ContainerGroup demo1 /subscriptions/subid/resourceGroups/demo/providers/Microsoft.ContainerInstance/containerGroups/demo1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

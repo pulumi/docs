@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.automation.Watcher resource with
 Definition of the watcher type.
 Latest API Version: 2015-10-31.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1007,6 +1006,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:automation/latest:Watcher MyTestWatcher /subscriptions/subId/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/MyTestAutomationAccount/watchers/MyTestWatcher 
+```
 
 
 

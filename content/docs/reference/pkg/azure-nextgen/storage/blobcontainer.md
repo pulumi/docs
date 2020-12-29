@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.storage.BlobContainer resource w
 Properties of the blob container, including Id, resource name, resource type, Etag.
 Latest API Version: 2019-06-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2062,6 +2061,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Returns the User Principal Name of the user who updated the ImmutabilityPolicy.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:storage/latest:BlobContainer container6185 /subscriptions/{subscription-id}/resourceGroups/res3376/providers/Microsoft.Storage/storageAccounts/sto328/blobServices/default/containers/container6185 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

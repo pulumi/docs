@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.maps.Account resource with examp
 An Azure resource which represents access to a suite of Maps REST APIs.
 Latest API Version: 2018-05-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -917,6 +916,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Gets the sku tier. This is based on the SKU name.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:maps/latest:Account myMapsAccount /subscriptions/21a9967a-e8a9-4656-a70b-96ff1c4d05a0/resourceGroups/myResourceGroup/providers/Microsoft.Maps/accounts/myMapsAccount 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.compute.Gallery resource with ex
 Specifies information about the Shared Image Gallery that you want to create or update.
 Latest API Version: 2020-09-30.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1203,6 +1202,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}This property allows you to specify the permission of sharing gallery. <br><br> Possible values are: <br><br> **Private** <br><br> **Groups**{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:compute/latest:Gallery myGalleryName <Azure resource ID> 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

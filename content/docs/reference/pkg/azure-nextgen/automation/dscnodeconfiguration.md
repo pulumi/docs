@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.automation.DscNodeConfiguration 
 Definition of the dsc node configuration.
 Latest API Version: 2018-01-15.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1394,6 +1393,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Gets or sets the name of the Dsc configuration.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:automation/latest:DscNodeConfiguration configName.nodeConfigName /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/myAutomationAccount20/nodeConfigurations/configName.nodeConfigName 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

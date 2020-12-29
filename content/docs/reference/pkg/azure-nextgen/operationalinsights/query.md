@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.operationalinsights.Query resour
 
 A Log Analytics QueryPack-Query definition.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1523,6 +1522,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:operationalinsights/v20190901preview:Query a449f8af-8e64-4b3a-9b16-5a7165ff98c4 /subscriptions/86dc51d3-92ed-4d7e-947a-775ea79b4918/resourceGroups/my-resource-group/providers/microsoft.operationalinsights/queryPacks/my-querypack/queries/a449f8af-8e64-4b3a-9b16-5a7165ff98c4 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.mixedreality.RemoteRenderingAcco
 
 RemoteRenderingAccount Response.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -943,6 +942,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>SystemAssigned</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:mixedreality/v20200406preview:RemoteRenderingAccount MyAccount /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/MyResourceGroup/providers/Microsoft.MixedReality/remoteRenderingAccounts/MyAccount 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

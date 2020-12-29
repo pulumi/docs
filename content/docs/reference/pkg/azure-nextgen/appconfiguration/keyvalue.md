@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.appconfiguration.KeyValue resour
 
 The key-value resource along with all resource properties.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -881,6 +880,16 @@ A locked key-value may not be modified until it is unlocked.{{% /md %}}</dd>
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:appconfiguration/v20200701preview:KeyValue myKey$myLabel /subscriptions/c80fb759-c965-4c6a-9110-9b2b2d038882/resourceGroups/myResourceGroup/providers/Microsoft.AppConfiguration/configurationStores/contoso/keyValues/myKey$myLabel 
+```
 
 
 

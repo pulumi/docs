@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.servicebus.Topic resource with e
 Description of topic resource.
 Latest API Version: 2017-04-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1441,6 +1440,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Number of messages transferred to another queue, topic, or subscription.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:servicebus/latest:Topic sdk-Topics-5488 /subscriptions/5f750a97-50d9-4e36-8081-c9ee4c0210d4/resourceGroups/ArunMonocle/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-1617/topics/sdk-Topics-5488 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

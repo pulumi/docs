@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.recoveryservices.ReplicationFabr
 Fabric definition.
 Latest API Version: 2018-07-10.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -9758,6 +9757,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:recoveryservices/latest:ReplicationFabric cloud1 /Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

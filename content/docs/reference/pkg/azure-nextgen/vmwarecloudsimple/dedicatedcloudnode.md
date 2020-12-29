@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.vmwarecloudsimple.DedicatedCloud
 Dedicated cloud node model
 Latest API Version: 2019-04-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1586,6 +1585,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The tier of the SKU{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:vmwarecloudsimple/latest:DedicatedCloudNode myNode /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.VMwareCloudSimple/dedicatedCloudNodes/myNode 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

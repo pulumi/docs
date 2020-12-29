@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.network.PrivateZone resource wit
 Describes a Private DNS zone.
 Latest API Version: 2020-06-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -928,6 +927,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:network/latest:PrivateZone privatezone1.com /subscriptions/subscriptionId/resourceGroups/resourceGroup1/providers/Microsoft.Network/privateDnsZones/privatezone1.com 
+```
 
 
 

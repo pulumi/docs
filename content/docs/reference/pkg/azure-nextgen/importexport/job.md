@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.importexport.Job resource with e
 Contains the job information.
 Latest API Version: 2020-08-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -6238,6 +6237,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The second line of the street address to use when returning the drives. {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:importexport/latest:Job myJob /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.ImportExport/jobs/myJob 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

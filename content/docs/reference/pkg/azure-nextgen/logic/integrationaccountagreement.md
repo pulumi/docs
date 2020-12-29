@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.logic.IntegrationAccountAgreemen
 The integration account agreement.
 Latest API Version: 2019-05-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -27106,6 +27105,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The value indicating whether to Whether to validate XSD types.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:logic/latest:IntegrationAccountAgreement <IntegrationAccountAgreementName> /subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testResourceGroup/providers/Microsoft.Logic/integrationAccounts/IntegrationAccount4533/agreements/<IntegrationAccountAgreementName> 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

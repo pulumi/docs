@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.network.RouteFilterRule resource
 Route Filter Rule Resource.
 Latest API Version: 2020-07-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -870,6 +869,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Community</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:network/latest:RouteFilterRule ruleName /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/routeFilters/filterName/routeFilterRules/ruleName 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.kusto.ClusterPrincipalAssignment
 Class representing a cluster principal assignment.
 Latest API Version: 2020-09-18.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -913,6 +912,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>User</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:kusto/latest:ClusterPrincipalAssignment kustoclusterrptest4/kustoprincipal1 /subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/Clusters/kustoclusterrptest4/PrincipalAssignments/kustoprincipal1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

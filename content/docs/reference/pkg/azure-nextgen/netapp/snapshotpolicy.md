@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.netapp.SnapshotPolicy resource w
 Snapshot policy information
 Latest API Version: 2020-09-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2373,6 +2372,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:netapp/latest:SnapshotPolicy account1/snapshotPolicy1 /subscriptions/D633CC2E-722B-4AE1-B636-BBD9E4C60ED9/resourceGroups/myRG/providers/Microsoft.NetApp/netAppAccounts/account1/snapshotPolicies/snapshotPolicy1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

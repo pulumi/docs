@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.powerplatform.PrivateEndpointCon
 
 A private endpoint connection
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1097,6 +1096,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:powerplatform/v20201030preview:PrivateEndpointConnection privateEndpointConnectionName /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/rg1/providers/Microsoft.PowerPlatform/enterprisePolicies/ddb1/privateEndpointConnections/privateEndpointConnectionName 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

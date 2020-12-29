@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.documentdb.DatabaseAccount resou
 An Azure Cosmos DB database account.
 Latest API Version: 2020-09-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -4489,6 +4488,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Create firewall rule before the virtual network has vnet service endpoint enabled.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:documentdb/latest:DatabaseAccount ddb1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/ddb1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

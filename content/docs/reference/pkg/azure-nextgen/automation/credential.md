@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.automation.Credential resource w
 Definition of the credential.
 Latest API Version: 2015-10-31.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -751,6 +750,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:automation/latest:Credential myCredential /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/myAutomationAccount18/credentials/myCredential 
+```
 
 
 

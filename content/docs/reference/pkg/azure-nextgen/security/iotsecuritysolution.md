@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.security.IotSecuritySolution res
 IoT Security solution configuration and resource information.
 Latest API Version: 2019-08-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1811,6 +1810,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}List of Azure subscription ids on which the user defined resources query should be executed.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:security/latest:IotSecuritySolution default /subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/MyGroup/providers/Microsoft.Security/Locations/eastus/IoTSecuritySolutions/default 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

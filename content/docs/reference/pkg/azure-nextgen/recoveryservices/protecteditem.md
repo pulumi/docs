@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.recoveryservices.ProtectedItem r
 Base class for backup items.
 Latest API Version: 2020-10-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -15532,6 +15531,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Invalid</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:recoveryservices/latest:ProtectedItem VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/PythonSDKBackupTestRg/providers/Microsoft.RecoveryServices/vaults/PySDKBackupTestRsVault/backupFabrics/Azure/protectionContainers/IaasVMContainer;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1/protectedItems/VM;iaasvmcontainerv2;netsdktestrg;netvmtestv2vm1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

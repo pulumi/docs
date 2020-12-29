@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.insights.ExportConfiguration res
 Properties that define a Continuous Export configuration.
 Latest API Version: 2015-05-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1275,6 +1274,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:insights/latest:ExportConfiguration MyName <Azure resource ID> 
+```
 
 
 

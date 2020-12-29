@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.storsimple.IscsiDisk resource wi
 The iSCSI disk.
 Latest API Version: 2016-10-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1083,6 +1082,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Disabled</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:storsimple/latest:IscsiDisk Auto-TestIscsiDisk1 /subscriptions/9eb689cd-7243-43b4-b6f6-5c65cb296641/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/hAzureSDKOperations/devices/HSDK-0NZI14MDTF/iscsiServers/HSDK-0NZI14MDTF/disks/Auto-TestIscsiDisk1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

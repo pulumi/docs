@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.deploymentmanager.Service resour
 
 The resource representation of a service in a service topology.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -714,6 +713,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:deploymentmanager/v20191101preview:Service myService <Azure resource ID> 
+```
 
 
 

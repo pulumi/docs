@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.compute.DiskAccess resource with
 disk access resource.
 Latest API Version: 2020-06-30.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1143,6 +1142,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:compute/latest:DiskAccess myDiskAccess <Azure resource ID> 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

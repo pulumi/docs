@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.Api resource with 
 Api details.
 Latest API Version: 2019-12-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -4031,6 +4030,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Subscription key query string parameter name.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:apimanagement/latest:Api soapApi /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/soapApi 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

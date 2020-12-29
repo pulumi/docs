@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.network.Zone resource with examp
 Describes a DNS zone.
 Latest API Version: 2018-05-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1060,6 +1059,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Private</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:network/latest:Zone zone1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/dnsZones/zone1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

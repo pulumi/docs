@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.autonomousdevelopmentplatform.Da
 
 An ADP Data Pool.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -810,6 +809,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The location name{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:autonomousdevelopmentplatform/v20200701preview:DataPool dp1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.AutonomousDevelopmentPlatform/accounts/adp1/dataPools/dp1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

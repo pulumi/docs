@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.Gateway resource w
 Gateway details.
 Latest API Version: 2019-12-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -990,6 +989,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The district, state, or province where the resource is located.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:apimanagement/latest:Gateway a1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/gateways/gw1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

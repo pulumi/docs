@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.web.Connection resource with exa
 API connection
 Latest API Version: 2016-06-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3011,6 +3010,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Target of the error{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:web/latest:Connection testManagedApi-1 /subscriptions/f34b22a3-2202-4fb1-b040-1332bd928c84/resourceGroups/testResourceGroup/providers/Microsoft.Web/connections/testManagedApi-1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

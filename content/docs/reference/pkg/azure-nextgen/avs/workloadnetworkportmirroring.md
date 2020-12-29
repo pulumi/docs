@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.avs.WorkloadNetworkPortMirroring
 
 NSX Port Mirroring
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -862,6 +861,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>INGRESS, EGRESS, BIDIRECTIONAL</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:avs/v20200717preview:WorkloadNetworkPortMirroring portMirroring1 /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/workloadNetworks/default/portMirroringProfiles/portMirroring1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

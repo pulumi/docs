@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.recoveryservices.ReplicationvCen
 vCenter definition.
 Latest API Version: 2018-07-10.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2354,6 +2353,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The account Id which has privileges to discover the vCenter.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:recoveryservices/latest:ReplicationvCenter esx-78 /Subscriptions/7c943c1b-5122-4097-90c8-861411bdd574/resourceGroups/MadhaviVRG/providers/Microsoft.RecoveryServices/vaults/MadhaviVault/replicationFabrics/239f778f368e34f78216d81f030725cdf2033174b47879b9f2eeede06fdd9c4d/replicationvCenters/esx-78 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

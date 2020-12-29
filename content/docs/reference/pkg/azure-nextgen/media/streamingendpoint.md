@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.media.StreamingEndpoint resource
 The streaming endpoint.
 Latest API Version: 2020-05-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2558,6 +2557,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The IP access control of the streaming endpoint.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:media/latest:StreamingEndpoint myStreamingEndpoint1 /subscriptions/0a6ec948-5a62-437d-b9df-934dc7c1b722/resourceGroups/mediaresources/providers/Microsoft.Media/mediaservices/slitestmedia10/streamingendpoints/myStreamingEndpoint1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

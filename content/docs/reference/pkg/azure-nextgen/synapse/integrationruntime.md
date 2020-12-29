@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.synapse.IntegrationRuntime resou
 
 Integration runtime resource type.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -4871,6 +4870,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Linked integration runtime type from data factory{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:synapse/v20190601preview:IntegrationRuntime exampleIntegrationRuntime /subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.Synapse/workspaces/exampleWorkspaceName/integrationruntimes/exampleIntegrationRuntime 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

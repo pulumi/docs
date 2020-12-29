@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.servicefabric.ManagedCluster res
 
 The manged cluster resource
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -5509,6 +5508,16 @@ The check is performed after every upgrade domain upgrade completion to make sur
     <dd>{{% md %}}Sku Name. Basic will have a minimum of 3 seed nodes and Standard a minimum of 5. Basic only allows 1 node type.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:servicefabric/v20200101preview:ManagedCluster myCluster /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/managedClusters/myCluster 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

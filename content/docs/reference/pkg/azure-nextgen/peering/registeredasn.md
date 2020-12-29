@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.peering.RegisteredAsn resource w
 The customer's ASN that is registered by the peering service provider.
 Latest API Version: 2020-10-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -667,6 +666,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:peering/latest:RegisteredAsn registeredAsnName /subscriptions/subId/resourceGroups/rgName/providers/Microsoft.Peering/peerings/peeringName/registeredAsns/registeredAsnName 
+```
 
 
 

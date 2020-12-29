@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.hybridcompute.PrivateLinkScope r
 
 An Azure Arc PrivateLinkScope definition.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1276,6 +1275,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Disabled{{% md %}}Does not allow Azure Arc agents to communicate with Azure Arc services over public (internet) endpoints. The agents must use the private link.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:hybridcompute/v20200815preview:PrivateLinkScope my-privatelinkscope /subscriptions/86dc51d3-92ed-4d7e-947a-775ea79b4919/resourceGroups/my-resource-group/providers/microsoft.hybridCompute/privateLinkScopes/my-privatelinkscope 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

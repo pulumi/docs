@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.sql.ServerAzureADOnlyAuthenticat
 
 Azure Active Directory only authentication.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -594,6 +593,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:sql/v20200801preview:ServerAzureADOnlyAuthentication Default /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/sqlcrudtest-4799/providers/Microsoft.Sql/servers/sqlcrudtest-6440/azureadonlyauthentications/default 
+```
 
 
 

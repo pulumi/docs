@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.media.LiveOutput resource with e
 The Live Output.
 Latest API Version: 2020-05-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1114,6 +1113,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The number of fragments in an HTTP Live Streaming (HLS) TS segment in the output of the live event. This value does not affect the packing ratio for HLS CMAF output.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:media/latest:LiveOutput myLiveOutput1 /subscriptions/0a6ec948-5a62-437d-b9df-934dc7c1b722/resourceGroups/mediaresources/providers/Microsoft.Media/mediaservices/slitestmedia10/liveevents/myLiveEvent1/liveoutputs/myLiveOutput1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

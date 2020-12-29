@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.storage.PrivateEndpointConnectio
 The Private Endpoint Connection resource.
 Latest API Version: 2019-06-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1062,6 +1061,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:storage/latest:PrivateEndpointConnection {privateEndpointConnectionName} /subscriptions/{subscription-id}/resourceGroups/res7231/providers/Microsoft.Storage/storageAccounts/sto288/privateEndpointConnections/{privateEndpointConnectionName} 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

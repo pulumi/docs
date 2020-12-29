@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.keyvault.ManagedHsm resource wit
 
 Resource information with extended details.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1630,6 +1629,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}SKU of the managed HSM Pool{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:keyvault/v20200401preview:ManagedHsm hsm1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/hsm-group/providers/Microsoft.KeyVault/managedHSMs/hsm1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

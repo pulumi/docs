@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.datamigration.File resource with
 
 A file resource
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1025,6 +1024,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}File content type. This property can be modified to reflect the file content type.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:datamigration/v20180715preview:File x114d023d8 /subscriptions/fc04246f-04c5-437e-ac5e-206a19e7193f/resourceGroups/DmsSdkRg/providers/Microsoft.DataMigration/services/DmsSdkService/projects/DmsSdkProject/files/x114d023d8 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

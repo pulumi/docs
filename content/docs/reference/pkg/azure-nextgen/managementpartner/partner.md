@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.managementpartner.Partner resour
 this is the management partner operations response
 Latest API Version: 2018-02-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -724,6 +723,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:managementpartner/latest:Partner 123456 /providers/microsoft.managementpartner/partners/123456 
+```
 
 
 

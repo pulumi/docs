@@ -32,6 +32,7 @@ Explore the resources and functions of the securityinsights module in the Azure 
     <li><a href="getbookmarkrelation" title="GetBookmarkRelation"><span class="symbol function"></span>GetBookmarkRelation</a></li>
     <li><a href="getdataconnector" title="GetDataConnector"><span class="symbol function"></span>GetDataConnector</a></li>
     <li><a href="getentitiesgettimeline" title="GetEntitiesGetTimeline"><span class="symbol function"></span>GetEntitiesGetTimeline</a></li>
+    <li><a href="getentityinsights" title="GetEntityInsights"><span class="symbol function"></span>GetEntityInsights</a></li>
     <li><a href="getincident" title="GetIncident"><span class="symbol function"></span>GetIncident</a></li>
     <li><a href="getincidentcomment" title="GetIncidentComment"><span class="symbol function"></span>GetIncidentComment</a></li>
     <li><a href="getincidentrelation" title="GetIncidentRelation"><span class="symbol function"></span>GetIncidentRelation</a></li>

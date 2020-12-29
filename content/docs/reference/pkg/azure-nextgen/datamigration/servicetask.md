@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.datamigration.ServiceTask resour
 
 A task resource
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -50236,6 +50235,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Errors associated with a selected database object{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:datamigration/v20180715preview:ServiceTask DmsSdkTask /subscriptions/fc04246f-04c5-437e-ac5e-206a19e7193f/resourceGroups/DmsSdkRg/providers/Microsoft.DataMigration/services/DmsSdkService/serviceTasks/DmsSdkTask 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

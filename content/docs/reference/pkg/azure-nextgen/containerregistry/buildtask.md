@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.containerregistry.BuildTask reso
 
 The build task that has the resource properties and all build items. The build task will have all information to schedule a build against it.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2068,6 +2067,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>OAuth</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:containerregistry/v20180201preview:BuildTask myBuildTask /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/buildTasks/myBuildTask 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

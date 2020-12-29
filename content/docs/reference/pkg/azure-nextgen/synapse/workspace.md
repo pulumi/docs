@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.synapse.Workspace resource with 
 
 A workspace
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3958,6 +3957,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Type of workspace repositoryID configuration. Example WorkspaceVSTSConfiguration, WorkspaceGitHubConfiguration{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:synapse/v20190601preview:Workspace MyName <Azure resource ID> 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

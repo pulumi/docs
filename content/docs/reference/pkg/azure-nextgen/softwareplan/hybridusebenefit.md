@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.softwareplan.HybridUseBenefit re
 Response on GET of a hybrid use benefit
 Latest API Version: 2019-12-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -838,6 +837,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Name of the SKU to be applied{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:softwareplan/latest:HybridUseBenefit SQL_{hostGroupName}_{hostName} /subscriptions/{sub-id}/resourceGroups/{rg-name}/providers/Microsoft.Compute/HostGroups/{host-group-name}/hosts/{host-name}/providers/Microsoft.SoftwarePlan/hybridUseBenefits/SQL_{hostGroupName}_{hostName} 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

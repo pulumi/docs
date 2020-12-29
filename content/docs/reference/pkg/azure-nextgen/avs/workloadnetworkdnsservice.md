@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.avs.WorkloadNetworkDnsService re
 
 NSX DNS Service
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -939,6 +938,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>FATAL</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:avs/v20200717preview:WorkloadNetworkDnsService dnsService1 /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/workloadNetworks/default/dnsServices/dnsService1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

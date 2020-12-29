@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.automation.ConnectionType resour
 Definition of the connection type.
 Latest API Version: 2015-10-31.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1089,6 +1088,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Gets or sets the isOptional flag of the connection field definition.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:automation/latest:ConnectionType myCT /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/myAutomationAccount22/connectionTypes/myCT 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

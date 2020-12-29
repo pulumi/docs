@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.network.Endpoint resource with e
 Class representing a Traffic Manager endpoint.
 Latest API Version: 2018-04-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2045,6 +2044,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Disabled</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:network/latest:Endpoint My external endpoint /subscriptions/{subscription-id}/resourceGroups/azuresdkfornetautoresttrafficmanager2191/providers/Microsoft.Network/trafficManagerProfiles/azuresdkfornetautoresttrafficmanager8224/externalEndpoints/My external endpoint 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

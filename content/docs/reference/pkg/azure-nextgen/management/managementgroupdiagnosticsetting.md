@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.management.ManagementGroupDiagno
 
 The management group diagnostic setting resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -991,6 +990,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}a value indicating whether this log is enabled.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:management/v20200101preview:ManagementGroupDiagnosticSetting setting1 providers/Microsoft.Management/managementGroups/testChildMG7/providers/microsoft.insights/diagnosticSettings/setting1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

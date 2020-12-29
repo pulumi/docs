@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.servicebus.MigrationConfig resou
 Single item in List or Get Migration Config operation
 Latest API Version: 2017-04-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -745,6 +744,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:servicebus/latest:MigrationConfig sdk-Namespace-41 /subscriptions/SubscriptionId/resourceGroups/ResourceGroup/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-41/migrationConfigs/$default 
+```
 
 
 

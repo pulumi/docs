@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.security.IotSensor resource with
 
 IoT sensor model
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -882,6 +881,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:security/v20200806preview:IotSensor mySensor /subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg/providers/Microsoft.Devices/IotHubs/myHub/providers/Microsoft.Security/iotSensors/mySensor 
+```
 
 
 

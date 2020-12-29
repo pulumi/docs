@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.streamanalytics.StreamingJob res
 A streaming job object, containing all information associated with the named streaming job.
 Latest API Version: 2016-03-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -12473,6 +12472,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies the number of streaming units that the streaming job uses.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:streamanalytics/latest:StreamingJob sj59 /subscriptions/56b5e0a9-b645-407d-99b0-c64f86013e3d/resourceGroups/sjrg6936/providers/Microsoft.StreamAnalytics/streamingjobs/sj59 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.network.FirewallPolicyRuleGroup 
 Rule Group resource.
 Latest API Version: 2020-04-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -4154,6 +4153,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}List of source IpGroups for this rule.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:network/latest:FirewallPolicyRuleGroup ruleGroup1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/firewallPolicies/firewallPolicy/ruleGroups/ruleGroup1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.delegatednetwork.DelegatedSubnet
 
 Represents an instance of a orchestrator.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1014,6 +1013,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}subnet arm resource id{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:delegatednetwork/v20200808preview:DelegatedSubnetServiceDetails delegated1 /subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.DelegatedNetwork/delegatedSubnets/delegated1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

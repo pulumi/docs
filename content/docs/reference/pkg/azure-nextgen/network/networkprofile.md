@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.network.NetworkProfile resource 
 Network profile resource.
 Latest API Version: 2020-07-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -61,44 +60,7 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-
-```go
-package main
-
-import (
-	network "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/network/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := network.NewNetworkProfile(ctx, "networkProfile", &network.NetworkProfileArgs{
-			ContainerNetworkInterfaceConfigurations: network.ContainerNetworkInterfaceConfigurationArray{
-				&network.ContainerNetworkInterfaceConfigurationArgs{
-					IpConfigurations: network.IPConfigurationProfileArray{
-						&network.IPConfigurationProfileArgs{
-							Name: pulumi.String("ipconfig1"),
-							Subnet: &network.SubnetArgs{
-								Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/networkProfileVnet/subnets/networkProfileSubnet1"),
-							},
-						},
-					},
-					Name: pulumi.String("eth1"),
-				},
-			},
-			Location:           pulumi.String("westus"),
-			NetworkProfileName: pulumi.String("networkProfile1"),
-			ResourceGroupName:  pulumi.String("rg1"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
@@ -17796,6 +17758,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:network/latest:NetworkProfile networkProfile1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/networkProfiles/networkProfile1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

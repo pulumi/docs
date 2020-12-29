@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.eventgrid.EventSubscription reso
 Event Subscription
 Latest API Version: 2020-06-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -6048,6 +6047,16 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
     <dd>{{% md %}}Preferred batch size in Kilobytes.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:eventgrid/latest:EventSubscription examplesubscription3 /subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/providers/Microsoft.EventGrid/eventSubscriptions/examplesubscription3 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.compute.GalleryApplication resou
 Specifies information about the gallery Application Definition that you want to create or update.
 Latest API Version: 2020-09-30.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -911,6 +910,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Linux</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:compute/latest:GalleryApplication myGalleryApplicationName /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/galleries/myGalleryName/applications/myGalleryApplicationName 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

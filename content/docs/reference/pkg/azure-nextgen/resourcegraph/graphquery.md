@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.resourcegraph.GraphQuery resourc
 
 Graph Query entity definition.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1062,6 +1061,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:resourcegraph/v20200401preview:GraphQuery MyDockerVMs  /subscriptions/024e2271-06fa-46b6-9079-f1ed3c7b070e/resources/my-resource-group/providers/Microsoft.ResourceGraph/queries/MyDockerVMs 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

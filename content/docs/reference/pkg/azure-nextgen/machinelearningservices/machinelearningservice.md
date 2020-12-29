@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.machinelearningservices.MachineL
 
 Machine Learning service object wrapped into ARM resource envelope.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -9587,6 +9586,16 @@ The path specified gets used to call the user script.{{% /md %}}</dd>
     <dd>{{% md %}}The tenant ID of the user assigned identity.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:machinelearningservices/v20200901preview:MachineLearningService service456 subscriptions/34adfa4f-cedf-4dc0-ba29-b6d1a69ab345/resourceGroups/testrg123/providers/Microsoft.MachineLearningServices/workspaces/workspaces123/services/service456 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

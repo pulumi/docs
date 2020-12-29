@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.servicefabric.ApplicationType re
 The application type name resource
 Latest API Version: 2020-03-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -699,6 +698,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:servicefabric/latest:ApplicationType myCluster /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resRg/providers/Microsoft.ServiceFabric/clusters/myCluster/applicationTypes/myAppType 
+```
 
 
 

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.logic.Workflow resource with exa
 The workflow type.
 Latest API Version: 2019-05-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3661,6 +3660,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Suspended</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:logic/latest:Workflow MyName <Azure resource ID> 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.databricks.Workspace resource wi
 Information about workspace.
 Latest API Version: 2018-04-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3684,6 +3683,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The provider's role definition identifier. This role will define all the permissions that the provider must have on the workspace's container resource group. This role definition cannot have permission to delete the resource group.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:databricks/latest:Workspace myWorkspace /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Databricks/workspaces/myWorkspace 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.relay.PrivateEndpointConnection 
 
 Private endpoint connection resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1220,6 +1219,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Indicates whether the connection has been approved, rejected or removed by the Relay Namespace owner.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:relay/v20180101preview:PrivateEndpointConnection {privateEndpointConnection name} /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/alitest/providers/Microsoft.Relay/namespaces/relay-private-endpoint-test/privateEndpointConnections/{privateEndpointConnection name} 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

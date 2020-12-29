@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.management.Blueprint resource wi
 
 Represents a Blueprint definition.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2067,6 +2066,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>secureString</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:management/v20171111preview:Blueprint simpleBlueprint /providers/Microsoft.Management/managementGroups/ContosoOnlineGroup/providers/Microsoft.Blueprint/blueprints/simpleBlueprint 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

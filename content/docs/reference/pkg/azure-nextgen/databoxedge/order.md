@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.databoxedge.Order resource with 
 The order details.
 Latest API Version: 2019-08-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2312,6 +2311,16 @@ by the already existing properties{{% /md %}}</dd>
     <dd>{{% md %}}Tracking URL of the shipment.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:databoxedge/latest:Order default /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/orders/default 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

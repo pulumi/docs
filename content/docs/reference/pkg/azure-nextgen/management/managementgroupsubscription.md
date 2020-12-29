@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.management.ManagementGroupSubscr
 The details of subscription under management group.
 Latest API Version: 2020-05-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -684,6 +683,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The fully qualified ID for the parent management group.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:management/latest:ManagementGroupSubscription 728bcbe4-8d56-4510-86c2-4921b8beefbc  /providers/Microsoft.Management/managementGroups/Group/subscriptions/728bcbe4-8d56-4510-86c2-4921b8beefbc 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

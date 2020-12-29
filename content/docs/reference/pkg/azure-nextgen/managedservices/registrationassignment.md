@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.managedservices.RegistrationAssi
 Registration assignment.
 Latest API Version: 2019-09-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1626,6 +1625,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Properties of registration definition inside registration assignment.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:managedservices/latest:RegistrationAssignment 484a7d5f-9729-4b87-bc9b-26610985a013 /subscriptions/0afefe50-734e-4610-8c82-a144aff49dea/providers/Microsoft.ManagedServices/registrationAssignments/484a7d5f-9729-4b87-bc9b-26610985a013 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

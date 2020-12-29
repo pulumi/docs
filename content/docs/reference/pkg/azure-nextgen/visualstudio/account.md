@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.visualstudio.Account resource wi
 
 The response to an account resource GET request.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -774,6 +773,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>link</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:visualstudio/v20171101preview:Account VS-Example-Group /subscriptions/0de7f055-dbea-498d-8e9e-da287eedca90/resourceGroups/VS-Example-Group/providers/Microsoft.VisualStudio/account/Example 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

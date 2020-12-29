@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.Backend resource w
 Backend details.
 Latest API Version: 2019-12-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2939,6 +2938,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Common Name of the Certificate.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:apimanagement/latest:Backend sfbackend /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/backends/sfbackend 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

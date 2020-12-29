@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.network.TrafficManagerUserMetric
 Class representing Traffic Manager User Metrics.
 Latest API Version: 2018-04-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -469,6 +468,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:network/latest:TrafficManagerUserMetricsKey default /providers/Microsoft.Network/trafficManagerUserMetricsKeys/default 
+```
 
 
 

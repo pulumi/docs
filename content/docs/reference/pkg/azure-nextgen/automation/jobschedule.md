@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.automation.JobSchedule resource 
 Definition of the job schedule.
 Latest API Version: 2015-10-31.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -996,6 +995,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Gets or sets the name of the Schedule.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:automation/latest:JobSchedule MyName /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/ContoseAutomationAccount/jobSchedules/0fa462ba-3aa2-4138-83ca-9ebc3bc55cdc 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

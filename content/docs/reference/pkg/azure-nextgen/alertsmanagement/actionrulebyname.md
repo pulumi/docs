@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.alertsmanagement.ActionRuleByNam
 
 Action rule object containing target scope, conditions and suppression logic
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -4109,6 +4108,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Monthly</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:alertsmanagement/v20190505preview:ActionRuleByName DailySuppression /subscriptions/1e3ff1c0-771a-4119-a03b-be82a51e232d/resourceGroups/alertscorrelationrg/providers/Microsoft.AlertsManagement/actionRules/DailySuppression 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

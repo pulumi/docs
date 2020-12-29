@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.network.VirtualHub resource with
 VirtualHub Resource.
 Latest API Version: 2020-07-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2547,6 +2546,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}NextHops ip address.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:network/latest:VirtualHub virtualHub2 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub2 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

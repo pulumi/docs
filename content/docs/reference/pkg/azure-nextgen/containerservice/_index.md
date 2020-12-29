@@ -13,6 +13,7 @@ Explore the resources and functions of the containerservice module in the Azure 
 <ul class="api">
     <li><a href="agentpool" title="AgentPool"><span class="symbol resource"></span>AgentPool</a></li>
     <li><a href="containerservice" title="ContainerService"><span class="symbol resource"></span>ContainerService</a></li>
+    <li><a href="maintenanceconfiguration" title="MaintenanceConfiguration"><span class="symbol resource"></span>MaintenanceConfiguration</a></li>
     <li><a href="managedcluster" title="ManagedCluster"><span class="symbol resource"></span>ManagedCluster</a></li>
     <li><a href="openshiftmanagedcluster" title="OpenShiftManagedCluster"><span class="symbol resource"></span>OpenShiftManagedCluster</a></li>
     <li><a href="privateendpointconnection" title="PrivateEndpointConnection"><span class="symbol resource"></span>PrivateEndpointConnection</a></li>
@@ -22,6 +23,7 @@ Explore the resources and functions of the containerservice module in the Azure 
 <ul class="api">
     <li><a href="getagentpool" title="GetAgentPool"><span class="symbol function"></span>GetAgentPool</a></li>
     <li><a href="getcontainerservice" title="GetContainerService"><span class="symbol function"></span>GetContainerService</a></li>
+    <li><a href="getmaintenanceconfiguration" title="GetMaintenanceConfiguration"><span class="symbol function"></span>GetMaintenanceConfiguration</a></li>
     <li><a href="getmanagedcluster" title="GetManagedCluster"><span class="symbol function"></span>GetManagedCluster</a></li>
     <li><a href="getopenshiftmanagedcluster" title="GetOpenShiftManagedCluster"><span class="symbol function"></span>GetOpenShiftManagedCluster</a></li>
     <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>

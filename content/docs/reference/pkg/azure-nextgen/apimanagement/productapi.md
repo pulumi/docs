@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.ProductApi resourc
 Api details.
 Latest API Version: 2019-12-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1883,6 +1882,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Subscription key query string parameter name.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:apimanagement/latest:ProductApi 5931a75ae4bbd512a88c680b /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/5931a75ae4bbd512a88c680b 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

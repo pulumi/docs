@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.addons.SupportPlanType resource 
 The status of the Canonical support plan.
 Latest API Version: 2018-03-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -551,6 +550,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:addons/latest:SupportPlanType Standard subscriptions/d18d258f-bdba-4de1-8b51-e79d6c181d5e/providers/Microsoft.Addons/supportProviders/canonical/supportPlanTypes/Standard 
+```
 
 
 

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.recoveryservices.ProtectionPolic
 Base class for backup policy. Workload-specific backup policies are derived from this class.
 Latest API Version: 2020-10-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -7989,6 +7988,16 @@ will be deprecated once clients upgrade to consider this flag.{{% /md %}}</dd>
     <dd>{{% md %}}Retention times of retention policy.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:recoveryservices/latest:ProtectionPolicy testPolicy1 /Subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/SwaggerTestRg/providers/Microsoft.RecoveryServices/vaults/NetSDKTestRsVault/backupPolicies/testPolicy1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

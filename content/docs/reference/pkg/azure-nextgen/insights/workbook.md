@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.insights.Workbook resource with 
 An Application Insights workbook definition.
 Latest API Version: 2020-10-20.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1394,6 +1393,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:insights/latest:Workbook e378d137-1243-4256-b5c4-ad2a937cae79 /subscriptions/00000000-0000-0000-0000-00000000/resourcegroups/MyGroup/providers/Microsoft.Insights/workbooks/72377f0c-b7e7-4044-a882-471bcbd9696e 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

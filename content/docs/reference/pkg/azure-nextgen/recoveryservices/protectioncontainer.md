@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.recoveryservices.ProtectionConta
 Base class for container with backup items. Containers with specific workloads are derived from this class.
 Latest API Version: 2020-10-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -8469,6 +8468,16 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
     <dd>SAPAseDatabase</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:recoveryservices/latest:ProtectionContainer VMAppContainer;Compute;testRG;testSQL /Subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/testRg/providers/Microsoft.RecoveryServices/vaults/testVault/backupFabrics/Azure/protectionContainers/VMAppContainer;Compute;testRG;testSQL 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

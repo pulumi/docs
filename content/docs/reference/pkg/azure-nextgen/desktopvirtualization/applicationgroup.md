@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.desktopvirtualization.Applicatio
 
 Represents a ApplicationGroup definition.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -847,6 +846,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Desktop</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:desktopvirtualization/v20201110preview:ApplicationGroup applicationGroup1 /subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/applicationGroups/applicationGroup1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

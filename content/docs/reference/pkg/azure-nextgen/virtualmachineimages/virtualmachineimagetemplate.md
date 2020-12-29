@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.virtualmachineimages.VirtualMach
 Image template is an ARM resource managed by Microsoft.VirtualMachineImages provider
 Latest API Version: 2020-02-14.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -6353,6 +6352,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Resource id of a pre-existing subnet.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:virtualmachineimages/latest:VirtualMachineImageTemplate myImageTemplate /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.VirtualMachineImages/imageTemplates/myImageTemplate 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

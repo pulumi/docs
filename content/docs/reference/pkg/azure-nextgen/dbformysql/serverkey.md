@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.dbformysql.ServerKey resource wi
 A MySQL Server key.
 Latest API Version: 2020-01-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -743,6 +742,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>AzureKeyVault</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:dbformysql/latest:ServerKey omeVault_someKey_01234567890123456789012345678901 /subscriptions/ffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/testrg/providers/Microsoft.DBforMySQL/servers/testserver/keys/someVault_someKey_01234567890123456789012345678901 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

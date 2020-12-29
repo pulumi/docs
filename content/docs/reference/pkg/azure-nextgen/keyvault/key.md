@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.keyvault.Key resource with examp
 The key resource.
 Latest API Version: 2019-09-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1702,6 +1701,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The type of the key. For valid values, see JsonWebKeyType.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:keyvault/latest:Key sample-key-name /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/sample-group/providers/Microsoft.KeyVault/vaults/sample-vault-name/keys/sample-key-name 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

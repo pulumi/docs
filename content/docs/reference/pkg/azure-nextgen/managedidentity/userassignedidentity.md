@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.managedidentity.UserAssignedIden
 Describes an identity resource.
 Latest API Version: 2018-11-30.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -716,6 +715,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:managedidentity/latest:UserAssignedIdentity identityName /subscriptions/subid/resourcegroups/rgName/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identityName 
+```
 
 
 

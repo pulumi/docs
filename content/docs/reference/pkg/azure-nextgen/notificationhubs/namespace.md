@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.notificationhubs.Namespace resou
 Description of a Namespace resource.
 Latest API Version: 2017-04-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1631,6 +1630,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The tier of particular sku{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:notificationhubs/latest:Namespace sdk-Namespace-2924 /subscriptions/29cfa613-cbbc-4512-b1d6-1b3a92c7fa40/resourceGroups/ArunMonocle/providers/Microsoft.NotificationHubs/namespaces/sdk-Namespace-2924 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

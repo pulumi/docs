@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.kubernetesconfiguration.SourceCo
 
 The SourceControl Configuration object returned in Get & Put response.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1882,6 +1881,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The type of identity that last modified the resource: user, application, managedIdentity, key{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:kubernetesconfiguration/v20201001preview:SourceControlConfiguration SRS_GitHubConfig /subscriptions/subId1/resourceGroups/rg1/providers/Microsoft.Kubernetes/connectedClusters/clusterName1/providers/Microsoft.KubernetesConfiguration/sourceControlConfigurations/SRS_GitHubConfig 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

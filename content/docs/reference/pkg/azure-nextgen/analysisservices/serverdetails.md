@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.analysisservices.ServerDetails r
 Represents an instance of an Analysis Services resource.
 Latest API Version: 2017-08-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2117,6 +2116,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Standard</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:analysisservices/latest:ServerDetails azsdktest /subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.AnalysisServices/servers/azsdktest 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

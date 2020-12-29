@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.consumption.Budget resource with
 A budget resource.
 Latest API Version: 2019-10-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2724,6 +2723,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Annually</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:consumption/latest:Budget TestBudget subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Consumption/budgets/TestBudget 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

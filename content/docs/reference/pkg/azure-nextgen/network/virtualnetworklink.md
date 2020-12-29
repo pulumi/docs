@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.network.VirtualNetworkLink resou
 Describes a link to virtual network for a Private DNS zone.
 Latest API Version: 2020-06-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -971,6 +970,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:network/latest:VirtualNetworkLink virtualNetworkLink1 /subscriptions/subscriptionId/resourceGroups/resourceGroup1/providers/Microsoft.Network/privateDnsZones/privatezone1.com/virtualNetworkLinks/virtualNetworkLink1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

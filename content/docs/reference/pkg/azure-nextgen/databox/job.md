@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.databox.Job resource with exampl
 Job Resource.
 Latest API Version: 2020-11-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -12580,6 +12579,16 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dd>{{% md %}}Arm resource id for user assigned identity to be used to fetch MSI token.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:databox/latest:Job SdkJob5337 /subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/SdkRg7552/providers/Microsoft.DataBox/jobs/SdkJob5337 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

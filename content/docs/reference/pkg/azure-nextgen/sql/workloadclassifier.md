@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.sql.WorkloadClassifier resource 
 
 Workload classifier operations for a data warehouse
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -969,6 +968,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:sql/v20200801preview:WorkloadClassifier wlm_workloadclassifier /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/Default-SQL-SouthEastAsia/providers/Microsoft.Sql/servers/testsvr/databases/testdb/workloadGroups/wlm_workloadgroup/workloadClassifiers/wlm_workloadclassifier 
+```
 
 
 

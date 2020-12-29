@@ -296,7 +296,7 @@ The following output properties are available:
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">object</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
     <dt class="property-"
@@ -419,7 +419,7 @@ The following output properties are available:
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
     <dt class="property-"
@@ -542,7 +542,7 @@ The following output properties are available:
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">any</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
     <dt class="property-"
@@ -665,7 +665,7 @@ The following output properties are available:
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
+        <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
     <dt class="property-"
