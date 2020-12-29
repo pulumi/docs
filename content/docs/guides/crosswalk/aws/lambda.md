@@ -306,7 +306,7 @@ so updates are always based only on what's changed.
 For example, maybe we've defined our callback function in `./app`:
 
 ```typescript
-import * as aws from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
 export async function handleDocument(e: aws.s3.BucketEvent): Promise<void> {
    // your lambda code goes here
 }
