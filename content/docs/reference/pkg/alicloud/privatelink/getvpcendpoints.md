@@ -1098,7 +1098,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The terminal node service associated with the terminal node..
+    <dd>{{% md %}}The terminal node service associated with the terminal node.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1244,7 +1244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The terminal node service associated with the terminal node..
+    <dd>{{% md %}}The terminal node service associated with the terminal node.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1390,7 +1390,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The terminal node service associated with the terminal node..
+    <dd>{{% md %}}The terminal node service associated with the terminal node.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1536,7 +1536,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The terminal node service associated with the terminal node..
+    <dd>{{% md %}}The terminal node service associated with the terminal node.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">

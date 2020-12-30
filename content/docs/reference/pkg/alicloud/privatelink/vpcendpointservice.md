@@ -34,14 +34,6 @@ class MyStack : Stack
         {
             AutoAcceptConnection = false,
             ConnectBandwidth = 103,
-            Resources = 
-            {
-                new AliCloud.PrivateLink.Inputs.VpcEndpointServiceResourceArgs
-                {
-                    ResourceId = "lb-gw8nxxxxxxx",
-                    ResourceType = "slb",
-                },
-            },
             ServiceDescription = "tftest",
         });
     }
@@ -65,13 +57,7 @@ func main() {
 		_, err := privatelink.NewVpcEndpointService(ctx, "example", &privatelink.VpcEndpointServiceArgs{
 			AutoAcceptConnection: pulumi.Bool(false),
 			ConnectBandwidth:     pulumi.Int(103),
-			Resources: privatelink.VpcEndpointServiceResourceArray{
-				&privatelink.VpcEndpointServiceResourceArgs{
-					ResourceId:   pulumi.String("lb-gw8nxxxxxxx"),
-					ResourceType: pulumi.String("slb"),
-				},
-			},
-			ServiceDescription: pulumi.String("tftest"),
+			ServiceDescription:   pulumi.String("tftest"),
 		})
 		if err != nil {
 			return err
@@ -91,10 +77,6 @@ import pulumi_alicloud as alicloud
 example = alicloud.privatelink.VpcEndpointService("example",
     auto_accept_connection=False,
     connect_bandwidth=103,
-    resources=[alicloud.privatelink.VpcEndpointServiceResourceArgs(
-        resource_id="lb-gw8nxxxxxxx",
-        resource_type="slb",
-    )],
     service_description="tftest")
 ```
 
@@ -109,10 +91,6 @@ import * as alicloud from "@pulumi/alicloud";
 const example = new alicloud.privatelink.VpcEndpointService("example", {
     autoAcceptConnection: false,
     connectBandwidth: 103,
-    resources: [{
-        resourceId: "lb-gw8nxxxxxxx",
-        resourceType: "slb",
-    }],
     serviceDescription: "tftest",
 });
 ```
@@ -131,7 +109,7 @@ const example = new alicloud.privatelink.VpcEndpointService("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/privatelink/#pulumi_alicloud.privatelink.VpcEndpointService">VpcEndpointService</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_accept_connection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">connect_bandwidth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">dry_run</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">payer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resources</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpcEndpointServiceResourceArgs]]</span> = None<span class="p">, </span><span class="nx">service_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/privatelink/#pulumi_alicloud.privatelink.VpcEndpointService">VpcEndpointService</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_accept_connection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">connect_bandwidth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">dry_run</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">payer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -344,16 +322,6 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="resources_csharp">
-<a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcendpointserviceresource">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Private<wbr>Link.<wbr>Inputs.<wbr>Vpc<wbr>Endpoint<wbr>Service<wbr>Resource<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Service resources added to the endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="servicedescription_csharp">
 <a href="#servicedescription_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Description</a>
 </span>
@@ -407,16 +375,6 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The payer type. Valid Value: `EndpointService`, `Endpoint`. Default to: `Endpoint`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resources_go">
-<a href="#resources_go" style="color: inherit; text-decoration: inherit;">Resources</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcendpointserviceresource">[]Vpc<wbr>Endpoint<wbr>Service<wbr>Resource</a></span>
-    </dt>
-    <dd>{{% md %}}Service resources added to the endpoint service.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -476,16 +434,6 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="resources_nodejs">
-<a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcendpointserviceresource">Vpc<wbr>Endpoint<wbr>Service<wbr>Resource[]</a></span>
-    </dt>
-    <dd>{{% md %}}Service resources added to the endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="servicedescription_nodejs">
 <a href="#servicedescription_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Description</a>
 </span>
@@ -539,16 +487,6 @@ The VpcEndpointService resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The payer type. Valid Value: `EndpointService`, `Endpoint`. Default to: `Endpoint`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resources_python">
-<a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcendpointserviceresource">Sequence[Vpc<wbr>Endpoint<wbr>Service<wbr>Resource<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}Service resources added to the endpoint service.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -763,7 +701,7 @@ Get an existing VpcEndpointService resource's state with the given name, ID, and
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_accept_connection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">connect_bandwidth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">dry_run</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">payer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resources</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpcEndpointServiceResourceArgs]]</span> = None<span class="p">, </span><span class="nx">service_business_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> VpcEndpointService</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_accept_connection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">connect_bandwidth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">dry_run</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">payer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_business_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> VpcEndpointService</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -918,16 +856,6 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="state_resources_csharp">
-<a href="#state_resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcendpointserviceresource">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Private<wbr>Link.<wbr>Inputs.<wbr>Vpc<wbr>Endpoint<wbr>Service<wbr>Resource<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Service resources added to the endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_servicebusinessstatus_csharp">
 <a href="#state_servicebusinessstatus_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Business<wbr>Status</a>
 </span>
@@ -1011,16 +939,6 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The payer type. Valid Value: `EndpointService`, `Endpoint`. Default to: `Endpoint`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_resources_go">
-<a href="#state_resources_go" style="color: inherit; text-decoration: inherit;">Resources</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcendpointserviceresource">[]Vpc<wbr>Endpoint<wbr>Service<wbr>Resource</a></span>
-    </dt>
-    <dd>{{% md %}}Service resources added to the endpoint service.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1110,16 +1028,6 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="state_resources_nodejs">
-<a href="#state_resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcendpointserviceresource">Vpc<wbr>Endpoint<wbr>Service<wbr>Resource[]</a></span>
-    </dt>
-    <dd>{{% md %}}Service resources added to the endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_servicebusinessstatus_nodejs">
 <a href="#state_servicebusinessstatus_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Business<wbr>Status</a>
 </span>
@@ -1206,16 +1114,6 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="state_resources_python">
-<a href="#state_resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcendpointserviceresource">Sequence[Vpc<wbr>Endpoint<wbr>Service<wbr>Resource<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}Service resources added to the endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="state_service_business_status_python">
 <a href="#state_service_business_status_python" style="color: inherit; text-decoration: inherit;">service_<wbr>business_<wbr>status</a>
 </span>
@@ -1261,128 +1159,6 @@ The following state arguments are supported:
 
 
 
-
-## Supporting Types
-
-
-
-<h4 id="vpcendpointserviceresource">Vpc<wbr>Endpoint<wbr>Service<wbr>Resource</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#VpcEndpointServiceResource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#VpcEndpointServiceResource">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/privatelink?tab=doc#VpcEndpointServiceResourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/privatelink?tab=doc#VpcEndpointServiceResourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.PrivateLink.Inputs.VpcEndpointServiceResourceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.PrivateLink.Outputs.VpcEndpointServiceResource.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resourceid_csharp">
-<a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of service resources added to the endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resourcetype_csharp">
-<a href="#resourcetype_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of service resource added to the endpoint service.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resourceid_go">
-<a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of service resources added to the endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resourcetype_go">
-<a href="#resourcetype_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of service resource added to the endpoint service.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resourceid_nodejs">
-<a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of service resources added to the endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resourcetype_nodejs">
-<a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of service resource added to the endpoint service.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resource_id_python">
-<a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The id of service resources added to the endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="resource_type_python">
-<a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of service resource added to the endpoint service.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
 ## Import
 
 
