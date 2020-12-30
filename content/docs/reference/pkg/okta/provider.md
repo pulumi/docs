@@ -27,7 +27,7 @@ construction to achieve fine-grained programmatic control over provider settings
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/#pulumi_okta.Provider">Provider</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backoff</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">base_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_level</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">max_retries</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">max_wait_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_wait_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">org_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parallelism</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/#pulumi_okta.Provider">Provider</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backoff</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">base_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_level</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">max_retries</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">max_wait_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_wait_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">org_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parallelism</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">request_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -289,6 +289,17 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Number of concurrent requests to make within a resource where bulk operations are not possible. Take note of
 https://developer.okta.com/docs/api/getting_started/rate-limits.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requesttimeout_csharp">
+<a href="#requesttimeout_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Timeout for single request (in seconds) which is made to Okta, the default is `0` (means no limit is set). The maximum
+value can be `100`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -385,6 +396,17 @@ https://developer.okta.com/docs/api/getting_started/rate-limits.
     </dt>
     <dd>{{% md %}}Number of concurrent requests to make within a resource where bulk operations are not possible. Take note of
 https://developer.okta.com/docs/api/getting_started/rate-limits.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requesttimeout_go">
+<a href="#requesttimeout_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Timeout for single request (in seconds) which is made to Okta, the default is `0` (means no limit is set). The maximum
+value can be `100`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -483,6 +505,17 @@ https://developer.okta.com/docs/api/getting_started/rate-limits.
     <dd>{{% md %}}Number of concurrent requests to make within a resource where bulk operations are not possible. Take note of
 https://developer.okta.com/docs/api/getting_started/rate-limits.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requesttimeout_nodejs">
+<a href="#requesttimeout_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Timeout for single request (in seconds) which is made to Okta, the default is `0` (means no limit is set). The maximum
+value can be `100`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -579,6 +612,17 @@ https://developer.okta.com/docs/api/getting_started/rate-limits.
     </dt>
     <dd>{{% md %}}Number of concurrent requests to make within a resource where bulk operations are not possible. Take note of
 https://developer.okta.com/docs/api/getting_started/rate-limits.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="request_timeout_python">
+<a href="#request_timeout_python" style="color: inherit; text-decoration: inherit;">request_<wbr>timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Timeout for single request (in seconds) which is made to Okta, the default is `0` (means no limit is set). The maximum
+value can be `100`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
