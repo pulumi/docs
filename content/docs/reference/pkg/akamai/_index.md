@@ -1,6 +1,6 @@
 ---
-title: "akamai"
-title_tag: "Package akamai"
+title: "Akamai"
+title_tag: "Package Akamai"
 meta_desc: "A Pulumi package for creating and managing akamai cloud resources."
 menu:
     reference:
@@ -21,13 +21,56 @@ A Pulumi package for creating and managing akamai cloud resources.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="appsecactivations" title="AppSecActivations"><span class="symbol resource"></span>AppSecActivations</a></li>
+    <li><a href="appsecconfigurationversionclone" title="AppSecConfigurationVersionClone"><span class="symbol resource"></span>AppSecConfigurationVersionClone</a></li>
+    <li><a href="appseccustomrule" title="AppSecCustomRule"><span class="symbol resource"></span>AppSecCustomRule</a></li>
+    <li><a href="appseccustomruleaction" title="AppSecCustomRuleAction"><span class="symbol resource"></span>AppSecCustomRuleAction</a></li>
+    <li><a href="appsecmatchtarget" title="AppSecMatchTarget"><span class="symbol resource"></span>AppSecMatchTarget</a></li>
+    <li><a href="appsecmatchtargetsequence" title="AppSecMatchTargetSequence"><span class="symbol resource"></span>AppSecMatchTargetSequence</a></li>
+    <li><a href="appsecsecuritypolicyclone" title="AppSecSecurityPolicyClone"><span class="symbol resource"></span>AppSecSecurityPolicyClone</a></li>
+    <li><a href="appsecselectedhostnames" title="AppSecSelectedHostnames"><span class="symbol resource"></span>AppSecSelectedHostnames</a></li>
+    <li><a href="cpcode" title="CpCode"><span class="symbol resource"></span>CpCode</a></li>
+    <li><a href="dnsrecord" title="DnsRecord"><span class="symbol resource"></span>DnsRecord</a></li>
+    <li><a href="dnszone" title="DnsZone"><span class="symbol resource"></span>DnsZone</a></li>
+    <li><a href="edgehostname" title="EdgeHostName"><span class="symbol resource"></span>EdgeHostName</a></li>
+    <li><a href="gtmasmap" title="GtmAsmap"><span class="symbol resource"></span>GtmAsmap</a></li>
+    <li><a href="gtmcidrmap" title="GtmCidrmap"><span class="symbol resource"></span>GtmCidrmap</a></li>
+    <li><a href="gtmdatacenter" title="GtmDatacenter"><span class="symbol resource"></span>GtmDatacenter</a></li>
+    <li><a href="gtmdomain" title="GtmDomain"><span class="symbol resource"></span>GtmDomain</a></li>
+    <li><a href="gtmgeomap" title="GtmGeomap"><span class="symbol resource"></span>GtmGeomap</a></li>
+    <li><a href="gtmproperty" title="GtmProperty"><span class="symbol resource"></span>GtmProperty</a></li>
+    <li><a href="gtmresource" title="GtmResource"><span class="symbol resource"></span>GtmResource</a></li>
+    <li><a href="property" title="Property"><span class="symbol resource"></span>Property</a></li>
+    <li><a href="propertyactivation" title="PropertyActivation"><span class="symbol resource"></span>PropertyActivation</a></li>
+    <li><a href="propertyvariables" title="PropertyVariables"><span class="symbol resource"></span>PropertyVariables</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getappsecconfiguration" title="GetAppSecConfiguration"><span class="symbol function"></span>GetAppSecConfiguration</a></li>
+    <li><a href="getappsecconfigurationversion" title="GetAppSecConfigurationVersion"><span class="symbol function"></span>GetAppSecConfigurationVersion</a></li>
+    <li><a href="getappseccustomruleactions" title="GetAppSecCustomRuleActions"><span class="symbol function"></span>GetAppSecCustomRuleActions</a></li>
+    <li><a href="getappseccustomrules" title="GetAppSecCustomRules"><span class="symbol function"></span>GetAppSecCustomRules</a></li>
+    <li><a href="getappsecexportconfiguration" title="GetAppSecExportConfiguration"><span class="symbol function"></span>GetAppSecExportConfiguration</a></li>
+    <li><a href="getappsecmatchtargets" title="GetAppSecMatchTargets"><span class="symbol function"></span>GetAppSecMatchTargets</a></li>
+    <li><a href="getappsecsecuritypolicy" title="GetAppSecSecurityPolicy"><span class="symbol function"></span>GetAppSecSecurityPolicy</a></li>
+    <li><a href="getappsecselectablehostnames" title="GetAppSecSelectableHostnames"><span class="symbol function"></span>GetAppSecSelectableHostnames</a></li>
+    <li><a href="getappsecselectedhostnames" title="GetAppSecSelectedHostnames"><span class="symbol function"></span>GetAppSecSelectedHostnames</a></li>
+    <li><a href="getauthoritiesset" title="GetAuthoritiesSet"><span class="symbol function"></span>GetAuthoritiesSet</a></li>
     <li><a href="getcontract" title="GetContract"><span class="symbol function"></span>GetContract</a></li>
+    <li><a href="getcontracts" title="GetContracts"><span class="symbol function"></span>GetContracts</a></li>
+    <li><a href="getcpcode" title="GetCpCode"><span class="symbol function"></span>GetCpCode</a></li>
+    <li><a href="getdnsrecordset" title="GetDnsRecordSet"><span class="symbol function"></span>GetDnsRecordSet</a></li>
     <li><a href="getgroup" title="GetGroup"><span class="symbol function"></span>GetGroup</a></li>
+    <li><a href="getgroups" title="GetGroups"><span class="symbol function"></span>GetGroups</a></li>
+    <li><a href="getgtmdefaultdatacenter" title="GetGtmDefaultDatacenter"><span class="symbol function"></span>GetGtmDefaultDatacenter</a></li>
+    <li><a href="getproperties" title="GetProperties"><span class="symbol function"></span>GetProperties</a></li>
+    <li><a href="getproperty" title="GetProperty"><span class="symbol function"></span>GetProperty</a></li>
+    <li><a href="getpropertyproducts" title="GetPropertyProducts"><span class="symbol function"></span>GetPropertyProducts</a></li>
+    <li><a href="getpropertyruleformats" title="GetPropertyRuleFormats"><span class="symbol function"></span>GetPropertyRuleFormats</a></li>
+    <li><a href="getpropertyrules" title="GetPropertyRules"><span class="symbol function"></span>GetPropertyRules</a></li>
+    <li><a href="getpropertyrulestemplate" title="GetPropertyRulesTemplate"><span class="symbol function"></span>GetPropertyRulesTemplate</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -37,9 +80,9 @@ A Pulumi package for creating and managing akamai cloud resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`akamai` Terraform Provider](https://github.com/terraform-providers/terraform-provider-akamai).</dd>
+	<dd>This Pulumi package is based on the [`akamai` Terraform Provider](https://github.com/akamai/terraform-provider-akamai).</dd>
 	<dt>Version</dt>
-	<dd>0.0.2</dd>
+	<dd>1.0.0</dd>
 </dl>
 
 

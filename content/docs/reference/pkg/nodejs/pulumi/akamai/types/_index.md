@@ -3,7 +3,7 @@ title: "Module types"
 title_tag: "Module types | Package @pulumi/akamai | Node.js SDK"
 linktitle: "types"
 meta_desc: "Explore members of the types module in the @pulumi/akamai package."
-git_sha: "fcfa49b3a4c333877d6dd8112b29ec315eb6440a"
+git_sha: "d905d77c417a09f1243fecb34ad59ca0aa7657e1"
 block_external_search_index: true
 ---
 
