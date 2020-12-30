@@ -22,6 +22,10 @@ aliases: [
 
 Before you get started using Pulumi, let's run through a few quick steps to ensure your environment is set up correctly.
 
+{{% notes "info" %}}
+All Windows examples assume you are running in PowerShell.
+{{% /notes %}}
+
 ### Install Pulumi
 
 {{< install-pulumi >}}
@@ -60,6 +64,10 @@ If you have previously <a href="https://docs.aws.amazon.com/cli/latest/userguide
 
 If you do not have the AWS CLI installed or plan on using Pulumi from within a CI/CD pipeline, <a href="https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys" target="_blank">retrieve your access key ID and secret access key</a> and then set the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment variables on your workstation.
 
+{{% notes "info" %}}
+If you are using [temporary security credentials](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_use-resources.html), you will also have to supply an `AWS_SESSION_TOKEN` value before you can use Pulumi to create resources on your behalf.
+{{% /notes %}}
+
 {{< chooser os "linux,macos,windows" >}}
 {{% choosable os linux %}}
 
@@ -81,9 +89,9 @@ $ export AWS_SECRET_ACCESS_KEY=<YOUR_SECRET_ACCESS_KEY>
 
 {{% choosable os windows %}}
 
-```bat
-> set AWS_ACCESS_KEY_ID=<YOUR_ACCESS_KEY_ID>
-> set AWS_SECRET_ACCESS_KEY=<YOUR_SECRET_ACCESS_KEY>
+```powershell
+> $env:AWS_ACCESS_KEY_ID = "<YOUR_ACCESS_KEY_ID>"
+> $env:AWS_SECRET_ACCESS_KEY = "<YOUR_SECRET_ACCESS_KEY>"
 ```
 
 {{% /choosable %}}
