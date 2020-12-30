@@ -3,7 +3,7 @@ title: "Module types/input"
 title_tag: "Module types/input | Package @pulumi/akamai | Node.js SDK"
 linktitle: "input"
 meta_desc: "Explore members of the input module in the @pulumi/akamai package."
-git_sha: "fcfa49b3a4c333877d6dd8112b29ec315eb6440a"
+git_sha: "d905d77c417a09f1243fecb34ad59ca0aa7657e1"
 block_external_search_index: true
 ---
 
@@ -20,55 +20,9 @@ block_external_search_index: true
 </ul>
 <h3>namespace <strong>properties</strong></h3>
 <ul class="api">
-<li><a href="#GetPropertyRulesRule"><span class="symbol api"></span>GetPropertyRulesRule</a></li>
-<li><a href="#GetPropertyRulesRuleBehavior"><span class="symbol api"></span>GetPropertyRulesRuleBehavior</a></li>
-<li><a href="#GetPropertyRulesRuleBehaviorOption"><span class="symbol api"></span>GetPropertyRulesRuleBehaviorOption</a></li>
-<li><a href="#GetPropertyRulesRuleRule"><span class="symbol api"></span>GetPropertyRulesRuleRule</a></li>
-<li><a href="#GetPropertyRulesRuleRuleBehavior"><span class="symbol api"></span>GetPropertyRulesRuleRuleBehavior</a></li>
-<li><a href="#GetPropertyRulesRuleRuleBehaviorOption"><span class="symbol api"></span>GetPropertyRulesRuleRuleBehaviorOption</a></li>
-<li><a href="#GetPropertyRulesRuleRuleCriteria"><span class="symbol api"></span>GetPropertyRulesRuleRuleCriteria</a></li>
-<li><a href="#GetPropertyRulesRuleRuleCriteriaOption"><span class="symbol api"></span>GetPropertyRulesRuleRuleCriteriaOption</a></li>
-<li><a href="#GetPropertyRulesRuleRuleRule"><span class="symbol api"></span>GetPropertyRulesRuleRuleRule</a></li>
-<li><a href="#GetPropertyRulesRuleRuleRuleBehavior"><span class="symbol api"></span>GetPropertyRulesRuleRuleRuleBehavior</a></li>
-<li><a href="#GetPropertyRulesRuleRuleRuleBehaviorOption"><span class="symbol api"></span>GetPropertyRulesRuleRuleRuleBehaviorOption</a></li>
-<li><a href="#GetPropertyRulesRuleRuleRuleCriteria"><span class="symbol api"></span>GetPropertyRulesRuleRuleRuleCriteria</a></li>
-<li><a href="#GetPropertyRulesRuleRuleRuleCriteriaOption"><span class="symbol api"></span>GetPropertyRulesRuleRuleRuleCriteriaOption</a></li>
-<li><a href="#GetPropertyRulesRuleRuleRuleRule"><span class="symbol api"></span>GetPropertyRulesRuleRuleRuleRule</a></li>
-<li><a href="#GetPropertyRulesRuleRuleRuleRuleBehavior"><span class="symbol api"></span>GetPropertyRulesRuleRuleRuleRuleBehavior</a></li>
-<li><a href="#GetPropertyRulesRuleRuleRuleRuleBehaviorOption"><span class="symbol api"></span>GetPropertyRulesRuleRuleRuleRuleBehaviorOption</a></li>
-<li><a href="#GetPropertyRulesRuleRuleRuleRuleCriteria"><span class="symbol api"></span>GetPropertyRulesRuleRuleRuleRuleCriteria</a></li>
-<li><a href="#GetPropertyRulesRuleRuleRuleRuleCriteriaOption"><span class="symbol api"></span>GetPropertyRulesRuleRuleRuleRuleCriteriaOption</a></li>
-<li><a href="#GetPropertyRulesRuleRuleRuleRuleRule"><span class="symbol api"></span>GetPropertyRulesRuleRuleRuleRuleRule</a></li>
-<li><a href="#GetPropertyRulesRuleRuleRuleRuleRuleBehavior"><span class="symbol api"></span>GetPropertyRulesRuleRuleRuleRuleRuleBehavior</a></li>
-<li><a href="#GetPropertyRulesRuleRuleRuleRuleRuleBehaviorOption"><span class="symbol api"></span>GetPropertyRulesRuleRuleRuleRuleRuleBehaviorOption</a></li>
-<li><a href="#GetPropertyRulesRuleRuleRuleRuleRuleCriteria"><span class="symbol api"></span>GetPropertyRulesRuleRuleRuleRuleRuleCriteria</a></li>
-<li><a href="#GetPropertyRulesRuleRuleRuleRuleRuleCriteriaOption"><span class="symbol api"></span>GetPropertyRulesRuleRuleRuleRuleRuleCriteriaOption</a></li>
-<li><a href="#GetPropertyRulesRuleVariable"><span class="symbol api"></span>GetPropertyRulesRuleVariable</a></li>
 <li><a href="#PropertyOrigin"><span class="symbol api"></span>PropertyOrigin</a></li>
-<li><a href="#PropertyRulesRule"><span class="symbol api"></span>PropertyRulesRule</a></li>
-<li><a href="#PropertyRulesRuleBehavior"><span class="symbol api"></span>PropertyRulesRuleBehavior</a></li>
-<li><a href="#PropertyRulesRuleBehaviorOption"><span class="symbol api"></span>PropertyRulesRuleBehaviorOption</a></li>
-<li><a href="#PropertyRulesRuleRule"><span class="symbol api"></span>PropertyRulesRuleRule</a></li>
-<li><a href="#PropertyRulesRuleRuleBehavior"><span class="symbol api"></span>PropertyRulesRuleRuleBehavior</a></li>
-<li><a href="#PropertyRulesRuleRuleBehaviorOption"><span class="symbol api"></span>PropertyRulesRuleRuleBehaviorOption</a></li>
-<li><a href="#PropertyRulesRuleRuleCriteria"><span class="symbol api"></span>PropertyRulesRuleRuleCriteria</a></li>
-<li><a href="#PropertyRulesRuleRuleCriteriaOption"><span class="symbol api"></span>PropertyRulesRuleRuleCriteriaOption</a></li>
-<li><a href="#PropertyRulesRuleRuleRule"><span class="symbol api"></span>PropertyRulesRuleRuleRule</a></li>
-<li><a href="#PropertyRulesRuleRuleRuleBehavior"><span class="symbol api"></span>PropertyRulesRuleRuleRuleBehavior</a></li>
-<li><a href="#PropertyRulesRuleRuleRuleBehaviorOption"><span class="symbol api"></span>PropertyRulesRuleRuleRuleBehaviorOption</a></li>
-<li><a href="#PropertyRulesRuleRuleRuleCriteria"><span class="symbol api"></span>PropertyRulesRuleRuleRuleCriteria</a></li>
-<li><a href="#PropertyRulesRuleRuleRuleCriteriaOption"><span class="symbol api"></span>PropertyRulesRuleRuleRuleCriteriaOption</a></li>
-<li><a href="#PropertyRulesRuleRuleRuleRule"><span class="symbol api"></span>PropertyRulesRuleRuleRuleRule</a></li>
-<li><a href="#PropertyRulesRuleRuleRuleRuleBehavior"><span class="symbol api"></span>PropertyRulesRuleRuleRuleRuleBehavior</a></li>
-<li><a href="#PropertyRulesRuleRuleRuleRuleBehaviorOption"><span class="symbol api"></span>PropertyRulesRuleRuleRuleRuleBehaviorOption</a></li>
-<li><a href="#PropertyRulesRuleRuleRuleRuleCriteria"><span class="symbol api"></span>PropertyRulesRuleRuleRuleRuleCriteria</a></li>
-<li><a href="#PropertyRulesRuleRuleRuleRuleCriteriaOption"><span class="symbol api"></span>PropertyRulesRuleRuleRuleRuleCriteriaOption</a></li>
-<li><a href="#PropertyRulesRuleRuleRuleRuleRule"><span class="symbol api"></span>PropertyRulesRuleRuleRuleRuleRule</a></li>
-<li><a href="#PropertyRulesRuleRuleRuleRuleRuleBehavior"><span class="symbol api"></span>PropertyRulesRuleRuleRuleRuleRuleBehavior</a></li>
-<li><a href="#PropertyRulesRuleRuleRuleRuleRuleBehaviorOption"><span class="symbol api"></span>PropertyRulesRuleRuleRuleRuleRuleBehaviorOption</a></li>
-<li><a href="#PropertyRulesRuleRuleRuleRuleRuleCriteria"><span class="symbol api"></span>PropertyRulesRuleRuleRuleRuleRuleCriteria</a></li>
-<li><a href="#PropertyRulesRuleRuleRuleRuleRuleCriteriaOption"><span class="symbol api"></span>PropertyRulesRuleRuleRuleRuleRuleCriteriaOption</a></li>
-<li><a href="#PropertyRulesRuleVariable"><span class="symbol api"></span>PropertyRulesRuleVariable</a></li>
+<li><a href="#PropertyRuleError"><span class="symbol api"></span>PropertyRuleError</a></li>
+<li><a href="#PropertyRuleWarning"><span class="symbol api"></span>PropertyRuleWarning</a></li>
 <li><a href="#PropertyVariablesVariable"><span class="symbol api"></span>PropertyVariablesVariable</a></li>
 <li><a href="#PropertyVariablesVariableVariable"><span class="symbol api"></span>PropertyVariablesVariableVariable</a></li>
 </ul>
@@ -92,26 +46,614 @@ block_external_search_index: true
 
 <h3>APIs</h3>
 <ul class="api">
-    <li><a href="#ProviderDn"><span class="symbol api"></span>ProviderDn</a></li>
+    <li><a href="#DnsZoneTsigKey"><span class="symbol api"></span>DnsZoneTsigKey</a></li>
+    <li><a href="#GetPropertyRulesTemplateVariable"><span class="symbol api"></span>GetPropertyRulesTemplateVariable</a></li>
+    <li><a href="#GtmAsmapAssignment"><span class="symbol api"></span>GtmAsmapAssignment</a></li>
+    <li><a href="#GtmAsmapDefaultDatacenter"><span class="symbol api"></span>GtmAsmapDefaultDatacenter</a></li>
+    <li><a href="#GtmCidrmapAssignment"><span class="symbol api"></span>GtmCidrmapAssignment</a></li>
+    <li><a href="#GtmCidrmapDefaultDatacenter"><span class="symbol api"></span>GtmCidrmapDefaultDatacenter</a></li>
+    <li><a href="#GtmDatacenterDefaultLoadObject"><span class="symbol api"></span>GtmDatacenterDefaultLoadObject</a></li>
+    <li><a href="#GtmGeomapAssignment"><span class="symbol api"></span>GtmGeomapAssignment</a></li>
+    <li><a href="#GtmGeomapDefaultDatacenter"><span class="symbol api"></span>GtmGeomapDefaultDatacenter</a></li>
+    <li><a href="#GtmPropertyLivenessTest"><span class="symbol api"></span>GtmPropertyLivenessTest</a></li>
+    <li><a href="#GtmPropertyLivenessTestHttpHeader"><span class="symbol api"></span>GtmPropertyLivenessTestHttpHeader</a></li>
+    <li><a href="#GtmPropertyStaticRrSet"><span class="symbol api"></span>GtmPropertyStaticRrSet</a></li>
+    <li><a href="#GtmPropertyTrafficTarget"><span class="symbol api"></span>GtmPropertyTrafficTarget</a></li>
+    <li><a href="#GtmResourceResourceInstance"><span class="symbol api"></span>GtmResourceResourceInstance</a></li>
+    <li><a href="#PropertyOrigin"><span class="symbol api"></span>PropertyOrigin</a></li>
+    <li><a href="#PropertyRuleError"><span class="symbol api"></span>PropertyRuleError</a></li>
+    <li><a href="#PropertyRuleWarning"><span class="symbol api"></span>PropertyRuleWarning</a></li>
+    <li><a href="#PropertyVariablesVariable"><span class="symbol api"></span>PropertyVariablesVariable</a></li>
+    <li><a href="#PropertyVariablesVariableVariable"><span class="symbol api"></span>PropertyVariablesVariableVariable</a></li>
+    <li><a href="#ProviderAppsec"><span class="symbol api"></span>ProviderAppsec</a></li>
+    <li><a href="#ProviderConfig"><span class="symbol api"></span>ProviderConfig</a></li>
+    <li><a href="#ProviderDns"><span class="symbol api"></span>ProviderDns</a></li>
     <li><a href="#ProviderGtm"><span class="symbol api"></span>ProviderGtm</a></li>
     <li><a href="#ProviderProperty"><span class="symbol api"></span>ProviderProperty</a></li>
 </ul>
 
 <h2 id="edgedns" data-link-title="edgedns">namespace <strong>edgedns</strong></h2>
 <h3 class="pdoc-module-header" id="DnsZoneTsigKey" data-link-title="DnsZoneTsigKey">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L266">
         interface <strong>DnsZoneTsigKey</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>DnsZoneTsigKey</span></code></pre>
 <h4 class="pdoc-member-header" id="DnsZoneTsigKey-algorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L36">property <b>algorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L267">property <b>algorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>algorithm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DnsZoneTsigKey-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L42">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L268">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="DnsZoneTsigKey-secret">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L269">property <b>secret</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>secret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h2 id="properties" data-link-title="properties">namespace <strong>properties</strong></h2>
+<h3 class="pdoc-module-header" id="PropertyOrigin" data-link-title="PropertyOrigin">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L274">
+        interface <strong>PropertyOrigin</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PropertyOrigin</span></code></pre>
+<h4 class="pdoc-member-header" id="PropertyOrigin-cacheKeyHostname">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L275">property <b>cacheKeyHostname</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>cacheKeyHostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="PropertyOrigin-compress">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L276">property <b>compress</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>compress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="PropertyOrigin-enableTrueClientIp">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L277">property <b>enableTrueClientIp</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>enableTrueClientIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="PropertyOrigin-forwardHostname">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L278">property <b>forwardHostname</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>forwardHostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="PropertyOrigin-hostname">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L279">property <b>hostname</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>hostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="PropertyOrigin-port">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L280">property <b>port</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+<h3 class="pdoc-module-header" id="PropertyRuleError" data-link-title="PropertyRuleError">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L283">
+        interface <strong>PropertyRuleError</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PropertyRuleError</span></code></pre>
+<h4 class="pdoc-member-header" id="PropertyRuleError-behaviorName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L284">property <b>behaviorName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>behaviorName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="PropertyRuleError-detail">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L285">property <b>detail</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>detail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="PropertyRuleError-errorLocation">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L286">property <b>errorLocation</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>errorLocation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="PropertyRuleError-instance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L287">property <b>instance</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>instance?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="PropertyRuleError-statusCode">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L288">property <b>statusCode</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>statusCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="PropertyRuleError-title">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L289">property <b>title</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>title?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="PropertyRuleError-type">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L290">property <b>type</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h3 class="pdoc-module-header" id="PropertyRuleWarning" data-link-title="PropertyRuleWarning">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L293">
+        interface <strong>PropertyRuleWarning</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PropertyRuleWarning</span></code></pre>
+<h4 class="pdoc-member-header" id="PropertyRuleWarning-behaviorName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L294">property <b>behaviorName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>behaviorName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="PropertyRuleWarning-detail">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L295">property <b>detail</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>detail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="PropertyRuleWarning-errorLocation">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L296">property <b>errorLocation</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>errorLocation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="PropertyRuleWarning-instance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L297">property <b>instance</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>instance?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="PropertyRuleWarning-statusCode">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L298">property <b>statusCode</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>statusCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="PropertyRuleWarning-title">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L299">property <b>title</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>title?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="PropertyRuleWarning-type">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L300">property <b>type</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h3 class="pdoc-module-header" id="PropertyVariablesVariable" data-link-title="PropertyVariablesVariable">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L303">
+        interface <strong>PropertyVariablesVariable</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PropertyVariablesVariable</span></code></pre>
+<h4 class="pdoc-member-header" id="PropertyVariablesVariable-variables">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L304">property <b>variables</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>variables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PropertyVariablesVariableVariable'>PropertyVariablesVariableVariable</a>&gt;[]&gt;;</code></pre>
+<h3 class="pdoc-module-header" id="PropertyVariablesVariableVariable" data-link-title="PropertyVariablesVariableVariable">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L307">
+        interface <strong>PropertyVariablesVariableVariable</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PropertyVariablesVariableVariable</span></code></pre>
+<h4 class="pdoc-member-header" id="PropertyVariablesVariableVariable-description">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L308">property <b>description</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="PropertyVariablesVariableVariable-hidden">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L309">property <b>hidden</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>hidden: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="PropertyVariablesVariableVariable-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L310">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="PropertyVariablesVariableVariable-sensitive">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L311">property <b>sensitive</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>sensitive: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="PropertyVariablesVariableVariable-value">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L312">property <b>value</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h2 id="trafficmanagement" data-link-title="trafficmanagement">namespace <strong>trafficmanagement</strong></h2>
+<h3 class="pdoc-module-header" id="GtmASmapAssignment" data-link-title="GtmASmapAssignment">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L317">
+        interface <strong>GtmASmapAssignment</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GtmASmapAssignment</span></code></pre>
+<h4 class="pdoc-member-header" id="GtmASmapAssignment-asNumbers">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L318">property <b>asNumbers</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>asNumbers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;[]&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmASmapAssignment-datacenterId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L319">property <b>datacenterId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>datacenterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmASmapAssignment-nickname">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L320">property <b>nickname</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>nickname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h3 class="pdoc-module-header" id="GtmASmapDefaultDatacenter" data-link-title="GtmASmapDefaultDatacenter">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L323">
+        interface <strong>GtmASmapDefaultDatacenter</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GtmASmapDefaultDatacenter</span></code></pre>
+<h4 class="pdoc-member-header" id="GtmASmapDefaultDatacenter-datacenterId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L324">property <b>datacenterId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>datacenterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmASmapDefaultDatacenter-nickname">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L325">property <b>nickname</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>nickname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h3 class="pdoc-module-header" id="GtmCidrmapAssignment" data-link-title="GtmCidrmapAssignment">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L328">
+        interface <strong>GtmCidrmapAssignment</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GtmCidrmapAssignment</span></code></pre>
+<h4 class="pdoc-member-header" id="GtmCidrmapAssignment-blocks">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L329">property <b>blocks</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>blocks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmCidrmapAssignment-datacenterId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L330">property <b>datacenterId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>datacenterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmCidrmapAssignment-nickname">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L331">property <b>nickname</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>nickname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h3 class="pdoc-module-header" id="GtmCidrmapDefaultDatacenter" data-link-title="GtmCidrmapDefaultDatacenter">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L334">
+        interface <strong>GtmCidrmapDefaultDatacenter</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GtmCidrmapDefaultDatacenter</span></code></pre>
+<h4 class="pdoc-member-header" id="GtmCidrmapDefaultDatacenter-datacenterId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L335">property <b>datacenterId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>datacenterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmCidrmapDefaultDatacenter-nickname">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L336">property <b>nickname</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>nickname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h3 class="pdoc-module-header" id="GtmDatacenterDefaultLoadObject" data-link-title="GtmDatacenterDefaultLoadObject">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L339">
+        interface <strong>GtmDatacenterDefaultLoadObject</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GtmDatacenterDefaultLoadObject</span></code></pre>
+<h4 class="pdoc-member-header" id="GtmDatacenterDefaultLoadObject-loadObject">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L340">property <b>loadObject</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>loadObject?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmDatacenterDefaultLoadObject-loadObjectPort">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L341">property <b>loadObjectPort</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>loadObjectPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmDatacenterDefaultLoadObject-loadServers">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L342">property <b>loadServers</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>loadServers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+<h3 class="pdoc-module-header" id="GtmGeomapAssignment" data-link-title="GtmGeomapAssignment">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L345">
+        interface <strong>GtmGeomapAssignment</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GtmGeomapAssignment</span></code></pre>
+<h4 class="pdoc-member-header" id="GtmGeomapAssignment-countries">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L346">property <b>countries</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>countries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmGeomapAssignment-datacenterId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L347">property <b>datacenterId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>datacenterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmGeomapAssignment-nickname">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L348">property <b>nickname</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>nickname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h3 class="pdoc-module-header" id="GtmGeomapDefaultDatacenter" data-link-title="GtmGeomapDefaultDatacenter">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L351">
+        interface <strong>GtmGeomapDefaultDatacenter</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GtmGeomapDefaultDatacenter</span></code></pre>
+<h4 class="pdoc-member-header" id="GtmGeomapDefaultDatacenter-datacenterId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L352">property <b>datacenterId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>datacenterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmGeomapDefaultDatacenter-nickname">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L353">property <b>nickname</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>nickname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h3 class="pdoc-module-header" id="GtmPropertyLivenessTest" data-link-title="GtmPropertyLivenessTest">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L356">
+        interface <strong>GtmPropertyLivenessTest</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GtmPropertyLivenessTest</span></code></pre>
+<h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-answersRequired">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L357">property <b>answersRequired</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>answersRequired?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-disableNonstandardPortWarning">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L358">property <b>disableNonstandardPortWarning</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>disableNonstandardPortWarning?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-disabled">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L359">property <b>disabled</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>disabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-errorPenalty">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L360">property <b>errorPenalty</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>errorPenalty?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-httpError3xx">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L361">property <b>httpError3xx</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>httpError3xx?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-httpError4xx">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L362">property <b>httpError4xx</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>httpError4xx?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-httpError5xx">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L363">property <b>httpError5xx</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>httpError5xx?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-httpHeaders">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L364">property <b>httpHeaders</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>httpHeaders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#GtmPropertyLivenessTestHttpHeader'>GtmPropertyLivenessTestHttpHeader</a>&gt;[]&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L365">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-peerCertificateVerification">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L366">property <b>peerCertificateVerification</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>peerCertificateVerification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-recursionRequested">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L367">property <b>recursionRequested</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>recursionRequested?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-requestString">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L368">property <b>requestString</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>requestString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-resourceType">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L369">property <b>resourceType</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>resourceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-responseString">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L370">property <b>responseString</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>responseString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-sslClientCertificate">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L371">property <b>sslClientCertificate</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>sslClientCertificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-sslClientPrivateKey">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L372">property <b>sslClientPrivateKey</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>sslClientPrivateKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-testInterval">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L373">property <b>testInterval</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>testInterval: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-testObject">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L374">property <b>testObject</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>testObject: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-testObjectPassword">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L375">property <b>testObjectPassword</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>testObjectPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-testObjectPort">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L376">property <b>testObjectPort</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>testObjectPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-testObjectProtocol">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L377">property <b>testObjectProtocol</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>testObjectProtocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-testObjectUsername">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L378">property <b>testObjectUsername</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>testObjectUsername?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-testTimeout">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L379">property <b>testTimeout</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>testTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-timeoutPenalty">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L380">property <b>timeoutPenalty</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>timeoutPenalty?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+<h3 class="pdoc-module-header" id="GtmPropertyLivenessTestHttpHeader" data-link-title="GtmPropertyLivenessTestHttpHeader">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L383">
+        interface <strong>GtmPropertyLivenessTestHttpHeader</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GtmPropertyLivenessTestHttpHeader</span></code></pre>
+<h4 class="pdoc-member-header" id="GtmPropertyLivenessTestHttpHeader-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L384">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmPropertyLivenessTestHttpHeader-value">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L385">property <b>value</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h3 class="pdoc-module-header" id="GtmPropertyStaticRrSet" data-link-title="GtmPropertyStaticRrSet">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L388">
+        interface <strong>GtmPropertyStaticRrSet</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GtmPropertyStaticRrSet</span></code></pre>
+<h4 class="pdoc-member-header" id="GtmPropertyStaticRrSet-rdatas">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L389">property <b>rdatas</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>rdatas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmPropertyStaticRrSet-ttl">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L390">property <b>ttl</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmPropertyStaticRrSet-type">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L391">property <b>type</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h3 class="pdoc-module-header" id="GtmPropertyTrafficTarget" data-link-title="GtmPropertyTrafficTarget">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L394">
+        interface <strong>GtmPropertyTrafficTarget</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GtmPropertyTrafficTarget</span></code></pre>
+<h4 class="pdoc-member-header" id="GtmPropertyTrafficTarget-datacenterId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L395">property <b>datacenterId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>datacenterId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmPropertyTrafficTarget-enabled">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L396">property <b>enabled</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmPropertyTrafficTarget-handoutCname">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L397">property <b>handoutCname</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>handoutCname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmPropertyTrafficTarget-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L398">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmPropertyTrafficTarget-servers">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L399">property <b>servers</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>servers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmPropertyTrafficTarget-weight">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L400">property <b>weight</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>weight?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+<h3 class="pdoc-module-header" id="GtmResourceResourceInstance" data-link-title="GtmResourceResourceInstance">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L403">
+        interface <strong>GtmResourceResourceInstance</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GtmResourceResourceInstance</span></code></pre>
+<h4 class="pdoc-member-header" id="GtmResourceResourceInstance-datacenterId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L404">property <b>datacenterId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>datacenterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmResourceResourceInstance-loadObject">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L405">property <b>loadObject</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>loadObject?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmResourceResourceInstance-loadObjectPort">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L406">property <b>loadObjectPort</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>loadObjectPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmResourceResourceInstance-loadServers">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L407">property <b>loadServers</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>loadServers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="GtmResourceResourceInstance-useDefaultLoadObject">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L408">property <b>useDefaultLoadObject</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>useDefaultLoadObject?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+
+
+<h2 id="apis">APIs</h2>
+<h3 class="pdoc-module-header" id="DnsZoneTsigKey" data-link-title="DnsZoneTsigKey">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L7">
+        interface <strong>DnsZoneTsigKey</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>DnsZoneTsigKey</span></code></pre>
+<h4 class="pdoc-member-header" id="DnsZoneTsigKey-algorithm">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L8">property <b>algorithm</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>algorithm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="DnsZoneTsigKey-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L14">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -121,1687 +663,251 @@ key name
 * `secret`
 
 <h4 class="pdoc-member-header" id="DnsZoneTsigKey-secret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L43">property <b>secret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L15">property <b>secret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h2 id="properties" data-link-title="properties">namespace <strong>properties</strong></h2>
-<h3 class="pdoc-module-header" id="GetPropertyRulesRule" data-link-title="GetPropertyRulesRule">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L48">
-        interface <strong>GetPropertyRulesRule</strong>
+<h3 class="pdoc-module-header" id="GetPropertyRulesTemplateVariable" data-link-title="GetPropertyRulesTemplateVariable">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L18">
+        interface <strong>GetPropertyRulesTemplateVariable</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetPropertyRulesRule</span></code></pre>
-<h4 class="pdoc-member-header" id="GetPropertyRulesRule-behaviors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L52">property <b>behaviors</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>behaviors?: <a href='#GetPropertyRulesRuleBehavior'>GetPropertyRulesRuleBehavior</a>[];</code></pre>
-
-— (Optional) One or more behaviors to apply to requests that match.
-
-<h4 class="pdoc-member-header" id="GetPropertyRulesRule-criteriaMatch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L53">property <b>criteriaMatch</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>criteriaMatch?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-<h4 class="pdoc-member-header" id="GetPropertyRulesRule-isSecure">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L57">property <b>isSecure</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>isSecure?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
-
-— (Optional) Whether the property is a secure (Enhanced TLS) property or not (top-level only).
-
-<h4 class="pdoc-member-header" id="GetPropertyRulesRule-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L61">property <b>rules</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>rules?: <a href='#GetPropertyRulesRuleRule'>GetPropertyRulesRuleRule</a>[];</code></pre>
-
-— (Optional) Child rules (may be nested five levels deep).
-
-<h4 class="pdoc-member-header" id="GetPropertyRulesRule-variables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L62">property <b>variables</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>variables?: <a href='#GetPropertyRulesRuleVariable'>GetPropertyRulesRuleVariable</a>[];</code></pre>
-<h3 class="pdoc-module-header" id="GetPropertyRulesRuleBehavior" data-link-title="GetPropertyRulesRuleBehavior">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L65">
-        interface <strong>GetPropertyRulesRuleBehavior</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetPropertyRulesRuleBehavior</span></code></pre>
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleBehavior-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L69">property <b>name</b></a>
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetPropertyRulesTemplateVariable</span></code></pre>
+<h4 class="pdoc-member-header" id="GetPropertyRulesTemplateVariable-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L19">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-
-— (Required) The name of the behavior.
-
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleBehavior-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L73">property <b>options</b></a>
+<h4 class="pdoc-member-header" id="GetPropertyRulesTemplateVariable-type">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L20">property <b>type</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>options?: <a href='#GetPropertyRulesRuleBehaviorOption'>GetPropertyRulesRuleBehaviorOption</a>[];</code></pre>
+<pre class="highlight"><code><span class='kd'></span>type?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetPropertyRulesTemplateVariable-value">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L21">property <b>value</b></a>
+</h4>
 
-— (Optional) One or more options for the behavior.
-
-<h3 class="pdoc-module-header" id="GetPropertyRulesRuleBehaviorOption" data-link-title="GetPropertyRulesRuleBehaviorOption">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L76">
-        interface <strong>GetPropertyRulesRuleBehaviorOption</strong>
+<pre class="highlight"><code><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h3 class="pdoc-module-header" id="GtmAsmapAssignment" data-link-title="GtmAsmapAssignment">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L24">
+        interface <strong>GtmAsmapAssignment</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetPropertyRulesRuleBehaviorOption</span></code></pre>
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleBehaviorOption-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L80">property <b>key</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-
-— (Required) The option name.
-
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleBehaviorOption-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L84">property <b>value</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>value?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-
-— (Optional) A single value for the option.
-
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleBehaviorOption-values">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L88">property <b>values</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>values?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
-
-— (Optional) An array of values for the option.
-
-<h3 class="pdoc-module-header" id="GetPropertyRulesRuleRule" data-link-title="GetPropertyRulesRuleRule">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L91">
-        interface <strong>GetPropertyRulesRuleRule</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetPropertyRulesRuleRule</span></code></pre>
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRule-behaviors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L95">property <b>behaviors</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>behaviors?: <a href='#GetPropertyRulesRuleRuleBehavior'>GetPropertyRulesRuleRuleBehavior</a>[];</code></pre>
-
-— (Optional) One or more behaviors to apply to requests that match.
-
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRule-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L96">property <b>comment</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>comment?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRule-criteriaMatch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L97">property <b>criteriaMatch</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>criteriaMatch?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRule-criterias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L101">property <b>criterias</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>criterias?: <a href='#GetPropertyRulesRuleRuleCriteria'>GetPropertyRulesRuleRuleCriteria</a>[];</code></pre>
-
-— (Optional) One or more criteria to match requests on.
-
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRule-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L105">property <b>name</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-
-— (Required) The name of the behavior.
-
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRule-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L109">property <b>rules</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>rules?: <a href='#GetPropertyRulesRuleRuleRule'>GetPropertyRulesRuleRuleRule</a>[];</code></pre>
-
-— (Optional) Child rules (may be nested five levels deep).
-
-<h3 class="pdoc-module-header" id="GetPropertyRulesRuleRuleBehavior" data-link-title="GetPropertyRulesRuleRuleBehavior">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L112">
-        interface <strong>GetPropertyRulesRuleRuleBehavior</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetPropertyRulesRuleRuleBehavior</span></code></pre>
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleBehavior-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L116">property <b>name</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-
-— (Required) The name of the behavior.
-
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleBehavior-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L120">property <b>options</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>options?: <a href='#GetPropertyRulesRuleRuleBehaviorOption'>GetPropertyRulesRuleRuleBehaviorOption</a>[];</code></pre>
-
-— (Optional) One or more options for the behavior.
-
-<h3 class="pdoc-module-header" id="GetPropertyRulesRuleRuleBehaviorOption" data-link-title="GetPropertyRulesRuleRuleBehaviorOption">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L123">
-        interface <strong>GetPropertyRulesRuleRuleBehaviorOption</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetPropertyRulesRuleRuleBehaviorOption</span></code></pre>
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleBehaviorOption-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L127">property <b>key</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-
-— (Required) The option name.
-
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleBehaviorOption-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L131">property <b>value</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>value?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-
-— (Optional) A single value for the option.
-
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleBehaviorOption-values">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L135">property <b>values</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>values?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
-
-— (Optional) An array of values for the option.
-
-<h3 class="pdoc-module-header" id="GetPropertyRulesRuleRuleCriteria" data-link-title="GetPropertyRulesRuleRuleCriteria">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L138">
-        interface <strong>GetPropertyRulesRuleRuleCriteria</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetPropertyRulesRuleRuleCriteria</span></code></pre>
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleCriteria-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L142">property <b>name</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-
-— (Required) The name of the behavior.
-
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleCriteria-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L146">property <b>options</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>options?: <a href='#GetPropertyRulesRuleRuleCriteriaOption'>GetPropertyRulesRuleRuleCriteriaOption</a>[];</code></pre>
-
-— (Optional) One or more options for the behavior.
-
-<h3 class="pdoc-module-header" id="GetPropertyRulesRuleRuleCriteriaOption" data-link-title="GetPropertyRulesRuleRuleCriteriaOption">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L149">
-        interface <strong>GetPropertyRulesRuleRuleCriteriaOption</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetPropertyRulesRuleRuleCriteriaOption</span></code></pre>
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleCriteriaOption-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L153">property <b>key</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-
-— (Required) The option name.
-
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleCriteriaOption-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L157">property <b>value</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>value?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-
-— (Optional) A single value for the option.
-
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleCriteriaOption-values">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L161">property <b>values</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>values?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
-
-— (Optional) An array of values for the option.
-
-<h3 class="pdoc-module-header" id="GetPropertyRulesRuleRuleRule" data-link-title="GetPropertyRulesRuleRuleRule">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L164">
-        interface <strong>GetPropertyRulesRuleRuleRule</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetPropertyRulesRuleRuleRule</span></code></pre>
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRule-behaviors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L168">property <b>behaviors</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>behaviors?: <a href='#GetPropertyRulesRuleRuleRuleBehavior'>GetPropertyRulesRuleRuleRuleBehavior</a>[];</code></pre>
-
-— (Optional) One or more behaviors to apply to requests that match.
-
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRule-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L169">property <b>comment</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>comment?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRule-criteriaMatch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L170">property <b>criteriaMatch</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>criteriaMatch?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRule-criterias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L174">property <b>criterias</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>criterias?: <a href='#GetPropertyRulesRuleRuleRuleCriteria'>GetPropertyRulesRuleRuleRuleCriteria</a>[];</code></pre>
-
-— (Optional) One or more criteria to match requests on.
-
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRule-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L178">property <b>name</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-
-— (Required) The name of the behavior.
-
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRule-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L182">property <b>rules</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>rules?: <a href='#GetPropertyRulesRuleRuleRuleRule'>GetPropertyRulesRuleRuleRuleRule</a>[];</code></pre>
-
-— (Optional) Child rules (may be nested five levels deep).
-
-<h3 class="pdoc-module-header" id="GetPropertyRulesRuleRuleRuleBehavior" data-link-title="GetPropertyRulesRuleRuleRuleBehavior">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L185">
-        interface <strong>GetPropertyRulesRuleRuleRuleBehavior</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetPropertyRulesRuleRuleRuleBehavior</span></code></pre>
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRuleBehavior-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L189">property <b>name</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-
-— (Required) The name of the behavior.
-
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRuleBehavior-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L193">property <b>options</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>options?: <a href='#GetPropertyRulesRuleRuleRuleBehaviorOption'>GetPropertyRulesRuleRuleRuleBehaviorOption</a>[];</code></pre>
-
-— (Optional) One or more options for the behavior.
-
-<h3 class="pdoc-module-header" id="GetPropertyRulesRuleRuleRuleBehaviorOption" data-link-title="GetPropertyRulesRuleRuleRuleBehaviorOption">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L196">
-        interface <strong>GetPropertyRulesRuleRuleRuleBehaviorOption</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetPropertyRulesRuleRuleRuleBehaviorOption</span></code></pre>
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRuleBehaviorOption-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L200">property <b>key</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-
-— (Required) The option name.
-
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRuleBehaviorOption-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L204">property <b>value</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>value?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-
-— (Optional) A single value for the option.
-
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRuleBehaviorOption-values">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L208">property <b>values</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>values?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
-
-— (Optional) An array of values for the option.
-
-<h3 class="pdoc-module-header" id="GetPropertyRulesRuleRuleRuleCriteria" data-link-title="GetPropertyRulesRuleRuleRuleCriteria">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L211">
-        interface <strong>GetPropertyRulesRuleRuleRuleCriteria</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetPropertyRulesRuleRuleRuleCriteria</span></code></pre>
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRuleCriteria-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L215">property <b>name</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-
-— (Required) The name of the behavior.
-
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRuleCriteria-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L219">property <b>options</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>options?: <a href='#GetPropertyRulesRuleRuleRuleCriteriaOption'>GetPropertyRulesRuleRuleRuleCriteriaOption</a>[];</code></pre>
-
-— (Optional) One or more options for the behavior.
-
-<h3 class="pdoc-module-header" id="GetPropertyRulesRuleRuleRuleCriteriaOption" data-link-title="GetPropertyRulesRuleRuleRuleCriteriaOption">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L222">
-        interface <strong>GetPropertyRulesRuleRuleRuleCriteriaOption</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetPropertyRulesRuleRuleRuleCriteriaOption</span></code></pre>
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRuleCriteriaOption-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L226">property <b>key</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-
-— (Required) The option name.
-
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRuleCriteriaOption-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L230">property <b>value</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>value?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-
-— (Optional) A single value for the option.
-
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRuleCriteriaOption-values">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L234">property <b>values</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>values?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
-
-— (Optional) An array of values for the option.
-
-<h3 class="pdoc-module-header" id="GetPropertyRulesRuleRuleRuleRule" data-link-title="GetPropertyRulesRuleRuleRuleRule">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L237">
-        interface <strong>GetPropertyRulesRuleRuleRuleRule</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetPropertyRulesRuleRuleRuleRule</span></code></pre>
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRuleRule-behaviors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L241">property <b>behaviors</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>behaviors?: <a href='#GetPropertyRulesRuleRuleRuleRuleBehavior'>GetPropertyRulesRuleRuleRuleRuleBehavior</a>[];</code></pre>
-
-— (Optional) One or more behaviors to apply to requests that match.
-
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRuleRule-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L242">property <b>comment</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>comment?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRuleRule-criteriaMatch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L243">property <b>criteriaMatch</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>criteriaMatch?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRuleRule-criterias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L247">property <b>criterias</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>criterias?: <a href='#GetPropertyRulesRuleRuleRuleRuleCriteria'>GetPropertyRulesRuleRuleRuleRuleCriteria</a>[];</code></pre>
-
-— (Optional) One or more criteria to match requests on.
-
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRuleRule-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L251">property <b>name</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-
-— (Required) The name of the behavior.
-
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRuleRule-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L255">property <b>rules</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>rules?: <a href='#GetPropertyRulesRuleRuleRuleRuleRule'>GetPropertyRulesRuleRuleRuleRuleRule</a>[];</code></pre>
-
-— (Optional) Child rules (may be nested five levels deep).
-
-<h3 class="pdoc-module-header" id="GetPropertyRulesRuleRuleRuleRuleBehavior" data-link-title="GetPropertyRulesRuleRuleRuleRuleBehavior">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L258">
-        interface <strong>GetPropertyRulesRuleRuleRuleRuleBehavior</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetPropertyRulesRuleRuleRuleRuleBehavior</span></code></pre>
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRuleRuleBehavior-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L262">property <b>name</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-
-— (Required) The name of the behavior.
-
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRuleRuleBehavior-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L266">property <b>options</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>options?: <a href='#GetPropertyRulesRuleRuleRuleRuleBehaviorOption'>GetPropertyRulesRuleRuleRuleRuleBehaviorOption</a>[];</code></pre>
-
-— (Optional) One or more options for the behavior.
-
-<h3 class="pdoc-module-header" id="GetPropertyRulesRuleRuleRuleRuleBehaviorOption" data-link-title="GetPropertyRulesRuleRuleRuleRuleBehaviorOption">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L269">
-        interface <strong>GetPropertyRulesRuleRuleRuleRuleBehaviorOption</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetPropertyRulesRuleRuleRuleRuleBehaviorOption</span></code></pre>
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRuleRuleBehaviorOption-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L273">property <b>key</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-
-— (Required) The option name.
-
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRuleRuleBehaviorOption-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L277">property <b>value</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>value?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-
-— (Optional) A single value for the option.
-
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRuleRuleBehaviorOption-values">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L281">property <b>values</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>values?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
-
-— (Optional) An array of values for the option.
-
-<h3 class="pdoc-module-header" id="GetPropertyRulesRuleRuleRuleRuleCriteria" data-link-title="GetPropertyRulesRuleRuleRuleRuleCriteria">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L284">
-        interface <strong>GetPropertyRulesRuleRuleRuleRuleCriteria</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetPropertyRulesRuleRuleRuleRuleCriteria</span></code></pre>
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRuleRuleCriteria-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L288">property <b>name</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-
-— (Required) The name of the behavior.
-
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRuleRuleCriteria-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L292">property <b>options</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>options?: <a href='#GetPropertyRulesRuleRuleRuleRuleCriteriaOption'>GetPropertyRulesRuleRuleRuleRuleCriteriaOption</a>[];</code></pre>
-
-— (Optional) One or more options for the behavior.
-
-<h3 class="pdoc-module-header" id="GetPropertyRulesRuleRuleRuleRuleCriteriaOption" data-link-title="GetPropertyRulesRuleRuleRuleRuleCriteriaOption">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L295">
-        interface <strong>GetPropertyRulesRuleRuleRuleRuleCriteriaOption</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetPropertyRulesRuleRuleRuleRuleCriteriaOption</span></code></pre>
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRuleRuleCriteriaOption-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L299">property <b>key</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-
-— (Required) The option name.
-
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRuleRuleCriteriaOption-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L303">property <b>value</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>value?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-
-— (Optional) A single value for the option.
-
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRuleRuleCriteriaOption-values">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L307">property <b>values</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>values?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
-
-— (Optional) An array of values for the option.
-
-<h3 class="pdoc-module-header" id="GetPropertyRulesRuleRuleRuleRuleRule" data-link-title="GetPropertyRulesRuleRuleRuleRuleRule">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L310">
-        interface <strong>GetPropertyRulesRuleRuleRuleRuleRule</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetPropertyRulesRuleRuleRuleRuleRule</span></code></pre>
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRuleRuleRule-behaviors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L314">property <b>behaviors</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>behaviors?: <a href='#GetPropertyRulesRuleRuleRuleRuleRuleBehavior'>GetPropertyRulesRuleRuleRuleRuleRuleBehavior</a>[];</code></pre>
-
-— (Optional) One or more behaviors to apply to requests that match.
-
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRuleRuleRule-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L315">property <b>comment</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>comment?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRuleRuleRule-criteriaMatch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L316">property <b>criteriaMatch</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>criteriaMatch?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRuleRuleRule-criterias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L320">property <b>criterias</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>criterias?: <a href='#GetPropertyRulesRuleRuleRuleRuleRuleCriteria'>GetPropertyRulesRuleRuleRuleRuleRuleCriteria</a>[];</code></pre>
-
-— (Optional) One or more criteria to match requests on.
-
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRuleRuleRule-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L324">property <b>name</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-
-— (Required) The name of the behavior.
-
-<h3 class="pdoc-module-header" id="GetPropertyRulesRuleRuleRuleRuleRuleBehavior" data-link-title="GetPropertyRulesRuleRuleRuleRuleRuleBehavior">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L327">
-        interface <strong>GetPropertyRulesRuleRuleRuleRuleRuleBehavior</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetPropertyRulesRuleRuleRuleRuleRuleBehavior</span></code></pre>
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRuleRuleRuleBehavior-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L331">property <b>name</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-
-— (Required) The name of the behavior.
-
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRuleRuleRuleBehavior-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L335">property <b>options</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>options?: <a href='#GetPropertyRulesRuleRuleRuleRuleRuleBehaviorOption'>GetPropertyRulesRuleRuleRuleRuleRuleBehaviorOption</a>[];</code></pre>
-
-— (Optional) One or more options for the behavior.
-
-<h3 class="pdoc-module-header" id="GetPropertyRulesRuleRuleRuleRuleRuleBehaviorOption" data-link-title="GetPropertyRulesRuleRuleRuleRuleRuleBehaviorOption">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L338">
-        interface <strong>GetPropertyRulesRuleRuleRuleRuleRuleBehaviorOption</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetPropertyRulesRuleRuleRuleRuleRuleBehaviorOption</span></code></pre>
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRuleRuleRuleBehaviorOption-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L342">property <b>key</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-
-— (Required) The option name.
-
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRuleRuleRuleBehaviorOption-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L346">property <b>value</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>value?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-
-— (Optional) A single value for the option.
-
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRuleRuleRuleBehaviorOption-values">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L350">property <b>values</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>values?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
-
-— (Optional) An array of values for the option.
-
-<h3 class="pdoc-module-header" id="GetPropertyRulesRuleRuleRuleRuleRuleCriteria" data-link-title="GetPropertyRulesRuleRuleRuleRuleRuleCriteria">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L353">
-        interface <strong>GetPropertyRulesRuleRuleRuleRuleRuleCriteria</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetPropertyRulesRuleRuleRuleRuleRuleCriteria</span></code></pre>
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRuleRuleRuleCriteria-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L357">property <b>name</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-
-— (Required) The name of the behavior.
-
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRuleRuleRuleCriteria-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L361">property <b>options</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>options?: <a href='#GetPropertyRulesRuleRuleRuleRuleRuleCriteriaOption'>GetPropertyRulesRuleRuleRuleRuleRuleCriteriaOption</a>[];</code></pre>
-
-— (Optional) One or more options for the behavior.
-
-<h3 class="pdoc-module-header" id="GetPropertyRulesRuleRuleRuleRuleRuleCriteriaOption" data-link-title="GetPropertyRulesRuleRuleRuleRuleRuleCriteriaOption">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L364">
-        interface <strong>GetPropertyRulesRuleRuleRuleRuleRuleCriteriaOption</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetPropertyRulesRuleRuleRuleRuleRuleCriteriaOption</span></code></pre>
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRuleRuleRuleCriteriaOption-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L368">property <b>key</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-
-— (Required) The option name.
-
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRuleRuleRuleCriteriaOption-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L372">property <b>value</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>value?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-
-— (Optional) A single value for the option.
-
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleRuleRuleRuleRuleCriteriaOption-values">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L376">property <b>values</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>values?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
-
-— (Optional) An array of values for the option.
-
-<h3 class="pdoc-module-header" id="GetPropertyRulesRuleVariable" data-link-title="GetPropertyRulesRuleVariable">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L379">
-        interface <strong>GetPropertyRulesRuleVariable</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetPropertyRulesRuleVariable</span></code></pre>
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleVariable-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L380">property <b>description</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>description?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleVariable-hidden">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L381">property <b>hidden</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>hidden: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleVariable-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L385">property <b>name</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-
-— (Required) The name of the behavior.
-
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleVariable-sensitive">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L386">property <b>sensitive</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>sensitive: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
-<h4 class="pdoc-member-header" id="GetPropertyRulesRuleVariable-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L390">property <b>value</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>value?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
-
-— (Optional) A single value for the option.
-
-<h3 class="pdoc-module-header" id="PropertyOrigin" data-link-title="PropertyOrigin">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L393">
-        interface <strong>PropertyOrigin</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PropertyOrigin</span></code></pre>
-<h4 class="pdoc-member-header" id="PropertyOrigin-cacheKeyHostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L397">property <b>cacheKeyHostname</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>cacheKeyHostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-
-— (Optional) The hostname uses for the cache key. (default: `ORIGIN_HOSTNAME`).
-
-<h4 class="pdoc-member-header" id="PropertyOrigin-compress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L401">property <b>compress</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>compress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
-
-— (Optional, boolean) Whether origin supports gzip compression (default: `false`).
-
-<h4 class="pdoc-member-header" id="PropertyOrigin-enableTrueClientIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L405">property <b>enableTrueClientIp</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>enableTrueClientIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
-
-— (Optional, boolean) Whether the X-True-Client-IP header should be sent to origin (default: `false`).
-
-<h4 class="pdoc-member-header" id="PropertyOrigin-forwardHostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L409">property <b>forwardHostname</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>forwardHostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-
-— (Optional) The value for the Hostname header sent to origin. (default: `ORIGIN_HOSTNAME`).
-
-<h4 class="pdoc-member-header" id="PropertyOrigin-hostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L413">property <b>hostname</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>hostname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-
-— (Required) The origin hostname.
-
-<h4 class="pdoc-member-header" id="PropertyOrigin-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L417">property <b>port</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
-
-— (Optional) The origin port to connect to (default: 80).
-
-<h3 class="pdoc-module-header" id="PropertyRulesRule" data-link-title="PropertyRulesRule">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L420">
-        interface <strong>PropertyRulesRule</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PropertyRulesRule</span></code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRule-behaviors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L421">property <b>behaviors</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>behaviors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PropertyRulesRuleBehavior'>PropertyRulesRuleBehavior</a>&gt;[]&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRule-criteriaMatch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L422">property <b>criteriaMatch</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>criteriaMatch?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRule-isSecure">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L423">property <b>isSecure</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>isSecure?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRule-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L424">property <b>rules</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PropertyRulesRuleRule'>PropertyRulesRuleRule</a>&gt;[]&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRule-variables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L425">property <b>variables</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>variables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PropertyRulesRuleVariable'>PropertyRulesRuleVariable</a>&gt;[]&gt;;</code></pre>
-<h3 class="pdoc-module-header" id="PropertyRulesRuleBehavior" data-link-title="PropertyRulesRuleBehavior">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L428">
-        interface <strong>PropertyRulesRuleBehavior</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PropertyRulesRuleBehavior</span></code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleBehavior-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L429">property <b>name</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleBehavior-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L430">property <b>options</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>options?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PropertyRulesRuleBehaviorOption'>PropertyRulesRuleBehaviorOption</a>&gt;[]&gt;;</code></pre>
-<h3 class="pdoc-module-header" id="PropertyRulesRuleBehaviorOption" data-link-title="PropertyRulesRuleBehaviorOption">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L433">
-        interface <strong>PropertyRulesRuleBehaviorOption</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PropertyRulesRuleBehaviorOption</span></code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleBehaviorOption-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L434">property <b>key</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleBehaviorOption-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L435">property <b>value</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleBehaviorOption-values">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L436">property <b>values</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>values?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
-<h3 class="pdoc-module-header" id="PropertyRulesRuleRule" data-link-title="PropertyRulesRuleRule">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L439">
-        interface <strong>PropertyRulesRuleRule</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PropertyRulesRuleRule</span></code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRule-behaviors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L440">property <b>behaviors</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>behaviors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PropertyRulesRuleRuleBehavior'>PropertyRulesRuleRuleBehavior</a>&gt;[]&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRule-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L441">property <b>comment</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>comment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRule-criteriaMatch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L442">property <b>criteriaMatch</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>criteriaMatch?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRule-criterias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L443">property <b>criterias</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>criterias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PropertyRulesRuleRuleCriteria'>PropertyRulesRuleRuleCriteria</a>&gt;[]&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRule-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L444">property <b>name</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRule-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L445">property <b>rules</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PropertyRulesRuleRuleRule'>PropertyRulesRuleRuleRule</a>&gt;[]&gt;;</code></pre>
-<h3 class="pdoc-module-header" id="PropertyRulesRuleRuleBehavior" data-link-title="PropertyRulesRuleRuleBehavior">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L448">
-        interface <strong>PropertyRulesRuleRuleBehavior</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PropertyRulesRuleRuleBehavior</span></code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleBehavior-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L449">property <b>name</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleBehavior-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L450">property <b>options</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>options?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PropertyRulesRuleRuleBehaviorOption'>PropertyRulesRuleRuleBehaviorOption</a>&gt;[]&gt;;</code></pre>
-<h3 class="pdoc-module-header" id="PropertyRulesRuleRuleBehaviorOption" data-link-title="PropertyRulesRuleRuleBehaviorOption">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L453">
-        interface <strong>PropertyRulesRuleRuleBehaviorOption</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PropertyRulesRuleRuleBehaviorOption</span></code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleBehaviorOption-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L454">property <b>key</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleBehaviorOption-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L455">property <b>value</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleBehaviorOption-values">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L456">property <b>values</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>values?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
-<h3 class="pdoc-module-header" id="PropertyRulesRuleRuleCriteria" data-link-title="PropertyRulesRuleRuleCriteria">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L459">
-        interface <strong>PropertyRulesRuleRuleCriteria</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PropertyRulesRuleRuleCriteria</span></code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleCriteria-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L460">property <b>name</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleCriteria-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L461">property <b>options</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>options?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PropertyRulesRuleRuleCriteriaOption'>PropertyRulesRuleRuleCriteriaOption</a>&gt;[]&gt;;</code></pre>
-<h3 class="pdoc-module-header" id="PropertyRulesRuleRuleCriteriaOption" data-link-title="PropertyRulesRuleRuleCriteriaOption">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L464">
-        interface <strong>PropertyRulesRuleRuleCriteriaOption</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PropertyRulesRuleRuleCriteriaOption</span></code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleCriteriaOption-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L465">property <b>key</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleCriteriaOption-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L466">property <b>value</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleCriteriaOption-values">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L467">property <b>values</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>values?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
-<h3 class="pdoc-module-header" id="PropertyRulesRuleRuleRule" data-link-title="PropertyRulesRuleRuleRule">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L470">
-        interface <strong>PropertyRulesRuleRuleRule</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PropertyRulesRuleRuleRule</span></code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRule-behaviors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L471">property <b>behaviors</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>behaviors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PropertyRulesRuleRuleRuleBehavior'>PropertyRulesRuleRuleRuleBehavior</a>&gt;[]&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRule-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L472">property <b>comment</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>comment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRule-criteriaMatch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L473">property <b>criteriaMatch</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>criteriaMatch?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRule-criterias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L474">property <b>criterias</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>criterias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PropertyRulesRuleRuleRuleCriteria'>PropertyRulesRuleRuleRuleCriteria</a>&gt;[]&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRule-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L475">property <b>name</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRule-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L476">property <b>rules</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PropertyRulesRuleRuleRuleRule'>PropertyRulesRuleRuleRuleRule</a>&gt;[]&gt;;</code></pre>
-<h3 class="pdoc-module-header" id="PropertyRulesRuleRuleRuleBehavior" data-link-title="PropertyRulesRuleRuleRuleBehavior">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L479">
-        interface <strong>PropertyRulesRuleRuleRuleBehavior</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PropertyRulesRuleRuleRuleBehavior</span></code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRuleBehavior-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L480">property <b>name</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRuleBehavior-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L481">property <b>options</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>options?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PropertyRulesRuleRuleRuleBehaviorOption'>PropertyRulesRuleRuleRuleBehaviorOption</a>&gt;[]&gt;;</code></pre>
-<h3 class="pdoc-module-header" id="PropertyRulesRuleRuleRuleBehaviorOption" data-link-title="PropertyRulesRuleRuleRuleBehaviorOption">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L484">
-        interface <strong>PropertyRulesRuleRuleRuleBehaviorOption</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PropertyRulesRuleRuleRuleBehaviorOption</span></code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRuleBehaviorOption-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L485">property <b>key</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRuleBehaviorOption-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L486">property <b>value</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRuleBehaviorOption-values">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L487">property <b>values</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>values?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
-<h3 class="pdoc-module-header" id="PropertyRulesRuleRuleRuleCriteria" data-link-title="PropertyRulesRuleRuleRuleCriteria">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L490">
-        interface <strong>PropertyRulesRuleRuleRuleCriteria</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PropertyRulesRuleRuleRuleCriteria</span></code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRuleCriteria-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L491">property <b>name</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRuleCriteria-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L492">property <b>options</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>options?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PropertyRulesRuleRuleRuleCriteriaOption'>PropertyRulesRuleRuleRuleCriteriaOption</a>&gt;[]&gt;;</code></pre>
-<h3 class="pdoc-module-header" id="PropertyRulesRuleRuleRuleCriteriaOption" data-link-title="PropertyRulesRuleRuleRuleCriteriaOption">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L495">
-        interface <strong>PropertyRulesRuleRuleRuleCriteriaOption</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PropertyRulesRuleRuleRuleCriteriaOption</span></code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRuleCriteriaOption-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L496">property <b>key</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRuleCriteriaOption-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L497">property <b>value</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRuleCriteriaOption-values">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L498">property <b>values</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>values?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
-<h3 class="pdoc-module-header" id="PropertyRulesRuleRuleRuleRule" data-link-title="PropertyRulesRuleRuleRuleRule">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L501">
-        interface <strong>PropertyRulesRuleRuleRuleRule</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PropertyRulesRuleRuleRuleRule</span></code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRuleRule-behaviors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L502">property <b>behaviors</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>behaviors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PropertyRulesRuleRuleRuleRuleBehavior'>PropertyRulesRuleRuleRuleRuleBehavior</a>&gt;[]&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRuleRule-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L503">property <b>comment</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>comment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRuleRule-criteriaMatch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L504">property <b>criteriaMatch</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>criteriaMatch?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRuleRule-criterias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L505">property <b>criterias</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>criterias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PropertyRulesRuleRuleRuleRuleCriteria'>PropertyRulesRuleRuleRuleRuleCriteria</a>&gt;[]&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRuleRule-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L506">property <b>name</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRuleRule-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L507">property <b>rules</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PropertyRulesRuleRuleRuleRuleRule'>PropertyRulesRuleRuleRuleRuleRule</a>&gt;[]&gt;;</code></pre>
-<h3 class="pdoc-module-header" id="PropertyRulesRuleRuleRuleRuleBehavior" data-link-title="PropertyRulesRuleRuleRuleRuleBehavior">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L510">
-        interface <strong>PropertyRulesRuleRuleRuleRuleBehavior</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PropertyRulesRuleRuleRuleRuleBehavior</span></code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRuleRuleBehavior-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L511">property <b>name</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRuleRuleBehavior-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L512">property <b>options</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>options?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PropertyRulesRuleRuleRuleRuleBehaviorOption'>PropertyRulesRuleRuleRuleRuleBehaviorOption</a>&gt;[]&gt;;</code></pre>
-<h3 class="pdoc-module-header" id="PropertyRulesRuleRuleRuleRuleBehaviorOption" data-link-title="PropertyRulesRuleRuleRuleRuleBehaviorOption">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L515">
-        interface <strong>PropertyRulesRuleRuleRuleRuleBehaviorOption</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PropertyRulesRuleRuleRuleRuleBehaviorOption</span></code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRuleRuleBehaviorOption-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L516">property <b>key</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRuleRuleBehaviorOption-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L517">property <b>value</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRuleRuleBehaviorOption-values">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L518">property <b>values</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>values?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
-<h3 class="pdoc-module-header" id="PropertyRulesRuleRuleRuleRuleCriteria" data-link-title="PropertyRulesRuleRuleRuleRuleCriteria">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L521">
-        interface <strong>PropertyRulesRuleRuleRuleRuleCriteria</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PropertyRulesRuleRuleRuleRuleCriteria</span></code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRuleRuleCriteria-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L522">property <b>name</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRuleRuleCriteria-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L523">property <b>options</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>options?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PropertyRulesRuleRuleRuleRuleCriteriaOption'>PropertyRulesRuleRuleRuleRuleCriteriaOption</a>&gt;[]&gt;;</code></pre>
-<h3 class="pdoc-module-header" id="PropertyRulesRuleRuleRuleRuleCriteriaOption" data-link-title="PropertyRulesRuleRuleRuleRuleCriteriaOption">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L526">
-        interface <strong>PropertyRulesRuleRuleRuleRuleCriteriaOption</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PropertyRulesRuleRuleRuleRuleCriteriaOption</span></code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRuleRuleCriteriaOption-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L527">property <b>key</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRuleRuleCriteriaOption-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L528">property <b>value</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRuleRuleCriteriaOption-values">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L529">property <b>values</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>values?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
-<h3 class="pdoc-module-header" id="PropertyRulesRuleRuleRuleRuleRule" data-link-title="PropertyRulesRuleRuleRuleRuleRule">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L532">
-        interface <strong>PropertyRulesRuleRuleRuleRuleRule</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PropertyRulesRuleRuleRuleRuleRule</span></code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRuleRuleRule-behaviors">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L533">property <b>behaviors</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>behaviors?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PropertyRulesRuleRuleRuleRuleRuleBehavior'>PropertyRulesRuleRuleRuleRuleRuleBehavior</a>&gt;[]&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRuleRuleRule-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L534">property <b>comment</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>comment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRuleRuleRule-criteriaMatch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L535">property <b>criteriaMatch</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>criteriaMatch?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRuleRuleRule-criterias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L536">property <b>criterias</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>criterias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PropertyRulesRuleRuleRuleRuleRuleCriteria'>PropertyRulesRuleRuleRuleRuleRuleCriteria</a>&gt;[]&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRuleRuleRule-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L537">property <b>name</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h3 class="pdoc-module-header" id="PropertyRulesRuleRuleRuleRuleRuleBehavior" data-link-title="PropertyRulesRuleRuleRuleRuleRuleBehavior">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L540">
-        interface <strong>PropertyRulesRuleRuleRuleRuleRuleBehavior</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PropertyRulesRuleRuleRuleRuleRuleBehavior</span></code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRuleRuleRuleBehavior-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L541">property <b>name</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRuleRuleRuleBehavior-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L542">property <b>options</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>options?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PropertyRulesRuleRuleRuleRuleRuleBehaviorOption'>PropertyRulesRuleRuleRuleRuleRuleBehaviorOption</a>&gt;[]&gt;;</code></pre>
-<h3 class="pdoc-module-header" id="PropertyRulesRuleRuleRuleRuleRuleBehaviorOption" data-link-title="PropertyRulesRuleRuleRuleRuleRuleBehaviorOption">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L545">
-        interface <strong>PropertyRulesRuleRuleRuleRuleRuleBehaviorOption</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PropertyRulesRuleRuleRuleRuleRuleBehaviorOption</span></code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRuleRuleRuleBehaviorOption-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L546">property <b>key</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRuleRuleRuleBehaviorOption-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L547">property <b>value</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRuleRuleRuleBehaviorOption-values">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L548">property <b>values</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>values?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
-<h3 class="pdoc-module-header" id="PropertyRulesRuleRuleRuleRuleRuleCriteria" data-link-title="PropertyRulesRuleRuleRuleRuleRuleCriteria">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L551">
-        interface <strong>PropertyRulesRuleRuleRuleRuleRuleCriteria</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PropertyRulesRuleRuleRuleRuleRuleCriteria</span></code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRuleRuleRuleCriteria-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L552">property <b>name</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRuleRuleRuleCriteria-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L553">property <b>options</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>options?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PropertyRulesRuleRuleRuleRuleRuleCriteriaOption'>PropertyRulesRuleRuleRuleRuleRuleCriteriaOption</a>&gt;[]&gt;;</code></pre>
-<h3 class="pdoc-module-header" id="PropertyRulesRuleRuleRuleRuleRuleCriteriaOption" data-link-title="PropertyRulesRuleRuleRuleRuleRuleCriteriaOption">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L556">
-        interface <strong>PropertyRulesRuleRuleRuleRuleRuleCriteriaOption</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PropertyRulesRuleRuleRuleRuleRuleCriteriaOption</span></code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRuleRuleRuleCriteriaOption-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L557">property <b>key</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRuleRuleRuleCriteriaOption-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L558">property <b>value</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleRuleRuleRuleRuleCriteriaOption-values">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L559">property <b>values</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>values?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
-<h3 class="pdoc-module-header" id="PropertyRulesRuleVariable" data-link-title="PropertyRulesRuleVariable">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L562">
-        interface <strong>PropertyRulesRuleVariable</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PropertyRulesRuleVariable</span></code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleVariable-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L563">property <b>description</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleVariable-hidden">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L564">property <b>hidden</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>hidden: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleVariable-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L565">property <b>name</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleVariable-sensitive">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L566">property <b>sensitive</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>sensitive: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="PropertyRulesRuleVariable-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L567">property <b>value</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h3 class="pdoc-module-header" id="PropertyVariablesVariable" data-link-title="PropertyVariablesVariable">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L570">
-        interface <strong>PropertyVariablesVariable</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PropertyVariablesVariable</span></code></pre>
-<h4 class="pdoc-member-header" id="PropertyVariablesVariable-variables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L571">property <b>variables</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>variables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PropertyVariablesVariableVariable'>PropertyVariablesVariableVariable</a>&gt;[]&gt;;</code></pre>
-<h3 class="pdoc-module-header" id="PropertyVariablesVariableVariable" data-link-title="PropertyVariablesVariableVariable">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L574">
-        interface <strong>PropertyVariablesVariableVariable</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PropertyVariablesVariableVariable</span></code></pre>
-<h4 class="pdoc-member-header" id="PropertyVariablesVariableVariable-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L578">property <b>description</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-
-— (Optional) A human-readable description
-
-<h4 class="pdoc-member-header" id="PropertyVariablesVariableVariable-hidden">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L582">property <b>hidden</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>hidden: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
-
-— (Required) Whether to hide the variable when debugging requests
-
-<h4 class="pdoc-member-header" id="PropertyVariablesVariableVariable-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L586">property <b>name</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-
-— (Required) The name of the variable.
-
-<h4 class="pdoc-member-header" id="PropertyVariablesVariableVariable-sensitive">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L590">property <b>sensitive</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>sensitive: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
-
-— (Required) Whether to obscure the value when debugging requests
-
-<h4 class="pdoc-member-header" id="PropertyVariablesVariableVariable-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L594">property <b>value</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-
-— (Required) The default value to assign to the variable
-
-<h2 id="trafficmanagement" data-link-title="trafficmanagement">namespace <strong>trafficmanagement</strong></h2>
-<h3 class="pdoc-module-header" id="GtmASmapAssignment" data-link-title="GtmASmapAssignment">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L599">
-        interface <strong>GtmASmapAssignment</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GtmASmapAssignment</span></code></pre>
-<h4 class="pdoc-member-header" id="GtmASmapAssignment-asNumbers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L603">property <b>asNumbers</b></a>
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GtmAsmapAssignment</span></code></pre>
+<h4 class="pdoc-member-header" id="GtmAsmapAssignment-asNumbers">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L25">property <b>asNumbers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>asNumbers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;[]&gt;;</code></pre>
-
-— (List)
-
-<h4 class="pdoc-member-header" id="GtmASmapAssignment-datacenterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L604">property <b>datacenterId</b></a>
+<h4 class="pdoc-member-header" id="GtmAsmapAssignment-datacenterId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L26">property <b>datacenterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>datacenterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="GtmASmapAssignment-nickname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L605">property <b>nickname</b></a>
+<h4 class="pdoc-member-header" id="GtmAsmapAssignment-nickname">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L27">property <b>nickname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nickname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h3 class="pdoc-module-header" id="GtmASmapDefaultDatacenter" data-link-title="GtmASmapDefaultDatacenter">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L608">
-        interface <strong>GtmASmapDefaultDatacenter</strong>
+<h3 class="pdoc-module-header" id="GtmAsmapDefaultDatacenter" data-link-title="GtmAsmapDefaultDatacenter">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L30">
+        interface <strong>GtmAsmapDefaultDatacenter</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GtmASmapDefaultDatacenter</span></code></pre>
-<h4 class="pdoc-member-header" id="GtmASmapDefaultDatacenter-datacenterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L609">property <b>datacenterId</b></a>
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GtmAsmapDefaultDatacenter</span></code></pre>
+<h4 class="pdoc-member-header" id="GtmAsmapDefaultDatacenter-datacenterId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L31">property <b>datacenterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>datacenterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="GtmASmapDefaultDatacenter-nickname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L610">property <b>nickname</b></a>
+<h4 class="pdoc-member-header" id="GtmAsmapDefaultDatacenter-nickname">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L32">property <b>nickname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nickname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="GtmCidrmapAssignment" data-link-title="GtmCidrmapAssignment">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L613">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L35">
         interface <strong>GtmCidrmapAssignment</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GtmCidrmapAssignment</span></code></pre>
 <h4 class="pdoc-member-header" id="GtmCidrmapAssignment-blocks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L617">property <b>blocks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L36">property <b>blocks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>blocks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
-
-— (List)
-
 <h4 class="pdoc-member-header" id="GtmCidrmapAssignment-datacenterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L618">property <b>datacenterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L37">property <b>datacenterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>datacenterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmCidrmapAssignment-nickname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L619">property <b>nickname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L38">property <b>nickname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nickname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="GtmCidrmapDefaultDatacenter" data-link-title="GtmCidrmapDefaultDatacenter">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L622">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L41">
         interface <strong>GtmCidrmapDefaultDatacenter</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GtmCidrmapDefaultDatacenter</span></code></pre>
 <h4 class="pdoc-member-header" id="GtmCidrmapDefaultDatacenter-datacenterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L623">property <b>datacenterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L42">property <b>datacenterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>datacenterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmCidrmapDefaultDatacenter-nickname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L624">property <b>nickname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L43">property <b>nickname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nickname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="GtmDatacenterDefaultLoadObject" data-link-title="GtmDatacenterDefaultLoadObject">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L627">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L46">
         interface <strong>GtmDatacenterDefaultLoadObject</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GtmDatacenterDefaultLoadObject</span></code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenterDefaultLoadObject-loadObject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L628">property <b>loadObject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L47">property <b>loadObject</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loadObject?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenterDefaultLoadObject-loadObjectPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L629">property <b>loadObjectPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L48">property <b>loadObjectPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loadObjectPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmDatacenterDefaultLoadObject-loadServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L635">property <b>loadServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L53">property <b>loadServers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loadServers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 
-— (List)
 * `city`
 * `cloneOf`
 
 <h3 class="pdoc-module-header" id="GtmGeomapAssignment" data-link-title="GtmGeomapAssignment">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L638">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L56">
         interface <strong>GtmGeomapAssignment</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GtmGeomapAssignment</span></code></pre>
 <h4 class="pdoc-member-header" id="GtmGeomapAssignment-countries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L642">property <b>countries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L57">property <b>countries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>countries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
-
-— (List)
-
 <h4 class="pdoc-member-header" id="GtmGeomapAssignment-datacenterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L643">property <b>datacenterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L58">property <b>datacenterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>datacenterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmGeomapAssignment-nickname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L644">property <b>nickname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L59">property <b>nickname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nickname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="GtmGeomapDefaultDatacenter" data-link-title="GtmGeomapDefaultDatacenter">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L647">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L62">
         interface <strong>GtmGeomapDefaultDatacenter</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GtmGeomapDefaultDatacenter</span></code></pre>
 <h4 class="pdoc-member-header" id="GtmGeomapDefaultDatacenter-datacenterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L648">property <b>datacenterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L63">property <b>datacenterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>datacenterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmGeomapDefaultDatacenter-nickname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L649">property <b>nickname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L64">property <b>nickname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nickname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="GtmPropertyLivenessTest" data-link-title="GtmPropertyLivenessTest">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L652">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L67">
         interface <strong>GtmPropertyLivenessTest</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GtmPropertyLivenessTest</span></code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-answersRequired">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L656">property <b>answersRequired</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L68">property <b>answersRequired</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>answersRequired?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
-
-— (Boolean)
-
 <h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-disableNonstandardPortWarning">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L661">property <b>disableNonstandardPortWarning</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L72">property <b>disableNonstandardPortWarning</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableNonstandardPortWarning?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-— (Boolean)
 * `errorPenalty`
 
 <h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-disabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L665">property <b>disabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L73">property <b>disabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
-
-— (Boolean)
-
 <h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-errorPenalty">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L666">property <b>errorPenalty</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L74">property <b>errorPenalty</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>errorPenalty?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-httpError3xx">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L670">property <b>httpError3xx</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L75">property <b>httpError3xx</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpError3xx?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
-
-— (Boolean)
-
 <h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-httpError4xx">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L674">property <b>httpError4xx</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L76">property <b>httpError4xx</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpError4xx?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
-
-— (Boolean)
-
 <h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-httpError5xx">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L678">property <b>httpError5xx</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L77">property <b>httpError5xx</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpError5xx?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
-
-— (Boolean)
-
 <h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-httpHeaders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L684">property <b>httpHeaders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L82">property <b>httpHeaders</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpHeaders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#GtmPropertyLivenessTestHttpHeader'>GtmPropertyLivenessTestHttpHeader</a>&gt;[]&gt;;</code></pre>
 
-— (multiple allowed)
 `name`
 `value`
 
 <h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L691">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L89">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-— Liveness test name
+Liveness test name
 * `testInterval`
 * `testObjectProtocol`
 * `testTimeout`
 
 <h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-peerCertificateVerification">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L695">property <b>peerCertificateVerification</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L90">property <b>peerCertificateVerification</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>peerCertificateVerification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
-
-— (Boolean)
-
 <h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-recursionRequested">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L709">property <b>recursionRequested</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L103">property <b>recursionRequested</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recursionRequested?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-— (Boolean)
 * `requestString`
 * `resourceType`
 * `responseString`
@@ -1814,209 +920,198 @@ key name
 * `timeoutPenalty`
 
 <h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-requestString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L710">property <b>requestString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L104">property <b>requestString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-resourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L711">property <b>resourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L105">property <b>resourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-responseString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L712">property <b>responseString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L106">property <b>responseString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-sslClientCertificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L713">property <b>sslClientCertificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L107">property <b>sslClientCertificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sslClientCertificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-sslClientPrivateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L714">property <b>sslClientPrivateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L108">property <b>sslClientPrivateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sslClientPrivateKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-testInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L715">property <b>testInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L109">property <b>testInterval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>testInterval: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-testObject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L716">property <b>testObject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L110">property <b>testObject</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>testObject: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-testObjectPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L717">property <b>testObjectPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L111">property <b>testObjectPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>testObjectPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-testObjectPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L718">property <b>testObjectPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L112">property <b>testObjectPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>testObjectPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-testObjectProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L719">property <b>testObjectProtocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L113">property <b>testObjectProtocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>testObjectProtocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-testObjectUsername">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L720">property <b>testObjectUsername</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L114">property <b>testObjectUsername</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>testObjectUsername?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-testTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L721">property <b>testTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L115">property <b>testTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>testTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyLivenessTest-timeoutPenalty">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L722">property <b>timeoutPenalty</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L116">property <b>timeoutPenalty</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeoutPenalty?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="GtmPropertyLivenessTestHttpHeader" data-link-title="GtmPropertyLivenessTestHttpHeader">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L725">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L119">
         interface <strong>GtmPropertyLivenessTestHttpHeader</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GtmPropertyLivenessTestHttpHeader</span></code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyLivenessTestHttpHeader-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L732">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L126">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-— Liveness test name
+Liveness test name
 * `testInterval`
 * `testObjectProtocol`
 * `testTimeout`
 
 <h4 class="pdoc-member-header" id="GtmPropertyLivenessTestHttpHeader-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L733">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L127">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="GtmPropertyStaticRrSet" data-link-title="GtmPropertyStaticRrSet">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L736">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L130">
         interface <strong>GtmPropertyStaticRrSet</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GtmPropertyStaticRrSet</span></code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyStaticRrSet-rdatas">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L740">property <b>rdatas</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L131">property <b>rdatas</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rdatas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
-
-— (List)
-
 <h4 class="pdoc-member-header" id="GtmPropertyStaticRrSet-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L741">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L132">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyStaticRrSet-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L746">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L137">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-— Property type
+Property type
 * `scoreAggregationType`
 
 <h3 class="pdoc-module-header" id="GtmPropertyTrafficTarget" data-link-title="GtmPropertyTrafficTarget">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L749">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L140">
         interface <strong>GtmPropertyTrafficTarget</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GtmPropertyTrafficTarget</span></code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyTrafficTarget-datacenterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L750">property <b>datacenterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L141">property <b>datacenterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>datacenterId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyTrafficTarget-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L755">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L145">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-— (Boolean)
 * `weight`
 
 <h4 class="pdoc-member-header" id="GtmPropertyTrafficTarget-handoutCname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L756">property <b>handoutCname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L146">property <b>handoutCname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>handoutCname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmPropertyTrafficTarget-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L763">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L153">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-— Liveness test name
+Liveness test name
 * `testInterval`
 * `testObjectProtocol`
 * `testTimeout`
 
 <h4 class="pdoc-member-header" id="GtmPropertyTrafficTarget-servers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L767">property <b>servers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L154">property <b>servers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>servers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
-
-— (List)
-
 <h4 class="pdoc-member-header" id="GtmPropertyTrafficTarget-weight">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L768">property <b>weight</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L155">property <b>weight</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>weight?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="GtmResourceResourceInstance" data-link-title="GtmResourceResourceInstance">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L771">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L158">
         interface <strong>GtmResourceResourceInstance</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GtmResourceResourceInstance</span></code></pre>
 <h4 class="pdoc-member-header" id="GtmResourceResourceInstance-datacenterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L772">property <b>datacenterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L159">property <b>datacenterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>datacenterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResourceResourceInstance-loadObject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L773">property <b>loadObject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L160">property <b>loadObject</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loadObject?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResourceResourceInstance-loadObjectPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L774">property <b>loadObjectPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L161">property <b>loadObjectPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loadObjectPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="GtmResourceResourceInstance-loadServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L778">property <b>loadServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L162">property <b>loadServers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loadServers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
-
-— (List)
-
 <h4 class="pdoc-member-header" id="GtmResourceResourceInstance-useDefaultLoadObject">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L791">property <b>useDefaultLoadObject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L174">property <b>useDefaultLoadObject</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useDefaultLoadObject?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-— (Boolean)
 * `hostHeader`
 * `leastSquaresDecay`
 * `upperBound`
@@ -2027,103 +1122,353 @@ key name
 * `maxUMultiplicativeIncrement`
 * `decayRate`
 
-
-
-
-<h2 id="apis">APIs</h2>
-<h3 class="pdoc-module-header" id="ProviderDn" data-link-title="ProviderDn">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L8">
-        interface <strong>ProviderDn</strong>
+<h3 class="pdoc-module-header" id="PropertyOrigin" data-link-title="PropertyOrigin">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L177">
+        interface <strong>PropertyOrigin</strong>
     </a>
 </h3>
 
-<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ProviderDn</span></code></pre>
-<h4 class="pdoc-member-header" id="ProviderDn-accessToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L9">property <b>accessToken</b></a>
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PropertyOrigin</span></code></pre>
+<h4 class="pdoc-member-header" id="PropertyOrigin-cacheKeyHostname">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L178">property <b>cacheKeyHostname</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>cacheKeyHostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="PropertyOrigin-compress">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L179">property <b>compress</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>compress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="PropertyOrigin-enableTrueClientIp">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L180">property <b>enableTrueClientIp</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>enableTrueClientIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="PropertyOrigin-forwardHostname">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L181">property <b>forwardHostname</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>forwardHostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="PropertyOrigin-hostname">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L182">property <b>hostname</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>hostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="PropertyOrigin-port">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L183">property <b>port</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+<h3 class="pdoc-module-header" id="PropertyRuleError" data-link-title="PropertyRuleError">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L186">
+        interface <strong>PropertyRuleError</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PropertyRuleError</span></code></pre>
+<h4 class="pdoc-member-header" id="PropertyRuleError-behaviorName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L187">property <b>behaviorName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>behaviorName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="PropertyRuleError-detail">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L188">property <b>detail</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>detail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="PropertyRuleError-errorLocation">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L189">property <b>errorLocation</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>errorLocation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="PropertyRuleError-instance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L190">property <b>instance</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>instance?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="PropertyRuleError-statusCode">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L191">property <b>statusCode</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>statusCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="PropertyRuleError-title">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L192">property <b>title</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>title?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="PropertyRuleError-type">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L193">property <b>type</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h3 class="pdoc-module-header" id="PropertyRuleWarning" data-link-title="PropertyRuleWarning">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L196">
+        interface <strong>PropertyRuleWarning</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PropertyRuleWarning</span></code></pre>
+<h4 class="pdoc-member-header" id="PropertyRuleWarning-behaviorName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L197">property <b>behaviorName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>behaviorName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="PropertyRuleWarning-detail">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L198">property <b>detail</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>detail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="PropertyRuleWarning-errorLocation">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L199">property <b>errorLocation</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>errorLocation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="PropertyRuleWarning-instance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L200">property <b>instance</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>instance?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="PropertyRuleWarning-statusCode">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L201">property <b>statusCode</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>statusCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="PropertyRuleWarning-title">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L202">property <b>title</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>title?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="PropertyRuleWarning-type">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L203">property <b>type</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h3 class="pdoc-module-header" id="PropertyVariablesVariable" data-link-title="PropertyVariablesVariable">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L206">
+        interface <strong>PropertyVariablesVariable</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PropertyVariablesVariable</span></code></pre>
+<h4 class="pdoc-member-header" id="PropertyVariablesVariable-variables">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L207">property <b>variables</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>variables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PropertyVariablesVariableVariable'>PropertyVariablesVariableVariable</a>&gt;[]&gt;;</code></pre>
+<h3 class="pdoc-module-header" id="PropertyVariablesVariableVariable" data-link-title="PropertyVariablesVariableVariable">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L210">
+        interface <strong>PropertyVariablesVariableVariable</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PropertyVariablesVariableVariable</span></code></pre>
+<h4 class="pdoc-member-header" id="PropertyVariablesVariableVariable-description">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L211">property <b>description</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="PropertyVariablesVariableVariable-hidden">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L212">property <b>hidden</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>hidden: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="PropertyVariablesVariableVariable-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L213">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="PropertyVariablesVariableVariable-sensitive">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L214">property <b>sensitive</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>sensitive: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="PropertyVariablesVariableVariable-value">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L215">property <b>value</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h3 class="pdoc-module-header" id="ProviderAppsec" data-link-title="ProviderAppsec">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L218">
+        interface <strong>ProviderAppsec</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ProviderAppsec</span></code></pre>
+<h4 class="pdoc-member-header" id="ProviderAppsec-accessToken">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L219">property <b>accessToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="ProviderDn-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L10">property <b>clientSecret</b></a>
+<h4 class="pdoc-member-header" id="ProviderAppsec-accountKey">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L220">property <b>accountKey</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>accountKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="ProviderAppsec-clientSecret">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L221">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="ProviderDn-clientToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L11">property <b>clientToken</b></a>
+<h4 class="pdoc-member-header" id="ProviderAppsec-clientToken">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L222">property <b>clientToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="ProviderDn-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L12">property <b>host</b></a>
+<h4 class="pdoc-member-header" id="ProviderAppsec-host">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L223">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>host?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-<h4 class="pdoc-member-header" id="ProviderDn-maxBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L13">property <b>maxBody</b></a>
+<h4 class="pdoc-member-header" id="ProviderAppsec-maxBody">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L224">property <b>maxBody</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>maxBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+<h3 class="pdoc-module-header" id="ProviderConfig" data-link-title="ProviderConfig">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L227">
+        interface <strong>ProviderConfig</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ProviderConfig</span></code></pre>
+<h4 class="pdoc-member-header" id="ProviderConfig-accessToken">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L228">property <b>accessToken</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>accessToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="ProviderConfig-accountKey">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L229">property <b>accountKey</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>accountKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="ProviderConfig-clientSecret">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L230">property <b>clientSecret</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>clientSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="ProviderConfig-clientToken">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L231">property <b>clientToken</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>clientToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="ProviderConfig-host">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L232">property <b>host</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>host?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="ProviderConfig-maxBody">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L233">property <b>maxBody</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>maxBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+<h3 class="pdoc-module-header" id="ProviderDns" data-link-title="ProviderDns">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L236">
+        interface <strong>ProviderDns</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ProviderDns</span></code></pre>
+<h4 class="pdoc-member-header" id="ProviderDns-accessToken">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L237">property <b>accessToken</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>accessToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="ProviderDns-accountKey">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L238">property <b>accountKey</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>accountKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="ProviderDns-clientSecret">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L239">property <b>clientSecret</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>clientSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="ProviderDns-clientToken">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L240">property <b>clientToken</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>clientToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="ProviderDns-host">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L241">property <b>host</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>host?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="ProviderDns-maxBody">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L242">property <b>maxBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ProviderGtm" data-link-title="ProviderGtm">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L245">
         interface <strong>ProviderGtm</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ProviderGtm</span></code></pre>
 <h4 class="pdoc-member-header" id="ProviderGtm-accessToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L17">property <b>accessToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L246">property <b>accessToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="ProviderGtm-accountKey">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L247">property <b>accountKey</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>accountKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderGtm-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L18">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L248">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderGtm-clientToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L19">property <b>clientToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L249">property <b>clientToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderGtm-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L20">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L250">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>host?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderGtm-maxBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L21">property <b>maxBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L251">property <b>maxBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ProviderProperty" data-link-title="ProviderProperty">
-    <a href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L254">
         interface <strong>ProviderProperty</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ProviderProperty</span></code></pre>
 <h4 class="pdoc-member-header" id="ProviderProperty-accessToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L25">property <b>accessToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L255">property <b>accessToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="ProviderProperty-accountKey">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L256">property <b>accountKey</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>accountKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderProperty-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L26">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L257">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderProperty-clientToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L27">property <b>clientToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L258">property <b>clientToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderProperty-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L28">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L259">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>host?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderProperty-maxBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/fcfa49b3a4c333877d6dd8112b29ec315eb6440a/sdk/nodejs/types/input.ts#L29">property <b>maxBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-akamai/blob/d905d77c417a09f1243fecb34ad59ca0aa7657e1/sdk/nodejs/types/input.ts#L260">property <b>maxBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
