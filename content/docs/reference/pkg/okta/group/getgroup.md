@@ -153,7 +153,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}type of the group to retrieve.
+    <dd>{{% md %}}type of the group to retrieve. Can only be one of `OKTA_GROUP` (Native Okta Groups), `APP_GROUP`
+(Imported App Groups), or `BUILT_IN` (Okta System Groups).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -189,7 +190,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}type of the group to retrieve.
+    <dd>{{% md %}}type of the group to retrieve. Can only be one of `OKTA_GROUP` (Native Okta Groups), `APP_GROUP`
+(Imported App Groups), or `BUILT_IN` (Okta System Groups).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -225,7 +227,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}type of the group to retrieve.
+    <dd>{{% md %}}type of the group to retrieve. Can only be one of `OKTA_GROUP` (Native Okta Groups), `APP_GROUP`
+(Imported App Groups), or `BUILT_IN` (Okta System Groups).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -261,7 +264,8 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}type of the group to retrieve.
+    <dd>{{% md %}}type of the group to retrieve. Can only be one of `OKTA_GROUP` (Native Okta Groups), `APP_GROUP`
+(Imported App Groups), or `BUILT_IN` (Okta System Groups).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
