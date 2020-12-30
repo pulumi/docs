@@ -31,6 +31,7 @@ class MyStack : Stack
         var example = new AliCloud.MaxCompute.Project("example", new AliCloud.MaxCompute.ProjectArgs
         {
             OrderType = "PayAsYouGo",
+            ProjectName = "tf_maxcompute_project",
             SpecificationType = "OdpsStandard",
         });
     }
@@ -53,6 +54,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := maxcompute.NewProject(ctx, "example", &maxcompute.ProjectArgs{
 			OrderType:         pulumi.String("PayAsYouGo"),
+			ProjectName:       pulumi.String("tf_maxcompute_project"),
 			SpecificationType: pulumi.String("OdpsStandard"),
 		})
 		if err != nil {
@@ -72,6 +74,7 @@ import pulumi_alicloud as alicloud
 
 example = alicloud.maxcompute.Project("example",
     order_type="PayAsYouGo",
+    project_name="tf_maxcompute_project",
     specification_type="OdpsStandard")
 ```
 
@@ -85,6 +88,7 @@ import * as alicloud from "@pulumi/alicloud";
 
 const example = new alicloud.maxcompute.Project("example", {
     orderType: "PayAsYouGo",
+    projectName: "tf_maxcompute_project",
     specificationType: "OdpsStandard",
 });
 ```
@@ -103,7 +107,7 @@ const example = new alicloud.maxcompute.Project("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/maxcompute/#pulumi_alicloud.maxcompute.Project">Project</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">order_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">specification_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/maxcompute/#pulumi_alicloud.maxcompute.Project">Project</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">order_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">specification_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -302,6 +306,16 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}It has been deprecated from provider version 1.110.0 and `project_name` instead.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="projectname_csharp">
+<a href="#projectname_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}The name of the maxcompute project.
 {{% /md %}}</dd>
 </dl>
@@ -334,6 +348,16 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}It has been deprecated from provider version 1.110.0 and `project_name` instead.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="projectname_go">
+<a href="#projectname_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -374,6 +398,16 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}It has been deprecated from provider version 1.110.0 and `project_name` instead.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="projectname_nodejs">
+<a href="#projectname_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}The name of the maxcompute project.
 {{% /md %}}</dd>
 </dl>
@@ -406,6 +440,16 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}It has been deprecated from provider version 1.110.0 and `project_name` instead.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="project_name_python">
+<a href="#project_name_python" style="color: inherit; text-decoration: inherit;">project_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -495,7 +539,7 @@ Get an existing Project resource's state with the given name, ID, and optional e
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">order_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">specification_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Project</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">order_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">specification_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Project</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -616,7 +660,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the maxcompute project.
+    <dd>{{% md %}}It has been deprecated from provider version 1.110.0 and `project_name` instead.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -627,6 +671,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of payment, only `PayAsYouGo` supported currently.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_projectname_csharp">
+<a href="#state_projectname_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the maxcompute project.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -652,7 +706,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the maxcompute project.
+    <dd>{{% md %}}It has been deprecated from provider version 1.110.0 and `project_name` instead.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -663,6 +717,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of payment, only `PayAsYouGo` supported currently.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_projectname_go">
+<a href="#state_projectname_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the maxcompute project.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -688,7 +752,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the maxcompute project.
+    <dd>{{% md %}}It has been deprecated from provider version 1.110.0 and `project_name` instead.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -699,6 +763,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of payment, only `PayAsYouGo` supported currently.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_projectname_nodejs">
+<a href="#state_projectname_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the maxcompute project.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -724,7 +798,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the maxcompute project.
+    <dd>{{% md %}}It has been deprecated from provider version 1.110.0 and `project_name` instead.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -735,6 +809,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of payment, only `PayAsYouGo` supported currently.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_project_name_python">
+<a href="#state_project_name_python" style="color: inherit; text-decoration: inherit;">project_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the maxcompute project.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

@@ -121,7 +121,7 @@ export const firstFnfScheduleId = example.then(example => example.schedules[0].i
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_schedules(</span><span class="nx">flow_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSchedulesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_schedules(</span><span class="nx">flow_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">limit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetSchedulesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -164,6 +164,16 @@ The following arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of Schedule IDs.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="limit_csharp">
+<a href="#limit_csharp" style="color: inherit; text-decoration: inherit;">Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of resource queries.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -212,6 +222,16 @@ The following arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="limit_go">
+<a href="#limit_go" style="color: inherit; text-decoration: inherit;">Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of resource queries.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="nameregex_go">
 <a href="#nameregex_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
 </span>
@@ -257,6 +277,16 @@ The following arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="limit_nodejs">
+<a href="#limit_nodejs" style="color: inherit; text-decoration: inherit;">limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of resource queries.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="nameregex_nodejs">
 <a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
 </span>
@@ -299,6 +329,16 @@ The following arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of Schedule IDs.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="limit_python">
+<a href="#limit_python" style="color: inherit; text-decoration: inherit;">limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of resource queries.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -382,6 +422,15 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="limit_csharp">
+<a href="#limit_csharp" style="color: inherit; text-decoration: inherit;">Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="nameregex_csharp">
 <a href="#nameregex_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
 </span>
@@ -448,6 +497,15 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getschedulesschedule">[]Get<wbr>Schedules<wbr>Schedule</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="limit_go">
+<a href="#limit_go" style="color: inherit; text-decoration: inherit;">Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -522,6 +580,15 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="limit_nodejs">
+<a href="#limit_nodejs" style="color: inherit; text-decoration: inherit;">limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="nameregex_nodejs">
 <a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
 </span>
@@ -588,6 +655,15 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getschedulesschedule">Sequence[Get<wbr>Schedules<wbr>Schedule]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="limit_python">
+<a href="#limit_python" style="color: inherit; text-decoration: inherit;">limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"

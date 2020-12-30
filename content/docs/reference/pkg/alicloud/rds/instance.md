@@ -526,7 +526,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The key id of the KMS. Used for encrypting a disk if not null. Only for PostgreSQL.
+    <dd>{{% md %}}The key id of the KMS. Used for encrypting a disk if not null. Only for PostgreSQL, MySQL.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -849,7 +849,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The key id of the KMS. Used for encrypting a disk if not null. Only for PostgreSQL.
+    <dd>{{% md %}}The key id of the KMS. Used for encrypting a disk if not null. Only for PostgreSQL, MySQL.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1172,7 +1172,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The key id of the KMS. Used for encrypting a disk if not null. Only for PostgreSQL.
+    <dd>{{% md %}}The key id of the KMS. Used for encrypting a disk if not null. Only for PostgreSQL, MySQL.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1495,7 +1495,7 @@ Note: There is extra 5 GB storage for SQL Server Instance and it is not in speci
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The key id of the KMS. Used for encrypting a disk if not null. Only for PostgreSQL.
+    <dd>{{% md %}}The key id of the KMS. Used for encrypting a disk if not null. Only for PostgreSQL, MySQL.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2092,7 +2092,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The key id of the KMS. Used for encrypting a disk if not null. Only for PostgreSQL.
+    <dd>{{% md %}}The key id of the KMS. Used for encrypting a disk if not null. Only for PostgreSQL, MySQL.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2445,7 +2445,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The key id of the KMS. Used for encrypting a disk if not null. Only for PostgreSQL.
+    <dd>{{% md %}}The key id of the KMS. Used for encrypting a disk if not null. Only for PostgreSQL, MySQL.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2798,7 +2798,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The key id of the KMS. Used for encrypting a disk if not null. Only for PostgreSQL.
+    <dd>{{% md %}}The key id of the KMS. Used for encrypting a disk if not null. Only for PostgreSQL, MySQL.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3151,7 +3151,7 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The key id of the KMS. Used for encrypting a disk if not null. Only for PostgreSQL.
+    <dd>{{% md %}}The key id of the KMS. Used for encrypting a disk if not null. Only for PostgreSQL, MySQL.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

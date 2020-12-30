@@ -3,7 +3,7 @@ title: "Module ros"
 title_tag: "Module ros | Package @pulumi/alicloud | Node.js SDK"
 linktitle: "ros"
 meta_desc: "Explore members of the ros module in the @pulumi/alicloud package."
-git_sha: "34bfe92dd27a93a08be385d80a27b12f6378de00"
+git_sha: "ba11fd33d15635f294823990be8ffe1564fe697d"
 block_external_search_index: true
 ---
 
@@ -54,7 +54,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="ChangeSet" data-link-title="ChangeSet">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L40">
         Resource <strong>ChangeSet</strong>
     </a>
 </h3>
@@ -93,7 +93,7 @@ ROS Change Set can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="ChangeSet-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L143"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L143"> <b>constructor</b></a>
 </h4>
 
 
@@ -107,7 +107,7 @@ Create a ChangeSet resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ChangeSet-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L50">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L50">method <b>get</b></a>
 </h4>
 
 
@@ -118,14 +118,14 @@ Get an existing ChangeSet resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ChangeSet-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L40">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L40">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ChangeSet-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L61">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L61">method <b>isInstance</b></a>
 </h4>
 
 
@@ -136,7 +136,7 @@ Returns true if the given object is an instance of ChangeSet.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ChangeSet-changeSetName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L71">property <b>changeSetName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L71">property <b>changeSetName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>changeSetName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -144,7 +144,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the change set.  The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or letter.
 
 <h4 class="pdoc-member-header" id="ChangeSet-changeSetType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L75">property <b>changeSetType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L75">property <b>changeSetType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>changeSetType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -152,7 +152,7 @@ The name of the change set.  The name can be up to 255 characters in length and 
 The type of the change set. Valid values:  CREATE: creates a change set for a new stack. UPDATE: creates a change set for an existing stack. IMPORT: creates a change set for a new stack or an existing stack to import non-ROS-managed resources. If you create a change set for a new stack, ROS creates a stack that has a unique stack ID. The stack is in the REVIEW_IN_PROGRESS state until you execute the change set.  You cannot use the UPDATE type to create a change set for a new stack or the CREATE type to create a change set for an existing stack.
 
 <h4 class="pdoc-member-header" id="ChangeSet-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L79">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L79">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -160,7 +160,7 @@ The type of the change set. Valid values:  CREATE: creates a change set for a ne
 The description of the change set. The description can be up to 1,024 bytes in length.
 
 <h4 class="pdoc-member-header" id="ChangeSet-disableRollback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L83">property <b>disableRollback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L83">property <b>disableRollback</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>disableRollback: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -168,7 +168,7 @@ The description of the change set. The description can be up to 1,024 bytes in l
 Specifies whether to disable rollback on stack creation failure. Default value: false.  Valid values:  true: disables rollback on stack creation failure. false: enables rollback on stack creation failure. Note This parameter takes effect only when ChangeSetType is set to CREATE or IMPORT.
 
 <h4 class="pdoc-member-header" id="ChangeSet-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L40">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L40">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -177,7 +177,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ChangeSet-notificationUrls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L87">property <b>notificationUrls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L87">property <b>notificationUrls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notificationUrls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -185,7 +185,7 @@ deployments and may be missing (undefined) during planning phases.
 The notification urls.
 
 <h4 class="pdoc-member-header" id="ChangeSet-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L91">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L91">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ChangeSetParameter'>ChangeSetParameter</a>[]&gt;;</code></pre>
@@ -193,7 +193,7 @@ The notification urls.
 Parameters.
 
 <h4 class="pdoc-member-header" id="ChangeSet-ramRoleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L95">property <b>ramRoleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L95">property <b>ramRoleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ramRoleName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -201,7 +201,7 @@ Parameters.
 The ram role name.
 
 <h4 class="pdoc-member-header" id="ChangeSet-replacementOption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L99">property <b>replacementOption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L99">property <b>replacementOption</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>replacementOption: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -209,7 +209,7 @@ The ram role name.
 The replacement option.
 
 <h4 class="pdoc-member-header" id="ChangeSet-stackId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L103">property <b>stackId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L103">property <b>stackId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>stackId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -217,7 +217,7 @@ The replacement option.
 The ID of the stack for which you want to create the change set. ROS generates the change set by comparing the stack information with the information that you submit, such as a modified template or different inputs.
 
 <h4 class="pdoc-member-header" id="ChangeSet-stackName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L107">property <b>stackName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L107">property <b>stackName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>stackName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -225,7 +225,7 @@ The ID of the stack for which you want to create the change set. ROS generates t
 The name of the stack for which you want to create the change set.  The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or letter.  Note This parameter takes effect only when ChangeSetType is set to CREATE or IMPORT.
 
 <h4 class="pdoc-member-header" id="ChangeSet-stackPolicyBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L111">property <b>stackPolicyBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L111">property <b>stackPolicyBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>stackPolicyBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -233,7 +233,7 @@ The name of the stack for which you want to create the change set.  The name can
 The stack policy body.
 
 <h4 class="pdoc-member-header" id="ChangeSet-stackPolicyDuringUpdateBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L115">property <b>stackPolicyDuringUpdateBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L115">property <b>stackPolicyDuringUpdateBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>stackPolicyDuringUpdateBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -241,7 +241,7 @@ The stack policy body.
 The stack policy during update body.
 
 <h4 class="pdoc-member-header" id="ChangeSet-stackPolicyDuringUpdateUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L119">property <b>stackPolicyDuringUpdateUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L119">property <b>stackPolicyDuringUpdateUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>stackPolicyDuringUpdateUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -249,7 +249,7 @@ The stack policy during update body.
 The stack policy during update url.
 
 <h4 class="pdoc-member-header" id="ChangeSet-stackPolicyUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L123">property <b>stackPolicyUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L123">property <b>stackPolicyUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>stackPolicyUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -257,7 +257,7 @@ The stack policy during update url.
 The stack policy url.
 
 <h4 class="pdoc-member-header" id="ChangeSet-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L127">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L127">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -265,7 +265,7 @@ The stack policy url.
 The status of the change set.
 
 <h4 class="pdoc-member-header" id="ChangeSet-templateBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L131">property <b>templateBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L131">property <b>templateBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>templateBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -273,7 +273,7 @@ The status of the change set.
 The structure that contains the template body. The template body must be 1 to 524,288 bytes in length.  If the length of the template body is longer than required, we recommend that you add parameters to the HTTP POST request body to avoid request failures due to excessive length of URLs.  You can specify one of TemplateBody or TemplateURL parameters, but you cannot specify both of them.
 
 <h4 class="pdoc-member-header" id="ChangeSet-templateUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L135">property <b>templateUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L135">property <b>templateUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>templateUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -281,7 +281,7 @@ The structure that contains the template body. The template body must be 1 to 52
 The template url.
 
 <h4 class="pdoc-member-header" id="ChangeSet-timeoutInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L139">property <b>timeoutInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L139">property <b>timeoutInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>timeoutInMinutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -289,7 +289,7 @@ The template url.
 Timeout In Minutes.
 
 <h4 class="pdoc-member-header" id="ChangeSet-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L40">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L40">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -298,7 +298,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ChangeSet-usePreviousParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L143">property <b>usePreviousParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L143">property <b>usePreviousParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>usePreviousParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -306,7 +306,7 @@ deployments.
 The use previous parameters.
 
 <h3 class="pdoc-module-header" id="Stack" data-link-title="Stack">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L49">
         Resource <strong>Stack</strong>
     </a>
 </h3>
@@ -354,7 +354,7 @@ ROS Stack can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Stack-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L160"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L160"> <b>constructor</b></a>
 </h4>
 
 
@@ -368,7 +368,7 @@ Create a Stack resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Stack-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L59">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L59">method <b>get</b></a>
 </h4>
 
 
@@ -379,14 +379,14 @@ Get an existing Stack resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Stack-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L49">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L49">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Stack-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L70">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L70">method <b>isInstance</b></a>
 </h4>
 
 
@@ -397,7 +397,7 @@ Returns true if the given object is an instance of Stack.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Stack-createOption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L80">property <b>createOption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L80">property <b>createOption</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createOption: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -405,7 +405,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Specifies whether to delete the stack after it is created.
 
 <h4 class="pdoc-member-header" id="Stack-deletionProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L84">property <b>deletionProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L84">property <b>deletionProtection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deletionProtection: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -413,7 +413,7 @@ Specifies whether to delete the stack after it is created.
 Specifies whether to enable deletion protection on the stack. Valid values: `Disabled`, `Enabled`. Default to: `Disabled`
 
 <h4 class="pdoc-member-header" id="Stack-disableRollback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L88">property <b>disableRollback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L88">property <b>disableRollback</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>disableRollback: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -421,7 +421,7 @@ Specifies whether to enable deletion protection on the stack. Valid values: `Dis
 Specifies whether to disable rollback on stack creation failure. Default to: `false`.
 
 <h4 class="pdoc-member-header" id="Stack-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L49">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L49">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -430,7 +430,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Stack-notificationUrls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L92">property <b>notificationUrls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L92">property <b>notificationUrls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notificationUrls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -438,7 +438,7 @@ deployments and may be missing (undefined) during planning phases.
 The callback URL for receiving stack event N. Only HTTP POST is supported. Maximum value of N: 5.
 
 <h4 class="pdoc-member-header" id="Stack-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L96">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L96">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#StackParameter'>StackParameter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -446,7 +446,7 @@ The callback URL for receiving stack event N. Only HTTP POST is supported. Maxim
 The parameters. If the parameter name and value are not specified, ROS will use the default value specified in the template.
 
 <h4 class="pdoc-member-header" id="Stack-ramRoleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L100">property <b>ramRoleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L100">property <b>ramRoleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ramRoleName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -454,7 +454,7 @@ The parameters. If the parameter name and value are not specified, ROS will use 
 The name of the RAM role. ROS assumes the specified RAM role to create the stack and call API operations by using the credentials of the role.
 
 <h4 class="pdoc-member-header" id="Stack-replacementOption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L104">property <b>replacementOption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L104">property <b>replacementOption</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>replacementOption: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -462,7 +462,7 @@ The name of the RAM role. ROS assumes the specified RAM role to create the stack
 Specifies whether to enable replacement update after a resource attribute that does not support modification update is changed. Modification update keeps the physical ID of the resource unchanged. However, the resource is deleted and then recreated, and its physical ID is changed if replacement update is enabled.
 
 <h4 class="pdoc-member-header" id="Stack-retainAllResources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L108">property <b>retainAllResources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L108">property <b>retainAllResources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>retainAllResources: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -470,7 +470,7 @@ Specifies whether to enable replacement update after a resource attribute that d
 The retain all resources.
 
 <h4 class="pdoc-member-header" id="Stack-retainResources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L112">property <b>retainResources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L112">property <b>retainResources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>retainResources: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -478,7 +478,7 @@ The retain all resources.
 Specifies whether to retain the resources in the stack.
 
 <h4 class="pdoc-member-header" id="Stack-stackName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L116">property <b>stackName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L116">property <b>stackName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>stackName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -486,7 +486,7 @@ Specifies whether to retain the resources in the stack.
 The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or letter.
 
 <h4 class="pdoc-member-header" id="Stack-stackPolicyBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L120">property <b>stackPolicyBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L120">property <b>stackPolicyBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>stackPolicyBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -494,7 +494,7 @@ The name can be up to 255 characters in length and can contain digits, letters, 
 The structure that contains the stack policy body. The stack policy body must be 1 to 16,384 bytes in length.
 
 <h4 class="pdoc-member-header" id="Stack-stackPolicyDuringUpdateBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L124">property <b>stackPolicyDuringUpdateBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L124">property <b>stackPolicyDuringUpdateBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>stackPolicyDuringUpdateBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -502,7 +502,7 @@ The structure that contains the stack policy body. The stack policy body must be
 The structure that contains the body of the temporary overriding stack policy. The stack policy body must be 1 to 16,384 bytes in length.
 
 <h4 class="pdoc-member-header" id="Stack-stackPolicyDuringUpdateUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L128">property <b>stackPolicyDuringUpdateUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L128">property <b>stackPolicyDuringUpdateUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>stackPolicyDuringUpdateUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -510,7 +510,7 @@ The structure that contains the body of the temporary overriding stack policy. T
 The URL of the file that contains the temporary overriding stack policy. The URL must point to a policy located in an HTTP or HTTPS web server or an Alibaba Cloud OSS bucket. Examples: oss://ros/stack-policy/demo and oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The policy can be up to 16,384 bytes in length and the URL can be up to 1,350 bytes in length. If the region of the OSS bucket is not specified, the RegionId value is used by default.
 
 <h4 class="pdoc-member-header" id="Stack-stackPolicyUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L132">property <b>stackPolicyUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L132">property <b>stackPolicyUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>stackPolicyUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -518,7 +518,7 @@ The URL of the file that contains the temporary overriding stack policy. The URL
 The URL of the file that contains the stack policy. The URL must point to a policy located in an HTTP or HTTPS web server or an Alibaba Cloud OSS bucket. Examples: oss://ros/stack-policy/demo and oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The policy can be up to 16,384 bytes in length and the URL can be up to 1,350 bytes in length. If the region of the OSS bucket is not specified, the RegionId value is used by default.
 
 <h4 class="pdoc-member-header" id="Stack-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L136">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L136">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -526,7 +526,7 @@ The URL of the file that contains the stack policy. The URL must point to a poli
 The status of Stack.
 
 <h4 class="pdoc-member-header" id="Stack-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L140">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L140">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -534,7 +534,7 @@ The status of Stack.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Stack-templateBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L144">property <b>templateBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L144">property <b>templateBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>templateBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -542,7 +542,7 @@ A mapping of tags to assign to the resource.
 The structure that contains the template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body is longer than required, we recommend that you add parameters to the HTTP POST request body to avoid request failures due to excessive length of URLs.
 
 <h4 class="pdoc-member-header" id="Stack-templateUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L148">property <b>templateUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L148">property <b>templateUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>templateUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -550,7 +550,7 @@ The structure that contains the template body. The template body must be 1 to 52
 The URL of the file that contains the template body. The URL must point to a template located in an HTTP or HTTPS web server or an Alibaba Cloud OSS bucket. Examples: oss://ros/template/demo and oss://ros/template/demo?RegionId=cn-hangzhou. The template must be 1 to 524,288 bytes in length. If the region of the OSS bucket is not specified, the RegionId value is used by default.
 
 <h4 class="pdoc-member-header" id="Stack-templateVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L152">property <b>templateVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L152">property <b>templateVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>templateVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -558,7 +558,7 @@ The URL of the file that contains the template body. The URL must point to a tem
 The version of the template.
 
 <h4 class="pdoc-member-header" id="Stack-timeoutInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L156">property <b>timeoutInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L156">property <b>timeoutInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>timeoutInMinutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -566,7 +566,7 @@ The version of the template.
 The timeout period that is specified for the stack creation request. Default to: `60`.
 
 <h4 class="pdoc-member-header" id="Stack-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L49">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L49">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -575,7 +575,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Stack-usePreviousParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L160">property <b>usePreviousParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L160">property <b>usePreviousParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>usePreviousParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -583,7 +583,7 @@ deployments.
 Specifies whether to use the values that were passed last time for the parameters that you do not specify in the current request.
 
 <h3 class="pdoc-module-header" id="StackGroup" data-link-title="StackGroup">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L40">
         Resource <strong>StackGroup</strong>
     </a>
 </h3>
@@ -622,7 +622,7 @@ ROS Stack Group can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="StackGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L123"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L123"> <b>constructor</b></a>
 </h4>
 
 
@@ -636,7 +636,7 @@ Create a StackGroup resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="StackGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L50">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L50">method <b>get</b></a>
 </h4>
 
 
@@ -647,14 +647,14 @@ Get an existing StackGroup resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="StackGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L40">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L40">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="StackGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L61">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L61">method <b>isInstance</b></a>
 </h4>
 
 
@@ -665,7 +665,7 @@ Returns true if the given object is an instance of StackGroup.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="StackGroup-accountIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L71">property <b>accountIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L71">property <b>accountIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -673,7 +673,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The list of target account IDs, in JSON format. A maximum of 20 accounts can be specified.
 
 <h4 class="pdoc-member-header" id="StackGroup-administrationRoleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L75">property <b>administrationRoleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L75">property <b>administrationRoleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>administrationRoleName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -681,7 +681,7 @@ The list of target account IDs, in JSON format. A maximum of 20 accounts can be 
 The name of the RAM administrator role assumed by ROS. ROS assumes this role to perform operations on the stack corresponding to the stack instance in the stack group.
 
 <h4 class="pdoc-member-header" id="StackGroup-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L79">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L79">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -689,7 +689,7 @@ The name of the RAM administrator role assumed by ROS. ROS assumes this role to 
 The description of the stack group.
 
 <h4 class="pdoc-member-header" id="StackGroup-executionRoleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L83">property <b>executionRoleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L83">property <b>executionRoleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>executionRoleName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -697,7 +697,7 @@ The description of the stack group.
 The name of the RAM execution role assumed by the administrator role. ROS assumes this role to perform operations on the stack corresponding to the stack instance in the stack group.
 
 <h4 class="pdoc-member-header" id="StackGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L40">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L40">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -706,7 +706,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="StackGroup-operationDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L87">property <b>operationDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L87">property <b>operationDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>operationDescription: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -714,7 +714,7 @@ deployments and may be missing (undefined) during planning phases.
 The description of the operation.
 
 <h4 class="pdoc-member-header" id="StackGroup-operationPreferences">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L91">property <b>operationPreferences</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L91">property <b>operationPreferences</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>operationPreferences: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -722,7 +722,7 @@ The description of the operation.
 The operation settings, in JSON format.
 
 <h4 class="pdoc-member-header" id="StackGroup-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L95">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L95">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#StackGroupParameter'>StackGroupParameter</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -730,7 +730,7 @@ The operation settings, in JSON format.
 The parameters. If the parameter name and value are not specified, ROS will use the default value specified in the template.
 
 <h4 class="pdoc-member-header" id="StackGroup-regionIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L99">property <b>regionIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L99">property <b>regionIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>regionIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -738,7 +738,7 @@ The parameters. If the parameter name and value are not specified, ROS will use 
 The list of target regions, in JSON format. A maximum of 20 accounts can be specified.
 
 <h4 class="pdoc-member-header" id="StackGroup-stackGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L103">property <b>stackGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L103">property <b>stackGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>stackGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -746,7 +746,7 @@ The list of target regions, in JSON format. A maximum of 20 accounts can be spec
 The id of Stack Group.
 
 <h4 class="pdoc-member-header" id="StackGroup-stackGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L107">property <b>stackGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L107">property <b>stackGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>stackGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -754,7 +754,7 @@ The id of Stack Group.
 The name of the stack group. The name must be unique in a region.
 
 <h4 class="pdoc-member-header" id="StackGroup-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L111">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L111">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -762,7 +762,7 @@ The name of the stack group. The name must be unique in a region.
 The status of Stack Group.
 
 <h4 class="pdoc-member-header" id="StackGroup-templateBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L115">property <b>templateBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L115">property <b>templateBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>templateBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -770,7 +770,7 @@ The status of Stack Group.
 The structure that contains the template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body is longer than required, we recommend that you add parameters to the HTTP POST request body to avoid request failures due to excessive length of URLs.
 
 <h4 class="pdoc-member-header" id="StackGroup-templateUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L119">property <b>templateUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L119">property <b>templateUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>templateUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -778,7 +778,7 @@ The structure that contains the template body. The template body must be 1 to 52
 The URL of the file that contains the template body. The URL must point to a template located in an HTTP or HTTPS web server or an Alibaba Cloud OSS bucket. Examples: oss://ros/template/demo and oss://ros/template/demo?RegionId=cn-hangzhou. The template must be 1 to 524,288 bytes in length. If the region of the OSS bucket is not specified, the RegionId value is used by default.
 
 <h4 class="pdoc-member-header" id="StackGroup-templateVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L123">property <b>templateVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L123">property <b>templateVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>templateVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -786,7 +786,7 @@ The URL of the file that contains the template body. The URL must point to a tem
 The version of the template.
 
 <h4 class="pdoc-member-header" id="StackGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L40">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L40">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -795,7 +795,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Template" data-link-title="Template">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/template.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/template.ts#L39">
         Resource <strong>Template</strong>
     </a>
 </h3>
@@ -834,7 +834,7 @@ ROS Template can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Template-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/template.ts#L86"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/template.ts#L86"> <b>constructor</b></a>
 </h4>
 
 
@@ -848,7 +848,7 @@ Create a Template resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Template-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/template.ts#L49">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/template.ts#L49">method <b>get</b></a>
 </h4>
 
 
@@ -859,14 +859,14 @@ Get an existing Template resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Template-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/template.ts#L39">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/template.ts#L39">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Template-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/template.ts#L60">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/template.ts#L60">method <b>isInstance</b></a>
 </h4>
 
 
@@ -877,7 +877,7 @@ Returns true if the given object is an instance of Template.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Template-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/template.ts#L70">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/template.ts#L70">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -885,7 +885,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The description of the template. The description can be up to 256 characters in length.
 
 <h4 class="pdoc-member-header" id="Template-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/template.ts#L39">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/template.ts#L39">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -894,7 +894,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Template-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/template.ts#L74">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/template.ts#L74">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -902,7 +902,7 @@ deployments and may be missing (undefined) during planning phases.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Template-templateBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/template.ts#L78">property <b>templateBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/template.ts#L78">property <b>templateBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>templateBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -910,7 +910,7 @@ A mapping of tags to assign to the resource.
 The structure that contains the template body. The template body must be 1 to 524,288 bytes in length.  If the length of the template body is longer than required, we recommend that you add parameters to the HTTP POST request body to avoid request failures due to excessive length of URLs.  You must specify one of the TemplateBody and TemplateURL parameters, but you cannot specify both of them.
 
 <h4 class="pdoc-member-header" id="Template-templateName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/template.ts#L82">property <b>templateName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/template.ts#L82">property <b>templateName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>templateName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -918,7 +918,7 @@ The structure that contains the template body. The template body must be 1 to 52
 The name of the template. The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or letter.
 
 <h4 class="pdoc-member-header" id="Template-templateUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/template.ts#L86">property <b>templateUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/template.ts#L86">property <b>templateUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>templateUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -926,7 +926,7 @@ The name of the template. The name can be up to 255 characters in length and can
 The template url.
 
 <h4 class="pdoc-member-header" id="Template-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/template.ts#L39">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/template.ts#L39">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -937,7 +937,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getChangeSets" data-link-title="getChangeSets">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getChangeSets.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getChangeSets.ts#L29">
         Function <strong>getChangeSets</strong>
     </a>
 </h3>
@@ -967,7 +967,7 @@ export const firstRosChangeSetId = example.then(example => example.sets[0].id);
 ```
 
 <h3 class="pdoc-module-header" id="getStackGroups" data-link-title="getStackGroups">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getStackGroups.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getStackGroups.ts#L28">
         Function <strong>getStackGroups</strong>
     </a>
 </h3>
@@ -996,7 +996,7 @@ export const firstRosStackGroupId = example.then(example => example.groups[0].id
 ```
 
 <h3 class="pdoc-module-header" id="getStacks" data-link-title="getStacks">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getStacks.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getStacks.ts#L28">
         Function <strong>getStacks</strong>
     </a>
 </h3>
@@ -1025,7 +1025,7 @@ export const firstRosStackId = example.then(example => example.stacks[0].id);
 ```
 
 <h3 class="pdoc-module-header" id="getTemplates" data-link-title="getTemplates">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getTemplates.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getTemplates.ts#L28">
         Function <strong>getTemplates</strong>
     </a>
 </h3>
@@ -1056,7 +1056,7 @@ export const firstRosTemplateId = example.then(example => example.templates[0].i
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ChangeSetArgs" data-link-title="ChangeSetArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L297">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L297">
         interface <strong>ChangeSetArgs</strong>
     </a>
 </h3>
@@ -1066,7 +1066,7 @@ export const firstRosTemplateId = example.then(example => example.templates[0].i
 The set of arguments for constructing a ChangeSet resource.
 
 <h4 class="pdoc-member-header" id="ChangeSetArgs-changeSetName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L301">property <b>changeSetName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L301">property <b>changeSetName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>changeSetName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1074,7 +1074,7 @@ The set of arguments for constructing a ChangeSet resource.
 The name of the change set.  The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or letter.
 
 <h4 class="pdoc-member-header" id="ChangeSetArgs-changeSetType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L305">property <b>changeSetType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L305">property <b>changeSetType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>changeSetType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1082,7 +1082,7 @@ The name of the change set.  The name can be up to 255 characters in length and 
 The type of the change set. Valid values:  CREATE: creates a change set for a new stack. UPDATE: creates a change set for an existing stack. IMPORT: creates a change set for a new stack or an existing stack to import non-ROS-managed resources. If you create a change set for a new stack, ROS creates a stack that has a unique stack ID. The stack is in the REVIEW_IN_PROGRESS state until you execute the change set.  You cannot use the UPDATE type to create a change set for a new stack or the CREATE type to create a change set for an existing stack.
 
 <h4 class="pdoc-member-header" id="ChangeSetArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L309">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L309">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1090,7 +1090,7 @@ The type of the change set. Valid values:  CREATE: creates a change set for a ne
 The description of the change set. The description can be up to 1,024 bytes in length.
 
 <h4 class="pdoc-member-header" id="ChangeSetArgs-disableRollback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L313">property <b>disableRollback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L313">property <b>disableRollback</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableRollback?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1098,7 +1098,7 @@ The description of the change set. The description can be up to 1,024 bytes in l
 Specifies whether to disable rollback on stack creation failure. Default value: false.  Valid values:  true: disables rollback on stack creation failure. false: enables rollback on stack creation failure. Note This parameter takes effect only when ChangeSetType is set to CREATE or IMPORT.
 
 <h4 class="pdoc-member-header" id="ChangeSetArgs-notificationUrls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L317">property <b>notificationUrls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L317">property <b>notificationUrls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notificationUrls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1106,7 +1106,7 @@ Specifies whether to disable rollback on stack creation failure. Default value: 
 The notification urls.
 
 <h4 class="pdoc-member-header" id="ChangeSetArgs-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L321">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L321">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ChangeSetParameter'>ChangeSetParameter</a>&gt;[]&gt;;</code></pre>
@@ -1114,7 +1114,7 @@ The notification urls.
 Parameters.
 
 <h4 class="pdoc-member-header" id="ChangeSetArgs-ramRoleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L325">property <b>ramRoleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L325">property <b>ramRoleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ramRoleName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1122,7 +1122,7 @@ Parameters.
 The ram role name.
 
 <h4 class="pdoc-member-header" id="ChangeSetArgs-replacementOption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L329">property <b>replacementOption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L329">property <b>replacementOption</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replacementOption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1130,7 +1130,7 @@ The ram role name.
 The replacement option.
 
 <h4 class="pdoc-member-header" id="ChangeSetArgs-stackId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L333">property <b>stackId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L333">property <b>stackId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stackId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1138,7 +1138,7 @@ The replacement option.
 The ID of the stack for which you want to create the change set. ROS generates the change set by comparing the stack information with the information that you submit, such as a modified template or different inputs.
 
 <h4 class="pdoc-member-header" id="ChangeSetArgs-stackName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L337">property <b>stackName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L337">property <b>stackName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stackName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1146,7 +1146,7 @@ The ID of the stack for which you want to create the change set. ROS generates t
 The name of the stack for which you want to create the change set.  The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or letter.  Note This parameter takes effect only when ChangeSetType is set to CREATE or IMPORT.
 
 <h4 class="pdoc-member-header" id="ChangeSetArgs-stackPolicyBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L341">property <b>stackPolicyBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L341">property <b>stackPolicyBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stackPolicyBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1154,7 +1154,7 @@ The name of the stack for which you want to create the change set.  The name can
 The stack policy body.
 
 <h4 class="pdoc-member-header" id="ChangeSetArgs-stackPolicyDuringUpdateBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L345">property <b>stackPolicyDuringUpdateBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L345">property <b>stackPolicyDuringUpdateBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stackPolicyDuringUpdateBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1162,7 +1162,7 @@ The stack policy body.
 The stack policy during update body.
 
 <h4 class="pdoc-member-header" id="ChangeSetArgs-stackPolicyDuringUpdateUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L349">property <b>stackPolicyDuringUpdateUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L349">property <b>stackPolicyDuringUpdateUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stackPolicyDuringUpdateUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1170,7 +1170,7 @@ The stack policy during update body.
 The stack policy during update url.
 
 <h4 class="pdoc-member-header" id="ChangeSetArgs-stackPolicyUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L353">property <b>stackPolicyUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L353">property <b>stackPolicyUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stackPolicyUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1178,7 +1178,7 @@ The stack policy during update url.
 The stack policy url.
 
 <h4 class="pdoc-member-header" id="ChangeSetArgs-templateBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L357">property <b>templateBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L357">property <b>templateBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1186,7 +1186,7 @@ The stack policy url.
 The structure that contains the template body. The template body must be 1 to 524,288 bytes in length.  If the length of the template body is longer than required, we recommend that you add parameters to the HTTP POST request body to avoid request failures due to excessive length of URLs.  You can specify one of TemplateBody or TemplateURL parameters, but you cannot specify both of them.
 
 <h4 class="pdoc-member-header" id="ChangeSetArgs-templateUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L361">property <b>templateUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L361">property <b>templateUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1194,7 +1194,7 @@ The structure that contains the template body. The template body must be 1 to 52
 The template url.
 
 <h4 class="pdoc-member-header" id="ChangeSetArgs-timeoutInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L365">property <b>timeoutInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L365">property <b>timeoutInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeoutInMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1202,7 +1202,7 @@ The template url.
 Timeout In Minutes.
 
 <h4 class="pdoc-member-header" id="ChangeSetArgs-usePreviousParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L369">property <b>usePreviousParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L369">property <b>usePreviousParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usePreviousParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1210,7 +1210,7 @@ Timeout In Minutes.
 The use previous parameters.
 
 <h3 class="pdoc-module-header" id="ChangeSetState" data-link-title="ChangeSetState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L215">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L215">
         interface <strong>ChangeSetState</strong>
     </a>
 </h3>
@@ -1220,7 +1220,7 @@ The use previous parameters.
 Input properties used for looking up and filtering ChangeSet resources.
 
 <h4 class="pdoc-member-header" id="ChangeSetState-changeSetName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L219">property <b>changeSetName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L219">property <b>changeSetName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>changeSetName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1228,7 +1228,7 @@ Input properties used for looking up and filtering ChangeSet resources.
 The name of the change set.  The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or letter.
 
 <h4 class="pdoc-member-header" id="ChangeSetState-changeSetType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L223">property <b>changeSetType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L223">property <b>changeSetType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>changeSetType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1236,7 +1236,7 @@ The name of the change set.  The name can be up to 255 characters in length and 
 The type of the change set. Valid values:  CREATE: creates a change set for a new stack. UPDATE: creates a change set for an existing stack. IMPORT: creates a change set for a new stack or an existing stack to import non-ROS-managed resources. If you create a change set for a new stack, ROS creates a stack that has a unique stack ID. The stack is in the REVIEW_IN_PROGRESS state until you execute the change set.  You cannot use the UPDATE type to create a change set for a new stack or the CREATE type to create a change set for an existing stack.
 
 <h4 class="pdoc-member-header" id="ChangeSetState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L227">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L227">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1244,7 +1244,7 @@ The type of the change set. Valid values:  CREATE: creates a change set for a ne
 The description of the change set. The description can be up to 1,024 bytes in length.
 
 <h4 class="pdoc-member-header" id="ChangeSetState-disableRollback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L231">property <b>disableRollback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L231">property <b>disableRollback</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableRollback?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1252,7 +1252,7 @@ The description of the change set. The description can be up to 1,024 bytes in l
 Specifies whether to disable rollback on stack creation failure. Default value: false.  Valid values:  true: disables rollback on stack creation failure. false: enables rollback on stack creation failure. Note This parameter takes effect only when ChangeSetType is set to CREATE or IMPORT.
 
 <h4 class="pdoc-member-header" id="ChangeSetState-notificationUrls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L235">property <b>notificationUrls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L235">property <b>notificationUrls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notificationUrls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1260,7 +1260,7 @@ Specifies whether to disable rollback on stack creation failure. Default value: 
 The notification urls.
 
 <h4 class="pdoc-member-header" id="ChangeSetState-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L239">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L239">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ChangeSetParameter'>ChangeSetParameter</a>&gt;[]&gt;;</code></pre>
@@ -1268,7 +1268,7 @@ The notification urls.
 Parameters.
 
 <h4 class="pdoc-member-header" id="ChangeSetState-ramRoleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L243">property <b>ramRoleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L243">property <b>ramRoleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ramRoleName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1276,7 +1276,7 @@ Parameters.
 The ram role name.
 
 <h4 class="pdoc-member-header" id="ChangeSetState-replacementOption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L247">property <b>replacementOption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L247">property <b>replacementOption</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replacementOption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1284,7 +1284,7 @@ The ram role name.
 The replacement option.
 
 <h4 class="pdoc-member-header" id="ChangeSetState-stackId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L251">property <b>stackId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L251">property <b>stackId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stackId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1292,7 +1292,7 @@ The replacement option.
 The ID of the stack for which you want to create the change set. ROS generates the change set by comparing the stack information with the information that you submit, such as a modified template or different inputs.
 
 <h4 class="pdoc-member-header" id="ChangeSetState-stackName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L255">property <b>stackName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L255">property <b>stackName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stackName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1300,7 +1300,7 @@ The ID of the stack for which you want to create the change set. ROS generates t
 The name of the stack for which you want to create the change set.  The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or letter.  Note This parameter takes effect only when ChangeSetType is set to CREATE or IMPORT.
 
 <h4 class="pdoc-member-header" id="ChangeSetState-stackPolicyBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L259">property <b>stackPolicyBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L259">property <b>stackPolicyBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stackPolicyBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1308,7 +1308,7 @@ The name of the stack for which you want to create the change set.  The name can
 The stack policy body.
 
 <h4 class="pdoc-member-header" id="ChangeSetState-stackPolicyDuringUpdateBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L263">property <b>stackPolicyDuringUpdateBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L263">property <b>stackPolicyDuringUpdateBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stackPolicyDuringUpdateBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1316,7 +1316,7 @@ The stack policy body.
 The stack policy during update body.
 
 <h4 class="pdoc-member-header" id="ChangeSetState-stackPolicyDuringUpdateUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L267">property <b>stackPolicyDuringUpdateUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L267">property <b>stackPolicyDuringUpdateUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stackPolicyDuringUpdateUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1324,7 +1324,7 @@ The stack policy during update body.
 The stack policy during update url.
 
 <h4 class="pdoc-member-header" id="ChangeSetState-stackPolicyUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L271">property <b>stackPolicyUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L271">property <b>stackPolicyUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stackPolicyUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1332,7 +1332,7 @@ The stack policy during update url.
 The stack policy url.
 
 <h4 class="pdoc-member-header" id="ChangeSetState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L275">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L275">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1340,7 +1340,7 @@ The stack policy url.
 The status of the change set.
 
 <h4 class="pdoc-member-header" id="ChangeSetState-templateBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L279">property <b>templateBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L279">property <b>templateBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1348,7 +1348,7 @@ The status of the change set.
 The structure that contains the template body. The template body must be 1 to 524,288 bytes in length.  If the length of the template body is longer than required, we recommend that you add parameters to the HTTP POST request body to avoid request failures due to excessive length of URLs.  You can specify one of TemplateBody or TemplateURL parameters, but you cannot specify both of them.
 
 <h4 class="pdoc-member-header" id="ChangeSetState-templateUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L283">property <b>templateUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L283">property <b>templateUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1356,7 +1356,7 @@ The structure that contains the template body. The template body must be 1 to 52
 The template url.
 
 <h4 class="pdoc-member-header" id="ChangeSetState-timeoutInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L287">property <b>timeoutInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L287">property <b>timeoutInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeoutInMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1364,7 +1364,7 @@ The template url.
 Timeout In Minutes.
 
 <h4 class="pdoc-member-header" id="ChangeSetState-usePreviousParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/changeSet.ts#L291">property <b>usePreviousParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/changeSet.ts#L291">property <b>usePreviousParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usePreviousParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1372,7 +1372,7 @@ Timeout In Minutes.
 The use previous parameters.
 
 <h3 class="pdoc-module-header" id="GetChangeSetsArgs" data-link-title="GetChangeSetsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getChangeSets.ts#L51">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getChangeSets.ts#L51">
         interface <strong>GetChangeSetsArgs</strong>
     </a>
 </h3>
@@ -1382,7 +1382,7 @@ The use previous parameters.
 A collection of arguments for invoking getChangeSets.
 
 <h4 class="pdoc-member-header" id="GetChangeSetsArgs-changeSetName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getChangeSets.ts#L55">property <b>changeSetName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getChangeSets.ts#L55">property <b>changeSetName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>changeSetName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1390,7 +1390,7 @@ A collection of arguments for invoking getChangeSets.
 The name of the change set.  The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or letter.
 
 <h4 class="pdoc-member-header" id="GetChangeSetsArgs-enableDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getChangeSets.ts#L59">property <b>enableDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getChangeSets.ts#L59">property <b>enableDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -1398,7 +1398,7 @@ The name of the change set.  The name can be up to 255 characters in length and 
 Default to `false`. Set it to `true` can output more details about resource attributes.
 
 <h4 class="pdoc-member-header" id="GetChangeSetsArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getChangeSets.ts#L63">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getChangeSets.ts#L63">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1406,7 +1406,7 @@ Default to `false`. Set it to `true` can output more details about resource attr
 A list of Change Set IDs.
 
 <h4 class="pdoc-member-header" id="GetChangeSetsArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getChangeSets.ts#L67">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getChangeSets.ts#L67">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1414,12 +1414,12 @@ A list of Change Set IDs.
 A regex string to filter results by Change Set name.
 
 <h4 class="pdoc-member-header" id="GetChangeSetsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getChangeSets.ts#L68">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getChangeSets.ts#L68">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetChangeSetsArgs-stackId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getChangeSets.ts#L72">property <b>stackId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getChangeSets.ts#L72">property <b>stackId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stackId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1427,7 +1427,7 @@ A regex string to filter results by Change Set name.
 The ID of the stack for which you want to create the change set. ROS generates the change set by comparing the stack information with the information that you submit, such as a modified template or different inputs.
 
 <h4 class="pdoc-member-header" id="GetChangeSetsArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getChangeSets.ts#L76">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getChangeSets.ts#L76">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1435,7 +1435,7 @@ The ID of the stack for which you want to create the change set. ROS generates t
 The status of the change set.
 
 <h3 class="pdoc-module-header" id="GetChangeSetsResult" data-link-title="GetChangeSetsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getChangeSets.ts#L82">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getChangeSets.ts#L82">
         interface <strong>GetChangeSetsResult</strong>
     </a>
 </h3>
@@ -1445,17 +1445,17 @@ The status of the change set.
 A collection of values returned by getChangeSets.
 
 <h4 class="pdoc-member-header" id="GetChangeSetsResult-changeSetName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getChangeSets.ts#L83">property <b>changeSetName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getChangeSets.ts#L83">property <b>changeSetName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>changeSetName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetChangeSetsResult-enableDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getChangeSets.ts#L84">property <b>enableDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getChangeSets.ts#L84">property <b>enableDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetChangeSetsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getChangeSets.ts#L88">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getChangeSets.ts#L88">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1463,42 +1463,42 @@ A collection of values returned by getChangeSets.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetChangeSetsResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getChangeSets.ts#L89">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getChangeSets.ts#L89">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetChangeSetsResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getChangeSets.ts#L90">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getChangeSets.ts#L90">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetChangeSetsResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getChangeSets.ts#L91">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getChangeSets.ts#L91">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetChangeSetsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getChangeSets.ts#L92">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getChangeSets.ts#L92">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetChangeSetsResult-sets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getChangeSets.ts#L93">property <b>sets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getChangeSets.ts#L93">property <b>sets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sets: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetChangeSetsSet'>GetChangeSetsSet</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetChangeSetsResult-stackId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getChangeSets.ts#L94">property <b>stackId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getChangeSets.ts#L94">property <b>stackId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stackId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetChangeSetsResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getChangeSets.ts#L95">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getChangeSets.ts#L95">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetStackGroupsArgs" data-link-title="GetStackGroupsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getStackGroups.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getStackGroups.ts#L49">
         interface <strong>GetStackGroupsArgs</strong>
     </a>
 </h3>
@@ -1508,7 +1508,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getStackGroups.
 
 <h4 class="pdoc-member-header" id="GetStackGroupsArgs-enableDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getStackGroups.ts#L53">property <b>enableDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getStackGroups.ts#L53">property <b>enableDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -1516,7 +1516,7 @@ A collection of arguments for invoking getStackGroups.
 Default to `false`. Set it to `true` can output more details about resource attributes.
 
 <h4 class="pdoc-member-header" id="GetStackGroupsArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getStackGroups.ts#L57">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getStackGroups.ts#L57">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1524,7 +1524,7 @@ Default to `false`. Set it to `true` can output more details about resource attr
 A list of Stack Group IDs.
 
 <h4 class="pdoc-member-header" id="GetStackGroupsArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getStackGroups.ts#L61">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getStackGroups.ts#L61">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1532,12 +1532,12 @@ A list of Stack Group IDs.
 A regex string to filter results by Stack Group name.
 
 <h4 class="pdoc-member-header" id="GetStackGroupsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getStackGroups.ts#L62">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getStackGroups.ts#L62">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetStackGroupsArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getStackGroups.ts#L66">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getStackGroups.ts#L66">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1545,7 +1545,7 @@ A regex string to filter results by Stack Group name.
 The status of Stack Group.
 
 <h3 class="pdoc-module-header" id="GetStackGroupsResult" data-link-title="GetStackGroupsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getStackGroups.ts#L72">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getStackGroups.ts#L72">
         interface <strong>GetStackGroupsResult</strong>
     </a>
 </h3>
@@ -1555,17 +1555,17 @@ The status of Stack Group.
 A collection of values returned by getStackGroups.
 
 <h4 class="pdoc-member-header" id="GetStackGroupsResult-enableDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getStackGroups.ts#L73">property <b>enableDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getStackGroups.ts#L73">property <b>enableDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetStackGroupsResult-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getStackGroups.ts#L74">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getStackGroups.ts#L74">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groups: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetStackGroupsGroup'>GetStackGroupsGroup</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetStackGroupsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getStackGroups.ts#L78">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getStackGroups.ts#L78">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1573,32 +1573,32 @@ A collection of values returned by getStackGroups.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetStackGroupsResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getStackGroups.ts#L79">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getStackGroups.ts#L79">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetStackGroupsResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getStackGroups.ts#L80">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getStackGroups.ts#L80">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetStackGroupsResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getStackGroups.ts#L81">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getStackGroups.ts#L81">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetStackGroupsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getStackGroups.ts#L82">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getStackGroups.ts#L82">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetStackGroupsResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getStackGroups.ts#L83">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getStackGroups.ts#L83">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetStacksArgs" data-link-title="GetStacksArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getStacks.ts#L53">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getStacks.ts#L53">
         interface <strong>GetStacksArgs</strong>
     </a>
 </h3>
@@ -1608,7 +1608,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getStacks.
 
 <h4 class="pdoc-member-header" id="GetStacksArgs-enableDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getStacks.ts#L57">property <b>enableDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getStacks.ts#L57">property <b>enableDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -1616,7 +1616,7 @@ A collection of arguments for invoking getStacks.
 Default to `false`. Set it to `true` can output more details about resource attributes.
 
 <h4 class="pdoc-member-header" id="GetStacksArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getStacks.ts#L61">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getStacks.ts#L61">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1624,7 +1624,7 @@ Default to `false`. Set it to `true` can output more details about resource attr
 A list of Stack IDs.
 
 <h4 class="pdoc-member-header" id="GetStacksArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getStacks.ts#L65">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getStacks.ts#L65">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1632,12 +1632,12 @@ A list of Stack IDs.
 A regex string to filter results by Stack name.
 
 <h4 class="pdoc-member-header" id="GetStacksArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getStacks.ts#L66">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getStacks.ts#L66">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetStacksArgs-parentStackId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getStacks.ts#L70">property <b>parentStackId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getStacks.ts#L70">property <b>parentStackId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parentStackId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1645,7 +1645,7 @@ A regex string to filter results by Stack name.
 Parent Stack Id.
 
 <h4 class="pdoc-member-header" id="GetStacksArgs-showNestedStack">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getStacks.ts#L74">property <b>showNestedStack</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getStacks.ts#L74">property <b>showNestedStack</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>showNestedStack?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -1653,7 +1653,7 @@ Parent Stack Id.
 The show nested stack.
 
 <h4 class="pdoc-member-header" id="GetStacksArgs-stackName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getStacks.ts#L78">property <b>stackName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getStacks.ts#L78">property <b>stackName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stackName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1661,7 +1661,7 @@ The show nested stack.
 Stack Name.
 
 <h4 class="pdoc-member-header" id="GetStacksArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getStacks.ts#L82">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getStacks.ts#L82">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1669,7 +1669,7 @@ Stack Name.
 The status of Stack. Valid Values: `CREATE_COMPLETE`, `CREATE_FAILED`, `CREATE_IN_PROGRESS`, `DELETE_COMPLETE`, `DELETE_FAILED`, `DELETE_IN_PROGRESS`, `ROLLBACK_COMPLETE`, `ROLLBACK_FAILED`, `ROLLBACK_IN_PROGRESS`.
 
 <h4 class="pdoc-member-header" id="GetStacksArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getStacks.ts#L86">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getStacks.ts#L86">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -1677,7 +1677,7 @@ The status of Stack. Valid Values: `CREATE_COMPLETE`, `CREATE_FAILED`, `CREATE_I
 Query the instance bound to the tag. The format of the incoming value is `json` string, including `TagKey` and `TagValue`. `TagKey` cannot be null, and `TagValue` can be empty. Format example `{"key1":"value1"}`.
 
 <h3 class="pdoc-module-header" id="GetStacksResult" data-link-title="GetStacksResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getStacks.ts#L92">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getStacks.ts#L92">
         interface <strong>GetStacksResult</strong>
     </a>
 </h3>
@@ -1687,12 +1687,12 @@ Query the instance bound to the tag. The format of the incoming value is `json` 
 A collection of values returned by getStacks.
 
 <h4 class="pdoc-member-header" id="GetStacksResult-enableDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getStacks.ts#L93">property <b>enableDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getStacks.ts#L93">property <b>enableDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetStacksResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getStacks.ts#L97">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getStacks.ts#L97">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1700,57 +1700,57 @@ A collection of values returned by getStacks.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetStacksResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getStacks.ts#L98">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getStacks.ts#L98">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetStacksResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getStacks.ts#L99">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getStacks.ts#L99">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetStacksResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getStacks.ts#L100">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getStacks.ts#L100">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetStacksResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getStacks.ts#L101">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getStacks.ts#L101">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetStacksResult-parentStackId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getStacks.ts#L102">property <b>parentStackId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getStacks.ts#L102">property <b>parentStackId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parentStackId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetStacksResult-showNestedStack">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getStacks.ts#L103">property <b>showNestedStack</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getStacks.ts#L103">property <b>showNestedStack</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>showNestedStack?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetStacksResult-stackName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getStacks.ts#L104">property <b>stackName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getStacks.ts#L104">property <b>stackName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stackName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetStacksResult-stacks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getStacks.ts#L105">property <b>stacks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getStacks.ts#L105">property <b>stacks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stacks: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetStacksStack'>GetStacksStack</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetStacksResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getStacks.ts#L106">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getStacks.ts#L106">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetStacksResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getStacks.ts#L107">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getStacks.ts#L107">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h3 class="pdoc-module-header" id="GetTemplatesArgs" data-link-title="GetTemplatesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getTemplates.ts#L51">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getTemplates.ts#L51">
         interface <strong>GetTemplatesArgs</strong>
     </a>
 </h3>
@@ -1760,7 +1760,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getTemplates.
 
 <h4 class="pdoc-member-header" id="GetTemplatesArgs-enableDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getTemplates.ts#L55">property <b>enableDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getTemplates.ts#L55">property <b>enableDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -1768,7 +1768,7 @@ A collection of arguments for invoking getTemplates.
 Default to `false`. Set it to `true` can output more details about resource attributes.
 
 <h4 class="pdoc-member-header" id="GetTemplatesArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getTemplates.ts#L59">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getTemplates.ts#L59">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1776,7 +1776,7 @@ Default to `false`. Set it to `true` can output more details about resource attr
 A list of Template IDs.
 
 <h4 class="pdoc-member-header" id="GetTemplatesArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getTemplates.ts#L63">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getTemplates.ts#L63">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1784,12 +1784,12 @@ A list of Template IDs.
 A regex string to filter results by Template name.
 
 <h4 class="pdoc-member-header" id="GetTemplatesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getTemplates.ts#L64">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getTemplates.ts#L64">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTemplatesArgs-shareType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getTemplates.ts#L68">property <b>shareType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getTemplates.ts#L68">property <b>shareType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shareType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1797,7 +1797,7 @@ A regex string to filter results by Template name.
 Share Type.
 
 <h4 class="pdoc-member-header" id="GetTemplatesArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getTemplates.ts#L72">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getTemplates.ts#L72">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -1805,7 +1805,7 @@ Share Type.
 Tags.
 
 <h4 class="pdoc-member-header" id="GetTemplatesArgs-templateName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getTemplates.ts#L76">property <b>templateName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getTemplates.ts#L76">property <b>templateName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1813,7 +1813,7 @@ Tags.
 The name of the template.  The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or letter.
 
 <h3 class="pdoc-module-header" id="GetTemplatesResult" data-link-title="GetTemplatesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getTemplates.ts#L82">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getTemplates.ts#L82">
         interface <strong>GetTemplatesResult</strong>
     </a>
 </h3>
@@ -1823,12 +1823,12 @@ The name of the template.  The name can be up to 255 characters in length and ca
 A collection of values returned by getTemplates.
 
 <h4 class="pdoc-member-header" id="GetTemplatesResult-enableDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getTemplates.ts#L83">property <b>enableDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getTemplates.ts#L83">property <b>enableDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTemplatesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getTemplates.ts#L87">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getTemplates.ts#L87">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1836,47 +1836,47 @@ A collection of values returned by getTemplates.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetTemplatesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getTemplates.ts#L88">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getTemplates.ts#L88">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetTemplatesResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getTemplates.ts#L89">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getTemplates.ts#L89">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTemplatesResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getTemplates.ts#L90">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getTemplates.ts#L90">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetTemplatesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getTemplates.ts#L91">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getTemplates.ts#L91">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTemplatesResult-shareType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getTemplates.ts#L92">property <b>shareType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getTemplates.ts#L92">property <b>shareType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shareType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTemplatesResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getTemplates.ts#L93">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getTemplates.ts#L93">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GetTemplatesResult-templateName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getTemplates.ts#L94">property <b>templateName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getTemplates.ts#L94">property <b>templateName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTemplatesResult-templates">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/getTemplates.ts#L95">property <b>templates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/getTemplates.ts#L95">property <b>templates</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templates: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetTemplatesTemplate'>GetTemplatesTemplate</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="StackArgs" data-link-title="StackArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L326">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L326">
         interface <strong>StackArgs</strong>
     </a>
 </h3>
@@ -1886,7 +1886,7 @@ The provider-assigned unique ID for this managed resource.
 The set of arguments for constructing a Stack resource.
 
 <h4 class="pdoc-member-header" id="StackArgs-createOption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L330">property <b>createOption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L330">property <b>createOption</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createOption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1894,7 +1894,7 @@ The set of arguments for constructing a Stack resource.
 Specifies whether to delete the stack after it is created.
 
 <h4 class="pdoc-member-header" id="StackArgs-deletionProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L334">property <b>deletionProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L334">property <b>deletionProtection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deletionProtection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1902,7 +1902,7 @@ Specifies whether to delete the stack after it is created.
 Specifies whether to enable deletion protection on the stack. Valid values: `Disabled`, `Enabled`. Default to: `Disabled`
 
 <h4 class="pdoc-member-header" id="StackArgs-disableRollback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L338">property <b>disableRollback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L338">property <b>disableRollback</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableRollback?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1910,7 +1910,7 @@ Specifies whether to enable deletion protection on the stack. Valid values: `Dis
 Specifies whether to disable rollback on stack creation failure. Default to: `false`.
 
 <h4 class="pdoc-member-header" id="StackArgs-notificationUrls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L342">property <b>notificationUrls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L342">property <b>notificationUrls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notificationUrls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1918,7 +1918,7 @@ Specifies whether to disable rollback on stack creation failure. Default to: `fa
 The callback URL for receiving stack event N. Only HTTP POST is supported. Maximum value of N: 5.
 
 <h4 class="pdoc-member-header" id="StackArgs-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L346">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L346">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#StackParameter'>StackParameter</a>&gt;[]&gt;;</code></pre>
@@ -1926,7 +1926,7 @@ The callback URL for receiving stack event N. Only HTTP POST is supported. Maxim
 The parameters. If the parameter name and value are not specified, ROS will use the default value specified in the template.
 
 <h4 class="pdoc-member-header" id="StackArgs-ramRoleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L350">property <b>ramRoleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L350">property <b>ramRoleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ramRoleName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1934,7 +1934,7 @@ The parameters. If the parameter name and value are not specified, ROS will use 
 The name of the RAM role. ROS assumes the specified RAM role to create the stack and call API operations by using the credentials of the role.
 
 <h4 class="pdoc-member-header" id="StackArgs-replacementOption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L354">property <b>replacementOption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L354">property <b>replacementOption</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replacementOption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1942,7 +1942,7 @@ The name of the RAM role. ROS assumes the specified RAM role to create the stack
 Specifies whether to enable replacement update after a resource attribute that does not support modification update is changed. Modification update keeps the physical ID of the resource unchanged. However, the resource is deleted and then recreated, and its physical ID is changed if replacement update is enabled.
 
 <h4 class="pdoc-member-header" id="StackArgs-retainAllResources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L358">property <b>retainAllResources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L358">property <b>retainAllResources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retainAllResources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1950,7 +1950,7 @@ Specifies whether to enable replacement update after a resource attribute that d
 The retain all resources.
 
 <h4 class="pdoc-member-header" id="StackArgs-retainResources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L362">property <b>retainResources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L362">property <b>retainResources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retainResources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1958,7 +1958,7 @@ The retain all resources.
 Specifies whether to retain the resources in the stack.
 
 <h4 class="pdoc-member-header" id="StackArgs-stackName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L366">property <b>stackName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L366">property <b>stackName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stackName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1966,7 +1966,7 @@ Specifies whether to retain the resources in the stack.
 The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or letter.
 
 <h4 class="pdoc-member-header" id="StackArgs-stackPolicyBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L370">property <b>stackPolicyBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L370">property <b>stackPolicyBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stackPolicyBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1974,7 +1974,7 @@ The name can be up to 255 characters in length and can contain digits, letters, 
 The structure that contains the stack policy body. The stack policy body must be 1 to 16,384 bytes in length.
 
 <h4 class="pdoc-member-header" id="StackArgs-stackPolicyDuringUpdateBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L374">property <b>stackPolicyDuringUpdateBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L374">property <b>stackPolicyDuringUpdateBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stackPolicyDuringUpdateBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1982,7 +1982,7 @@ The structure that contains the stack policy body. The stack policy body must be
 The structure that contains the body of the temporary overriding stack policy. The stack policy body must be 1 to 16,384 bytes in length.
 
 <h4 class="pdoc-member-header" id="StackArgs-stackPolicyDuringUpdateUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L378">property <b>stackPolicyDuringUpdateUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L378">property <b>stackPolicyDuringUpdateUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stackPolicyDuringUpdateUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1990,7 +1990,7 @@ The structure that contains the body of the temporary overriding stack policy. T
 The URL of the file that contains the temporary overriding stack policy. The URL must point to a policy located in an HTTP or HTTPS web server or an Alibaba Cloud OSS bucket. Examples: oss://ros/stack-policy/demo and oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The policy can be up to 16,384 bytes in length and the URL can be up to 1,350 bytes in length. If the region of the OSS bucket is not specified, the RegionId value is used by default.
 
 <h4 class="pdoc-member-header" id="StackArgs-stackPolicyUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L382">property <b>stackPolicyUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L382">property <b>stackPolicyUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stackPolicyUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1998,7 +1998,7 @@ The URL of the file that contains the temporary overriding stack policy. The URL
 The URL of the file that contains the stack policy. The URL must point to a policy located in an HTTP or HTTPS web server or an Alibaba Cloud OSS bucket. Examples: oss://ros/stack-policy/demo and oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The policy can be up to 16,384 bytes in length and the URL can be up to 1,350 bytes in length. If the region of the OSS bucket is not specified, the RegionId value is used by default.
 
 <h4 class="pdoc-member-header" id="StackArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L386">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L386">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -2006,7 +2006,7 @@ The URL of the file that contains the stack policy. The URL must point to a poli
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="StackArgs-templateBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L390">property <b>templateBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L390">property <b>templateBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2014,7 +2014,7 @@ A mapping of tags to assign to the resource.
 The structure that contains the template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body is longer than required, we recommend that you add parameters to the HTTP POST request body to avoid request failures due to excessive length of URLs.
 
 <h4 class="pdoc-member-header" id="StackArgs-templateUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L394">property <b>templateUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L394">property <b>templateUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2022,7 +2022,7 @@ The structure that contains the template body. The template body must be 1 to 52
 The URL of the file that contains the template body. The URL must point to a template located in an HTTP or HTTPS web server or an Alibaba Cloud OSS bucket. Examples: oss://ros/template/demo and oss://ros/template/demo?RegionId=cn-hangzhou. The template must be 1 to 524,288 bytes in length. If the region of the OSS bucket is not specified, the RegionId value is used by default.
 
 <h4 class="pdoc-member-header" id="StackArgs-templateVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L398">property <b>templateVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L398">property <b>templateVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2030,7 +2030,7 @@ The URL of the file that contains the template body. The URL must point to a tem
 The version of the template.
 
 <h4 class="pdoc-member-header" id="StackArgs-timeoutInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L402">property <b>timeoutInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L402">property <b>timeoutInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeoutInMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2038,7 +2038,7 @@ The version of the template.
 The timeout period that is specified for the stack creation request. Default to: `60`.
 
 <h4 class="pdoc-member-header" id="StackArgs-usePreviousParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L406">property <b>usePreviousParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L406">property <b>usePreviousParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usePreviousParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2046,7 +2046,7 @@ The timeout period that is specified for the stack creation request. Default to:
 Specifies whether to use the values that were passed last time for the parameters that you do not specify in the current request.
 
 <h3 class="pdoc-module-header" id="StackGroupArgs" data-link-title="StackGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L247">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L247">
         interface <strong>StackGroupArgs</strong>
     </a>
 </h3>
@@ -2056,7 +2056,7 @@ Specifies whether to use the values that were passed last time for the parameter
 The set of arguments for constructing a StackGroup resource.
 
 <h4 class="pdoc-member-header" id="StackGroupArgs-accountIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L251">property <b>accountIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L251">property <b>accountIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2064,7 +2064,7 @@ The set of arguments for constructing a StackGroup resource.
 The list of target account IDs, in JSON format. A maximum of 20 accounts can be specified.
 
 <h4 class="pdoc-member-header" id="StackGroupArgs-administrationRoleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L255">property <b>administrationRoleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L255">property <b>administrationRoleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>administrationRoleName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2072,7 +2072,7 @@ The list of target account IDs, in JSON format. A maximum of 20 accounts can be 
 The name of the RAM administrator role assumed by ROS. ROS assumes this role to perform operations on the stack corresponding to the stack instance in the stack group.
 
 <h4 class="pdoc-member-header" id="StackGroupArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L259">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L259">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2080,7 +2080,7 @@ The name of the RAM administrator role assumed by ROS. ROS assumes this role to 
 The description of the stack group.
 
 <h4 class="pdoc-member-header" id="StackGroupArgs-executionRoleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L263">property <b>executionRoleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L263">property <b>executionRoleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>executionRoleName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2088,7 +2088,7 @@ The description of the stack group.
 The name of the RAM execution role assumed by the administrator role. ROS assumes this role to perform operations on the stack corresponding to the stack instance in the stack group.
 
 <h4 class="pdoc-member-header" id="StackGroupArgs-operationDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L267">property <b>operationDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L267">property <b>operationDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>operationDescription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2096,7 +2096,7 @@ The name of the RAM execution role assumed by the administrator role. ROS assume
 The description of the operation.
 
 <h4 class="pdoc-member-header" id="StackGroupArgs-operationPreferences">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L271">property <b>operationPreferences</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L271">property <b>operationPreferences</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>operationPreferences?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2104,7 +2104,7 @@ The description of the operation.
 The operation settings, in JSON format.
 
 <h4 class="pdoc-member-header" id="StackGroupArgs-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L275">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L275">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#StackGroupParameter'>StackGroupParameter</a>&gt;[]&gt;;</code></pre>
@@ -2112,7 +2112,7 @@ The operation settings, in JSON format.
 The parameters. If the parameter name and value are not specified, ROS will use the default value specified in the template.
 
 <h4 class="pdoc-member-header" id="StackGroupArgs-regionIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L279">property <b>regionIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L279">property <b>regionIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>regionIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2120,7 +2120,7 @@ The parameters. If the parameter name and value are not specified, ROS will use 
 The list of target regions, in JSON format. A maximum of 20 accounts can be specified.
 
 <h4 class="pdoc-member-header" id="StackGroupArgs-stackGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L283">property <b>stackGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L283">property <b>stackGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stackGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2128,7 +2128,7 @@ The list of target regions, in JSON format. A maximum of 20 accounts can be spec
 The name of the stack group. The name must be unique in a region.
 
 <h4 class="pdoc-member-header" id="StackGroupArgs-templateBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L287">property <b>templateBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L287">property <b>templateBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2136,7 +2136,7 @@ The name of the stack group. The name must be unique in a region.
 The structure that contains the template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body is longer than required, we recommend that you add parameters to the HTTP POST request body to avoid request failures due to excessive length of URLs.
 
 <h4 class="pdoc-member-header" id="StackGroupArgs-templateUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L291">property <b>templateUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L291">property <b>templateUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2144,7 +2144,7 @@ The structure that contains the template body. The template body must be 1 to 52
 The URL of the file that contains the template body. The URL must point to a template located in an HTTP or HTTPS web server or an Alibaba Cloud OSS bucket. Examples: oss://ros/template/demo and oss://ros/template/demo?RegionId=cn-hangzhou. The template must be 1 to 524,288 bytes in length. If the region of the OSS bucket is not specified, the RegionId value is used by default.
 
 <h4 class="pdoc-member-header" id="StackGroupArgs-templateVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L295">property <b>templateVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L295">property <b>templateVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2152,7 +2152,7 @@ The URL of the file that contains the template body. The URL must point to a tem
 The version of the template.
 
 <h3 class="pdoc-module-header" id="StackGroupState" data-link-title="StackGroupState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L185">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L185">
         interface <strong>StackGroupState</strong>
     </a>
 </h3>
@@ -2162,7 +2162,7 @@ The version of the template.
 Input properties used for looking up and filtering StackGroup resources.
 
 <h4 class="pdoc-member-header" id="StackGroupState-accountIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L189">property <b>accountIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L189">property <b>accountIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2170,7 +2170,7 @@ Input properties used for looking up and filtering StackGroup resources.
 The list of target account IDs, in JSON format. A maximum of 20 accounts can be specified.
 
 <h4 class="pdoc-member-header" id="StackGroupState-administrationRoleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L193">property <b>administrationRoleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L193">property <b>administrationRoleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>administrationRoleName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2178,7 +2178,7 @@ The list of target account IDs, in JSON format. A maximum of 20 accounts can be 
 The name of the RAM administrator role assumed by ROS. ROS assumes this role to perform operations on the stack corresponding to the stack instance in the stack group.
 
 <h4 class="pdoc-member-header" id="StackGroupState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L197">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L197">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2186,7 +2186,7 @@ The name of the RAM administrator role assumed by ROS. ROS assumes this role to 
 The description of the stack group.
 
 <h4 class="pdoc-member-header" id="StackGroupState-executionRoleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L201">property <b>executionRoleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L201">property <b>executionRoleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>executionRoleName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2194,7 +2194,7 @@ The description of the stack group.
 The name of the RAM execution role assumed by the administrator role. ROS assumes this role to perform operations on the stack corresponding to the stack instance in the stack group.
 
 <h4 class="pdoc-member-header" id="StackGroupState-operationDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L205">property <b>operationDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L205">property <b>operationDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>operationDescription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2202,7 +2202,7 @@ The name of the RAM execution role assumed by the administrator role. ROS assume
 The description of the operation.
 
 <h4 class="pdoc-member-header" id="StackGroupState-operationPreferences">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L209">property <b>operationPreferences</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L209">property <b>operationPreferences</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>operationPreferences?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2210,7 +2210,7 @@ The description of the operation.
 The operation settings, in JSON format.
 
 <h4 class="pdoc-member-header" id="StackGroupState-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L213">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L213">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#StackGroupParameter'>StackGroupParameter</a>&gt;[]&gt;;</code></pre>
@@ -2218,7 +2218,7 @@ The operation settings, in JSON format.
 The parameters. If the parameter name and value are not specified, ROS will use the default value specified in the template.
 
 <h4 class="pdoc-member-header" id="StackGroupState-regionIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L217">property <b>regionIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L217">property <b>regionIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>regionIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2226,7 +2226,7 @@ The parameters. If the parameter name and value are not specified, ROS will use 
 The list of target regions, in JSON format. A maximum of 20 accounts can be specified.
 
 <h4 class="pdoc-member-header" id="StackGroupState-stackGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L221">property <b>stackGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L221">property <b>stackGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stackGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2234,7 +2234,7 @@ The list of target regions, in JSON format. A maximum of 20 accounts can be spec
 The id of Stack Group.
 
 <h4 class="pdoc-member-header" id="StackGroupState-stackGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L225">property <b>stackGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L225">property <b>stackGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stackGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2242,7 +2242,7 @@ The id of Stack Group.
 The name of the stack group. The name must be unique in a region.
 
 <h4 class="pdoc-member-header" id="StackGroupState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L229">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L229">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2250,7 +2250,7 @@ The name of the stack group. The name must be unique in a region.
 The status of Stack Group.
 
 <h4 class="pdoc-member-header" id="StackGroupState-templateBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L233">property <b>templateBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L233">property <b>templateBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2258,7 +2258,7 @@ The status of Stack Group.
 The structure that contains the template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body is longer than required, we recommend that you add parameters to the HTTP POST request body to avoid request failures due to excessive length of URLs.
 
 <h4 class="pdoc-member-header" id="StackGroupState-templateUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L237">property <b>templateUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L237">property <b>templateUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2266,7 +2266,7 @@ The structure that contains the template body. The template body must be 1 to 52
 The URL of the file that contains the template body. The URL must point to a template located in an HTTP or HTTPS web server or an Alibaba Cloud OSS bucket. Examples: oss://ros/template/demo and oss://ros/template/demo?RegionId=cn-hangzhou. The template must be 1 to 524,288 bytes in length. If the region of the OSS bucket is not specified, the RegionId value is used by default.
 
 <h4 class="pdoc-member-header" id="StackGroupState-templateVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stackGroup.ts#L241">property <b>templateVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stackGroup.ts#L241">property <b>templateVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2274,7 +2274,7 @@ The URL of the file that contains the template body. The URL must point to a tem
 The version of the template.
 
 <h3 class="pdoc-module-header" id="StackState" data-link-title="StackState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L236">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L236">
         interface <strong>StackState</strong>
     </a>
 </h3>
@@ -2284,7 +2284,7 @@ The version of the template.
 Input properties used for looking up and filtering Stack resources.
 
 <h4 class="pdoc-member-header" id="StackState-createOption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L240">property <b>createOption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L240">property <b>createOption</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createOption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2292,7 +2292,7 @@ Input properties used for looking up and filtering Stack resources.
 Specifies whether to delete the stack after it is created.
 
 <h4 class="pdoc-member-header" id="StackState-deletionProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L244">property <b>deletionProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L244">property <b>deletionProtection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deletionProtection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2300,7 +2300,7 @@ Specifies whether to delete the stack after it is created.
 Specifies whether to enable deletion protection on the stack. Valid values: `Disabled`, `Enabled`. Default to: `Disabled`
 
 <h4 class="pdoc-member-header" id="StackState-disableRollback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L248">property <b>disableRollback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L248">property <b>disableRollback</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableRollback?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2308,7 +2308,7 @@ Specifies whether to enable deletion protection on the stack. Valid values: `Dis
 Specifies whether to disable rollback on stack creation failure. Default to: `false`.
 
 <h4 class="pdoc-member-header" id="StackState-notificationUrls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L252">property <b>notificationUrls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L252">property <b>notificationUrls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notificationUrls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2316,7 +2316,7 @@ Specifies whether to disable rollback on stack creation failure. Default to: `fa
 The callback URL for receiving stack event N. Only HTTP POST is supported. Maximum value of N: 5.
 
 <h4 class="pdoc-member-header" id="StackState-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L256">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L256">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#StackParameter'>StackParameter</a>&gt;[]&gt;;</code></pre>
@@ -2324,7 +2324,7 @@ The callback URL for receiving stack event N. Only HTTP POST is supported. Maxim
 The parameters. If the parameter name and value are not specified, ROS will use the default value specified in the template.
 
 <h4 class="pdoc-member-header" id="StackState-ramRoleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L260">property <b>ramRoleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L260">property <b>ramRoleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ramRoleName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2332,7 +2332,7 @@ The parameters. If the parameter name and value are not specified, ROS will use 
 The name of the RAM role. ROS assumes the specified RAM role to create the stack and call API operations by using the credentials of the role.
 
 <h4 class="pdoc-member-header" id="StackState-replacementOption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L264">property <b>replacementOption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L264">property <b>replacementOption</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replacementOption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2340,7 +2340,7 @@ The name of the RAM role. ROS assumes the specified RAM role to create the stack
 Specifies whether to enable replacement update after a resource attribute that does not support modification update is changed. Modification update keeps the physical ID of the resource unchanged. However, the resource is deleted and then recreated, and its physical ID is changed if replacement update is enabled.
 
 <h4 class="pdoc-member-header" id="StackState-retainAllResources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L268">property <b>retainAllResources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L268">property <b>retainAllResources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retainAllResources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2348,7 +2348,7 @@ Specifies whether to enable replacement update after a resource attribute that d
 The retain all resources.
 
 <h4 class="pdoc-member-header" id="StackState-retainResources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L272">property <b>retainResources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L272">property <b>retainResources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retainResources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2356,7 +2356,7 @@ The retain all resources.
 Specifies whether to retain the resources in the stack.
 
 <h4 class="pdoc-member-header" id="StackState-stackName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L276">property <b>stackName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L276">property <b>stackName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stackName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2364,7 +2364,7 @@ Specifies whether to retain the resources in the stack.
 The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or letter.
 
 <h4 class="pdoc-member-header" id="StackState-stackPolicyBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L280">property <b>stackPolicyBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L280">property <b>stackPolicyBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stackPolicyBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2372,7 +2372,7 @@ The name can be up to 255 characters in length and can contain digits, letters, 
 The structure that contains the stack policy body. The stack policy body must be 1 to 16,384 bytes in length.
 
 <h4 class="pdoc-member-header" id="StackState-stackPolicyDuringUpdateBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L284">property <b>stackPolicyDuringUpdateBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L284">property <b>stackPolicyDuringUpdateBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stackPolicyDuringUpdateBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2380,7 +2380,7 @@ The structure that contains the stack policy body. The stack policy body must be
 The structure that contains the body of the temporary overriding stack policy. The stack policy body must be 1 to 16,384 bytes in length.
 
 <h4 class="pdoc-member-header" id="StackState-stackPolicyDuringUpdateUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L288">property <b>stackPolicyDuringUpdateUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L288">property <b>stackPolicyDuringUpdateUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stackPolicyDuringUpdateUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2388,7 +2388,7 @@ The structure that contains the body of the temporary overriding stack policy. T
 The URL of the file that contains the temporary overriding stack policy. The URL must point to a policy located in an HTTP or HTTPS web server or an Alibaba Cloud OSS bucket. Examples: oss://ros/stack-policy/demo and oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The policy can be up to 16,384 bytes in length and the URL can be up to 1,350 bytes in length. If the region of the OSS bucket is not specified, the RegionId value is used by default.
 
 <h4 class="pdoc-member-header" id="StackState-stackPolicyUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L292">property <b>stackPolicyUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L292">property <b>stackPolicyUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stackPolicyUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2396,7 +2396,7 @@ The URL of the file that contains the temporary overriding stack policy. The URL
 The URL of the file that contains the stack policy. The URL must point to a policy located in an HTTP or HTTPS web server or an Alibaba Cloud OSS bucket. Examples: oss://ros/stack-policy/demo and oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The policy can be up to 16,384 bytes in length and the URL can be up to 1,350 bytes in length. If the region of the OSS bucket is not specified, the RegionId value is used by default.
 
 <h4 class="pdoc-member-header" id="StackState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L296">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L296">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2404,7 +2404,7 @@ The URL of the file that contains the stack policy. The URL must point to a poli
 The status of Stack.
 
 <h4 class="pdoc-member-header" id="StackState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L300">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L300">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -2412,7 +2412,7 @@ The status of Stack.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="StackState-templateBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L304">property <b>templateBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L304">property <b>templateBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2420,7 +2420,7 @@ A mapping of tags to assign to the resource.
 The structure that contains the template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body is longer than required, we recommend that you add parameters to the HTTP POST request body to avoid request failures due to excessive length of URLs.
 
 <h4 class="pdoc-member-header" id="StackState-templateUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L308">property <b>templateUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L308">property <b>templateUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2428,7 +2428,7 @@ The structure that contains the template body. The template body must be 1 to 52
 The URL of the file that contains the template body. The URL must point to a template located in an HTTP or HTTPS web server or an Alibaba Cloud OSS bucket. Examples: oss://ros/template/demo and oss://ros/template/demo?RegionId=cn-hangzhou. The template must be 1 to 524,288 bytes in length. If the region of the OSS bucket is not specified, the RegionId value is used by default.
 
 <h4 class="pdoc-member-header" id="StackState-templateVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L312">property <b>templateVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L312">property <b>templateVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2436,7 +2436,7 @@ The URL of the file that contains the template body. The URL must point to a tem
 The version of the template.
 
 <h4 class="pdoc-member-header" id="StackState-timeoutInMinutes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L316">property <b>timeoutInMinutes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L316">property <b>timeoutInMinutes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeoutInMinutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2444,7 +2444,7 @@ The version of the template.
 The timeout period that is specified for the stack creation request. Default to: `60`.
 
 <h4 class="pdoc-member-header" id="StackState-usePreviousParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/stack.ts#L320">property <b>usePreviousParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/stack.ts#L320">property <b>usePreviousParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usePreviousParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2452,7 +2452,7 @@ The timeout period that is specified for the stack creation request. Default to:
 Specifies whether to use the values that were passed last time for the parameters that you do not specify in the current request.
 
 <h3 class="pdoc-module-header" id="TemplateArgs" data-link-title="TemplateArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/template.ts#L156">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/template.ts#L156">
         interface <strong>TemplateArgs</strong>
     </a>
 </h3>
@@ -2462,7 +2462,7 @@ Specifies whether to use the values that were passed last time for the parameter
 The set of arguments for constructing a Template resource.
 
 <h4 class="pdoc-member-header" id="TemplateArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/template.ts#L160">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/template.ts#L160">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2470,7 +2470,7 @@ The set of arguments for constructing a Template resource.
 The description of the template. The description can be up to 256 characters in length.
 
 <h4 class="pdoc-member-header" id="TemplateArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/template.ts#L164">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/template.ts#L164">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -2478,7 +2478,7 @@ The description of the template. The description can be up to 256 characters in 
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="TemplateArgs-templateBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/template.ts#L168">property <b>templateBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/template.ts#L168">property <b>templateBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2486,7 +2486,7 @@ A mapping of tags to assign to the resource.
 The structure that contains the template body. The template body must be 1 to 524,288 bytes in length.  If the length of the template body is longer than required, we recommend that you add parameters to the HTTP POST request body to avoid request failures due to excessive length of URLs.  You must specify one of the TemplateBody and TemplateURL parameters, but you cannot specify both of them.
 
 <h4 class="pdoc-member-header" id="TemplateArgs-templateName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/template.ts#L172">property <b>templateName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/template.ts#L172">property <b>templateName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2494,7 +2494,7 @@ The structure that contains the template body. The template body must be 1 to 52
 The name of the template. The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or letter.
 
 <h4 class="pdoc-member-header" id="TemplateArgs-templateUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/template.ts#L176">property <b>templateUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/template.ts#L176">property <b>templateUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2502,7 +2502,7 @@ The name of the template. The name can be up to 255 characters in length and can
 The template url.
 
 <h3 class="pdoc-module-header" id="TemplateState" data-link-title="TemplateState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/template.ts#L130">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/template.ts#L130">
         interface <strong>TemplateState</strong>
     </a>
 </h3>
@@ -2512,7 +2512,7 @@ The template url.
 Input properties used for looking up and filtering Template resources.
 
 <h4 class="pdoc-member-header" id="TemplateState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/template.ts#L134">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/template.ts#L134">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2520,7 +2520,7 @@ Input properties used for looking up and filtering Template resources.
 The description of the template. The description can be up to 256 characters in length.
 
 <h4 class="pdoc-member-header" id="TemplateState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/template.ts#L138">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/template.ts#L138">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -2528,7 +2528,7 @@ The description of the template. The description can be up to 256 characters in 
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="TemplateState-templateBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/template.ts#L142">property <b>templateBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/template.ts#L142">property <b>templateBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2536,7 +2536,7 @@ A mapping of tags to assign to the resource.
 The structure that contains the template body. The template body must be 1 to 524,288 bytes in length.  If the length of the template body is longer than required, we recommend that you add parameters to the HTTP POST request body to avoid request failures due to excessive length of URLs.  You must specify one of the TemplateBody and TemplateURL parameters, but you cannot specify both of them.
 
 <h4 class="pdoc-member-header" id="TemplateState-templateName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/template.ts#L146">property <b>templateName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/template.ts#L146">property <b>templateName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2544,7 +2544,7 @@ The structure that contains the template body. The template body must be 1 to 52
 The name of the template. The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or letter.
 
 <h4 class="pdoc-member-header" id="TemplateState-templateUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/ros/template.ts#L150">property <b>templateUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/ros/template.ts#L150">property <b>templateUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

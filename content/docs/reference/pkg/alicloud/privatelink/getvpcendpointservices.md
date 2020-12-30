@@ -117,7 +117,7 @@ export const firstPrivatelinkVpcEndpointServiceId = example.then(example => exam
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_vpc_endpoint_services(</span><span class="nx">auto_accept_connection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_details</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_business_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_endpoint_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetVpcEndpointServicesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_vpc_endpoint_services(</span><span class="nx">auto_accept_connection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_business_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_endpoint_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetVpcEndpointServicesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -150,16 +150,6 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to automatically accept terminal node connections..
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="enabledetails_csharp">
-<a href="#enabledetails_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Default to `false`. Set it to `true` can output more details about resource attributes.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -238,16 +228,6 @@ The following arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="enabledetails_go">
-<a href="#enabledetails_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Default to `false`. Set it to `true` can output more details about resource attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="ids_go">
 <a href="#ids_go" style="color: inherit; text-decoration: inherit;">Ids</a>
 </span>
@@ -323,16 +303,6 @@ The following arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="enabledetails_nodejs">
-<a href="#enabledetails_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Details</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Default to `false`. Set it to `true` can output more details about resource attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="ids_nodejs">
 <a href="#ids_nodejs" style="color: inherit; text-decoration: inherit;">ids</a>
 </span>
@@ -405,16 +375,6 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to automatically accept terminal node connections..
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="enable_details_python">
-<a href="#enable_details_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>details</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Default to `false`. Set it to `true` can output more details about resource attributes.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -538,15 +498,6 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="enabledetails_csharp">
-<a href="#enabledetails_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="nameregex_csharp">
 <a href="#nameregex_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
 </span>
@@ -637,15 +588,6 @@ The following output properties are available:
             title="">
         <span id="autoacceptconnection_go">
 <a href="#autoacceptconnection_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Accept<wbr>Connection</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="enabledetails_go">
-<a href="#enabledetails_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -750,15 +692,6 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="enabledetails_nodejs">
-<a href="#enabledetails_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Details</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="nameregex_nodejs">
 <a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
 </span>
@@ -849,15 +782,6 @@ The following output properties are available:
             title="">
         <span id="auto_accept_connection_python">
 <a href="#auto_accept_connection_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>accept_<wbr>connection</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="enable_details_python">
-<a href="#enable_details_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -966,16 +890,6 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="resources_csharp">
-<a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcendpointservicesserviceresource">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Private<wbr>Link.<wbr>Inputs.<wbr>Get<wbr>Vpc<wbr>Endpoint<wbr>Services<wbr>Service<wbr>Resource<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Service resources added to the endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="servicebusinessstatus_csharp">
 <a href="#servicebusinessstatus_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Business<wbr>Status</a>
 </span>
@@ -1069,16 +983,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Vpc Endpoint Service.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="resources_go">
-<a href="#resources_go" style="color: inherit; text-decoration: inherit;">Resources</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcendpointservicesserviceresource">[]Get<wbr>Vpc<wbr>Endpoint<wbr>Services<wbr>Service<wbr>Resource</a></span>
-    </dt>
-    <dd>{{% md %}}Service resources added to the endpoint service.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1178,16 +1082,6 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="resources_nodejs">
-<a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcendpointservicesserviceresource">Get<wbr>Vpc<wbr>Endpoint<wbr>Services<wbr>Service<wbr>Resource[]</a></span>
-    </dt>
-    <dd>{{% md %}}Service resources added to the endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="servicebusinessstatus_nodejs">
 <a href="#servicebusinessstatus_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Business<wbr>Status</a>
 </span>
@@ -1284,16 +1178,6 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="resources_python">
-<a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcendpointservicesserviceresource">Sequence[Get<wbr>Vpc<wbr>Endpoint<wbr>Services<wbr>Service<wbr>Resource<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}Service resources added to the endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="service_business_status_python">
 <a href="#service_business_status_python" style="color: inherit; text-decoration: inherit;">service_<wbr>business_<wbr>status</a>
 </span>
@@ -1351,124 +1235,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of Vpc Endpoint Service.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-<h4 id="getvpcendpointservicesserviceresource">Get<wbr>Vpc<wbr>Endpoint<wbr>Services<wbr>Service<wbr>Resource</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetVpcEndpointServicesServiceResource">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/privatelink?tab=doc#GetVpcEndpointServicesServiceResource">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.PrivateLink.Outputs.GetVpcEndpointServicesServiceResource.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="resourceid_csharp">
-<a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of service resources added to the endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="resourcetype_csharp">
-<a href="#resourcetype_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of service resource added to the endpoint service.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="resourceid_go">
-<a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of service resources added to the endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="resourcetype_go">
-<a href="#resourcetype_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of service resource added to the endpoint service.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="resourceid_nodejs">
-<a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of service resources added to the endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="resourcetype_nodejs">
-<a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of service resource added to the endpoint service.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="resource_id_python">
-<a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The id of service resources added to the endpoint service.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="resource_type_python">
-<a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of service resource added to the endpoint service.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

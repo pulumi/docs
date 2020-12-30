@@ -384,7 +384,7 @@ The Flow resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the flow. Set the value to `FDL`.
+    <dd>{{% md %}}The type of the flow. Valid values are `FDL` or `DEFAULT`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -440,7 +440,7 @@ The Flow resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the flow. Set the value to `FDL`.
+    <dd>{{% md %}}The type of the flow. Valid values are `FDL` or `DEFAULT`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -496,7 +496,7 @@ The Flow resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the flow. Set the value to `FDL`.
+    <dd>{{% md %}}The type of the flow. Valid values are `FDL` or `DEFAULT`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -552,7 +552,7 @@ The Flow resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the flow. Set the value to `FDL`.
+    <dd>{{% md %}}The type of the flow. Valid values are `FDL` or `DEFAULT`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -918,7 +918,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the flow. Set the value to `FDL`.
+    <dd>{{% md %}}The type of the flow. Valid values are `FDL` or `DEFAULT`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -994,7 +994,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the flow. Set the value to `FDL`.
+    <dd>{{% md %}}The type of the flow. Valid values are `FDL` or `DEFAULT`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1070,7 +1070,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the flow. Set the value to `FDL`.
+    <dd>{{% md %}}The type of the flow. Valid values are `FDL` or `DEFAULT`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1146,7 +1146,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the flow. Set the value to `FDL`.
+    <dd>{{% md %}}The type of the flow. Valid values are `FDL` or `DEFAULT`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
