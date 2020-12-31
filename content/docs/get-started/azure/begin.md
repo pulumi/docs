@@ -25,6 +25,10 @@ Before we get started using Pulumi, let's run through a few quick steps to ensur
 ### Install Pulumi
 
 {{< install-pulumi >}}
+{{% notes "info" %}}
+All Windows examples in this tutorial assume you are running in PowerShell.
+{{% /notes %}}
+{{< /install-pulumi >}}
 
 Next, we'll install the required language runtime.
 
