@@ -38,6 +38,10 @@ There are two parts to each key, both shown in the IAM console after creating it
 > No matter which option you pick, Pulumi uses the AWS SDK to authenticate requests from your computer to AWS.
 > As a result, your AWS credentials are never sent to pulumi.com.
 
+{{% notes "info" %}}
+If you are using [temporary security credentials](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_use-resources.html), you will also have to supply an `AWS_SESSION_TOKEN` value before you can use Pulumi to create resources on your behalf.
+{{% /notes %}}
+
 ## Shared Credentials File
 
 A credentials file is a plaintext file on your machine that contains your access keys. The file must be named
@@ -125,10 +129,17 @@ $ export AWS_SECRET_ACCESS_KEY=<YOUR_SECRET_ACCESS_KEY>
 
 {{% choosable os windows %}}
 
-```bat
-> set AWS_ACCESS_KEY_ID=<YOUR_ACCESS_KEY_ID>
-> set AWS_SECRET_ACCESS_KEY=<YOUR_SECRET_ACCESS_KEY>
+```powershell
+> $env:AWS_ACCESS_KEY_ID = "<YOUR_ACCESS_KEY_ID>"
+> $env:AWS_SECRET_ACCESS_KEY = "<YOUR_SECRET_ACCESS_KEY>"
 ```
 
 {{% /choosable %}}
 {{< /chooser >}}
+
+## Profiles
+
+As an optional step, if you have multiple AWS profiles set up, you can specify a different profile to use with Pulumi through one of the following methods:
+
+* Set `AWS_PROFILE` as an environment variable.
+* After creating your project, run `pulumi config set aws:profile <profilename>`. For more configuration options, see [AWS Configuration]({{< relref "/docs/intro/cloud-providers/aws#configuration" >}}).

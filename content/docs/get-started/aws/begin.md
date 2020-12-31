@@ -25,6 +25,10 @@ Before you get started using Pulumi, let's run through a few quick steps to ensu
 ### Install Pulumi
 
 {{< install-pulumi >}}
+{{% notes "info" %}}
+All Windows examples in this tutorial assume you are running in PowerShell.
+{{% /notes %}}
+{{< /install-pulumi >}}
 
 Next, install the required language runtime, if you have not already.
 
@@ -81,20 +85,15 @@ $ export AWS_SECRET_ACCESS_KEY=<YOUR_SECRET_ACCESS_KEY>
 
 {{% choosable os windows %}}
 
-```bat
-> set AWS_ACCESS_KEY_ID=<YOUR_ACCESS_KEY_ID>
-> set AWS_SECRET_ACCESS_KEY=<YOUR_SECRET_ACCESS_KEY>
+```powershell
+> $env:AWS_ACCESS_KEY_ID = "<YOUR_ACCESS_KEY_ID>"
+> $env:AWS_SECRET_ACCESS_KEY = "<YOUR_SECRET_ACCESS_KEY>"
 ```
 
 {{% /choosable %}}
 {{< /chooser >}}
 
-As an optional step, if you have multiple AWS profiles set up, you can specify a different profile using one of the following methods:
-
-* Set `AWS_PROFILE`as an [environment variable]({{< relref "/docs/intro/cloud-providers/aws/setup#environment-variables" >}}).
-* After creating your project in the next step, run `pulumi config set aws:profile <profilename>`. For more configuration options, see [AWS Configuration]({{< relref "/docs/intro/cloud-providers/aws#configuration" >}}).
-
-For additional information on how to setup Pulumi to work with AWS, see [AWS Setup]({{< relref "/docs/intro/cloud-providers/aws/setup" >}}).
+For additional information on setting and using AWS credentials, see [AWS Setup]({{< relref "/docs/intro/cloud-providers/aws/setup" >}}).
 
 Next, you'll create a new project.
 

@@ -99,7 +99,7 @@ Windows 8 and 10 are supported.
 
 ### Chocolatey
 
-You can install Pulumi through the [Chocolatey package manager](https://chocolatey.org):
+You can install Pulumi using elevated permissions through the [Chocolatey package manager](https://chocolatey.org):
 
 ```powershell
 > choco install pulumi
@@ -271,7 +271,7 @@ You can specify a specific version with [Chocolatey package manager](https://cho
 
 1. Run our installation script (replace `<version>` with the version number):
 
-```bat
+```powershell
 > @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $version = '<version>'; iex ((New-Object System.Net.WebClient).DownloadString('https://get.pulumi.com/install.ps1')).Replace('${latestVersion}', $version)" && SET "PATH=%PATH%;%USERPROFILE%\.pulumi\bin"
 ```
 
