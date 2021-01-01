@@ -15,9 +15,9 @@ aliases: ["/docs/reference/state/"]
 
 Pulumi stores metadata about your infrastructure so that it can manage your cloud resources. This metadata is called _state_. Each [stack]({{< relref "stack" >}}) has its own state, and state is how Pulumi knows when and how to create, read, delete, or update cloud resources.
 
-Pulumi stores state in a _backend_ of your choosing. A backend is an API and storage endpoint used by the CLI to coordinate updates, and read and write stack state whenever appropriate. Backend options include the Pulumi Service, a secure and reliable hosted application with policies and safeguards to facilitate team collaboration, in addition to simple object storage in AWS, Microsoft Azure, Google Cloud, or a local filesystem.
+Pulumi stores state in a _backend_ of your choosing. A backend is an API and storage endpoint used by the CLI to coordinate updates, and read and write stack state whenever appropriate. Backend options include the Pulumi Service, an easy-to-use, secure, and reliable hosted application with policies and safeguards to facilitate team collaboration, in addition to simple object storage in AWS S3, Microsoft Azure Blob Storage, Google Cloud Storage, any AWS S3 compatible server such as Minio or Ceph, or a local filesystem.
 
-The default experience is to use the hosted Pulumi Service, which takes care of the state and backend details for you. Conversely, when using cloud storage or a local filesystem as your backend, you gain control over where your state is located at the expense of having to handle security, state management, auditing, etc.
+The default experience is to use the hosted Pulumi Service, which takes care of the state and backend details for you. Conversely, when using cloud storage or a local filesystem as your backend, you gain control over where your state is located at the expense of having to handle security, state management, auditing, and other concerns the Pulumi Service would otherwise handle for you.
 
 > Pulumi state does not include your cloud credentials. Credentials are kept local to your client &mdash; wherever the CLI runs &mdash; even when using the managed Pulumi Service backend. Pulumi _does_ store configuration and secrets, but encrypts those secrets using your chosen encryption provider. To learn more, see [Configuration and Secrets]({{< relref "config" >}}).
 
@@ -26,7 +26,7 @@ The default experience is to use the hosted Pulumi Service, which takes care of 
 Pulumi supports two classes of  _backends_ for storing your infrastructure state:
 
 - **Service**: a managed cloud experience using the online or self-hosted Pulumi Service application
-- **Self-Managed**: an object store such as AWS S3, Azure Blob Storage, Google Cloud Storage, or your local filesystem
+- **Self-Managed**: a manually managed object store, including AWS S3, Azure Blob Storage, Google Cloud Storage, any AWS S3 compatible server such as Minio or Ceph, or your local filesystem
 
 Pulumi's SDK works great with all backends, although some details differ between them.
 
@@ -62,6 +62,8 @@ The basic form of `login` will use the Pulumi Service by default. If you wish to
 $ pulumi login <backend-url>
 ```
 
+Alternatively, you may set the `PULUMI_BACKEND_URL` environment variable to avoid needing to type it each time.
+
 For details on the various backend URL formats and options, please see the following sections:
 
 - [Pulumi Service (default)](#logging-into-the-pulumi-service-backend)
@@ -73,7 +75,7 @@ For details on the various backend URL formats and options, please see the follo
 
 If you forget to log in, you will be automatically prompted to do so before you do anything that requires stacks or state.
 
-After logging in, your credentials are recorded in the `~/.pulumi/credentials.json` file, and all subsequent operations will use the chosen backend. From time to time, you will see a helpful URL to your update or stack pages. You can always go there to see a full history of updates.
+After logging in, your credentials are recorded in the `~/.pulumi/credentials.json` file, and all subsequent operations will use the chosen backend. From time to time, you will see a helpful URL to your update or stack pages. For example, after an update completes, you will see a link to that update's details. You can always go there to see a full history of updates.
 
 If you ever want to check what user is logged in, use the [`whoami` CLI command]({{< relref "/docs/reference/cli/pulumi_whoami" >}}). To additionally see what  backend is currently being used, pass the `--verbose` (or `-v`) flag:
 
@@ -235,9 +237,7 @@ To learn more about self-host options, see [Self-Hosted Pulumi Service]({{< relr
 
 ## Advanced State
 
-Pulumi is designed to abstract state management away from you so that you can operate in terms of declarative infrastructure as code. In certain advanced cases, you may want or need to interact with state more directly. In those cases, the following sections may be helpful.
-
-> Due to the nature of the Pulumi Service backend being a managed service, it is the best at recovering from failure gracefully and shielding you from advanced state topics. If you choose to use an alternative backend, it is likely you'll need to be more familiar with the topics in this section.
+Pulumi is designed to abstract state management away from you so that you can operate in terms of declarative infrastructure as code. In certain advanced cases, you may want or need to interact with state more directly, especially when using self-managed backends. In those cases, the following sections may be helpful.
 
 ### Importing Existing Resources
 
