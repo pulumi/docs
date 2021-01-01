@@ -52,14 +52,14 @@ EOT
 
 {{% choosable os windows %}}
 
-```batch
-(
-@echo.^<html^>
-@echo.  ^<body^>
-@echo.      ^<h1^>Hello, Pulumi!^</h1^>
-@echo.  ^</body^>
-@echo.^</html^>
-) > site/index.html
+```powershell
+@"
+<html>
+  <body>
+    <h1>Hello, Pulumi!</h1>
+  </body>
+</html>
+"@ | Out-File -FilePath site\index.html
 ```
 
 {{% /choosable %}}
