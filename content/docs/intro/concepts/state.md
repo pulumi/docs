@@ -24,7 +24,7 @@ Pulumi stores state in a _backend_ of your choosing. A backend is just an API an
 Pulumi supports two classes of  _backends_ for storing your infrastructure state:
 
 - **Service**: a managed cloud experience using the online or self-hosted Pulumi Service application
-- **Self-Managed**: an object store on your local filesystem, or in AWS, Azure, or Google Cloud
+- **Self-Managed**: an object store such as AWS S3, Azure Blob Storage, Google Cloud Storage, or your local filesystem
 
 Pulumi's SDK works great with all backends, although some details differ between them.
 
@@ -65,7 +65,7 @@ For details on the various backend URL formats and options, please see the follo
 - [Pulumi Service (default)](#logging-into-the-pulumi-service-backend)
 - [Pulumi Self-Hosted Service](#logging-into-a-self-hosted-pulumi-service-backend)
 - [Local Filesystem](#logging-into-the-local-filesystem-backend)
-- [AWS S3](#logging-into-the-aws-s3-backend)
+- [AWS S3 (or compatible server)](#logging-into-the-aws-s3-backend)
 - [Azure Blob Storage](#logging-into-the-azure-blob-storage-backend)
 - [Google Cloud Storage](#logging-into-the-google-cloud-storage-backend)
 
@@ -146,7 +146,7 @@ Notice that `pulumi login --local` is simply syntactic sugar for `pulumi login f
 
 ##### Logging Into the AWS S3 Backend
 
-To use the AWS S3 backend, pass the `s3://<bucket-path>` as your `<backend-url>`:
+To use the [AWS S3](https://aws.amazon.com/s3/) backend, pass the `s3://<bucket-path>` as your `<backend-url>`:
 
 ```sh
 $ pulumi login s3://<bucket-path>
@@ -154,9 +154,15 @@ $ pulumi login s3://<bucket-path>
 
 To configure credentials and authorize access, please see the [AWS Session documentation](https://docs.aws.amazon.com/sdk-for-go/api/aws/session/). For additional configuration options, see [AWS Setup]({{< relref "/docs/intro/cloud-providers/aws/setup" >}}). If you're new to AWS S3, see [the AWS documentation](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html).
 
+This backend also supports [alternative object storage servers with AWS S3 compatible REST APIs](https://en.wikipedia.org/wiki/Amazon_S3#S3_API_and_competing_services), including [Minio](https://www.minio.io/), [Ceph](https://ceph.io/), or [SeaweedFS](https://github.com/chrislusf/seaweedfs). To use such a server, you may pass `endpoint`, `disableSSL`, and `s3ForcePathStyle` querystring parameters to your `<backend-url>`, as follows:
+
+```sh
+$ pulumi login s3://<bucket-path>?endpoint=my.minio.local:8080&disableSSL=true&s3ForcePathStyle=true
+```
+
 ##### Logging Into the Azure Blob Storage Backend
 
-To use the Azure Blob Storage backend, pass the `azblob://<container-path>` as your `<backend-url>`:
+To use the [Azure Blob Storage](https://azure.microsoft.com/en-us/services/storage/blobs/) backend, pass the `azblob://<container-path>` as your `<backend-url>`:
 
 ```sh
 $ pulumi login azblob://<container-path>
@@ -166,7 +172,7 @@ To tell Pulumi what Azure storage account to use, set the `AZURE_STORAGE_ACCOUNT
 
 ##### Logging Into the Google Cloud Storage Backend
 
-To use the Google Cloud Storage backend pass the `gs://<bucket-path>` as your `<backend-url>`:
+To use the [Google Cloud Storage](https://cloud.google.com/storage/) backend pass the `gs://<bucket-path>` as your `<backend-url>`:
 
 ```sh
 $ pulumi login gs://<my-pulumi-state-bucket>
