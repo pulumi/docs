@@ -1,4 +1,23 @@
 [[awards]]
+title = "EMA Best of 2020"
+featured = false
+img = "/logos/press/awards/ema.png"
+url = "https://torstenvolk.medium.com/ema-best-of-2020-top-3-acquisitions-vc-rounds-and-open-source-projects-34fa7a8d29fe"
+
+[[awards]]
+title = "Startups to Watch in 2021"
+featured = false
+img = "/logos/press/businessinsider.png"
+url = "https://www.businessinsider.com/vcs-name-the-startups-that-will-boom-in-2021-2020-12"
+
+[[awards]]
+title = "Top 20 Edge Cloud Companies"
+featured = false
+img = "/logos/press/ngpcap.png"
+url = "https://www.ngpcap.com/news/edge-cloud-a-gold-lining-on-the-horizon-1"
+
+
+[[awards]]
 title = "10 Hottest Kubernetes Startups Of 2020"
 featured = true
 img = "/logos/press/crn.png"
