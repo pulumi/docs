@@ -22,69 +22,15 @@ For information about Private Link Vpc Endpoint and how to use it, see [What is 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-```csharp
-using Pulumi;
-using AliCloud = Pulumi.AliCloud;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = new AliCloud.PrivateLink.VpcEndpoint("example", new AliCloud.PrivateLink.VpcEndpointArgs
-        {
-            SecurityGroupIds = 
-            {
-                "sg-ercx1234",
-            },
-            ServiceId = "YourServiceId",
-            VpcId = "YourVpcId",
-        });
-    }
-
-}
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/privatelink"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := privatelink.NewVpcEndpoint(ctx, "example", &privatelink.VpcEndpointArgs{
-			SecurityGroupIds: pulumi.StringArray{
-				pulumi.String("sg-ercx1234"),
-			},
-			ServiceId: pulumi.String("YourServiceId"),
-			VpcId:     pulumi.String("YourVpcId"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-```python
-import pulumi
-import pulumi_alicloud as alicloud
-
-example = alicloud.privatelink.VpcEndpoint("example",
-    security_group_ids=["sg-ercx1234"],
-    service_id="YourServiceId",
-    vpc_id="YourVpcId")
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example typescript %}}
@@ -94,7 +40,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
 const example = new alicloud.privatelink.VpcEndpoint("example", {
-    securityGroupIds: ["sg-ercx1234"],
+    securityGroupId: ["sg-ercx1234"],
     serviceId: "YourServiceId",
     vpcId: "YourVpcId",
 });
@@ -114,7 +60,7 @@ const example = new alicloud.privatelink.VpcEndpoint("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/privatelink/#pulumi_alicloud.privatelink.VpcEndpoint">VpcEndpoint</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dry_run</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">endpoint_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">service_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpcEndpointZoneArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/privatelink/#pulumi_alicloud.privatelink.VpcEndpoint">VpcEndpoint</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dry_run</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">endpoint_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">service_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -355,16 +301,6 @@ The VpcEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}The name of Vpc Endpoint. The length is between 2 and 128 characters, starting with English letters or Chinese, and can include numbers, hyphens (-) and underscores (_).
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="zones_csharp">
-<a href="#zones_csharp" style="color: inherit; text-decoration: inherit;">Zones</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcendpointzone">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Private<wbr>Link.<wbr>Inputs.<wbr>Vpc<wbr>Endpoint<wbr>Zone<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Availability zone.
-{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -440,16 +376,6 @@ The VpcEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of Vpc Endpoint. The length is between 2 and 128 characters, starting with English letters or Chinese, and can include numbers, hyphens (-) and underscores (_).
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="zones_go">
-<a href="#zones_go" style="color: inherit; text-decoration: inherit;">Zones</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcendpointzone">[]Vpc<wbr>Endpoint<wbr>Zone</a></span>
-    </dt>
-    <dd>{{% md %}}Availability zone.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -527,16 +453,6 @@ The VpcEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}The name of Vpc Endpoint. The length is between 2 and 128 characters, starting with English letters or Chinese, and can include numbers, hyphens (-) and underscores (_).
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="zones_nodejs">
-<a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcendpointzone">Vpc<wbr>Endpoint<wbr>Zone[]</a></span>
-    </dt>
-    <dd>{{% md %}}Availability zone.
-{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -612,16 +528,6 @@ The VpcEndpoint resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of Vpc Endpoint. The length is between 2 and 128 characters, starting with English letters or Chinese, and can include numbers, hyphens (-) and underscores (_).
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="zones_python">
-<a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcendpointzone">Sequence[Vpc<wbr>Endpoint<wbr>Zone<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}Availability zone.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -906,7 +812,7 @@ Get an existing VpcEndpoint resource's state with the given name, ID, and option
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bandwidth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">connection_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dry_run</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">endpoint_business_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">service_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpcEndpointZoneArgs]]</span> = None<span class="p">) -&gt;</span> VpcEndpoint</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bandwidth</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">connection_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dry_run</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">endpoint_business_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">service_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> VpcEndpoint</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1139,16 +1045,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The private network to which the terminal node belongs.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_zones_csharp">
-<a href="#state_zones_csharp" style="color: inherit; text-decoration: inherit;">Zones</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcendpointzone">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Private<wbr>Link.<wbr>Inputs.<wbr>Vpc<wbr>Endpoint<wbr>Zone<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Availability zone.
-{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1274,16 +1170,6 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private network to which the terminal node belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_zones_go">
-<a href="#state_zones_go" style="color: inherit; text-decoration: inherit;">Zones</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcendpointzone">[]Vpc<wbr>Endpoint<wbr>Zone</a></span>
-    </dt>
-    <dd>{{% md %}}Availability zone.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1411,16 +1297,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The private network to which the terminal node belongs.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_zones_nodejs">
-<a href="#state_zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcendpointzone">Vpc<wbr>Endpoint<wbr>Zone[]</a></span>
-    </dt>
-    <dd>{{% md %}}Availability zone.
-{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1547,16 +1423,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The private network to which the terminal node belongs.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="state_zones_python">
-<a href="#state_zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vpcendpointzone">Sequence[Vpc<wbr>Endpoint<wbr>Zone<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}Availability zone.
-{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1564,128 +1430,6 @@ The following state arguments are supported:
 
 
 
-
-## Supporting Types
-
-
-
-<h4 id="vpcendpointzone">Vpc<wbr>Endpoint<wbr>Zone</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#VpcEndpointZone">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#VpcEndpointZone">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/privatelink?tab=doc#VpcEndpointZoneArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/privatelink?tab=doc#VpcEndpointZoneOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.PrivateLink.Inputs.VpcEndpointZoneArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.PrivateLink.Outputs.VpcEndpointZone.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="vswitchid_csharp">
-<a href="#vswitchid_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}To create the vswitch of the terminal node network card in the available zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="zoneid_csharp">
-<a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Availability zone corresponding to terminal node service.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="vswitchid_go">
-<a href="#vswitchid_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}To create the vswitch of the terminal node network card in the available zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="zoneid_go">
-<a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Availability zone corresponding to terminal node service.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="vswitchid_nodejs">
-<a href="#vswitchid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}To create the vswitch of the terminal node network card in the available zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="zoneid_nodejs">
-<a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Availability zone corresponding to terminal node service.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="vswitch_id_python">
-<a href="#vswitch_id_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}To create the vswitch of the terminal node network card in the available zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="zone_id_python">
-<a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Availability zone corresponding to terminal node service.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
 ## Import
 
 

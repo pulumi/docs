@@ -1483,6 +1483,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="ga_csharp">
+<a href="#ga_csharp" style="color: inherit; text-decoration: inherit;">Ga</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="gpdb_csharp">
 <a href="#gpdb_csharp" style="color: inherit; text-decoration: inherit;">Gpdb</a>
 </span>
@@ -1665,6 +1674,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="resourcemanager_csharp">
 <a href="#resourcemanager_csharp" style="color: inherit; text-decoration: inherit;">Resourcemanager</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcesharing_csharp">
+<a href="#resourcesharing_csharp" style="color: inherit; text-decoration: inherit;">Resourcesharing</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1993,6 +2011,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="ga_go">
+<a href="#ga_go" style="color: inherit; text-decoration: inherit;">Ga</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="gpdb_go">
 <a href="#gpdb_go" style="color: inherit; text-decoration: inherit;">Gpdb</a>
 </span>
@@ -2175,6 +2202,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="resourcemanager_go">
 <a href="#resourcemanager_go" style="color: inherit; text-decoration: inherit;">Resourcemanager</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcesharing_go">
+<a href="#resourcesharing_go" style="color: inherit; text-decoration: inherit;">Resourcesharing</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2503,6 +2539,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="ga_nodejs">
+<a href="#ga_nodejs" style="color: inherit; text-decoration: inherit;">ga</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="gpdb_nodejs">
 <a href="#gpdb_nodejs" style="color: inherit; text-decoration: inherit;">gpdb</a>
 </span>
@@ -2685,6 +2730,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="resourcemanager_nodejs">
 <a href="#resourcemanager_nodejs" style="color: inherit; text-decoration: inherit;">resourcemanager</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcesharing_nodejs">
+<a href="#resourcesharing_nodejs" style="color: inherit; text-decoration: inherit;">resourcesharing</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -3013,6 +3067,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="ga_python">
+<a href="#ga_python" style="color: inherit; text-decoration: inherit;">ga</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="gpdb_python">
 <a href="#gpdb_python" style="color: inherit; text-decoration: inherit;">gpdb</a>
 </span>
@@ -3195,6 +3258,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="resourcemanager_python">
 <a href="#resourcemanager_python" style="color: inherit; text-decoration: inherit;">resourcemanager</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcesharing_python">
+<a href="#resourcesharing_python" style="color: inherit; text-decoration: inherit;">resourcesharing</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

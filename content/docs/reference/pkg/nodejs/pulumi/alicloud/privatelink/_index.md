@@ -3,7 +3,7 @@ title: "Module privatelink"
 title_tag: "Module privatelink | Package @pulumi/alicloud | Node.js SDK"
 linktitle: "privatelink"
 meta_desc: "Explore members of the privatelink module in the @pulumi/alicloud package."
-git_sha: "ba11fd33d15635f294823990be8ffe1564fe697d"
+git_sha: "8b0235f54ce04ebef3a63df7ea1100f2c58382cf"
 block_external_search_index: true
 ---
 
@@ -22,6 +22,7 @@ block_external_search_index: true
     <li><a href="#VpcEndpointServiceConnection"><span class="symbol resource"></span>VpcEndpointServiceConnection</a></li>
     <li><a href="#VpcEndpointServiceResource"><span class="symbol resource"></span>VpcEndpointServiceResource</a></li>
     <li><a href="#VpcEndpointServiceUser"><span class="symbol resource"></span>VpcEndpointServiceUser</a></li>
+    <li><a href="#VpcEndpointZone"><span class="symbol resource"></span>VpcEndpointZone</a></li>
 </ul>
 
 <h3>Functions</h3>
@@ -31,6 +32,7 @@ block_external_search_index: true
     <li><a href="#getVpcEndpointServiceResources"><span class="symbol function"></span>getVpcEndpointServiceResources</a></li>
     <li><a href="#getVpcEndpointServices"><span class="symbol function"></span>getVpcEndpointServices</a></li>
     <li><a href="#getVpcEndpointServiceUsers"><span class="symbol function"></span>getVpcEndpointServiceUsers</a></li>
+    <li><a href="#getVpcEndpointZones"><span class="symbol function"></span>getVpcEndpointZones</a></li>
 </ul>
 
 <h3>Others</h3>
@@ -45,6 +47,8 @@ block_external_search_index: true
     <li><a href="#GetVpcEndpointServiceUsersArgs"><span class="symbol api"></span>GetVpcEndpointServiceUsersArgs</a></li>
     <li><a href="#GetVpcEndpointServiceUsersResult"><span class="symbol api"></span>GetVpcEndpointServiceUsersResult</a></li>
     <li><a href="#GetVpcEndpointsResult"><span class="symbol api"></span>GetVpcEndpointsResult</a></li>
+    <li><a href="#GetVpcEndpointZonesArgs"><span class="symbol api"></span>GetVpcEndpointZonesArgs</a></li>
+    <li><a href="#GetVpcEndpointZonesResult"><span class="symbol api"></span>GetVpcEndpointZonesResult</a></li>
     <li><a href="#VpcEndpointArgs"><span class="symbol api"></span>VpcEndpointArgs</a></li>
     <li><a href="#VpcEndpointServiceArgs"><span class="symbol api"></span>VpcEndpointServiceArgs</a></li>
     <li><a href="#VpcEndpointServiceConnectionArgs"><span class="symbol api"></span>VpcEndpointServiceConnectionArgs</a></li>
@@ -55,12 +59,14 @@ block_external_search_index: true
     <li><a href="#VpcEndpointServiceUserArgs"><span class="symbol api"></span>VpcEndpointServiceUserArgs</a></li>
     <li><a href="#VpcEndpointServiceUserState"><span class="symbol api"></span>VpcEndpointServiceUserState</a></li>
     <li><a href="#VpcEndpointState"><span class="symbol api"></span>VpcEndpointState</a></li>
+    <li><a href="#VpcEndpointZoneArgs"><span class="symbol api"></span>VpcEndpointZoneArgs</a></li>
+    <li><a href="#VpcEndpointZoneState"><span class="symbol api"></span>VpcEndpointZoneState</a></li>
 </ul>
 
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="VpcEndpoint" data-link-title="VpcEndpoint">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpoint.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpoint.ts#L37">
         Resource <strong>VpcEndpoint</strong>
     </a>
 </h3>
@@ -82,7 +88,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
 const example = new alicloud.privatelink.VpcEndpoint("example", {
-    securityGroupIds: ["sg-ercx1234"],
+    securityGroupId: ["sg-ercx1234"],
     serviceId: "YourServiceId",
     vpcId: "YourVpcId",
 });
@@ -97,7 +103,7 @@ Private Link Vpc Endpoint can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="VpcEndpoint-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpoint.ts#L117"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpoint.ts#L112"> <b>constructor</b></a>
 </h4>
 
 
@@ -111,7 +117,7 @@ Create a VpcEndpoint resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="VpcEndpoint-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpoint.ts#L48">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpoint.ts#L47">method <b>get</b></a>
 </h4>
 
 
@@ -122,14 +128,14 @@ Get an existing VpcEndpoint resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="VpcEndpoint-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpoint.ts#L38">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpoint.ts#L37">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="VpcEndpoint-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpoint.ts#L59">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpoint.ts#L58">method <b>isInstance</b></a>
 </h4>
 
 
@@ -140,7 +146,7 @@ Returns true if the given object is an instance of VpcEndpoint.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="VpcEndpoint-bandwidth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpoint.ts#L69">property <b>bandwidth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpoint.ts#L68">property <b>bandwidth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bandwidth: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -148,7 +154,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Bandwidth.
 
 <h4 class="pdoc-member-header" id="VpcEndpoint-connectionStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpoint.ts#L73">property <b>connectionStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpoint.ts#L72">property <b>connectionStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>connectionStatus: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -156,7 +162,7 @@ The Bandwidth.
 The status of Connection.
 
 <h4 class="pdoc-member-header" id="VpcEndpoint-dryRun">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpoint.ts#L77">property <b>dryRun</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpoint.ts#L76">property <b>dryRun</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dryRun: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -164,7 +170,7 @@ The status of Connection.
 The dry run. Default to: `false`.
 
 <h4 class="pdoc-member-header" id="VpcEndpoint-endpointBusinessStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpoint.ts#L81">property <b>endpointBusinessStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpoint.ts#L80">property <b>endpointBusinessStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endpointBusinessStatus: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -172,7 +178,7 @@ The dry run. Default to: `false`.
 The status of Endpoint Business.
 
 <h4 class="pdoc-member-header" id="VpcEndpoint-endpointDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpoint.ts#L85">property <b>endpointDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpoint.ts#L84">property <b>endpointDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endpointDescription: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -180,7 +186,7 @@ The status of Endpoint Business.
 The description of Vpc Endpoint. The length is 2~256 characters and cannot start with `http://` and `https://`.
 
 <h4 class="pdoc-member-header" id="VpcEndpoint-endpointDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpoint.ts#L89">property <b>endpointDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpoint.ts#L88">property <b>endpointDomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endpointDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -188,7 +194,7 @@ The description of Vpc Endpoint. The length is 2~256 characters and cannot start
 The Endpoint Domain.
 
 <h4 class="pdoc-member-header" id="VpcEndpoint-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpoint.ts#L38">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpoint.ts#L37">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -197,7 +203,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="VpcEndpoint-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpoint.ts#L93">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpoint.ts#L92">property <b>securityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>securityGroupIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -205,7 +211,7 @@ deployments and may be missing (undefined) during planning phases.
 The security group associated with the terminal node network card.
 
 <h4 class="pdoc-member-header" id="VpcEndpoint-serviceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpoint.ts#L97">property <b>serviceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpoint.ts#L96">property <b>serviceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -213,7 +219,7 @@ The security group associated with the terminal node network card.
 The terminal node service associated with the terminal node.
 
 <h4 class="pdoc-member-header" id="VpcEndpoint-serviceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpoint.ts#L101">property <b>serviceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpoint.ts#L100">property <b>serviceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -221,7 +227,7 @@ The terminal node service associated with the terminal node.
 The name of the terminal node service associated with the terminal node.
 
 <h4 class="pdoc-member-header" id="VpcEndpoint-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpoint.ts#L105">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpoint.ts#L104">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -229,7 +235,7 @@ The name of the terminal node service associated with the terminal node.
 The status of Vpc Endpoint.
 
 <h4 class="pdoc-member-header" id="VpcEndpoint-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpoint.ts#L38">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpoint.ts#L37">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -238,7 +244,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="VpcEndpoint-vpcEndpointName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpoint.ts#L109">property <b>vpcEndpointName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpoint.ts#L108">property <b>vpcEndpointName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcEndpointName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -246,23 +252,15 @@ deployments.
 The name of Vpc Endpoint. The length is between 2 and 128 characters, starting with English letters or Chinese, and can include numbers, hyphens (-) and underscores (_).
 
 <h4 class="pdoc-member-header" id="VpcEndpoint-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpoint.ts#L113">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpoint.ts#L112">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The private network to which the terminal node belongs.
 
-<h4 class="pdoc-member-header" id="VpcEndpoint-zones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpoint.ts#L117">property <b>zones</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'>public </span>zones: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#VpcEndpointZone'>VpcEndpointZone</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
-
-Availability zone.
-
 <h3 class="pdoc-module-header" id="VpcEndpointService" data-link-title="VpcEndpointService">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointService.ts#L37">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointService.ts#L37">
         Resource <strong>VpcEndpointService</strong>
     </a>
 </h3>
@@ -299,7 +297,7 @@ Private Link Vpc Endpoint Service can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="VpcEndpointService-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointService.ts#L96"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointService.ts#L96"> <b>constructor</b></a>
 </h4>
 
 
@@ -313,7 +311,7 @@ Create a VpcEndpointService resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="VpcEndpointService-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointService.ts#L47">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointService.ts#L47">method <b>get</b></a>
 </h4>
 
 
@@ -324,14 +322,14 @@ Get an existing VpcEndpointService resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="VpcEndpointService-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointService.ts#L37">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointService.ts#L37">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="VpcEndpointService-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointService.ts#L58">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointService.ts#L58">method <b>isInstance</b></a>
 </h4>
 
 
@@ -342,7 +340,7 @@ Returns true if the given object is an instance of VpcEndpointService.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="VpcEndpointService-autoAcceptConnection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointService.ts#L68">property <b>autoAcceptConnection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointService.ts#L68">property <b>autoAcceptConnection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoAcceptConnection: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -350,7 +348,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Whether to automatically accept terminal node connections.
 
 <h4 class="pdoc-member-header" id="VpcEndpointService-connectBandwidth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointService.ts#L72">property <b>connectBandwidth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointService.ts#L72">property <b>connectBandwidth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>connectBandwidth: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -358,7 +356,7 @@ Whether to automatically accept terminal node connections.
 The connection bandwidth.
 
 <h4 class="pdoc-member-header" id="VpcEndpointService-dryRun">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointService.ts#L76">property <b>dryRun</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointService.ts#L76">property <b>dryRun</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dryRun: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -366,7 +364,7 @@ The connection bandwidth.
 Whether to pre-check this request only. Default to: `false`
 
 <h4 class="pdoc-member-header" id="VpcEndpointService-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointService.ts#L37">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointService.ts#L37">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -375,7 +373,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="VpcEndpointService-payer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointService.ts#L80">property <b>payer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointService.ts#L80">property <b>payer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>payer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -383,7 +381,7 @@ deployments and may be missing (undefined) during planning phases.
 The payer type. Valid Value: `EndpointService`, `Endpoint`. Default to: `Endpoint`.
 
 <h4 class="pdoc-member-header" id="VpcEndpointService-serviceBusinessStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointService.ts#L84">property <b>serviceBusinessStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointService.ts#L84">property <b>serviceBusinessStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceBusinessStatus: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -391,7 +389,7 @@ The payer type. Valid Value: `EndpointService`, `Endpoint`. Default to: `Endpoin
 The business status of Vpc Endpoint Service.
 
 <h4 class="pdoc-member-header" id="VpcEndpointService-serviceDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointService.ts#L88">property <b>serviceDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointService.ts#L88">property <b>serviceDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceDescription: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -399,7 +397,7 @@ The business status of Vpc Endpoint Service.
 The description of the terminal node service.
 
 <h4 class="pdoc-member-header" id="VpcEndpointService-serviceDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointService.ts#L92">property <b>serviceDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointService.ts#L92">property <b>serviceDomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -407,7 +405,7 @@ The description of the terminal node service.
 Service Domain.
 
 <h4 class="pdoc-member-header" id="VpcEndpointService-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointService.ts#L96">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointService.ts#L96">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -415,7 +413,7 @@ Service Domain.
 The status of Vpc Endpoint Service.
 
 <h4 class="pdoc-member-header" id="VpcEndpointService-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointService.ts#L37">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointService.ts#L37">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -424,7 +422,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="VpcEndpointServiceConnection" data-link-title="VpcEndpointServiceConnection">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L37">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L37">
         Resource <strong>VpcEndpointServiceConnection</strong>
     </a>
 </h3>
@@ -461,7 +459,7 @@ Private Link Vpc Endpoint Connection can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceConnection-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L84"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L84"> <b>constructor</b></a>
 </h4>
 
 
@@ -475,7 +473,7 @@ Create a VpcEndpointServiceConnection resource with the given unique name, argum
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceConnection-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L47">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L47">method <b>get</b></a>
 </h4>
 
 
@@ -486,14 +484,14 @@ Get an existing VpcEndpointServiceConnection resource's state with the given nam
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceConnection-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L37">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L37">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceConnection-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L58">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L58">method <b>isInstance</b></a>
 </h4>
 
 
@@ -504,7 +502,7 @@ Returns true if the given object is an instance of VpcEndpointServiceConnection.
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceConnection-bandwidth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L68">property <b>bandwidth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L68">property <b>bandwidth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bandwidth: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -512,7 +510,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Bandwidth.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceConnection-dryRun">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L72">property <b>dryRun</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L72">property <b>dryRun</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dryRun: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -520,7 +518,7 @@ The Bandwidth.
 The dry run.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceConnection-endpointId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L76">property <b>endpointId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L76">property <b>endpointId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endpointId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -528,7 +526,7 @@ The dry run.
 The ID of the Vpc Endpoint.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceConnection-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L37">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L37">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -537,7 +535,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceConnection-serviceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L80">property <b>serviceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L80">property <b>serviceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -545,7 +543,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the Vpc Endpoint Service.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceConnection-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L84">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L84">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -553,7 +551,7 @@ The ID of the Vpc Endpoint Service.
 The status of Vpc Endpoint Connection.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceConnection-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L37">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L37">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -562,7 +560,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="VpcEndpointServiceResource" data-link-title="VpcEndpointServiceResource">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceResource.ts#L37">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceResource.ts#L37">
         Resource <strong>VpcEndpointServiceResource</strong>
     </a>
 </h3>
@@ -599,7 +597,7 @@ Private Link Vpc Endpoint Service Resource can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceResource-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceResource.ts#L80"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceResource.ts#L80"> <b>constructor</b></a>
 </h4>
 
 
@@ -613,7 +611,7 @@ Create a VpcEndpointServiceResource resource with the given unique name, argumen
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceResource-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceResource.ts#L47">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceResource.ts#L47">method <b>get</b></a>
 </h4>
 
 
@@ -624,14 +622,14 @@ Get an existing VpcEndpointServiceResource resource's state with the given name,
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceResource-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceResource.ts#L37">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceResource.ts#L37">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceResource-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceResource.ts#L58">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceResource.ts#L58">method <b>isInstance</b></a>
 </h4>
 
 
@@ -642,7 +640,7 @@ Returns true if the given object is an instance of VpcEndpointServiceResource.  
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceResource-dryRun">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceResource.ts#L68">property <b>dryRun</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceResource.ts#L68">property <b>dryRun</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dryRun: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -650,7 +648,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The dry run.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceResource-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceResource.ts#L37">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceResource.ts#L37">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -659,7 +657,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceResource-resourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceResource.ts#L72">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceResource.ts#L72">property <b>resourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -667,7 +665,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of Resource.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceResource-resourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceResource.ts#L76">property <b>resourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceResource.ts#L76">property <b>resourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -675,7 +673,7 @@ The ID of Resource.
 The Type of Resource.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceResource-serviceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceResource.ts#L80">property <b>serviceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceResource.ts#L80">property <b>serviceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -683,7 +681,7 @@ The Type of Resource.
 The ID of Vpc Endpoint Service.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceResource-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceResource.ts#L37">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceResource.ts#L37">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -692,7 +690,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="VpcEndpointServiceUser" data-link-title="VpcEndpointServiceUser">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceUser.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceUser.ts#L36">
         Resource <strong>VpcEndpointServiceUser</strong>
     </a>
 </h3>
@@ -728,7 +726,7 @@ Private Link Vpc Endpoint Service User can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceUser-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceUser.ts#L75"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceUser.ts#L75"> <b>constructor</b></a>
 </h4>
 
 
@@ -742,7 +740,7 @@ Create a VpcEndpointServiceUser resource with the given unique name, arguments, 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceUser-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceUser.ts#L46">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceUser.ts#L46">method <b>get</b></a>
 </h4>
 
 
@@ -753,14 +751,14 @@ Get an existing VpcEndpointServiceUser resource's state with the given name, ID,
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceUser-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceUser.ts#L36">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceUser.ts#L36">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceUser-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceUser.ts#L57">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceUser.ts#L57">method <b>isInstance</b></a>
 </h4>
 
 
@@ -771,7 +769,7 @@ Returns true if the given object is an instance of VpcEndpointServiceUser.  This
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceUser-dryRun">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceUser.ts#L67">property <b>dryRun</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceUser.ts#L67">property <b>dryRun</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dryRun: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -779,7 +777,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The dry run.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceUser-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceUser.ts#L36">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceUser.ts#L36">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -788,7 +786,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceUser-serviceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceUser.ts#L71">property <b>serviceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceUser.ts#L71">property <b>serviceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -796,7 +794,7 @@ deployments and may be missing (undefined) during planning phases.
 The Id of Vpc Endpoint Service.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceUser-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceUser.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceUser.ts#L36">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -805,17 +803,155 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceUser-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceUser.ts#L75">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceUser.ts#L75">property <b>userId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The Id of Ram User.
 
+<h3 class="pdoc-module-header" id="VpcEndpointZone" data-link-title="VpcEndpointZone">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointZone.ts#L37">
+        Resource <strong>VpcEndpointZone</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>VpcEndpointZone</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
+
+Provides a Private Link Vpc Endpoint Zone resource.
+
+For information about Private Link Vpc Endpoint Zone and how to use it, see [What is Vpc Endpoint Zone](https://help.aliyun.com/document_detail/183561.html).
+
+> **NOTE:** Available in v1.111.0+.
+
+#### Example Usage
+
+Basic Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const example = new alicloud.privatelink.VpcEndpointZone("example", {
+    endpointId: "ep-gw8boxxxxx",
+    vswitchId: "vsw-rtycxxxxx",
+    zoneId: "eu-central-1a",
+});
+```
+
+#### Import
+
+Private Link Vpc Endpoint Zone can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:privatelink/vpcEndpointZone:VpcEndpointZone example <endpoint_id>:<zone_id>
+```
+
+<h4 class="pdoc-member-header" id="VpcEndpointZone-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointZone.ts#L84"> <b>constructor</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> VpcEndpointZone(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#VpcEndpointZoneArgs'>VpcEndpointZoneArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
+
+
+Create a VpcEndpointZone resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h4 class="pdoc-member-header" id="VpcEndpointZone-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointZone.ts#L47">method <b>get</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#VpcEndpointZoneState'>VpcEndpointZoneState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#VpcEndpointZone'>VpcEndpointZone</a></code></pre>
+
+
+Get an existing VpcEndpointZone resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h4 class="pdoc-member-header" id="VpcEndpointZone-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointZone.ts#L37">method <b>getProvider</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
+
+<h4 class="pdoc-member-header" id="VpcEndpointZone-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointZone.ts#L58">method <b>isInstance</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is VpcEndpointZone</code></pre>
+
+
+Returns true if the given object is an instance of VpcEndpointZone.  This is designed to work even
+when multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h4 class="pdoc-member-header" id="VpcEndpointZone-dryRun">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointZone.ts#L68">property <b>dryRun</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>dryRun: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The dry run.
+
+<h4 class="pdoc-member-header" id="VpcEndpointZone-endpointId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointZone.ts#L72">property <b>endpointId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>endpointId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID of the Vpc Endpoint.
+
+<h4 class="pdoc-member-header" id="VpcEndpointZone-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointZone.ts#L37">property <b>id</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h4 class="pdoc-member-header" id="VpcEndpointZone-status">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointZone.ts#L76">property <b>status</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Status.
+
+<h4 class="pdoc-member-header" id="VpcEndpointZone-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointZone.ts#L37">property <b>urn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h4 class="pdoc-member-header" id="VpcEndpointZone-vswitchId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointZone.ts#L80">property <b>vswitchId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>vswitchId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The VSwitch id.
+
+<h4 class="pdoc-member-header" id="VpcEndpointZone-zoneId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointZone.ts#L84">property <b>zoneId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>zoneId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The Zone Id.
+
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getVpcEndpointConnections" data-link-title="getVpcEndpointConnections">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointConnections.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointConnections.ts#L28">
         Function <strong>getVpcEndpointConnections</strong>
     </a>
 </h3>
@@ -844,7 +980,7 @@ export const firstPrivatelinkVpcEndpointConnectionId = example.then(example => e
 ```
 
 <h3 class="pdoc-module-header" id="getVpcEndpoints" data-link-title="getVpcEndpoints">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpoints.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpoints.ts#L28">
         Function <strong>getVpcEndpoints</strong>
     </a>
 </h3>
@@ -873,7 +1009,7 @@ export const firstPrivatelinkVpcEndpointId = example.then(example => example.end
 ```
 
 <h3 class="pdoc-module-header" id="getVpcEndpointServiceResources" data-link-title="getVpcEndpointServiceResources">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointServiceResources.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointServiceResources.ts#L27">
         Function <strong>getVpcEndpointServiceResources</strong>
     </a>
 </h3>
@@ -901,7 +1037,7 @@ export const firstPrivatelinkVpcEndpointServiceResourceId = example.then(example
 ```
 
 <h3 class="pdoc-module-header" id="getVpcEndpointServices" data-link-title="getVpcEndpointServices">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointServices.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointServices.ts#L28">
         Function <strong>getVpcEndpointServices</strong>
     </a>
 </h3>
@@ -930,7 +1066,7 @@ export const firstPrivatelinkVpcEndpointServiceId = example.then(example => exam
 ```
 
 <h3 class="pdoc-module-header" id="getVpcEndpointServiceUsers" data-link-title="getVpcEndpointServiceUsers">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointServiceUsers.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointServiceUsers.ts#L27">
         Function <strong>getVpcEndpointServiceUsers</strong>
     </a>
 </h3>
@@ -957,10 +1093,38 @@ const example = alicloud.privatelink.getVpcEndpointServiceUsers({
 export const firstPrivatelinkVpcEndpointServiceUserId = example.then(example => example.users[0].id);
 ```
 
+<h3 class="pdoc-module-header" id="getVpcEndpointZones" data-link-title="getVpcEndpointZones">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointZones.ts#L27">
+        Function <strong>getVpcEndpointZones</strong>
+    </a>
+</h3>
+
+
+<pre class="highlight"><code><span class='kd'></span>getVpcEndpointZones(args: <a href='#GetVpcEndpointZonesArgs'>GetVpcEndpointZonesArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetVpcEndpointZonesResult'>GetVpcEndpointZonesResult</a>&gt;</code></pre>
+
+
+This data source provides the Privatelink Vpc Endpoint Zones of the current Alibaba Cloud user.
+
+> **NOTE:** Available in v1.111.0+.
+
+#### Example Usage
+
+Basic Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const example = alicloud.privatelink.getVpcEndpointZones({
+    endpointId: "ep-gw8boxxxxx",
+});
+export const firstPrivatelinkVpcEndpointZoneId = example.then(example => example.zones[0].id);
+```
+
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetVpcEndpointConnectionsArgs" data-link-title="GetVpcEndpointConnectionsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointConnections.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointConnections.ts#L48">
         interface <strong>GetVpcEndpointConnectionsArgs</strong>
     </a>
 </h3>
@@ -970,7 +1134,7 @@ export const firstPrivatelinkVpcEndpointServiceUserId = example.then(example => 
 A collection of arguments for invoking getVpcEndpointConnections.
 
 <h4 class="pdoc-member-header" id="GetVpcEndpointConnectionsArgs-endpointId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointConnections.ts#L52">property <b>endpointId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointConnections.ts#L52">property <b>endpointId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpointId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -978,7 +1142,7 @@ A collection of arguments for invoking getVpcEndpointConnections.
 The ID of the Vpc Endpoint.
 
 <h4 class="pdoc-member-header" id="GetVpcEndpointConnectionsArgs-endpointOwnerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointConnections.ts#L56">property <b>endpointOwnerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointConnections.ts#L56">property <b>endpointOwnerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpointOwnerId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -986,12 +1150,12 @@ The ID of the Vpc Endpoint.
 The endpoint owner id.
 
 <h4 class="pdoc-member-header" id="GetVpcEndpointConnectionsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointConnections.ts#L57">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointConnections.ts#L57">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcEndpointConnectionsArgs-serviceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointConnections.ts#L61">property <b>serviceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointConnections.ts#L61">property <b>serviceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -999,7 +1163,7 @@ The endpoint owner id.
 The ID of the Vpc Endpoint Service.
 
 <h4 class="pdoc-member-header" id="GetVpcEndpointConnectionsArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointConnections.ts#L65">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointConnections.ts#L65">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1007,7 +1171,7 @@ The ID of the Vpc Endpoint Service.
 The status of Vpc Endpoint Connection.
 
 <h3 class="pdoc-module-header" id="GetVpcEndpointConnectionsResult" data-link-title="GetVpcEndpointConnectionsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointConnections.ts#L71">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointConnections.ts#L71">
         interface <strong>GetVpcEndpointConnectionsResult</strong>
     </a>
 </h3>
@@ -1017,22 +1181,22 @@ The status of Vpc Endpoint Connection.
 A collection of values returned by getVpcEndpointConnections.
 
 <h4 class="pdoc-member-header" id="GetVpcEndpointConnectionsResult-connections">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointConnections.ts#L72">property <b>connections</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointConnections.ts#L72">property <b>connections</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connections: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetVpcEndpointConnectionsConnection'>GetVpcEndpointConnectionsConnection</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcEndpointConnectionsResult-endpointId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointConnections.ts#L73">property <b>endpointId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointConnections.ts#L73">property <b>endpointId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpointId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcEndpointConnectionsResult-endpointOwnerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointConnections.ts#L74">property <b>endpointOwnerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointConnections.ts#L74">property <b>endpointOwnerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpointOwnerId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcEndpointConnectionsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointConnections.ts#L78">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointConnections.ts#L78">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1040,27 +1204,27 @@ A collection of values returned by getVpcEndpointConnections.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetVpcEndpointConnectionsResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointConnections.ts#L79">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointConnections.ts#L79">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcEndpointConnectionsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointConnections.ts#L80">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointConnections.ts#L80">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcEndpointConnectionsResult-serviceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointConnections.ts#L81">property <b>serviceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointConnections.ts#L81">property <b>serviceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcEndpointConnectionsResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointConnections.ts#L82">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointConnections.ts#L82">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetVpcEndpointsArgs" data-link-title="GetVpcEndpointsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpoints.ts#L53">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpoints.ts#L53">
         interface <strong>GetVpcEndpointsArgs</strong>
     </a>
 </h3>
@@ -1070,7 +1234,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getVpcEndpoints.
 
 <h4 class="pdoc-member-header" id="GetVpcEndpointsArgs-connectionStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpoints.ts#L57">property <b>connectionStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpoints.ts#L57">property <b>connectionStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionStatus?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1078,7 +1242,7 @@ A collection of arguments for invoking getVpcEndpoints.
 The status of Connection.
 
 <h4 class="pdoc-member-header" id="GetVpcEndpointsArgs-enableDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpoints.ts#L61">property <b>enableDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpoints.ts#L61">property <b>enableDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -1086,7 +1250,7 @@ The status of Connection.
 Default to `false`. Set it to `true` can output more details about resource attributes.
 
 <h4 class="pdoc-member-header" id="GetVpcEndpointsArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpoints.ts#L65">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpoints.ts#L65">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1094,7 +1258,7 @@ Default to `false`. Set it to `true` can output more details about resource attr
 A list of Vpc Endpoint IDs.
 
 <h4 class="pdoc-member-header" id="GetVpcEndpointsArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpoints.ts#L69">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpoints.ts#L69">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1102,12 +1266,12 @@ A list of Vpc Endpoint IDs.
 A regex string to filter results by Vpc Endpoint name.
 
 <h4 class="pdoc-member-header" id="GetVpcEndpointsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpoints.ts#L70">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpoints.ts#L70">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcEndpointsArgs-serviceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpoints.ts#L74">property <b>serviceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpoints.ts#L74">property <b>serviceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1115,7 +1279,7 @@ A regex string to filter results by Vpc Endpoint name.
 The name of the terminal node service associated with the terminal node.
 
 <h4 class="pdoc-member-header" id="GetVpcEndpointsArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpoints.ts#L78">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpoints.ts#L78">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1123,7 +1287,7 @@ The name of the terminal node service associated with the terminal node.
 The status of Vpc Endpoint.
 
 <h4 class="pdoc-member-header" id="GetVpcEndpointsArgs-vpcEndpointName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpoints.ts#L82">property <b>vpcEndpointName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpoints.ts#L82">property <b>vpcEndpointName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcEndpointName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1131,7 +1295,7 @@ The status of Vpc Endpoint.
 The name of Vpc Endpoint.
 
 <h4 class="pdoc-member-header" id="GetVpcEndpointsArgs-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpoints.ts#L86">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpoints.ts#L86">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1139,7 +1303,7 @@ The name of Vpc Endpoint.
 The private network to which the terminal node belongs.
 
 <h3 class="pdoc-module-header" id="GetVpcEndpointServiceResourcesArgs" data-link-title="GetVpcEndpointServiceResourcesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointServiceResources.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointServiceResources.ts#L44">
         interface <strong>GetVpcEndpointServiceResourcesArgs</strong>
     </a>
 </h3>
@@ -1149,12 +1313,12 @@ The private network to which the terminal node belongs.
 A collection of arguments for invoking getVpcEndpointServiceResources.
 
 <h4 class="pdoc-member-header" id="GetVpcEndpointServiceResourcesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointServiceResources.ts#L45">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointServiceResources.ts#L45">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcEndpointServiceResourcesArgs-serviceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointServiceResources.ts#L49">property <b>serviceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointServiceResources.ts#L49">property <b>serviceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1162,7 +1326,7 @@ A collection of arguments for invoking getVpcEndpointServiceResources.
 The ID of Vpc Endpoint Service.
 
 <h3 class="pdoc-module-header" id="GetVpcEndpointServiceResourcesResult" data-link-title="GetVpcEndpointServiceResourcesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointServiceResources.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointServiceResources.ts#L55">
         interface <strong>GetVpcEndpointServiceResourcesResult</strong>
     </a>
 </h3>
@@ -1172,7 +1336,7 @@ The ID of Vpc Endpoint Service.
 A collection of values returned by getVpcEndpointServiceResources.
 
 <h4 class="pdoc-member-header" id="GetVpcEndpointServiceResourcesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointServiceResources.ts#L59">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointServiceResources.ts#L59">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1180,27 +1344,27 @@ A collection of values returned by getVpcEndpointServiceResources.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetVpcEndpointServiceResourcesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointServiceResources.ts#L60">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointServiceResources.ts#L60">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcEndpointServiceResourcesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointServiceResources.ts#L61">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointServiceResources.ts#L61">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcEndpointServiceResourcesResult-resources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointServiceResources.ts#L62">property <b>resources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointServiceResources.ts#L62">property <b>resources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resources: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetVpcEndpointServiceResourcesResource'>GetVpcEndpointServiceResourcesResource</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcEndpointServiceResourcesResult-serviceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointServiceResources.ts#L63">property <b>serviceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointServiceResources.ts#L63">property <b>serviceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetVpcEndpointServicesArgs" data-link-title="GetVpcEndpointServicesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointServices.ts#L51">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointServices.ts#L51">
         interface <strong>GetVpcEndpointServicesArgs</strong>
     </a>
 </h3>
@@ -1210,7 +1374,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getVpcEndpointServices.
 
 <h4 class="pdoc-member-header" id="GetVpcEndpointServicesArgs-autoAcceptConnection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointServices.ts#L55">property <b>autoAcceptConnection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointServices.ts#L55">property <b>autoAcceptConnection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoAcceptConnection?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -1218,7 +1382,7 @@ A collection of arguments for invoking getVpcEndpointServices.
 Whether to automatically accept terminal node connections..
 
 <h4 class="pdoc-member-header" id="GetVpcEndpointServicesArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointServices.ts#L59">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointServices.ts#L59">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1226,7 +1390,7 @@ Whether to automatically accept terminal node connections..
 A list of Vpc Endpoint Service IDs.
 
 <h4 class="pdoc-member-header" id="GetVpcEndpointServicesArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointServices.ts#L63">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointServices.ts#L63">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1234,12 +1398,12 @@ A list of Vpc Endpoint Service IDs.
 A regex string to filter results by Vpc Endpoint Service name.
 
 <h4 class="pdoc-member-header" id="GetVpcEndpointServicesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointServices.ts#L64">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointServices.ts#L64">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcEndpointServicesArgs-serviceBusinessStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointServices.ts#L68">property <b>serviceBusinessStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointServices.ts#L68">property <b>serviceBusinessStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceBusinessStatus?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1247,7 +1411,7 @@ A regex string to filter results by Vpc Endpoint Service name.
 The business status of the terminal node service..
 
 <h4 class="pdoc-member-header" id="GetVpcEndpointServicesArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointServices.ts#L72">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointServices.ts#L72">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1255,7 +1419,7 @@ The business status of the terminal node service..
 The Status of Vpc Endpoint Service.
 
 <h4 class="pdoc-member-header" id="GetVpcEndpointServicesArgs-vpcEndpointServiceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointServices.ts#L76">property <b>vpcEndpointServiceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointServices.ts#L76">property <b>vpcEndpointServiceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcEndpointServiceName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1263,7 +1427,7 @@ The Status of Vpc Endpoint Service.
 The name of Vpc Endpoint Service.
 
 <h3 class="pdoc-module-header" id="GetVpcEndpointServicesResult" data-link-title="GetVpcEndpointServicesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointServices.ts#L82">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointServices.ts#L82">
         interface <strong>GetVpcEndpointServicesResult</strong>
     </a>
 </h3>
@@ -1273,12 +1437,12 @@ The name of Vpc Endpoint Service.
 A collection of values returned by getVpcEndpointServices.
 
 <h4 class="pdoc-member-header" id="GetVpcEndpointServicesResult-autoAcceptConnection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointServices.ts#L83">property <b>autoAcceptConnection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointServices.ts#L83">property <b>autoAcceptConnection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoAcceptConnection?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcEndpointServicesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointServices.ts#L87">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointServices.ts#L87">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1286,47 +1450,47 @@ A collection of values returned by getVpcEndpointServices.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetVpcEndpointServicesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointServices.ts#L88">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointServices.ts#L88">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcEndpointServicesResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointServices.ts#L89">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointServices.ts#L89">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcEndpointServicesResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointServices.ts#L90">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointServices.ts#L90">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcEndpointServicesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointServices.ts#L91">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointServices.ts#L91">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcEndpointServicesResult-serviceBusinessStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointServices.ts#L92">property <b>serviceBusinessStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointServices.ts#L92">property <b>serviceBusinessStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceBusinessStatus?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcEndpointServicesResult-services">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointServices.ts#L93">property <b>services</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointServices.ts#L93">property <b>services</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>services: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetVpcEndpointServicesService'>GetVpcEndpointServicesService</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcEndpointServicesResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointServices.ts#L94">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointServices.ts#L94">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcEndpointServicesResult-vpcEndpointServiceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointServices.ts#L95">property <b>vpcEndpointServiceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointServices.ts#L95">property <b>vpcEndpointServiceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcEndpointServiceName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetVpcEndpointServiceUsersArgs" data-link-title="GetVpcEndpointServiceUsersArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointServiceUsers.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointServiceUsers.ts#L45">
         interface <strong>GetVpcEndpointServiceUsersArgs</strong>
     </a>
 </h3>
@@ -1336,12 +1500,12 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getVpcEndpointServiceUsers.
 
 <h4 class="pdoc-member-header" id="GetVpcEndpointServiceUsersArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointServiceUsers.ts#L46">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointServiceUsers.ts#L46">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcEndpointServiceUsersArgs-serviceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointServiceUsers.ts#L50">property <b>serviceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointServiceUsers.ts#L50">property <b>serviceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1349,7 +1513,7 @@ A collection of arguments for invoking getVpcEndpointServiceUsers.
 The Id of Vpc Endpoint Service.
 
 <h4 class="pdoc-member-header" id="GetVpcEndpointServiceUsersArgs-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointServiceUsers.ts#L54">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointServiceUsers.ts#L54">property <b>userId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1357,7 +1521,7 @@ The Id of Vpc Endpoint Service.
 The Id of Ram User.
 
 <h3 class="pdoc-module-header" id="GetVpcEndpointServiceUsersResult" data-link-title="GetVpcEndpointServiceUsersResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointServiceUsers.ts#L60">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointServiceUsers.ts#L60">
         interface <strong>GetVpcEndpointServiceUsersResult</strong>
     </a>
 </h3>
@@ -1367,7 +1531,7 @@ The Id of Ram User.
 A collection of values returned by getVpcEndpointServiceUsers.
 
 <h4 class="pdoc-member-header" id="GetVpcEndpointServiceUsersResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointServiceUsers.ts#L64">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointServiceUsers.ts#L64">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1375,32 +1539,32 @@ A collection of values returned by getVpcEndpointServiceUsers.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetVpcEndpointServiceUsersResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointServiceUsers.ts#L65">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointServiceUsers.ts#L65">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcEndpointServiceUsersResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointServiceUsers.ts#L66">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointServiceUsers.ts#L66">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcEndpointServiceUsersResult-serviceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointServiceUsers.ts#L67">property <b>serviceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointServiceUsers.ts#L67">property <b>serviceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcEndpointServiceUsersResult-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointServiceUsers.ts#L68">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointServiceUsers.ts#L68">property <b>userId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcEndpointServiceUsersResult-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpointServiceUsers.ts#L69">property <b>users</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointServiceUsers.ts#L69">property <b>users</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>users: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetVpcEndpointServiceUsersUser'>GetVpcEndpointServiceUsersUser</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetVpcEndpointsResult" data-link-title="GetVpcEndpointsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpoints.ts#L92">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpoints.ts#L92">
         interface <strong>GetVpcEndpointsResult</strong>
     </a>
 </h3>
@@ -1410,22 +1574,22 @@ The provider-assigned unique ID for this managed resource.
 A collection of values returned by getVpcEndpoints.
 
 <h4 class="pdoc-member-header" id="GetVpcEndpointsResult-connectionStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpoints.ts#L93">property <b>connectionStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpoints.ts#L93">property <b>connectionStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionStatus?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcEndpointsResult-enableDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpoints.ts#L94">property <b>enableDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpoints.ts#L94">property <b>enableDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcEndpointsResult-endpoints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpoints.ts#L95">property <b>endpoints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpoints.ts#L95">property <b>endpoints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpoints: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetVpcEndpointsEndpoint'>GetVpcEndpointsEndpoint</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcEndpointsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpoints.ts#L99">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpoints.ts#L99">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1433,47 +1597,121 @@ A collection of values returned by getVpcEndpoints.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetVpcEndpointsResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpoints.ts#L100">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpoints.ts#L100">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcEndpointsResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpoints.ts#L101">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpoints.ts#L101">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcEndpointsResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpoints.ts#L102">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpoints.ts#L102">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcEndpointsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpoints.ts#L103">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpoints.ts#L103">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcEndpointsResult-serviceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpoints.ts#L104">property <b>serviceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpoints.ts#L104">property <b>serviceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcEndpointsResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpoints.ts#L105">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpoints.ts#L105">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcEndpointsResult-vpcEndpointName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpoints.ts#L106">property <b>vpcEndpointName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpoints.ts#L106">property <b>vpcEndpointName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcEndpointName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcEndpointsResult-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/getVpcEndpoints.ts#L107">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpoints.ts#L107">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h3 class="pdoc-module-header" id="GetVpcEndpointZonesArgs" data-link-title="GetVpcEndpointZonesArgs">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointZones.ts#L45">
+        interface <strong>GetVpcEndpointZonesArgs</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetVpcEndpointZonesArgs</span></code></pre>
+
+A collection of arguments for invoking getVpcEndpointZones.
+
+<h4 class="pdoc-member-header" id="GetVpcEndpointZonesArgs-endpointId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointZones.ts#L49">property <b>endpointId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>endpointId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The ID of the Vpc Endpoint.
+
+<h4 class="pdoc-member-header" id="GetVpcEndpointZonesArgs-outputFile">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointZones.ts#L50">property <b>outputFile</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetVpcEndpointZonesArgs-status">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointZones.ts#L54">property <b>status</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The Status of Vpc Endpoint Zone..
+
+<h3 class="pdoc-module-header" id="GetVpcEndpointZonesResult" data-link-title="GetVpcEndpointZonesResult">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointZones.ts#L60">
+        interface <strong>GetVpcEndpointZonesResult</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetVpcEndpointZonesResult</span></code></pre>
+
+A collection of values returned by getVpcEndpointZones.
+
+<h4 class="pdoc-member-header" id="GetVpcEndpointZonesResult-endpointId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointZones.ts#L61">property <b>endpointId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>endpointId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetVpcEndpointZonesResult-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointZones.ts#L65">property <b>id</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The provider-assigned unique ID for this managed resource.
+
+<h4 class="pdoc-member-header" id="GetVpcEndpointZonesResult-ids">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointZones.ts#L66">property <b>ids</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
+<h4 class="pdoc-member-header" id="GetVpcEndpointZonesResult-outputFile">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointZones.ts#L67">property <b>outputFile</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetVpcEndpointZonesResult-status">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointZones.ts#L68">property <b>status</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetVpcEndpointZonesResult-zones">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/getVpcEndpointZones.ts#L69">property <b>zones</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>zones: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetVpcEndpointZonesZone'>GetVpcEndpointZonesZone</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="VpcEndpointArgs" data-link-title="VpcEndpointArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpoint.ts#L238">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpoint.ts#L227">
         interface <strong>VpcEndpointArgs</strong>
     </a>
 </h3>
@@ -1483,7 +1721,7 @@ The provider-assigned unique ID for this managed resource.
 The set of arguments for constructing a VpcEndpoint resource.
 
 <h4 class="pdoc-member-header" id="VpcEndpointArgs-dryRun">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpoint.ts#L242">property <b>dryRun</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpoint.ts#L231">property <b>dryRun</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dryRun?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1491,7 +1729,7 @@ The set of arguments for constructing a VpcEndpoint resource.
 The dry run. Default to: `false`.
 
 <h4 class="pdoc-member-header" id="VpcEndpointArgs-endpointDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpoint.ts#L246">property <b>endpointDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpoint.ts#L235">property <b>endpointDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpointDescription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1499,7 +1737,7 @@ The dry run. Default to: `false`.
 The description of Vpc Endpoint. The length is 2~256 characters and cannot start with `http://` and `https://`.
 
 <h4 class="pdoc-member-header" id="VpcEndpointArgs-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpoint.ts#L250">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpoint.ts#L239">property <b>securityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1507,7 +1745,7 @@ The description of Vpc Endpoint. The length is 2~256 characters and cannot start
 The security group associated with the terminal node network card.
 
 <h4 class="pdoc-member-header" id="VpcEndpointArgs-serviceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpoint.ts#L254">property <b>serviceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpoint.ts#L243">property <b>serviceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1515,7 +1753,7 @@ The security group associated with the terminal node network card.
 The terminal node service associated with the terminal node.
 
 <h4 class="pdoc-member-header" id="VpcEndpointArgs-serviceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpoint.ts#L258">property <b>serviceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpoint.ts#L247">property <b>serviceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1523,7 +1761,7 @@ The terminal node service associated with the terminal node.
 The name of the terminal node service associated with the terminal node.
 
 <h4 class="pdoc-member-header" id="VpcEndpointArgs-vpcEndpointName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpoint.ts#L262">property <b>vpcEndpointName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpoint.ts#L251">property <b>vpcEndpointName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcEndpointName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1531,23 +1769,15 @@ The name of the terminal node service associated with the terminal node.
 The name of Vpc Endpoint. The length is between 2 and 128 characters, starting with English letters or Chinese, and can include numbers, hyphens (-) and underscores (_).
 
 <h4 class="pdoc-member-header" id="VpcEndpointArgs-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpoint.ts#L266">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpoint.ts#L255">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The private network to which the terminal node belongs.
 
-<h4 class="pdoc-member-header" id="VpcEndpointArgs-zones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpoint.ts#L270">property <b>zones</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>zones?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#VpcEndpointZone'>VpcEndpointZone</a>&gt;[]&gt;;</code></pre>
-
-Availability zone.
-
 <h3 class="pdoc-module-header" id="VpcEndpointServiceArgs" data-link-title="VpcEndpointServiceArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointService.ts#L181">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointService.ts#L181">
         interface <strong>VpcEndpointServiceArgs</strong>
     </a>
 </h3>
@@ -1557,7 +1787,7 @@ Availability zone.
 The set of arguments for constructing a VpcEndpointService resource.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceArgs-autoAcceptConnection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointService.ts#L185">property <b>autoAcceptConnection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointService.ts#L185">property <b>autoAcceptConnection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoAcceptConnection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1565,7 +1795,7 @@ The set of arguments for constructing a VpcEndpointService resource.
 Whether to automatically accept terminal node connections.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceArgs-connectBandwidth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointService.ts#L189">property <b>connectBandwidth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointService.ts#L189">property <b>connectBandwidth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectBandwidth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1573,7 +1803,7 @@ Whether to automatically accept terminal node connections.
 The connection bandwidth.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceArgs-dryRun">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointService.ts#L193">property <b>dryRun</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointService.ts#L193">property <b>dryRun</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dryRun?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1581,7 +1811,7 @@ The connection bandwidth.
 Whether to pre-check this request only. Default to: `false`
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceArgs-payer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointService.ts#L197">property <b>payer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointService.ts#L197">property <b>payer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>payer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1589,7 +1819,7 @@ Whether to pre-check this request only. Default to: `false`
 The payer type. Valid Value: `EndpointService`, `Endpoint`. Default to: `Endpoint`.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceArgs-serviceDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointService.ts#L201">property <b>serviceDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointService.ts#L201">property <b>serviceDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceDescription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1597,7 +1827,7 @@ The payer type. Valid Value: `EndpointService`, `Endpoint`. Default to: `Endpoin
 The description of the terminal node service.
 
 <h3 class="pdoc-module-header" id="VpcEndpointServiceConnectionArgs" data-link-title="VpcEndpointServiceConnectionArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L157">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L157">
         interface <strong>VpcEndpointServiceConnectionArgs</strong>
     </a>
 </h3>
@@ -1607,7 +1837,7 @@ The description of the terminal node service.
 The set of arguments for constructing a VpcEndpointServiceConnection resource.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceConnectionArgs-bandwidth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L161">property <b>bandwidth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L161">property <b>bandwidth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bandwidth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1615,7 +1845,7 @@ The set of arguments for constructing a VpcEndpointServiceConnection resource.
 The Bandwidth.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceConnectionArgs-dryRun">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L165">property <b>dryRun</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L165">property <b>dryRun</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dryRun?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1623,7 +1853,7 @@ The Bandwidth.
 The dry run.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceConnectionArgs-endpointId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L169">property <b>endpointId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L169">property <b>endpointId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpointId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1631,7 +1861,7 @@ The dry run.
 The ID of the Vpc Endpoint.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceConnectionArgs-serviceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L173">property <b>serviceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L173">property <b>serviceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1639,7 +1869,7 @@ The ID of the Vpc Endpoint.
 The ID of the Vpc Endpoint Service.
 
 <h3 class="pdoc-module-header" id="VpcEndpointServiceConnectionState" data-link-title="VpcEndpointServiceConnectionState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L131">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L131">
         interface <strong>VpcEndpointServiceConnectionState</strong>
     </a>
 </h3>
@@ -1649,7 +1879,7 @@ The ID of the Vpc Endpoint Service.
 Input properties used for looking up and filtering VpcEndpointServiceConnection resources.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceConnectionState-bandwidth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L135">property <b>bandwidth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L135">property <b>bandwidth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bandwidth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1657,7 +1887,7 @@ Input properties used for looking up and filtering VpcEndpointServiceConnection 
 The Bandwidth.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceConnectionState-dryRun">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L139">property <b>dryRun</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L139">property <b>dryRun</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dryRun?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1665,7 +1895,7 @@ The Bandwidth.
 The dry run.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceConnectionState-endpointId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L143">property <b>endpointId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L143">property <b>endpointId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpointId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1673,7 +1903,7 @@ The dry run.
 The ID of the Vpc Endpoint.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceConnectionState-serviceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L147">property <b>serviceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L147">property <b>serviceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1681,7 +1911,7 @@ The ID of the Vpc Endpoint.
 The ID of the Vpc Endpoint Service.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceConnectionState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L151">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceConnection.ts#L151">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1689,7 +1919,7 @@ The ID of the Vpc Endpoint Service.
 The status of Vpc Endpoint Connection.
 
 <h3 class="pdoc-module-header" id="VpcEndpointServiceResourceArgs" data-link-title="VpcEndpointServiceResourceArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceResource.ts#L150">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceResource.ts#L150">
         interface <strong>VpcEndpointServiceResourceArgs</strong>
     </a>
 </h3>
@@ -1699,7 +1929,7 @@ The status of Vpc Endpoint Connection.
 The set of arguments for constructing a VpcEndpointServiceResource resource.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceResourceArgs-dryRun">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceResource.ts#L154">property <b>dryRun</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceResource.ts#L154">property <b>dryRun</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dryRun?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1707,7 +1937,7 @@ The set of arguments for constructing a VpcEndpointServiceResource resource.
 The dry run.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceResourceArgs-resourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceResource.ts#L158">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceResource.ts#L158">property <b>resourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1715,7 +1945,7 @@ The dry run.
 The ID of Resource.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceResourceArgs-resourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceResource.ts#L162">property <b>resourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceResource.ts#L162">property <b>resourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1723,7 +1953,7 @@ The ID of Resource.
 The Type of Resource.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceResourceArgs-serviceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceResource.ts#L166">property <b>serviceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceResource.ts#L166">property <b>serviceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1731,7 +1961,7 @@ The Type of Resource.
 The ID of Vpc Endpoint Service.
 
 <h3 class="pdoc-module-header" id="VpcEndpointServiceResourceState" data-link-title="VpcEndpointServiceResourceState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceResource.ts#L128">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceResource.ts#L128">
         interface <strong>VpcEndpointServiceResourceState</strong>
     </a>
 </h3>
@@ -1741,7 +1971,7 @@ The ID of Vpc Endpoint Service.
 Input properties used for looking up and filtering VpcEndpointServiceResource resources.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceResourceState-dryRun">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceResource.ts#L132">property <b>dryRun</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceResource.ts#L132">property <b>dryRun</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dryRun?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1749,7 +1979,7 @@ Input properties used for looking up and filtering VpcEndpointServiceResource re
 The dry run.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceResourceState-resourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceResource.ts#L136">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceResource.ts#L136">property <b>resourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1757,7 +1987,7 @@ The dry run.
 The ID of Resource.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceResourceState-resourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceResource.ts#L140">property <b>resourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceResource.ts#L140">property <b>resourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1765,7 +1995,7 @@ The ID of Resource.
 The Type of Resource.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceResourceState-serviceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceResource.ts#L144">property <b>serviceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceResource.ts#L144">property <b>serviceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1773,7 +2003,7 @@ The Type of Resource.
 The ID of Vpc Endpoint Service.
 
 <h3 class="pdoc-module-header" id="VpcEndpointServiceState" data-link-title="VpcEndpointServiceState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointService.ts#L143">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointService.ts#L143">
         interface <strong>VpcEndpointServiceState</strong>
     </a>
 </h3>
@@ -1783,7 +2013,7 @@ The ID of Vpc Endpoint Service.
 Input properties used for looking up and filtering VpcEndpointService resources.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceState-autoAcceptConnection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointService.ts#L147">property <b>autoAcceptConnection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointService.ts#L147">property <b>autoAcceptConnection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoAcceptConnection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1791,7 +2021,7 @@ Input properties used for looking up and filtering VpcEndpointService resources.
 Whether to automatically accept terminal node connections.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceState-connectBandwidth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointService.ts#L151">property <b>connectBandwidth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointService.ts#L151">property <b>connectBandwidth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectBandwidth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1799,7 +2029,7 @@ Whether to automatically accept terminal node connections.
 The connection bandwidth.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceState-dryRun">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointService.ts#L155">property <b>dryRun</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointService.ts#L155">property <b>dryRun</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dryRun?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1807,7 +2037,7 @@ The connection bandwidth.
 Whether to pre-check this request only. Default to: `false`
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceState-payer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointService.ts#L159">property <b>payer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointService.ts#L159">property <b>payer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>payer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1815,7 +2045,7 @@ Whether to pre-check this request only. Default to: `false`
 The payer type. Valid Value: `EndpointService`, `Endpoint`. Default to: `Endpoint`.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceState-serviceBusinessStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointService.ts#L163">property <b>serviceBusinessStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointService.ts#L163">property <b>serviceBusinessStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceBusinessStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1823,7 +2053,7 @@ The payer type. Valid Value: `EndpointService`, `Endpoint`. Default to: `Endpoin
 The business status of Vpc Endpoint Service.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceState-serviceDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointService.ts#L167">property <b>serviceDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointService.ts#L167">property <b>serviceDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceDescription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1831,7 +2061,7 @@ The business status of Vpc Endpoint Service.
 The description of the terminal node service.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceState-serviceDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointService.ts#L171">property <b>serviceDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointService.ts#L171">property <b>serviceDomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceDomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1839,7 +2069,7 @@ The description of the terminal node service.
 Service Domain.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointService.ts#L175">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointService.ts#L175">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1847,7 +2077,7 @@ Service Domain.
 The status of Vpc Endpoint Service.
 
 <h3 class="pdoc-module-header" id="VpcEndpointServiceUserArgs" data-link-title="VpcEndpointServiceUserArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceUser.ts#L136">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceUser.ts#L136">
         interface <strong>VpcEndpointServiceUserArgs</strong>
     </a>
 </h3>
@@ -1857,7 +2087,7 @@ The status of Vpc Endpoint Service.
 The set of arguments for constructing a VpcEndpointServiceUser resource.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceUserArgs-dryRun">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceUser.ts#L140">property <b>dryRun</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceUser.ts#L140">property <b>dryRun</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dryRun?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1865,7 +2095,7 @@ The set of arguments for constructing a VpcEndpointServiceUser resource.
 The dry run.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceUserArgs-serviceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceUser.ts#L144">property <b>serviceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceUser.ts#L144">property <b>serviceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1873,7 +2103,7 @@ The dry run.
 The Id of Vpc Endpoint Service.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceUserArgs-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceUser.ts#L148">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceUser.ts#L148">property <b>userId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1881,7 +2111,7 @@ The Id of Vpc Endpoint Service.
 The Id of Ram User.
 
 <h3 class="pdoc-module-header" id="VpcEndpointServiceUserState" data-link-title="VpcEndpointServiceUserState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceUser.ts#L118">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceUser.ts#L118">
         interface <strong>VpcEndpointServiceUserState</strong>
     </a>
 </h3>
@@ -1891,7 +2121,7 @@ The Id of Ram User.
 Input properties used for looking up and filtering VpcEndpointServiceUser resources.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceUserState-dryRun">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceUser.ts#L122">property <b>dryRun</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceUser.ts#L122">property <b>dryRun</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dryRun?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1899,7 +2129,7 @@ Input properties used for looking up and filtering VpcEndpointServiceUser resour
 The dry run.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceUserState-serviceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceUser.ts#L126">property <b>serviceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceUser.ts#L126">property <b>serviceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1907,7 +2137,7 @@ The dry run.
 The Id of Vpc Endpoint Service.
 
 <h4 class="pdoc-member-header" id="VpcEndpointServiceUserState-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpointServiceUser.ts#L130">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointServiceUser.ts#L130">property <b>userId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1915,7 +2145,7 @@ The Id of Vpc Endpoint Service.
 The Id of Ram User.
 
 <h3 class="pdoc-module-header" id="VpcEndpointState" data-link-title="VpcEndpointState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpoint.ts#L180">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpoint.ts#L173">
         interface <strong>VpcEndpointState</strong>
     </a>
 </h3>
@@ -1925,7 +2155,7 @@ The Id of Ram User.
 Input properties used for looking up and filtering VpcEndpoint resources.
 
 <h4 class="pdoc-member-header" id="VpcEndpointState-bandwidth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpoint.ts#L184">property <b>bandwidth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpoint.ts#L177">property <b>bandwidth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bandwidth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1933,7 +2163,7 @@ Input properties used for looking up and filtering VpcEndpoint resources.
 The Bandwidth.
 
 <h4 class="pdoc-member-header" id="VpcEndpointState-connectionStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpoint.ts#L188">property <b>connectionStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpoint.ts#L181">property <b>connectionStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1941,7 +2171,7 @@ The Bandwidth.
 The status of Connection.
 
 <h4 class="pdoc-member-header" id="VpcEndpointState-dryRun">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpoint.ts#L192">property <b>dryRun</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpoint.ts#L185">property <b>dryRun</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dryRun?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1949,7 +2179,7 @@ The status of Connection.
 The dry run. Default to: `false`.
 
 <h4 class="pdoc-member-header" id="VpcEndpointState-endpointBusinessStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpoint.ts#L196">property <b>endpointBusinessStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpoint.ts#L189">property <b>endpointBusinessStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpointBusinessStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1957,7 +2187,7 @@ The dry run. Default to: `false`.
 The status of Endpoint Business.
 
 <h4 class="pdoc-member-header" id="VpcEndpointState-endpointDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpoint.ts#L200">property <b>endpointDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpoint.ts#L193">property <b>endpointDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpointDescription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1965,7 +2195,7 @@ The status of Endpoint Business.
 The description of Vpc Endpoint. The length is 2~256 characters and cannot start with `http://` and `https://`.
 
 <h4 class="pdoc-member-header" id="VpcEndpointState-endpointDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpoint.ts#L204">property <b>endpointDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpoint.ts#L197">property <b>endpointDomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpointDomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1973,7 +2203,7 @@ The description of Vpc Endpoint. The length is 2~256 characters and cannot start
 The Endpoint Domain.
 
 <h4 class="pdoc-member-header" id="VpcEndpointState-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpoint.ts#L208">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpoint.ts#L201">property <b>securityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1981,7 +2211,7 @@ The Endpoint Domain.
 The security group associated with the terminal node network card.
 
 <h4 class="pdoc-member-header" id="VpcEndpointState-serviceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpoint.ts#L212">property <b>serviceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpoint.ts#L205">property <b>serviceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1989,7 +2219,7 @@ The security group associated with the terminal node network card.
 The terminal node service associated with the terminal node.
 
 <h4 class="pdoc-member-header" id="VpcEndpointState-serviceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpoint.ts#L216">property <b>serviceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpoint.ts#L209">property <b>serviceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1997,7 +2227,7 @@ The terminal node service associated with the terminal node.
 The name of the terminal node service associated with the terminal node.
 
 <h4 class="pdoc-member-header" id="VpcEndpointState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpoint.ts#L220">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpoint.ts#L213">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2005,7 +2235,7 @@ The name of the terminal node service associated with the terminal node.
 The status of Vpc Endpoint.
 
 <h4 class="pdoc-member-header" id="VpcEndpointState-vpcEndpointName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpoint.ts#L224">property <b>vpcEndpointName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpoint.ts#L217">property <b>vpcEndpointName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcEndpointName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2013,18 +2243,102 @@ The status of Vpc Endpoint.
 The name of Vpc Endpoint. The length is between 2 and 128 characters, starting with English letters or Chinese, and can include numbers, hyphens (-) and underscores (_).
 
 <h4 class="pdoc-member-header" id="VpcEndpointState-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpoint.ts#L228">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpoint.ts#L221">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The private network to which the terminal node belongs.
 
-<h4 class="pdoc-member-header" id="VpcEndpointState-zones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/ba11fd33d15635f294823990be8ffe1564fe697d/sdk/nodejs/privatelink/vpcEndpoint.ts#L232">property <b>zones</b></a>
+<h3 class="pdoc-module-header" id="VpcEndpointZoneArgs" data-link-title="VpcEndpointZoneArgs">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointZone.ts#L157">
+        interface <strong>VpcEndpointZoneArgs</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>VpcEndpointZoneArgs</span></code></pre>
+
+The set of arguments for constructing a VpcEndpointZone resource.
+
+<h4 class="pdoc-member-header" id="VpcEndpointZoneArgs-dryRun">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointZone.ts#L161">property <b>dryRun</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>zones?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#VpcEndpointZone'>VpcEndpointZone</a>&gt;[]&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>dryRun?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-Availability zone.
+The dry run.
+
+<h4 class="pdoc-member-header" id="VpcEndpointZoneArgs-endpointId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointZone.ts#L165">property <b>endpointId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>endpointId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID of the Vpc Endpoint.
+
+<h4 class="pdoc-member-header" id="VpcEndpointZoneArgs-vswitchId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointZone.ts#L169">property <b>vswitchId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>vswitchId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The VSwitch id.
+
+<h4 class="pdoc-member-header" id="VpcEndpointZoneArgs-zoneId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointZone.ts#L173">property <b>zoneId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>zoneId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The Zone Id.
+
+<h3 class="pdoc-module-header" id="VpcEndpointZoneState" data-link-title="VpcEndpointZoneState">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointZone.ts#L131">
+        interface <strong>VpcEndpointZoneState</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>VpcEndpointZoneState</span></code></pre>
+
+Input properties used for looking up and filtering VpcEndpointZone resources.
+
+<h4 class="pdoc-member-header" id="VpcEndpointZoneState-dryRun">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointZone.ts#L135">property <b>dryRun</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>dryRun?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+The dry run.
+
+<h4 class="pdoc-member-header" id="VpcEndpointZoneState-endpointId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointZone.ts#L139">property <b>endpointId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>endpointId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID of the Vpc Endpoint.
+
+<h4 class="pdoc-member-header" id="VpcEndpointZoneState-status">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointZone.ts#L143">property <b>status</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Status.
+
+<h4 class="pdoc-member-header" id="VpcEndpointZoneState-vswitchId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointZone.ts#L147">property <b>vswitchId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>vswitchId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The VSwitch id.
+
+<h4 class="pdoc-member-header" id="VpcEndpointZoneState-zoneId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/8b0235f54ce04ebef3a63df7ea1100f2c58382cf/sdk/nodejs/privatelink/vpcEndpointZone.ts#L151">property <b>zoneId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>zoneId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The Zone Id.
 

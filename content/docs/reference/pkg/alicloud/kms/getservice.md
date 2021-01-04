@@ -136,7 +136,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Setting the value to `On` to enable the service. If has been enabled, return the result. Valid values: "On" or "Off".
+    <dd>{{% md %}}Setting the value to `On` to enable the service. If has been enabled, return the result. Valid values: "On" or "Off". Default to "Off".
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -152,7 +152,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Setting the value to `On` to enable the service. If has been enabled, return the result. Valid values: "On" or "Off".
+    <dd>{{% md %}}Setting the value to `On` to enable the service. If has been enabled, return the result. Valid values: "On" or "Off". Default to "Off".
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -168,7 +168,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Setting the value to `On` to enable the service. If has been enabled, return the result. Valid values: "On" or "Off".
+    <dd>{{% md %}}Setting the value to `On` to enable the service. If has been enabled, return the result. Valid values: "On" or "Off". Default to "Off".
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -184,7 +184,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Setting the value to `On` to enable the service. If has been enabled, return the result. Valid values: "On" or "Off".
+    <dd>{{% md %}}Setting the value to `On` to enable the service. If has been enabled, return the result. Valid values: "On" or "Off". Default to "Off".
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

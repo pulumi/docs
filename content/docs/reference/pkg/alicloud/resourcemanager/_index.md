@@ -19,7 +19,10 @@ Explore the resources and functions of the resourcemanager module in the AliClou
     <li><a href="policyversion" title="PolicyVersion"><span class="symbol resource"></span>PolicyVersion</a></li>
     <li><a href="resourcedirectory" title="ResourceDirectory"><span class="symbol resource"></span>ResourceDirectory</a></li>
     <li><a href="resourcegroup" title="ResourceGroup"><span class="symbol resource"></span>ResourceGroup</a></li>
+    <li><a href="resourceshare" title="ResourceShare"><span class="symbol resource"></span>ResourceShare</a></li>
     <li><a href="role" title="Role"><span class="symbol resource"></span>Role</a></li>
+    <li><a href="sharedresource" title="SharedResource"><span class="symbol resource"></span>SharedResource</a></li>
+    <li><a href="sharedtarget" title="SharedTarget"><span class="symbol resource"></span>SharedTarget</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -32,7 +35,10 @@ Explore the resources and functions of the resourcemanager module in the AliClou
     <li><a href="getpolicyversions" title="GetPolicyVersions"><span class="symbol function"></span>GetPolicyVersions</a></li>
     <li><a href="getresourcedirectories" title="GetResourceDirectories"><span class="symbol function"></span>GetResourceDirectories</a></li>
     <li><a href="getresourcegroups" title="GetResourceGroups"><span class="symbol function"></span>GetResourceGroups</a></li>
+    <li><a href="getresourceshares" title="GetResourceShares"><span class="symbol function"></span>GetResourceShares</a></li>
     <li><a href="getroles" title="GetRoles"><span class="symbol function"></span>GetRoles</a></li>
+    <li><a href="getsharedresources" title="GetSharedResources"><span class="symbol function"></span>GetSharedResources</a></li>
+    <li><a href="getsharedtargets" title="GetSharedTargets"><span class="symbol function"></span>GetSharedTargets</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -44,7 +50,7 @@ Explore the resources and functions of the resourcemanager module in the AliClou
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.29.0</dd>
+	<dd>2.30.0</dd>
 </dl>
 
 

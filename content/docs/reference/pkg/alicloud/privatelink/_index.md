@@ -16,6 +16,7 @@ Explore the resources and functions of the privatelink module in the AliCloud pa
     <li><a href="vpcendpointserviceconnection" title="VpcEndpointServiceConnection"><span class="symbol resource"></span>VpcEndpointServiceConnection</a></li>
     <li><a href="vpcendpointserviceresource" title="VpcEndpointServiceResource"><span class="symbol resource"></span>VpcEndpointServiceResource</a></li>
     <li><a href="vpcendpointserviceuser" title="VpcEndpointServiceUser"><span class="symbol resource"></span>VpcEndpointServiceUser</a></li>
+    <li><a href="vpcendpointzone" title="VpcEndpointZone"><span class="symbol resource"></span>VpcEndpointZone</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -24,6 +25,7 @@ Explore the resources and functions of the privatelink module in the AliCloud pa
     <li><a href="getvpcendpointserviceresources" title="GetVpcEndpointServiceResources"><span class="symbol function"></span>GetVpcEndpointServiceResources</a></li>
     <li><a href="getvpcendpointserviceusers" title="GetVpcEndpointServiceUsers"><span class="symbol function"></span>GetVpcEndpointServiceUsers</a></li>
     <li><a href="getvpcendpointservices" title="GetVpcEndpointServices"><span class="symbol function"></span>GetVpcEndpointServices</a></li>
+    <li><a href="getvpcendpointzones" title="GetVpcEndpointZones"><span class="symbol function"></span>GetVpcEndpointZones</a></li>
     <li><a href="getvpcendpoints" title="GetVpcEndpoints"><span class="symbol function"></span>GetVpcEndpoints</a></li>
 </ul>
 
@@ -36,7 +38,7 @@ Explore the resources and functions of the privatelink module in the AliCloud pa
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.29.0</dd>
+	<dd>2.30.0</dd>
 </dl>
 
 
