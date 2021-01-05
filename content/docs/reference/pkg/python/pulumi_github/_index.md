@@ -291,6 +291,15 @@ another branch or commit.</p>
     <span class="n">repository</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>GitHub Branch can be imported using an ID made up of <code class="docutils literal notranslate"><span class="pre">repository:branch</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import github:index/branch:Branch terraform terraform:master
+
+Optionally, a <span class="nb">source</span> branch may be specified using an ID of <span class="sb">``</span>repository:branch:source_branch<span class="sb">``</span>. This is useful <span class="k">for</span> importing branches that <span class="k">do</span> not branch directly off master.
+</pre></div>
+</div>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import github:index/branch:Branch terraform terraform:feature-branch:dev
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -429,6 +438,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">branch</span><span class="o">=</span><span class="n">development</span><span class="o">.</span><span class="n">branch</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>GitHub Branch Defaults can be imported using an ID made up of <code class="docutils literal notranslate"><span class="pre">repository</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import github:index/branchDefault:BranchDefault branch_default my-repo
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -512,6 +525,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_github.</code><code class="sig-name descname">BranchProtection</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enforce_admins</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pattern</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">push_restrictions</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">repository_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">require_signed_commits</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">required_pull_request_reviews</span><span class="p">:</span> <span class="n">Union[Sequence[Union[BranchProtectionRequiredPullRequestReviewArgs, Mapping[str, Any], Awaitable[Union[BranchProtectionRequiredPullRequestReviewArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[BranchProtectionRequiredPullRequestReviewArgs, Mapping[str, Any], Awaitable[Union[BranchProtectionRequiredPullRequestReviewArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">required_status_checks</span><span class="p">:</span> <span class="n">Union[Sequence[Union[BranchProtectionRequiredStatusCheckArgs, Mapping[str, Any], Awaitable[Union[BranchProtectionRequiredStatusCheckArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[BranchProtectionRequiredStatusCheckArgs, Mapping[str, Any], Awaitable[Union[BranchProtectionRequiredStatusCheckArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_github.BranchProtection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Protects a GitHub branch.</p>
 <p>This resource allows you to configure branch protection for repositories in your organization. When applied, the branch will be protected from forced pushes and deletion. Additional constraints, such as required status checks or restrictions on users, teams, and apps, can also be configured.</p>
+<p>GitHub Branch Protection can be imported using an ID made up of <code class="docutils literal notranslate"><span class="pre">repository:pattern</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import github:index/branchProtection:BranchProtection terraform terraform:main
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1269,13 +1286,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_github.IssueLabel">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_github.</code><code class="sig-name descname">IssueLabel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">color</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">repository</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_github.IssueLabel" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a IssueLabel resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] color: A 6 character hex code, <strong>without the leading #</strong>, identifying the color of the label.
-:param pulumi.Input[str] description: A short description of the label.
-:param pulumi.Input[str] name: The name of the label.
-:param pulumi.Input[str] repository: The GitHub repository</p>
+<dd><p>GitHub Issue Labels can be imported using an ID made up of <code class="docutils literal notranslate"><span class="pre">repository:name</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import github:index/issueLabel:IssueLabel panic_label terraform:panic
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>color</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A 6 character hex code, <strong>without the leading #</strong>, identifying the color of the label.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A short description of the label.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the label.</p></li>
+<li><p><strong>repository</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The GitHub repository</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py method">
 <dt id="pulumi_github.IssueLabel.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">color</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">etag</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">repository</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">url</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_github.issue_label.IssueLabel<a class="headerlink" href="#pulumi_github.IssueLabel.get" title="Permalink to this definition">¶</a></dt>
@@ -1379,6 +1405,10 @@ destroyed, either the invitation will be cancelled or the user will be removed.<
 <span class="n">membership_for_some_user</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">Membership</span><span class="p">(</span><span class="s2">&quot;membershipForSomeUser&quot;</span><span class="p">,</span>
     <span class="n">role</span><span class="o">=</span><span class="s2">&quot;member&quot;</span><span class="p">,</span>
     <span class="n">username</span><span class="o">=</span><span class="s2">&quot;SomeUser&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>GitHub Membership can be imported using an ID made up of <code class="docutils literal notranslate"><span class="pre">organization:username</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import github:index/membership:Membership member hashicorp:someuser
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -1654,6 +1684,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">events</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;issues&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
+<p>Organization webhooks can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code> of the webhook. The <code class="docutils literal notranslate"><span class="pre">id</span></code> of the webhook can be found in the URL of the webhook. For example, <code class="docutils literal notranslate"><span class="pre">&quot;https://github.com/organizations/foo-org/settings/hooks/123456789&quot;</span></code>.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import github:index/organizationWebhook:OrganizationWebhook terraform 123456789
+
+If secret is populated in the webhook&#39;s configuration, the value will be imported as &quot;\ **\ ****\ **\ &quot;.
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1760,6 +1796,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">card</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">ProjectCard</span><span class="p">(</span><span class="s2">&quot;card&quot;</span><span class="p">,</span>
     <span class="n">column_id</span><span class="o">=</span><span class="n">column</span><span class="o">.</span><span class="n">column_id</span><span class="p">,</span>
     <span class="n">note</span><span class="o">=</span><span class="s2">&quot;## Unaccepted 👇&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>A GitHub Project Card can be imported using its <a class="reference external" href="https://developer.github.com/v3/projects/cards/#get-a-project-card">Card ID</a></p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import github:index/projectCard:ProjectCard card <span class="m">01234567</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -2002,6 +2042,10 @@ GitHub organization or personal account.</p>
         <span class="n">repository</span><span class="o">=</span><span class="s2">&quot;terraform-module-template&quot;</span><span class="p">,</span>
     <span class="p">),</span>
     <span class="n">visibility</span><span class="o">=</span><span class="s2">&quot;public&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Repositories can be imported using the <code class="docutils literal notranslate"><span class="pre">name</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import github:index/repository:Repository terraform terraform
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -2356,6 +2400,10 @@ collaborator will be removed from the repository.</p>
     <span class="n">username</span><span class="o">=</span><span class="s2">&quot;SomeUser&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>GitHub Repository Collaborators can be imported using an ID made up of <code class="docutils literal notranslate"><span class="pre">repository:username</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import github:index/repositoryCollaborator:RepositoryCollaborator collaborator terraform:someuser
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2478,6 +2526,10 @@ account.</p>
     <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Repository test key&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Repository deploy keys can be imported using a colon-separated pair of repository name and GitHub’s key id. The latter can be obtained by GitHub’s SDKs and API.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import github:index/repositoryDeployKey:RepositoryDeployKey foo test-repo:23824728
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2590,6 +2642,15 @@ GitHub repository.</p>
     <span class="n">commit_author</span><span class="o">=</span><span class="s2">&quot;Terraform User&quot;</span><span class="p">,</span>
     <span class="n">commit_email</span><span class="o">=</span><span class="s2">&quot;terraform@example.com&quot;</span><span class="p">,</span>
     <span class="n">overwrite_on_create</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Repository files can be imported using a combination of the <code class="docutils literal notranslate"><span class="pre">repo</span></code> and <code class="docutils literal notranslate"><span class="pre">file</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import github:index/repositoryFile:RepositoryFile gitignore example/.gitignore
+
+To import a file from a branch other than master, append <span class="sb">``</span>:<span class="sb">``</span> and the branch name, e.g.
+</pre></div>
+</div>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import github:index/repositoryFile:RepositoryFile gitignore example/.gitignore:dev
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -2741,6 +2802,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">owner</span><span class="o">=</span><span class="s2">&quot;example-owner&quot;</span><span class="p">,</span>
     <span class="n">repository</span><span class="o">=</span><span class="s2">&quot;example-repository&quot;</span><span class="p">,</span>
     <span class="n">title</span><span class="o">=</span><span class="s2">&quot;v1.1.0&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>A GitHub Repository Milestone can be imported using an ID made up of <code class="docutils literal notranslate"><span class="pre">owner/repository/number</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import github:index/repositoryMilestone:RepositoryMilestone example example-owner/example-repository/1
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -2991,6 +3056,12 @@ GitHub organization or personal account.</p>
     <span class="n">repository</span><span class="o">=</span><span class="n">repo</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Repository webhooks can be imported using the <code class="docutils literal notranslate"><span class="pre">name</span></code> of the repository, combined with the <code class="docutils literal notranslate"><span class="pre">id</span></code> of the webhook, separated by a <code class="docutils literal notranslate"><span class="pre">/</span></code> character. The <code class="docutils literal notranslate"><span class="pre">id</span></code> of the webhook can be found in the URL of the webhook. For example<code class="docutils literal notranslate"><span class="pre">&quot;https://github.com/foo-org/foo-repo/settings/hooks/14711452&quot;</span></code>. Importing uses the name of the repository, as well as the ID of the webhook, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import github:index/repositoryWebhook:RepositoryWebhook terraform terraform/11235813
+
+If secret is populated in the webhook&#39;s configuration, the value will be imported as &quot;\ **\ ****\ **\ &quot;.
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3108,6 +3179,10 @@ a new team will be created. When destroyed, that team will be removed.</p>
 <span class="n">some_team</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">Team</span><span class="p">(</span><span class="s2">&quot;someTeam&quot;</span><span class="p">,</span>
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Some cool team&quot;</span><span class="p">,</span>
     <span class="n">privacy</span><span class="o">=</span><span class="s2">&quot;closed&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>GitHub Teams can be imported using the GitHub team ID e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import github:index/team:Team core <span class="m">1234567</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -3255,6 +3330,10 @@ destroyed, the user will be removed from the team.</p>
     <span class="n">username</span><span class="o">=</span><span class="s2">&quot;SomeUser&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>GitHub Team Membership can be imported using an ID made up of <code class="docutils literal notranslate"><span class="pre">teamid:username</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import github:index/teamMembership:TeamMembership member <span class="m">1234567</span>:someuser
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3366,6 +3445,10 @@ to do that, see <code class="docutils literal notranslate"><span class="pre">Rep
     <span class="n">team_id</span><span class="o">=</span><span class="n">some_team</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>GitHub Team Repository can be imported using an ID made up of <code class="docutils literal notranslate"><span class="pre">teamid:repository</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import github:index/teamRepository:TeamRepository terraform_repo <span class="m">1234567</span>:terraform
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3462,6 +3545,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 You must have team synchronization enabled for organizations owned by enterprise accounts.</p>
 <p>To learn more about team synchronization between IdPs and Github, please refer to:
 <a class="reference external" href="https://help.github.com/en/github/setting-up-and-managing-organizations-and-teams/synchronizing-teams-between-your-identity-provider-and-github">https://help.github.com/en/github/setting-up-and-managing-organizations-and-teams/synchronizing-teams-between-your-identity-provider-and-github</a></p>
+<p>GitHub Team Sync Group Mappings can be imported using the GitHub team <code class="docutils literal notranslate"><span class="pre">slug</span></code> e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import github:index/teamSyncGroupMapping:TeamSyncGroupMapping example some_team
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3558,6 +3645,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>GPG keys are not importable due to the fact that <a class="reference external" href="https://developer.github.com/v3/users/gpg_keys/#gpg-keys">API</a> does not return previously uploaded GPG key.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3738,6 +3826,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">example</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">UserSshKey</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
     <span class="n">key</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;~/.ssh/id_rsa.pub&quot;</span><span class="p">),</span>
     <span class="n">title</span><span class="o">=</span><span class="s2">&quot;example title&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>SSH keys can be imported using their ID e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import github:index/userSshKey:UserSshKey example <span class="m">1234567</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
