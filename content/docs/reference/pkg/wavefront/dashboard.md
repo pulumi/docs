@@ -12,7 +12,6 @@ meta_desc: "Explore the Dashboard resource of the Wavefront package, including e
 
 Provides a Wavefront Dashboard resource.  This allows dashboards to be created, updated, and deleted.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -5078,6 +5077,16 @@ Valid options are `full` or `last`
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+Dashboards can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import wavefront:index/dashboard:Dashboard dashboard tftestimport
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

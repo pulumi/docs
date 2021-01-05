@@ -13,7 +13,6 @@ meta_desc: "Explore the CloudIntegrationAzure resource of the Wavefront package,
 Provides a Wavefront Cloud Integration for Azure. This allows azure cloud integrations to be created,
 updated, and deleted.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1395,6 +1394,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Azure Cloud Integrations can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import wavefront:index/cloudIntegrationAzure:CloudIntegrationAzure azure a411c16b-3cf7-4f03-bf11-8ca05aab898d
+```
 
 
 

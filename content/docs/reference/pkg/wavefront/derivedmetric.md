@@ -13,7 +13,6 @@ meta_desc: "Explore the DerivedMetric resource of the Wavefront package, includi
 Provides a Wavefront Derived Metric Resource. This allows derived metrics to be created,
 updated, and deleted.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -911,6 +910,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Derived Metrics can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import wavefront:index/derivedMetric:DerivedMetric derived_metric 1577102900578
+```
 
 
 

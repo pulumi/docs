@@ -13,7 +13,6 @@ meta_desc: "Explore the CloudIntegrationAppDynamics resource of the Wavefront pa
 Provides a Wavefront Cloud Integration for App Dynamics. This allows app dynamics cloud integrations to be created,
 updated, and deleted.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1891,6 +1890,16 @@ by default it is `true`
 
 
 
+
+
+## Import
+
+
+App Dynamic Cloud Integrations can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import wavefront:index/cloudIntegrationAppDynamics:CloudIntegrationAppDynamics app_dynamics a411c16b-3cf7-4f03-bf11-8ca05aab898d
+```
 
 
 

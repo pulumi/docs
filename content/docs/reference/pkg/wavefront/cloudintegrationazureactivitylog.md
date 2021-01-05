@@ -13,7 +13,6 @@ meta_desc: "Explore the CloudIntegrationAzureActivityLog resource of the Wavefro
 Provides a Wavefront Cloud Integration for Azure Activity Logs. This allows azure activity log cloud integrations to be created,
 updated, and deleted.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1244,6 +1243,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Azure Activity Log Cloud Integrations can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import wavefront:index/cloudIntegrationAzureActivityLog:CloudIntegrationAzureActivityLog azure_al a411c16b-3cf7-4f03-bf11-8ca05aab898d
+```
 
 
 

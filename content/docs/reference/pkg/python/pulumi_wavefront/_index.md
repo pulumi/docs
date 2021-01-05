@@ -36,6 +36,10 @@ anything, please consult the source <a class="reference external" href="https://
     <span class="n">target</span><span class="o">=</span><span class="s2">&quot;test@example.com&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Alerts can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import wavefront:index/alert:Alert alert_target <span class="m">1479868728473</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -331,6 +335,10 @@ key. <code class="docutils literal notranslate"><span class="pre">WEBHOOK</span>
     <span class="p">])</span>
 </pre></div>
 </div>
+<p>Alert Targets can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import wavefront:index/alertTarget:AlertTarget alert_target abcdEFGhijKLMNO
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -507,6 +515,10 @@ updated, and deleted.</p>
     <span class="n">controller_name</span><span class="o">=</span><span class="s2">&quot;exampleController&quot;</span><span class="p">,</span>
     <span class="n">encrypted_password</span><span class="o">=</span><span class="s2">&quot;encryptedPassword&quot;</span><span class="p">,</span>
     <span class="n">user_name</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>App Dynamic Cloud Integrations can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import wavefront:index/cloudIntegrationAppDynamics:CloudIntegrationAppDynamics app_dynamics a411c16b-3cf7-4f03-bf11-8ca05aab898d
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -723,6 +735,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">external_id</span> <span class="o">=</span> <span class="n">wavefront</span><span class="o">.</span><span class="n">CloudIntegrationAwsExternalId</span><span class="p">(</span><span class="s2">&quot;externalId&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>External IDs can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import wavefront:index/cloudIntegrationAwsExternalId:CloudIntegrationAwsExternalId external_id uGJdkH3k
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -797,6 +813,10 @@ updated, and deleted.</p>
     <span class="n">client_id</span><span class="o">=</span><span class="s2">&quot;client-id2&quot;</span><span class="p">,</span>
     <span class="n">client_secret</span><span class="o">=</span><span class="s2">&quot;client-secret2&quot;</span><span class="p">,</span>
     <span class="n">tenant</span><span class="o">=</span><span class="s2">&quot;my-tenant2&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Azure Cloud Integrations can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import wavefront:index/cloudIntegrationAzure:CloudIntegrationAzure azure a411c16b-3cf7-4f03-bf11-8ca05aab898d
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -964,6 +984,10 @@ updated, and deleted.</p>
     <span class="n">tenant</span><span class="o">=</span><span class="s2">&quot;my-tenant2&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Azure Activity Log Cloud Integrations can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import wavefront:index/cloudIntegrationAzureActivityLog:CloudIntegrationAzureActivityLog azure_al a411c16b-3cf7-4f03-bf11-8ca05aab898d
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1112,6 +1136,10 @@ updated, and deleted.</p>
     <span class="n">external_id</span><span class="o">=</span><span class="n">ext_id</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">region</span><span class="o">=</span><span class="s2">&quot;us-west-2&quot;</span><span class="p">,</span>
     <span class="n">bucket_name</span><span class="o">=</span><span class="s2">&quot;example-s3-bucket&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>CloudTrail Cloud Integrations can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import wavefront:index/cloudIntegrationCloudTrail:CloudIntegrationCloudTrail cloudtrail a411c16b-3cf7-4f03-bf11-8ca05aab898d
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -1277,6 +1305,10 @@ updated, and delete</p>
     <span class="n">force_save</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">role_arn</span><span class="o">=</span><span class="s2">&quot;arn:aws::1234567:role/example-arn&quot;</span><span class="p">,</span>
     <span class="n">external_id</span><span class="o">=</span><span class="n">ext_id</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>CloudWatch Cloud Integrations can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import wavefront:index/cloudIntegrationCloudWatch:CloudIntegrationCloudWatch cloudwatch a411c16b-3cf7-4f03-bf11-8ca05aab898d
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -1466,6 +1498,10 @@ updated, and delete</p>
     <span class="n">external_id</span><span class="o">=</span><span class="n">ext_id</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>EC2 Cloud Integrations can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import wavefront:index/cloudIntegrationEc2:CloudIntegrationEc2 ec2 a411c16b-3cf7-4f03-bf11-8ca05aab898d
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1597,6 +1633,10 @@ updated, and deleted.</p>
 
 <span class="s2">&quot;&quot;&quot;</span><span class="p">,</span>
     <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;example-gcp-project&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>GCP Cloud Integrations can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import wavefront:index/cloudIntegrationGcp:CloudIntegrationGcp gcp a411c16b-3cf7-4f03-bf11-8ca05aab898d
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -1764,6 +1804,10 @@ updated, and deleted.</p>
     <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;example-gcp-project&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>GCP Billing Cloud Integrations can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import wavefront:index/cloudIntegrationGcpBilling:CloudIntegrationGcpBilling gcp_billing a411c16b-3cf7-4f03-bf11-8ca05aab898d
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1902,6 +1946,10 @@ updated, and deleted.</p>
 <span class="kn">import</span> <span class="nn">pulumi_wavefront</span> <span class="k">as</span> <span class="nn">wavefront</span>
 
 <span class="n">newrelic</span> <span class="o">=</span> <span class="n">wavefront</span><span class="o">.</span><span class="n">CloudIntegrationNewRelic</span><span class="p">(</span><span class="s2">&quot;newrelic&quot;</span><span class="p">,</span> <span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;example-api-key&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>NewRelic Integrations can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import wavefront:index/cloudIntegrationNewRelic:CloudIntegrationNewRelic newrelic a411c16b-3cf7-4f03-bf11-8ca05aab898d
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -2051,6 +2099,10 @@ updated, and deleted.</p>
     <span class="n">password</span><span class="o">=</span><span class="s2">&quot;password&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Tesla Integrations can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import wavefront:index/cloudIntegrationTesla:CloudIntegrationTesla tesla a411c16b-3cf7-4f03-bf11-8ca05aab898d
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2173,6 +2225,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_wavefront.Dashboard">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_wavefront.</code><code class="sig-name descname">Dashboard</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">can_modifies</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">can_views</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_query_parameters</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_section_table_of_contents</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">event_filter_type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameter_details</span><span class="p">:</span> <span class="n">Union[Sequence[Union[DashboardParameterDetailArgs, Mapping[str, Any], Awaitable[Union[DashboardParameterDetailArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[DashboardParameterDetailArgs, Mapping[str, Any], Awaitable[Union[DashboardParameterDetailArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sections</span><span class="p">:</span> <span class="n">Union[Sequence[Union[DashboardSectionArgs, Mapping[str, Any], Awaitable[Union[DashboardSectionArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[DashboardSectionArgs, Mapping[str, Any], Awaitable[Union[DashboardSectionArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">url</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_wavefront.Dashboard" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Wavefront Dashboard resource.  This allows dashboards to be created, updated, and deleted.</p>
+<p>Dashboards can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import wavefront:index/dashboard:Dashboard dashboard tftestimport
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2440,6 +2496,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Dashboard JSON can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import wavefront:index/dashboardJson:DashboardJson dashboard_json tftestimport
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2525,6 +2585,10 @@ updated, and deleted.</p>
 <span class="n">derived</span> <span class="o">=</span> <span class="n">wavefront</span><span class="o">.</span><span class="n">DerivedMetric</span><span class="p">(</span><span class="s2">&quot;derived&quot;</span><span class="p">,</span>
     <span class="n">minutes</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
     <span class="n">query</span><span class="o">=</span><span class="s2">&quot;aliasMetric(5, &quot;</span><span class="n">some</span><span class="o">.</span><span class="n">metric</span><span class="s2">&quot;)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Derived Metrics can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import wavefront:index/derivedMetric:DerivedMetric derived_metric <span class="m">1577102900578</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -2639,6 +2703,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">basic</span> <span class="o">=</span> <span class="n">wavefront</span><span class="o">.</span><span class="n">ExternalLink</span><span class="p">(</span><span class="s2">&quot;basic&quot;</span><span class="p">,</span>
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;An external link description&quot;</span><span class="p">,</span>
     <span class="n">template</span><span class="o">=</span><span class="s2">&quot;https://example.com/source=&#x7B;&#x7B;</span><span class="si">{source}</span><span class="s2">&#x7D;&#x7D;&amp;startTime={{startEpochMillis}}&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Maintenance windows can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import wavefront:index/externalLink:ExternalLink basic fVj6fz6zYC4aBkID
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -2794,6 +2862,10 @@ in other resources that support group memberships. s</p>
     <span class="p">],</span>
     <span class="n">start_time_in_seconds</span><span class="o">=</span><span class="mi">1600123456</span><span class="p">,</span>
     <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Routine maintenance&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Maintenance windows can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import wavefront:index/maintenanceWindow:MaintenanceWindow basic <span class="m">1600383357095</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -2993,6 +3065,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">role</span> <span class="o">=</span> <span class="n">wavefront</span><span class="o">.</span><span class="n">Role</span><span class="p">(</span><span class="s2">&quot;role&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>User Groups can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import wavefront:index/role:Role some_group a411c16b-3cf7-4f03-bf11-8ca05aab898d
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3103,6 +3179,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">basic</span> <span class="o">=</span> <span class="n">wavefront</span><span class="o">.</span><span class="n">ServiceAccount</span><span class="p">(</span><span class="s2">&quot;basic&quot;</span><span class="p">,</span>
     <span class="n">active</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">identifier</span><span class="o">=</span><span class="s2">&quot;sa::tftesting&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Service accounts can be imported using <code class="docutils literal notranslate"><span class="pre">identifier</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import wavefront:index/serviceAccount:ServiceAccount basic sa::tftesting
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -3223,6 +3303,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">basic</span> <span class="o">=</span> <span class="n">wavefront</span><span class="o">.</span><span class="n">User</span><span class="p">(</span><span class="s2">&quot;basic&quot;</span><span class="p">,</span> <span class="n">email</span><span class="o">=</span><span class="s2">&quot;test+tftesting@example.com&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Users can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import wavefront:index/user:User some_user test@example.com
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3323,6 +3407,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="kn">import</span> <span class="nn">pulumi_wavefront</span> <span class="k">as</span> <span class="nn">wavefront</span>
 
 <span class="n">basic</span> <span class="o">=</span> <span class="n">wavefront</span><span class="o">.</span><span class="n">UserGroup</span><span class="p">(</span><span class="s2">&quot;basic&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Basic User Group for Unit Tests&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>User Groups can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import wavefront:index/userGroup:UserGroup some_group a411c16b-3cf7-4f03-bf11-8ca05aab898d
 </pre></div>
 </div>
 <dl class="field-list simple">

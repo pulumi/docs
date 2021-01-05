@@ -12,7 +12,6 @@ meta_desc: "Explore the ServiceAccount resource of the Wavefront package, includ
 
 Provides a Wavefront Service Account Resource. This allows service accounts to be created, updated, and deleted.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -926,6 +925,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Service accounts can be imported using `identifier`, e.g.
+
+```sh
+ $ pulumi import wavefront:index/serviceAccount:ServiceAccount basic sa::tftesting
+```
 
 
 

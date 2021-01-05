@@ -13,7 +13,6 @@ meta_desc: "Explore the CloudIntegrationCloudWatch resource of the Wavefront pac
 Provides a Wavefront Cloud Integration for CloudTrail. This allows CloudTrail cloud integrations to be created,
 updated, and delete
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1524,6 +1523,16 @@ Multiple entries are OR'ed
 
 
 
+
+
+## Import
+
+
+CloudWatch Cloud Integrations can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import wavefront:index/cloudIntegrationCloudWatch:CloudIntegrationCloudWatch cloudwatch a411c16b-3cf7-4f03-bf11-8ca05aab898d
+```
 
 
 
