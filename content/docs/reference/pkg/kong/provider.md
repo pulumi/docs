@@ -17,12 +17,13 @@ construction to achieve fine-grained programmatic control over provider settings
 
 
 
+
 ## Create a Provider Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/kong/#Provider">Provider</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/kong/#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/kong/#Provider">Provider</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/kong/#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -30,11 +31,11 @@ construction to achieve fine-grained programmatic control over provider settings
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kong/sdk/v2/go/kong/?tab=doc#Provider">NewProvider</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kong/sdk/v2/go/kong/?tab=doc#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kong/sdk/v2/go/kong/?tab=doc#Provider">Provider</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kong/sdk/v2/go/kong/?tab=doc#Provider">NewProvider</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kong/sdk/v2/go/kong/?tab=doc#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kong/sdk/v2/go/kong/?tab=doc#Provider">Provider</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kong/Pulumi.Kong.Provider.html">Provider</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kong/Pulumi.Pulumi.KongArgs.html">ProviderArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kong/Pulumi.Kong.Provider.html">Provider</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kong/Pulumi.Pulumi.KongArgs.html">ProviderArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -45,7 +46,7 @@ construction to achieve fine-grained programmatic control over provider settings
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -114,7 +115,7 @@ construction to achieve fine-grained programmatic control over provider settings
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -153,7 +154,7 @@ construction to achieve fine-grained programmatic control over provider settings
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -194,7 +195,6 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -202,82 +202,74 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="kongadminpassword_csharp">
 <a href="#kongadminpassword_csharp" style="color: inherit; text-decoration: inherit;">Kong<wbr>Admin<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An basic auth password for kong admin
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kongadmintoken_csharp">
 <a href="#kongadmintoken_csharp" style="color: inherit; text-decoration: inherit;">Kong<wbr>Admin<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API key for the kong api (Enterprise Edition)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kongadminuri_csharp">
 <a href="#kongadminuri_csharp" style="color: inherit; text-decoration: inherit;">Kong<wbr>Admin<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address of the kong admin url e.g. http://localhost:8001
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kongadminusername_csharp">
 <a href="#kongadminusername_csharp" style="color: inherit; text-decoration: inherit;">Kong<wbr>Admin<wbr>Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An basic auth user for kong admin
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kongapikey_csharp">
 <a href="#kongapikey_csharp" style="color: inherit; text-decoration: inherit;">Kong<wbr>Api<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API key for the kong api (if you have locked it down)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="strictpluginsmatch_csharp">
 <a href="#strictpluginsmatch_csharp" style="color: inherit; text-decoration: inherit;">Strict<wbr>Plugins<wbr>Match</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should plugins `config_json` field strictly match plugin configuration
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tlsskipverify_csharp">
 <a href="#tlsskipverify_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Skip<wbr>Verify</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to skip tls verify for https kong api endpoint using self signed or untrusted certs
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -286,82 +278,74 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="kongadminpassword_go">
 <a href="#kongadminpassword_go" style="color: inherit; text-decoration: inherit;">Kong<wbr>Admin<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An basic auth password for kong admin
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kongadmintoken_go">
 <a href="#kongadmintoken_go" style="color: inherit; text-decoration: inherit;">Kong<wbr>Admin<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API key for the kong api (Enterprise Edition)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kongadminuri_go">
 <a href="#kongadminuri_go" style="color: inherit; text-decoration: inherit;">Kong<wbr>Admin<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address of the kong admin url e.g. http://localhost:8001
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kongadminusername_go">
 <a href="#kongadminusername_go" style="color: inherit; text-decoration: inherit;">Kong<wbr>Admin<wbr>Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An basic auth user for kong admin
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kongapikey_go">
 <a href="#kongapikey_go" style="color: inherit; text-decoration: inherit;">Kong<wbr>Api<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API key for the kong api (if you have locked it down)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="strictpluginsmatch_go">
 <a href="#strictpluginsmatch_go" style="color: inherit; text-decoration: inherit;">Strict<wbr>Plugins<wbr>Match</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should plugins `config_json` field strictly match plugin configuration
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tlsskipverify_go">
 <a href="#tlsskipverify_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Skip<wbr>Verify</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to skip tls verify for https kong api endpoint using self signed or untrusted certs
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -370,82 +354,74 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="kongadminpassword_nodejs">
 <a href="#kongadminpassword_nodejs" style="color: inherit; text-decoration: inherit;">kong<wbr>Admin<wbr>Password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An basic auth password for kong admin
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kongadmintoken_nodejs">
 <a href="#kongadmintoken_nodejs" style="color: inherit; text-decoration: inherit;">kong<wbr>Admin<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API key for the kong api (Enterprise Edition)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kongadminuri_nodejs">
 <a href="#kongadminuri_nodejs" style="color: inherit; text-decoration: inherit;">kong<wbr>Admin<wbr>Uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address of the kong admin url e.g. http://localhost:8001
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kongadminusername_nodejs">
 <a href="#kongadminusername_nodejs" style="color: inherit; text-decoration: inherit;">kong<wbr>Admin<wbr>Username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An basic auth user for kong admin
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kongapikey_nodejs">
 <a href="#kongapikey_nodejs" style="color: inherit; text-decoration: inherit;">kong<wbr>Api<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API key for the kong api (if you have locked it down)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="strictpluginsmatch_nodejs">
 <a href="#strictpluginsmatch_nodejs" style="color: inherit; text-decoration: inherit;">strict<wbr>Plugins<wbr>Match</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should plugins `config_json` field strictly match plugin configuration
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tlsskipverify_nodejs">
 <a href="#tlsskipverify_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Skip<wbr>Verify</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to skip tls verify for https kong api endpoint using self signed or untrusted certs
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -454,91 +430,79 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="kong_admin_password_python">
 <a href="#kong_admin_password_python" style="color: inherit; text-decoration: inherit;">kong_<wbr>admin_<wbr>password</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An basic auth password for kong admin
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kong_admin_token_python">
 <a href="#kong_admin_token_python" style="color: inherit; text-decoration: inherit;">kong_<wbr>admin_<wbr>token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}API key for the kong api (Enterprise Edition)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kong_admin_uri_python">
 <a href="#kong_admin_uri_python" style="color: inherit; text-decoration: inherit;">kong_<wbr>admin_<wbr>uri</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The address of the kong admin url e.g. http://localhost:8001
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kong_admin_username_python">
 <a href="#kong_admin_username_python" style="color: inherit; text-decoration: inherit;">kong_<wbr>admin_<wbr>username</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An basic auth user for kong admin
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kong_api_key_python">
 <a href="#kong_api_key_python" style="color: inherit; text-decoration: inherit;">kong_<wbr>api_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}API key for the kong api (if you have locked it down)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="strict_plugins_match_python">
 <a href="#strict_plugins_match_python" style="color: inherit; text-decoration: inherit;">strict_<wbr>plugins_<wbr>match</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should plugins `config_json` field strictly match plugin configuration
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tls_skip_verify_python">
 <a href="#tls_skip_verify_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>skip_<wbr>verify</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to skip tls verify for https kong api endpoint using self signed or untrusted certs
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Provider resource produces the following output properties:
-
 
 
 
@@ -549,15 +513,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -566,15 +528,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -583,15 +543,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -600,18 +558,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
