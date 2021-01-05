@@ -43,7 +43,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="py class">
 <dt id="pulumi_hcloud.AwaitableGetLoadBalancerResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_hcloud.</code><code class="sig-name descname">AwaitableGetLoadBalancerResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">algorithm</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv4</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">load_balancer_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">services</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">targets</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">with_selector</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_hcloud.AwaitableGetLoadBalancerResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_hcloud.</code><code class="sig-name descname">AwaitableGetLoadBalancerResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">algorithms</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv4</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">load_balancer_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">services</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">targets</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">with_selector</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_hcloud.AwaitableGetLoadBalancerResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
@@ -85,6 +85,10 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_hcloud.Certificate">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_hcloud.</code><code class="sig-name descname">Certificate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">certificate</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_hcloud.Certificate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Hetzner Cloud Certificate to represent a TLS certificate in the Hetzner Cloud.</p>
+<p>Certificates can be imported using their <code class="docutils literal notranslate"><span class="pre">id</span></code>hcl</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import hcloud:index/certificate:Certificate sample_certificate &lt;id&gt;
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -232,6 +236,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">server_id</span><span class="o">=</span><span class="n">node1</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Floating IPs can be imported using its <code class="docutils literal notranslate"><span class="pre">id</span></code></p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import hcloud:index/floatingIp:FloatingIp myip &lt;id&gt;
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -373,6 +381,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">main</span> <span class="o">=</span> <span class="n">hcloud</span><span class="o">.</span><span class="n">FloatingIpAssignment</span><span class="p">(</span><span class="s2">&quot;main&quot;</span><span class="p">,</span>
     <span class="n">floating_ip_id</span><span class="o">=</span><span class="n">master</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">server_id</span><span class="o">=</span><span class="n">node1</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Floating IP Assignments can be imported using the <code class="docutils literal notranslate"><span class="pre">floating_ip_id</span></code></p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import hcloud:index/floatingIpAssignment:FloatingIpAssignment myfloatingipassignment &lt;floating_ip_id&gt;
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -707,11 +719,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_hcloud.GetLoadBalancerResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_hcloud.</code><code class="sig-name descname">GetLoadBalancerResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">algorithm</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv4</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">load_balancer_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">services</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">targets</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">with_selector</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_hcloud.GetLoadBalancerResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_hcloud.</code><code class="sig-name descname">GetLoadBalancerResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">algorithms</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv4</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">load_balancer_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_zone</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">services</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">targets</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">with_selector</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_hcloud.GetLoadBalancerResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getLoadBalancer.</p>
 <dl class="py method">
-<dt id="pulumi_hcloud.GetLoadBalancerResult.algorithm">
-<em class="property">property </em><code class="sig-name descname">algorithm</code><a class="headerlink" href="#pulumi_hcloud.GetLoadBalancerResult.algorithm" title="Permalink to this definition">¶</a></dt>
+<dt id="pulumi_hcloud.GetLoadBalancerResult.algorithms">
+<em class="property">property </em><code class="sig-name descname">algorithms</code><a class="headerlink" href="#pulumi_hcloud.GetLoadBalancerResult.algorithms" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Optional) Configuration of the algorithm the Load Balancer use.</p>
 </dd></dl>
 
@@ -1054,6 +1066,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="p">)])</span>
 </pre></div>
 </div>
+<p>Load Balancers can be imported using its <code class="docutils literal notranslate"><span class="pre">id</span></code></p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import hcloud:index/loadBalancer:LoadBalancer my_load_balancer &lt;id&gt;
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1206,6 +1222,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">load_balancer_id</span><span class="o">=</span><span class="n">lb1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">network_id</span><span class="o">=</span><span class="n">mynet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">ip</span><span class="o">=</span><span class="s2">&quot;10.0.1.5&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Load Balancer Network entries can be imported using a compound ID with the following format<code class="docutils literal notranslate"><span class="pre">&lt;load-balancer-id&gt;-&lt;network-id&gt;</span></code></p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import hcloud:index/loadBalancerNetwork:LoadBalancerNetwork myloadbalancernetwork <span class="m">123</span>-654
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -1362,6 +1382,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">load_balancer_service</span> <span class="o">=</span> <span class="n">hcloud</span><span class="o">.</span><span class="n">LoadBalancerService</span><span class="p">(</span><span class="s2">&quot;loadBalancerService&quot;</span><span class="p">,</span>
     <span class="n">load_balancer_id</span><span class="o">=</span><span class="n">hcloud_load_balancer</span><span class="p">[</span><span class="s2">&quot;test_load_balancer&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
     <span class="n">protocol</span><span class="o">=</span><span class="s2">&quot;http&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Load Balancer Service entries can be imported using a compound ID with the following format<code class="docutils literal notranslate"><span class="pre">&lt;load-balancer-id&gt;__&lt;listen-port&gt;</span></code></p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import hcloud:index/loadBalancerService:LoadBalancerService myloadbalancernetwork 123__80
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -1642,6 +1666,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">priv_net</span> <span class="o">=</span> <span class="n">hcloud</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;privNet&quot;</span><span class="p">,</span> <span class="n">ip_range</span><span class="o">=</span><span class="s2">&quot;10.0.1.0/24&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Networks can be imported using its <code class="docutils literal notranslate"><span class="pre">id</span></code></p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import hcloud:index/network:Network myip &lt;id&gt;
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1742,6 +1770,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">gateway</span><span class="o">=</span><span class="s2">&quot;10.0.1.1&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Network Route entries can be imported using a compound ID with the following format<code class="docutils literal notranslate"><span class="pre">&lt;network-id&gt;-&lt;destination&gt;</span></code></p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import hcloud:index/networkRoute:NetworkRoute myroute <span class="m">123</span>-10.0.0.0/16
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1830,7 +1862,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_hcloud.NetworkSubnet">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_hcloud.</code><code class="sig-name descname">NetworkSubnet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_range</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_id</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_zone</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_hcloud.NetworkSubnet" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_hcloud.</code><code class="sig-name descname">NetworkSubnet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_range</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_id</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_zone</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vswitch_id</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_hcloud.NetworkSubnet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Hetzner Cloud Network Subnet to represent a Subnet in the Hetzner Cloud.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_hcloud</span> <span class="k">as</span> <span class="nn">hcloud</span>
@@ -1843,6 +1875,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">ip_range</span><span class="o">=</span><span class="s2">&quot;10.0.1.0/24&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Network Subnet entries can be imported using a compound ID with the following format<code class="docutils literal notranslate"><span class="pre">&lt;network-id&gt;-&lt;ip_range&gt;</span></code></p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import hcloud:index/networkSubnet:NetworkSubnet mysubnet <span class="m">123</span>-10.0.0.0/24
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1851,13 +1887,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>ip_range</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Range to allocate IPs from. Must be a subnet of the ip_range of the Network and must not overlap with any other subnets or with any destinations in routes.</p></li>
 <li><p><strong>network_id</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – ID of the Network the subnet should be added to.</p></li>
 <li><p><strong>network_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of network zone.</p></li>
-<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of subnet. <code class="docutils literal notranslate"><span class="pre">server</span></code></p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of subnet. <code class="docutils literal notranslate"><span class="pre">server</span></code>, <code class="docutils literal notranslate"><span class="pre">cloud</span></code> or <code class="docutils literal notranslate"><span class="pre">vswitch</span></code></p></li>
+<li><p><strong>vswitch_id</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – ID of the vswitch, Required if type is <code class="docutils literal notranslate"><span class="pre">vswitch</span></code></p></li>
 </ul>
 </dd>
 </dl>
 <dl class="py method">
 <dt id="pulumi_hcloud.NetworkSubnet.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gateway</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_range</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_id</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_zone</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_hcloud.network_subnet.NetworkSubnet<a class="headerlink" href="#pulumi_hcloud.NetworkSubnet.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gateway</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ip_range</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_id</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_zone</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vswitch_id</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_hcloud.network_subnet.NetworkSubnet<a class="headerlink" href="#pulumi_hcloud.NetworkSubnet.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing NetworkSubnet resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1869,7 +1906,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>ip_range</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Range to allocate IPs from. Must be a subnet of the ip_range of the Network and must not overlap with any other subnets or with any destinations in routes.</p></li>
 <li><p><strong>network_id</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – ID of the Network the subnet should be added to.</p></li>
 <li><p><strong>network_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of network zone.</p></li>
-<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of subnet. <code class="docutils literal notranslate"><span class="pre">server</span></code></p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of subnet. <code class="docutils literal notranslate"><span class="pre">server</span></code>, <code class="docutils literal notranslate"><span class="pre">cloud</span></code> or <code class="docutils literal notranslate"><span class="pre">vswitch</span></code></p></li>
+<li><p><strong>vswitch_id</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – ID of the vswitch, Required if type is <code class="docutils literal notranslate"><span class="pre">vswitch</span></code></p></li>
 </ul>
 </dd>
 </dl>
@@ -1896,7 +1934,13 @@ properties used to qualify the lookup.</p>
 <dl class="py method">
 <dt id="pulumi_hcloud.NetworkSubnet.type">
 <em class="property">property </em><code class="sig-name descname">type</code><a class="headerlink" href="#pulumi_hcloud.NetworkSubnet.type" title="Permalink to this definition">¶</a></dt>
-<dd><p>Type of subnet. <code class="docutils literal notranslate"><span class="pre">server</span></code></p>
+<dd><p>Type of subnet. <code class="docutils literal notranslate"><span class="pre">server</span></code>, <code class="docutils literal notranslate"><span class="pre">cloud</span></code> or <code class="docutils literal notranslate"><span class="pre">vswitch</span></code></p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_hcloud.NetworkSubnet.vswitch_id">
+<em class="property">property </em><code class="sig-name descname">vswitch_id</code><a class="headerlink" href="#pulumi_hcloud.NetworkSubnet.vswitch_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>ID of the vswitch, Required if type is <code class="docutils literal notranslate"><span class="pre">vswitch</span></code></p>
 </dd></dl>
 
 <dl class="py method">
@@ -2021,6 +2065,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">ip_address</span><span class="o">=</span><span class="n">floating1</span><span class="o">.</span><span class="n">ip_address</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Reverse DNS entries can be imported using a compound ID with the following format<code class="docutils literal notranslate"><span class="pre">&lt;prefix</span> <span class="pre">(s</span> <span class="pre">for</span> <span class="pre">server/</span> <span class="pre">f</span> <span class="pre">for</span> <span class="pre">floating</span> <span class="pre">ip)&gt;-&lt;server</span> <span class="pre">or</span> <span class="pre">floating</span> <span class="pre">ip</span> <span class="pre">ID&gt;-&lt;IP</span> <span class="pre">address&gt;</span></code> # import reverse dns entry on server with id 123, ip 192.168.100.1</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import hcloud:index/rdns:Rdns myrdns s-123-192.168.100.1
+</pre></div>
+</div>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import hcloud:index/rdns:Rdns myrdns f-123-2001:db8::1
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2118,21 +2169,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_hcloud.Server">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_hcloud.</code><code class="sig-name descname">Server</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backups</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datacenter</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iso</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_disk</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rescue</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ssh_keys</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_data</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_hcloud.Server" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Server resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[bool] backups: Enable or disable backups.
-:param pulumi.Input[str] datacenter: The datacenter name to create the server in.
-:param pulumi.Input[str] image: Name or ID of the image the server is created from.
-:param pulumi.Input[str] iso: ID or Name of an ISO image to mount.
-:param pulumi.Input[bool] keep_disk: If true, do not upgrade the disk. This allows downgrading the server type later.
-:param pulumi.Input[Mapping[str, Any]] labels: User-defined labels (key-value pairs) should be created with.
-:param pulumi.Input[str] location: The location name to create the server in. <code class="docutils literal notranslate"><span class="pre">nbg1</span></code>, <code class="docutils literal notranslate"><span class="pre">fsn1</span></code> or <code class="docutils literal notranslate"><span class="pre">hel1</span></code>
-:param pulumi.Input[str] name: Name of the server to create (must be unique per project and a valid hostname as per RFC 1123).
-:param pulumi.Input[str] rescue: Enable and boot in to the specified rescue system. This enables simple installation of custom operating systems. <code class="docutils literal notranslate"><span class="pre">linux64</span></code> <code class="docutils literal notranslate"><span class="pre">linux32</span></code> or <code class="docutils literal notranslate"><span class="pre">freebsd64</span></code>
-:param pulumi.Input[str] server_type: Name of the server type this server should be created with.
-:param pulumi.Input[Sequence[pulumi.Input[str]]] ssh_keys: SSH key IDs or names which should be injected into the server at creation time
-:param pulumi.Input[str] user_data: Cloud-Init user data to use during server creation</p>
+<dd><p>Servers can be imported using the server <code class="docutils literal notranslate"><span class="pre">id</span></code></p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import hcloud:index/server:Server myserver &lt;id&gt;
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>backups</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable or disable backups.</p></li>
+<li><p><strong>datacenter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The datacenter name to create the server in.</p></li>
+<li><p><strong>image</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name or ID of the image the server is created from.</p></li>
+<li><p><strong>iso</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID or Name of an ISO image to mount.</p></li>
+<li><p><strong>keep_disk</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, do not upgrade the disk. This allows downgrading the server type later.</p></li>
+<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – User-defined labels (key-value pairs) should be created with.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location name to create the server in. <code class="docutils literal notranslate"><span class="pre">nbg1</span></code>, <code class="docutils literal notranslate"><span class="pre">fsn1</span></code> or <code class="docutils literal notranslate"><span class="pre">hel1</span></code></p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the server to create (must be unique per project and a valid hostname as per RFC 1123).</p></li>
+<li><p><strong>rescue</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Enable and boot in to the specified rescue system. This enables simple installation of custom operating systems. <code class="docutils literal notranslate"><span class="pre">linux64</span></code> <code class="docutils literal notranslate"><span class="pre">linux32</span></code> or <code class="docutils literal notranslate"><span class="pre">freebsd64</span></code></p></li>
+<li><p><strong>server_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the server type this server should be created with.</p></li>
+<li><p><strong>ssh_keys</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – SSH key IDs or names which should be injected into the server at creation time</p></li>
+<li><p><strong>user_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Cloud-Init user data to use during server creation</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py method">
 <dt id="pulumi_hcloud.Server.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backup_window</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backups</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datacenter</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv4_address</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6_address</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6_network</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">iso</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">keep_disk</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">location</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rescue</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">server_type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ssh_keys</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_data</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_hcloud.server.Server<a class="headerlink" href="#pulumi_hcloud.Server.get" title="Permalink to this definition">¶</a></dt>
@@ -2328,6 +2388,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">ip</span><span class="o">=</span><span class="s2">&quot;10.0.1.5&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Server Network entries can be imported using a compound ID with the following format<code class="docutils literal notranslate"><span class="pre">&lt;server-id&gt;-&lt;network-id&gt;</span></code></p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import hcloud:index/serverNetwork:ServerNetwork myservernetwork <span class="m">123</span>-654
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2480,6 +2544,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">default</span> <span class="o">=</span> <span class="n">hcloud</span><span class="o">.</span><span class="n">SshKey</span><span class="p">(</span><span class="s2">&quot;default&quot;</span><span class="p">,</span> <span class="n">public_key</span><span class="o">=</span><span class="p">(</span><span class="k">lambda</span> <span class="n">path</span><span class="p">:</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())(</span><span class="s2">&quot;~/.ssh/id_rsa.pub&quot;</span><span class="p">))</span>
 </pre></div>
 </div>
+<p>SSH keys can be imported using the SSH key <code class="docutils literal notranslate"><span class="pre">id</span></code></p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import hcloud:index/sshKey:SshKey mykey &lt;id&gt;
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2587,6 +2655,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">size</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
     <span class="n">server_id</span><span class="o">=</span><span class="n">node1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">automount</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Volumes can be imported using their <code class="docutils literal notranslate"><span class="pre">id</span></code></p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import hcloud:index/volume:Volume myvolume &lt;id&gt;
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -2732,6 +2804,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">volume_id</span><span class="o">=</span><span class="n">master</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">server_id</span><span class="o">=</span><span class="n">node1</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">automount</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Volume Attachments can be imported using the <code class="docutils literal notranslate"><span class="pre">volume_id</span></code></p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import hcloud:index/volumeAttachment:VolumeAttachment myvolumeattachment &lt;volume_id&gt;
 </pre></div>
 </div>
 <dl class="field-list simple">
