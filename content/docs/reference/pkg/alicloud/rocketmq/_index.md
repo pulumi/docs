@@ -28,6 +28,7 @@ Explore the resources and functions of the rocketmq module in the AliCloud packa
 <ul class="api">
     <li><a href="getgroups" title="GetGroups"><span class="symbol function"></span>GetGroups</a></li>
     <li><a href="getinstances" title="GetInstances"><span class="symbol function"></span>GetInstances</a></li>
+    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
     <li><a href="gettopics" title="GetTopics"><span class="symbol function"></span>GetTopics</a></li>
 </ul>
 
@@ -40,7 +41,7 @@ Explore the resources and functions of the rocketmq module in the AliCloud packa
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.29.0</dd>
+	<dd>2.30.0</dd>
 </dl>
 
 

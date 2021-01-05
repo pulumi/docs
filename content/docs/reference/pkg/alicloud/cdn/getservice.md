@@ -141,7 +141,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Setting the value to `On` to enable the service. If has been enabled, return the result. Valid values: "On" or "Off".
+    <dd>{{% md %}}Setting the value to `On` to enable the service. If has been enabled, return the result. Valid values: "On" or "Off". Default to "Off".
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -169,7 +169,7 @@ As a note, the updated internet charge type will be effective in the next day ze
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Setting the value to `On` to enable the service. If has been enabled, return the result. Valid values: "On" or "Off".
+    <dd>{{% md %}}Setting the value to `On` to enable the service. If has been enabled, return the result. Valid values: "On" or "Off". Default to "Off".
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -197,7 +197,7 @@ As a note, the updated internet charge type will be effective in the next day ze
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Setting the value to `On` to enable the service. If has been enabled, return the result. Valid values: "On" or "Off".
+    <dd>{{% md %}}Setting the value to `On` to enable the service. If has been enabled, return the result. Valid values: "On" or "Off". Default to "Off".
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -225,7 +225,7 @@ As a note, the updated internet charge type will be effective in the next day ze
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Setting the value to `On` to enable the service. If has been enabled, return the result. Valid values: "On" or "Off".
+    <dd>{{% md %}}Setting the value to `On` to enable the service. If has been enabled, return the result. Valid values: "On" or "Off". Default to "Off".
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

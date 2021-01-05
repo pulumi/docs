@@ -1140,16 +1140,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The private network to which the terminal node belongs.
 {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="zones_csharp">
-<a href="#zones_csharp" style="color: inherit; text-decoration: inherit;">Zones</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcendpointsendpointzone">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Private<wbr>Link.<wbr>Inputs.<wbr>Get<wbr>Vpc<wbr>Endpoints<wbr>Endpoint<wbr>Zone<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Availability zone.
-{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1285,16 +1275,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private network to which the terminal node belongs.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="zones_go">
-<a href="#zones_go" style="color: inherit; text-decoration: inherit;">Zones</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcendpointsendpointzone">[]Get<wbr>Vpc<wbr>Endpoints<wbr>Endpoint<wbr>Zone</a></span>
-    </dt>
-    <dd>{{% md %}}Availability zone.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1432,16 +1412,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The private network to which the terminal node belongs.
 {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="zones_nodejs">
-<a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcendpointsendpointzone">Get<wbr>Vpc<wbr>Endpoints<wbr>Endpoint<wbr>Zone[]</a></span>
-    </dt>
-    <dd>{{% md %}}Availability zone.
-{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1577,134 +1547,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private network to which the terminal node belongs.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="zones_python">
-<a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcendpointsendpointzone">Sequence[Get<wbr>Vpc<wbr>Endpoints<wbr>Endpoint<wbr>Zone<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}Availability zone.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-<h4 id="getvpcendpointsendpointzone">Get<wbr>Vpc<wbr>Endpoints<wbr>Endpoint<wbr>Zone</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetVpcEndpointsEndpointZone">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/privatelink?tab=doc#GetVpcEndpointsEndpointZone">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.PrivateLink.Outputs.GetVpcEndpointsEndpointZone.html">output</a> API doc for this type.
-{{% /choosable %}}
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="vswitchid_csharp">
-<a href="#vswitchid_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}To create the vswitch of the terminal node network card in the available zone.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="zoneid_csharp">
-<a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Availability zone corresponding to terminal node service.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="vswitchid_go">
-<a href="#vswitchid_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}To create the vswitch of the terminal node network card in the available zone.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="zoneid_go">
-<a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Availability zone corresponding to terminal node service.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="vswitchid_nodejs">
-<a href="#vswitchid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}To create the vswitch of the terminal node network card in the available zone.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="zoneid_nodejs">
-<a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Availability zone corresponding to terminal node service.
-{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="vswitch_id_python">
-<a href="#vswitch_id_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}To create the vswitch of the terminal node network card in the available zone.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="zone_id_python">
-<a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Availability zone corresponding to terminal node service.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
