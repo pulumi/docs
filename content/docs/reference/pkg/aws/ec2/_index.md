@@ -138,7 +138,7 @@ Explore the resources and functions of the ec2 module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.22.0</dd>
+	<dd>3.22.1</dd>
 </dl>
 
 

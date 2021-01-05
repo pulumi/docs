@@ -3,7 +3,7 @@ title: "Module types/enums/autoscaling"
 title_tag: "Module types/enums/autoscaling | Package @pulumi/aws | Node.js SDK"
 linktitle: "enums/autoscaling"
 meta_desc: "Explore members of the enums/autoscaling module in the @pulumi/aws package."
-git_sha: "98ba143bfec550327011ab801cebaef71cd235a7"
+git_sha: "6c9e985f93682e9b4056b497c1a31a75fd7884fc"
 block_external_search_index: true
 ---
 
@@ -29,7 +29,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="Metric" data-link-title="Metric">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/types/enums/autoscaling/index.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/types/enums/autoscaling/index.ts#L24">
         type <strong>Metric</strong>
     </a>
 </h3>
@@ -39,7 +39,7 @@ block_external_search_index: true
 See https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_EnableMetricsCollection.html
 
 <h3 class="pdoc-module-header" id="MetricsGranularity" data-link-title="MetricsGranularity">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/types/enums/autoscaling/index.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/types/enums/autoscaling/index.ts#L33">
         type <strong>MetricsGranularity</strong>
     </a>
 </h3>
@@ -49,7 +49,7 @@ See https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_EnableMetricsCo
 See https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_EnableMetricsCollection.html
 
 <h3 class="pdoc-module-header" id="NotificationType" data-link-title="NotificationType">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/types/enums/autoscaling/index.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/types/enums/autoscaling/index.ts#L46">
         type <strong>NotificationType</strong>
     </a>
 </h3>

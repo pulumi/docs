@@ -3,7 +3,7 @@ title: "Module guardduty"
 title_tag: "Module guardduty | Package @pulumi/aws | Node.js SDK"
 linktitle: "guardduty"
 meta_desc: "Explore members of the guardduty module in the @pulumi/aws package."
-git_sha: "98ba143bfec550327011ab801cebaef71cd235a7"
+git_sha: "6c9e985f93682e9b4056b497c1a31a75fd7884fc"
 block_external_search_index: true
 ---
 
@@ -60,7 +60,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Detector" data-link-title="Detector">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/detector.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/detector.ts#L31">
         Resource <strong>Detector</strong>
     </a>
 </h3>
@@ -91,7 +91,7 @@ GuardDuty detectors can be imported using the detector ID, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Detector-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/detector.ts#L78"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/detector.ts#L78"> <b>constructor</b></a>
 </h4>
 
 
@@ -105,7 +105,7 @@ Create a Detector resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Detector-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/detector.ts#L41">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/detector.ts#L41">method <b>get</b></a>
 </h4>
 
 
@@ -116,14 +116,14 @@ Get an existing Detector resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Detector-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/detector.ts#L31">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/detector.ts#L31">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Detector-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/detector.ts#L52">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/detector.ts#L52">method <b>isInstance</b></a>
 </h4>
 
 
@@ -134,7 +134,7 @@ Returns true if the given object is an instance of Detector.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Detector-accountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/detector.ts#L62">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/detector.ts#L62">property <b>accountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -142,7 +142,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The AWS account ID of the GuardDuty detector
 
 <h4 class="pdoc-member-header" id="Detector-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/detector.ts#L66">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/detector.ts#L66">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -150,7 +150,7 @@ The AWS account ID of the GuardDuty detector
 Amazon Resource Name (ARN) of the GuardDuty detector
 
 <h4 class="pdoc-member-header" id="Detector-enable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/detector.ts#L70">property <b>enable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/detector.ts#L70">property <b>enable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enable: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -158,7 +158,7 @@ Amazon Resource Name (ARN) of the GuardDuty detector
 Enable monitoring and feedback reporting. Setting to `false` is equivalent to "suspending" GuardDuty. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="Detector-findingPublishingFrequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/detector.ts#L74">property <b>findingPublishingFrequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/detector.ts#L74">property <b>findingPublishingFrequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>findingPublishingFrequency: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -166,7 +166,7 @@ Enable monitoring and feedback reporting. Setting to `false` is equivalent to "s
 Specifies the frequency of notifications sent for subsequent finding occurrences. If the detector is a GuardDuty member account, the value is determined by the GuardDuty primary account and cannot be modified, otherwise defaults to `SIX_HOURS`. For standalone and GuardDuty primary accounts, it must be configured in this provider to enable drift detection. Valid values for standalone and primary accounts: `FIFTEEN_MINUTES`, `ONE_HOUR`, `SIX_HOURS`. See [AWS Documentation](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_findings_cloudwatch.html#guardduty_findings_cloudwatch_notification_frequency) for more information.
 
 <h4 class="pdoc-member-header" id="Detector-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/detector.ts#L31">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/detector.ts#L31">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -175,7 +175,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Detector-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/detector.ts#L78">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/detector.ts#L78">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -183,7 +183,7 @@ deployments and may be missing (undefined) during planning phases.
 Key-value map of resource tags.
 
 <h4 class="pdoc-member-header" id="Detector-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/detector.ts#L31">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/detector.ts#L31">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -192,7 +192,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Filter" data-link-title="Filter">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/filter.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/filter.ts#L56">
         Resource <strong>Filter</strong>
     </a>
 </h3>
@@ -247,7 +247,7 @@ GuardDuty filters can be imported using the detector ID and filter's name separa
 ```
 
 <h4 class="pdoc-member-header" id="Filter-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/filter.ts#L115"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/filter.ts#L115"> <b>constructor</b></a>
 </h4>
 
 
@@ -261,7 +261,7 @@ Create a Filter resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Filter-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/filter.ts#L66">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/filter.ts#L66">method <b>get</b></a>
 </h4>
 
 
@@ -272,14 +272,14 @@ Get an existing Filter resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Filter-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/filter.ts#L56">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/filter.ts#L56">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Filter-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/filter.ts#L77">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/filter.ts#L77">method <b>isInstance</b></a>
 </h4>
 
 
@@ -290,7 +290,7 @@ Returns true if the given object is an instance of Filter.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Filter-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/filter.ts#L87">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/filter.ts#L87">property <b>action</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>action: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -298,7 +298,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Specifies the action that is to be applied to the findings that match the filter. Can be one of `ARCHIVE` or `NOOP`.
 
 <h4 class="pdoc-member-header" id="Filter-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/filter.ts#L91">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/filter.ts#L91">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -306,7 +306,7 @@ Specifies the action that is to be applied to the findings that match the filter
 The ARN of the GuardDuty filter.
 
 <h4 class="pdoc-member-header" id="Filter-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/filter.ts#L95">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/filter.ts#L95">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -314,7 +314,7 @@ The ARN of the GuardDuty filter.
 Description of the filter.
 
 <h4 class="pdoc-member-header" id="Filter-detectorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/filter.ts#L99">property <b>detectorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/filter.ts#L99">property <b>detectorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>detectorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -322,7 +322,7 @@ Description of the filter.
 ID of a GuardDuty detector, attached to your account.
 
 <h4 class="pdoc-member-header" id="Filter-findingCriteria">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/filter.ts#L103">property <b>findingCriteria</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/filter.ts#L103">property <b>findingCriteria</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>findingCriteria: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FilterFindingCriteria'>FilterFindingCriteria</a>&gt;;</code></pre>
@@ -330,7 +330,7 @@ ID of a GuardDuty detector, attached to your account.
 Represents the criteria to be used in the filter for querying findings. Contains one or more `criterion` blocks, documented below.
 
 <h4 class="pdoc-member-header" id="Filter-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/filter.ts#L56">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/filter.ts#L56">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -339,7 +339,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Filter-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/filter.ts#L107">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/filter.ts#L107">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -347,7 +347,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of your filter.
 
 <h4 class="pdoc-member-header" id="Filter-rank">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/filter.ts#L111">property <b>rank</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/filter.ts#L111">property <b>rank</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rank: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -355,7 +355,7 @@ The name of your filter.
 Specifies the position of the filter in the list of current filters. Also specifies the order in which this filter is applied to the findings.
 
 <h4 class="pdoc-member-header" id="Filter-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/filter.ts#L115">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/filter.ts#L115">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -363,7 +363,7 @@ Specifies the position of the filter in the list of current filters. Also specif
 The tags that you want to add to the Filter resource. A tag consists of a key and a value.
 
 <h4 class="pdoc-member-header" id="Filter-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/filter.ts#L56">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/filter.ts#L56">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -372,7 +372,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="InviteAccepter" data-link-title="InviteAccepter">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/inviteAccepter.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/inviteAccepter.ts#L49">
         Resource <strong>InviteAccepter</strong>
     </a>
 </h3>
@@ -421,7 +421,7 @@ const memberInviteAccepter = new aws.guardduty.InviteAccepter("memberInviteAccep
 ```
 
 <h4 class="pdoc-member-header" id="InviteAccepter-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/inviteAccepter.ts#L84"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/inviteAccepter.ts#L84"> <b>constructor</b></a>
 </h4>
 
 
@@ -435,7 +435,7 @@ Create a InviteAccepter resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="InviteAccepter-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/inviteAccepter.ts#L59">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/inviteAccepter.ts#L59">method <b>get</b></a>
 </h4>
 
 
@@ -446,14 +446,14 @@ Get an existing InviteAccepter resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="InviteAccepter-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/inviteAccepter.ts#L49">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/inviteAccepter.ts#L49">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="InviteAccepter-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/inviteAccepter.ts#L70">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/inviteAccepter.ts#L70">method <b>isInstance</b></a>
 </h4>
 
 
@@ -464,7 +464,7 @@ Returns true if the given object is an instance of InviteAccepter.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="InviteAccepter-detectorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/inviteAccepter.ts#L80">property <b>detectorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/inviteAccepter.ts#L80">property <b>detectorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>detectorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -472,7 +472,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The detector ID of the member GuardDuty account.
 
 <h4 class="pdoc-member-header" id="InviteAccepter-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/inviteAccepter.ts#L49">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/inviteAccepter.ts#L49">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -481,7 +481,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="InviteAccepter-masterAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/inviteAccepter.ts#L84">property <b>masterAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/inviteAccepter.ts#L84">property <b>masterAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>masterAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -489,7 +489,7 @@ deployments and may be missing (undefined) during planning phases.
 AWS account ID for primary account.
 
 <h4 class="pdoc-member-header" id="InviteAccepter-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/inviteAccepter.ts#L49">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/inviteAccepter.ts#L49">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -498,7 +498,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="IPSet" data-link-title="IPSet">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/ipset.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/ipset.ts#L42">
         Resource <strong>IPSet</strong>
     </a>
 </h3>
@@ -540,7 +540,7 @@ GuardDuty IPSet can be imported using the the primary GuardDuty detector ID and 
 ```
 
 <h4 class="pdoc-member-header" id="IPSet-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/ipset.ts#L97"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/ipset.ts#L97"> <b>constructor</b></a>
 </h4>
 
 
@@ -554,7 +554,7 @@ Create a IPSet resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="IPSet-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/ipset.ts#L52">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/ipset.ts#L52">method <b>get</b></a>
 </h4>
 
 
@@ -565,14 +565,14 @@ Get an existing IPSet resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="IPSet-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/ipset.ts#L42">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/ipset.ts#L42">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="IPSet-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/ipset.ts#L63">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/ipset.ts#L63">method <b>isInstance</b></a>
 </h4>
 
 
@@ -583,7 +583,7 @@ Returns true if the given object is an instance of IPSet.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="IPSet-activate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/ipset.ts#L73">property <b>activate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/ipset.ts#L73">property <b>activate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>activate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -591,7 +591,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Specifies whether GuardDuty is to start using the uploaded IPSet.
 
 <h4 class="pdoc-member-header" id="IPSet-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/ipset.ts#L77">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/ipset.ts#L77">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -599,7 +599,7 @@ Specifies whether GuardDuty is to start using the uploaded IPSet.
 Amazon Resource Name (ARN) of the GuardDuty IPSet.
 
 <h4 class="pdoc-member-header" id="IPSet-detectorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/ipset.ts#L81">property <b>detectorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/ipset.ts#L81">property <b>detectorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>detectorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -607,7 +607,7 @@ Amazon Resource Name (ARN) of the GuardDuty IPSet.
 The detector ID of the GuardDuty.
 
 <h4 class="pdoc-member-header" id="IPSet-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/ipset.ts#L85">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/ipset.ts#L85">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>format: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -615,7 +615,7 @@ The detector ID of the GuardDuty.
 The format of the file that contains the IPSet. Valid values: `TXT` | `STIX` | `OTX_CSV` | `ALIEN_VAULT` | `PROOF_POINT` | `FIRE_EYE`
 
 <h4 class="pdoc-member-header" id="IPSet-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/ipset.ts#L42">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/ipset.ts#L42">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -624,7 +624,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="IPSet-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/ipset.ts#L89">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/ipset.ts#L89">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -632,7 +632,7 @@ deployments and may be missing (undefined) during planning phases.
 The URI of the file that contains the IPSet.
 
 <h4 class="pdoc-member-header" id="IPSet-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/ipset.ts#L93">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/ipset.ts#L93">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -640,7 +640,7 @@ The URI of the file that contains the IPSet.
 The friendly name to identify the IPSet.
 
 <h4 class="pdoc-member-header" id="IPSet-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/ipset.ts#L97">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/ipset.ts#L97">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -648,7 +648,7 @@ The friendly name to identify the IPSet.
 Key-value map of resource tags.
 
 <h4 class="pdoc-member-header" id="IPSet-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/ipset.ts#L42">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/ipset.ts#L42">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -657,7 +657,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Member" data-link-title="Member">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/member.ts#L37">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/member.ts#L37">
         Resource <strong>Member</strong>
     </a>
 </h3>
@@ -694,7 +694,7 @@ GuardDuty members can be imported using the the primary GuardDuty detector ID an
 ```
 
 <h4 class="pdoc-member-header" id="Member-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/member.ts#L92"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/member.ts#L92"> <b>constructor</b></a>
 </h4>
 
 
@@ -708,7 +708,7 @@ Create a Member resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Member-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/member.ts#L47">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/member.ts#L47">method <b>get</b></a>
 </h4>
 
 
@@ -719,14 +719,14 @@ Get an existing Member resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Member-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/member.ts#L37">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/member.ts#L37">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Member-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/member.ts#L58">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/member.ts#L58">method <b>isInstance</b></a>
 </h4>
 
 
@@ -737,7 +737,7 @@ Returns true if the given object is an instance of Member.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Member-accountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/member.ts#L68">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/member.ts#L68">property <b>accountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -745,7 +745,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 AWS account ID for member account.
 
 <h4 class="pdoc-member-header" id="Member-detectorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/member.ts#L72">property <b>detectorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/member.ts#L72">property <b>detectorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>detectorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -753,7 +753,7 @@ AWS account ID for member account.
 The detector ID of the GuardDuty account where you want to create member accounts.
 
 <h4 class="pdoc-member-header" id="Member-disableEmailNotification">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/member.ts#L76">property <b>disableEmailNotification</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/member.ts#L76">property <b>disableEmailNotification</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>disableEmailNotification: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -761,7 +761,7 @@ The detector ID of the GuardDuty account where you want to create member account
 Boolean whether an email notification is sent to the accounts. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="Member-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/member.ts#L80">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/member.ts#L80">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>email: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -769,7 +769,7 @@ Boolean whether an email notification is sent to the accounts. Defaults to `fals
 Email address for member account.
 
 <h4 class="pdoc-member-header" id="Member-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/member.ts#L37">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/member.ts#L37">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -778,7 +778,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Member-invitationMessage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/member.ts#L84">property <b>invitationMessage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/member.ts#L84">property <b>invitationMessage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>invitationMessage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -786,7 +786,7 @@ deployments and may be missing (undefined) during planning phases.
 Message for invitation.
 
 <h4 class="pdoc-member-header" id="Member-invite">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/member.ts#L88">property <b>invite</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/member.ts#L88">property <b>invite</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>invite: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -794,7 +794,7 @@ Message for invitation.
 Boolean whether to invite the account to GuardDuty as a member. Defaults to `false`. To detect if an invitation needs to be (re-)sent, the this provider state value is `true` based on a `relationshipStatus` of `Disabled`, `Enabled`, `Invited`, or `EmailVerificationInProgress`.
 
 <h4 class="pdoc-member-header" id="Member-relationshipStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/member.ts#L92">property <b>relationshipStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/member.ts#L92">property <b>relationshipStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>relationshipStatus: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -802,7 +802,7 @@ Boolean whether to invite the account to GuardDuty as a member. Defaults to `fal
 The status of the relationship between the member account and its primary account. More information can be found in [Amazon GuardDuty API Reference](https://docs.aws.amazon.com/guardduty/latest/ug/get-members.html).
 
 <h4 class="pdoc-member-header" id="Member-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/member.ts#L37">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/member.ts#L37">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -811,7 +811,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="OrganizationAdminAccount" data-link-title="OrganizationAdminAccount">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/organizationAdminAccount.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/organizationAdminAccount.ts#L34">
         Resource <strong>OrganizationAdminAccount</strong>
     </a>
 </h3>
@@ -845,7 +845,7 @@ GuardDuty Organization Admin Account can be imported using the AWS account ID, e
 ```
 
 <h4 class="pdoc-member-header" id="OrganizationAdminAccount-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/organizationAdminAccount.ts#L65"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/organizationAdminAccount.ts#L65"> <b>constructor</b></a>
 </h4>
 
 
@@ -859,7 +859,7 @@ Create a OrganizationAdminAccount resource with the given unique name, arguments
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="OrganizationAdminAccount-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/organizationAdminAccount.ts#L44">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/organizationAdminAccount.ts#L44">method <b>get</b></a>
 </h4>
 
 
@@ -870,14 +870,14 @@ Get an existing OrganizationAdminAccount resource's state with the given name, I
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="OrganizationAdminAccount-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/organizationAdminAccount.ts#L34">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/organizationAdminAccount.ts#L34">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="OrganizationAdminAccount-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/organizationAdminAccount.ts#L55">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/organizationAdminAccount.ts#L55">method <b>isInstance</b></a>
 </h4>
 
 
@@ -888,7 +888,7 @@ Returns true if the given object is an instance of OrganizationAdminAccount.  Th
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="OrganizationAdminAccount-adminAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/organizationAdminAccount.ts#L65">property <b>adminAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/organizationAdminAccount.ts#L65">property <b>adminAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>adminAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -896,7 +896,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 AWS account identifier to designate as a delegated administrator for GuardDuty.
 
 <h4 class="pdoc-member-header" id="OrganizationAdminAccount-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/organizationAdminAccount.ts#L34">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/organizationAdminAccount.ts#L34">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -905,7 +905,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="OrganizationAdminAccount-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/organizationAdminAccount.ts#L34">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/organizationAdminAccount.ts#L34">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -914,7 +914,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="OrganizationConfiguration" data-link-title="OrganizationConfiguration">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/organizationConfiguration.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/organizationConfiguration.ts#L33">
         Resource <strong>OrganizationConfiguration</strong>
     </a>
 </h3>
@@ -947,7 +947,7 @@ GuardDuty Organization Configurations can be imported using the GuardDuty Detect
 ```
 
 <h4 class="pdoc-member-header" id="OrganizationConfiguration-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/organizationConfiguration.ts#L68"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/organizationConfiguration.ts#L68"> <b>constructor</b></a>
 </h4>
 
 
@@ -961,7 +961,7 @@ Create a OrganizationConfiguration resource with the given unique name, argument
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="OrganizationConfiguration-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/organizationConfiguration.ts#L43">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/organizationConfiguration.ts#L43">method <b>get</b></a>
 </h4>
 
 
@@ -972,14 +972,14 @@ Get an existing OrganizationConfiguration resource's state with the given name, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="OrganizationConfiguration-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/organizationConfiguration.ts#L33">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/organizationConfiguration.ts#L33">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="OrganizationConfiguration-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/organizationConfiguration.ts#L54">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/organizationConfiguration.ts#L54">method <b>isInstance</b></a>
 </h4>
 
 
@@ -990,7 +990,7 @@ Returns true if the given object is an instance of OrganizationConfiguration.  T
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="OrganizationConfiguration-autoEnable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/organizationConfiguration.ts#L64">property <b>autoEnable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/organizationConfiguration.ts#L64">property <b>autoEnable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoEnable: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -998,7 +998,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 When this setting is enabled, all new accounts that are created in, or added to, the organization are added as a member accounts of the organization’s GuardDuty delegated administrator and GuardDuty is enabled in that AWS Region.
 
 <h4 class="pdoc-member-header" id="OrganizationConfiguration-detectorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/organizationConfiguration.ts#L68">property <b>detectorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/organizationConfiguration.ts#L68">property <b>detectorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>detectorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1006,7 +1006,7 @@ When this setting is enabled, all new accounts that are created in, or added to,
 The detector ID of the GuardDuty account.
 
 <h4 class="pdoc-member-header" id="OrganizationConfiguration-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/organizationConfiguration.ts#L33">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/organizationConfiguration.ts#L33">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1015,7 +1015,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="OrganizationConfiguration-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/organizationConfiguration.ts#L33">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/organizationConfiguration.ts#L33">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1024,7 +1024,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="PublishingDestination" data-link-title="PublishingDestination">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/publishingDestination.ts#L95">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/publishingDestination.ts#L95">
         Resource <strong>PublishingDestination</strong>
     </a>
 </h3>
@@ -1119,7 +1119,7 @@ GuardDuty PublishingDestination can be imported using the the master GuardDuty d
 ```
 
 <h4 class="pdoc-member-header" id="PublishingDestination-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/publishingDestination.ts#L138"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/publishingDestination.ts#L138"> <b>constructor</b></a>
 </h4>
 
 
@@ -1133,7 +1133,7 @@ Create a PublishingDestination resource with the given unique name, arguments, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="PublishingDestination-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/publishingDestination.ts#L105">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/publishingDestination.ts#L105">method <b>get</b></a>
 </h4>
 
 
@@ -1144,14 +1144,14 @@ Get an existing PublishingDestination resource's state with the given name, ID, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="PublishingDestination-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/publishingDestination.ts#L95">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/publishingDestination.ts#L95">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="PublishingDestination-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/publishingDestination.ts#L116">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/publishingDestination.ts#L116">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1162,7 +1162,7 @@ Returns true if the given object is an instance of PublishingDestination.  This 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="PublishingDestination-destinationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/publishingDestination.ts#L126">property <b>destinationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/publishingDestination.ts#L126">property <b>destinationArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>destinationArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1170,7 +1170,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The bucket arn and prefix under which the findings get exported. Bucket-ARN is required, the prefix is optional and will be `AWSLogs/[Account-ID]/GuardDuty/[Region]/` if not provided
 
 <h4 class="pdoc-member-header" id="PublishingDestination-destinationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/publishingDestination.ts#L130">property <b>destinationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/publishingDestination.ts#L130">property <b>destinationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>destinationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1178,7 +1178,7 @@ The bucket arn and prefix under which the findings get exported. Bucket-ARN is r
 Currently there is only "S3" available as destination type which is also the default value
 
 <h4 class="pdoc-member-header" id="PublishingDestination-detectorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/publishingDestination.ts#L134">property <b>detectorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/publishingDestination.ts#L134">property <b>detectorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>detectorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1186,7 +1186,7 @@ Currently there is only "S3" available as destination type which is also the def
 The detector ID of the GuardDuty.
 
 <h4 class="pdoc-member-header" id="PublishingDestination-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/publishingDestination.ts#L95">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/publishingDestination.ts#L95">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1195,7 +1195,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="PublishingDestination-kmsKeyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/publishingDestination.ts#L138">property <b>kmsKeyArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/publishingDestination.ts#L138">property <b>kmsKeyArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kmsKeyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1203,7 +1203,7 @@ deployments and may be missing (undefined) during planning phases.
 The ARN of the KMS key used to encrypt GuardDuty findings. GuardDuty enforces this to be encrypted.
 
 <h4 class="pdoc-member-header" id="PublishingDestination-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/publishingDestination.ts#L95">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/publishingDestination.ts#L95">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1212,7 +1212,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ThreatIntelSet" data-link-title="ThreatIntelSet">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/threatIntelSet.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/threatIntelSet.ts#L42">
         Resource <strong>ThreatIntelSet</strong>
     </a>
 </h3>
@@ -1254,7 +1254,7 @@ GuardDuty ThreatIntelSet can be imported using the the primary GuardDuty detecto
 ```
 
 <h4 class="pdoc-member-header" id="ThreatIntelSet-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/threatIntelSet.ts#L97"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/threatIntelSet.ts#L97"> <b>constructor</b></a>
 </h4>
 
 
@@ -1268,7 +1268,7 @@ Create a ThreatIntelSet resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ThreatIntelSet-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/threatIntelSet.ts#L52">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/threatIntelSet.ts#L52">method <b>get</b></a>
 </h4>
 
 
@@ -1279,14 +1279,14 @@ Get an existing ThreatIntelSet resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ThreatIntelSet-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/threatIntelSet.ts#L42">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/threatIntelSet.ts#L42">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ThreatIntelSet-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/threatIntelSet.ts#L63">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/threatIntelSet.ts#L63">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1297,7 +1297,7 @@ Returns true if the given object is an instance of ThreatIntelSet.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ThreatIntelSet-activate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/threatIntelSet.ts#L73">property <b>activate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/threatIntelSet.ts#L73">property <b>activate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>activate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1305,7 +1305,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Specifies whether GuardDuty is to start using the uploaded ThreatIntelSet.
 
 <h4 class="pdoc-member-header" id="ThreatIntelSet-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/threatIntelSet.ts#L77">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/threatIntelSet.ts#L77">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1313,7 +1313,7 @@ Specifies whether GuardDuty is to start using the uploaded ThreatIntelSet.
 Amazon Resource Name (ARN) of the GuardDuty ThreatIntelSet.
 
 <h4 class="pdoc-member-header" id="ThreatIntelSet-detectorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/threatIntelSet.ts#L81">property <b>detectorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/threatIntelSet.ts#L81">property <b>detectorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>detectorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1321,7 +1321,7 @@ Amazon Resource Name (ARN) of the GuardDuty ThreatIntelSet.
 The detector ID of the GuardDuty.
 
 <h4 class="pdoc-member-header" id="ThreatIntelSet-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/threatIntelSet.ts#L85">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/threatIntelSet.ts#L85">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>format: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1329,7 +1329,7 @@ The detector ID of the GuardDuty.
 The format of the file that contains the ThreatIntelSet. Valid values: `TXT` | `STIX` | `OTX_CSV` | `ALIEN_VAULT` | `PROOF_POINT` | `FIRE_EYE`
 
 <h4 class="pdoc-member-header" id="ThreatIntelSet-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/threatIntelSet.ts#L42">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/threatIntelSet.ts#L42">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1338,7 +1338,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ThreatIntelSet-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/threatIntelSet.ts#L89">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/threatIntelSet.ts#L89">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1346,7 +1346,7 @@ deployments and may be missing (undefined) during planning phases.
 The URI of the file that contains the ThreatIntelSet.
 
 <h4 class="pdoc-member-header" id="ThreatIntelSet-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/threatIntelSet.ts#L93">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/threatIntelSet.ts#L93">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1354,7 +1354,7 @@ The URI of the file that contains the ThreatIntelSet.
 The friendly name to identify the ThreatIntelSet.
 
 <h4 class="pdoc-member-header" id="ThreatIntelSet-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/threatIntelSet.ts#L97">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/threatIntelSet.ts#L97">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1362,7 +1362,7 @@ The friendly name to identify the ThreatIntelSet.
 Key-value map of resource tags.
 
 <h4 class="pdoc-member-header" id="ThreatIntelSet-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/threatIntelSet.ts#L42">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/threatIntelSet.ts#L42">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1373,7 +1373,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getDetector" data-link-title="getDetector">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/getDetector.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/getDetector.ts#L20">
         Function <strong>getDetector</strong>
     </a>
 </h3>
@@ -1396,7 +1396,7 @@ const example = pulumi.output(aws.guardduty.getDetector({ async: true }));
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="DetectorArgs" data-link-title="DetectorArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/detector.ts#L145">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/detector.ts#L145">
         interface <strong>DetectorArgs</strong>
     </a>
 </h3>
@@ -1406,7 +1406,7 @@ const example = pulumi.output(aws.guardduty.getDetector({ async: true }));
 The set of arguments for constructing a Detector resource.
 
 <h4 class="pdoc-member-header" id="DetectorArgs-enable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/detector.ts#L149">property <b>enable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/detector.ts#L149">property <b>enable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1414,7 +1414,7 @@ The set of arguments for constructing a Detector resource.
 Enable monitoring and feedback reporting. Setting to `false` is equivalent to "suspending" GuardDuty. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="DetectorArgs-findingPublishingFrequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/detector.ts#L153">property <b>findingPublishingFrequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/detector.ts#L153">property <b>findingPublishingFrequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>findingPublishingFrequency?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1422,7 +1422,7 @@ Enable monitoring and feedback reporting. Setting to `false` is equivalent to "s
 Specifies the frequency of notifications sent for subsequent finding occurrences. If the detector is a GuardDuty member account, the value is determined by the GuardDuty primary account and cannot be modified, otherwise defaults to `SIX_HOURS`. For standalone and GuardDuty primary accounts, it must be configured in this provider to enable drift detection. Valid values for standalone and primary accounts: `FIFTEEN_MINUTES`, `ONE_HOUR`, `SIX_HOURS`. See [AWS Documentation](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_findings_cloudwatch.html#guardduty_findings_cloudwatch_notification_frequency) for more information.
 
 <h4 class="pdoc-member-header" id="DetectorArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/detector.ts#L157">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/detector.ts#L157">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1430,7 +1430,7 @@ Specifies the frequency of notifications sent for subsequent finding occurrences
 Key-value map of resource tags.
 
 <h3 class="pdoc-module-header" id="DetectorState" data-link-title="DetectorState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/detector.ts#L119">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/detector.ts#L119">
         interface <strong>DetectorState</strong>
     </a>
 </h3>
@@ -1440,7 +1440,7 @@ Key-value map of resource tags.
 Input properties used for looking up and filtering Detector resources.
 
 <h4 class="pdoc-member-header" id="DetectorState-accountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/detector.ts#L123">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/detector.ts#L123">property <b>accountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1448,7 +1448,7 @@ Input properties used for looking up and filtering Detector resources.
 The AWS account ID of the GuardDuty detector
 
 <h4 class="pdoc-member-header" id="DetectorState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/detector.ts#L127">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/detector.ts#L127">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1456,7 +1456,7 @@ The AWS account ID of the GuardDuty detector
 Amazon Resource Name (ARN) of the GuardDuty detector
 
 <h4 class="pdoc-member-header" id="DetectorState-enable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/detector.ts#L131">property <b>enable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/detector.ts#L131">property <b>enable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1464,7 +1464,7 @@ Amazon Resource Name (ARN) of the GuardDuty detector
 Enable monitoring and feedback reporting. Setting to `false` is equivalent to "suspending" GuardDuty. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="DetectorState-findingPublishingFrequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/detector.ts#L135">property <b>findingPublishingFrequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/detector.ts#L135">property <b>findingPublishingFrequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>findingPublishingFrequency?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1472,7 +1472,7 @@ Enable monitoring and feedback reporting. Setting to `false` is equivalent to "s
 Specifies the frequency of notifications sent for subsequent finding occurrences. If the detector is a GuardDuty member account, the value is determined by the GuardDuty primary account and cannot be modified, otherwise defaults to `SIX_HOURS`. For standalone and GuardDuty primary accounts, it must be configured in this provider to enable drift detection. Valid values for standalone and primary accounts: `FIFTEEN_MINUTES`, `ONE_HOUR`, `SIX_HOURS`. See [AWS Documentation](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_findings_cloudwatch.html#guardduty_findings_cloudwatch_notification_frequency) for more information.
 
 <h4 class="pdoc-member-header" id="DetectorState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/detector.ts#L139">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/detector.ts#L139">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1480,7 +1480,7 @@ Specifies the frequency of notifications sent for subsequent finding occurrences
 Key-value map of resource tags.
 
 <h3 class="pdoc-module-header" id="FilterArgs" data-link-title="FilterArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/filter.ts#L212">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/filter.ts#L212">
         interface <strong>FilterArgs</strong>
     </a>
 </h3>
@@ -1490,7 +1490,7 @@ Key-value map of resource tags.
 The set of arguments for constructing a Filter resource.
 
 <h4 class="pdoc-member-header" id="FilterArgs-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/filter.ts#L216">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/filter.ts#L216">property <b>action</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>action: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1498,7 +1498,7 @@ The set of arguments for constructing a Filter resource.
 Specifies the action that is to be applied to the findings that match the filter. Can be one of `ARCHIVE` or `NOOP`.
 
 <h4 class="pdoc-member-header" id="FilterArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/filter.ts#L220">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/filter.ts#L220">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1506,7 +1506,7 @@ Specifies the action that is to be applied to the findings that match the filter
 Description of the filter.
 
 <h4 class="pdoc-member-header" id="FilterArgs-detectorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/filter.ts#L224">property <b>detectorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/filter.ts#L224">property <b>detectorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>detectorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1514,7 +1514,7 @@ Description of the filter.
 ID of a GuardDuty detector, attached to your account.
 
 <h4 class="pdoc-member-header" id="FilterArgs-findingCriteria">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/filter.ts#L228">property <b>findingCriteria</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/filter.ts#L228">property <b>findingCriteria</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>findingCriteria: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FilterFindingCriteria'>FilterFindingCriteria</a>&gt;;</code></pre>
@@ -1522,7 +1522,7 @@ ID of a GuardDuty detector, attached to your account.
 Represents the criteria to be used in the filter for querying findings. Contains one or more `criterion` blocks, documented below.
 
 <h4 class="pdoc-member-header" id="FilterArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/filter.ts#L232">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/filter.ts#L232">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1530,7 +1530,7 @@ Represents the criteria to be used in the filter for querying findings. Contains
 The name of your filter.
 
 <h4 class="pdoc-member-header" id="FilterArgs-rank">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/filter.ts#L236">property <b>rank</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/filter.ts#L236">property <b>rank</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rank: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1538,7 +1538,7 @@ The name of your filter.
 Specifies the position of the filter in the list of current filters. Also specifies the order in which this filter is applied to the findings.
 
 <h4 class="pdoc-member-header" id="FilterArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/filter.ts#L240">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/filter.ts#L240">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1546,7 +1546,7 @@ Specifies the position of the filter in the list of current filters. Also specif
 The tags that you want to add to the Filter resource. A tag consists of a key and a value.
 
 <h3 class="pdoc-module-header" id="FilterState" data-link-title="FilterState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/filter.ts#L174">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/filter.ts#L174">
         interface <strong>FilterState</strong>
     </a>
 </h3>
@@ -1556,7 +1556,7 @@ The tags that you want to add to the Filter resource. A tag consists of a key an
 Input properties used for looking up and filtering Filter resources.
 
 <h4 class="pdoc-member-header" id="FilterState-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/filter.ts#L178">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/filter.ts#L178">property <b>action</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>action?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1564,7 +1564,7 @@ Input properties used for looking up and filtering Filter resources.
 Specifies the action that is to be applied to the findings that match the filter. Can be one of `ARCHIVE` or `NOOP`.
 
 <h4 class="pdoc-member-header" id="FilterState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/filter.ts#L182">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/filter.ts#L182">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1572,7 +1572,7 @@ Specifies the action that is to be applied to the findings that match the filter
 The ARN of the GuardDuty filter.
 
 <h4 class="pdoc-member-header" id="FilterState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/filter.ts#L186">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/filter.ts#L186">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1580,7 +1580,7 @@ The ARN of the GuardDuty filter.
 Description of the filter.
 
 <h4 class="pdoc-member-header" id="FilterState-detectorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/filter.ts#L190">property <b>detectorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/filter.ts#L190">property <b>detectorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>detectorId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1588,7 +1588,7 @@ Description of the filter.
 ID of a GuardDuty detector, attached to your account.
 
 <h4 class="pdoc-member-header" id="FilterState-findingCriteria">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/filter.ts#L194">property <b>findingCriteria</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/filter.ts#L194">property <b>findingCriteria</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>findingCriteria?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FilterFindingCriteria'>FilterFindingCriteria</a>&gt;;</code></pre>
@@ -1596,7 +1596,7 @@ ID of a GuardDuty detector, attached to your account.
 Represents the criteria to be used in the filter for querying findings. Contains one or more `criterion` blocks, documented below.
 
 <h4 class="pdoc-member-header" id="FilterState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/filter.ts#L198">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/filter.ts#L198">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1604,7 +1604,7 @@ Represents the criteria to be used in the filter for querying findings. Contains
 The name of your filter.
 
 <h4 class="pdoc-member-header" id="FilterState-rank">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/filter.ts#L202">property <b>rank</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/filter.ts#L202">property <b>rank</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rank?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1612,7 +1612,7 @@ The name of your filter.
 Specifies the position of the filter in the list of current filters. Also specifies the order in which this filter is applied to the findings.
 
 <h4 class="pdoc-member-header" id="FilterState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/filter.ts#L206">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/filter.ts#L206">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1620,7 +1620,7 @@ Specifies the position of the filter in the list of current filters. Also specif
 The tags that you want to add to the Filter resource. A tag consists of a key and a value.
 
 <h3 class="pdoc-module-header" id="GetDetectorArgs" data-link-title="GetDetectorArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/getDetector.ts#L37">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/getDetector.ts#L37">
         interface <strong>GetDetectorArgs</strong>
     </a>
 </h3>
@@ -1630,7 +1630,7 @@ The tags that you want to add to the Filter resource. A tag consists of a key an
 A collection of arguments for invoking getDetector.
 
 <h4 class="pdoc-member-header" id="GetDetectorArgs-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/getDetector.ts#L41">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/getDetector.ts#L41">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1638,7 +1638,7 @@ A collection of arguments for invoking getDetector.
 The ID of the detector.
 
 <h3 class="pdoc-module-header" id="GetDetectorResult" data-link-title="GetDetectorResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/getDetector.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/getDetector.ts#L47">
         interface <strong>GetDetectorResult</strong>
     </a>
 </h3>
@@ -1648,7 +1648,7 @@ The ID of the detector.
 A collection of values returned by getDetector.
 
 <h4 class="pdoc-member-header" id="GetDetectorResult-findingPublishingFrequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/getDetector.ts#L51">property <b>findingPublishingFrequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/getDetector.ts#L51">property <b>findingPublishingFrequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>findingPublishingFrequency: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1656,12 +1656,12 @@ A collection of values returned by getDetector.
 The frequency of notifications sent about subsequent finding occurrences.
 
 <h4 class="pdoc-member-header" id="GetDetectorResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/getDetector.ts#L52">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/getDetector.ts#L52">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDetectorResult-serviceRoleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/getDetector.ts#L56">property <b>serviceRoleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/getDetector.ts#L56">property <b>serviceRoleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceRoleArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1669,7 +1669,7 @@ The frequency of notifications sent about subsequent finding occurrences.
 The service-linked role that grants GuardDuty access to the resources in the AWS account.
 
 <h4 class="pdoc-member-header" id="GetDetectorResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/getDetector.ts#L60">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/getDetector.ts#L60">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1677,7 +1677,7 @@ The service-linked role that grants GuardDuty access to the resources in the AWS
 The current status of the detector.
 
 <h3 class="pdoc-module-header" id="InviteAccepterArgs" data-link-title="InviteAccepterArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/inviteAccepter.ts#L139">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/inviteAccepter.ts#L139">
         interface <strong>InviteAccepterArgs</strong>
     </a>
 </h3>
@@ -1687,7 +1687,7 @@ The current status of the detector.
 The set of arguments for constructing a InviteAccepter resource.
 
 <h4 class="pdoc-member-header" id="InviteAccepterArgs-detectorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/inviteAccepter.ts#L143">property <b>detectorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/inviteAccepter.ts#L143">property <b>detectorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>detectorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1695,7 +1695,7 @@ The set of arguments for constructing a InviteAccepter resource.
 The detector ID of the member GuardDuty account.
 
 <h4 class="pdoc-member-header" id="InviteAccepterArgs-masterAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/inviteAccepter.ts#L147">property <b>masterAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/inviteAccepter.ts#L147">property <b>masterAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1703,7 +1703,7 @@ The detector ID of the member GuardDuty account.
 AWS account ID for primary account.
 
 <h3 class="pdoc-module-header" id="InviteAccepterState" data-link-title="InviteAccepterState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/inviteAccepter.ts#L125">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/inviteAccepter.ts#L125">
         interface <strong>InviteAccepterState</strong>
     </a>
 </h3>
@@ -1713,7 +1713,7 @@ AWS account ID for primary account.
 Input properties used for looking up and filtering InviteAccepter resources.
 
 <h4 class="pdoc-member-header" id="InviteAccepterState-detectorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/inviteAccepter.ts#L129">property <b>detectorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/inviteAccepter.ts#L129">property <b>detectorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>detectorId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1721,7 +1721,7 @@ Input properties used for looking up and filtering InviteAccepter resources.
 The detector ID of the member GuardDuty account.
 
 <h4 class="pdoc-member-header" id="InviteAccepterState-masterAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/inviteAccepter.ts#L133">property <b>masterAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/inviteAccepter.ts#L133">property <b>masterAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1729,7 +1729,7 @@ The detector ID of the member GuardDuty account.
 AWS account ID for primary account.
 
 <h3 class="pdoc-module-header" id="IPSetArgs" data-link-title="IPSetArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/ipset.ts#L188">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/ipset.ts#L188">
         interface <strong>IPSetArgs</strong>
     </a>
 </h3>
@@ -1739,7 +1739,7 @@ AWS account ID for primary account.
 The set of arguments for constructing a IPSet resource.
 
 <h4 class="pdoc-member-header" id="IPSetArgs-activate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/ipset.ts#L192">property <b>activate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/ipset.ts#L192">property <b>activate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>activate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1747,7 +1747,7 @@ The set of arguments for constructing a IPSet resource.
 Specifies whether GuardDuty is to start using the uploaded IPSet.
 
 <h4 class="pdoc-member-header" id="IPSetArgs-detectorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/ipset.ts#L196">property <b>detectorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/ipset.ts#L196">property <b>detectorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>detectorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1755,7 +1755,7 @@ Specifies whether GuardDuty is to start using the uploaded IPSet.
 The detector ID of the GuardDuty.
 
 <h4 class="pdoc-member-header" id="IPSetArgs-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/ipset.ts#L200">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/ipset.ts#L200">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>format: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1763,7 +1763,7 @@ The detector ID of the GuardDuty.
 The format of the file that contains the IPSet. Valid values: `TXT` | `STIX` | `OTX_CSV` | `ALIEN_VAULT` | `PROOF_POINT` | `FIRE_EYE`
 
 <h4 class="pdoc-member-header" id="IPSetArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/ipset.ts#L204">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/ipset.ts#L204">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1771,7 +1771,7 @@ The format of the file that contains the IPSet. Valid values: `TXT` | `STIX` | `
 The URI of the file that contains the IPSet.
 
 <h4 class="pdoc-member-header" id="IPSetArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/ipset.ts#L208">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/ipset.ts#L208">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1779,7 +1779,7 @@ The URI of the file that contains the IPSet.
 The friendly name to identify the IPSet.
 
 <h4 class="pdoc-member-header" id="IPSetArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/ipset.ts#L212">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/ipset.ts#L212">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1787,7 +1787,7 @@ The friendly name to identify the IPSet.
 Key-value map of resource tags.
 
 <h3 class="pdoc-module-header" id="IPSetState" data-link-title="IPSetState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/ipset.ts#L154">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/ipset.ts#L154">
         interface <strong>IPSetState</strong>
     </a>
 </h3>
@@ -1797,7 +1797,7 @@ Key-value map of resource tags.
 Input properties used for looking up and filtering IPSet resources.
 
 <h4 class="pdoc-member-header" id="IPSetState-activate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/ipset.ts#L158">property <b>activate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/ipset.ts#L158">property <b>activate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>activate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1805,7 +1805,7 @@ Input properties used for looking up and filtering IPSet resources.
 Specifies whether GuardDuty is to start using the uploaded IPSet.
 
 <h4 class="pdoc-member-header" id="IPSetState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/ipset.ts#L162">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/ipset.ts#L162">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1813,7 +1813,7 @@ Specifies whether GuardDuty is to start using the uploaded IPSet.
 Amazon Resource Name (ARN) of the GuardDuty IPSet.
 
 <h4 class="pdoc-member-header" id="IPSetState-detectorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/ipset.ts#L166">property <b>detectorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/ipset.ts#L166">property <b>detectorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>detectorId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1821,7 +1821,7 @@ Amazon Resource Name (ARN) of the GuardDuty IPSet.
 The detector ID of the GuardDuty.
 
 <h4 class="pdoc-member-header" id="IPSetState-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/ipset.ts#L170">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/ipset.ts#L170">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>format?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1829,7 +1829,7 @@ The detector ID of the GuardDuty.
 The format of the file that contains the IPSet. Valid values: `TXT` | `STIX` | `OTX_CSV` | `ALIEN_VAULT` | `PROOF_POINT` | `FIRE_EYE`
 
 <h4 class="pdoc-member-header" id="IPSetState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/ipset.ts#L174">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/ipset.ts#L174">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1837,7 +1837,7 @@ The format of the file that contains the IPSet. Valid values: `TXT` | `STIX` | `
 The URI of the file that contains the IPSet.
 
 <h4 class="pdoc-member-header" id="IPSetState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/ipset.ts#L178">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/ipset.ts#L178">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1845,7 +1845,7 @@ The URI of the file that contains the IPSet.
 The friendly name to identify the IPSet.
 
 <h4 class="pdoc-member-header" id="IPSetState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/ipset.ts#L182">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/ipset.ts#L182">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1853,7 +1853,7 @@ The friendly name to identify the IPSet.
 Key-value map of resource tags.
 
 <h3 class="pdoc-module-header" id="MemberArgs" data-link-title="MemberArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/member.ts#L180">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/member.ts#L180">
         interface <strong>MemberArgs</strong>
     </a>
 </h3>
@@ -1863,7 +1863,7 @@ Key-value map of resource tags.
 The set of arguments for constructing a Member resource.
 
 <h4 class="pdoc-member-header" id="MemberArgs-accountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/member.ts#L184">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/member.ts#L184">property <b>accountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1871,7 +1871,7 @@ The set of arguments for constructing a Member resource.
 AWS account ID for member account.
 
 <h4 class="pdoc-member-header" id="MemberArgs-detectorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/member.ts#L188">property <b>detectorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/member.ts#L188">property <b>detectorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>detectorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1879,7 +1879,7 @@ AWS account ID for member account.
 The detector ID of the GuardDuty account where you want to create member accounts.
 
 <h4 class="pdoc-member-header" id="MemberArgs-disableEmailNotification">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/member.ts#L192">property <b>disableEmailNotification</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/member.ts#L192">property <b>disableEmailNotification</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableEmailNotification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1887,7 +1887,7 @@ The detector ID of the GuardDuty account where you want to create member account
 Boolean whether an email notification is sent to the accounts. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="MemberArgs-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/member.ts#L196">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/member.ts#L196">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1895,7 +1895,7 @@ Boolean whether an email notification is sent to the accounts. Defaults to `fals
 Email address for member account.
 
 <h4 class="pdoc-member-header" id="MemberArgs-invitationMessage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/member.ts#L200">property <b>invitationMessage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/member.ts#L200">property <b>invitationMessage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>invitationMessage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1903,7 +1903,7 @@ Email address for member account.
 Message for invitation.
 
 <h4 class="pdoc-member-header" id="MemberArgs-invite">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/member.ts#L204">property <b>invite</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/member.ts#L204">property <b>invite</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>invite?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1911,7 +1911,7 @@ Message for invitation.
 Boolean whether to invite the account to GuardDuty as a member. Defaults to `false`. To detect if an invitation needs to be (re-)sent, the this provider state value is `true` based on a `relationshipStatus` of `Disabled`, `Enabled`, `Invited`, or `EmailVerificationInProgress`.
 
 <h3 class="pdoc-module-header" id="MemberState" data-link-title="MemberState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/member.ts#L146">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/member.ts#L146">
         interface <strong>MemberState</strong>
     </a>
 </h3>
@@ -1921,7 +1921,7 @@ Boolean whether to invite the account to GuardDuty as a member. Defaults to `fal
 Input properties used for looking up and filtering Member resources.
 
 <h4 class="pdoc-member-header" id="MemberState-accountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/member.ts#L150">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/member.ts#L150">property <b>accountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1929,7 +1929,7 @@ Input properties used for looking up and filtering Member resources.
 AWS account ID for member account.
 
 <h4 class="pdoc-member-header" id="MemberState-detectorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/member.ts#L154">property <b>detectorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/member.ts#L154">property <b>detectorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>detectorId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1937,7 +1937,7 @@ AWS account ID for member account.
 The detector ID of the GuardDuty account where you want to create member accounts.
 
 <h4 class="pdoc-member-header" id="MemberState-disableEmailNotification">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/member.ts#L158">property <b>disableEmailNotification</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/member.ts#L158">property <b>disableEmailNotification</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableEmailNotification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1945,7 +1945,7 @@ The detector ID of the GuardDuty account where you want to create member account
 Boolean whether an email notification is sent to the accounts. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="MemberState-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/member.ts#L162">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/member.ts#L162">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1953,7 +1953,7 @@ Boolean whether an email notification is sent to the accounts. Defaults to `fals
 Email address for member account.
 
 <h4 class="pdoc-member-header" id="MemberState-invitationMessage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/member.ts#L166">property <b>invitationMessage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/member.ts#L166">property <b>invitationMessage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>invitationMessage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1961,7 +1961,7 @@ Email address for member account.
 Message for invitation.
 
 <h4 class="pdoc-member-header" id="MemberState-invite">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/member.ts#L170">property <b>invite</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/member.ts#L170">property <b>invite</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>invite?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1969,7 +1969,7 @@ Message for invitation.
 Boolean whether to invite the account to GuardDuty as a member. Defaults to `false`. To detect if an invitation needs to be (re-)sent, the this provider state value is `true` based on a `relationshipStatus` of `Disabled`, `Enabled`, `Invited`, or `EmailVerificationInProgress`.
 
 <h4 class="pdoc-member-header" id="MemberState-relationshipStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/member.ts#L174">property <b>relationshipStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/member.ts#L174">property <b>relationshipStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>relationshipStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1977,7 +1977,7 @@ Boolean whether to invite the account to GuardDuty as a member. Defaults to `fal
 The status of the relationship between the member account and its primary account. More information can be found in [Amazon GuardDuty API Reference](https://docs.aws.amazon.com/guardduty/latest/ug/get-members.html).
 
 <h3 class="pdoc-module-header" id="OrganizationAdminAccountArgs" data-link-title="OrganizationAdminAccountArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/organizationAdminAccount.ts#L111">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/organizationAdminAccount.ts#L111">
         interface <strong>OrganizationAdminAccountArgs</strong>
     </a>
 </h3>
@@ -1987,7 +1987,7 @@ The status of the relationship between the member account and its primary accoun
 The set of arguments for constructing a OrganizationAdminAccount resource.
 
 <h4 class="pdoc-member-header" id="OrganizationAdminAccountArgs-adminAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/organizationAdminAccount.ts#L115">property <b>adminAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/organizationAdminAccount.ts#L115">property <b>adminAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adminAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1995,7 +1995,7 @@ The set of arguments for constructing a OrganizationAdminAccount resource.
 AWS account identifier to designate as a delegated administrator for GuardDuty.
 
 <h3 class="pdoc-module-header" id="OrganizationAdminAccountState" data-link-title="OrganizationAdminAccountState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/organizationAdminAccount.ts#L101">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/organizationAdminAccount.ts#L101">
         interface <strong>OrganizationAdminAccountState</strong>
     </a>
 </h3>
@@ -2005,7 +2005,7 @@ AWS account identifier to designate as a delegated administrator for GuardDuty.
 Input properties used for looking up and filtering OrganizationAdminAccount resources.
 
 <h4 class="pdoc-member-header" id="OrganizationAdminAccountState-adminAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/organizationAdminAccount.ts#L105">property <b>adminAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/organizationAdminAccount.ts#L105">property <b>adminAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adminAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2013,7 +2013,7 @@ Input properties used for looking up and filtering OrganizationAdminAccount reso
 AWS account identifier to designate as a delegated administrator for GuardDuty.
 
 <h3 class="pdoc-module-header" id="OrganizationConfigurationArgs" data-link-title="OrganizationConfigurationArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/organizationConfiguration.ts#L123">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/organizationConfiguration.ts#L123">
         interface <strong>OrganizationConfigurationArgs</strong>
     </a>
 </h3>
@@ -2023,7 +2023,7 @@ AWS account identifier to designate as a delegated administrator for GuardDuty.
 The set of arguments for constructing a OrganizationConfiguration resource.
 
 <h4 class="pdoc-member-header" id="OrganizationConfigurationArgs-autoEnable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/organizationConfiguration.ts#L127">property <b>autoEnable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/organizationConfiguration.ts#L127">property <b>autoEnable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoEnable: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2031,7 +2031,7 @@ The set of arguments for constructing a OrganizationConfiguration resource.
 When this setting is enabled, all new accounts that are created in, or added to, the organization are added as a member accounts of the organization’s GuardDuty delegated administrator and GuardDuty is enabled in that AWS Region.
 
 <h4 class="pdoc-member-header" id="OrganizationConfigurationArgs-detectorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/organizationConfiguration.ts#L131">property <b>detectorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/organizationConfiguration.ts#L131">property <b>detectorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>detectorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2039,7 +2039,7 @@ When this setting is enabled, all new accounts that are created in, or added to,
 The detector ID of the GuardDuty account.
 
 <h3 class="pdoc-module-header" id="OrganizationConfigurationState" data-link-title="OrganizationConfigurationState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/organizationConfiguration.ts#L109">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/organizationConfiguration.ts#L109">
         interface <strong>OrganizationConfigurationState</strong>
     </a>
 </h3>
@@ -2049,7 +2049,7 @@ The detector ID of the GuardDuty account.
 Input properties used for looking up and filtering OrganizationConfiguration resources.
 
 <h4 class="pdoc-member-header" id="OrganizationConfigurationState-autoEnable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/organizationConfiguration.ts#L113">property <b>autoEnable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/organizationConfiguration.ts#L113">property <b>autoEnable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoEnable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2057,7 +2057,7 @@ Input properties used for looking up and filtering OrganizationConfiguration res
 When this setting is enabled, all new accounts that are created in, or added to, the organization are added as a member accounts of the organization’s GuardDuty delegated administrator and GuardDuty is enabled in that AWS Region.
 
 <h4 class="pdoc-member-header" id="OrganizationConfigurationState-detectorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/organizationConfiguration.ts#L117">property <b>detectorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/organizationConfiguration.ts#L117">property <b>detectorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>detectorId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2065,7 +2065,7 @@ When this setting is enabled, all new accounts that are created in, or added to,
 The detector ID of the GuardDuty account.
 
 <h3 class="pdoc-module-header" id="PublishingDestinationArgs" data-link-title="PublishingDestinationArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/publishingDestination.ts#L208">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/publishingDestination.ts#L208">
         interface <strong>PublishingDestinationArgs</strong>
     </a>
 </h3>
@@ -2075,7 +2075,7 @@ The detector ID of the GuardDuty account.
 The set of arguments for constructing a PublishingDestination resource.
 
 <h4 class="pdoc-member-header" id="PublishingDestinationArgs-destinationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/publishingDestination.ts#L212">property <b>destinationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/publishingDestination.ts#L212">property <b>destinationArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2083,7 +2083,7 @@ The set of arguments for constructing a PublishingDestination resource.
 The bucket arn and prefix under which the findings get exported. Bucket-ARN is required, the prefix is optional and will be `AWSLogs/[Account-ID]/GuardDuty/[Region]/` if not provided
 
 <h4 class="pdoc-member-header" id="PublishingDestinationArgs-destinationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/publishingDestination.ts#L216">property <b>destinationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/publishingDestination.ts#L216">property <b>destinationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2091,7 +2091,7 @@ The bucket arn and prefix under which the findings get exported. Bucket-ARN is r
 Currently there is only "S3" available as destination type which is also the default value
 
 <h4 class="pdoc-member-header" id="PublishingDestinationArgs-detectorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/publishingDestination.ts#L220">property <b>detectorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/publishingDestination.ts#L220">property <b>detectorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>detectorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2099,7 +2099,7 @@ Currently there is only "S3" available as destination type which is also the def
 The detector ID of the GuardDuty.
 
 <h4 class="pdoc-member-header" id="PublishingDestinationArgs-kmsKeyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/publishingDestination.ts#L224">property <b>kmsKeyArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/publishingDestination.ts#L224">property <b>kmsKeyArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2107,7 +2107,7 @@ The detector ID of the GuardDuty.
 The ARN of the KMS key used to encrypt GuardDuty findings. GuardDuty enforces this to be encrypted.
 
 <h3 class="pdoc-module-header" id="PublishingDestinationState" data-link-title="PublishingDestinationState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/publishingDestination.ts#L186">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/publishingDestination.ts#L186">
         interface <strong>PublishingDestinationState</strong>
     </a>
 </h3>
@@ -2117,7 +2117,7 @@ The ARN of the KMS key used to encrypt GuardDuty findings. GuardDuty enforces th
 Input properties used for looking up and filtering PublishingDestination resources.
 
 <h4 class="pdoc-member-header" id="PublishingDestinationState-destinationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/publishingDestination.ts#L190">property <b>destinationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/publishingDestination.ts#L190">property <b>destinationArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2125,7 +2125,7 @@ Input properties used for looking up and filtering PublishingDestination resourc
 The bucket arn and prefix under which the findings get exported. Bucket-ARN is required, the prefix is optional and will be `AWSLogs/[Account-ID]/GuardDuty/[Region]/` if not provided
 
 <h4 class="pdoc-member-header" id="PublishingDestinationState-destinationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/publishingDestination.ts#L194">property <b>destinationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/publishingDestination.ts#L194">property <b>destinationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2133,7 +2133,7 @@ The bucket arn and prefix under which the findings get exported. Bucket-ARN is r
 Currently there is only "S3" available as destination type which is also the default value
 
 <h4 class="pdoc-member-header" id="PublishingDestinationState-detectorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/publishingDestination.ts#L198">property <b>detectorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/publishingDestination.ts#L198">property <b>detectorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>detectorId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2141,7 +2141,7 @@ Currently there is only "S3" available as destination type which is also the def
 The detector ID of the GuardDuty.
 
 <h4 class="pdoc-member-header" id="PublishingDestinationState-kmsKeyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/publishingDestination.ts#L202">property <b>kmsKeyArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/publishingDestination.ts#L202">property <b>kmsKeyArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2149,7 +2149,7 @@ The detector ID of the GuardDuty.
 The ARN of the KMS key used to encrypt GuardDuty findings. GuardDuty enforces this to be encrypted.
 
 <h3 class="pdoc-module-header" id="ThreatIntelSetArgs" data-link-title="ThreatIntelSetArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/threatIntelSet.ts#L188">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/threatIntelSet.ts#L188">
         interface <strong>ThreatIntelSetArgs</strong>
     </a>
 </h3>
@@ -2159,7 +2159,7 @@ The ARN of the KMS key used to encrypt GuardDuty findings. GuardDuty enforces th
 The set of arguments for constructing a ThreatIntelSet resource.
 
 <h4 class="pdoc-member-header" id="ThreatIntelSetArgs-activate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/threatIntelSet.ts#L192">property <b>activate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/threatIntelSet.ts#L192">property <b>activate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>activate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2167,7 +2167,7 @@ The set of arguments for constructing a ThreatIntelSet resource.
 Specifies whether GuardDuty is to start using the uploaded ThreatIntelSet.
 
 <h4 class="pdoc-member-header" id="ThreatIntelSetArgs-detectorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/threatIntelSet.ts#L196">property <b>detectorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/threatIntelSet.ts#L196">property <b>detectorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>detectorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2175,7 +2175,7 @@ Specifies whether GuardDuty is to start using the uploaded ThreatIntelSet.
 The detector ID of the GuardDuty.
 
 <h4 class="pdoc-member-header" id="ThreatIntelSetArgs-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/threatIntelSet.ts#L200">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/threatIntelSet.ts#L200">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>format: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2183,7 +2183,7 @@ The detector ID of the GuardDuty.
 The format of the file that contains the ThreatIntelSet. Valid values: `TXT` | `STIX` | `OTX_CSV` | `ALIEN_VAULT` | `PROOF_POINT` | `FIRE_EYE`
 
 <h4 class="pdoc-member-header" id="ThreatIntelSetArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/threatIntelSet.ts#L204">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/threatIntelSet.ts#L204">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2191,7 +2191,7 @@ The format of the file that contains the ThreatIntelSet. Valid values: `TXT` | `
 The URI of the file that contains the ThreatIntelSet.
 
 <h4 class="pdoc-member-header" id="ThreatIntelSetArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/threatIntelSet.ts#L208">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/threatIntelSet.ts#L208">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2199,7 +2199,7 @@ The URI of the file that contains the ThreatIntelSet.
 The friendly name to identify the ThreatIntelSet.
 
 <h4 class="pdoc-member-header" id="ThreatIntelSetArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/threatIntelSet.ts#L212">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/threatIntelSet.ts#L212">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2207,7 +2207,7 @@ The friendly name to identify the ThreatIntelSet.
 Key-value map of resource tags.
 
 <h3 class="pdoc-module-header" id="ThreatIntelSetState" data-link-title="ThreatIntelSetState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/threatIntelSet.ts#L154">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/threatIntelSet.ts#L154">
         interface <strong>ThreatIntelSetState</strong>
     </a>
 </h3>
@@ -2217,7 +2217,7 @@ Key-value map of resource tags.
 Input properties used for looking up and filtering ThreatIntelSet resources.
 
 <h4 class="pdoc-member-header" id="ThreatIntelSetState-activate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/threatIntelSet.ts#L158">property <b>activate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/threatIntelSet.ts#L158">property <b>activate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>activate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2225,7 +2225,7 @@ Input properties used for looking up and filtering ThreatIntelSet resources.
 Specifies whether GuardDuty is to start using the uploaded ThreatIntelSet.
 
 <h4 class="pdoc-member-header" id="ThreatIntelSetState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/threatIntelSet.ts#L162">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/threatIntelSet.ts#L162">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2233,7 +2233,7 @@ Specifies whether GuardDuty is to start using the uploaded ThreatIntelSet.
 Amazon Resource Name (ARN) of the GuardDuty ThreatIntelSet.
 
 <h4 class="pdoc-member-header" id="ThreatIntelSetState-detectorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/threatIntelSet.ts#L166">property <b>detectorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/threatIntelSet.ts#L166">property <b>detectorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>detectorId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2241,7 +2241,7 @@ Amazon Resource Name (ARN) of the GuardDuty ThreatIntelSet.
 The detector ID of the GuardDuty.
 
 <h4 class="pdoc-member-header" id="ThreatIntelSetState-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/threatIntelSet.ts#L170">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/threatIntelSet.ts#L170">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>format?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2249,7 +2249,7 @@ The detector ID of the GuardDuty.
 The format of the file that contains the ThreatIntelSet. Valid values: `TXT` | `STIX` | `OTX_CSV` | `ALIEN_VAULT` | `PROOF_POINT` | `FIRE_EYE`
 
 <h4 class="pdoc-member-header" id="ThreatIntelSetState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/threatIntelSet.ts#L174">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/threatIntelSet.ts#L174">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2257,7 +2257,7 @@ The format of the file that contains the ThreatIntelSet. Valid values: `TXT` | `
 The URI of the file that contains the ThreatIntelSet.
 
 <h4 class="pdoc-member-header" id="ThreatIntelSetState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/threatIntelSet.ts#L178">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/threatIntelSet.ts#L178">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2265,7 +2265,7 @@ The URI of the file that contains the ThreatIntelSet.
 The friendly name to identify the ThreatIntelSet.
 
 <h4 class="pdoc-member-header" id="ThreatIntelSetState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/98ba143bfec550327011ab801cebaef71cd235a7/sdk/nodejs/guardduty/threatIntelSet.ts#L182">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/6c9e985f93682e9b4056b497c1a31a75fd7884fc/sdk/nodejs/guardduty/threatIntelSet.ts#L182">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
