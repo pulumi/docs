@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/fastly | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/fastly package."
-git_sha: "ba1670e8af499d182fc84849874b16b81c7146ec"
+git_sha: "83209f904060a67298a7c273caf43ee7e21f1619"
 block_external_search_index: true
 ---
 
@@ -28,7 +28,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="apiKey" data-link-title="apiKey">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/ba1670e8af499d182fc84849874b16b81c7146ec/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/83209f904060a67298a7c273caf43ee7e21f1619/sdk/nodejs/config/vars.ts#L12">
         let <strong>apiKey</strong>
     </a>
 </h3>
@@ -38,7 +38,7 @@ block_external_search_index: true
 Fastly API Key from https://app.fastly.com/#account
 
 <h3 class="pdoc-module-header" id="baseUrl" data-link-title="baseUrl">
-    <a href="https://github.com/pulumi/pulumi-fastly/blob/ba1670e8af499d182fc84849874b16b81c7146ec/sdk/nodejs/config/vars.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-fastly/blob/83209f904060a67298a7c273caf43ee7e21f1619/sdk/nodejs/config/vars.ts#L16">
         let <strong>baseUrl</strong>
     </a>
 </h3>
