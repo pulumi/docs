@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var _00000 = new Cloudflare.WafRule("100000", new Cloudflare.WafRuleArgs
+        var rule100000 = new Cloudflare.WafRule("rule100000", new Cloudflare.WafRuleArgs
         {
             Mode = "simulate",
             RuleId = "100000",
@@ -50,7 +50,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := cloudflare.NewWafRule(ctx, "_00000", &cloudflare.WafRuleArgs{
+		_, err := cloudflare.NewWafRule(ctx, "rule100000", &cloudflare.WafRuleArgs{
 			Mode:   pulumi.String("simulate"),
 			RuleId: pulumi.String("100000"),
 			ZoneId: pulumi.String("ae36f999674d196762efcc5abb06b345"),
@@ -70,7 +70,7 @@ func main() {
 import pulumi
 import pulumi_cloudflare as cloudflare
 
-_100000 = cloudflare.WafRule("100000",
+rule100000 = cloudflare.WafRule("rule100000",
     mode="simulate",
     rule_id="100000",
     zone_id="ae36f999674d196762efcc5abb06b345")
@@ -84,7 +84,7 @@ _100000 = cloudflare.WafRule("100000",
 import * as pulumi from "@pulumi/pulumi";
 import * as cloudflare from "@pulumi/cloudflare";
 
-const _100000 = new cloudflare.WafRule("100000", {
+const rule100000 = new cloudflare.WafRule("rule_100000", {
     mode: "simulate",
     ruleId: "100000",
     zoneId: "ae36f999674d196762efcc5abb06b345",

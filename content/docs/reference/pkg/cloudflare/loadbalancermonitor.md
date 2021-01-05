@@ -50,6 +50,7 @@ class MyStack : Stack
             Interval = 60,
             Method = "GET",
             Path = "/health",
+            ProbeZone = "example.com",
             Retries = 5,
             Timeout = 7,
             Type = "http",
@@ -86,12 +87,13 @@ func main() {
 					},
 				},
 			},
-			Interval: pulumi.Int(60),
-			Method:   pulumi.String("GET"),
-			Path:     pulumi.String("/health"),
-			Retries:  pulumi.Int(5),
-			Timeout:  pulumi.Int(7),
-			Type:     pulumi.String("http"),
+			Interval:  pulumi.Int(60),
+			Method:    pulumi.String("GET"),
+			Path:      pulumi.String("/health"),
+			ProbeZone: pulumi.String("example.com"),
+			Retries:   pulumi.Int(5),
+			Timeout:   pulumi.Int(7),
+			Type:      pulumi.String("http"),
 		})
 		if err != nil {
 			return err
@@ -121,6 +123,7 @@ http_monitor = cloudflare.LoadBalancerMonitor("httpMonitor",
     interval=60,
     method="GET",
     path="/health",
+    probe_zone="example.com",
     retries=5,
     timeout=7,
     type="http")
@@ -146,6 +149,7 @@ const httpMonitor = new cloudflare.LoadBalancerMonitor("http_monitor", {
     interval: 60,
     method: "GET",
     path: "/health",
+    probeZone: "example.com",
     retries: 5,
     timeout: 7,
     type: "http",
@@ -258,7 +262,7 @@ const tcpMonitor = new cloudflare.LoadBalancerMonitor("tcp_monitor", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.LoadBalancerMonitor">LoadBalancerMonitor</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_insecure</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expected_body</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expected_codes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">follow_redirects</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[LoadBalancerMonitorHeaderArgs]]</span> = None<span class="p">, </span><span class="nx">interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">retries</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_cloudflare/#pulumi_cloudflare.LoadBalancerMonitor">LoadBalancerMonitor</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_insecure</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expected_body</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expected_codes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">follow_redirects</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[LoadBalancerMonitorHeaderArgs]]</span> = None<span class="p">, </span><span class="nx">interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">probe_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retries</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -531,6 +535,16 @@ The LoadBalancerMonitor resource accepts the following [input]({{< relref "/docs
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="probezone_csharp">
+<a href="#probezone_csharp" style="color: inherit; text-decoration: inherit;">Probe<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Assign this monitor to emulate the specified zone while probing. Only valid if `type` is "http" or "https".
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="retries_csharp">
 <a href="#retries_csharp" style="color: inherit; text-decoration: inherit;">Retries</a>
 </span>
@@ -664,6 +678,16 @@ The LoadBalancerMonitor resource accepts the following [input]({{< relref "/docs
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number to use for the healthcheck, required when creating a TCP monitor. Valid values are in the range `0-65535`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="probezone_go">
+<a href="#probezone_go" style="color: inherit; text-decoration: inherit;">Probe<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Assign this monitor to emulate the specified zone while probing. Only valid if `type` is "http" or "https".
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -803,6 +827,16 @@ The LoadBalancerMonitor resource accepts the following [input]({{< relref "/docs
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="probezone_nodejs">
+<a href="#probezone_nodejs" style="color: inherit; text-decoration: inherit;">probe<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Assign this monitor to emulate the specified zone while probing. Only valid if `type` is "http" or "https".
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="retries_nodejs">
 <a href="#retries_nodejs" style="color: inherit; text-decoration: inherit;">retries</a>
 </span>
@@ -936,6 +970,16 @@ The LoadBalancerMonitor resource accepts the following [input]({{< relref "/docs
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number to use for the healthcheck, required when creating a TCP monitor. Valid values are in the range `0-65535`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="probe_zone_python">
+<a href="#probe_zone_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Assign this monitor to emulate the specified zone while probing. Only valid if `type` is "http" or "https".
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1130,7 +1174,7 @@ Get an existing LoadBalancerMonitor resource's state with the given name, ID, an
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_insecure</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">created_on</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expected_body</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expected_codes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">follow_redirects</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[LoadBalancerMonitorHeaderArgs]]</span> = None<span class="p">, </span><span class="nx">interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">modified_on</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">retries</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> LoadBalancerMonitor</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_insecure</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">created_on</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expected_body</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expected_codes</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">follow_redirects</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">headers</span><span class="p">:</span> <span class="nx">Optional[Sequence[LoadBalancerMonitorHeaderArgs]]</span> = None<span class="p">, </span><span class="nx">interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">modified_on</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">probe_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retries</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> LoadBalancerMonitor</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1365,6 +1409,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_probezone_csharp">
+<a href="#state_probezone_csharp" style="color: inherit; text-decoration: inherit;">Probe<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Assign this monitor to emulate the specified zone while probing. Only valid if `type` is "http" or "https".
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_retries_csharp">
 <a href="#state_retries_csharp" style="color: inherit; text-decoration: inherit;">Retries</a>
 </span>
@@ -1518,6 +1572,16 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number to use for the healthcheck, required when creating a TCP monitor. Valid values are in the range `0-65535`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_probezone_go">
+<a href="#state_probezone_go" style="color: inherit; text-decoration: inherit;">Probe<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Assign this monitor to emulate the specified zone while probing. Only valid if `type` is "http" or "https".
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1677,6 +1741,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_probezone_nodejs">
+<a href="#state_probezone_nodejs" style="color: inherit; text-decoration: inherit;">probe<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Assign this monitor to emulate the specified zone while probing. Only valid if `type` is "http" or "https".
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_retries_nodejs">
 <a href="#state_retries_nodejs" style="color: inherit; text-decoration: inherit;">retries</a>
 </span>
@@ -1830,6 +1904,16 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number to use for the healthcheck, required when creating a TCP monitor. Valid values are in the range `0-65535`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_probe_zone_python">
+<a href="#state_probe_zone_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Assign this monitor to emulate the specified zone while probing. Only valid if `type` is "http" or "https".
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

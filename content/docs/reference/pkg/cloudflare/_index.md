@@ -41,6 +41,7 @@ A Pulumi package for creating and managing Cloudflare cloud resources.
     <li><a href="logpushownershipchallenge" title="LogPushOwnershipChallenge"><span class="symbol resource"></span>LogPushOwnershipChallenge</a></li>
     <li><a href="logpullretention" title="LogpullRetention"><span class="symbol resource"></span>LogpullRetention</a></li>
     <li><a href="logpushjob" title="LogpushJob"><span class="symbol resource"></span>LogpushJob</a></li>
+    <li><a href="magicfirewallruleset" title="MagicFirewallRuleset"><span class="symbol resource"></span>MagicFirewallRuleset</a></li>
     <li><a href="origincacertificate" title="OriginCaCertificate"><span class="symbol resource"></span>OriginCaCertificate</a></li>
     <li><a href="pagerule" title="PageRule"><span class="symbol resource"></span>PageRule</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
@@ -81,7 +82,7 @@ A Pulumi package for creating and managing Cloudflare cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/cloudflare/terraform-provider-cloudflare).</dd>
 	<dt>Version</dt>
-	<dd>2.10.0</dd>
+	<dd>2.11.0</dd>
 </dl>
 
 
