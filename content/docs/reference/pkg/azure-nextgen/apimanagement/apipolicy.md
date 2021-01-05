@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.ApiPolicy resource
 Policy Contract details.
 Latest API Version: 2019-12-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -851,6 +850,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>rawxml-link{{% md %}}The policy document is not Xml encoded and is hosted on a http endpoint accessible from the API Management service.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:apimanagement/latest:ApiPolicy policy /subscriptions/4c1a3bc6-89f9-46fe-a175-5d8984b25095/resourcegroups/Api-DF-West-US/providers/Microsoft.ApiManagement/service/samirmsiservice2/apis/echo-api/operations/create-resource/policies/policy 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

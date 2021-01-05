@@ -332,7 +332,7 @@ The following output properties are available:
 <a href="#sizeinbytes_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The size of the volume in bytes.{{% /md %}}</dd>
     <dt class="property-"
@@ -455,7 +455,7 @@ The following output properties are available:
 <a href="#sizeinbytes_go" style="color: inherit; text-decoration: inherit;">Size<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The size of the volume in bytes.{{% /md %}}</dd>
     <dt class="property-"
@@ -701,7 +701,7 @@ The following output properties are available:
 <a href="#size_in_bytes_python" style="color: inherit; text-decoration: inherit;">size_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The size of the volume in bytes.{{% /md %}}</dd>
     <dt class="property-"

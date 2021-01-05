@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.automation.Watcher resource with
 Definition of the watcher type.
 Latest API Version: 2015-10-31.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -62,7 +61,7 @@ func main() {
 		_, err := automation.NewWatcher(ctx, "watcher", &automation.WatcherArgs{
 			AutomationAccountName:       pulumi.String("MyTestAutomationAccount"),
 			Description:                 pulumi.String("This is a test watcher."),
-			ExecutionFrequencyInSeconds: pulumi.Int(60),
+			ExecutionFrequencyInSeconds: pulumi.Float64(60),
 			ResourceGroupName:           pulumi.String("rg"),
 			ScriptName:                  pulumi.String("MyTestWatcherRunbook"),
 			ScriptRunOn:                 pulumi.String("MyTestHybridWorkerGroup"),
@@ -133,7 +132,7 @@ const watcher = new azure_nextgen.automation.latest.Watcher("watcher", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Watcher</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automation_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">execution_frequency_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">script_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">script_parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">script_run_on</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">watcher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Watcher</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automation_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">execution_frequency_in_seconds</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">script_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">script_parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">script_run_on</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">watcher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -355,7 +354,7 @@ The Watcher resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#executionfrequencyinseconds_csharp" style="color: inherit; text-decoration: inherit;">Execution<wbr>Frequency<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Gets or sets the frequency at which the watcher is invoked.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -460,7 +459,7 @@ The Watcher resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#executionfrequencyinseconds_go" style="color: inherit; text-decoration: inherit;">Execution<wbr>Frequency<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Gets or sets the frequency at which the watcher is invoked.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -670,7 +669,7 @@ The Watcher resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#execution_frequency_in_seconds_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>frequency_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Gets or sets the frequency at which the watcher is invoked.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1007,6 +1006,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:automation/latest:Watcher MyTestWatcher /subscriptions/subId/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/MyTestAutomationAccount/watchers/MyTestWatcher 
+```
 
 
 

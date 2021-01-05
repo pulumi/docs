@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.storage.FileShare resource with 
 Properties of the file share, including Id, resource name, resource type, Etag.
 Latest API Version: 2019-06-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -864,7 +863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shareusagebytes_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Usage<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The approximate size of the data stored on the share. Note that this value may not include all recently created or recently resized files.{{% /md %}}</dd>
     <dt class="property-"
@@ -978,7 +977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#shareusagebytes_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Usage<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The approximate size of the data stored on the share. Note that this value may not include all recently created or recently resized files.{{% /md %}}</dd>
     <dt class="property-"
@@ -1206,7 +1205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#share_usage_bytes_python" style="color: inherit; text-decoration: inherit;">share_<wbr>usage_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The approximate size of the data stored on the share. Note that this value may not include all recently created or recently resized files.{{% /md %}}</dd>
     <dt class="property-"
@@ -1377,6 +1376,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Premium</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:storage/latest:FileShare share1235 /subscriptions/{subscription-id}/resourceGroups/res346/providers/Microsoft.Storage/storageAccounts/sto666/fileServices/default/shares/share1235 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

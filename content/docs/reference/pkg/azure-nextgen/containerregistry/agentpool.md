@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.containerregistry.AgentPool reso
 The agentpool that has the ARM resource and properties.
 The agentpool will have all information to create an agent pool.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1158,6 +1157,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:containerregistry/v20190601preview:AgentPool myAgentPool /subscriptions/f9d7ebed-adbd-4cb4-b973-aaf82c136138/resourceGroups/huanwudfwestgroup/providers/Microsoft.ContainerRegistry/registries/huanglidfwest01/agentPools/testagent26 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

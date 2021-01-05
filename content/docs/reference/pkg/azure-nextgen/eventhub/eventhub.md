@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.eventhub.EventHub resource with 
 Single item in List or Get Event Hub operation
 Latest API Version: 2017-04-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -85,9 +84,9 @@ func main() {
 				SizeLimitInBytes:  pulumi.Int(10485763),
 			},
 			EventHubName:           pulumi.String("sdk-EventHub-6547"),
-			MessageRetentionInDays: pulumi.Int(4),
+			MessageRetentionInDays: pulumi.Float64(4),
 			NamespaceName:          pulumi.String("sdk-Namespace-5357"),
-			PartitionCount:         pulumi.Int(4),
+			PartitionCount:         pulumi.Float64(4),
 			ResourceGroupName:      pulumi.String("Default-NotificationHubs-AustraliaEast"),
 			Status:                 "Active",
 		})
@@ -175,7 +174,7 @@ const eventHub = new azure_nextgen.eventhub.latest.EventHub("eventHub", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EventHub</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">capture_description</span><span class="p">:</span> <span class="nx">Optional[CaptureDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">event_hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">message_retention_in_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[EntityStatus]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EventHub</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">capture_description</span><span class="p">:</span> <span class="nx">Optional[CaptureDescriptionArgs]</span> = None<span class="p">, </span><span class="nx">event_hub_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">message_retention_in_days</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">namespace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partition_count</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[EntityStatus]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -388,7 +387,7 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#messageretentionindays_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Retention<wbr>In<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of days to retain the events for this Event Hub, value should be 1 to 7 days{{% /md %}}</dd>
     <dt class="property-optional"
@@ -397,7 +396,7 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#partitioncount_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of partitions created for the Event Hub, allowed values are from 1 to 32 partitions.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -457,7 +456,7 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#messageretentionindays_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Retention<wbr>In<wbr>Days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of days to retain the events for this Event Hub, value should be 1 to 7 days{{% /md %}}</dd>
     <dt class="property-optional"
@@ -466,7 +465,7 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#partitioncount_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of partitions created for the Event Hub, allowed values are from 1 to 32 partitions.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -595,7 +594,7 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#message_retention_in_days_python" style="color: inherit; text-decoration: inherit;">message_<wbr>retention_<wbr>in_<wbr>days</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of days to retain the events for this Event Hub, value should be 1 to 7 days{{% /md %}}</dd>
     <dt class="property-optional"
@@ -604,7 +603,7 @@ The EventHub resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#partition_count_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of partitions created for the Event Hub, allowed values are from 1 to 32 partitions.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1831,6 +1830,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Unknown</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:eventhub/latest:EventHub sdk-EventHub-10 /subscriptions/e2f361f0-3b27-4503-a9cc-21cfba380093/resourceGroups/Default-NotificationHubs-AustraliaEast/providers/Microsoft.EventHub/namespaces/sdk-Namespace-716/eventhubs/sdk-EventHub-10 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.recoveryservices.ReplicationFabr
 Fabric definition.
 Latest API Version: 2018-07-10.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -844,7 +843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacityinbytes_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The disk capacity in bytes.{{% /md %}}</dd>
     <dt class="property-required"
@@ -895,7 +894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacityinbytes_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The disk capacity in bytes.{{% /md %}}</dd>
     <dt class="property-required"
@@ -997,7 +996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_in_bytes_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The disk capacity in bytes.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4932,7 +4931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availablememoryinbytes_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Memory<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The available memory.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4941,7 +4940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availablespaceinbytes_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Space<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The available disk space.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5031,7 +5030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#throughputinbytes_csharp" style="color: inherit; text-decoration: inherit;">Throughput<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The throughput in bytes.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5040,7 +5039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#throughputuploadpendingdatainbytes_csharp" style="color: inherit; text-decoration: inherit;">Throughput<wbr>Upload<wbr>Pending<wbr>Data<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The uploading pending data in bytes.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5049,7 +5048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalmemoryinbytes_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Memory<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The total memory.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5058,7 +5057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalspaceinbytes_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Space<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The total disk space.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5067,7 +5066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usedmemoryinbytes_csharp" style="color: inherit; text-decoration: inherit;">Used<wbr>Memory<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The used memory.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5076,7 +5075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usedspaceinbytes_csharp" style="color: inherit; text-decoration: inherit;">Used<wbr>Space<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The used disk space.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5100,7 +5099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availablememoryinbytes_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Memory<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The available memory.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5109,7 +5108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availablespaceinbytes_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Space<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The available disk space.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5199,7 +5198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#throughputinbytes_go" style="color: inherit; text-decoration: inherit;">Throughput<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The throughput in bytes.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5208,7 +5207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#throughputuploadpendingdatainbytes_go" style="color: inherit; text-decoration: inherit;">Throughput<wbr>Upload<wbr>Pending<wbr>Data<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The uploading pending data in bytes.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5217,7 +5216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalmemoryinbytes_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Memory<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The total memory.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5226,7 +5225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalspaceinbytes_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Space<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The total disk space.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5235,7 +5234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usedmemoryinbytes_go" style="color: inherit; text-decoration: inherit;">Used<wbr>Memory<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The used memory.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5244,7 +5243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usedspaceinbytes_go" style="color: inherit; text-decoration: inherit;">Used<wbr>Space<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The used disk space.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5436,7 +5435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#available_memory_in_bytes_python" style="color: inherit; text-decoration: inherit;">available_<wbr>memory_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The available memory.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5445,7 +5444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#available_space_in_bytes_python" style="color: inherit; text-decoration: inherit;">available_<wbr>space_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The available disk space.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5535,7 +5534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#throughput_in_bytes_python" style="color: inherit; text-decoration: inherit;">throughput_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The throughput in bytes.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5544,7 +5543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#throughput_upload_pending_data_in_bytes_python" style="color: inherit; text-decoration: inherit;">throughput_<wbr>upload_<wbr>pending_<wbr>data_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The uploading pending data in bytes.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5553,7 +5552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_memory_in_bytes_python" style="color: inherit; text-decoration: inherit;">total_<wbr>memory_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The total memory.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5562,7 +5561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_space_in_bytes_python" style="color: inherit; text-decoration: inherit;">total_<wbr>space_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The total disk space.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5571,7 +5570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#used_memory_in_bytes_python" style="color: inherit; text-decoration: inherit;">used_<wbr>memory_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The used memory.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5580,7 +5579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#used_space_in_bytes_python" style="color: inherit; text-decoration: inherit;">used_<wbr>space_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The used disk space.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5642,7 +5641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#throughputinbytes_csharp" style="color: inherit; text-decoration: inherit;">Throughput<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The throughput in bytes.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5651,7 +5650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#throughputinmbps_csharp" style="color: inherit; text-decoration: inherit;">Throughput<wbr>In<wbr>MBps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The throughput in MBps.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5669,7 +5668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#throughputuploadpendingdatainbytes_csharp" style="color: inherit; text-decoration: inherit;">Throughput<wbr>Upload<wbr>Pending<wbr>Data<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The uploading pending data in bytes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5705,7 +5704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availablememoryinbytes_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Memory<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The available memory.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5714,7 +5713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availablespaceinbytes_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Space<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The available space.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5903,7 +5902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalmemoryinbytes_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Memory<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The total memory.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5912,7 +5911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalspaceinbytes_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Space<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The total space.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5972,7 +5971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#throughputinbytes_go" style="color: inherit; text-decoration: inherit;">Throughput<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The throughput in bytes.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5981,7 +5980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#throughputinmbps_go" style="color: inherit; text-decoration: inherit;">Throughput<wbr>In<wbr>MBps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The throughput in MBps.{{% /md %}}</dd>
     <dt class="property-required"
@@ -5999,7 +5998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#throughputuploadpendingdatainbytes_go" style="color: inherit; text-decoration: inherit;">Throughput<wbr>Upload<wbr>Pending<wbr>Data<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The uploading pending data in bytes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6035,7 +6034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availablememoryinbytes_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Memory<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The available memory.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6044,7 +6043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availablespaceinbytes_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Space<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The available space.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6233,7 +6232,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalmemoryinbytes_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Memory<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The total memory.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6242,7 +6241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalspaceinbytes_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Space<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The total space.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6632,7 +6631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#throughput_in_bytes_python" style="color: inherit; text-decoration: inherit;">throughput_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The throughput in bytes.{{% /md %}}</dd>
     <dt class="property-required"
@@ -6641,7 +6640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#throughput_in_m_bps_python" style="color: inherit; text-decoration: inherit;">throughput_<wbr>in_<wbr>m_<wbr>bps</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The throughput in MBps.{{% /md %}}</dd>
     <dt class="property-required"
@@ -6659,7 +6658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#throughput_upload_pending_data_in_bytes_python" style="color: inherit; text-decoration: inherit;">throughput_<wbr>upload_<wbr>pending_<wbr>data_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The uploading pending data in bytes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6695,7 +6694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#available_memory_in_bytes_python" style="color: inherit; text-decoration: inherit;">available_<wbr>memory_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The available memory.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6704,7 +6703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#available_space_in_bytes_python" style="color: inherit; text-decoration: inherit;">available_<wbr>space_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The available space.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6893,7 +6892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_memory_in_bytes_python" style="color: inherit; text-decoration: inherit;">total_<wbr>memory_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The total memory.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6902,7 +6901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_space_in_bytes_python" style="color: inherit; text-decoration: inherit;">total_<wbr>space_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The total space.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7896,7 +7895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacityinbytes_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The volume capacity.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7905,7 +7904,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#freespaceinbytes_csharp" style="color: inherit; text-decoration: inherit;">Free<wbr>Space<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The free space available in this volume.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7938,7 +7937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacityinbytes_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The volume capacity.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7947,7 +7946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#freespaceinbytes_go" style="color: inherit; text-decoration: inherit;">Free<wbr>Space<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The free space available in this volume.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8022,7 +8021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_in_bytes_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The volume capacity.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8031,7 +8030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#free_space_in_bytes_python" style="color: inherit; text-decoration: inherit;">free_<wbr>space_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The free space available in this volume.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8200,7 +8199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availablememoryinbytes_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Memory<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The available memory.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8209,7 +8208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availablespaceinbytes_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Space<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The available space.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8407,7 +8406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalmemoryinbytes_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Memory<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The total memory.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8416,7 +8415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalspaceinbytes_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Space<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The total space.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8494,7 +8493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availablememoryinbytes_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Memory<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The available memory.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8503,7 +8502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#availablespaceinbytes_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Space<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The available space.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8701,7 +8700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalmemoryinbytes_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Memory<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The total memory.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8710,7 +8709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalspaceinbytes_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Space<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The total space.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -9082,7 +9081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#available_memory_in_bytes_python" style="color: inherit; text-decoration: inherit;">available_<wbr>memory_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The available memory.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -9091,7 +9090,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#available_space_in_bytes_python" style="color: inherit; text-decoration: inherit;">available_<wbr>space_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The available space.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -9289,7 +9288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_memory_in_bytes_python" style="color: inherit; text-decoration: inherit;">total_<wbr>memory_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The total memory.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -9298,7 +9297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_space_in_bytes_python" style="color: inherit; text-decoration: inherit;">total_<wbr>space_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The total space.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -9758,6 +9757,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:recoveryservices/latest:ReplicationFabric cloud1 /Subscriptions/c183865e-6077-46f2-a3b1-deb0f4f4650a/resourceGroups/resourceGroupPS1/providers/Microsoft.RecoveryServices/vaults/vault1/replicationFabrics/cloud1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

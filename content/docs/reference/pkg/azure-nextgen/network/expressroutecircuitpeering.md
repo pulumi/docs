@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.network.ExpressRouteCircuitPeeri
 Peering in an ExpressRouteCircuit resource.
 Latest API Version: 2020-07-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -60,7 +59,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := network.NewExpressRouteCircuitPeering(ctx, "expressRouteCircuitPeering", &network.ExpressRouteCircuitPeeringArgs{
 			CircuitName:                pulumi.String("circuitName"),
-			PeerASN:                    pulumi.Int(200),
+			PeerASN:                    pulumi.Float64(200),
 			PeeringName:                pulumi.String("AzurePrivatePeering"),
 			PrimaryPeerAddressPrefix:   pulumi.String("192.168.16.252/30"),
 			ResourceGroupName:          pulumi.String("rg1"),
@@ -129,7 +128,7 @@ const expressRouteCircuitPeering = new azure_nextgen.network.latest.ExpressRoute
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ExpressRouteCircuitPeering</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">azure_asn</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">circuit_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connections</span><span class="p">:</span> <span class="nx">Optional[Sequence[ExpressRouteCircuitConnectionArgs]]</span> = None<span class="p">, </span><span class="nx">gateway_manager_etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv6_peering_config</span><span class="p">:</span> <span class="nx">Optional[Ipv6ExpressRouteCircuitPeeringConfigArgs]</span> = None<span class="p">, </span><span class="nx">microsoft_peering_config</span><span class="p">:</span> <span class="nx">Optional[ExpressRouteCircuitPeeringConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_asn</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">peering_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peering_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, ExpressRoutePeeringType]]</span> = None<span class="p">, </span><span class="nx">primary_azure_port</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_peer_address_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">route_filter</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">secondary_azure_port</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_peer_address_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shared_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[Union[str, ExpressRoutePeeringState]]</span> = None<span class="p">, </span><span class="nx">stats</span><span class="p">:</span> <span class="nx">Optional[ExpressRouteCircuitStatsArgs]</span> = None<span class="p">, </span><span class="nx">vlan_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ExpressRouteCircuitPeering</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">azure_asn</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">circuit_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">connections</span><span class="p">:</span> <span class="nx">Optional[Sequence[ExpressRouteCircuitConnectionArgs]]</span> = None<span class="p">, </span><span class="nx">gateway_manager_etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv6_peering_config</span><span class="p">:</span> <span class="nx">Optional[Ipv6ExpressRouteCircuitPeeringConfigArgs]</span> = None<span class="p">, </span><span class="nx">microsoft_peering_config</span><span class="p">:</span> <span class="nx">Optional[ExpressRouteCircuitPeeringConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peer_asn</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">peering_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peering_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, ExpressRoutePeeringType]]</span> = None<span class="p">, </span><span class="nx">primary_azure_port</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_peer_address_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">route_filter</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">secondary_azure_port</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_peer_address_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shared_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[Union[str, ExpressRoutePeeringState]]</span> = None<span class="p">, </span><span class="nx">stats</span><span class="p">:</span> <span class="nx">Optional[ExpressRouteCircuitStatsArgs]</span> = None<span class="p">, </span><span class="nx">vlan_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -396,7 +395,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#peerasn_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>ASN</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The peer ASN.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -591,7 +590,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#peerasn_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>ASN</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The peer ASN.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -981,7 +980,7 @@ The ExpressRouteCircuitPeering resource accepts the following [input]({{< relref
 <a href="#peer_asn_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The peer ASN.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2567,7 +2566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarybytesin_csharp" style="color: inherit; text-decoration: inherit;">Primarybytes<wbr>In</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The Primary BytesIn of the peering.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2576,7 +2575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarybytesout_csharp" style="color: inherit; text-decoration: inherit;">Primarybytes<wbr>Out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The primary BytesOut of the peering.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2585,7 +2584,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondarybytesin_csharp" style="color: inherit; text-decoration: inherit;">Secondarybytes<wbr>In</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The secondary BytesIn of the peering.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2594,7 +2593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondarybytesout_csharp" style="color: inherit; text-decoration: inherit;">Secondarybytes<wbr>Out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The secondary BytesOut of the peering.{{% /md %}}</dd>
 </dl>
@@ -2609,7 +2608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarybytesin_go" style="color: inherit; text-decoration: inherit;">Primarybytes<wbr>In</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The Primary BytesIn of the peering.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2618,7 +2617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarybytesout_go" style="color: inherit; text-decoration: inherit;">Primarybytes<wbr>Out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The primary BytesOut of the peering.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2627,7 +2626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondarybytesin_go" style="color: inherit; text-decoration: inherit;">Secondarybytes<wbr>In</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The secondary BytesIn of the peering.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2636,7 +2635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondarybytesout_go" style="color: inherit; text-decoration: inherit;">Secondarybytes<wbr>Out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The secondary BytesOut of the peering.{{% /md %}}</dd>
 </dl>
@@ -2693,7 +2692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarybytes_in_python" style="color: inherit; text-decoration: inherit;">primarybytes_<wbr>in</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The Primary BytesIn of the peering.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2702,7 +2701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarybytes_out_python" style="color: inherit; text-decoration: inherit;">primarybytes_<wbr>out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The primary BytesOut of the peering.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2711,7 +2710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondarybytes_in_python" style="color: inherit; text-decoration: inherit;">secondarybytes_<wbr>in</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The secondary BytesIn of the peering.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2720,7 +2719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondarybytes_out_python" style="color: inherit; text-decoration: inherit;">secondarybytes_<wbr>out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The secondary BytesOut of the peering.{{% /md %}}</dd>
 </dl>
@@ -2737,7 +2736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarybytesin_csharp" style="color: inherit; text-decoration: inherit;">Primarybytes<wbr>In</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The Primary BytesIn of the peering.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2746,7 +2745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarybytesout_csharp" style="color: inherit; text-decoration: inherit;">Primarybytes<wbr>Out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The primary BytesOut of the peering.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2755,7 +2754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondarybytesin_csharp" style="color: inherit; text-decoration: inherit;">Secondarybytes<wbr>In</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The secondary BytesIn of the peering.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2764,7 +2763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondarybytesout_csharp" style="color: inherit; text-decoration: inherit;">Secondarybytes<wbr>Out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The secondary BytesOut of the peering.{{% /md %}}</dd>
 </dl>
@@ -2779,7 +2778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarybytesin_go" style="color: inherit; text-decoration: inherit;">Primarybytes<wbr>In</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The Primary BytesIn of the peering.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2788,7 +2787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarybytesout_go" style="color: inherit; text-decoration: inherit;">Primarybytes<wbr>Out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The primary BytesOut of the peering.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2797,7 +2796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondarybytesin_go" style="color: inherit; text-decoration: inherit;">Secondarybytes<wbr>In</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The secondary BytesIn of the peering.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2806,7 +2805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondarybytesout_go" style="color: inherit; text-decoration: inherit;">Secondarybytes<wbr>Out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The secondary BytesOut of the peering.{{% /md %}}</dd>
 </dl>
@@ -2863,7 +2862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarybytes_in_python" style="color: inherit; text-decoration: inherit;">primarybytes_<wbr>in</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The Primary BytesIn of the peering.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2872,7 +2871,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarybytes_out_python" style="color: inherit; text-decoration: inherit;">primarybytes_<wbr>out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The primary BytesOut of the peering.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2881,7 +2880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondarybytes_in_python" style="color: inherit; text-decoration: inherit;">secondarybytes_<wbr>in</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The secondary BytesIn of the peering.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2890,7 +2889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondarybytes_out_python" style="color: inherit; text-decoration: inherit;">secondarybytes_<wbr>out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The secondary BytesOut of the peering.{{% /md %}}</dd>
 </dl>
@@ -4159,6 +4158,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:network/latest:ExpressRouteCircuitPeering AzurePrivatePeering /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/expressRouteCircuits/circuitName/peerings/AzurePrivatePeering 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

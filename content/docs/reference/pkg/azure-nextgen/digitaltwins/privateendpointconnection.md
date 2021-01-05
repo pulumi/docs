@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.digitaltwins.PrivateEndpointConn
 The private endpoint connection of a Digital Twin.
 Latest API Version: 2020-12-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1275,6 +1274,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Disconnected</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:digitaltwins/latest:PrivateEndpointConnection myPrivateConnection /subscriptions/50016170-c839-41ba-a724-51e9df440b9e/resourcegroups/resRg/providers/Microsoft.DigitalTwins/digitalTwinsInstances/myDigitalTwinsService/privateEndpointConnections/myPrivateConnection 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

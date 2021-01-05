@@ -11,8 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.containerservice.PrivateEndpoint
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A private endpoint connection
-Latest API Version: 2020-11-01.
-
+Latest API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -1056,6 +1055,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The private link service connection status.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:containerservice/latest:PrivateEndpointConnection privateendpointconnection1 <Azure resource ID> 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.migrate.VMwareCollector resource
 
 Latest API Version: 2019-10-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1599,6 +1598,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The ARM id of the discovery service site.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:migrate/latest:VMwareCollector PortalvCenterbc2fcollector /subscriptions/6393a73f-8d55-47ef-b6dd-179b3e0c7910/resourceGroups/abgoyal-westeurope/providers/Microsoft.Migrate/assessmentprojects/abgoyalWEselfhostb72bproject/vmwarecollectors/PortalvCenterbc2fcollector 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

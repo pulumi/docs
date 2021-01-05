@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.managednetwork.ManagedNetworkPee
 
 The Managed Network Peering Policy resource
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1250,6 +1249,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>MeshTopology</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:managednetwork/v20190601preview:ManagedNetworkPeeringPolicy myHubAndSpoke /subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.ManagedNetwork/managedNetworks/myManagedNetwork/managedNetworkPeeringPolicies/myHubAndSpoke 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

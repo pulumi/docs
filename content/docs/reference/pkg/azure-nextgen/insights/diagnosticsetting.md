@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.insights.DiagnosticSetting resou
 
 The diagnostic setting resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1674,6 +1673,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}a value indicating whether the retention policy is enabled.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:insights/v20170501preview:DiagnosticSetting mysetting /subscriptions/1a66ce04-b633-4a0b-b2bc-a912ec8986a6/resourcegroups/viruela1/providers/microsoft.logic/workflows/viruela6/diagnosticSettings/mysetting 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

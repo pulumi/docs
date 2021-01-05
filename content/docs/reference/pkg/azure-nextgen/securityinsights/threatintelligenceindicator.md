@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.securityinsights.ThreatIntellige
 
 Threat intelligence information object.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1736,6 +1735,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>indicator{{% md %}}Entity represents threat intelligence indicator in the system.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:securityinsights/v20190101preview:ThreatIntelligenceIndicator 180105c7-a28d-b1a2-4a78-234f6ec80fd6 /subscriptions/bd794837-4d29-4647-9105-6339bfdb4e6a/resourceGroups/myRg/providers/Microsoft.OperationalInsights/workspaces/myWorkspace/providers/Microsoft.SecurityInsights/ThreatIntelligence/180105c7-a28d-b1a2-4a78-234f6ec80fd6 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

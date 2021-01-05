@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.insights.WebTest resource with e
 An Application Insights web test definition.
 Latest API Version: 2015-05-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1493,6 +1492,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The XML specification of a WebTest to run against an application.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:insights/latest:WebTest my-webtest-my-component /subscriptions/subid/resourceGroups/my-resource-group/providers/Microsoft.Insights/webtests/my-webtest-my-component 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

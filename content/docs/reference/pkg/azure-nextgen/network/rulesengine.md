@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.network.RulesEngine resource wit
 A rules engine configuration containing a list of rules that will run to modify the runtime behavior of the request and response.
 Latest API Version: 2020-05-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -4192,6 +4191,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>RemoveNulls</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:network/latest:RulesEngine rulesEngine1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1/rulesEngines/rulesEngine1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

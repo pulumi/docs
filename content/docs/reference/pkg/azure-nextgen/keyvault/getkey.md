@@ -666,7 +666,7 @@ The following output properties are available:
 <a href="#created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Creation time in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
     <dt class="property-required"
@@ -684,7 +684,7 @@ The following output properties are available:
 <a href="#updated_csharp" style="color: inherit; text-decoration: inherit;">Updated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Last updated time in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -702,7 +702,7 @@ The following output properties are available:
 <a href="#expires_csharp" style="color: inherit; text-decoration: inherit;">Expires</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Expiry date in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -711,7 +711,7 @@ The following output properties are available:
 <a href="#notbefore_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Before</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Not before date in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
 </dl>
@@ -726,7 +726,7 @@ The following output properties are available:
 <a href="#created_go" style="color: inherit; text-decoration: inherit;">Created</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Creation time in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
     <dt class="property-required"
@@ -744,7 +744,7 @@ The following output properties are available:
 <a href="#updated_go" style="color: inherit; text-decoration: inherit;">Updated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Last updated time in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -762,7 +762,7 @@ The following output properties are available:
 <a href="#expires_go" style="color: inherit; text-decoration: inherit;">Expires</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Expiry date in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -771,7 +771,7 @@ The following output properties are available:
 <a href="#notbefore_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Before</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Not before date in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
 </dl>
@@ -846,7 +846,7 @@ The following output properties are available:
 <a href="#created_python" style="color: inherit; text-decoration: inherit;">created</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Creation time in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
     <dt class="property-required"
@@ -864,7 +864,7 @@ The following output properties are available:
 <a href="#updated_python" style="color: inherit; text-decoration: inherit;">updated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Last updated time in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -882,7 +882,7 @@ The following output properties are available:
 <a href="#expires_python" style="color: inherit; text-decoration: inherit;">expires</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Expiry date in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -891,7 +891,7 @@ The following output properties are available:
 <a href="#not_before_python" style="color: inherit; text-decoration: inherit;">not_<wbr>before</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Not before date in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
 </dl>

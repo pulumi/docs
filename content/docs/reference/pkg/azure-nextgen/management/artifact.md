@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.management.Artifact resource wit
 
 Represents a Blueprint artifact.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -820,6 +819,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>policyAssignment</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:management/v20171111preview:Artifact ownerAssignment /providers/Microsoft.Management/managementGroups/ContosoOnlineGroup/providers/Microsoft.Blueprint/blueprints/simpleBlueprint/artifacts/ownerAssignment 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

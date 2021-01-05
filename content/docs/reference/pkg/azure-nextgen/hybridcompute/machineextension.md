@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.hybridcompute.MachineExtension r
 Describes a Machine Extension.
 Latest API Version: 2020-08-02.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1292,6 +1291,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Instance view status.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:hybridcompute/latest:MachineExtension CustomScriptExtension /subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.HybridCompute/Machines/myMachine/Extensions/CustomScriptExtension 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.containerregistry.TaskRun resour
 The task run that has the ARM resource and properties.
 The task run will have the information of request and result of a run.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -9031,6 +9030,16 @@ the source registry during the run.{{% /md %}}</dd>
     <dd>v8</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:containerregistry/v20190601preview:TaskRun myrun /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/myResourceGroup/providers/Microsoft.ContainerRegistry/registries/myRegistry/taskRuns/myRun 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

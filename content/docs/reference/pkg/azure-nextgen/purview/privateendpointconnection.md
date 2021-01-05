@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.purview.PrivateEndpointConnectio
 
 A private endpoint connection class.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1139,6 +1138,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Disconnected</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:purview/v20201201preview:PrivateEndpointConnection privateEndpointConnection1 /subscriptions/12345678-1234-1234-12345678abc/resourceGroups/SampleResourceGroup/providers/Microsoft.Purview/accounts/account1/privateEndpointConnections/privateEndpointConnection1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

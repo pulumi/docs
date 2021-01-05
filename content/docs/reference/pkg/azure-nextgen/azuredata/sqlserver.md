@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.azuredata.SqlServer resource wit
 
 A SQL server.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -754,6 +753,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:azuredata/v20190724preview:SqlServer testsqlserver /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.AzureData/SqlServerRegistrations/testsqlregistration/sqlServers/testsqlserver 
+```
 
 
 

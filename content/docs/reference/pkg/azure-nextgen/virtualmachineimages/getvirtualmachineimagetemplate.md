@@ -161,7 +161,7 @@ The following output properties are available:
 <a href="#distribute_csharp" style="color: inherit; text-decoration: inherit;">Distribute</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Outputs.<wbr>Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Distributor<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Outputs.<wbr>Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Distributor<wbr>Response, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Outputs.<wbr>Image<wbr>Template<wbr>Vhd<wbr>Distributor<wbr>Response&gt;&gt;&gt;</span>
+        <span class="property-type">List&lt;object&gt;</span>
     </dt>
     <dd>{{% md %}}The distribution targets where the image output needs to go to.{{% /md %}}</dd>
     <dt class="property-"
@@ -260,7 +260,7 @@ The following output properties are available:
 <a href="#customize_csharp" style="color: inherit; text-decoration: inherit;">Customize</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Outputs.<wbr>Image<wbr>Template<wbr>File<wbr>Customizer<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Outputs.<wbr>Image<wbr>Template<wbr>Power<wbr>Shell<wbr>Customizer<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Outputs.<wbr>Image<wbr>Template<wbr>Restart<wbr>Customizer<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Outputs.<wbr>Image<wbr>Template<wbr>Shell<wbr>Customizer<wbr>Response, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Outputs.<wbr>Image<wbr>Template<wbr>Windows<wbr>Update<wbr>Customizer<wbr>Response&gt;&gt;&gt;&gt;&gt;</span>
+        <span class="property-type">List&lt;object&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies the properties used to describe the customization steps of the image, like Image source etc{{% /md %}}</dd>
     <dt class="property-"

@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.security.AlertsSuppressionRule r
 
 Describes the suppression rule
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1090,6 +1089,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}All the conditions inside need to be true in order to suppress the alert{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:security/v20190101preview:AlertsSuppressionRule dismissIpAnomalyAlerts /subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/providers/Microsoft.Security/alertsSuppressionRules/dismissIpAnomalyAlerts 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

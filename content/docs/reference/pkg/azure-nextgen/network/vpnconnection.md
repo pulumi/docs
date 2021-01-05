@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.network.VpnConnection resource w
 VpnConnection Resource.
 Latest API Version: 2020-07-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1070,7 +1069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#egressbytestransferred_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Bytes<wbr>Transferred</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Egress bytes transferred.{{% /md %}}</dd>
     <dt class="property-"
@@ -1097,7 +1096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ingressbytestransferred_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Bytes<wbr>Transferred</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Ingress bytes transferred.{{% /md %}}</dd>
     <dt class="property-"
@@ -1130,7 +1129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#egressbytestransferred_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Bytes<wbr>Transferred</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Egress bytes transferred.{{% /md %}}</dd>
     <dt class="property-"
@@ -1157,7 +1156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ingressbytestransferred_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Bytes<wbr>Transferred</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Ingress bytes transferred.{{% /md %}}</dd>
     <dt class="property-"
@@ -1250,7 +1249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#egress_bytes_transferred_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>bytes_<wbr>transferred</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Egress bytes transferred.{{% /md %}}</dd>
     <dt class="property-"
@@ -1277,7 +1276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ingress_bytes_transferred_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>bytes_<wbr>transferred</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Ingress bytes transferred.{{% /md %}}</dd>
     <dt class="property-"
@@ -3918,7 +3917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#egressbytestransferred_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Bytes<wbr>Transferred</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Egress bytes transferred.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3936,7 +3935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ingressbytestransferred_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Bytes<wbr>Transferred</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Ingress bytes transferred.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4086,7 +4085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#egressbytestransferred_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Bytes<wbr>Transferred</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Egress bytes transferred.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4104,7 +4103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ingressbytestransferred_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Bytes<wbr>Transferred</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Ingress bytes transferred.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4422,7 +4421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#egress_bytes_transferred_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>bytes_<wbr>transferred</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Egress bytes transferred.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4440,7 +4439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ingress_bytes_transferred_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>bytes_<wbr>transferred</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Ingress bytes transferred.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4571,6 +4570,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Id of the connected vpn site link.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:network/latest:VpnConnection vpnConnection1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnGateways/gateway1/vpnConnections/vpnConnection1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

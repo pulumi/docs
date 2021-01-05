@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.keyvault.Key resource with examp
 The key resource.
 Latest API Version: 2019-09-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1141,7 +1140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expires_csharp" style="color: inherit; text-decoration: inherit;">Expires</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Expiry date in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1150,7 +1149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notbefore_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Before</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Not before date in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
 </dl>
@@ -1174,7 +1173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expires_go" style="color: inherit; text-decoration: inherit;">Expires</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Expiry date in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1183,7 +1182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notbefore_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Before</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Not before date in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
 </dl>
@@ -1240,7 +1239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expires_python" style="color: inherit; text-decoration: inherit;">expires</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Expiry date in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1249,7 +1248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#not_before_python" style="color: inherit; text-decoration: inherit;">not_<wbr>before</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Not before date in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
 </dl>
@@ -1266,7 +1265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Creation time in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1284,7 +1283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updated_csharp" style="color: inherit; text-decoration: inherit;">Updated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Last updated time in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1302,7 +1301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expires_csharp" style="color: inherit; text-decoration: inherit;">Expires</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Expiry date in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1311,7 +1310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notbefore_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Before</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Not before date in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
 </dl>
@@ -1326,7 +1325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_go" style="color: inherit; text-decoration: inherit;">Created</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Creation time in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1344,7 +1343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updated_go" style="color: inherit; text-decoration: inherit;">Updated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Last updated time in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1362,7 +1361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expires_go" style="color: inherit; text-decoration: inherit;">Expires</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Expiry date in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1371,7 +1370,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#notbefore_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Before</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Not before date in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
 </dl>
@@ -1446,7 +1445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#created_python" style="color: inherit; text-decoration: inherit;">created</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Creation time in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1464,7 +1463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#updated_python" style="color: inherit; text-decoration: inherit;">updated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Last updated time in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1482,7 +1481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expires_python" style="color: inherit; text-decoration: inherit;">expires</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Expiry date in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1491,7 +1490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#not_before_python" style="color: inherit; text-decoration: inherit;">not_<wbr>before</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Not before date in seconds since 1970-01-01T00:00:00Z.{{% /md %}}</dd>
 </dl>
@@ -1702,6 +1701,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The type of the key. For valid values, see JsonWebKeyType.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:keyvault/latest:Key sample-key-name /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/sample-group/providers/Microsoft.KeyVault/vaults/sample-vault-name/keys/sample-key-name 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.storage.TableServiceProperties r
 The properties of a storage account’s Table service.
 Latest API Version: 2019-06-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1370,6 +1369,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The List of CORS rules. You can include up to five CorsRule elements in the request. {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:storage/latest:TableServiceProperties default /subscriptions/{subscription-id}/resourceGroups/res4410/providers/Microsoft.Storage/storageAccounts/sto8607/tableServices/default 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

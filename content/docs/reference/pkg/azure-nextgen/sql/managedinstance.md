@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.sql.ManagedInstance resource wit
 
 An Azure SQL managed instance.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3028,6 +3027,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>ZRS</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:sql/v20200801preview:ManagedInstance testinstance /subscriptions/20d7082a-0fc7-4468-82bd-542694d5042b/resourceGroups/testrg/providers/Microsoft.Sql/managedInstances/testinstance 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

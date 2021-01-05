@@ -175,6 +175,15 @@ The following output properties are available:
     <dd>{{% md %}}Resource Id{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="migrationproperties_csharp">
+<a href="#migrationproperties_csharp" style="color: inherit; text-decoration: inherit;">Migration<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#migrationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Outputs.<wbr>Migration<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Migration Properties{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -292,15 +301,6 @@ The following output properties are available:
     <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="migrationproperties_csharp">
-<a href="#migrationproperties_csharp" style="color: inherit; text-decoration: inherit;">Migration<wbr>Properties</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Outputs.<wbr>Migration<wbr>Properties<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Migration Properties{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="notificationsettings_csharp">
 <a href="#notificationsettings_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Settings</a>
 </span>
@@ -368,6 +368,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource Id{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="migrationproperties_go">
+<a href="#migrationproperties_go" style="color: inherit; text-decoration: inherit;">Migration<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#migrationpropertiesresponse">Migration<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Migration Properties{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="name_go">
@@ -487,15 +496,6 @@ The following output properties are available:
     <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="migrationproperties_go">
-<a href="#migrationproperties_go" style="color: inherit; text-decoration: inherit;">Migration<wbr>Properties</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationpropertiesresponse">Migration<wbr>Properties<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Migration Properties{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="notificationsettings_go">
 <a href="#notificationsettings_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Settings</a>
 </span>
@@ -563,6 +563,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource Id{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="migrationproperties_nodejs">
+<a href="#migrationproperties_nodejs" style="color: inherit; text-decoration: inherit;">migration<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#migrationpropertiesresponse">Migration<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Migration Properties{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="name_nodejs">
@@ -682,15 +691,6 @@ The following output properties are available:
     <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="migrationproperties_nodejs">
-<a href="#migrationproperties_nodejs" style="color: inherit; text-decoration: inherit;">migration<wbr>Properties</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationpropertiesresponse">Migration<wbr>Properties<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Migration Properties{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="notificationsettings_nodejs">
 <a href="#notificationsettings_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Settings</a>
 </span>
@@ -758,6 +758,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource Id{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="migration_properties_python">
+<a href="#migration_properties_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#migrationpropertiesresponse">Migration<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Migration Properties{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="name_python">
@@ -875,15 +884,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="migration_properties_python">
-<a href="#migration_properties_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>properties</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#migrationpropertiesresponse">Migration<wbr>Properties<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Migration Properties{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="notification_settings_python">
@@ -2178,8 +2178,8 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="migrationprogress_csharp">
 <a href="#migrationprogress_csharp" style="color: inherit; text-decoration: inherit;">Migration<wbr>Progress</a>
 </span>
@@ -2187,8 +2187,8 @@ The following output properties are available:
         <span class="property-type"><a href="#migrationprogressresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Inputs.<wbr>Migration<wbr>Progress<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Migration Progress{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="oldsubnetid_csharp">
 <a href="#oldsubnetid_csharp" style="color: inherit; text-decoration: inherit;">Old<wbr>Subnet<wbr>Id</a>
 </span>
@@ -2196,8 +2196,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Old Subnet Id{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="oldvnetsiteid_csharp">
 <a href="#oldvnetsiteid_csharp" style="color: inherit; text-decoration: inherit;">Old<wbr>Vnet<wbr>Site<wbr>Id</a>
 </span>
@@ -2211,8 +2211,8 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="migrationprogress_go">
 <a href="#migrationprogress_go" style="color: inherit; text-decoration: inherit;">Migration<wbr>Progress</a>
 </span>
@@ -2220,8 +2220,8 @@ The following output properties are available:
         <span class="property-type"><a href="#migrationprogressresponse">Migration<wbr>Progress<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Migration Progress{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="oldsubnetid_go">
 <a href="#oldsubnetid_go" style="color: inherit; text-decoration: inherit;">Old<wbr>Subnet<wbr>Id</a>
 </span>
@@ -2229,8 +2229,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Old Subnet Id{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="oldvnetsiteid_go">
 <a href="#oldvnetsiteid_go" style="color: inherit; text-decoration: inherit;">Old<wbr>Vnet<wbr>Site<wbr>Id</a>
 </span>
@@ -2244,8 +2244,8 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="migrationprogress_nodejs">
 <a href="#migrationprogress_nodejs" style="color: inherit; text-decoration: inherit;">migration<wbr>Progress</a>
 </span>
@@ -2253,8 +2253,8 @@ The following output properties are available:
         <span class="property-type"><a href="#migrationprogressresponse">Migration<wbr>Progress<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Migration Progress{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="oldsubnetid_nodejs">
 <a href="#oldsubnetid_nodejs" style="color: inherit; text-decoration: inherit;">old<wbr>Subnet<wbr>Id</a>
 </span>
@@ -2262,8 +2262,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Old Subnet Id{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="oldvnetsiteid_nodejs">
 <a href="#oldvnetsiteid_nodejs" style="color: inherit; text-decoration: inherit;">old<wbr>Vnet<wbr>Site<wbr>Id</a>
 </span>
@@ -2277,8 +2277,8 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="migration_progress_python">
 <a href="#migration_progress_python" style="color: inherit; text-decoration: inherit;">migration_<wbr>progress</a>
 </span>
@@ -2286,8 +2286,8 @@ The following output properties are available:
         <span class="property-type"><a href="#migrationprogressresponse">Migration<wbr>Progress<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Migration Progress{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="old_subnet_id_python">
 <a href="#old_subnet_id_python" style="color: inherit; text-decoration: inherit;">old_<wbr>subnet_<wbr>id</a>
 </span>
@@ -2295,8 +2295,8 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Old Subnet Id{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="old_vnet_site_id_python">
 <a href="#old_vnet_site_id_python" style="color: inherit; text-decoration: inherit;">old_<wbr>vnet_<wbr>site_<wbr>id</a>
 </span>

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.machinelearning.Workspace resour
 An object that represents a machine learning workspace.
 Latest API Version: 2019-10-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1155,6 +1154,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Tier of the sku like Basic or Enterprise{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:machinelearning/latest:Workspace testworkspace /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.MachineLearning/workspaces/testworkspace 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

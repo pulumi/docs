@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.devices.IotDpsResourcePrivateEnd
 The private endpoint connection of a provisioning service
 Latest API Version: 2020-03-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1167,6 +1166,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Disconnected</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:devices/latest:IotDpsResourcePrivateEndpointConnection myPrivateEndpointConnection /subscriptions/91d12660-3dec-467a-be2a-213b5544ddc0/resourceGroups/myResourceGroup/providers/Microsoft.Devices/ProvisioningServices/myFirstProvisioningService/PrivateEndpointConnections/myPrivateEndpointConnection 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

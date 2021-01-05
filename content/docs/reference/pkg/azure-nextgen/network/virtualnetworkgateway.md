@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.network.VirtualNetworkGateway re
 A common class for general resource information.
 Latest API Version: 2020-07-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -114,7 +113,7 @@ func main() {
 		_, err := network.NewVirtualNetworkGateway(ctx, "virtualNetworkGateway", &network.VirtualNetworkGatewayArgs{
 			ActiveActive: pulumi.Bool(false),
 			BgpSettings: &network.BgpSettingsArgs{
-				Asn:               pulumi.Int(65515),
+				Asn:               pulumi.Float64(65515),
 				BgpPeeringAddress: pulumi.String("10.0.1.30"),
 				PeerWeight:        pulumi.Int(0),
 			},
@@ -149,7 +148,7 @@ func main() {
 				RadiusServers: network.RadiusServerArray{
 					&network.RadiusServerArgs{
 						RadiusServerAddress: pulumi.String("10.2.0.0"),
-						RadiusServerScore:   pulumi.Int(20),
+						RadiusServerScore:   pulumi.Float64(20),
 						RadiusServerSecret:  pulumi.String("radiusServerSecret"),
 					},
 				},
@@ -1629,7 +1628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#asn_csharp" style="color: inherit; text-decoration: inherit;">Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1671,7 +1670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#asn_go" style="color: inherit; text-decoration: inherit;">Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1755,7 +1754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#asn_python" style="color: inherit; text-decoration: inherit;">asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1799,7 +1798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#asn_csharp" style="color: inherit; text-decoration: inherit;">Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1841,7 +1840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#asn_go" style="color: inherit; text-decoration: inherit;">Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1925,7 +1924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#asn_python" style="color: inherit; text-decoration: inherit;">asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3630,7 +3629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#radiusserverscore_csharp" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server<wbr>Score</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The initial score assigned to this radius server.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3663,7 +3662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#radiusserverscore_go" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server<wbr>Score</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The initial score assigned to this radius server.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3729,7 +3728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#radius_server_score_python" style="color: inherit; text-decoration: inherit;">radius_<wbr>server_<wbr>score</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The initial score assigned to this radius server.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3764,7 +3763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#radiusserverscore_csharp" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server<wbr>Score</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The initial score assigned to this radius server.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3797,7 +3796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#radiusserverscore_go" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server<wbr>Score</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The initial score assigned to this radius server.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3863,7 +3862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#radius_server_score_python" style="color: inherit; text-decoration: inherit;">radius_<wbr>server_<wbr>score</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The initial score assigned to this radius server.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6769,6 +6768,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>RouteBased</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:network/latest:VirtualNetworkGateway vpngw /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworkGateways/vpngw 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

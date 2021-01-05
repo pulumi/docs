@@ -314,7 +314,7 @@ The following output properties are available:
 <a href="#usagethreshold_csharp" style="color: inherit; text-decoration: inherit;">Usage<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.{{% /md %}}</dd>
     <dt class="property-"
@@ -554,7 +554,7 @@ The following output properties are available:
 <a href="#usagethreshold_go" style="color: inherit; text-decoration: inherit;">Usage<wbr>Threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.{{% /md %}}</dd>
     <dt class="property-"
@@ -1034,7 +1034,7 @@ The following output properties are available:
 <a href="#usage_threshold_python" style="color: inherit; text-decoration: inherit;">usage_<wbr>threshold</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.{{% /md %}}</dd>
     <dt class="property-"

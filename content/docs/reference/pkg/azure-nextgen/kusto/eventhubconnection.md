@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.kusto.EventHubConnection resourc
 
 Class representing an event hub connection.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -874,6 +873,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>CSV</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:kusto/v20180907preview:EventHubConnection KustoClusterRPTest4/KustoDatabase8 /subscriptions/12345678-1234-1234-1234-123456789098/resourceGroups/kustorptest/providers/Microsoft.Kusto/clusters/KustoClusterRPTest4/Databases/KustoDatabase8 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.batchai.FileServer resource with
 File Server information.
 Latest API Version: 2018-05-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2046,6 +2045,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}SSH public key of the administrator user account.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:batchai/latest:FileServer demo_nfs /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspaces/demo_workspace/fileservers/fileservercedd134b 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.appplatform.Service resource wit
 Service resource
 Latest API Version: 2020-07-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1864,6 +1863,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Tier of the Sku{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:appplatform/latest:Service myservice /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.AppPlatform/Spring/myservice 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

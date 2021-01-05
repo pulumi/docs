@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.signalrservice.SignalR resource 
 A class represent a SignalR service resource.
 Latest API Version: 2020-05-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -4202,6 +4201,16 @@ There are 3 kind of patterns supported:
     3. The single hub name, for example, "hub1", it matches "hub1"{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:signalrservice/latest:SignalR mySignalRService /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.SignalRService/SignalR/mySignalRService 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

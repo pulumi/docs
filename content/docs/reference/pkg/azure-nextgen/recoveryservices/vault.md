@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.recoveryservices.Vault resource 
 Resource information, as returned by the resource provider.
 Latest API Version: 2016-06-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2147,6 +2146,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Details for upgrading vault.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:recoveryservices/latest:Vault swaggerExample /subscriptions/77777777-b0c6-47a2-b37c-d8e65a629c18/resourceGroups/Default-RecoveryServices-ResourceGroup/providers/Microsoft.RecoveryServices/vaults/swaggerExample 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

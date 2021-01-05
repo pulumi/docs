@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.batchai.Workspace resource with 
 Batch AI Workspace information.
 Latest API Version: 2018-05-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -699,6 +698,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:batchai/latest:Workspace demo_worksapce /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/demo_resource_group/providers/Microsoft.BatchAI/workspaces/demo_workspace 
+```
 
 
 

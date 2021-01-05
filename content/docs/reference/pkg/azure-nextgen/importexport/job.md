@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.importexport.Job resource with e
 Contains the job information.
 Latest API Version: 2020-08-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1016,7 +1015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drivecount_csharp" style="color: inherit; text-decoration: inherit;">Drive<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1058,7 +1057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drivecount_go" style="color: inherit; text-decoration: inherit;">Drive<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1142,7 +1141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drive_count_python" style="color: inherit; text-decoration: inherit;">drive_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1186,7 +1185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drivecount_csharp" style="color: inherit; text-decoration: inherit;">Drive<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1228,7 +1227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drivecount_go" style="color: inherit; text-decoration: inherit;">Drive<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1312,7 +1311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drive_count_python" style="color: inherit; text-decoration: inherit;">drive_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1425,7 +1424,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bytessucceeded_csharp" style="color: inherit; text-decoration: inherit;">Bytes<wbr>Succeeded</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Bytes successfully transferred for the drive.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1539,7 +1538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bytessucceeded_go" style="color: inherit; text-decoration: inherit;">Bytes<wbr>Succeeded</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Bytes successfully transferred for the drive.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1767,7 +1766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bytes_succeeded_python" style="color: inherit; text-decoration: inherit;">bytes_<wbr>succeeded</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Bytes successfully transferred for the drive.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1883,7 +1882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bytessucceeded_csharp" style="color: inherit; text-decoration: inherit;">Bytes<wbr>Succeeded</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Bytes successfully transferred for the drive.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1997,7 +1996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bytessucceeded_go" style="color: inherit; text-decoration: inherit;">Bytes<wbr>Succeeded</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Bytes successfully transferred for the drive.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2225,7 +2224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bytes_succeeded_python" style="color: inherit; text-decoration: inherit;">bytes_<wbr>succeeded</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Bytes successfully transferred for the drive.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4359,7 +4358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drivecount_csharp" style="color: inherit; text-decoration: inherit;">Drive<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4401,7 +4400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drivecount_go" style="color: inherit; text-decoration: inherit;">Drive<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4485,7 +4484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drive_count_python" style="color: inherit; text-decoration: inherit;">drive_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4529,7 +4528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drivecount_csharp" style="color: inherit; text-decoration: inherit;">Drive<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4571,7 +4570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drivecount_go" style="color: inherit; text-decoration: inherit;">Drive<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4655,7 +4654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#drive_count_python" style="color: inherit; text-decoration: inherit;">drive_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The number of drives included in the package.{{% /md %}}</dd>
     <dt class="property-required"
@@ -6238,6 +6237,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The second line of the street address to use when returning the drives. {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:importexport/latest:Job myJob /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.ImportExport/jobs/myJob 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

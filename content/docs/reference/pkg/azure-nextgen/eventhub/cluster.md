@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.eventhub.Cluster resource with e
 
 Single Event Hubs Cluster resource in List or Get operations.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1036,6 +1035,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The quantity of Event Hubs Cluster Capacity Units contained in this cluster.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:eventhub/v20180101preview:Cluster testCluster /subscriptions/5f750a97-50d9-4e36-8081-c9ee4c0210d4/resourceGroups/myResourceGroup/providers/Microsoft.EventHub/clusters/testCluster 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

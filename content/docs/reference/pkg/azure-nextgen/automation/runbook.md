@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.automation.Runbook resource with
 Definition of the runbook type.
 Latest API Version: 2018-06-30.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2770,6 +2769,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>GraphPowerShell</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:automation/latest:Runbook Get-AzureVMTutorial /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/ContoseAutomationAccount/runbooks/Get-AzureVMTutorial 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

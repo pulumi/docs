@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.search.PrivateEndpointConnection
 Describes an existing Private Endpoint connection to the Azure Cognitive Search service.
 Latest API Version: 2020-08-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1265,6 +1264,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Disconnected</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:search/latest:PrivateEndpointConnection testEndpoint.50bf4fbe-d7c1-4b48-a642-4f5892642546 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Search/searchServices/mysearchservice/privateEndpointConnections/testEndpoint.50bf4fbe-d7c1-4b48-a642-4f5892642546 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

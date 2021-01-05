@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.storsimple.IscsiDisk resource wi
 The iSCSI disk.
 Latest API Version: 2016-10-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -72,7 +71,7 @@ func main() {
 			IscsiServerName:            pulumi.String("HSDK-0NZI14MDTF"),
 			ManagerName:                pulumi.String("hAzureSDKOperations"),
 			MonitoringStatus:           "Enabled",
-			ProvisionedCapacityInBytes: pulumi.Int(536870912000),
+			ProvisionedCapacityInBytes: pulumi.Float64(536870912000),
 			ResourceGroupName:          pulumi.String("ResourceGroupForSDKTest"),
 		})
 		if err != nil {
@@ -145,7 +144,7 @@ const iscsiDisk = new azure_nextgen.storsimple.latest.IscsiDisk("iscsiDisk", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IscsiDisk</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_control_records</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">data_policy</span><span class="p">:</span> <span class="nx">Optional[DataPolicy]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_status</span><span class="p">:</span> <span class="nx">Optional[DiskStatus]</span> = None<span class="p">, </span><span class="nx">iscsi_server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">manager_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitoring_status</span><span class="p">:</span> <span class="nx">Optional[MonitoringStatus]</span> = None<span class="p">, </span><span class="nx">provisioned_capacity_in_bytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IscsiDisk</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_control_records</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">data_policy</span><span class="p">:</span> <span class="nx">Optional[DataPolicy]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_status</span><span class="p">:</span> <span class="nx">Optional[DiskStatus]</span> = None<span class="p">, </span><span class="nx">iscsi_server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">manager_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitoring_status</span><span class="p">:</span> <span class="nx">Optional[MonitoringStatus]</span> = None<span class="p">, </span><span class="nx">provisioned_capacity_in_bytes</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -394,7 +393,7 @@ The IscsiDisk resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#provisionedcapacityinbytes_csharp" style="color: inherit; text-decoration: inherit;">Provisioned<wbr>Capacity<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The provisioned capacity in bytes.{{% /md %}}</dd>
     <dt class="property-required"
@@ -499,7 +498,7 @@ The IscsiDisk resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#provisionedcapacityinbytes_go" style="color: inherit; text-decoration: inherit;">Provisioned<wbr>Capacity<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The provisioned capacity in bytes.{{% /md %}}</dd>
     <dt class="property-required"
@@ -709,7 +708,7 @@ The IscsiDisk resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#provisioned_capacity_in_bytes_python" style="color: inherit; text-decoration: inherit;">provisioned_<wbr>capacity_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The provisioned capacity in bytes.{{% /md %}}</dd>
     <dt class="property-required"
@@ -758,7 +757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#localusedcapacityinbytes_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Used<wbr>Capacity<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The local used capacity in bytes.{{% /md %}}</dd>
     <dt class="property-"
@@ -785,7 +784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usedcapacityinbytes_csharp" style="color: inherit; text-decoration: inherit;">Used<wbr>Capacity<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The used capacity in bytes.{{% /md %}}</dd>
 </dl>
@@ -809,7 +808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#localusedcapacityinbytes_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Used<wbr>Capacity<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The local used capacity in bytes.{{% /md %}}</dd>
     <dt class="property-"
@@ -836,7 +835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#usedcapacityinbytes_go" style="color: inherit; text-decoration: inherit;">Used<wbr>Capacity<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The used capacity in bytes.{{% /md %}}</dd>
 </dl>
@@ -911,7 +910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#local_used_capacity_in_bytes_python" style="color: inherit; text-decoration: inherit;">local_<wbr>used_<wbr>capacity_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The local used capacity in bytes.{{% /md %}}</dd>
     <dt class="property-"
@@ -938,7 +937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#used_capacity_in_bytes_python" style="color: inherit; text-decoration: inherit;">used_<wbr>capacity_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The used capacity in bytes.{{% /md %}}</dd>
 </dl>
@@ -1083,6 +1082,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Disabled</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:storsimple/latest:IscsiDisk Auto-TestIscsiDisk1 /subscriptions/9eb689cd-7243-43b4-b6f6-5c65cb296641/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/hAzureSDKOperations/devices/HSDK-0NZI14MDTF/iscsiServers/HSDK-0NZI14MDTF/disks/Auto-TestIscsiDisk1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.cache.LinkedServer resource with
 Response to put/get linked server (with properties) for Redis cache.
 Latest API Version: 2020-06-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -719,6 +718,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Secondary</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:cache/latest:LinkedServer cache2 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/cache1/linkedServers/cache2 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

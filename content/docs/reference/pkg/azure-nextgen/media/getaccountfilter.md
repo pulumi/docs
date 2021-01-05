@@ -723,7 +723,7 @@ The following output properties are available:
 <a href="#endtimestamp_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The absolute end time boundary.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -741,7 +741,7 @@ The following output properties are available:
 <a href="#livebackoffduration_csharp" style="color: inherit; text-decoration: inherit;">Live<wbr>Backoff<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The relative to end right edge.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -750,7 +750,7 @@ The following output properties are available:
 <a href="#presentationwindowduration_csharp" style="color: inherit; text-decoration: inherit;">Presentation<wbr>Window<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The relative to end sliding window.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -759,7 +759,7 @@ The following output properties are available:
 <a href="#starttimestamp_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The absolute start time boundary.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -768,7 +768,7 @@ The following output properties are available:
 <a href="#timescale_csharp" style="color: inherit; text-decoration: inherit;">Timescale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The time scale of time stamps.{{% /md %}}</dd>
 </dl>
@@ -783,7 +783,7 @@ The following output properties are available:
 <a href="#endtimestamp_go" style="color: inherit; text-decoration: inherit;">End<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The absolute end time boundary.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -801,7 +801,7 @@ The following output properties are available:
 <a href="#livebackoffduration_go" style="color: inherit; text-decoration: inherit;">Live<wbr>Backoff<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The relative to end right edge.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -810,7 +810,7 @@ The following output properties are available:
 <a href="#presentationwindowduration_go" style="color: inherit; text-decoration: inherit;">Presentation<wbr>Window<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The relative to end sliding window.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -819,7 +819,7 @@ The following output properties are available:
 <a href="#starttimestamp_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The absolute start time boundary.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -828,7 +828,7 @@ The following output properties are available:
 <a href="#timescale_go" style="color: inherit; text-decoration: inherit;">Timescale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The time scale of time stamps.{{% /md %}}</dd>
 </dl>
@@ -903,7 +903,7 @@ The following output properties are available:
 <a href="#end_timestamp_python" style="color: inherit; text-decoration: inherit;">end_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The absolute end time boundary.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -921,7 +921,7 @@ The following output properties are available:
 <a href="#live_backoff_duration_python" style="color: inherit; text-decoration: inherit;">live_<wbr>backoff_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The relative to end right edge.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -930,7 +930,7 @@ The following output properties are available:
 <a href="#presentation_window_duration_python" style="color: inherit; text-decoration: inherit;">presentation_<wbr>window_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The relative to end sliding window.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -939,7 +939,7 @@ The following output properties are available:
 <a href="#start_timestamp_python" style="color: inherit; text-decoration: inherit;">start_<wbr>timestamp</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The absolute start time boundary.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -948,7 +948,7 @@ The following output properties are available:
 <a href="#timescale_python" style="color: inherit; text-decoration: inherit;">timescale</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The time scale of time stamps.{{% /md %}}</dd>
 </dl>

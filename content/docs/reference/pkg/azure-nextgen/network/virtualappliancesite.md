@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.network.VirtualApplianceSite res
 Virtual Appliance Site resource.
 Latest API Version: 2020-07-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1167,6 +1166,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Office 365 breakout categories.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:network/latest:VirtualApplianceSite site1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/networkVirtualAppliances/nva/virtualApplianceSites/site1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

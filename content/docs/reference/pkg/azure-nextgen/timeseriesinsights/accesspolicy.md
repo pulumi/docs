@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.timeseriesinsights.AccessPolicy 
 An access policy is used to grant users and applications access to the environment. Roles are assigned to service principals in Azure Active Directory. These roles define the actions the principal can perform through the Time Series Insights data plane APIs.
 Latest API Version: 2020-05-15.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -724,6 +723,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Contributor</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:timeseriesinsights/latest:AccessPolicy ap1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.TimeSeriesInsights/Environments/env1/accessPolicies/ap1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.customerinsights.View resource w
 The view resource format.
 Latest API Version: 2017-04-26.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -792,6 +791,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:customerinsights/latest:View sdkTestHub/testView /subscriptions/c909e979-ef71-4def-a970-bc7c154db8c5/resourceGroups/TestHubRG/providers/Microsoft.CustomerInsights/hubs/sdkTestHub/views/testView 
+```
 
 
 

@@ -304,7 +304,7 @@ The following output properties are available:
 <a href="#availablelocalstorageinbytes_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Local<wbr>Storage<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The amount of free local storage available on the device in bytes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -313,7 +313,7 @@ The following output properties are available:
 <a href="#availabletieredstorageinbytes_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Tiered<wbr>Storage<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The amount of free tiered storage available for the device in bytes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -409,7 +409,7 @@ The following output properties are available:
 <a href="#availablelocalstorageinbytes_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Local<wbr>Storage<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The amount of free local storage available on the device in bytes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -418,7 +418,7 @@ The following output properties are available:
 <a href="#availabletieredstorageinbytes_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Tiered<wbr>Storage<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The amount of free tiered storage available for the device in bytes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -619,7 +619,7 @@ The following output properties are available:
 <a href="#available_local_storage_in_bytes_python" style="color: inherit; text-decoration: inherit;">available_<wbr>local_<wbr>storage_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The amount of free local storage available on the device in bytes.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -628,7 +628,7 @@ The following output properties are available:
 <a href="#available_tiered_storage_in_bytes_python" style="color: inherit; text-decoration: inherit;">available_<wbr>tiered_<wbr>storage_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The amount of free tiered storage available for the device in bytes.{{% /md %}}</dd>
     <dt class="property-optional"

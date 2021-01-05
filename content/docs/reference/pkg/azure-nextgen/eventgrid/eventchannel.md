@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.eventgrid.EventChannel resource 
 
 Event Channel.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1346,7 +1345,7 @@ associated with the event channel will be created under this resource group.{{% 
 <a href="#advancedfilters_csharp" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span>
+        <span class="property-type">List&lt;object&gt;</span>
     </dt>
     <dd>{{% md %}}An array of advanced filters that are used for filtering event channels.{{% /md %}}</dd>
 </dl>
@@ -1408,7 +1407,7 @@ associated with the event channel will be created under this resource group.{{% 
 <a href="#advancedfilters_csharp" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span>
+        <span class="property-type">List&lt;object&gt;</span>
     </dt>
     <dd>{{% md %}}An array of advanced filters that are used for filtering event channels.{{% /md %}}</dd>
 </dl>
@@ -3746,6 +3745,16 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
     <dd>{{% md %}}The set of filter values.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:eventgrid/v20200401preview:EventChannel exampleEventChannelName1 /subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/resourceGroups/examplerg/providers/Microsoft.EventGrid/partnerNamespaces/partnerNamespace123/eventChannels/exampleEventChannelName1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

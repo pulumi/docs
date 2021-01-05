@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.network.RecordSet resource with 
 Describes a DNS record set (a collection of DNS records with the same name and type) in a Private DNS zone.
 Latest API Version: 2020-06-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -80,7 +79,7 @@ func main() {
 			RecordType:            pulumi.String("A"),
 			RelativeRecordSetName: pulumi.String("recordA"),
 			ResourceGroupName:     pulumi.String("resourceGroup1"),
-			Ttl:                   pulumi.Int(3600),
+			Ttl:                   pulumi.Float64(3600),
 		})
 		if err != nil {
 			return err
@@ -202,7 +201,7 @@ func main() {
 			RecordType:            pulumi.String("AAAA"),
 			RelativeRecordSetName: pulumi.String("recordAAAA"),
 			ResourceGroupName:     pulumi.String("resourceGroup1"),
-			Ttl:                   pulumi.Int(3600),
+			Ttl:                   pulumi.Float64(3600),
 		})
 		if err != nil {
 			return err
@@ -319,7 +318,7 @@ func main() {
 			RecordType:            pulumi.String("CNAME"),
 			RelativeRecordSetName: pulumi.String("recordCNAME"),
 			ResourceGroupName:     pulumi.String("resourceGroup1"),
-			Ttl:                   pulumi.Int(3600),
+			Ttl:                   pulumi.Float64(3600),
 		})
 		if err != nil {
 			return err
@@ -443,7 +442,7 @@ func main() {
 			RecordType:            pulumi.String("MX"),
 			RelativeRecordSetName: pulumi.String("recordMX"),
 			ResourceGroupName:     pulumi.String("resourceGroup1"),
-			Ttl:                   pulumi.Int(3600),
+			Ttl:                   pulumi.Float64(3600),
 		})
 		if err != nil {
 			return err
@@ -567,7 +566,7 @@ func main() {
 			RecordType:            pulumi.String("PTR"),
 			RelativeRecordSetName: pulumi.String("1"),
 			ResourceGroupName:     pulumi.String("resourceGroup1"),
-			Ttl:                   pulumi.Int(3600),
+			Ttl:                   pulumi.Float64(3600),
 		})
 		if err != nil {
 			return err
@@ -689,14 +688,14 @@ func main() {
 			ResourceGroupName:     pulumi.String("resourceGroup1"),
 			SoaRecord: &network.SoaRecordArgs{
 				Email:        pulumi.String("azureprivatedns-hostmaster.microsoft.com"),
-				ExpireTime:   pulumi.Int(2419200),
+				ExpireTime:   pulumi.Float64(2419200),
 				Host:         pulumi.String("azureprivatedns.net"),
-				MinimumTtl:   pulumi.Int(300),
-				RefreshTime:  pulumi.Int(3600),
-				RetryTime:    pulumi.Int(300),
-				SerialNumber: pulumi.Int(1),
+				MinimumTtl:   pulumi.Float64(300),
+				RefreshTime:  pulumi.Float64(3600),
+				RetryTime:    pulumi.Float64(300),
+				SerialNumber: pulumi.Float64(1),
 			},
-			Ttl: pulumi.Int(3600),
+			Ttl: pulumi.Float64(3600),
 		})
 		if err != nil {
 			return err
@@ -836,7 +835,7 @@ func main() {
 					Weight:   pulumi.Int(10),
 				},
 			},
-			Ttl: pulumi.Int(3600),
+			Ttl: pulumi.Float64(3600),
 		})
 		if err != nil {
 			return err
@@ -963,7 +962,7 @@ func main() {
 			RecordType:            pulumi.String("TXT"),
 			RelativeRecordSetName: pulumi.String("recordTXT"),
 			ResourceGroupName:     pulumi.String("resourceGroup1"),
-			Ttl:                   pulumi.Int(3600),
+			Ttl:                   pulumi.Float64(3600),
 			TxtRecords: network.TxtRecordArray{
 				&network.TxtRecordArgs{
 					Value: pulumi.StringArray{
@@ -1049,7 +1048,7 @@ const recordSet = new azure_nextgen.network.latest.RecordSet("recordSet", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RecordSet</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">a_records</span><span class="p">:</span> <span class="nx">Optional[Sequence[ARecordArgs]]</span> = None<span class="p">, </span><span class="nx">aaaa_records</span><span class="p">:</span> <span class="nx">Optional[Sequence[AaaaRecordArgs]]</span> = None<span class="p">, </span><span class="nx">cname_record</span><span class="p">:</span> <span class="nx">Optional[CnameRecordArgs]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">mx_records</span><span class="p">:</span> <span class="nx">Optional[Sequence[MxRecordArgs]]</span> = None<span class="p">, </span><span class="nx">private_zone_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ptr_records</span><span class="p">:</span> <span class="nx">Optional[Sequence[PtrRecordArgs]]</span> = None<span class="p">, </span><span class="nx">record_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">relative_record_set_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">soa_record</span><span class="p">:</span> <span class="nx">Optional[SoaRecordArgs]</span> = None<span class="p">, </span><span class="nx">srv_records</span><span class="p">:</span> <span class="nx">Optional[Sequence[SrvRecordArgs]]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">txt_records</span><span class="p">:</span> <span class="nx">Optional[Sequence[TxtRecordArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RecordSet</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">a_records</span><span class="p">:</span> <span class="nx">Optional[Sequence[ARecordArgs]]</span> = None<span class="p">, </span><span class="nx">aaaa_records</span><span class="p">:</span> <span class="nx">Optional[Sequence[AaaaRecordArgs]]</span> = None<span class="p">, </span><span class="nx">cname_record</span><span class="p">:</span> <span class="nx">Optional[CnameRecordArgs]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">mx_records</span><span class="p">:</span> <span class="nx">Optional[Sequence[MxRecordArgs]]</span> = None<span class="p">, </span><span class="nx">private_zone_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ptr_records</span><span class="p">:</span> <span class="nx">Optional[Sequence[PtrRecordArgs]]</span> = None<span class="p">, </span><span class="nx">record_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">relative_record_set_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">soa_record</span><span class="p">:</span> <span class="nx">Optional[SoaRecordArgs]</span> = None<span class="p">, </span><span class="nx">srv_records</span><span class="p">:</span> <span class="nx">Optional[Sequence[SrvRecordArgs]]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">txt_records</span><span class="p">:</span> <span class="nx">Optional[Sequence[TxtRecordArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1343,7 +1342,7 @@ The RecordSet resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The TTL (time-to-live) of the records in the record set.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1484,7 +1483,7 @@ The RecordSet resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The TTL (time-to-live) of the records in the record set.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1766,7 +1765,7 @@ The RecordSet resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The TTL (time-to-live) of the records in the record set.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2714,7 +2713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expiretime_csharp" style="color: inherit; text-decoration: inherit;">Expire<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The expire time for this SOA record.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2732,7 +2731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimumttl_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The minimum value for this SOA record. By convention this is used to determine the negative caching duration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2741,7 +2740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#refreshtime_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The refresh value for this SOA record.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2750,7 +2749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retrytime_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The retry time for this SOA record.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2759,7 +2758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialnumber_csharp" style="color: inherit; text-decoration: inherit;">Serial<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The serial number for this SOA record.{{% /md %}}</dd>
 </dl>
@@ -2783,7 +2782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expiretime_go" style="color: inherit; text-decoration: inherit;">Expire<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The expire time for this SOA record.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2801,7 +2800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimumttl_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The minimum value for this SOA record. By convention this is used to determine the negative caching duration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2810,7 +2809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#refreshtime_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The refresh value for this SOA record.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2819,7 +2818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retrytime_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The retry time for this SOA record.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2828,7 +2827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialnumber_go" style="color: inherit; text-decoration: inherit;">Serial<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The serial number for this SOA record.{{% /md %}}</dd>
 </dl>
@@ -2921,7 +2920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expire_time_python" style="color: inherit; text-decoration: inherit;">expire_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The expire time for this SOA record.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2939,7 +2938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimum_ttl_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The minimum value for this SOA record. By convention this is used to determine the negative caching duration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2948,7 +2947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#refresh_time_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The refresh value for this SOA record.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2957,7 +2956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retry_time_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The retry time for this SOA record.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2966,7 +2965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serial_number_python" style="color: inherit; text-decoration: inherit;">serial_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The serial number for this SOA record.{{% /md %}}</dd>
 </dl>
@@ -2992,7 +2991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expiretime_csharp" style="color: inherit; text-decoration: inherit;">Expire<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The expire time for this SOA record.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3010,7 +3009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimumttl_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The minimum value for this SOA record. By convention this is used to determine the negative caching duration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3019,7 +3018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#refreshtime_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The refresh value for this SOA record.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3028,7 +3027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retrytime_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The retry time for this SOA record.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3037,7 +3036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialnumber_csharp" style="color: inherit; text-decoration: inherit;">Serial<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The serial number for this SOA record.{{% /md %}}</dd>
 </dl>
@@ -3061,7 +3060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expiretime_go" style="color: inherit; text-decoration: inherit;">Expire<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The expire time for this SOA record.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3079,7 +3078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimumttl_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The minimum value for this SOA record. By convention this is used to determine the negative caching duration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3088,7 +3087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#refreshtime_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The refresh value for this SOA record.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3097,7 +3096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retrytime_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The retry time for this SOA record.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3106,7 +3105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serialnumber_go" style="color: inherit; text-decoration: inherit;">Serial<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The serial number for this SOA record.{{% /md %}}</dd>
 </dl>
@@ -3199,7 +3198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expire_time_python" style="color: inherit; text-decoration: inherit;">expire_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The expire time for this SOA record.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3217,7 +3216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#minimum_ttl_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The minimum value for this SOA record. By convention this is used to determine the negative caching duration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3226,7 +3225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#refresh_time_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The refresh value for this SOA record.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3235,7 +3234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#retry_time_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The retry time for this SOA record.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3244,7 +3243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#serial_number_python" style="color: inherit; text-decoration: inherit;">serial_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The serial number for this SOA record.{{% /md %}}</dd>
 </dl>
@@ -3713,6 +3712,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The text value of this TXT record.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:network/latest:RecordSet recordtxt /subscriptions/subscriptionId/resourceGroups/resourceGroup1/providers/Microsoft.Network/privateDnsZones/privatezone1.com/TXT/recordtxt 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

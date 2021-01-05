@@ -58,7 +58,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Cache. Length of name must be not greater than 80 and chars must be in list of [-0-9a-zA-Z_] char class.{{% /md %}}</dd>
+    <dd>{{% md %}}Name of Cache. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
@@ -82,7 +82,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Cache. Length of name must be not greater than 80 and chars must be in list of [-0-9a-zA-Z_] char class.{{% /md %}}</dd>
+    <dd>{{% md %}}Name of Cache. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
@@ -106,7 +106,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Cache. Length of name must be not greater than 80 and chars must be in list of [-0-9a-zA-Z_] char class.{{% /md %}}</dd>
+    <dd>{{% md %}}Name of Cache. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
@@ -130,7 +130,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of Cache. Length of name must be not greater than 80 and chars must be in list of [-0-9a-zA-Z_] char class.{{% /md %}}</dd>
+    <dd>{{% md %}}Name of Cache. Length of name must not be greater than 80 and chars must be from the [-0-9a-zA-Z_] char class.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
@@ -218,6 +218,15 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of this Cache, in GB.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="directoryservicessettings_csharp">
+<a href="#directoryservicessettings_csharp" style="color: inherit; text-decoration: inherit;">Directory<wbr>Services<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedirectorysettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Outputs.<wbr>Cache<wbr>Directory<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies Directory Services settings of the cache.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="encryptionsettings_csharp">
@@ -379,6 +388,15 @@ The following output properties are available:
     <dd>{{% md %}}The size of this Cache, in GB.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="directoryservicessettings_go">
+<a href="#directoryservicessettings_go" style="color: inherit; text-decoration: inherit;">Directory<wbr>Services<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedirectorysettingsresponse">Cache<wbr>Directory<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies Directory Services settings of the cache.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="encryptionsettings_go">
 <a href="#encryptionsettings_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Settings</a>
 </span>
@@ -536,6 +554,15 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of this Cache, in GB.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="directoryservicessettings_nodejs">
+<a href="#directoryservicessettings_nodejs" style="color: inherit; text-decoration: inherit;">directory<wbr>Services<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedirectorysettingsresponse">Cache<wbr>Directory<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies Directory Services settings of the cache.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="encryptionsettings_nodejs">
@@ -697,6 +724,15 @@ The following output properties are available:
     <dd>{{% md %}}The size of this Cache, in GB.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="directory_services_settings_python">
+<a href="#directory_services_settings_python" style="color: inherit; text-decoration: inherit;">directory_<wbr>services_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cachedirectorysettingsresponse">Cache<wbr>Directory<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies Directory Services settings of the cache.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="encryption_settings_python">
 <a href="#encryption_settings_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>settings</a>
 </span>
@@ -793,6 +829,495 @@ The following output properties are available:
 
 ## Supporting Types
 
+
+<h4 id="cacheactivedirectorysettingsresponse">Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response</h4>
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cachenetbiosname_csharp">
+<a href="#cachenetbiosname_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Net<wbr>Bios<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The NetBIOS name to assign to the HPC Cache when it joins the Active Directory domain as a server. Length must 1-15 characters from the class [-0-9a-zA-Z].{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="domainjoined_csharp">
+<a href="#domainjoined_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Joined</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}True if the HPC Cache is joined to the Active Directory domain.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="domainname_csharp">
+<a href="#domainname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified domain name of the Active Directory domain controller.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="domainnetbiosname_csharp">
+<a href="#domainnetbiosname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Net<wbr>Bios<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Active Directory domain's NetBIOS name.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="primarydnsipaddress_csharp">
+<a href="#primarydnsipaddress_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Dns<wbr>Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Primary DNS IP address used to resolve the Active Directory domain controller's fully qualified domain name.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="credentials_csharp">
+<a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cacheactivedirectorysettingsresponsecredentials">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response<wbr>Credentials<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Active Directory admin credentials used to join the HPC Cache to a domain.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secondarydnsipaddress_csharp">
+<a href="#secondarydnsipaddress_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Dns<wbr>Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Secondary DNS IP address used to resolve the Active Directory domain controller's fully qualified domain name.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cachenetbiosname_go">
+<a href="#cachenetbiosname_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Net<wbr>Bios<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The NetBIOS name to assign to the HPC Cache when it joins the Active Directory domain as a server. Length must 1-15 characters from the class [-0-9a-zA-Z].{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="domainjoined_go">
+<a href="#domainjoined_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Joined</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}True if the HPC Cache is joined to the Active Directory domain.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="domainname_go">
+<a href="#domainname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified domain name of the Active Directory domain controller.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="domainnetbiosname_go">
+<a href="#domainnetbiosname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Net<wbr>Bios<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Active Directory domain's NetBIOS name.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="primarydnsipaddress_go">
+<a href="#primarydnsipaddress_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Dns<wbr>Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Primary DNS IP address used to resolve the Active Directory domain controller's fully qualified domain name.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="credentials_go">
+<a href="#credentials_go" style="color: inherit; text-decoration: inherit;">Credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cacheactivedirectorysettingsresponsecredentials">Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response<wbr>Credentials</a></span>
+    </dt>
+    <dd>{{% md %}}Active Directory admin credentials used to join the HPC Cache to a domain.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secondarydnsipaddress_go">
+<a href="#secondarydnsipaddress_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Dns<wbr>Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Secondary DNS IP address used to resolve the Active Directory domain controller's fully qualified domain name.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cachenetbiosname_nodejs">
+<a href="#cachenetbiosname_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Net<wbr>Bios<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The NetBIOS name to assign to the HPC Cache when it joins the Active Directory domain as a server. Length must 1-15 characters from the class [-0-9a-zA-Z].{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="domainjoined_nodejs">
+<a href="#domainjoined_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Joined</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}True if the HPC Cache is joined to the Active Directory domain.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="domainname_nodejs">
+<a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified domain name of the Active Directory domain controller.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="domainnetbiosname_nodejs">
+<a href="#domainnetbiosname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Net<wbr>Bios<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Active Directory domain's NetBIOS name.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="primarydnsipaddress_nodejs">
+<a href="#primarydnsipaddress_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Dns<wbr>Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Primary DNS IP address used to resolve the Active Directory domain controller's fully qualified domain name.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="credentials_nodejs">
+<a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cacheactivedirectorysettingsresponsecredentials">Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response<wbr>Credentials</a></span>
+    </dt>
+    <dd>{{% md %}}Active Directory admin credentials used to join the HPC Cache to a domain.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secondarydnsipaddress_nodejs">
+<a href="#secondarydnsipaddress_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Dns<wbr>Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Secondary DNS IP address used to resolve the Active Directory domain controller's fully qualified domain name.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cache_net_bios_name_python">
+<a href="#cache_net_bios_name_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>net_<wbr>bios_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The NetBIOS name to assign to the HPC Cache when it joins the Active Directory domain as a server. Length must 1-15 characters from the class [-0-9a-zA-Z].{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="domain_joined_python">
+<a href="#domain_joined_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>joined</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}True if the HPC Cache is joined to the Active Directory domain.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="domain_name_python">
+<a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified domain name of the Active Directory domain controller.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="domain_net_bios_name_python">
+<a href="#domain_net_bios_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>net_<wbr>bios_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Active Directory domain's NetBIOS name.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="primary_dns_ip_address_python">
+<a href="#primary_dns_ip_address_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>dns_<wbr>ip_<wbr>address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Primary DNS IP address used to resolve the Active Directory domain controller's fully qualified domain name.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="credentials_python">
+<a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cacheactivedirectorysettingsresponsecredentials">Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response<wbr>Credentials<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Active Directory admin credentials used to join the HPC Cache to a domain.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secondary_dns_ip_address_python">
+<a href="#secondary_dns_ip_address_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>dns_<wbr>ip_<wbr>address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Secondary DNS IP address used to resolve the Active Directory domain controller's fully qualified domain name.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="cacheactivedirectorysettingsresponsecredentials">Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response<wbr>Credentials</h4>
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="password_csharp">
+<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Plain text password of the Active Directory domain administrator. This value is stored encrypted and not returned on response.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Username of the Active Directory domain administrator. This value is stored encrypted and not returned on response.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="password_go">
+<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Plain text password of the Active Directory domain administrator. This value is stored encrypted and not returned on response.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Username of the Active Directory domain administrator. This value is stored encrypted and not returned on response.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="password_nodejs">
+<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Plain text password of the Active Directory domain administrator. This value is stored encrypted and not returned on response.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Username of the Active Directory domain administrator. This value is stored encrypted and not returned on response.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="password_python">
+<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Plain text password of the Active Directory domain administrator. This value is stored encrypted and not returned on response.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="username_python">
+<a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Username of the Active Directory domain administrator. This value is stored encrypted and not returned on response.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="cachedirectorysettingsresponse">Cache<wbr>Directory<wbr>Settings<wbr>Response</h4>
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="activedirectory_csharp">
+<a href="#activedirectory_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cacheactivedirectorysettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies settings for joining the HPC Cache to an Active Directory domain.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usernamedownload_csharp">
+<a href="#usernamedownload_csharp" style="color: inherit; text-decoration: inherit;">Username<wbr>Download</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies settings for Extended Groups. Extended Groups allows users to be members of more than 16 groups.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="activedirectory_go">
+<a href="#activedirectory_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cacheactivedirectorysettingsresponse">Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies settings for joining the HPC Cache to an Active Directory domain.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usernamedownload_go">
+<a href="#usernamedownload_go" style="color: inherit; text-decoration: inherit;">Username<wbr>Download</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponse">Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies settings for Extended Groups. Extended Groups allows users to be members of more than 16 groups.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="activedirectory_nodejs">
+<a href="#activedirectory_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Directory</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cacheactivedirectorysettingsresponse">Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies settings for joining the HPC Cache to an Active Directory domain.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usernamedownload_nodejs">
+<a href="#usernamedownload_nodejs" style="color: inherit; text-decoration: inherit;">username<wbr>Download</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponse">Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies settings for Extended Groups. Extended Groups allows users to be members of more than 16 groups.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="active_directory_python">
+<a href="#active_directory_python" style="color: inherit; text-decoration: inherit;">active_<wbr>directory</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cacheactivedirectorysettingsresponse">Cache<wbr>Active<wbr>Directory<wbr>Settings<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies settings for joining the HPC Cache to an Active Directory domain.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="username_download_python">
+<a href="#username_download_python" style="color: inherit; text-decoration: inherit;">username_<wbr>download</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponse">Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies settings for Extended Groups. Extended Groups allows users to be members of more than 16 groups.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="cacheencryptionsettingsresponse">Cache<wbr>Encryption<wbr>Settings<wbr>Response</h4>
 
@@ -1285,13 +1810,13 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rootsquash_csharp">
-<a href="#rootsquash_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Squash</a>
+        <span id="accesspolicies_csharp">
+<a href="#accesspolicies_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="#nfsaccesspolicyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Nfs<wbr>Access<wbr>Policy<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}root squash of cache property.{{% /md %}}</dd>
+    <dd>{{% md %}}NFS access policies defined for this cache.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1300,13 +1825,13 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rootsquash_go">
-<a href="#rootsquash_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Squash</a>
+        <span id="accesspolicies_go">
+<a href="#accesspolicies_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="#nfsaccesspolicyresponse">[]Nfs<wbr>Access<wbr>Policy<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}root squash of cache property.{{% /md %}}</dd>
+    <dd>{{% md %}}NFS access policies defined for this cache.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1315,13 +1840,13 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="rootsquash_nodejs">
-<a href="#rootsquash_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Squash</a>
+        <span id="accesspolicies_nodejs">
+<a href="#accesspolicies_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="#nfsaccesspolicyresponse">Nfs<wbr>Access<wbr>Policy<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}root squash of cache property.{{% /md %}}</dd>
+    <dd>{{% md %}}NFS access policies defined for this cache.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1330,13 +1855,13 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="root_squash_python">
-<a href="#root_squash_python" style="color: inherit; text-decoration: inherit;">root_<wbr>squash</a>
+        <span id="access_policies_python">
+<a href="#access_policies_python" style="color: inherit; text-decoration: inherit;">access_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="#nfsaccesspolicyresponse">Sequence[Nfs<wbr>Access<wbr>Policy<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}root squash of cache property.{{% /md %}}</dd>
+    <dd>{{% md %}}NFS access policies defined for this cache.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1551,6 +2076,572 @@ The following output properties are available:
 </dl>
 {{% /choosable %}}
 
+<h4 id="cacheusernamedownloadsettingsresponse">Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response</h4>
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="usernamedownloaded_csharp">
+<a href="#usernamedownloaded_csharp" style="color: inherit; text-decoration: inherit;">Username<wbr>Downloaded</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether or not the HPC Cache has performed the username download successfully.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autodownloadcertificate_csharp">
+<a href="#autodownloadcertificate_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Download<wbr>Certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Determines if the certificate should be automatically downloaded. This applies to 'caCertificateURI' only if 'requireValidCertificate' is true.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cacertificateuri_csharp">
+<a href="#cacertificateuri_csharp" style="color: inherit; text-decoration: inherit;">Ca<wbr>Certificate<wbr>URI</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI of the CA certificate to validate the LDAP secure connection. This field must be populated when 'requireValidCertificate' is set to true.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="credentials_csharp">
+<a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponsecredentials">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response<wbr>Credentials<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}When present, these are the credentials for the secure LDAP connection.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryptldapconnection_csharp">
+<a href="#encryptldapconnection_csharp" style="color: inherit; text-decoration: inherit;">Encrypt<wbr>Ldap<wbr>Connection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not the LDAP connection should be encrypted.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedgroupsenabled_csharp">
+<a href="#extendedgroupsenabled_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Groups<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not Extended Groups is enabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="groupfileuri_csharp">
+<a href="#groupfileuri_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>File<wbr>URI</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI of the file containing group information (in /etc/group file format). This field must be populated when 'usernameSource' is set to 'File'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ldapbasedn_csharp">
+<a href="#ldapbasedn_csharp" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Base<wbr>Dn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The base distinguished name for the LDAP domain.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ldapserver_csharp">
+<a href="#ldapserver_csharp" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Server</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified domain name or IP address of the LDAP server to use.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requirevalidcertificate_csharp">
+<a href="#requirevalidcertificate_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Valid<wbr>Certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Determines if the certificates must be validated by a certificate authority. When true, caCertificateURI must be provided.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userfileuri_csharp">
+<a href="#userfileuri_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>File<wbr>URI</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI of the file containing user information (in /etc/passwd file format). This field must be populated when 'usernameSource' is set to 'File'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usernamesource_csharp">
+<a href="#usernamesource_csharp" style="color: inherit; text-decoration: inherit;">Username<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This setting determines how the cache gets username and group names for clients.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="usernamedownloaded_go">
+<a href="#usernamedownloaded_go" style="color: inherit; text-decoration: inherit;">Username<wbr>Downloaded</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether or not the HPC Cache has performed the username download successfully.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autodownloadcertificate_go">
+<a href="#autodownloadcertificate_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Download<wbr>Certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Determines if the certificate should be automatically downloaded. This applies to 'caCertificateURI' only if 'requireValidCertificate' is true.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cacertificateuri_go">
+<a href="#cacertificateuri_go" style="color: inherit; text-decoration: inherit;">Ca<wbr>Certificate<wbr>URI</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI of the CA certificate to validate the LDAP secure connection. This field must be populated when 'requireValidCertificate' is set to true.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="credentials_go">
+<a href="#credentials_go" style="color: inherit; text-decoration: inherit;">Credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponsecredentials">Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response<wbr>Credentials</a></span>
+    </dt>
+    <dd>{{% md %}}When present, these are the credentials for the secure LDAP connection.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryptldapconnection_go">
+<a href="#encryptldapconnection_go" style="color: inherit; text-decoration: inherit;">Encrypt<wbr>Ldap<wbr>Connection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not the LDAP connection should be encrypted.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedgroupsenabled_go">
+<a href="#extendedgroupsenabled_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Groups<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not Extended Groups is enabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="groupfileuri_go">
+<a href="#groupfileuri_go" style="color: inherit; text-decoration: inherit;">Group<wbr>File<wbr>URI</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI of the file containing group information (in /etc/group file format). This field must be populated when 'usernameSource' is set to 'File'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ldapbasedn_go">
+<a href="#ldapbasedn_go" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Base<wbr>Dn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The base distinguished name for the LDAP domain.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ldapserver_go">
+<a href="#ldapserver_go" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Server</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified domain name or IP address of the LDAP server to use.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requirevalidcertificate_go">
+<a href="#requirevalidcertificate_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Valid<wbr>Certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Determines if the certificates must be validated by a certificate authority. When true, caCertificateURI must be provided.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userfileuri_go">
+<a href="#userfileuri_go" style="color: inherit; text-decoration: inherit;">User<wbr>File<wbr>URI</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI of the file containing user information (in /etc/passwd file format). This field must be populated when 'usernameSource' is set to 'File'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usernamesource_go">
+<a href="#usernamesource_go" style="color: inherit; text-decoration: inherit;">Username<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This setting determines how the cache gets username and group names for clients.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="usernamedownloaded_nodejs">
+<a href="#usernamedownloaded_nodejs" style="color: inherit; text-decoration: inherit;">username<wbr>Downloaded</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether or not the HPC Cache has performed the username download successfully.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autodownloadcertificate_nodejs">
+<a href="#autodownloadcertificate_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Download<wbr>Certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Determines if the certificate should be automatically downloaded. This applies to 'caCertificateURI' only if 'requireValidCertificate' is true.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cacertificateuri_nodejs">
+<a href="#cacertificateuri_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Certificate<wbr>URI</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI of the CA certificate to validate the LDAP secure connection. This field must be populated when 'requireValidCertificate' is set to true.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="credentials_nodejs">
+<a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponsecredentials">Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response<wbr>Credentials</a></span>
+    </dt>
+    <dd>{{% md %}}When present, these are the credentials for the secure LDAP connection.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryptldapconnection_nodejs">
+<a href="#encryptldapconnection_nodejs" style="color: inherit; text-decoration: inherit;">encrypt<wbr>Ldap<wbr>Connection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether or not the LDAP connection should be encrypted.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedgroupsenabled_nodejs">
+<a href="#extendedgroupsenabled_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Groups<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether or not Extended Groups is enabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="groupfileuri_nodejs">
+<a href="#groupfileuri_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>File<wbr>URI</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI of the file containing group information (in /etc/group file format). This field must be populated when 'usernameSource' is set to 'File'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ldapbasedn_nodejs">
+<a href="#ldapbasedn_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>Base<wbr>Dn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The base distinguished name for the LDAP domain.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ldapserver_nodejs">
+<a href="#ldapserver_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>Server</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified domain name or IP address of the LDAP server to use.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requirevalidcertificate_nodejs">
+<a href="#requirevalidcertificate_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Valid<wbr>Certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Determines if the certificates must be validated by a certificate authority. When true, caCertificateURI must be provided.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userfileuri_nodejs">
+<a href="#userfileuri_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>File<wbr>URI</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI of the file containing user information (in /etc/passwd file format). This field must be populated when 'usernameSource' is set to 'File'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usernamesource_nodejs">
+<a href="#usernamesource_nodejs" style="color: inherit; text-decoration: inherit;">username<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This setting determines how the cache gets username and group names for clients.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="username_downloaded_python">
+<a href="#username_downloaded_python" style="color: inherit; text-decoration: inherit;">username_<wbr>downloaded</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether or not the HPC Cache has performed the username download successfully.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="auto_download_certificate_python">
+<a href="#auto_download_certificate_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>download_<wbr>certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Determines if the certificate should be automatically downloaded. This applies to 'caCertificateURI' only if 'requireValidCertificate' is true.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ca_certificate_uri_python">
+<a href="#ca_certificate_uri_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>certificate_<wbr>uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The URI of the CA certificate to validate the LDAP secure connection. This field must be populated when 'requireValidCertificate' is set to true.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="credentials_python">
+<a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cacheusernamedownloadsettingsresponsecredentials">Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response<wbr>Credentials<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}When present, these are the credentials for the secure LDAP connection.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encrypt_ldap_connection_python">
+<a href="#encrypt_ldap_connection_python" style="color: inherit; text-decoration: inherit;">encrypt_<wbr>ldap_<wbr>connection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not the LDAP connection should be encrypted.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extended_groups_enabled_python">
+<a href="#extended_groups_enabled_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>groups_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not Extended Groups is enabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="group_file_uri_python">
+<a href="#group_file_uri_python" style="color: inherit; text-decoration: inherit;">group_<wbr>file_<wbr>uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The URI of the file containing group information (in /etc/group file format). This field must be populated when 'usernameSource' is set to 'File'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ldap_base_dn_python">
+<a href="#ldap_base_dn_python" style="color: inherit; text-decoration: inherit;">ldap_<wbr>base_<wbr>dn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The base distinguished name for the LDAP domain.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ldap_server_python">
+<a href="#ldap_server_python" style="color: inherit; text-decoration: inherit;">ldap_<wbr>server</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified domain name or IP address of the LDAP server to use.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="require_valid_certificate_python">
+<a href="#require_valid_certificate_python" style="color: inherit; text-decoration: inherit;">require_<wbr>valid_<wbr>certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Determines if the certificates must be validated by a certificate authority. When true, caCertificateURI must be provided.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="user_file_uri_python">
+<a href="#user_file_uri_python" style="color: inherit; text-decoration: inherit;">user_<wbr>file_<wbr>uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The URI of the file containing user information (in /etc/passwd file format). This field must be populated when 'usernameSource' is set to 'File'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="username_source_python">
+<a href="#username_source_python" style="color: inherit; text-decoration: inherit;">username_<wbr>source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}This setting determines how the cache gets username and group names for clients.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="cacheusernamedownloadsettingsresponsecredentials">Cache<wbr>Username<wbr>Download<wbr>Settings<wbr>Response<wbr>Credentials</h4>
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="binddn_csharp">
+<a href="#binddn_csharp" style="color: inherit; text-decoration: inherit;">Bind<wbr>Dn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Bind Distinguished Name identity to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bindpassword_csharp">
+<a href="#bindpassword_csharp" style="color: inherit; text-decoration: inherit;">Bind<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Bind password to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="binddn_go">
+<a href="#binddn_go" style="color: inherit; text-decoration: inherit;">Bind<wbr>Dn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Bind Distinguished Name identity to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bindpassword_go">
+<a href="#bindpassword_go" style="color: inherit; text-decoration: inherit;">Bind<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Bind password to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="binddn_nodejs">
+<a href="#binddn_nodejs" style="color: inherit; text-decoration: inherit;">bind<wbr>Dn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Bind Distinguished Name identity to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bindpassword_nodejs">
+<a href="#bindpassword_nodejs" style="color: inherit; text-decoration: inherit;">bind<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Bind password to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bind_dn_python">
+<a href="#bind_dn_python" style="color: inherit; text-decoration: inherit;">bind_<wbr>dn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Bind Distinguished Name identity to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bind_password_python">
+<a href="#bind_password_python" style="color: inherit; text-decoration: inherit;">bind_<wbr>password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Bind password to be used in the secure LDAP connection. This value is stored encrypted and not returned on response.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="keyvaultkeyreferenceresponse">Key<wbr>Vault<wbr>Key<wbr>Reference<wbr>Response</h4>
 
 
@@ -1718,6 +2809,428 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="nfsaccesspolicyresponse">Nfs<wbr>Access<wbr>Policy<wbr>Response</h4>
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="accessrules_csharp">
+<a href="#accessrules_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nfsaccessruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Cache.<wbr>Inputs.<wbr>Nfs<wbr>Access<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The set of rules describing client accesses allowed under this policy.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name identifying this policy. Access Policy names are not case sensitive.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="accessrules_go">
+<a href="#accessrules_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nfsaccessruleresponse">[]Nfs<wbr>Access<wbr>Rule<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The set of rules describing client accesses allowed under this policy.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name identifying this policy. Access Policy names are not case sensitive.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="accessrules_nodejs">
+<a href="#accessrules_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nfsaccessruleresponse">Nfs<wbr>Access<wbr>Rule<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The set of rules describing client accesses allowed under this policy.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name identifying this policy. Access Policy names are not case sensitive.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="access_rules_python">
+<a href="#access_rules_python" style="color: inherit; text-decoration: inherit;">access_<wbr>rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nfsaccessruleresponse">Sequence[Nfs<wbr>Access<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The set of rules describing client accesses allowed under this policy.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name identifying this policy. Access Policy names are not case sensitive.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="nfsaccessruleresponse">Nfs<wbr>Access<wbr>Rule<wbr>Response</h4>
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="access_csharp">
+<a href="#access_csharp" style="color: inherit; text-decoration: inherit;">Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Access allowed by this rule.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="scope_csharp">
+<a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Scope for this rule. The scope and filter determine which clients match the rule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="anonymousgid_csharp">
+<a href="#anonymousgid_csharp" style="color: inherit; text-decoration: inherit;">Anonymous<wbr>GID</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}GID value that replaces 0 when rootSquash is true.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="anonymousuid_csharp">
+<a href="#anonymousuid_csharp" style="color: inherit; text-decoration: inherit;">Anonymous<wbr>UID</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}UID value that replaces 0 when rootSquash is true.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filter_csharp">
+<a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Filter applied to the scope for this rule. The filter's format depends on its scope. 'default' scope matches all clients and has no filter value. 'network' scope takes a filter in CIDR format (for example, 10.99.1.0/24). 'host' takes an IP address or fully qualified domain name as filter. If a client does not match any filter rule and there is no default rule, access is denied.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rootsquash_csharp">
+<a href="#rootsquash_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Squash</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Map root accesses to anonymousUID and anonymousGID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="submountaccess_csharp">
+<a href="#submountaccess_csharp" style="color: inherit; text-decoration: inherit;">Submount<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}For the default policy, allow access to subdirectories under the root export. If this is set to no, clients can only mount the path '/'. If set to yes, clients can mount a deeper path, like '/a/b'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="suid_csharp">
+<a href="#suid_csharp" style="color: inherit; text-decoration: inherit;">Suid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Allow SUID semantics.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="access_go">
+<a href="#access_go" style="color: inherit; text-decoration: inherit;">Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Access allowed by this rule.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="scope_go">
+<a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Scope for this rule. The scope and filter determine which clients match the rule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="anonymousgid_go">
+<a href="#anonymousgid_go" style="color: inherit; text-decoration: inherit;">Anonymous<wbr>GID</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}GID value that replaces 0 when rootSquash is true.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="anonymousuid_go">
+<a href="#anonymousuid_go" style="color: inherit; text-decoration: inherit;">Anonymous<wbr>UID</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}UID value that replaces 0 when rootSquash is true.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filter_go">
+<a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Filter applied to the scope for this rule. The filter's format depends on its scope. 'default' scope matches all clients and has no filter value. 'network' scope takes a filter in CIDR format (for example, 10.99.1.0/24). 'host' takes an IP address or fully qualified domain name as filter. If a client does not match any filter rule and there is no default rule, access is denied.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rootsquash_go">
+<a href="#rootsquash_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Squash</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Map root accesses to anonymousUID and anonymousGID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="submountaccess_go">
+<a href="#submountaccess_go" style="color: inherit; text-decoration: inherit;">Submount<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}For the default policy, allow access to subdirectories under the root export. If this is set to no, clients can only mount the path '/'. If set to yes, clients can mount a deeper path, like '/a/b'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="suid_go">
+<a href="#suid_go" style="color: inherit; text-decoration: inherit;">Suid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Allow SUID semantics.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="access_nodejs">
+<a href="#access_nodejs" style="color: inherit; text-decoration: inherit;">access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Access allowed by this rule.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="scope_nodejs">
+<a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Scope for this rule. The scope and filter determine which clients match the rule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="anonymousgid_nodejs">
+<a href="#anonymousgid_nodejs" style="color: inherit; text-decoration: inherit;">anonymous<wbr>GID</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}GID value that replaces 0 when rootSquash is true.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="anonymousuid_nodejs">
+<a href="#anonymousuid_nodejs" style="color: inherit; text-decoration: inherit;">anonymous<wbr>UID</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}UID value that replaces 0 when rootSquash is true.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filter_nodejs">
+<a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Filter applied to the scope for this rule. The filter's format depends on its scope. 'default' scope matches all clients and has no filter value. 'network' scope takes a filter in CIDR format (for example, 10.99.1.0/24). 'host' takes an IP address or fully qualified domain name as filter. If a client does not match any filter rule and there is no default rule, access is denied.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rootsquash_nodejs">
+<a href="#rootsquash_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Squash</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Map root accesses to anonymousUID and anonymousGID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="submountaccess_nodejs">
+<a href="#submountaccess_nodejs" style="color: inherit; text-decoration: inherit;">submount<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}For the default policy, allow access to subdirectories under the root export. If this is set to no, clients can only mount the path '/'. If set to yes, clients can mount a deeper path, like '/a/b'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="suid_nodejs">
+<a href="#suid_nodejs" style="color: inherit; text-decoration: inherit;">suid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Allow SUID semantics.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="access_python">
+<a href="#access_python" style="color: inherit; text-decoration: inherit;">access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Access allowed by this rule.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="scope_python">
+<a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Scope for this rule. The scope and filter determine which clients match the rule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="anonymous_gid_python">
+<a href="#anonymous_gid_python" style="color: inherit; text-decoration: inherit;">anonymous_<wbr>gid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}GID value that replaces 0 when rootSquash is true.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="anonymous_uid_python">
+<a href="#anonymous_uid_python" style="color: inherit; text-decoration: inherit;">anonymous_<wbr>uid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}UID value that replaces 0 when rootSquash is true.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filter_python">
+<a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Filter applied to the scope for this rule. The filter's format depends on its scope. 'default' scope matches all clients and has no filter value. 'network' scope takes a filter in CIDR format (for example, 10.99.1.0/24). 'host' takes an IP address or fully qualified domain name as filter. If a client does not match any filter rule and there is no default rule, access is denied.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="root_squash_python">
+<a href="#root_squash_python" style="color: inherit; text-decoration: inherit;">root_<wbr>squash</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Map root accesses to anonymousUID and anonymousGID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="submount_access_python">
+<a href="#submount_access_python" style="color: inherit; text-decoration: inherit;">submount_<wbr>access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}For the default policy, allow access to subdirectories under the root export. If this is set to no, clients can only mount the path '/'. If set to yes, clients can mount a deeper path, like '/a/b'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="suid_python">
+<a href="#suid_python" style="color: inherit; text-decoration: inherit;">suid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Allow SUID semantics.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

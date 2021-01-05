@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.cache.Redis resource with exampl
 A single Redis item in List or Get Operation.
 Latest API Version: 2020-06-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2588,6 +2587,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>1.2</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:cache/latest:Redis cache1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/cache1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

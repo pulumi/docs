@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.network.Zone resource with examp
 Describes a DNS zone.
 Latest API Version: 2018-05-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -631,7 +630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxnumberofrecordsets_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Number<wbr>Of<wbr>Record<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The maximum number of record sets that can be created in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
     <dt class="property-"
@@ -640,7 +639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxnumberofrecordsperrecordset_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Number<wbr>Of<wbr>Records<wbr>Per<wbr>Record<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The maximum number of records per record set that can be created in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
     <dt class="property-"
@@ -667,7 +666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numberofrecordsets_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Record<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The current number of record sets in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
     <dt class="property-"
@@ -700,7 +699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxnumberofrecordsets_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Number<wbr>Of<wbr>Record<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The maximum number of record sets that can be created in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
     <dt class="property-"
@@ -709,7 +708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxnumberofrecordsperrecordset_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Number<wbr>Of<wbr>Records<wbr>Per<wbr>Record<wbr>Set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The maximum number of records per record set that can be created in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
     <dt class="property-"
@@ -736,7 +735,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#numberofrecordsets_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Record<wbr>Sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The current number of record sets in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
     <dt class="property-"
@@ -838,7 +837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_number_of_record_sets_python" style="color: inherit; text-decoration: inherit;">max_<wbr>number_<wbr>of_<wbr>record_<wbr>sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The maximum number of record sets that can be created in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
     <dt class="property-"
@@ -847,7 +846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_number_of_records_per_record_set_python" style="color: inherit; text-decoration: inherit;">max_<wbr>number_<wbr>of_<wbr>records_<wbr>per_<wbr>record_<wbr>set</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The maximum number of records per record set that can be created in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
     <dt class="property-"
@@ -874,7 +873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#number_of_record_sets_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>record_<wbr>sets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The current number of record sets in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
     <dt class="property-"
@@ -1060,6 +1059,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Private</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:network/latest:Zone zone1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/dnsZones/zone1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.blueprint.Blueprint resource wit
 
 Represents a Blueprint definition.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -35,26 +34,17 @@ class MyStack : Stack
             {
                 { "costCenter", new AzureNextGen.Blueprint.V20181101Preview.Inputs.ParameterDefinitionArgs
                 {
-                    Metadata = 
-                    {
-                        { "displayName", "force cost center tag for all resources under given subscription." },
-                    },
+                    DisplayName = "force cost center tag for all resources under given subscription.",
                     Type = "string",
                 } },
                 { "owners", new AzureNextGen.Blueprint.V20181101Preview.Inputs.ParameterDefinitionArgs
                 {
-                    Metadata = 
-                    {
-                        { "displayName", "assign owners to subscription along with blueprint assignment." },
-                    },
+                    DisplayName = "assign owners to subscription along with blueprint assignment.",
                     Type = "array",
                 } },
                 { "storageAccountType", new AzureNextGen.Blueprint.V20181101Preview.Inputs.ParameterDefinitionArgs
                 {
-                    Metadata = 
-                    {
-                        { "displayName", "storage account type." },
-                    },
+                    DisplayName = "storage account type.",
                     Type = "string",
                 } },
             },
@@ -62,11 +52,8 @@ class MyStack : Stack
             {
                 { "storageRG", new AzureNextGen.Blueprint.V20181101Preview.Inputs.ResourceGroupDefinitionArgs
                 {
-                    Metadata = 
-                    {
-                        { "description", "Contains storageAccounts that collect all shoebox logs." },
-                        { "displayName", "storage resource group" },
-                    },
+                    Description = "Contains storageAccounts that collect all shoebox logs.",
+                    DisplayName = "storage resource group",
                 } },
             },
             ResourceScope = "providers/Microsoft.Management/managementGroups/ContosoOnlineGroup",
@@ -95,30 +82,22 @@ blueprint = azure_nextgen.blueprint.v20181101preview.Blueprint("blueprint",
     description="blueprint contains all artifact kinds {'template', 'rbac', 'policy'}",
     parameters={
         "costCenter": azure_nextgen.blueprint.v20181101preview.ParameterDefinitionArgs(
-            metadata={
-                "displayName": "force cost center tag for all resources under given subscription.",
-            },
+            display_name="force cost center tag for all resources under given subscription.",
             type="string",
         ),
         "owners": azure_nextgen.blueprint.v20181101preview.ParameterDefinitionArgs(
-            metadata={
-                "displayName": "assign owners to subscription along with blueprint assignment.",
-            },
+            display_name="assign owners to subscription along with blueprint assignment.",
             type="array",
         ),
         "storageAccountType": azure_nextgen.blueprint.v20181101preview.ParameterDefinitionArgs(
-            metadata={
-                "displayName": "storage account type.",
-            },
+            display_name="storage account type.",
             type="string",
         ),
     },
     resource_groups={
         "storageRG": azure_nextgen.blueprint.v20181101preview.ResourceGroupDefinitionArgs(
-            metadata={
-                "description": "Contains storageAccounts that collect all shoebox logs.",
-                "displayName": "storage resource group",
-            },
+            description="Contains storageAccounts that collect all shoebox logs.",
+            display_name="storage resource group",
         ),
     },
     resource_scope="providers/Microsoft.Management/managementGroups/ContosoOnlineGroup",
@@ -139,30 +118,22 @@ const blueprint = new azure_nextgen.blueprint.v20181101preview.Blueprint("bluepr
     description: "blueprint contains all artifact kinds {'template', 'rbac', 'policy'}",
     parameters: {
         costCenter: {
-            metadata: {
-                displayName: "force cost center tag for all resources under given subscription.",
-            },
+            displayName: "force cost center tag for all resources under given subscription.",
             type: "string",
         },
         owners: {
-            metadata: {
-                displayName: "assign owners to subscription along with blueprint assignment.",
-            },
+            displayName: "assign owners to subscription along with blueprint assignment.",
             type: "array",
         },
         storageAccountType: {
-            metadata: {
-                displayName: "storage account type.",
-            },
+            displayName: "storage account type.",
             type: "string",
         },
     },
     resourceGroups: {
         storageRG: {
-            metadata: {
-                description: "Contains storageAccounts that collect all shoebox logs.",
-                displayName: "storage resource group",
-            },
+            description: "Contains storageAccounts that collect all shoebox logs.",
+            displayName: "storage resource group",
         },
     },
     resourceScope: "providers/Microsoft.Management/managementGroups/ContosoOnlineGroup",
@@ -191,11 +162,8 @@ class MyStack : Stack
             {
                 { "myRGName", new AzureNextGen.Blueprint.V20181101Preview.Inputs.ResourceGroupDefinitionArgs
                 {
+                    DisplayName = "My Resource Group",
                     Location = "westus",
-                    Metadata = 
-                    {
-                        { "displayName", "My Resource Group" },
-                    },
                     Name = "myRGName",
                     Tags = 
                     {
@@ -230,10 +198,8 @@ blueprint = azure_nextgen.blueprint.v20181101preview.Blueprint("blueprint",
     description="An example blueprint containing an RG with two tags.",
     resource_groups={
         "myRGName": azure_nextgen.blueprint.v20181101preview.ResourceGroupDefinitionArgs(
+            display_name="My Resource Group",
             location="westus",
-            metadata={
-                "displayName": "My Resource Group",
-            },
             name="myRGName",
             tags={
                 "costcenter": "123456",
@@ -259,10 +225,8 @@ const blueprint = new azure_nextgen.blueprint.v20181101preview.Blueprint("bluepr
     description: "An example blueprint containing an RG with two tags.",
     resourceGroups: {
         myRGName: {
+            displayName: "My Resource Group",
             location: "westus",
-            metadata: {
-                displayName: "My Resource Group",
-            },
             name: "myRGName",
             tags: {
                 costcenter: "123456",
@@ -296,26 +260,17 @@ class MyStack : Stack
             {
                 { "costCenter", new AzureNextGen.Blueprint.V20181101Preview.Inputs.ParameterDefinitionArgs
                 {
-                    Metadata = 
-                    {
-                        { "displayName", "force cost center tag for all resources under given subscription." },
-                    },
+                    DisplayName = "force cost center tag for all resources under given subscription.",
                     Type = "string",
                 } },
                 { "owners", new AzureNextGen.Blueprint.V20181101Preview.Inputs.ParameterDefinitionArgs
                 {
-                    Metadata = 
-                    {
-                        { "displayName", "assign owners to subscription along with blueprint assignment." },
-                    },
+                    DisplayName = "assign owners to subscription along with blueprint assignment.",
                     Type = "array",
                 } },
                 { "storageAccountType", new AzureNextGen.Blueprint.V20181101Preview.Inputs.ParameterDefinitionArgs
                 {
-                    Metadata = 
-                    {
-                        { "displayName", "storage account type." },
-                    },
+                    DisplayName = "storage account type.",
                     Type = "string",
                 } },
             },
@@ -323,11 +278,8 @@ class MyStack : Stack
             {
                 { "storageRG", new AzureNextGen.Blueprint.V20181101Preview.Inputs.ResourceGroupDefinitionArgs
                 {
-                    Metadata = 
-                    {
-                        { "description", "Contains storageAccounts that collect all shoebox logs." },
-                        { "displayName", "storage resource group" },
-                    },
+                    Description = "Contains storageAccounts that collect all shoebox logs.",
+                    DisplayName = "storage resource group",
                 } },
             },
             ResourceScope = "subscriptions/00000000-0000-0000-0000-000000000000",
@@ -356,30 +308,22 @@ blueprint = azure_nextgen.blueprint.v20181101preview.Blueprint("blueprint",
     description="blueprint contains all artifact kinds {'template', 'rbac', 'policy'}",
     parameters={
         "costCenter": azure_nextgen.blueprint.v20181101preview.ParameterDefinitionArgs(
-            metadata={
-                "displayName": "force cost center tag for all resources under given subscription.",
-            },
+            display_name="force cost center tag for all resources under given subscription.",
             type="string",
         ),
         "owners": azure_nextgen.blueprint.v20181101preview.ParameterDefinitionArgs(
-            metadata={
-                "displayName": "assign owners to subscription along with blueprint assignment.",
-            },
+            display_name="assign owners to subscription along with blueprint assignment.",
             type="array",
         ),
         "storageAccountType": azure_nextgen.blueprint.v20181101preview.ParameterDefinitionArgs(
-            metadata={
-                "displayName": "storage account type.",
-            },
+            display_name="storage account type.",
             type="string",
         ),
     },
     resource_groups={
         "storageRG": azure_nextgen.blueprint.v20181101preview.ResourceGroupDefinitionArgs(
-            metadata={
-                "description": "Contains storageAccounts that collect all shoebox logs.",
-                "displayName": "storage resource group",
-            },
+            description="Contains storageAccounts that collect all shoebox logs.",
+            display_name="storage resource group",
         ),
     },
     resource_scope="subscriptions/00000000-0000-0000-0000-000000000000",
@@ -400,30 +344,22 @@ const blueprint = new azure_nextgen.blueprint.v20181101preview.Blueprint("bluepr
     description: "blueprint contains all artifact kinds {'template', 'rbac', 'policy'}",
     parameters: {
         costCenter: {
-            metadata: {
-                displayName: "force cost center tag for all resources under given subscription.",
-            },
+            displayName: "force cost center tag for all resources under given subscription.",
             type: "string",
         },
         owners: {
-            metadata: {
-                displayName: "assign owners to subscription along with blueprint assignment.",
-            },
+            displayName: "assign owners to subscription along with blueprint assignment.",
             type: "array",
         },
         storageAccountType: {
-            metadata: {
-                displayName: "storage account type.",
-            },
+            displayName: "storage account type.",
             type: "string",
         },
     },
     resourceGroups: {
         storageRG: {
-            metadata: {
-                description: "Contains storageAccounts that collect all shoebox logs.",
-                displayName: "storage resource group",
-            },
+            description: "Contains storageAccounts that collect all shoebox logs.",
+            displayName: "storage resource group",
         },
     },
     resourceScope: "subscriptions/00000000-0000-0000-0000-000000000000",
@@ -2400,6 +2336,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>secureString</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:blueprint/v20181101preview:Blueprint simpleBlueprint /subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Blueprint/blueprints/simpleBlueprint 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

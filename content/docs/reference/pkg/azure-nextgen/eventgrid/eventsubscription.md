@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.eventgrid.EventSubscription reso
 Event Subscription
 Latest API Version: 2020-06-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2052,7 +2051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#advancedfilters_csharp" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Args&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span>
+        <span class="property-type">List&lt;object&gt;</span>
     </dt>
     <dd>{{% md %}}An array of advanced filters that are used for filtering event subscriptions.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2274,7 +2273,7 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 <a href="#advancedfilters_csharp" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Filters</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Bool<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Number<wbr>Greater<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Number<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Number<wbr>Less<wbr>Than<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equals<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>Number<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>String<wbr>Begins<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>String<wbr>Contains<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>String<wbr>Ends<wbr>With<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>String<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Event<wbr>Grid.<wbr>Inputs.<wbr>String<wbr>Not<wbr>In<wbr>Advanced<wbr>Filter<wbr>Response<wbr>Args&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span>
+        <span class="property-type">List&lt;object&gt;</span>
     </dt>
     <dd>{{% md %}}An array of advanced filters that are used for filtering event subscriptions.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6048,6 +6047,16 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
     <dd>{{% md %}}Preferred batch size in Kilobytes.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:eventgrid/latest:EventSubscription examplesubscription3 /subscriptions/5b4b650e-28b9-4790-b3ab-ddbd88d727c4/providers/Microsoft.EventGrid/eventSubscriptions/examplesubscription3 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.databoxedge.Device resource with
 The Data Box Edge/Gateway device.
 Latest API Version: 2019-08-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -729,7 +728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#devicelocalcapacity_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Local<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The Data Box Edge/Gateway device local capacity in MB.{{% /md %}}</dd>
     <dt class="property-"
@@ -852,7 +851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#devicelocalcapacity_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Local<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The Data Box Edge/Gateway device local capacity in MB.{{% /md %}}</dd>
     <dt class="property-"
@@ -1098,7 +1097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#device_local_capacity_python" style="color: inherit; text-decoration: inherit;">device_<wbr>local_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The Data Box Edge/Gateway device local capacity in MB.{{% /md %}}</dd>
     <dt class="property-"
@@ -1592,6 +1591,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Standard</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:databoxedge/latest:Device testedgedevice <Azure resource ID> 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

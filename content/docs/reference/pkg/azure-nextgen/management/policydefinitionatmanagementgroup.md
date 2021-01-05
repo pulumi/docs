@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.management.PolicyDefinitionAtMan
 The policy definition.
 Latest API Version: 2020-09-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1671,6 +1670,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Static</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:management/latest:PolicyDefinitionAtManagementGroup ResourceNaming /providers/Microsoft.Management/managementgroups/MyManagementGroup/providers/Microsoft.Authorization/policyDefinitions/ResourceNaming 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

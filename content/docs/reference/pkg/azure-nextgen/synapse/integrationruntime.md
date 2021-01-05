@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.synapse.IntegrationRuntime resou
 
 Integration runtime resource type.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3295,7 +3294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expresscustomsetupproperties_csharp" style="color: inherit; text-decoration: inherit;">Express<wbr>Custom<wbr>Setup<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Cmdkey<wbr>Setup<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Component<wbr>Setup<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Environment<wbr>Variable<wbr>Setup<wbr>Args&gt;&gt;&gt;</span>
+        <span class="property-type">List&lt;object&gt;</span>
     </dt>
     <dd>{{% md %}}Custom setup without script properties for a SSIS integration runtime.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3537,7 +3536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#expresscustomsetupproperties_csharp" style="color: inherit; text-decoration: inherit;">Express<wbr>Custom<wbr>Setup<wbr>Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Cmdkey<wbr>Setup<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Component<wbr>Setup<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Environment<wbr>Variable<wbr>Setup<wbr>Response<wbr>Args&gt;&gt;&gt;</span>
+        <span class="property-type">List&lt;object&gt;</span>
     </dt>
     <dd>{{% md %}}Custom setup without script properties for a SSIS integration runtime.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4871,6 +4870,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Linked integration runtime type from data factory{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:synapse/v20190601preview:IntegrationRuntime exampleIntegrationRuntime /subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.Synapse/workspaces/exampleWorkspaceName/integrationruntimes/exampleIntegrationRuntime 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

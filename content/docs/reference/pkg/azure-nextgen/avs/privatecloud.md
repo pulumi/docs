@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.avs.PrivateCloud resource with e
 A private cloud resource
 Latest API Version: 2020-03-20.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2679,6 +2678,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Disabled</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:avs/latest:PrivateCloud cloud1 /subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.network.HubRouteTable resource w
 RouteTable resource in a virtual hub.
 Latest API Version: 2020-07-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1293,6 +1292,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The type of next hop (eg: ResourceId).{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:network/latest:HubRouteTable hubRouteTable1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/routeTables/virtualHubRouteTable1a 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

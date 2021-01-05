@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.documentdb.DatabaseAccount resou
 An Azure Cosmos DB database account.
 Latest API Version: 2020-09-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2095,7 +2094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxstalenessprefix_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Staleness<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is 1 – 2,147,483,647. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'.{{% /md %}}</dd>
 </dl>
@@ -2128,7 +2127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxstalenessprefix_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Staleness<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is 1 – 2,147,483,647. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'.{{% /md %}}</dd>
 </dl>
@@ -2194,7 +2193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_staleness_prefix_python" style="color: inherit; text-decoration: inherit;">max_<wbr>staleness_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is 1 – 2,147,483,647. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'.{{% /md %}}</dd>
 </dl>
@@ -2229,7 +2228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxstalenessprefix_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Staleness<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is 1 – 2,147,483,647. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'.{{% /md %}}</dd>
 </dl>
@@ -2262,7 +2261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxstalenessprefix_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Staleness<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is 1 – 2,147,483,647. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'.{{% /md %}}</dd>
 </dl>
@@ -2328,7 +2327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_staleness_prefix_python" style="color: inherit; text-decoration: inherit;">max_<wbr>staleness_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}When used with the Bounded Staleness consistency level, this value represents the number of stale requests tolerated. Accepted range for this value is 1 – 2,147,483,647. Required when defaultConsistencyPolicy is set to 'BoundedStaleness'.{{% /md %}}</dd>
 </dl>
@@ -2433,7 +2432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxageinseconds_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Age<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The maximum amount time that a browser should cache the preflight OPTIONS request.{{% /md %}}</dd>
 </dl>
@@ -2484,7 +2483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxageinseconds_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Age<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The maximum amount time that a browser should cache the preflight OPTIONS request.{{% /md %}}</dd>
 </dl>
@@ -2586,7 +2585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_age_in_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The maximum amount time that a browser should cache the preflight OPTIONS request.{{% /md %}}</dd>
 </dl>
@@ -2639,7 +2638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxageinseconds_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Age<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The maximum amount time that a browser should cache the preflight OPTIONS request.{{% /md %}}</dd>
 </dl>
@@ -2690,7 +2689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#maxageinseconds_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Age<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The maximum amount time that a browser should cache the preflight OPTIONS request.{{% /md %}}</dd>
 </dl>
@@ -2792,7 +2791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#max_age_in_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The maximum amount time that a browser should cache the preflight OPTIONS request.{{% /md %}}</dd>
 </dl>
@@ -4489,6 +4488,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Create firewall rule before the virtual network has vnet service endpoint enabled.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:documentdb/latest:DatabaseAccount ddb1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/ddb1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

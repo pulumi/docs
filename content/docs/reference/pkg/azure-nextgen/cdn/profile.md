@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.cdn.Profile resource with exampl
 CDN profile is a logical grouping of endpoints that share the same settings, such as CDN provider and pricing tier.
 Latest API Version: 2020-09-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1290,6 +1289,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:cdn/latest:Profile profile1 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

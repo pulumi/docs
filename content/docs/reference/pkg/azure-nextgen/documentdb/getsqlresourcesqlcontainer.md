@@ -1768,7 +1768,7 @@ The following output properties are available:
 <a href="#analyticalstoragettl_csharp" style="color: inherit; text-decoration: inherit;">Analytical<wbr>Storage<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Analytical TTL.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1864,7 +1864,7 @@ The following output properties are available:
 <a href="#analyticalstoragettl_go" style="color: inherit; text-decoration: inherit;">Analytical<wbr>Storage<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Analytical TTL.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2056,7 +2056,7 @@ The following output properties are available:
 <a href="#analytical_storage_ttl_python" style="color: inherit; text-decoration: inherit;">analytical_<wbr>storage_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Analytical TTL.{{% /md %}}</dd>
     <dt class="property-optional"

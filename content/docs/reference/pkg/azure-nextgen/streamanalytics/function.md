@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.streamanalytics.Function resourc
 A function object, containing all information associated with the named function. All functions are contained under a streaming job.
 Latest API Version: 2016-03-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2595,6 +2594,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The output of the function.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:streamanalytics/latest:Function function588 /subscriptions/56b5e0a9-b645-407d-99b0-c64f86013e3d/resourceGroups/sjrg7/providers/Microsoft.StreamAnalytics/streamingjobs/sj9093/functions/function588 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

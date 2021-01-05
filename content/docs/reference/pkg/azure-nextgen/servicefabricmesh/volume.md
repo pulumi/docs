@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.servicefabricmesh.Volume resourc
 
 This type describes a volume resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1143,6 +1142,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Access key of the Azure storage account for the File Share.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:servicefabricmesh/v20180901preview:Volume sampleVolume /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/sbz_demo/providers/Microsoft.ServiceFabricMesh/volumes/sampleVolume 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

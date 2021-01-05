@@ -697,7 +697,7 @@ The following output properties are available:
 <a href="#asn_csharp" style="color: inherit; text-decoration: inherit;">Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -739,7 +739,7 @@ The following output properties are available:
 <a href="#asn_go" style="color: inherit; text-decoration: inherit;">Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -823,7 +823,7 @@ The following output properties are available:
 <a href="#asn_python" style="color: inherit; text-decoration: inherit;">asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd>
     <dt class="property-optional"

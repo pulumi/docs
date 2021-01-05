@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.appplatform.CustomDomain resourc
 Custom domain resource payload.
 Latest API Version: 2020-07-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -886,6 +885,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The thumbprint of bound certificate.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:appplatform/latest:CustomDomain mydomain.com /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.AppPlatform/Spring/myservice/apps/myapp/domains/mydomain.com 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

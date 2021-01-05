@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.automation.Python2Package resour
 Definition of the module type.
 Latest API Version: 2018-06-30.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -656,7 +655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sizeinbytes_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Gets or sets the size in bytes of the module.{{% /md %}}</dd>
     <dt class="property-"
@@ -797,7 +796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sizeinbytes_go" style="color: inherit; text-decoration: inherit;">Size<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Gets or sets the size in bytes of the module.{{% /md %}}</dd>
     <dt class="property-"
@@ -1079,7 +1078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_in_bytes_python" style="color: inherit; text-decoration: inherit;">size_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Gets or sets the size in bytes of the module.{{% /md %}}</dd>
     <dt class="property-"
@@ -1665,6 +1664,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Gets or sets the error message.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:automation/latest:Python2Package OmsCompositeResources /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/myAutomationAccount33/python2Packages/OmsCompositeResources 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

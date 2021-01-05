@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.deploymentmanager.ServiceUnit re
 
 Represents the response of a service unit resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1313,6 +1312,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The full URI of the ARM template file with the SAS token.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:deploymentmanager/v20191101preview:ServiceUnit myServiceUnit <Azure resource ID> 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

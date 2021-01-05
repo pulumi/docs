@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.compute.CloudService resource wi
 
 Describes the cloud service.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -142,7 +141,7 @@ func main() {
 						&compute.CloudServiceRoleProfilePropertiesArgs{
 							Name: pulumi.String("ContosoFrontend"),
 							Sku: &compute.CloudServiceRoleSkuArgs{
-								Capacity: pulumi.Int(1),
+								Capacity: pulumi.Float64(1),
 								Name:     pulumi.String("Standard_D1_v2"),
 								Tier:     pulumi.String("Standard"),
 							},
@@ -150,7 +149,7 @@ func main() {
 						&compute.CloudServiceRoleProfilePropertiesArgs{
 							Name: pulumi.String("ContosoBackend"),
 							Sku: &compute.CloudServiceRoleSkuArgs{
-								Capacity: pulumi.Int(1),
+								Capacity: pulumi.Float64(1),
 								Name:     pulumi.String("Standard_D1_v2"),
 								Tier:     pulumi.String("Standard"),
 							},
@@ -398,7 +397,7 @@ func main() {
 						&compute.CloudServiceRoleProfilePropertiesArgs{
 							Name: pulumi.String("ContosoFrontend"),
 							Sku: &compute.CloudServiceRoleSkuArgs{
-								Capacity: pulumi.Int(1),
+								Capacity: pulumi.Float64(1),
 								Name:     pulumi.String("Standard_D1_v2"),
 								Tier:     pulumi.String("Standard"),
 							},
@@ -660,7 +659,7 @@ func main() {
 						&compute.CloudServiceRoleProfilePropertiesArgs{
 							Name: pulumi.String("ContosoFrontend"),
 							Sku: &compute.CloudServiceRoleSkuArgs{
-								Capacity: pulumi.Int(1),
+								Capacity: pulumi.Float64(1),
 								Name:     pulumi.String("Standard_D1_v2"),
 								Tier:     pulumi.String("Standard"),
 							},
@@ -942,7 +941,7 @@ func main() {
 						&compute.CloudServiceRoleProfilePropertiesArgs{
 							Name: pulumi.String("ContosoFrontend"),
 							Sku: &compute.CloudServiceRoleSkuArgs{
-								Capacity: pulumi.Int(1),
+								Capacity: pulumi.Float64(1),
 								Name:     pulumi.String("Standard_D1_v2"),
 								Tier:     pulumi.String("Standard"),
 							},
@@ -3969,7 +3968,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Specifies the number of role instances in the cloud service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4002,7 +4001,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Specifies the number of role instances in the cloud service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4068,7 +4067,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Specifies the number of role instances in the cloud service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4103,7 +4102,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Specifies the number of role instances in the cloud service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4136,7 +4135,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Specifies the number of role instances in the cloud service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4202,7 +4201,7 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Specifies the number of role instances in the cloud service.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5891,6 +5890,16 @@ If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain 
     <dd>{{% md %}}Resource Id{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:compute/v20201001preview:CloudService {cs-name} /subscriptions/{subscription-id}/resourceGroups/ConstosoRG/providers/Microsoft.Compute/cloudServices/{cs-name} 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

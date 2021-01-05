@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.security.WorkspaceSetting resour
 
 Configures where to store the OMS agent data for workspaces under a scope
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -554,6 +553,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:security/v20170801preview:WorkspaceSetting default /subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/providers/Microsoft.Security/workspaceSettings/default 
+```
 
 
 

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.security.DeviceSecurityGroup res
 The device security group resource
 Latest API Version: 2019-08-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -30,6 +29,12 @@ class MyStack : Stack
     {
         var deviceSecurityGroup = new AzureNextGen.Security.Latest.DeviceSecurityGroup("deviceSecurityGroup", new AzureNextGen.Security.Latest.DeviceSecurityGroupArgs
         {
+            DeviceSecurityGroupName = "samplesecuritygroup",
+            ResourceId = "subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/SampleRG/providers/Microsoft.Devices/iotHubs/sampleiothub",
+            TimeWindowRules = 
+            {
+                ,
+            },
         });
     }
 
@@ -51,7 +56,13 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := security.NewDeviceSecurityGroup(ctx, "deviceSecurityGroup", nil)
+		_, err := security.NewDeviceSecurityGroup(ctx, "deviceSecurityGroup", &security.DeviceSecurityGroupArgs{
+			DeviceSecurityGroupName: pulumi.String("samplesecuritygroup"),
+			ResourceId:              pulumi.String("subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/SampleRG/providers/Microsoft.Devices/iotHubs/sampleiothub"),
+			TimeWindowRules: security.TimeWindowCustomAlertRuleArray{
+				nil,
+			},
+		})
 		if err != nil {
 			return err
 		}
@@ -69,7 +80,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-device_security_group = azure_nextgen.security.latest.DeviceSecurityGroup("deviceSecurityGroup")
+device_security_group = azure_nextgen.security.latest.DeviceSecurityGroup("deviceSecurityGroup",
+    device_security_group_name="samplesecuritygroup",
+    resource_id="subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/SampleRG/providers/Microsoft.Devices/iotHubs/sampleiothub",
+    time_window_rules=[azure_nextgen.security.latest.TimeWindowCustomAlertRuleArgs()])
 
 ```
 
@@ -81,7 +95,11 @@ device_security_group = azure_nextgen.security.latest.DeviceSecurityGroup("devic
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const deviceSecurityGroup = new azure_nextgen.security.latest.DeviceSecurityGroup("deviceSecurityGroup", {});
+const deviceSecurityGroup = new azure_nextgen.security.latest.DeviceSecurityGroup("deviceSecurityGroup", {
+    deviceSecurityGroupName: "samplesecuritygroup",
+    resourceId: "subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/SampleRG/providers/Microsoft.Devices/iotHubs/sampleiothub",
+    timeWindowRules: [{}],
+});
 
 ```
 
@@ -2015,6 +2033,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The time window size in iso8601 format.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:security/latest:DeviceSecurityGroup samplesecuritygroup /subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/SampleRG/providers/Microsoft.Devices/iotHubs/sampleiothub/providers/Microsoft.Security/deviceSecurityGroups/samplesecuritygroup 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

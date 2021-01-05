@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.hybridcompute.PrivateLinkScopedR
 
 A private link scoped resource
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -594,6 +593,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:hybridcompute/v20200815preview:PrivateLinkScopedResource scoped-resource-name /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/myResourceGroup/providers/Microsoft.HybridCompute/privateLinkScopes/myPrivateLinkScope/scopedResources/scoped-resource-name 
+```
 
 
 

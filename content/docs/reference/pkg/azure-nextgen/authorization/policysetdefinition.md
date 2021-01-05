@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.authorization.PolicySetDefinitio
 The policy set definition.
 Latest API Version: 2020-09-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2739,6 +2738,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Static</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:authorization/latest:PolicySetDefinition CostManagement /subscriptions/ae640e6b-ba3e-4256-9d62-2993eecfa6f2/providers/Microsoft.Authorization/policySetDefinitions/CostManagement 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.compute.Snapshot resource with e
 Snapshot resource.
 Latest API Version: 2020-06-30.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1046,7 +1045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disksizebytes_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The size of the disk in bytes. This field is read only.{{% /md %}}</dd>
     <dt class="property-"
@@ -1133,7 +1132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disksizebytes_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The size of the disk in bytes. This field is read only.{{% /md %}}</dd>
     <dt class="property-"
@@ -1307,7 +1306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#disk_size_bytes_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The size of the disk in bytes. This field is read only.{{% /md %}}</dd>
     <dt class="property-"
@@ -1469,7 +1468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uploadsizebytes_csharp" style="color: inherit; text-decoration: inherit;">Upload<wbr>Size<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).{{% /md %}}</dd>
 </dl>
@@ -1547,7 +1546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uploadsizebytes_go" style="color: inherit; text-decoration: inherit;">Upload<wbr>Size<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).{{% /md %}}</dd>
 </dl>
@@ -1703,7 +1702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upload_size_bytes_python" style="color: inherit; text-decoration: inherit;">upload_<wbr>size_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).{{% /md %}}</dd>
 </dl>
@@ -1792,7 +1791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uploadsizebytes_csharp" style="color: inherit; text-decoration: inherit;">Upload<wbr>Size<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).{{% /md %}}</dd>
 </dl>
@@ -1879,7 +1878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#uploadsizebytes_go" style="color: inherit; text-decoration: inherit;">Upload<wbr>Size<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).{{% /md %}}</dd>
 </dl>
@@ -2053,7 +2052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#upload_size_bytes_python" style="color: inherit; text-decoration: inherit;">upload_<wbr>size_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).{{% /md %}}</dd>
 </dl>
@@ -3882,6 +3881,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Resource Id{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:compute/latest:Snapshot mySnapshot2 <Azure resource ID> 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

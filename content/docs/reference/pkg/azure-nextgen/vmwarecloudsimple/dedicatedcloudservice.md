@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.vmwarecloudsimple.DedicatedCloud
 Dedicated cloud service model
 Latest API Version: 2019-04-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -739,6 +738,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:vmwarecloudsimple/latest:DedicatedCloudService myService /subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.VMwareCloudSimple/dedicatedCloudServices/myService 
+```
 
 
 

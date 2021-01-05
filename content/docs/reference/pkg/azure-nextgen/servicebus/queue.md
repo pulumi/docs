@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.servicebus.Queue resource with e
 Description of queue Resource.
 Latest API Version: 2017-04-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1009,7 +1008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagecount_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The number of messages in the queue.{{% /md %}}</dd>
     <dt class="property-"
@@ -1027,7 +1026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sizeinbytes_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The size of the queue, in bytes.{{% /md %}}</dd>
     <dt class="property-"
@@ -1096,7 +1095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#messagecount_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The number of messages in the queue.{{% /md %}}</dd>
     <dt class="property-"
@@ -1114,7 +1113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#sizeinbytes_go" style="color: inherit; text-decoration: inherit;">Size<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The size of the queue, in bytes.{{% /md %}}</dd>
     <dt class="property-"
@@ -1270,7 +1269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#message_count_python" style="color: inherit; text-decoration: inherit;">message_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The number of messages in the queue.{{% /md %}}</dd>
     <dt class="property-"
@@ -1288,7 +1287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_in_bytes_python" style="color: inherit; text-decoration: inherit;">size_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The size of the queue, in bytes.{{% /md %}}</dd>
     <dt class="property-"
@@ -1427,7 +1426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activemessagecount_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Message<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of active messages in the queue, topic, or subscription.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1436,7 +1435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deadlettermessagecount_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Message<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of messages that are dead lettered.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1445,7 +1444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheduledmessagecount_csharp" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Message<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of scheduled messages.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1454,7 +1453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transferdeadlettermessagecount_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Dead<wbr>Letter<wbr>Message<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of messages transferred into dead letters.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1463,7 +1462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transfermessagecount_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Message<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of messages transferred to another queue, topic, or subscription.{{% /md %}}</dd>
 </dl>
@@ -1478,7 +1477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#activemessagecount_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Message<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of active messages in the queue, topic, or subscription.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1487,7 +1486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#deadlettermessagecount_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Message<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of messages that are dead lettered.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1496,7 +1495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheduledmessagecount_go" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Message<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of scheduled messages.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1505,7 +1504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transferdeadlettermessagecount_go" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Dead<wbr>Letter<wbr>Message<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of messages transferred into dead letters.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1514,7 +1513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transfermessagecount_go" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Message<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of messages transferred to another queue, topic, or subscription.{{% /md %}}</dd>
 </dl>
@@ -1580,7 +1579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#active_message_count_python" style="color: inherit; text-decoration: inherit;">active_<wbr>message_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of active messages in the queue, topic, or subscription.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1589,7 +1588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dead_letter_message_count_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>message_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of messages that are dead lettered.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1598,7 +1597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#scheduled_message_count_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>message_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of scheduled messages.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1607,7 +1606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transfer_dead_letter_message_count_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>dead_<wbr>letter_<wbr>message_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of messages transferred into dead letters.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1616,11 +1615,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#transfer_message_count_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>message_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of messages transferred to another queue, topic, or subscription.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:servicebus/latest:Queue sdk-Queues-5647 /subscriptions/5f750a97-50d9-4e36-8081-c9ee4c0210d4/resourceGroups/ArunMonocle/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-3174/queues/sdk-Queues-5647 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

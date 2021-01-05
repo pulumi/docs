@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.billing.CostAllocationRule resou
 
 The cost allocation rule model definition
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2366,6 +2365,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Target resources for cost allocation. This list cannot contain more than 25 values.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:billing/v20200301preview:CostAllocationRule testRule providers/Microsoft.Billing/billingAccounts/100/providers/Microsoft.CostManagement/costAllocationRules/testRule 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

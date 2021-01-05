@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.documentdb.SqlResourceSqlContain
 An Azure Cosmos DB container.
 Latest API Version: 2020-09-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3633,7 +3632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#analyticalstoragettl_csharp" style="color: inherit; text-decoration: inherit;">Analytical<wbr>Storage<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Analytical TTL.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3729,7 +3728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#analyticalstoragettl_go" style="color: inherit; text-decoration: inherit;">Analytical<wbr>Storage<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Analytical TTL.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3921,7 +3920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#analytical_storage_ttl_python" style="color: inherit; text-decoration: inherit;">analytical_<wbr>storage_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Analytical TTL.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3992,7 +3991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#analyticalstoragettl_csharp" style="color: inherit; text-decoration: inherit;">Analytical<wbr>Storage<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Analytical TTL.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4061,7 +4060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#analyticalstoragettl_go" style="color: inherit; text-decoration: inherit;">Analytical<wbr>Storage<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Analytical TTL.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4199,7 +4198,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#analytical_storage_ttl_python" style="color: inherit; text-decoration: inherit;">analytical_<wbr>storage_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Analytical TTL.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4497,6 +4496,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}List of paths must be unique for each document in the Azure Cosmos DB service{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:documentdb/latest:SqlResourceSqlContainer containerName /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/ddb1/sqlDatabases/databaseName/sqlContainers/containerName 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

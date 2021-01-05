@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.servicebus.Rule resource with ex
 Description of Rule Resource.
 Latest API Version: 2017-04-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2356,6 +2355,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The SQL expression. e.g. MyProperty='ABC'{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:servicebus/latest:Rule sdk-Rules-6571 /subscriptions/subscriptionId/resourceGroups/resourceGroupName/providers/Microsoft.ServiceBus/namespaces/sdk-Namespace-1319/topics/sdk-Topics-2081/subscriptions/sdk-Subscriptions-8691/rules/sdk-Rules-6571 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

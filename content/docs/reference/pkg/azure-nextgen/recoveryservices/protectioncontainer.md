@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.recoveryservices.ProtectionConta
 Base class for container with backup items. Containers with specific workloads are derived from this class.
 Latest API Version: 2020-10-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1118,7 +1117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemcount_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of items backed up in this container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1196,7 +1195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemcount_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of items backed up in this container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1352,7 +1351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_item_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of items backed up in this container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1432,7 +1431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemcount_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of items backed up in this container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1510,7 +1509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protecteditemcount_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of items backed up in this container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1666,7 +1665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#protected_item_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of items backed up in this container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3699,7 +3698,7 @@ Failed | Succeeded{{% /md %}}</dd>
 <a href="#protecteditemcount_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of protected items in the BackupEngine{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3813,7 +3812,7 @@ Failed | Succeeded{{% /md %}}</dd>
 <a href="#protecteditemcount_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of protected items in the BackupEngine{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4041,7 +4040,7 @@ Failed | Succeeded{{% /md %}}</dd>
 <a href="#protected_item_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of protected items in the BackupEngine{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4157,7 +4156,7 @@ Failed | Succeeded{{% /md %}}</dd>
 <a href="#protecteditemcount_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of protected items in the BackupEngine{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4271,7 +4270,7 @@ Failed | Succeeded{{% /md %}}</dd>
 <a href="#protecteditemcount_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of protected items in the BackupEngine{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4499,7 +4498,7 @@ Failed | Succeeded{{% /md %}}</dd>
 <a href="#protected_item_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of protected items in the BackupEngine{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6805,7 +6804,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#containerid_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}ContainerID represents the container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6850,7 +6849,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#protecteditemcount_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of items backed up in this container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6910,7 +6909,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#containerid_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}ContainerID represents the container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6955,7 +6954,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#protecteditemcount_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of items backed up in this container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7120,7 +7119,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#container_id_python" style="color: inherit; text-decoration: inherit;">container_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}ContainerID represents the container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7165,7 +7164,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#protected_item_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of items backed up in this container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7639,7 +7638,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#containerid_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}ContainerID represents the container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7684,7 +7683,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#protecteditemcount_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of items backed up in this container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7744,7 +7743,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#containerid_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}ContainerID represents the container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7789,7 +7788,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#protecteditemcount_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of items backed up in this container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7954,7 +7953,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#container_id_python" style="color: inherit; text-decoration: inherit;">container_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}ContainerID represents the container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7999,7 +7998,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#protected_item_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of items backed up in this container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8080,7 +8079,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#itemcount_csharp" style="color: inherit; text-decoration: inherit;">Item<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Contains the protectable item Count inside this Container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8113,7 +8112,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#itemcount_go" style="color: inherit; text-decoration: inherit;">Item<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Contains the protectable item Count inside this Container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8179,7 +8178,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#item_count_python" style="color: inherit; text-decoration: inherit;">item_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Contains the protectable item Count inside this Container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8214,7 +8213,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#itemcount_csharp" style="color: inherit; text-decoration: inherit;">Item<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Contains the protectable item Count inside this Container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8247,7 +8246,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#itemcount_go" style="color: inherit; text-decoration: inherit;">Item<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Contains the protectable item Count inside this Container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8313,7 +8312,7 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 <a href="#item_count_python" style="color: inherit; text-decoration: inherit;">item_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Contains the protectable item Count inside this Container.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8469,6 +8468,16 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
     <dd>SAPAseDatabase</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:recoveryservices/latest:ProtectionContainer VMAppContainer;Compute;testRG;testSQL /Subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/testRg/providers/Microsoft.RecoveryServices/vaults/testVault/backupFabrics/Azure/protectionContainers/VMAppContainer;Compute;testRG;testSQL 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

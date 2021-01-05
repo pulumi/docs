@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.cache.FirewallRule resource with
 A firewall rule on a redis cache has a name, and describes a contiguous range of IP addresses permitted to connect
 Latest API Version: 2020-06-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -635,6 +634,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:cache/latest:FirewallRule cache1/rule1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/Redis/cache1/firewallRules/rule1 
+```
 
 
 

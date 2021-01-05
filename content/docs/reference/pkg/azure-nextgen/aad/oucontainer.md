@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.aad.OuContainer resource with ex
 Resource for OuContainer.
 Latest API Version: 2020-01-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1211,6 +1210,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The account spn{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:aad/latest:OuContainer OuContainer.com/OuContainer1 /subscriptions/1639790a-76a2-4ac4-98d9-8562f5dfcb4d/resourceGroups/ouContainerResourceGroup/providers/Microsoft.AAD/domainServices/ouContainer.com/ouContainer/ouContainer1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

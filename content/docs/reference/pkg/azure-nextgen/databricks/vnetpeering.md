@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.databricks.VNetPeering resource 
 Peerings in a VirtualNetwork resource
 Latest API Version: 2018-04-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1322,6 +1321,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The Id of the remote virtual network.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:databricks/latest:vNetPeering vNetPeeringTest /subscriptions/0140911e-1040-48da-8bc9-b99fb3dd88a6/resourceGroups/subramantest/providers/Microsoft.Databricks/workspaces/adbworkspace/virtualNetworkPeerings/vNetPeeringTest 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

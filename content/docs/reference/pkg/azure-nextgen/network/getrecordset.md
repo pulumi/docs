@@ -359,7 +359,7 @@ The following output properties are available:
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The TTL (time-to-live) of the records in the record set.{{% /md %}}</dd>
     <dt class="property-"
@@ -509,7 +509,7 @@ The following output properties are available:
 <a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The TTL (time-to-live) of the records in the record set.{{% /md %}}</dd>
     <dt class="property-"
@@ -809,7 +809,7 @@ The following output properties are available:
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The TTL (time-to-live) of the records in the record set.{{% /md %}}</dd>
     <dt class="property-"
@@ -1226,7 +1226,7 @@ The following output properties are available:
 <a href="#expiretime_csharp" style="color: inherit; text-decoration: inherit;">Expire<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The expire time for this SOA record.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1244,7 +1244,7 @@ The following output properties are available:
 <a href="#minimumttl_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The minimum value for this SOA record. By convention this is used to determine the negative caching duration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1253,7 +1253,7 @@ The following output properties are available:
 <a href="#refreshtime_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The refresh value for this SOA record.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1262,7 +1262,7 @@ The following output properties are available:
 <a href="#retrytime_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The retry time for this SOA record.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1271,7 +1271,7 @@ The following output properties are available:
 <a href="#serialnumber_csharp" style="color: inherit; text-decoration: inherit;">Serial<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The serial number for this SOA record.{{% /md %}}</dd>
 </dl>
@@ -1295,7 +1295,7 @@ The following output properties are available:
 <a href="#expiretime_go" style="color: inherit; text-decoration: inherit;">Expire<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The expire time for this SOA record.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1313,7 +1313,7 @@ The following output properties are available:
 <a href="#minimumttl_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The minimum value for this SOA record. By convention this is used to determine the negative caching duration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1322,7 +1322,7 @@ The following output properties are available:
 <a href="#refreshtime_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The refresh value for this SOA record.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1331,7 +1331,7 @@ The following output properties are available:
 <a href="#retrytime_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The retry time for this SOA record.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1340,7 +1340,7 @@ The following output properties are available:
 <a href="#serialnumber_go" style="color: inherit; text-decoration: inherit;">Serial<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The serial number for this SOA record.{{% /md %}}</dd>
 </dl>
@@ -1433,7 +1433,7 @@ The following output properties are available:
 <a href="#expire_time_python" style="color: inherit; text-decoration: inherit;">expire_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The expire time for this SOA record.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1451,7 +1451,7 @@ The following output properties are available:
 <a href="#minimum_ttl_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>ttl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The minimum value for this SOA record. By convention this is used to determine the negative caching duration.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1460,7 +1460,7 @@ The following output properties are available:
 <a href="#refresh_time_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The refresh value for this SOA record.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1469,7 +1469,7 @@ The following output properties are available:
 <a href="#retry_time_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The retry time for this SOA record.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1478,7 +1478,7 @@ The following output properties are available:
 <a href="#serial_number_python" style="color: inherit; text-decoration: inherit;">serial_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The serial number for this SOA record.{{% /md %}}</dd>
 </dl>

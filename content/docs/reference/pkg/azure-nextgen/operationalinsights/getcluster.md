@@ -994,7 +994,7 @@ The following output properties are available:
 <a href="#maxcapacity_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Maximum CapacityReservation value in GB.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1003,7 +1003,7 @@ The following output properties are available:
 <a href="#mincapacity_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Minimum CapacityReservation value in GB.{{% /md %}}</dd>
 </dl>
@@ -1027,7 +1027,7 @@ The following output properties are available:
 <a href="#maxcapacity_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Maximum CapacityReservation value in GB.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1036,7 +1036,7 @@ The following output properties are available:
 <a href="#mincapacity_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Minimum CapacityReservation value in GB.{{% /md %}}</dd>
 </dl>
@@ -1093,7 +1093,7 @@ The following output properties are available:
 <a href="#max_capacity_python" style="color: inherit; text-decoration: inherit;">max_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Maximum CapacityReservation value in GB.{{% /md %}}</dd>
     <dt class="property-required"
@@ -1102,7 +1102,7 @@ The following output properties are available:
 <a href="#min_capacity_python" style="color: inherit; text-decoration: inherit;">min_<wbr>capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Minimum CapacityReservation value in GB.{{% /md %}}</dd>
 </dl>
@@ -1124,7 +1124,7 @@ The following output properties are available:
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The capacity value{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1148,7 +1148,7 @@ The following output properties are available:
 <a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The capacity value{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1196,7 +1196,7 @@ The following output properties are available:
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The capacity value{{% /md %}}</dd>
     <dt class="property-optional"

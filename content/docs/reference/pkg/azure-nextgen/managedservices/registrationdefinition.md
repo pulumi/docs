@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.managedservices.RegistrationDefi
 Registration definition.
 Latest API Version: 2019-09-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1791,6 +1790,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Name of the registration definition.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:managedservices/latest:RegistrationDefinition 26c128c2-fefa-4340-9bb1-6e081c90ada2 /subscriptions/0afefe50-734e-4610-8a82-a144ahf49dea/providers/Microsoft.ManagedServices/registrationDefinitions/26c128c2-fefa-4340-9bb1-6e081c90ada2 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

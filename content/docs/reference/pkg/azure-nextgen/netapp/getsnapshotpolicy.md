@@ -657,7 +657,7 @@ The following output properties are available:
 <a href="#usedbytes_csharp" style="color: inherit; text-decoration: inherit;">Used<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
 </dl>
@@ -699,7 +699,7 @@ The following output properties are available:
 <a href="#usedbytes_go" style="color: inherit; text-decoration: inherit;">Used<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
 </dl>
@@ -783,7 +783,7 @@ The following output properties are available:
 <a href="#used_bytes_python" style="color: inherit; text-decoration: inherit;">used_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
 </dl>
@@ -823,7 +823,7 @@ The following output properties are available:
 <a href="#usedbytes_csharp" style="color: inherit; text-decoration: inherit;">Used<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
 </dl>
@@ -856,7 +856,7 @@ The following output properties are available:
 <a href="#usedbytes_go" style="color: inherit; text-decoration: inherit;">Used<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
 </dl>
@@ -922,7 +922,7 @@ The following output properties are available:
 <a href="#used_bytes_python" style="color: inherit; text-decoration: inherit;">used_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
 </dl>
@@ -980,7 +980,7 @@ The following output properties are available:
 <a href="#usedbytes_csharp" style="color: inherit; text-decoration: inherit;">Used<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
 </dl>
@@ -1031,7 +1031,7 @@ The following output properties are available:
 <a href="#usedbytes_go" style="color: inherit; text-decoration: inherit;">Used<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
 </dl>
@@ -1133,7 +1133,7 @@ The following output properties are available:
 <a href="#used_bytes_python" style="color: inherit; text-decoration: inherit;">used_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
 </dl>
@@ -1191,7 +1191,7 @@ The following output properties are available:
 <a href="#usedbytes_csharp" style="color: inherit; text-decoration: inherit;">Used<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
 </dl>
@@ -1242,7 +1242,7 @@ The following output properties are available:
 <a href="#usedbytes_go" style="color: inherit; text-decoration: inherit;">Used<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
 </dl>
@@ -1344,7 +1344,7 @@ The following output properties are available:
 <a href="#used_bytes_python" style="color: inherit; text-decoration: inherit;">used_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Resource size in bytes, current storage usage for the volume in bytes{{% /md %}}</dd>
 </dl>

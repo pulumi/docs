@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.sql.Server resource with example
 Represents a server.
 Latest API Version: 2014-04-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1039,6 +1038,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>12.0</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:sql/latest:Server sqlcrudtest-4645 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/sqlcrudtest-7398/providers/Microsoft.Sql/servers/sqlcrudtest-4645 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

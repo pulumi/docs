@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.network.LocalNetworkGateway reso
 A common class for general resource information.
 Latest API Version: 2020-07-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1047,7 +1046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#asn_csharp" style="color: inherit; text-decoration: inherit;">Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1089,7 +1088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#asn_go" style="color: inherit; text-decoration: inherit;">Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1173,7 +1172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#asn_python" style="color: inherit; text-decoration: inherit;">asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1217,7 +1216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#asn_csharp" style="color: inherit; text-decoration: inherit;">Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1259,7 +1258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#asn_go" style="color: inherit; text-decoration: inherit;">Asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1343,7 +1342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#asn_python" style="color: inherit; text-decoration: inherit;">asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The BGP speaker's ASN.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1643,6 +1642,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The ID of IP configuration which belongs to gateway.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:network/latest:LocalNetworkGateway localgw /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/localNetworkGateways/localgw 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

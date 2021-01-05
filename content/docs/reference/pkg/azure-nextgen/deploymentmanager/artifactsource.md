@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.deploymentmanager.ArtifactSource
 
 The resource that defines the source location where the artifacts are located.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -969,6 +968,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The SAS URI to the Azure Storage blob container. Any offset from the root of the container to where the artifacts are located can be defined in the artifactRoot.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:deploymentmanager/v20191101preview:ArtifactSource myArtifactSource <Azure resource ID> 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

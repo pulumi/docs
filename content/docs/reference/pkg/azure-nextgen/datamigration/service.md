@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.datamigration.Service resource w
 A Database Migration Service resource
 Latest API Version: 2018-04-19.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1242,6 +1241,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The tier of the SKU, such as 'Free', 'Basic', 'Standard', or 'Premium'{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:datamigration/latest:Service DmsSdkService /subscriptions/fc04246f-04c5-437e-ac5e-206a19e7193f/resourceGroups/DmsSdkRg/providers/Microsoft.DataMigration/services/DmsSdkService 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.security.JitNetworkAccessPolicy 
 
 Latest API Version: 2020-01-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2797,6 +2796,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>NewerRequestInitiated</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:security/latest:JitNetworkAccessPolicy default /subscriptions/20ff7fc3-e762-44dd-bd96-b71116dcdc23/resourceGroups/myRg1/providers/Microsoft.Security/locations/westeurope/jitNetworkAccessPolicies/default 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

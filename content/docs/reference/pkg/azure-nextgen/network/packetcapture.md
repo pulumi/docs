@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.network.PacketCapture resource w
 Information about packet capture session.
 Latest API Version: 2020-07-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -74,7 +73,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := network.NewPacketCapture(ctx, "packetCapture", &network.PacketCaptureArgs{
-			BytesToCapturePerPacket: pulumi.Int(10000),
+			BytesToCapturePerPacket: pulumi.Float64(10000),
 			Filters: network.PacketCaptureFilterArray{
 				&network.PacketCaptureFilterArgs{
 					LocalIPAddress: pulumi.String("10.0.0.4"),
@@ -92,7 +91,7 @@ func main() {
 			},
 			Target:               pulumi.String("/subscriptions/subid/resourceGroups/rg2/providers/Microsoft.Compute/virtualMachines/vm1"),
 			TimeLimitInSeconds:   pulumi.Int(100),
-			TotalBytesPerSession: pulumi.Int(100000),
+			TotalBytesPerSession: pulumi.Float64(100000),
 		})
 		if err != nil {
 			return err
@@ -176,7 +175,7 @@ const packetCapture = new azure_nextgen.network.latest.PacketCapture("packetCapt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PacketCapture</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bytes_to_capture_per_packet</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[PacketCaptureFilterArgs]]</span> = None<span class="p">, </span><span class="nx">network_watcher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">packet_capture_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_location</span><span class="p">:</span> <span class="nx">Optional[PacketCaptureStorageLocationArgs]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_limit_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">total_bytes_per_session</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PacketCapture</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bytes_to_capture_per_packet</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[PacketCaptureFilterArgs]]</span> = None<span class="p">, </span><span class="nx">network_watcher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">packet_capture_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_location</span><span class="p">:</span> <span class="nx">Optional[PacketCaptureStorageLocationArgs]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">time_limit_in_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">total_bytes_per_session</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -398,7 +397,7 @@ The PacketCapture resource accepts the following [input]({{< relref "/docs/intro
 <a href="#bytestocaptureperpacket_csharp" style="color: inherit; text-decoration: inherit;">Bytes<wbr>To<wbr>Capture<wbr>Per<wbr>Packet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of bytes captured per packet, the remaining bytes are truncated.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -425,7 +424,7 @@ The PacketCapture resource accepts the following [input]({{< relref "/docs/intro
 <a href="#totalbytespersession_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Bytes<wbr>Per<wbr>Session</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Maximum size of the capture output.{{% /md %}}</dd>
 </dl>
@@ -485,7 +484,7 @@ The PacketCapture resource accepts the following [input]({{< relref "/docs/intro
 <a href="#bytestocaptureperpacket_go" style="color: inherit; text-decoration: inherit;">Bytes<wbr>To<wbr>Capture<wbr>Per<wbr>Packet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of bytes captured per packet, the remaining bytes are truncated.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -512,7 +511,7 @@ The PacketCapture resource accepts the following [input]({{< relref "/docs/intro
 <a href="#totalbytespersession_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Bytes<wbr>Per<wbr>Session</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Maximum size of the capture output.{{% /md %}}</dd>
 </dl>
@@ -659,7 +658,7 @@ The PacketCapture resource accepts the following [input]({{< relref "/docs/intro
 <a href="#bytes_to_capture_per_packet_python" style="color: inherit; text-decoration: inherit;">bytes_<wbr>to_<wbr>capture_<wbr>per_<wbr>packet</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of bytes captured per packet, the remaining bytes are truncated.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -686,7 +685,7 @@ The PacketCapture resource accepts the following [input]({{< relref "/docs/intro
 <a href="#total_bytes_per_session_python" style="color: inherit; text-decoration: inherit;">total_<wbr>bytes_<wbr>per_<wbr>session</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Maximum size of the capture output.{{% /md %}}</dd>
 </dl>
@@ -1602,6 +1601,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Any</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:network/latest:PacketCapture pc1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/networkWatchers/nw1/packetCaptures/pc1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.compute.GuestConfigurationAssign
 Guest configuration assignment is an association between a machine and guest configuration.
 Latest API Version: 2020-06-25.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3432,6 +3431,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}UUID(Universally Unique Identifier) of the VM.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:compute/latest:GuestConfigurationAssignment WhitelistedApplication /subscriptions/mysubscriptionid/resourceGroups/myResourceGroupName/providers/Microsoft.Compute/virtualMachines/myvm/providers/Microsoft.GuestConfiguration/guestConfigurationAssignments/WhitelistedApplication 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

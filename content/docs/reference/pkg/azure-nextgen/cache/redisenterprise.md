@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.cache.RedisEnterprise resource w
 
 Describes the RedisEnterprise cluster
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1651,6 +1650,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The size of the RedisEnterprise cluster. Defaults to 2 or 3 depending on SKU. Valid values are (2, 4, 6, ...) for Enterprise SKUs and (3, 9, 15, ...) for Flash SKUs.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:cache/v20201001preview:RedisEnterprise cache1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Cache/redisEnterprise/cache1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

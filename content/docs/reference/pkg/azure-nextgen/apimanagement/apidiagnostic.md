@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.ApiDiagnostic reso
 Diagnostic details.
 Latest API Version: 2019-12-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1920,6 +1919,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>error{{% md %}}Only traces with 'severity' set to 'error' will be sent to the logger attached to this diagnostic instance.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:apimanagement/latest:ApiDiagnostic applicationinsights /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/apis/57d1f7558aa04f15146d9d8a/diagnostics/applicationinsights 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

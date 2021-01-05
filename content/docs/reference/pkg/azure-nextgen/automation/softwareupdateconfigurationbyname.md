@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.automation.SoftwareUpdateConfigu
 
 Software update configuration properties.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -5686,6 +5685,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Updates</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:automation/v20170515preview:SoftwareUpdateConfigurationByName testpatch /subscriptions/51766542-3ed7-4a72-a187-0c8ab644ddab/resourceGroups/mygroup/providers/Microsoft.Automation/automationAccounts/myaccount/softwareUpdateConfigurations/testpatch 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

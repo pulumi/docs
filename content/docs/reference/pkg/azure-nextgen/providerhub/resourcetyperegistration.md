@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.providerhub.ResourceTypeRegistra
 
 Latest API Version: 2020-11-20.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3984,7 +3983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#limit_csharp" style="color: inherit; text-decoration: inherit;">Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -4017,7 +4016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#limit_go" style="color: inherit; text-decoration: inherit;">Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -4083,7 +4082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#limit_python" style="color: inherit; text-decoration: inherit;">limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -4240,6 +4239,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:providerhub/latest:ResourceTypeRegistration employees <Azure resource ID> 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

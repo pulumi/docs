@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.documentdb.MongoDBResourceMongoD
 An Azure Cosmos DB MongoDB database.
 Latest API Version: 2020-09-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1282,6 +1281,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Name of the Cosmos DB MongoDB database{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:documentdb/latest:MongoDBResourceMongoDBDatabase databaseName /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/ddb1/mongodbDatabases/databaseName 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

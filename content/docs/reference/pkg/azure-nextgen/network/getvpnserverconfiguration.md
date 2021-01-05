@@ -2337,7 +2337,7 @@ The following output properties are available:
 <a href="#radiusserverscore_csharp" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server<wbr>Score</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The initial score assigned to this radius server.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2370,7 +2370,7 @@ The following output properties are available:
 <a href="#radiusserverscore_go" style="color: inherit; text-decoration: inherit;">Radius<wbr>Server<wbr>Score</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The initial score assigned to this radius server.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2436,7 +2436,7 @@ The following output properties are available:
 <a href="#radius_server_score_python" style="color: inherit; text-decoration: inherit;">radius_<wbr>server_<wbr>score</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The initial score assigned to this radius server.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2879,7 +2879,7 @@ The following output properties are available:
 <a href="#totalegressbytestransferred_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Egress<wbr>Bytes<wbr>Transferred</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Total of the Egress Bytes Transferred in this connection.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2888,7 +2888,7 @@ The following output properties are available:
 <a href="#totalingressbytestransferred_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Ingress<wbr>Bytes<wbr>Transferred</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Total of the Ingress Bytes Transferred in this P2S Vpn connection.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2921,7 +2921,7 @@ The following output properties are available:
 <a href="#totalegressbytestransferred_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Egress<wbr>Bytes<wbr>Transferred</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Total of the Egress Bytes Transferred in this connection.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2930,7 +2930,7 @@ The following output properties are available:
 <a href="#totalingressbytestransferred_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Ingress<wbr>Bytes<wbr>Transferred</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Total of the Ingress Bytes Transferred in this P2S Vpn connection.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3005,7 +3005,7 @@ The following output properties are available:
 <a href="#total_egress_bytes_transferred_python" style="color: inherit; text-decoration: inherit;">total_<wbr>egress_<wbr>bytes_<wbr>transferred</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Total of the Egress Bytes Transferred in this connection.{{% /md %}}</dd>
     <dt class="property-required"
@@ -3014,7 +3014,7 @@ The following output properties are available:
 <a href="#total_ingress_bytes_transferred_python" style="color: inherit; text-decoration: inherit;">total_<wbr>ingress_<wbr>bytes_<wbr>transferred</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Total of the Ingress Bytes Transferred in this P2S Vpn connection.{{% /md %}}</dd>
     <dt class="property-optional"

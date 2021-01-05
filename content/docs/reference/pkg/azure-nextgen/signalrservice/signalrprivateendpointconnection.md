@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.signalrservice.SignalRPrivateEnd
 A private endpoint connection to SignalR resource
 Latest API Version: 2020-05-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1145,6 +1144,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Disconnected</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:signalrservice/latest:SignalRPrivateEndpointConnection mySignalRService.1fa229cd-bf3f-47f0-8c49-afb36723997e /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myResourceGroup/providers/Microsoft.SignalRService/SignalR/mySignalRService/privateEndpointConnections/mySignalRService.1fa229cd-bf3f-47f0-8c49-afb36723997e 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

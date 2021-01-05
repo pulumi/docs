@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.network.FrontDoor resource with 
 Front Door represents a collection of backend endpoints to route traffic to along with rules that specify how traffic is sent there.
 Latest API Version: 2020-05-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -8830,6 +8829,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:network/latest:FrontDoor frontDoor1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/frontDoors/frontDoor1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

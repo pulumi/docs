@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.hanaonazure.SapMonitor resource 
 
 SAP monitor info on Azure (ARM properties and SAP monitor properties)
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -911,6 +910,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:hanaonazure/v20200207preview:SapMonitor myHanaInstance /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.HanaOnAzure/hanaInstances/myHanaInstance 
+```
 
 
 

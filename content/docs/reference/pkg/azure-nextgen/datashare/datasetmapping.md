@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.datashare.DataSetMapping resourc
 A data set mapping data transfer object.
 Latest API Version: 2019-11-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -944,6 +943,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>ScheduleBased</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:datashare/latest:DataSetMapping DatasetMapping1 /subscriptions/433a8dfd-e5d5-4e77-ad86-90acdc75eb1a/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/Account1/shareSubscriptions/ShareSubscription1/dataSetMappings/DatasetMapping1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

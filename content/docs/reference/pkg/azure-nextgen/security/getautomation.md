@@ -188,7 +188,7 @@ The following output properties are available:
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Outputs.<wbr>Automation<wbr>Action<wbr>Event<wbr>Hub<wbr>Response, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Outputs.<wbr>Automation<wbr>Action<wbr>Logic<wbr>App<wbr>Response, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Outputs.<wbr>Automation<wbr>Action<wbr>Workspace<wbr>Response&gt;&gt;&gt;</span>
+        <span class="property-type">List&lt;object&gt;</span>
     </dt>
     <dd>{{% md %}}A collection of the actions which are triggered if all the configured rules evaluations, within at least one rule set, are true.{{% /md %}}</dd>
     <dt class="property-"

@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.automanage.Account resource with
 
 Definition of the Automanage account.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -892,6 +891,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>None</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:automanage/v20200630preview:Account account /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automanage/accounts/account 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

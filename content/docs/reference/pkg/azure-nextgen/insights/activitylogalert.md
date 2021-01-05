@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.insights.ActivityLogAlert resour
 An activity log alert resource.
 Latest API Version: 2017-04-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1530,6 +1529,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The name of the field that this condition will examine. The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties.'.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:insights/latest:ActivityLogAlert SampleActivityLogAlert /subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/Default-NotificationRules/providers/microsoft.insights/activityLogAlerts/SampleActivityLogAlert 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

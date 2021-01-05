@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.databoxedge.StorageAccount resou
 Represents a Storage Account on the  Data Box Edge/Gateway device.
 Latest API Version: 2019-08-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -893,6 +892,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>NeedsAttention</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:databoxedge/latest:StorageAccount blobstorageaccount1 /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/GroupForDataBoxEdgeAutomation/providers/Microsoft.DataBoxEdge/dataBoxEdgeDevices/testedgedevice/storageAccounts/blobstorageaccount1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

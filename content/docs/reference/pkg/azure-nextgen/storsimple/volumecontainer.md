@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.storsimple.VolumeContainer resou
 The volume container.
 Latest API Version: 2017-06-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -714,7 +713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalcloudstorageusageinbytes_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Cloud<wbr>Storage<wbr>Usage<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The total cloud storage for the volume container.{{% /md %}}</dd>
     <dt class="property-"
@@ -783,7 +782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#totalcloudstorageusageinbytes_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Cloud<wbr>Storage<wbr>Usage<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The total cloud storage for the volume container.{{% /md %}}</dd>
     <dt class="property-"
@@ -921,7 +920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#total_cloud_storage_usage_in_bytes_python" style="color: inherit; text-decoration: inherit;">total_<wbr>cloud_<wbr>storage_<wbr>usage_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The total cloud storage for the volume container.{{% /md %}}</dd>
     <dt class="property-"
@@ -1298,6 +1297,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Series8000</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:storsimple/latest:VolumeContainer VolumeContainerForSDKTest /subscriptions/4385cf00-2d3a-425a-832f-f4285b1c9dce/resourceGroups/ResourceGroupForSDKTest/providers/Microsoft.StorSimple/managers/ManagerForSDKTest1/devices/Device05ForSDKTest/volumeContainers/VolumeContainerForSDKTest 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

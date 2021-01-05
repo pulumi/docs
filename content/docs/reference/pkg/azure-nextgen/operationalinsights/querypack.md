@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.operationalinsights.QueryPack re
 
 An Log Analytics QueryPack definition.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -830,6 +829,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:operationalinsights/v20190901preview:QueryPack my-querypack /subscriptions/86dc51d3-92ed-4d7e-947a-775ea79b4919/resourceGroups/my-resource-group/providers/microsoft.operationalinsights/queryPacks/my-querypack 
+```
 
 
 

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.redhatopenshift.OpenShiftCluster
 OpenShiftCluster represents an Azure Red Hat OpenShift cluster.
 Latest API Version: 2020-04-30.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3079,6 +3078,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The size of the worker VMs (immutable).{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:redhatopenshift/latest:OpenShiftCluster resourceName /subscriptions/subscriptionId/resourceGroups/resourceGroup/providers/Microsoft.RedHatOpenShift/OpenShiftClusters/resourceName 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.management.Blueprint resource wi
 
 Represents a Blueprint definition.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -36,26 +35,17 @@ class MyStack : Stack
             {
                 { "costCenter", new AzureNextGen.Management.V20171111Preview.Inputs.ParameterDefinitionArgs
                 {
-                    Metadata = 
-                    {
-                        { "displayName", "force cost center tag for all resources under given subscription." },
-                    },
+                    DisplayName = "force cost center tag for all resources under given subscription.",
                     Type = "string",
                 } },
                 { "owners", new AzureNextGen.Management.V20171111Preview.Inputs.ParameterDefinitionArgs
                 {
-                    Metadata = 
-                    {
-                        { "displayName", "assign owners to subscription along with blueprint assignment." },
-                    },
+                    DisplayName = "assign owners to subscription along with blueprint assignment.",
                     Type = "array",
                 } },
                 { "storageAccountType", new AzureNextGen.Management.V20171111Preview.Inputs.ParameterDefinitionArgs
                 {
-                    Metadata = 
-                    {
-                        { "displayName", "storage account type." },
-                    },
+                    DisplayName = "storage account type.",
                     Type = "string",
                 } },
             },
@@ -63,11 +53,8 @@ class MyStack : Stack
             {
                 { "storageRG", new AzureNextGen.Management.V20171111Preview.Inputs.ResourceGroupDefinitionArgs
                 {
-                    Metadata = 
-                    {
-                        { "description", "Contains storageAccounts that collect all shoebox logs." },
-                        { "displayName", "storage resource group" },
-                    },
+                    Description = "Contains storageAccounts that collect all shoebox logs.",
+                    DisplayName = "storage resource group",
                 } },
             },
             TargetScope = "subscription",
@@ -96,30 +83,22 @@ blueprint = azure_nextgen.management.v20171111preview.Blueprint("blueprint",
     management_group_name="ContosoOnlineGroup",
     parameters={
         "costCenter": azure_nextgen.management.v20171111preview.ParameterDefinitionArgs(
-            metadata={
-                "displayName": "force cost center tag for all resources under given subscription.",
-            },
+            display_name="force cost center tag for all resources under given subscription.",
             type="string",
         ),
         "owners": azure_nextgen.management.v20171111preview.ParameterDefinitionArgs(
-            metadata={
-                "displayName": "assign owners to subscription along with blueprint assignment.",
-            },
+            display_name="assign owners to subscription along with blueprint assignment.",
             type="array",
         ),
         "storageAccountType": azure_nextgen.management.v20171111preview.ParameterDefinitionArgs(
-            metadata={
-                "displayName": "storage account type.",
-            },
+            display_name="storage account type.",
             type="string",
         ),
     },
     resource_groups={
         "storageRG": azure_nextgen.management.v20171111preview.ResourceGroupDefinitionArgs(
-            metadata={
-                "description": "Contains storageAccounts that collect all shoebox logs.",
-                "displayName": "storage resource group",
-            },
+            description="Contains storageAccounts that collect all shoebox logs.",
+            display_name="storage resource group",
         ),
     },
     target_scope="subscription")
@@ -140,30 +119,22 @@ const blueprint = new azure_nextgen.management.v20171111preview.Blueprint("bluep
     managementGroupName: "ContosoOnlineGroup",
     parameters: {
         costCenter: {
-            metadata: {
-                displayName: "force cost center tag for all resources under given subscription.",
-            },
+            displayName: "force cost center tag for all resources under given subscription.",
             type: "string",
         },
         owners: {
-            metadata: {
-                displayName: "assign owners to subscription along with blueprint assignment.",
-            },
+            displayName: "assign owners to subscription along with blueprint assignment.",
             type: "array",
         },
         storageAccountType: {
-            metadata: {
-                displayName: "storage account type.",
-            },
+            displayName: "storage account type.",
             type: "string",
         },
     },
     resourceGroups: {
         storageRG: {
-            metadata: {
-                description: "Contains storageAccounts that collect all shoebox logs.",
-                displayName: "storage resource group",
-            },
+            description: "Contains storageAccounts that collect all shoebox logs.",
+            displayName: "storage resource group",
         },
     },
     targetScope: "subscription",
@@ -2067,6 +2038,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>secureString</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:management/v20171111preview:Blueprint simpleBlueprint /providers/Microsoft.Management/managementGroups/ContosoOnlineGroup/providers/Microsoft.Blueprint/blueprints/simpleBlueprint 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

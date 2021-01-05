@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.billing.BillingRoleAssignmentByB
 
 The role assignment
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -886,6 +885,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:billing/v20191001preview:BillingRoleAssignmentByBillingAccount 9dfd08c2-62a3-4d47-85bd-1cdba1408402 /providers/Microsoft.Billing/billingAccounts/7898901/billingRoleAssignments/9dfd08c2-62a3-4d47-85bd-1cdba1408402 
+```
 
 
 

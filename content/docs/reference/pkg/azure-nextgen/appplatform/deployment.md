@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.appplatform.Deployment resource 
 Deployment resource payload
 Latest API Version: 2020-07-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2555,6 +2554,16 @@ the relative path to the target module/project.{{% /md %}}</dd>
     <dd>Source</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:appplatform/latest:Deployment mydeployment /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.AppPlatform/Spring/myservice/apps/myapp/deployments/mydeployment 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -2019,7 +2019,7 @@ The following output properties are available:
 <a href="#querytimeout_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}SQL query timeout. Unit in seconds.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2061,7 +2061,7 @@ The following output properties are available:
 <a href="#querytimeout_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}SQL query timeout. Unit in seconds.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2145,7 +2145,7 @@ The following output properties are available:
 <a href="#query_timeout_python" style="color: inherit; text-decoration: inherit;">query_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}SQL query timeout. Unit in seconds.{{% /md %}}</dd>
     <dt class="property-required"

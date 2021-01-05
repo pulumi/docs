@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.devices.IotDpsResource resource 
 The description of the provisioning service.
 Latest API Version: 2020-03-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -67,7 +66,7 @@ func main() {
 			ProvisioningServiceName: pulumi.String("myFirstProvisioningService"),
 			ResourceGroupName:       pulumi.String("myResourceGroup"),
 			Sku: &devices.IotDpsSkuInfoArgs{
-				Capacity: pulumi.Int(1),
+				Capacity: pulumi.Float64(1),
 				Name:     pulumi.String("S1"),
 			},
 			Tags: nil,
@@ -1624,7 +1623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The number of units to provision{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1648,7 +1647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The number of units to provision{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1696,7 +1695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The number of units to provision{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1731,7 +1730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The number of units to provision{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1764,7 +1763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The number of units to provision{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1830,7 +1829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The number of units to provision{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3798,6 +3797,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>FailoverFailed</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:devices/latest:IotDpsResource myFirstProvisioningService /subscriptions/91d12660-3dec-467a-be2a-213b5544ddc0/resourceGroups//providers/Microsoft.Devices/ProvisioningServices/myFirstProvisioningService 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.hybridcompute.Machine resource w
 Describes a hybrid machine.
 Latest API Version: 2020-08-02.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2459,6 +2458,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The identity type.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:hybridcompute/latest:Machine myMachine /subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.HybridCompute/machines/myMachine 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.timeseriesinsights.Environment r
 An environment is a set of time-series data available for query, and is the top level Azure Time Series Insights resource.
 Latest API Version: 2020-05-15.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -978,6 +977,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The name of this SKU.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:timeseriesinsights/latest:Environment env1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.TimeSeriesInsights/Environments/env1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

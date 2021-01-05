@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.storagepool.IscsiTarget resource
 
 Payload for iSCSI Target Create or Update requests.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1904,6 +1903,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The tag associated with the iSCSI target portal group{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:storagepool/v20200315preview:IscsiTarget myIscsiTarget /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.StoragePool/diskPools/myDiskPool/iscsiTargets/myIscsiTarget 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

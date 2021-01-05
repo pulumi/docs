@@ -170,7 +170,7 @@ The following output properties are available:
 <a href="#disksizebytes_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The size of the disk in bytes. This field is read only.{{% /md %}}</dd>
     <dt class="property-"
@@ -365,7 +365,7 @@ The following output properties are available:
 <a href="#disksizebytes_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The size of the disk in bytes. This field is read only.{{% /md %}}</dd>
     <dt class="property-"
@@ -755,7 +755,7 @@ The following output properties are available:
 <a href="#disk_size_bytes_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The size of the disk in bytes. This field is read only.{{% /md %}}</dd>
     <dt class="property-"
@@ -1026,7 +1026,7 @@ The following output properties are available:
 <a href="#uploadsizebytes_csharp" style="color: inherit; text-decoration: inherit;">Upload<wbr>Size<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).{{% /md %}}</dd>
 </dl>
@@ -1113,7 +1113,7 @@ The following output properties are available:
 <a href="#uploadsizebytes_go" style="color: inherit; text-decoration: inherit;">Upload<wbr>Size<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).{{% /md %}}</dd>
 </dl>
@@ -1287,7 +1287,7 @@ The following output properties are available:
 <a href="#upload_size_bytes_python" style="color: inherit; text-decoration: inherit;">upload_<wbr>size_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).{{% /md %}}</dd>
 </dl>

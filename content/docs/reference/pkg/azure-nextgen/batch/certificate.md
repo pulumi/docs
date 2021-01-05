@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.batch.Certificate resource with 
 Contains information about a certificate.
 Latest API Version: 2020-09-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1403,6 +1402,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The target of the particular error. For example, the name of the property in error.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:batch/latest:Certificate sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e /subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Batch/batchAccounts/samplecct/certificates/sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.keyvault.Vault resource with exa
 Resource information with extended details.
 Latest API Version: 2019-09-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -4632,6 +4631,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:keyvault/latest:Vault sample-vault /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/sample-resource-group/providers/Microsoft.KeyVault/vaults/sample-vault 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

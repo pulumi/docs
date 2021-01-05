@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.customerinsights.Kpi resource wi
 The KPI resource format.
 Latest API Version: 2017-04-26.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2369,6 +2368,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The upper threshold limit.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:customerinsights/latest:Kpi sdkTestHub/kpiTest45453647 /subscriptions/c909e979-ef71-4def-a970-bc7c154db8c5/resourceGroups/TestHubRG/providers/Microsoft.CustomerInsights/hubs/sdkTestHub/kpi/kpiTest45453647 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -233,7 +233,7 @@ The following output properties are available:
 <a href="#containmentstate_csharp" style="color: inherit; text-decoration: inherit;">Containment<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The containment state of the database.{{% /md %}}</dd>
     <dt class="property-"
@@ -567,7 +567,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 <a href="#containmentstate_go" style="color: inherit; text-decoration: inherit;">Containment<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The containment state of the database.{{% /md %}}</dd>
     <dt class="property-"
@@ -1235,7 +1235,7 @@ Get-AzSqlServerServiceObjective -Location <location>
 <a href="#containment_state_python" style="color: inherit; text-decoration: inherit;">containment_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The containment state of the database.{{% /md %}}</dd>
     <dt class="property-"

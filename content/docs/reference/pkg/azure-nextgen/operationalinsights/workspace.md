@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.operationalinsights.Workspace re
 The top level Workspace resource container.
 Latest API Version: 2020-10-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1751,6 +1750,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The capacity reservation level for this workspace, when CapacityReservation sku is selected.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:operationalinsights/latest:Workspace AzTest2170 /subscriptions/00000000-0000-0000-0000-000000000005/resourcegroups/oiautorest6685/providers/microsoft.operationalinsights/workspaces/aztest2170 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

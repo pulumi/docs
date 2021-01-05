@@ -278,7 +278,7 @@ The following output properties are available:
 <a href="#totalcloudstorageusageinbytes_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Cloud<wbr>Storage<wbr>Usage<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The total cloud storage for the volume container.{{% /md %}}</dd>
     <dt class="property-"
@@ -392,7 +392,7 @@ The following output properties are available:
 <a href="#totalcloudstorageusageinbytes_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Cloud<wbr>Storage<wbr>Usage<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The total cloud storage for the volume container.{{% /md %}}</dd>
     <dt class="property-"
@@ -620,7 +620,7 @@ The following output properties are available:
 <a href="#total_cloud_storage_usage_in_bytes_python" style="color: inherit; text-decoration: inherit;">total_<wbr>cloud_<wbr>storage_<wbr>usage_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The total cloud storage for the volume container.{{% /md %}}</dd>
     <dt class="property-"

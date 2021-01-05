@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.analysisservices.ServerDetails r
 Represents an instance of an Analysis Services resource.
 Latest API Version: 2017-08-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -173,7 +172,7 @@ const serverDetails = new azure_nextgen.analysisservices.latest.ServerDetails("s
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ServerDetails</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">as_administrators</span><span class="p">:</span> <span class="nx">Optional[ServerAdministratorsArgs]</span> = None<span class="p">, </span><span class="nx">backup_blob_container_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_details</span><span class="p">:</span> <span class="nx">Optional[GatewayDetailsArgs]</span> = None<span class="p">, </span><span class="nx">ip_v4_firewall_settings</span><span class="p">:</span> <span class="nx">Optional[IPv4FirewallSettingsArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">querypool_connection_mode</span><span class="p">:</span> <span class="nx">Optional[ConnectionMode]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ResourceSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ServerDetails</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">as_administrators</span><span class="p">:</span> <span class="nx">Optional[ServerAdministratorsArgs]</span> = None<span class="p">, </span><span class="nx">backup_blob_container_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_details</span><span class="p">:</span> <span class="nx">Optional[GatewayDetailsArgs]</span> = None<span class="p">, </span><span class="nx">ip_v4_firewall_settings</span><span class="p">:</span> <span class="nx">Optional[IPv4FirewallSettingsArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_mode</span><span class="p">:</span> <span class="nx">Optional[ManagedMode]</span> = None<span class="p">, </span><span class="nx">querypool_connection_mode</span><span class="p">:</span> <span class="nx">Optional[ConnectionMode]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ResourceSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -418,6 +417,15 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}The firewall settings for the AS server.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="managedmode_csharp">
+<a href="#managedmode_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Analysis<wbr>Services.<wbr>Managed<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The managed mode of the server (0 = not managed, 1 = managed).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="querypoolconnectionmode_csharp">
 <a href="#querypoolconnectionmode_csharp" style="color: inherit; text-decoration: inherit;">Querypool<wbr>Connection<wbr>Mode</a>
 </span>
@@ -512,6 +520,15 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#ipv4firewallsettings">IPv4Firewall<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The firewall settings for the AS server.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="managedmode_go">
+<a href="#managedmode_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedmode">Managed<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The managed mode of the server (0 = not managed, 1 = managed).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="querypoolconnectionmode_go">
@@ -610,6 +627,15 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}The firewall settings for the AS server.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="managedmode_nodejs">
+<a href="#managedmode_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedmode">Managed<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The managed mode of the server (0 = not managed, 1 = managed).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="querypoolconnectionmode_nodejs">
 <a href="#querypoolconnectionmode_nodejs" style="color: inherit; text-decoration: inherit;">querypool<wbr>Connection<wbr>Mode</a>
 </span>
@@ -704,6 +730,15 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#ipv4firewallsettings">IPv4Firewall<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The firewall settings for the AS server.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="managed_mode_python">
+<a href="#managed_mode_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedmode">Managed<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The managed mode of the server (0 = not managed, 1 = managed).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="querypool_connection_mode_python">
@@ -1680,6 +1715,44 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </dl>
 {{% /choosable %}}
 
+<h4 id="managedmode">Managed<wbr>Mode</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Zero</dt>
+    <dd>0</dd>
+    <dt>One</dt>
+    <dd>1</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Managed<wbr>Mode<wbr>Zero</dt>
+    <dd>0</dd>
+    <dt>Managed<wbr>Mode<wbr>One</dt>
+    <dd>1</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Zero</dt>
+    <dd>0</dd>
+    <dt>One</dt>
+    <dd>1</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>ZERO</dt>
+    <dd>0</dd>
+    <dt>ONE</dt>
+    <dd>1</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="resourcesku">Resource<wbr>Sku</h4>
 
 {{% choosable language csharp %}}
@@ -2117,6 +2190,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Standard</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:analysisservices/latest:ServerDetails azsdktest /subscriptions/613192d7-503f-477a-9cfe-4efc3ee2bd60/resourceGroups/TestRG/providers/Microsoft.AnalysisServices/servers/azsdktest 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

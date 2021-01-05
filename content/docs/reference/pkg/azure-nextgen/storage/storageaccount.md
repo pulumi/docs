@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.storage.StorageAccount resource 
 The storage account.
 Latest API Version: 2019-06-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -7560,6 +7559,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Gets the state of virtual network rule.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:storage/latest:StorageAccount sto4445 /subscriptions/{subscription-id}/resourceGroups/res9101/providers/Microsoft.Storage/storageAccounts/sto4445 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

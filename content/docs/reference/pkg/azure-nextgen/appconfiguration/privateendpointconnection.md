@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.appconfiguration.PrivateEndpoint
 A private endpoint connection
 Latest API Version: 2020-06-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1096,6 +1095,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The private link service connection status.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:appconfiguration/latest:PrivateEndpointConnection myConnection /subscriptions/c80fb759-c965-4c6a-9110-9b2b2d038882/resourceGroups/myResourceGroup/providers/Microsoft.AppConfiguration/configurationStores/contoso/privateEndpointConnections/myConnection 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

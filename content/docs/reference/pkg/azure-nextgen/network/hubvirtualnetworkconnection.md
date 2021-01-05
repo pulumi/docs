@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.network.HubVirtualNetworkConnect
 HubVirtualNetworkConnection Resource.
 Latest API Version: 2020-07-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1962,6 +1961,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}List of all Static Routes.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:network/latest:HubVirtualNetworkConnection connection1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualHubs/virtualHub1/hubVirtualNetworkConnections/connection1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

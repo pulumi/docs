@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.cdn.Secret resource with example
 Friendly Secret name mapping to the any Secret or secret related information.
 Latest API Version: 2020-09-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2262,6 +2261,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Version of the secret to be used{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:cdn/latest:Secret secret1 /subscriptions/subid/resourcegroups/RG/providers/Microsoft.Cdn/profiles/profile1/secrets/secret1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

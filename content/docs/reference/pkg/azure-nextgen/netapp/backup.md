@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.netapp.Backup resource with exam
 Backup of a Volume
 Latest API Version: 2020-09-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -643,7 +642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Size of backup{{% /md %}}</dd>
     <dt class="property-"
@@ -721,7 +720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Size of backup{{% /md %}}</dd>
     <dt class="property-"
@@ -877,7 +876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Size of backup{{% /md %}}</dd>
     <dt class="property-"
@@ -895,6 +894,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:netapp/latest:Backup account1/pool1/volume1/backup1 /subscriptions/D633CC2E-722B-4AE1-B636-BBD9E4C60ED9/resourceGroups/myRG/providers/Microsoft.NetApp/netAppAccounts/account1/capacityPools/pool1/volumes/volume1/backups/backup1 
+```
 
 
 

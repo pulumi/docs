@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.desktopvirtualization.Workspace 
 
 Represents a Workspace definition.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -723,6 +722,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:desktopvirtualization/v20201110preview:Workspace workspace1 /subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourceGroups/resourceGroup1/providers/Microsoft.DesktopVirtualization/workspaces/workspace1 
+```
 
 
 

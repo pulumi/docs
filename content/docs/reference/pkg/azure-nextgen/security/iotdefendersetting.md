@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.security.IotDefenderSetting reso
 
 IoT Defender settings
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -519,6 +518,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:security/v20200806preview:IotDefenderSetting default /subscriptions/{subscriptionId}/providers/Microsoft.Security/iotDefenderSettings/default 
+```
 
 
 

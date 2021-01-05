@@ -305,7 +305,7 @@ The following output properties are available:
 <a href="#localusedcapacityinbytes_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Used<wbr>Capacity<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The local used capacity in bytes.{{% /md %}}</dd>
     <dt class="property-"
@@ -332,7 +332,7 @@ The following output properties are available:
 <a href="#provisionedcapacityinbytes_csharp" style="color: inherit; text-decoration: inherit;">Provisioned<wbr>Capacity<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The provisioned capacity in bytes.{{% /md %}}</dd>
     <dt class="property-"
@@ -350,7 +350,7 @@ The following output properties are available:
 <a href="#usedcapacityinbytes_csharp" style="color: inherit; text-decoration: inherit;">Used<wbr>Capacity<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The used capacity in bytes.{{% /md %}}</dd>
     <dt class="property-"
@@ -410,7 +410,7 @@ The following output properties are available:
 <a href="#localusedcapacityinbytes_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Used<wbr>Capacity<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The local used capacity in bytes.{{% /md %}}</dd>
     <dt class="property-"
@@ -437,7 +437,7 @@ The following output properties are available:
 <a href="#provisionedcapacityinbytes_go" style="color: inherit; text-decoration: inherit;">Provisioned<wbr>Capacity<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The provisioned capacity in bytes.{{% /md %}}</dd>
     <dt class="property-"
@@ -455,7 +455,7 @@ The following output properties are available:
 <a href="#usedcapacityinbytes_go" style="color: inherit; text-decoration: inherit;">Used<wbr>Capacity<wbr>In<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The used capacity in bytes.{{% /md %}}</dd>
     <dt class="property-"
@@ -620,7 +620,7 @@ The following output properties are available:
 <a href="#local_used_capacity_in_bytes_python" style="color: inherit; text-decoration: inherit;">local_<wbr>used_<wbr>capacity_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The local used capacity in bytes.{{% /md %}}</dd>
     <dt class="property-"
@@ -647,7 +647,7 @@ The following output properties are available:
 <a href="#provisioned_capacity_in_bytes_python" style="color: inherit; text-decoration: inherit;">provisioned_<wbr>capacity_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The provisioned capacity in bytes.{{% /md %}}</dd>
     <dt class="property-"
@@ -665,7 +665,7 @@ The following output properties are available:
 <a href="#used_capacity_in_bytes_python" style="color: inherit; text-decoration: inherit;">used_<wbr>capacity_<wbr>in_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The used capacity in bytes.{{% /md %}}</dd>
     <dt class="property-"

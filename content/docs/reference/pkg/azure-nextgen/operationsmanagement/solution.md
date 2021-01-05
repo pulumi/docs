@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.operationsmanagement.Solution re
 
 The container for solution.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1384,6 +1383,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The resources that will be referenced from this solution. Deleting any of those solution out of band will break the solution.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:operationsmanagement/v20151101preview:Solution solution1 subscriptions/subid/resourcegroups/rg1/providers/Microsoft.OperationsManagement/solutions/solution1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

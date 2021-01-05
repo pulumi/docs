@@ -479,7 +479,7 @@ The following output properties are available:
 <a href="#rentalduration_csharp" style="color: inherit; text-decoration: inherit;">Rental<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The rental duration. Must be greater than or equal to 0.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -539,7 +539,7 @@ The following output properties are available:
 <a href="#rentalduration_go" style="color: inherit; text-decoration: inherit;">Rental<wbr>Duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The rental duration. Must be greater than or equal to 0.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -659,7 +659,7 @@ The following output properties are available:
 <a href="#rental_duration_python" style="color: inherit; text-decoration: inherit;">rental_<wbr>duration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The rental duration. Must be greater than or equal to 0.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -690,7 +690,7 @@ The following output properties are available:
 <a href="#playbackdurationseconds_csharp" style="color: inherit; text-decoration: inherit;">Playback<wbr>Duration<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Playback duration{{% /md %}}</dd>
     <dt class="property-required"
@@ -699,7 +699,7 @@ The following output properties are available:
 <a href="#storagedurationseconds_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Duration<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Storage duration{{% /md %}}</dd>
 </dl>
@@ -714,7 +714,7 @@ The following output properties are available:
 <a href="#playbackdurationseconds_go" style="color: inherit; text-decoration: inherit;">Playback<wbr>Duration<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Playback duration{{% /md %}}</dd>
     <dt class="property-required"
@@ -723,7 +723,7 @@ The following output properties are available:
 <a href="#storagedurationseconds_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Duration<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Storage duration{{% /md %}}</dd>
 </dl>
@@ -762,7 +762,7 @@ The following output properties are available:
 <a href="#playback_duration_seconds_python" style="color: inherit; text-decoration: inherit;">playback_<wbr>duration_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Playback duration{{% /md %}}</dd>
     <dt class="property-required"
@@ -771,7 +771,7 @@ The following output properties are available:
 <a href="#storage_duration_seconds_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>duration_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Storage duration{{% /md %}}</dd>
 </dl>
@@ -2502,7 +2502,7 @@ The following output properties are available:
 <a href="#alternateverificationkeys_csharp" style="color: inherit; text-decoration: inherit;">Alternate<wbr>Verification<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Rsa<wbr>Token<wbr>Key<wbr>Response<wbr>Args, Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>Symmetric<wbr>Token<wbr>Key<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Content<wbr>Key<wbr>Policy<wbr>X509Certificate<wbr>Token<wbr>Key<wbr>Response<wbr>Args&gt;&gt;&gt;</span>
+        <span class="property-type">List&lt;object&gt;</span>
     </dt>
     <dd>{{% md %}}A list of alternative verification keys.{{% /md %}}</dd>
     <dt class="property-optional"

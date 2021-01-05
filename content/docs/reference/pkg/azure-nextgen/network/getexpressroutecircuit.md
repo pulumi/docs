@@ -2028,7 +2028,7 @@ The following output properties are available:
 <a href="#peerasn_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>ASN</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The peer ASN.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2250,7 +2250,7 @@ The following output properties are available:
 <a href="#peerasn_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>ASN</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The peer ASN.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2694,7 +2694,7 @@ The following output properties are available:
 <a href="#peer_asn_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The peer ASN.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3084,7 +3084,7 @@ The following output properties are available:
 <a href="#primarybytesin_csharp" style="color: inherit; text-decoration: inherit;">Primarybytes<wbr>In</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The Primary BytesIn of the peering.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3093,7 +3093,7 @@ The following output properties are available:
 <a href="#primarybytesout_csharp" style="color: inherit; text-decoration: inherit;">Primarybytes<wbr>Out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The primary BytesOut of the peering.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3102,7 +3102,7 @@ The following output properties are available:
 <a href="#secondarybytesin_csharp" style="color: inherit; text-decoration: inherit;">Secondarybytes<wbr>In</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The secondary BytesIn of the peering.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3111,7 +3111,7 @@ The following output properties are available:
 <a href="#secondarybytesout_csharp" style="color: inherit; text-decoration: inherit;">Secondarybytes<wbr>Out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The secondary BytesOut of the peering.{{% /md %}}</dd>
 </dl>
@@ -3126,7 +3126,7 @@ The following output properties are available:
 <a href="#primarybytesin_go" style="color: inherit; text-decoration: inherit;">Primarybytes<wbr>In</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The Primary BytesIn of the peering.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3135,7 +3135,7 @@ The following output properties are available:
 <a href="#primarybytesout_go" style="color: inherit; text-decoration: inherit;">Primarybytes<wbr>Out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The primary BytesOut of the peering.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3144,7 +3144,7 @@ The following output properties are available:
 <a href="#secondarybytesin_go" style="color: inherit; text-decoration: inherit;">Secondarybytes<wbr>In</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The secondary BytesIn of the peering.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3153,7 +3153,7 @@ The following output properties are available:
 <a href="#secondarybytesout_go" style="color: inherit; text-decoration: inherit;">Secondarybytes<wbr>Out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The secondary BytesOut of the peering.{{% /md %}}</dd>
 </dl>
@@ -3210,7 +3210,7 @@ The following output properties are available:
 <a href="#primarybytes_in_python" style="color: inherit; text-decoration: inherit;">primarybytes_<wbr>in</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The Primary BytesIn of the peering.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3219,7 +3219,7 @@ The following output properties are available:
 <a href="#primarybytes_out_python" style="color: inherit; text-decoration: inherit;">primarybytes_<wbr>out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The primary BytesOut of the peering.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3228,7 +3228,7 @@ The following output properties are available:
 <a href="#secondarybytes_in_python" style="color: inherit; text-decoration: inherit;">secondarybytes_<wbr>in</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The secondary BytesIn of the peering.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3237,7 +3237,7 @@ The following output properties are available:
 <a href="#secondarybytes_out_python" style="color: inherit; text-decoration: inherit;">secondarybytes_<wbr>out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The secondary BytesOut of the peering.{{% /md %}}</dd>
 </dl>

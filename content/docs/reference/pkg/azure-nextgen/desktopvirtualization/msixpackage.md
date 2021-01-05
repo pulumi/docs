@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.desktopvirtualization.MSIXPackag
 
 Schema for MSIX Package properties.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1884,6 +1883,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Name of dependency publisher.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:desktopvirtualization/v20201110preview:MSIXPackage hostpool1/MsixPackageFullName /subscriptions/daefabc0-95b4-48b3-b645-8a753a63c4fa/resourcegroups/resourcegroup1/providers/Microsoft.DesktopVirtualization/hostpools/hostpool1/msixpackages/msixPackageFullName 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

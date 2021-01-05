@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.automation.Schedule resource wit
 Definition of the schedule.
 Latest API Version: 2015-10-31.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1705,6 +1704,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Minute{{% md %}}The minimum allowed interval for Minute schedules is 15 minutes.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:automation/latest:Schedule mySchedule /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/myAutomationAccount33/schedules/mySchedule 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

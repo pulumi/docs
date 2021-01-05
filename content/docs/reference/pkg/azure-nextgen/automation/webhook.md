@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.automation.Webhook resource with
 Definition of the webhook type.
 Latest API Version: 2015-10-31.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1110,6 +1109,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Gets or sets the name of the runbook.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:automation/latest:Webhook TestWebhook /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/myAutomationAccount33/webhooks/TestWebhook 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.timeseriesinsights.ReferenceData
 A reference data set provides metadata about the events in an environment. Metadata in the reference data set will be joined with events as they are read from event sources. The metadata that makes up the reference data set is uploaded or modified through the Time Series Insights data plane APIs.
 Latest API Version: 2020-05-15.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1112,6 +1111,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The type of the key property.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:timeseriesinsights/latest:ReferenceDataSet rds1 /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.TimeSeriesInsights/Environments/env1/referenceDataSets/rds1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

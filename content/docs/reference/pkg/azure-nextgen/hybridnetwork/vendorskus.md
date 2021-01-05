@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.hybridnetwork.VendorSkus resourc
 
 Sku sub resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -5670,6 +5669,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Standard_F16s</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:hybridnetwork/v20200101preview:VendorSkus TestSku /subscriptions/subid/providers/Microsoft.HybridNetwork/vendors/TestVendor/vendorskus/TestSku 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

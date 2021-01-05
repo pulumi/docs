@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.managednetwork.ManagedNetworkGro
 
 The Managed Network Group resource
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1063,6 +1062,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Resource Id{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:managednetwork/v20190601preview:ManagedNetworkGroup myManagedNetworkGroup1 /subscriptionB/resourceGroups/myResourceGroup/providers/Microsoft.ManagedNetwork/managedNetworks/myManagedNetwork/managedNetworkGroups/myManagedNetworkGroup1 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.IdentityProvider r
 Identity Provider details.
 Latest API Version: 2019-12-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -963,6 +962,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>aadB2C{{% md %}}Azure Active Directory B2C as Identity provider.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:apimanagement/latest:IdentityProvider Facebook /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/identityProviders/Facebook 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

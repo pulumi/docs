@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.network.RouteFilter resource wit
 Route Filter Resource.
 Latest API Version: 2020-07-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1700,7 +1699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peerasn_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>ASN</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The peer ASN.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1922,7 +1921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peerasn_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>ASN</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The peer ASN.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2366,7 +2365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#peer_asn_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>asn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The peer ASN.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2473,7 +2472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarybytesin_csharp" style="color: inherit; text-decoration: inherit;">Primarybytes<wbr>In</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The Primary BytesIn of the peering.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2482,7 +2481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarybytesout_csharp" style="color: inherit; text-decoration: inherit;">Primarybytes<wbr>Out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The primary BytesOut of the peering.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2491,7 +2490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondarybytesin_csharp" style="color: inherit; text-decoration: inherit;">Secondarybytes<wbr>In</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The secondary BytesIn of the peering.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2500,7 +2499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondarybytesout_csharp" style="color: inherit; text-decoration: inherit;">Secondarybytes<wbr>Out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The secondary BytesOut of the peering.{{% /md %}}</dd>
 </dl>
@@ -2515,7 +2514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarybytesin_go" style="color: inherit; text-decoration: inherit;">Primarybytes<wbr>In</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The Primary BytesIn of the peering.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2524,7 +2523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarybytesout_go" style="color: inherit; text-decoration: inherit;">Primarybytes<wbr>Out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The primary BytesOut of the peering.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2533,7 +2532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondarybytesin_go" style="color: inherit; text-decoration: inherit;">Secondarybytes<wbr>In</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The secondary BytesIn of the peering.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2542,7 +2541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondarybytesout_go" style="color: inherit; text-decoration: inherit;">Secondarybytes<wbr>Out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The secondary BytesOut of the peering.{{% /md %}}</dd>
 </dl>
@@ -2599,7 +2598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarybytes_in_python" style="color: inherit; text-decoration: inherit;">primarybytes_<wbr>in</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The Primary BytesIn of the peering.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2608,7 +2607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#primarybytes_out_python" style="color: inherit; text-decoration: inherit;">primarybytes_<wbr>out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The primary BytesOut of the peering.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2617,7 +2616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondarybytes_in_python" style="color: inherit; text-decoration: inherit;">secondarybytes_<wbr>in</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The secondary BytesIn of the peering.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2626,7 +2625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#secondarybytes_out_python" style="color: inherit; text-decoration: inherit;">secondarybytes_<wbr>out</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The secondary BytesOut of the peering.{{% /md %}}</dd>
 </dl>
@@ -4067,6 +4066,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:network/latest:RouteFilter filterName /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/routeFilters/filterName 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

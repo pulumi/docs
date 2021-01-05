@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.resources.DeploymentAtTenantScop
 Deployment information.
 Latest API Version: 2020-08-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -4626,6 +4625,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The URI of the template to deploy. Use either the uri or id property, but not both.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:resources/latest:DeploymentAtTenantScope tenant-dep01 /providers/Microsoft.Resources/deployments/tenant-dep01 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

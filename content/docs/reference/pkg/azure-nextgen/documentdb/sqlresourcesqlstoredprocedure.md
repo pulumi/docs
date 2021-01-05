@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.documentdb.SqlResourceSqlStoredP
 An Azure Cosmos DB storedProcedure.
 Latest API Version: 2020-09-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1270,6 +1269,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Body of the Stored Procedure{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:documentdb/latest:SqlResourceSqlStoredProcedure storedProcedureName /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.DocumentDB/databaseAccounts/ddb1/sqlDatabases/databaseName/sqlContainers/containerName/sqlStoredProcedures/storedProcedureName 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

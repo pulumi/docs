@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.apimanagement.User resource with
 User details.
 Latest API Version: 2019-12-01.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1545,6 +1544,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>deleted{{% md %}}User account is closed. All identities and related entities are removed.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:apimanagement/latest:User 5931a75ae4bbd512288c680b /subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ApiManagement/service/apimService1/users/5931a75ae4bbd512288c680b 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

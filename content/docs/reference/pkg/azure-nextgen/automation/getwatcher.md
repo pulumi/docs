@@ -278,7 +278,7 @@ The following output properties are available:
 <a href="#executionfrequencyinseconds_csharp" style="color: inherit; text-decoration: inherit;">Execution<wbr>Frequency<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Gets or sets the frequency at which the watcher is invoked.{{% /md %}}</dd>
     <dt class="property-"
@@ -419,7 +419,7 @@ The following output properties are available:
 <a href="#executionfrequencyinseconds_go" style="color: inherit; text-decoration: inherit;">Execution<wbr>Frequency<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Gets or sets the frequency at which the watcher is invoked.{{% /md %}}</dd>
     <dt class="property-"
@@ -701,7 +701,7 @@ The following output properties are available:
 <a href="#execution_frequency_in_seconds_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>frequency_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Gets or sets the frequency at which the watcher is invoked.{{% /md %}}</dd>
     <dt class="property-"

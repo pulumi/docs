@@ -12,7 +12,6 @@ meta_desc: "Documentation for the azure-nextgen.sqlvirtualmachine.SqlVirtualMach
 
 A SQL virtual machine.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -6151,6 +6150,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}SQL service account password.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:sqlvirtualmachine/v20170301preview:SqlVirtualMachine testvm /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/testrg/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachines/testvm 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

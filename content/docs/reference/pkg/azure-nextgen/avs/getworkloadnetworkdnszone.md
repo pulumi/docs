@@ -251,7 +251,7 @@ The following output properties are available:
 <a href="#dnsservices_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Number of DNS Services using the DNS zone.{{% /md %}}</dd>
     <dt class="property-"
@@ -269,7 +269,7 @@ The following output properties are available:
 <a href="#revision_csharp" style="color: inherit; text-decoration: inherit;">Revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}NSX revision number.{{% /md %}}</dd>
     <dt class="property-"
@@ -347,7 +347,7 @@ The following output properties are available:
 <a href="#dnsservices_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Number of DNS Services using the DNS zone.{{% /md %}}</dd>
     <dt class="property-"
@@ -365,7 +365,7 @@ The following output properties are available:
 <a href="#revision_go" style="color: inherit; text-decoration: inherit;">Revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}NSX revision number.{{% /md %}}</dd>
     <dt class="property-"
@@ -539,7 +539,7 @@ The following output properties are available:
 <a href="#dns_services_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>services</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Number of DNS Services using the DNS zone.{{% /md %}}</dd>
     <dt class="property-"
@@ -557,7 +557,7 @@ The following output properties are available:
 <a href="#revision_python" style="color: inherit; text-decoration: inherit;">revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}NSX revision number.{{% /md %}}</dd>
     <dt class="property-"

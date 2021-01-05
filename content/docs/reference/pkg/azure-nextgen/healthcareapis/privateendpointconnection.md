@@ -13,7 +13,6 @@ meta_desc: "Documentation for the azure-nextgen.healthcareapis.PrivateEndpointCo
 The Private Endpoint Connection resource.
 Latest API Version: 2020-03-30.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1062,6 +1061,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
+## Import
+
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:healthcareapis/latest:PrivateEndpointConnection myConnection /subscriptions/subid/resourceGroups/rg1/providers/Microsoft.HealthcareApis/services/service1/privateEndpointConnections/myConnection 
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>
